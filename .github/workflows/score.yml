@@ -45,7 +45,7 @@ jobs:
 
       - name: Install runner
         working-directory: runner
-        run: uv sync
+        run: uv sync --frozen
 
       - name: Run model against task
         working-directory: runner

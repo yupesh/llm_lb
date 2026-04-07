@@ -21,9 +21,9 @@ def test_dummy_end_to_end(tmp_path: Path):
     assert result.metrics["accuracy"] >= 0.7
 
 
-def test_aggregate_smoke(tmp_path: Path):
-    # Run once into the real results dir so aggregate has something to read
-    run(TASK, MODEL)
+def test_aggregate_smoke():
+    """Aggregate must work on the committed result files alone — must NOT
+    write fresh runs into the real results dir, or every CI run would diff."""
     idx = aggregate_all(REPO)
     assert any(t["id"] == "text_classification" for t in idx["tasks"])
     assert any(e["model_id"] == "dummy@local" for e in idx["matrix"])

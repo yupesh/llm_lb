@@ -20,7 +20,10 @@ jobs:
 
       - name: Install runner
         working-directory: runner
-        run: uv sync
+        # --frozen: fail if uv.lock is out of sync with pyproject.toml.
+        # Pins versions so CI matches developer machines and `aggregate` is
+        # byte-stable across environments.
+        run: uv sync --frozen
 
       - name: Lint
         working-directory: runner
@@ -64,8 +67,17 @@ jobs:
         working-directory: runner
         run: |
           uv run llm-lb aggregate --root ..
-          if [ -n "$(git status --porcelain ../tasks ../data)" ]; then
+          changes=$(git status --porcelain ../tasks ../data)
+          if [ -n "$changes" ]; then
             echo "::error::leaderboard.json or data/index.json out of date — run 'uv run llm-lb aggregate --root ..' and commit"
-            git --no-pager diff ../tasks ../data
+            echo "--- git status ---"
+            echo "$changes"
+            echo "--- diff of tracked files ---"
+            git --no-pager diff -- ../tasks ../data
+            echo "--- contents of untracked / changed files ---"
+            echo "$changes" | awk '{print $2}' | while read -r f; do
+              echo "=== $f ==="
+              cat "$f" || true
+            done
             exit 1
           fi
