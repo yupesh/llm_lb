@@ -1,0 +1,128 @@
+{
+  "$defs": {
+    "LLMParams": {
+      "additionalProperties": false,
+      "properties": {
+        "temperature": {
+          "default": 0.0,
+          "title": "Temperature",
+          "type": "number"
+        },
+        "top_p": {
+          "default": 1.0,
+          "title": "Top P",
+          "type": "number"
+        },
+        "max_tokens": {
+          "default": 256,
+          "title": "Max Tokens",
+          "type": "integer"
+        },
+        "seed": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Seed"
+        }
+      },
+      "title": "LLMParams",
+      "type": "object"
+    },
+    "MetricSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "primary": {
+          "title": "Primary",
+          "type": "string"
+        },
+        "secondary": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Secondary",
+          "type": "array"
+        }
+      },
+      "required": [
+        "primary"
+      ],
+      "title": "MetricSpec",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "version": {
+      "title": "Version",
+      "type": "string"
+    },
+    "description": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Description"
+    },
+    "metric": {
+      "$ref": "#/$defs/MetricSpec"
+    },
+    "labels": {
+      "anyOf": [
+        {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Labels"
+    },
+    "llm_params": {
+      "$ref": "#/$defs/LLMParams"
+    },
+    "system_prompt": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "System Prompt"
+    },
+    "prompt_template": {
+      "title": "Prompt Template",
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "version",
+    "metric",
+    "llm_params",
+    "prompt_template"
+  ],
+  "title": "TaskSpec",
+  "type": "object"
+}

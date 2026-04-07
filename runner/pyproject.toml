@@ -1,0 +1,35 @@
+[project]
+name = "llm-lb"
+version = "0.1.0"
+description = "LLM Leaderboard runner and CLI"
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2.7",
+    "pyyaml>=6.0",
+    "typer>=0.12",
+    "httpx>=0.27",
+    "jsonschema>=4.22",
+]
+
+[project.scripts]
+llm-lb = "llm_lb.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/llm_lb"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "ruff>=0.6",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

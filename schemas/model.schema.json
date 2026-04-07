@@ -1,0 +1,184 @@
+{
+  "$defs": {
+    "GPUSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "gpu_count": {
+          "minimum": 0,
+          "title": "Gpu Count",
+          "type": "integer"
+        },
+        "gpu_type": {
+          "title": "Gpu Type",
+          "type": "string"
+        },
+        "quantization": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Quantization"
+        }
+      },
+      "required": [
+        "gpu_count",
+        "gpu_type"
+      ],
+      "title": "GPUSpec",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "model_id": {
+      "title": "Model Id",
+      "type": "string"
+    },
+    "display_name": {
+      "title": "Display Name",
+      "type": "string"
+    },
+    "provider": {
+      "enum": [
+        "openai",
+        "openai_compat",
+        "hf",
+        "vllm",
+        "tgi",
+        "dummy"
+      ],
+      "title": "Provider",
+      "type": "string"
+    },
+    "endpoint_kind": {
+      "enum": [
+        "openai_chat",
+        "openai_completion",
+        "hf_inference",
+        "dummy"
+      ],
+      "title": "Endpoint Kind",
+      "type": "string"
+    },
+    "hf_uri": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Hf Uri"
+    },
+    "revision": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Revision"
+    },
+    "context_window": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Context Window"
+    },
+    "hardware": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/GPUSpec"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "license": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "License"
+    },
+    "added_at": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Added At"
+    },
+    "endpoint_url": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Endpoint Url"
+    },
+    "served_model_name": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Served Model Name"
+    },
+    "api_key_env": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Api Key Env"
+    }
+  },
+  "required": [
+    "model_id",
+    "display_name",
+    "provider",
+    "endpoint_kind"
+  ],
+  "title": "ModelCard",
+  "type": "object"
+}

@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-04-07T07:50:04+00:00",
+  "tasks": [
+    {
+      "id": "text_classification",
+      "version": "1.0",
+      "primary_metric": "accuracy",
+      "secondary_metrics": [
+        "macro_f1",
+        "tps",
+        "p95_latency_ms"
+      ],
+      "n_samples": 10
+    }
+  ],
+  "models": [
+    {
+      "id": "dummy@local",
+      "display_name": "Dummy Heuristic",
+      "provider": "dummy",
+      "hf_uri": null,
+      "hardware": {
+        "gpu_count": 0,
+        "gpu_type": "cpu",
+        "quantization": null
+      }
+    },
+    {
+      "id": "gpt-4o-mini@openai",
+      "display_name": "GPT-4o mini",
+      "provider": "openai",
+      "hf_uri": null,
+      "hardware": null
+    }
+  ],
+  "matrix": [
+    {
+      "task_id": "text_classification",
+      "task_version": "1.0",
+      "model_id": "dummy@local",
+      "score": 1.0,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "tps": 188314.2260971744,
+      "p95_latency_ms": 0.009172013960778713,
+      "result_file": "tasks/text_classification/results/dummy@local__2026-04-07T05-44-47Z.json"
+    }
+  ]
+}

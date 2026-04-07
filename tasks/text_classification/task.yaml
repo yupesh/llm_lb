@@ -1,0 +1,19 @@
+name: text_classification
+version: "1.0"
+description: Binary sentiment classification (positive / negative) on short product reviews.
+metric:
+  primary: accuracy
+  secondary: [macro_f1, tps, p95_latency_ms]
+labels: [positive, negative]
+llm_params:
+  temperature: 0.0
+  max_tokens: 8
+  seed: 42
+system_prompt: |
+  You are a sentiment classifier. Reply with exactly one word: "positive" or "negative".
+  Do not add any explanation.
+prompt_template: |
+  Classify the sentiment of the following text. Reply with one word.
+
+  Text: {prompt}
+  Label:

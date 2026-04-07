@@ -1,0 +1,5 @@
+{
+  "id": "sample_010",
+  "prompt": "Do not buy this, complete waste of money.",
+  "expected": "negative"
+}

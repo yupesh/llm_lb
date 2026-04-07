@@ -1,0 +1,78 @@
+name: score
+
+# Manually triggered scoring run. Produces a result file in tasks/<task>/results/,
+# rebuilds leaderboards + data/index.json, and opens a PR for an admin to merge.
+#
+# Two execution modes:
+#   - github       — runs on ubuntu-latest. Suitable for hosted-API providers
+#                    (OpenAI, HF Inference) where the secret keys live in repo
+#                    settings. Do NOT use for models that need a GPU.
+#   - self-hosted  — runs on a runner with the `score-runner` label. Use this
+#                    for vLLM/TGI/local inference where you control the box.
+
+on:
+  workflow_dispatch:
+    inputs:
+      task:
+        description: "Path to task directory (e.g. tasks/text_classification)"
+        required: true
+      model:
+        description: "Path to model YAML (e.g. models/gpt-4o-mini@openai.yaml)"
+        required: true
+      runner:
+        description: "Where to run"
+        required: true
+        default: github
+        type: choice
+        options: [github, self-hosted]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  score:
+    runs-on: ${{ github.event.inputs.runner == 'self-hosted' && fromJSON('["self-hosted","score-runner"]') || fromJSON('["ubuntu-latest"]') }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+
+      - name: Install runner
+        working-directory: runner
+        run: uv sync
+
+      - name: Run model against task
+        working-directory: runner
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          LLM_LB_API_KEY: ${{ secrets.LLM_LB_API_KEY }}
+        run: |
+          uv run llm-lb run \
+            --task "../${{ github.event.inputs.task }}" \
+            --model "../${{ github.event.inputs.model }}"
+
+      - name: Rebuild leaderboards and global index
+        working-directory: runner
+        run: uv run llm-lb aggregate --root ..
+
+      - name: Open PR with results
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "score: ${{ github.event.inputs.model }} on ${{ github.event.inputs.task }}"
+          title: "score: ${{ github.event.inputs.model }} on ${{ github.event.inputs.task }}"
+          branch: score/${{ github.run_id }}
+          labels: score
+          body: |
+            Automated scoring run.
+
+            - **Task:** `${{ github.event.inputs.task }}`
+            - **Model:** `${{ github.event.inputs.model }}`
+            - **Runner:** `${{ github.event.inputs.runner }}`
+            - **Run:** ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+            Requires admin review (see CODEOWNERS).

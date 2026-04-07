@@ -1,0 +1,10 @@
+model_id: gpt-4o-mini@openai
+display_name: GPT-4o mini
+provider: openai
+endpoint_kind: openai_chat
+revision: "2024-07-18"
+context_window: 128000
+license: proprietary
+added_at: "2026-04-07"
+# Reads OPENAI_API_KEY from the environment by default.
+# Override the env var name with `api_key_env: MY_KEY_VAR` if needed.

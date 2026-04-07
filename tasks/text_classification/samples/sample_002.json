@@ -1,0 +1,5 @@
+{
+  "id": "sample_002",
+  "prompt": "Absolutely terrible, broke after one day.",
+  "expected": "negative"
+}

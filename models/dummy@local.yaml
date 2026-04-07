@@ -1,0 +1,10 @@
+model_id: dummy@local
+display_name: Dummy Heuristic
+provider: dummy
+endpoint_kind: dummy
+revision: v0.1
+hardware:
+  gpu_count: 0
+  gpu_type: cpu
+license: MIT
+added_at: "2026-04-07"

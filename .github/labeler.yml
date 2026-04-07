@@ -1,0 +1,36 @@
+# Config for actions/labeler@v5 — auto-applies labels based on changed paths.
+# Used to route PRs through the right CI/review path (see CONTRIBUTING.md).
+
+task:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'tasks/*/task.yaml'
+          - 'tasks/*/samples/**'
+
+model:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'models/**'
+
+score:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'tasks/*/results/**'
+          - 'tasks/*/leaderboard.json'
+          - 'data/index.json'
+
+runner:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'runner/**'
+          - 'schemas/**'
+
+site:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'site/**'
+
+ci:
+  - changed-files:
+      - any-glob-to-any-file:
+          - '.github/**'

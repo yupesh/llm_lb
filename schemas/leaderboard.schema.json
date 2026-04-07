@@ -1,0 +1,81 @@
+{
+  "$defs": {
+    "LeaderboardEntry": {
+      "additionalProperties": false,
+      "properties": {
+        "model_id": {
+          "title": "Model Id",
+          "type": "string"
+        },
+        "score": {
+          "title": "Score",
+          "type": "number"
+        },
+        "metrics": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "Metrics",
+          "type": "object"
+        },
+        "tps": {
+          "title": "Tps",
+          "type": "number"
+        },
+        "p95_latency_ms": {
+          "title": "P95 Latency Ms",
+          "type": "number"
+        },
+        "result_file": {
+          "title": "Result File",
+          "type": "string"
+        }
+      },
+      "required": [
+        "model_id",
+        "score",
+        "metrics",
+        "tps",
+        "p95_latency_ms",
+        "result_file"
+      ],
+      "title": "LeaderboardEntry",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "task_id": {
+      "title": "Task Id",
+      "type": "string"
+    },
+    "task_version": {
+      "title": "Task Version",
+      "type": "string"
+    },
+    "primary_metric": {
+      "title": "Primary Metric",
+      "type": "string"
+    },
+    "ranking": {
+      "items": {
+        "$ref": "#/$defs/LeaderboardEntry"
+      },
+      "title": "Ranking",
+      "type": "array"
+    },
+    "updated_at": {
+      "title": "Updated At",
+      "type": "string"
+    }
+  },
+  "required": [
+    "task_id",
+    "task_version",
+    "primary_metric",
+    "ranking",
+    "updated_at"
+  ],
+  "title": "Leaderboard",
+  "type": "object"
+}

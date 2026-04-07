@@ -1,0 +1,5 @@
+{
+  "id": "sample_008",
+  "prompt": "Bad packaging, item arrived damaged and unusable.",
+  "expected": "negative"
+}

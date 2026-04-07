@@ -1,0 +1,5 @@
+{
+  "id": "sample_001",
+  "prompt": "I love this product, it changed my life!",
+  "expected": "positive"
+}

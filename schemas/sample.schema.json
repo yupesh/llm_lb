@@ -1,0 +1,29 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "prompt": {
+      "title": "Prompt",
+      "type": "string"
+    },
+    "expected": {
+      "title": "Expected",
+      "type": "string"
+    },
+    "meta": {
+      "additionalProperties": true,
+      "title": "Meta",
+      "type": "object"
+    }
+  },
+  "required": [
+    "id",
+    "prompt",
+    "expected"
+  ],
+  "title": "Sample",
+  "type": "object"
+}

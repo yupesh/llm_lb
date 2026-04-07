@@ -1,0 +1,173 @@
+{
+  "$defs": {
+    "LLMParams": {
+      "additionalProperties": false,
+      "properties": {
+        "temperature": {
+          "default": 0.0,
+          "title": "Temperature",
+          "type": "number"
+        },
+        "top_p": {
+          "default": 1.0,
+          "title": "Top P",
+          "type": "number"
+        },
+        "max_tokens": {
+          "default": 256,
+          "title": "Max Tokens",
+          "type": "integer"
+        },
+        "seed": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Seed"
+        }
+      },
+      "title": "LLMParams",
+      "type": "object"
+    },
+    "SamplePrediction": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "prediction": {
+          "title": "Prediction",
+          "type": "string"
+        },
+        "expected": {
+          "title": "Expected",
+          "type": "string"
+        },
+        "correct": {
+          "title": "Correct",
+          "type": "boolean"
+        },
+        "latency_ms": {
+          "title": "Latency Ms",
+          "type": "number"
+        },
+        "output_tokens": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Output Tokens"
+        }
+      },
+      "required": [
+        "id",
+        "prediction",
+        "expected",
+        "correct",
+        "latency_ms"
+      ],
+      "title": "SamplePrediction",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "model_id": {
+      "title": "Model Id",
+      "type": "string"
+    },
+    "model_revision": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Model Revision"
+    },
+    "task_id": {
+      "title": "Task Id",
+      "type": "string"
+    },
+    "task_version": {
+      "title": "Task Version",
+      "type": "string"
+    },
+    "runner_version": {
+      "title": "Runner Version",
+      "type": "string"
+    },
+    "prompt_template_hash": {
+      "title": "Prompt Template Hash",
+      "type": "string"
+    },
+    "llm_params": {
+      "$ref": "#/$defs/LLMParams"
+    },
+    "metrics": {
+      "additionalProperties": {
+        "type": "number"
+      },
+      "title": "Metrics",
+      "type": "object"
+    },
+    "tps": {
+      "title": "Tps",
+      "type": "number"
+    },
+    "p95_latency_ms": {
+      "title": "P95 Latency Ms",
+      "type": "number"
+    },
+    "n_samples": {
+      "title": "N Samples",
+      "type": "integer"
+    },
+    "samples": {
+      "items": {
+        "$ref": "#/$defs/SamplePrediction"
+      },
+      "title": "Samples",
+      "type": "array"
+    },
+    "created_at": {
+      "title": "Created At",
+      "type": "string"
+    },
+    "env": {
+      "additionalProperties": true,
+      "title": "Env",
+      "type": "object"
+    }
+  },
+  "required": [
+    "model_id",
+    "task_id",
+    "task_version",
+    "runner_version",
+    "prompt_template_hash",
+    "llm_params",
+    "metrics",
+    "tps",
+    "p95_latency_ms",
+    "n_samples",
+    "samples",
+    "created_at"
+  ],
+  "title": "RunResult",
+  "type": "object"
+}

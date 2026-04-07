@@ -1,0 +1,68 @@
+name: validate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+
+      - name: Install runner
+        working-directory: runner
+        run: uv sync
+
+      - name: Lint
+        working-directory: runner
+        run: uv run ruff check .
+
+      - name: Run tests (incl. dummy end-to-end)
+        working-directory: runner
+        run: uv run pytest -q
+
+      - name: Validate all tasks
+        working-directory: runner
+        shell: bash
+        run: |
+          set -e
+          shopt -s nullglob
+          for d in ../tasks/*/; do
+            uv run llm-lb validate "$d"
+          done
+
+      - name: Validate all model cards
+        working-directory: runner
+        shell: bash
+        run: |
+          set -e
+          shopt -s nullglob
+          for f in ../models/*.yaml; do
+            uv run llm-lb validate "$f"
+          done
+
+      - name: Verify schemas/ is up-to-date with pydantic models
+        working-directory: runner
+        run: |
+          uv run llm-lb export-schemas --out-dir ../schemas
+          if [ -n "$(git status --porcelain ../schemas)" ]; then
+            echo "::error::schemas/ is out of date — run 'uv run llm-lb export-schemas --out-dir ../schemas' and commit"
+            git --no-pager diff ../schemas
+            exit 1
+          fi
+
+      - name: Verify leaderboards and data/index.json are up-to-date
+        working-directory: runner
+        run: |
+          uv run llm-lb aggregate --root ..
+          if [ -n "$(git status --porcelain ../tasks ../data)" ]; then
+            echo "::error::leaderboard.json or data/index.json out of date — run 'uv run llm-lb aggregate --root ..' and commit"
+            git --no-pager diff ../tasks ../data
+            exit 1
+          fi
