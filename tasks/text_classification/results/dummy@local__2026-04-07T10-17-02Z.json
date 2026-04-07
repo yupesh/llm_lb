@@ -1,0 +1,108 @@
+{
+  "model_id": "dummy@local",
+  "model_revision": "v0.1",
+  "task_id": "text_classification",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "836e0b983717bd5d",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 8,
+    "seed": 42
+  },
+  "metrics": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0
+  },
+  "tps": 154605.06280541033,
+  "p95_latency_ms": 0.01292000524699688,
+  "n_samples": 10,
+  "samples": [
+    {
+      "id": "sample_001",
+      "prediction": "positive",
+      "expected": "positive",
+      "correct": true,
+      "latency_ms": 0.01292000524699688,
+      "output_tokens": 1
+    },
+    {
+      "id": "sample_002",
+      "prediction": "negative",
+      "expected": "negative",
+      "correct": true,
+      "latency_ms": 0.007201917469501495,
+      "output_tokens": 1
+    },
+    {
+      "id": "sample_003",
+      "prediction": "positive",
+      "expected": "positive",
+      "correct": true,
+      "latency_ms": 0.006314949132502079,
+      "output_tokens": 1
+    },
+    {
+      "id": "sample_004",
+      "prediction": "negative",
+      "expected": "negative",
+      "correct": true,
+      "latency_ms": 0.005699926987290382,
+      "output_tokens": 1
+    },
+    {
+      "id": "sample_005",
+      "prediction": "positive",
+      "expected": "positive",
+      "correct": true,
+      "latency_ms": 0.0057730358093976974,
+      "output_tokens": 1
+    },
+    {
+      "id": "sample_006",
+      "prediction": "negative",
+      "expected": "negative",
+      "correct": true,
+      "latency_ms": 0.005399109795689583,
+      "output_tokens": 1
+    },
+    {
+      "id": "sample_007",
+      "prediction": "positive",
+      "expected": "positive",
+      "correct": true,
+      "latency_ms": 0.005542999133467674,
+      "output_tokens": 1
+    },
+    {
+      "id": "sample_008",
+      "prediction": "negative",
+      "expected": "negative",
+      "correct": true,
+      "latency_ms": 0.0053960829973220825,
+      "output_tokens": 1
+    },
+    {
+      "id": "sample_009",
+      "prediction": "positive",
+      "expected": "positive",
+      "correct": true,
+      "latency_ms": 0.005270936526358128,
+      "output_tokens": 1
+    },
+    {
+      "id": "sample_010",
+      "prediction": "negative",
+      "expected": "negative",
+      "correct": true,
+      "latency_ms": 0.005161971785128117,
+      "output_tokens": 1
+    }
+  ],
+  "created_at": "2026-04-07T10:17:02+00:00",
+  "env": {
+    "provider": "dummy",
+    "endpoint_kind": "dummy"
+  }
+}

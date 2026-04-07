@@ -27,3 +27,18 @@ def test_aggregate_smoke(tmp_path: Path):
     idx = aggregate_all(REPO)
     assert any(t["id"] == "text_classification" for t in idx["tasks"])
     assert any(e["model_id"] == "dummy@local" for e in idx["matrix"])
+
+
+def test_aggregate_idempotent():
+    """A second `aggregate_all` call must not touch any files on disk —
+    otherwise CI's freshness check would fail on every run."""
+    aggregate_all(REPO)
+    index_path = REPO / "data" / "index.json"
+    lb_path = REPO / "tasks" / "text_classification" / "leaderboard.json"
+    before_index = index_path.read_bytes()
+    before_lb = lb_path.read_bytes()
+
+    aggregate_all(REPO)
+
+    assert index_path.read_bytes() == before_index
+    assert lb_path.read_bytes() == before_lb

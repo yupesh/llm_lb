@@ -9,6 +9,29 @@ import yaml
 
 from .models import Leaderboard, LeaderboardEntry, ModelCard, RunResult, TaskSpec
 
+# Fields that change on every aggregate run and must be ignored when deciding
+# whether the on-disk file is stale. Without this guard, every CI run would see
+# a fresh timestamp and report `data/index.json` as out of date.
+_VOLATILE_KEYS = ("updated_at", "generated_at")
+
+
+def _write_if_changed(path: Path, payload: dict[str, Any]) -> None:
+    """Write JSON only if it differs from what's already on disk (ignoring
+    `updated_at` / `generated_at`). Keeps the existing timestamp when content
+    is unchanged so re-running `aggregate` is a no-op for git."""
+    if path.exists():
+        try:
+            existing = json.loads(path.read_text())
+        except json.JSONDecodeError:
+            existing = None
+        if isinstance(existing, dict):
+            existing_cmp = {k: v for k, v in existing.items() if k not in _VOLATILE_KEYS}
+            new_cmp = {k: v for k, v in payload.items() if k not in _VOLATILE_KEYS}
+            if existing_cmp == new_cmp:
+                return
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(payload, indent=2) + "\n")
+
 
 def _load_task(task_dir: Path) -> TaskSpec:
     return TaskSpec.model_validate(yaml.safe_load((task_dir / "task.yaml").read_text()))
@@ -49,7 +72,7 @@ def aggregate_task(task_dir: Path) -> Leaderboard:
         ranking=entries,
         updated_at=datetime.now(timezone.utc).isoformat(timespec="seconds"),
     )
-    (task_dir / "leaderboard.json").write_text(lb.model_dump_json(indent=2))
+    _write_if_changed(task_dir / "leaderboard.json", lb.model_dump(mode="json"))
     return lb
 
 
@@ -111,7 +134,5 @@ def aggregate_all(repo_root: Path) -> dict[str, Any]:
         "models": models_meta,
         "matrix": matrix,
     }
-    out = repo_root / "data" / "index.json"
-    out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps(index, indent=2))
+    _write_if_changed(repo_root / "data" / "index.json", index)
     return index
