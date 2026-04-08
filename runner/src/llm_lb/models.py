@@ -45,6 +45,10 @@ class ModelCard(BaseModel):
     # Name of env var that holds the API key for this endpoint. Defaults are
     # provider-specific (OPENAI_API_KEY for openai, HF_TOKEN for hf).
     api_key_env: Optional[str] = None
+    # Optional pricing for cost tracking. Both fields are USD per 1k tokens.
+    # When both are set, the runner records `cost_usd` in each RunResult.
+    prompt_cost_per_1k_usd: Optional[float] = Field(default=None, ge=0)
+    completion_cost_per_1k_usd: Optional[float] = Field(default=None, ge=0)
 
 
 class LLMParams(BaseModel):
@@ -61,6 +65,22 @@ class MetricSpec(BaseModel):
     secondary: list[str] = Field(default_factory=list)
 
 
+class JudgeSpec(BaseModel):
+    """LLM-as-Judge configuration. The judge model scores each candidate
+    answer on an integer scale; the runner normalises into [0, 1].
+
+    The judge prompt may use placeholders {prompt}, {expected}, {prediction}.
+    """
+    model_config = _BASE
+    model: str  # model_id of an entry under models/
+    prompt: str
+    scale_min: int = 0
+    scale_max: int = 5
+    # If true, the runner will refuse to run when the candidate model and the
+    # judge model share the same `model_id` (self-judge bias guard).
+    forbid_self_judge: bool = True
+
+
 class TaskSpec(BaseModel):
     model_config = _BASE
     name: str
@@ -71,6 +91,13 @@ class TaskSpec(BaseModel):
     llm_params: LLMParams
     system_prompt: Optional[str] = None
     prompt_template: str  # placeholder: {prompt}
+    # Free-form regex used by `eval.extract.extract_regex` for tasks where
+    # the answer is buried in surrounding text. First group is the answer.
+    answer_regex: Optional[str] = None
+    # Optional LLM-as-Judge configuration. When present, the runner uses the
+    # judge to compute the `judge_score` metric instead of (or alongside)
+    # accuracy / exact_match.
+    judge: Optional[JudgeSpec] = None
 
 
 class Sample(BaseModel):
@@ -88,7 +115,12 @@ class SamplePrediction(BaseModel):
     expected: str
     correct: bool
     latency_ms: float
+    input_tokens: Optional[int] = None
     output_tokens: Optional[int] = None
+    # Per-sample judge score in the task's raw judge scale, when the task
+    # configures an LLM-as-Judge metric. Normalised aggregate goes into
+    # `RunResult.metrics["judge_score"]`.
+    judge_raw_score: Optional[float] = None
 
 
 class RunResult(BaseModel):
@@ -107,6 +139,13 @@ class RunResult(BaseModel):
     samples: list[SamplePrediction]
     created_at: str
     env: dict[str, Any] = Field(default_factory=dict)
+    # Cost in USD, summed over all samples. Only set when the model card has
+    # both `prompt_cost_per_1k_usd` and `completion_cost_per_1k_usd`.
+    cost_usd: Optional[float] = None
+    # LLM-as-Judge attribution. Only set when the task uses a judge metric.
+    judge_model_id: Optional[str] = None
+    judge_model_revision: Optional[str] = None
+    judge_prompt_hash: Optional[str] = None
 
 
 class LeaderboardEntry(BaseModel):
@@ -116,6 +155,7 @@ class LeaderboardEntry(BaseModel):
     metrics: dict[str, float]
     tps: float
     p95_latency_ms: float
+    cost_usd: Optional[float] = None
     result_file: str
 
 

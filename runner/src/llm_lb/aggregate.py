@@ -59,6 +59,7 @@ def aggregate_task(task_dir: Path) -> Leaderboard:
             metrics=r.metrics,
             tps=r.tps,
             p95_latency_ms=r.p95_latency_ms,
+            cost_usd=r.cost_usd,
             result_file=f"results/{fname}",
         )
         for mid, (r, fname) in best.items()
@@ -110,6 +111,7 @@ def aggregate_all(repo_root: Path) -> dict[str, Any]:
                         "metrics": entry.metrics,
                         "tps": entry.tps,
                         "p95_latency_ms": entry.p95_latency_ms,
+                        "cost_usd": entry.cost_usd,
                         "result_file": f"tasks/{task_dir.name}/{entry.result_file}",
                     }
                 )

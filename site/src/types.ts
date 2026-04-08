@@ -31,6 +31,7 @@ export interface MatrixEntry {
   metrics: Record<string, number>
   tps: number
   p95_latency_ms: number
+  cost_usd: number | null
   result_file: string
 }
 

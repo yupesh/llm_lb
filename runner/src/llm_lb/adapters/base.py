@@ -10,6 +10,7 @@ from ..models import LLMParams, ModelCard
 class Completion:
     text: str
     output_tokens: int | None = None
+    input_tokens: int | None = None
 
 
 class LLMClient(Protocol):

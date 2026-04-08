@@ -8,3 +8,6 @@ license: proprietary
 added_at: "2026-04-07"
 # Reads OPENAI_API_KEY from the environment by default.
 # Override the env var name with `api_key_env: MY_KEY_VAR` if needed.
+# Pricing as of 2024-07-18 release; update when the provider changes it.
+prompt_cost_per_1k_usd: 0.00015
+completion_cost_per_1k_usd: 0.0006

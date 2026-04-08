@@ -40,4 +40,8 @@ def openai_chat(
         data = r.json()
     text = data["choices"][0]["message"]["content"] or ""
     usage = data.get("usage") or {}
-    return Completion(text=text, output_tokens=usage.get("completion_tokens"))
+    return Completion(
+        text=text,
+        output_tokens=usage.get("completion_tokens"),
+        input_tokens=usage.get("prompt_tokens"),
+    )

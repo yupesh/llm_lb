@@ -1,0 +1,5 @@
+{
+  "id": "sample_003",
+  "prompt": "Who wrote the play 'Hamlet'?",
+  "expected": "William Shakespeare"
+}

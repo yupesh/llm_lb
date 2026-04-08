@@ -1,0 +1,5 @@
+{
+  "id": "sample_003",
+  "prompt": "The 2008 financial crisis was triggered by the collapse of the U.S. subprime mortgage market, which had been fuelled by lax lending standards and the widespread securitisation of risky loans. It led to the bankruptcy of Lehman Brothers and a global recession.",
+  "expected": "The 2008 crisis began with the U.S. subprime mortgage collapse, causing Lehman Brothers' failure and a global recession."
+}

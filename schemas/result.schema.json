@@ -57,6 +57,18 @@
           "title": "Latency Ms",
           "type": "number"
         },
+        "input_tokens": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Input Tokens"
+        },
         "output_tokens": {
           "anyOf": [
             {
@@ -68,6 +80,18 @@
           ],
           "default": null,
           "title": "Output Tokens"
+        },
+        "judge_raw_score": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Judge Raw Score"
         }
       },
       "required": [
@@ -152,6 +176,54 @@
       "additionalProperties": true,
       "title": "Env",
       "type": "object"
+    },
+    "cost_usd": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Cost Usd"
+    },
+    "judge_model_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Judge Model Id"
+    },
+    "judge_model_revision": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Judge Model Revision"
+    },
+    "judge_prompt_hash": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Judge Prompt Hash"
     }
   },
   "required": [

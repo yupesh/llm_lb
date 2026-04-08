@@ -1,0 +1,5 @@
+{
+  "id": "sample_002",
+  "prompt": "Python's `asyncio` library introduced an event-loop-based concurrency model that lets a single thread handle thousands of network connections by suspending coroutines while they wait for I/O. It is now the standard way to write high-throughput network services in pure Python.",
+  "expected": "Python's asyncio enables high-throughput single-threaded networking by suspending coroutines on I/O via an event loop."
+}

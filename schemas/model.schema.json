@@ -171,6 +171,32 @@
       ],
       "default": null,
       "title": "Api Key Env"
+    },
+    "prompt_cost_per_1k_usd": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Prompt Cost Per 1K Usd"
+    },
+    "completion_cost_per_1k_usd": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Completion Cost Per 1K Usd"
     }
   },
   "required": [

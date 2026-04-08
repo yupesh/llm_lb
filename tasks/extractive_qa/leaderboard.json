@@ -1,0 +1,7 @@
+{
+  "task_id": "extractive_qa",
+  "task_version": "1.0",
+  "primary_metric": "exact_match",
+  "ranking": [],
+  "updated_at": "2026-04-07T11:40:11+00:00"
+}

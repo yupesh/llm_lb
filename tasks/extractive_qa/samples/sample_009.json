@@ -1,0 +1,5 @@
+{
+  "id": "sample_009",
+  "prompt": "What is the speed of light in vacuum, in metres per second (rounded)?",
+  "expected": "299792458"
+}

@@ -1,0 +1,19 @@
+name: extractive_qa
+version: "1.0"
+description: |
+  Short closed-book factoid QA. Answers are short noun phrases that the model
+  must produce verbatim. Scored with normalised exact_match (lowercased,
+  whitespace-collapsed, punctuation stripped).
+metric:
+  primary: exact_match
+  secondary: [tps, p95_latency_ms]
+llm_params:
+  temperature: 0.0
+  max_tokens: 16
+  seed: 42
+system_prompt: |
+  You answer factual questions in as few words as possible. Output only the
+  answer, no explanation, no punctuation.
+prompt_template: |
+  Question: {prompt}
+  Answer:

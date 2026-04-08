@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import type { Index } from '../types'
+import { fmtCost, fmtScore } from '../format'
 
 export function TasksView({ index }: { index: Index }) {
   const [open, setOpen] = useState<string | null>(index.tasks[0]?.id ?? null)
@@ -30,6 +31,7 @@ export function TasksView({ index }: { index: Index }) {
                     <th>{task.primary_metric}</th>
                     <th>TPS</th>
                     <th>p95 (ms)</th>
+                    <th>Cost</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -39,9 +41,10 @@ export function TasksView({ index }: { index: Index }) {
                       <td>
                         <code>{e.model_id}</code>
                       </td>
-                      <td>{e.score.toFixed(4)}</td>
+                      <td>{fmtScore(e.score)}</td>
                       <td>{e.tps.toFixed(1)}</td>
                       <td>{e.p95_latency_ms.toFixed(1)}</td>
+                      <td>{fmtCost(e.cost_usd)}</td>
                     </tr>
                   ))}
                 </tbody>

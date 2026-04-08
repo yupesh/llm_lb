@@ -26,6 +26,18 @@
           "title": "P95 Latency Ms",
           "type": "number"
         },
+        "cost_usd": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cost Usd"
+        },
         "result_file": {
           "title": "Result File",
           "type": "string"

@@ -8,3 +8,7 @@ hardware:
   gpu_type: cpu
 license: MIT
 added_at: "2026-04-07"
+# Free local heuristic, but we set non-zero pricing so the cost column in
+# the leaderboard has a sample value to render.
+prompt_cost_per_1k_usd: 0.0
+completion_cost_per_1k_usd: 0.0

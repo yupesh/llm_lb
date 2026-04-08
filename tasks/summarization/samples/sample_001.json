@@ -1,0 +1,5 @@
+{
+  "id": "sample_001",
+  "prompt": "The James Webb Space Telescope, launched in December 2021, is the largest optical telescope ever placed in space. It uses infrared instruments to observe galaxies that formed shortly after the Big Bang and is operated jointly by NASA, ESA and the Canadian Space Agency.",
+  "expected": "JWST, launched in December 2021, is the largest space telescope and observes early-universe galaxies in infrared as a NASA-ESA-CSA project."
+}

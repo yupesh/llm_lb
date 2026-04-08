@@ -1,0 +1,5 @@
+{
+  "id": "sample_004",
+  "prompt": "What is the chemical symbol for gold?",
+  "expected": "Au"
+}

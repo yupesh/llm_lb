@@ -1,0 +1,5 @@
+{
+  "id": "sample_010",
+  "prompt": "Which element has the atomic number 1?",
+  "expected": "Hydrogen"
+}

@@ -9,7 +9,8 @@ import yaml
 
 from . import __version__
 from .adapters import get_adapter
-from .eval.extract import extract_label
+from .eval import judge as judge_mod
+from .eval.extract import extract_label, extract_regex, normalize
 from .eval.metrics import accuracy, macro_f1
 from .models import ModelCard, RunResult, Sample, SamplePrediction, TaskSpec
 
@@ -40,13 +41,51 @@ def _p95(values: list[float]) -> float:
     return s[idx]
 
 
+def _extract_prediction(task: TaskSpec, raw: str) -> str:
+    if task.labels:
+        return extract_label(raw, task.labels)
+    if task.answer_regex:
+        return extract_regex(raw, task.answer_regex)
+    return raw.strip()
+
+
+def _is_correct(task: TaskSpec, prediction: str, expected: str) -> bool:
+    if task.labels:
+        # Classification tasks: simple case-insensitive equality.
+        return prediction.strip().lower() == expected.strip().lower()
+    # Free-form: SQuAD-style normalisation, used by exact_match metric.
+    return normalize(prediction) == normalize(expected)
+
+
+def _compute_cost_usd(model: ModelCard, in_tokens: int, out_tokens: int) -> float | None:
+    if model.prompt_cost_per_1k_usd is None or model.completion_cost_per_1k_usd is None:
+        return None
+    return (
+        in_tokens * model.prompt_cost_per_1k_usd / 1000.0
+        + out_tokens * model.completion_cost_per_1k_usd / 1000.0
+    )
+
+
 def run(task_dir: Path, model_path: Path, out_dir: Path | None = None) -> Path:
     task, samples = load_task(task_dir)
     model = load_model(model_path)
     adapter = get_adapter(model)
     template_hash = _hash_template(task.system_prompt, task.prompt_template)
 
+    # Resolve repo root from the task path so the judge can find model cards.
+    repo_root = task_dir.resolve().parent.parent
+    judge_client = None
+    judge_card: ModelCard | None = None
+    if task.judge:
+        if task.judge.forbid_self_judge and task.judge.model == model.model_id:
+            raise RuntimeError(
+                f"Self-judge bias guard: candidate {model.model_id!r} is also the "
+                f"judge. Set `judge.forbid_self_judge: false` in task.yaml to override."
+            )
+        judge_client, judge_card = judge_mod.build_judge(repo_root, task.judge)
+
     preds: list[SamplePrediction] = []
+    total_input_tokens = 0
     total_output_tokens = 0
     total_gen_time_s = 0.0
 
@@ -56,32 +95,49 @@ def run(task_dir: Path, model_path: Path, out_dir: Path | None = None) -> Path:
         completion = adapter.chat(task.system_prompt, user, task.llm_params)
         dt_ms = (time.perf_counter() - t0) * 1000.0
 
-        if task.labels:
-            pred = extract_label(completion.text, task.labels)
-        else:
-            pred = completion.text.strip()
-        correct = pred.strip().lower() == s.expected.strip().lower()
+        pred = _extract_prediction(task, completion.text)
+        correct = _is_correct(task, pred, s.expected)
 
-        preds.append(
-            SamplePrediction(
-                id=s.id,
-                prediction=pred,
-                expected=s.expected,
-                correct=correct,
-                latency_ms=dt_ms,
-                output_tokens=completion.output_tokens,
-            )
+        sample_pred = SamplePrediction(
+            id=s.id,
+            prediction=pred,
+            expected=s.expected,
+            correct=correct,
+            latency_ms=dt_ms,
+            input_tokens=completion.input_tokens,
+            output_tokens=completion.output_tokens,
         )
+
+        if task.judge and judge_client is not None:
+            sample_pred.judge_raw_score = judge_mod.score_sample(
+                judge_client, task.judge, s, pred
+            )
+
+        preds.append(sample_pred)
         if completion.output_tokens:
             total_output_tokens += completion.output_tokens
             total_gen_time_s += dt_ms / 1000.0
+        if completion.input_tokens:
+            total_input_tokens += completion.input_tokens
 
-    metrics: dict[str, float] = {"accuracy": accuracy(preds)}
-    if task.labels:
+    # Metrics dispatch: pick whatever the task asks for. We always compute the
+    # primary metric, then any secondaries we know how to compute cheaply.
+    metrics: dict[str, float] = {}
+    primary = task.metric.primary
+    wanted = {primary, *task.metric.secondary}
+
+    if task.judge:
+        metrics["judge_score"] = judge_mod.aggregate(preds, task.judge)
+    if "accuracy" in wanted or (task.labels and primary == "accuracy"):
+        metrics["accuracy"] = accuracy(preds)
+    if "exact_match" in wanted:
+        metrics["exact_match"] = accuracy(preds)  # `correct` already uses normalize()
+    if "macro_f1" in wanted and task.labels:
         metrics["macro_f1"] = macro_f1(preds, task.labels)
 
     tps = (total_output_tokens / total_gen_time_s) if total_gen_time_s > 0 else 0.0
     p95 = _p95([p.latency_ms for p in preds])
+    cost_usd = _compute_cost_usd(model, total_input_tokens, total_output_tokens)
 
     result = RunResult(
         model_id=model.model_id,
@@ -98,6 +154,10 @@ def run(task_dir: Path, model_path: Path, out_dir: Path | None = None) -> Path:
         samples=preds,
         created_at=datetime.now(timezone.utc).isoformat(timespec="seconds"),
         env={"provider": model.provider, "endpoint_kind": model.endpoint_kind},
+        cost_usd=cost_usd,
+        judge_model_id=judge_card.model_id if judge_card else None,
+        judge_model_revision=judge_card.revision if judge_card else None,
+        judge_prompt_hash=judge_mod.hash_judge_prompt(task.judge.prompt) if task.judge else None,
     )
 
     out_dir = out_dir or (task_dir / "results")

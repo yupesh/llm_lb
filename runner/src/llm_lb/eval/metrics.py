@@ -11,6 +11,15 @@ def accuracy(preds: list[SamplePrediction]) -> float:
     return sum(1 for p in preds if p.correct) / len(preds)
 
 
+def exact_match(preds: list[SamplePrediction]) -> float:
+    """Same as accuracy but conceptually distinct: meant for free-form answers
+    after normalisation (see `eval.extract.normalize`). The runner sets
+    `correct` based on the normalised comparison, so the aggregator just
+    averages it.
+    """
+    return accuracy(preds)
+
+
 def macro_f1(preds: list[SamplePrediction], labels: list[str]) -> float:
     tp: dict[str, int] = defaultdict(int)
     fp: dict[str, int] = defaultdict(int)

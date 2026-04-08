@@ -1,0 +1,7 @@
+{
+  "task_id": "summarization",
+  "task_version": "1.0",
+  "primary_metric": "judge_score",
+  "ranking": [],
+  "updated_at": "2026-04-07T11:40:11+00:00"
+}

@@ -1,0 +1,44 @@
+name: summarization
+version: "1.0"
+description: |
+  One-sentence summarisation of short paragraphs. Free-form output, scored by
+  an LLM-as-Judge that rates the candidate summary against the reference on a
+  0..5 scale (faithfulness + completeness + concision).
+metric:
+  primary: judge_score
+  secondary: [tps, p95_latency_ms]
+llm_params:
+  temperature: 0.0
+  max_tokens: 80
+  seed: 42
+system_prompt: |
+  You write concise, factual one-sentence summaries. Output only the summary.
+prompt_template: |
+  Summarise the following paragraph in a single sentence.
+
+  Paragraph:
+  {prompt}
+
+  Summary:
+judge:
+  model: gpt-4o-mini@openai
+  scale_min: 0
+  scale_max: 5
+  forbid_self_judge: true
+  prompt: |
+    You are a strict evaluator of one-sentence summaries.
+    Score the candidate summary on faithfulness, completeness and concision
+    on an integer scale 0..5, where:
+      0 = unrelated or hallucinated
+      1 = mostly wrong
+      2 = partially correct, missing key facts
+      3 = correct but verbose or missing minor facts
+      4 = correct and concise, minor flaws
+      5 = perfect, faithful and concise
+
+    Original paragraph: {prompt}
+    Reference summary:  {expected}
+    Candidate summary:  {prediction}
+
+    Reply with a single integer 0..5 and nothing else.
+    Score:

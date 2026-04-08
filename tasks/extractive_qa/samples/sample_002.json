@@ -1,0 +1,5 @@
+{
+  "id": "sample_002",
+  "prompt": "Which planet is known as the Red Planet?",
+  "expected": "Mars"
+}

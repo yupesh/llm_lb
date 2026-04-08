@@ -1,5 +1,40 @@
 {
   "$defs": {
+    "JudgeSpec": {
+      "additionalProperties": false,
+      "description": "LLM-as-Judge configuration. The judge model scores each candidate\nanswer on an integer scale; the runner normalises into [0, 1].\n\nThe judge prompt may use placeholders {prompt}, {expected}, {prediction}.",
+      "properties": {
+        "model": {
+          "title": "Model",
+          "type": "string"
+        },
+        "prompt": {
+          "title": "Prompt",
+          "type": "string"
+        },
+        "scale_min": {
+          "default": 0,
+          "title": "Scale Min",
+          "type": "integer"
+        },
+        "scale_max": {
+          "default": 5,
+          "title": "Scale Max",
+          "type": "integer"
+        },
+        "forbid_self_judge": {
+          "default": true,
+          "title": "Forbid Self Judge",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "model",
+        "prompt"
+      ],
+      "title": "JudgeSpec",
+      "type": "object"
+    },
     "LLMParams": {
       "additionalProperties": false,
       "properties": {
@@ -114,6 +149,29 @@
     "prompt_template": {
       "title": "Prompt Template",
       "type": "string"
+    },
+    "answer_regex": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Answer Regex"
+    },
+    "judge": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/JudgeSpec"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
     }
   },
   "required": [
