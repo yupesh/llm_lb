@@ -1,0 +1,23 @@
+name: topic_classification
+version: "1.0"
+description: |
+  Multi-class topic classification of short news headlines into one of five
+  fixed labels. Demonstrates macro_f1 alongside accuracy and the label
+  extraction logic for tasks with more than two classes.
+metric:
+  primary: accuracy
+  secondary: [macro_f1, tps, p95_latency_ms]
+labels: [tech, sports, politics, health, entertainment]
+llm_params:
+  temperature: 0.0
+  max_tokens: 8
+  seed: 42
+system_prompt: |
+  You are a news topic classifier. Reply with exactly one word from the set:
+  tech, sports, politics, health, entertainment.
+  Do not add any explanation.
+prompt_template: |
+  Classify the topic of the following headline. Reply with one word.
+
+  Headline: {prompt}
+  Topic:

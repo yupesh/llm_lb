@@ -1,0 +1,20 @@
+{
+  "task_id": "topic_classification",
+  "task_version": "1.0",
+  "primary_metric": "accuracy",
+  "ranking": [
+    {
+      "model_id": "dummy@local",
+      "score": 0.0,
+      "metrics": {
+        "accuracy": 0.0,
+        "macro_f1": 0.0
+      },
+      "tps": 139836.762404299,
+      "p95_latency_ms": 0.019620987586677074,
+      "cost_usd": 0.0,
+      "result_file": "results/dummy@local__2026-04-08T05-07-23Z.json"
+    }
+  ],
+  "updated_at": "2026-04-08T05:07:27+00:00"
+}

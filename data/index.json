@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-07T11:40:11+00:00",
+  "generated_at": "2026-04-08T05:07:27+00:00",
   "tasks": [
     {
       "id": "extractive_qa",
@@ -23,6 +23,17 @@
     },
     {
       "id": "text_classification",
+      "version": "1.0",
+      "primary_metric": "accuracy",
+      "secondary_metrics": [
+        "macro_f1",
+        "tps",
+        "p95_latency_ms"
+      ],
+      "n_samples": 10
+    },
+    {
+      "id": "topic_classification",
       "version": "1.0",
       "primary_metric": "accuracy",
       "secondary_metrics": [
@@ -67,6 +78,20 @@
       "p95_latency_ms": 0.009172013960778713,
       "cost_usd": null,
       "result_file": "tasks/text_classification/results/dummy@local__2026-04-07T05-44-47Z.json"
+    },
+    {
+      "task_id": "topic_classification",
+      "task_version": "1.0",
+      "model_id": "dummy@local",
+      "score": 0.0,
+      "metrics": {
+        "accuracy": 0.0,
+        "macro_f1": 0.0
+      },
+      "tps": 139836.762404299,
+      "p95_latency_ms": 0.019620987586677074,
+      "cost_usd": 0.0,
+      "result_file": "tasks/topic_classification/results/dummy@local__2026-04-08T05-07-23Z.json"
     }
   ]
 }

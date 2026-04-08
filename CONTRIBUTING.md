@@ -60,8 +60,48 @@ bun run dev   # opens http://localhost:5173/
 2. Required fields: `model_id`, `display_name`, `provider`, `endpoint_kind`.
 3. Pin `revision` whenever the provider exposes one (HF commit hash, API
    revision tag, vLLM image tag).
-4. **Never** put API keys, tokens or private endpoint URLs in the file. Use
-   `api_key_env: NAME_OF_ENV_VAR` to point at a secret instead.
+4. **Never** put API keys, tokens or private endpoint URLs in the file.
+   The model card is plain text in the repo — anything you write there
+   becomes public the moment you push. Instead, write only the *name* of
+   an environment variable that holds the secret, and set the variable
+   either locally (`export ...`) or via GitHub repo secrets for CI.
+
+   Example: a private vLLM endpoint protected by a bearer token.
+
+   `models/qwen3-30b@vllm.yaml` (committed to the repo, no secrets):
+   ```yaml
+   model_id: qwen3-30b@vllm
+   display_name: Qwen3-30B (vLLM)
+   provider: openai_compat
+   endpoint_kind: openai_chat
+   hf_uri: Qwen/Qwen3-30B-A3B
+   revision: "2025-12-01"
+   endpoint_url: https://lnsigo.mipt.ru:4000/v1
+   api_key_env: VLLM_PROXY_KEY     # <-- name of env var, not the key
+   hardware:
+     gpu_count: 1
+     gpu_type: H200
+   ```
+
+   Locally you then run:
+   ```bash
+   export VLLM_PROXY_KEY=sk-xxxxx
+   uv run llm-lb run --task ../tasks/text_classification --model ../models/qwen3-30b@vllm.yaml
+   ```
+
+   In GitHub Actions you add the same secret under
+   *Settings → Secrets and variables → Actions* with the name `VLLM_PROXY_KEY`,
+   then reference it from the workflow:
+   ```yaml
+   env:
+     VLLM_PROXY_KEY: ${{ secrets.VLLM_PROXY_KEY }}
+   ```
+
+   Defaults if you omit `api_key_env`:
+   - `provider: openai`        → reads `OPENAI_API_KEY`
+   - `provider: hf`            → reads `HF_TOKEN`
+   - `provider: openai_compat` → no key sent unless `api_key_env` is set
+     (most local vLLM/TGI deployments don't need one)
 5. Validate and open a PR:
    ```bash
    uv run llm-lb validate ../models/<model_id>.yaml

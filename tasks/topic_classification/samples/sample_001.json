@@ -1,0 +1,5 @@
+{
+  "id": "sample_001",
+  "prompt": "Apple unveils new M5 chip with on-device transformer accelerator",
+  "expected": "tech"
+}
