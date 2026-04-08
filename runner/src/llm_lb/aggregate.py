@@ -7,6 +7,7 @@ from typing import Any
 
 import yaml
 
+from .feed import write_feed
 from .models import Leaderboard, LeaderboardEntry, ModelCard, RunResult, TaskSpec
 
 # Fields that change on every aggregate run and must be ignored when deciding
@@ -137,4 +138,5 @@ def aggregate_all(repo_root: Path) -> dict[str, Any]:
         "matrix": matrix,
     }
     _write_if_changed(repo_root / "data" / "index.json", index)
+    write_feed(repo_root)
     return index

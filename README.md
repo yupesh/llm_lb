@@ -1,8 +1,17 @@
 # LLM Leaderboard
 
+[![Live site](https://img.shields.io/badge/leaderboard-live-blue)](https://yupesh.github.io/llm_lb/)
+[![validate](https://github.com/yupesh/llm_lb/actions/workflows/validate.yml/badge.svg)](https://github.com/yupesh/llm_lb/actions/workflows/validate.yml)
+[![pages](https://github.com/yupesh/llm_lb/actions/workflows/pages.yml/badge.svg)](https://github.com/yupesh/llm_lb/actions/workflows/pages.yml)
+[![Atom feed](https://img.shields.io/badge/feed-atom-orange)](https://yupesh.github.io/llm_lb/data/feed.xml)
+
 GitHub-driven leaderboard for evaluating LLMs on small, reproducible tasks.
 
-See [CLAUDE.md](CLAUDE.md) for the full specification.
+- **Live leaderboard:** <https://yupesh.github.io/llm_lb/>
+- **Atom feed of recent runs:** <https://yupesh.github.io/llm_lb/data/feed.xml>
+- **End-to-end walkthrough:** [docs/WALKTHROUGH.md](docs/WALKTHROUGH.md)
+- **Contributing:** [CONTRIBUTING.md](CONTRIBUTING.md)
+- **Full specification:** [CLAUDE.md](CLAUDE.md)
 
 ## Quickstart (dev)
 
