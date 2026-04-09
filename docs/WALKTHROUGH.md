@@ -53,12 +53,19 @@ cd site && bun run dev   # or: npm run dev
    cd runner
    uv run llm-lb validate ../tasks/my_new_task
    ```
-4. Commit, push, open a PR. CI (`validate.yml`) will:
+4. **Rebuild the global index** (CI checks that it's up to date):
+   ```bash
+   cd runner
+   uv run llm-lb aggregate --root ..
+   ```
+   This adds the new task to `data/index.json` (no `leaderboard.json` is
+   created until the first scoring run).
+5. Commit everything, push, open a PR. CI (`validate.yml`) will:
    - lint with ruff
    - run pytest (includes a dummy end-to-end smoke test)
    - validate every task and model card
    - check that JSON Schemas and aggregates are up to date
-5. An admin reviews and merges. **No results are produced in this PR** —
+6. An admin reviews and merges. **No results are produced in this PR** —
    scoring happens separately.
 
 ## 3. Contributing a new model card (model-author flow)
