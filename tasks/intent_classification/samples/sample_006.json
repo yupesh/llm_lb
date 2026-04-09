@@ -1,0 +1,5 @@
+{
+  "id": "sample_006",
+  "prompt": "This is the worst customer service I've ever experienced.",
+  "expected": "complaint"
+}

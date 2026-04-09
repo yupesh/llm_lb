@@ -1,0 +1,5 @@
+{
+  "id": "sample_004",
+  "prompt": "I really like the new design, it's much cleaner.",
+  "expected": "feedback"
+}

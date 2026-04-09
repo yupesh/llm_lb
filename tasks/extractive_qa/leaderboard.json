@@ -2,6 +2,18 @@
   "task_id": "extractive_qa",
   "task_version": "1.0",
   "primary_metric": "exact_match",
-  "ranking": [],
-  "updated_at": "2026-04-07T11:40:11+00:00"
+  "ranking": [
+    {
+      "model_id": "dummy@local",
+      "score": 0.0,
+      "metrics": {
+        "exact_match": 0.0
+      },
+      "tps": 189019.08671619196,
+      "p95_latency_ms": 0.011593103408813477,
+      "cost_usd": 0.0,
+      "result_file": "results/dummy@local__2026-04-09T04-42-08Z.json"
+    }
+  ],
+  "updated_at": "2026-04-09T04:42:09+00:00"
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-08T05:07:27+00:00",
+  "generated_at": "2026-04-09T04:42:09+00:00",
   "tasks": [
     {
       "id": "extractive_qa",
@@ -65,6 +65,19 @@
     }
   ],
   "matrix": [
+    {
+      "task_id": "extractive_qa",
+      "task_version": "1.0",
+      "model_id": "dummy@local",
+      "score": 0.0,
+      "metrics": {
+        "exact_match": 0.0
+      },
+      "tps": 189019.08671619196,
+      "p95_latency_ms": 0.011593103408813477,
+      "cost_usd": 0.0,
+      "result_file": "tasks/extractive_qa/results/dummy@local__2026-04-09T04-42-08Z.json"
+    },
     {
       "task_id": "text_classification",
       "task_version": "1.0",
