@@ -104,8 +104,14 @@ bun run dev   # opens http://localhost:5173/
    When an admin later scores this model, they set the env var and run
    `llm-lb run` (see [Scoring](#scoring-a-model-admin) below).
 
-   In GitHub Actions the same secret goes under
-   *Settings → Secrets and variables → Actions* with the name `VLLM_PROXY_KEY`.
+   **If your model uses a new `api_key_env` value** (one not already in the
+   workflow), two things must happen before the `score` workflow can use it:
+   1. Add the secret under *Settings → Secrets and variables → Actions*.
+   2. Add a corresponding line in `.github/workflows/score.yml` in the
+      `env:` block of the "Run model against task" step, e.g.:
+      ```yaml
+      VLLM_PROXY_KEY: ${{ secrets.VLLM_PROXY_KEY }}
+      ```
 
    Defaults if you omit `api_key_env`:
    - `provider: openai`        → reads `OPENAI_API_KEY`

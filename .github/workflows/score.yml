@@ -50,10 +50,13 @@ jobs:
       - name: Run model against task
         working-directory: runner
         env:
+          # Add every secret that model cards reference via `api_key_env`.
+          # Missing secrets are silently empty — only the relevant one matters.
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           LLM_LB_API_KEY: ${{ secrets.LLM_LB_API_KEY }}
+          VLLM_PROXY_KEY: ${{ secrets.VLLM_PROXY_KEY }}
         run: |
           uv run llm-lb run \
             --task "../${{ github.event.inputs.task }}" \
