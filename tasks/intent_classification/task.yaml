@@ -7,7 +7,7 @@ metric:
 labels: [question, complaint, request, feedback]
 llm_params:
   temperature: 0.0
-  max_tokens: 4
+  max_tokens: 16
   seed: 42
 system_prompt: |
   You are an intent classifier. Reply with exactly one word:
