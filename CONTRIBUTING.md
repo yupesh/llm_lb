@@ -3,6 +3,10 @@
 This repo is a GitHub-driven LLM leaderboard. All changes go through pull
 requests. There are three contributor roles, each with its own workflow.
 
+> For a hands-on end-to-end demo (including a local dry run with the dummy
+> adapter), see [docs/WALKTHROUGH.md](docs/WALKTHROUGH.md).
+> For metrics and LLM-as-Judge configuration, see [docs/METRICS.md](docs/METRICS.md).
+
 ## Roles at a glance
 
 | Role         | What you change                                                              | Who merges    |
@@ -30,17 +34,27 @@ bun run dev   # opens http://localhost:5173/
 
 ## Adding a task
 
-1. Create a directory `tasks/<task_id>/` with:
+1. Create a branch:
+   ```bash
+   git checkout -b task/<task_id>
+   ```
+2. Create a directory `tasks/<task_id>/` with:
    - `task.yaml` — see `tasks/text_classification/task.yaml` for a working example.
+     For choosing a metric, see [docs/METRICS.md](docs/METRICS.md).
    - `samples/sample_001.json`, `sample_002.json`, ... (≥ 5 samples for MVP, target 20).
-2. Validate locally:
+3. Validate locally:
    ```bash
    cd runner
    uv run llm-lb validate ../tasks/<task_id>
    ```
-3. Open a PR. The `task` label is auto-applied. CI (`validate.yml`) runs schema
-   validation, lint, the dummy end-to-end smoke test and re-aggregation checks.
-4. An admin reviews and merges. Scoring runs happen in **separate** PRs after
+4. Rebuild the global index (CI checks that it's up to date):
+   ```bash
+   uv run llm-lb aggregate --root ..
+   ```
+5. Commit `tasks/<task_id>/` and `data/index.json`, push, open a PR.
+   The `task` label is auto-applied. CI runs schema validation, lint, tests
+   and re-aggregation checks.
+6. An admin reviews and merges. Scoring runs happen in **separate** PRs after
    merge — task PRs do not contain results.
 
 ### Task design rules
@@ -55,12 +69,16 @@ bun run dev   # opens http://localhost:5173/
 
 ## Adding a model
 
-1. Create `models/<model_id>.yaml`. The recommended `model_id` format is
+1. Create a branch:
+   ```bash
+   git checkout -b model/<model_id>
+   ```
+2. Create `models/<model_id>.yaml`. The recommended `model_id` format is
    `<name>@<provider>` (e.g. `gpt-4o-mini@openai`, `llama-3.1-8b@vllm`).
-2. Required fields: `model_id`, `display_name`, `provider`, `endpoint_kind`.
-3. Pin `revision` whenever the provider exposes one (HF commit hash, API
+3. Required fields: `model_id`, `display_name`, `provider`, `endpoint_kind`.
+4. Pin `revision` whenever the provider exposes one (HF commit hash, API
    revision tag, vLLM image tag).
-4. **Never** put API keys, tokens or private endpoint URLs in the file.
+5. **Never** put API keys, tokens or private endpoint URLs in the file.
    The model card is plain text in the repo — anything you write there
    becomes public the moment you push. Instead, write only the *name* of
    an environment variable that holds the secret, and set the variable
@@ -83,28 +101,22 @@ bun run dev   # opens http://localhost:5173/
      gpu_type: H200
    ```
 
-   Locally you then run:
-   ```bash
-   export VLLM_PROXY_KEY=sk-xxxxx
-   uv run llm-lb run --task ../tasks/text_classification --model ../models/qwen3-30b@vllm.yaml
-   ```
+   When an admin later scores this model, they set the env var and run
+   `llm-lb run` (see [Scoring](#scoring-a-model-admin) below).
 
-   In GitHub Actions you add the same secret under
-   *Settings → Secrets and variables → Actions* with the name `VLLM_PROXY_KEY`,
-   then reference it from the workflow:
-   ```yaml
-   env:
-     VLLM_PROXY_KEY: ${{ secrets.VLLM_PROXY_KEY }}
-   ```
+   In GitHub Actions the same secret goes under
+   *Settings → Secrets and variables → Actions* with the name `VLLM_PROXY_KEY`.
 
    Defaults if you omit `api_key_env`:
    - `provider: openai`        → reads `OPENAI_API_KEY`
    - `provider: hf`            → reads `HF_TOKEN`
    - `provider: openai_compat` → no key sent unless `api_key_env` is set
      (most local vLLM/TGI deployments don't need one)
-5. Validate and open a PR:
+6. Validate, rebuild index, commit and open a PR:
    ```bash
+   cd runner
    uv run llm-lb validate ../models/<model_id>.yaml
+   uv run llm-lb aggregate --root ..
    ```
 
 ### Provider matrix
