@@ -1,4 +1,9 @@
-<!-- Pick the section that matches your PR. Delete the others. -->
+<!--
+  Pick ONE section that matches your PR and DELETE the other two.
+  task  — new or updated task (no results needed)
+  model — new or updated model card
+  score — admin scoring run (includes results + leaderboard update)
+-->
 
 ## Type
 

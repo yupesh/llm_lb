@@ -9,6 +9,7 @@ GitHub-driven leaderboard for evaluating LLMs on small, reproducible tasks.
 
 - **Live leaderboard:** <https://yupesh.github.io/llm_lb/>
 - **Atom feed of recent runs:** <https://yupesh.github.io/llm_lb/data/feed.xml>
+- **Metrics & LLM-as-Judge:** [docs/METRICS.md](docs/METRICS.md)
 - **End-to-end walkthrough:** [docs/WALKTHROUGH.md](docs/WALKTHROUGH.md)
 - **Contributing:** [CONTRIBUTING.md](CONTRIBUTING.md)
 - **Full specification:** [CLAUDE.md](CLAUDE.md)

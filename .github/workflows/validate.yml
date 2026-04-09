@@ -77,7 +77,7 @@ jobs:
             echo "--- contents of untracked / changed files ---"
             echo "$changes" | awk '{print $2}' | while read -r f; do
               echo "=== $f ==="
-              cat "$f" || true
+              cat "$f" 2>/dev/null || echo "(file not on disk)"
             done
             exit 1
           fi

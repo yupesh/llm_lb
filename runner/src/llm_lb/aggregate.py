@@ -74,7 +74,11 @@ def aggregate_task(task_dir: Path) -> Leaderboard:
         ranking=entries,
         updated_at=datetime.now(timezone.utc).isoformat(timespec="seconds"),
     )
-    _write_if_changed(task_dir / "leaderboard.json", lb.model_dump(mode="json"))
+    # Only write leaderboard.json when there are actual results. A brand-new
+    # task with no scoring runs should not produce an empty leaderboard file —
+    # otherwise CI freshness checks fail on task-only PRs.
+    if entries:
+        _write_if_changed(task_dir / "leaderboard.json", lb.model_dump(mode="json"))
     return lb
 
 
