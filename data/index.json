@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-09T12:30:13+00:00",
+  "generated_at": "2026-04-09T15:14:37+00:00",
   "tasks": [
     {
       "id": "extractive_qa",
@@ -73,6 +73,17 @@
       "provider": "openai",
       "hf_uri": null,
       "hardware": null
+    },
+    {
+      "id": "qwen3-30b@vllm",
+      "display_name": "Qwen3-30B (vLLM)",
+      "provider": "openai_compat",
+      "hf_uri": "Qwen/Qwen3-30B-A3B",
+      "hardware": {
+        "gpu_count": 1,
+        "gpu_type": "A100",
+        "quantization": null
+      }
     }
   ],
   "matrix": [
