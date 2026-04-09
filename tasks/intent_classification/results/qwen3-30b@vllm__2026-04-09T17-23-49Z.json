@@ -1,0 +1,132 @@
+{
+  "model_id": "qwen3-30b@vllm",
+  "model_revision": "2025-12-01",
+  "task_id": "intent_classification",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "92b4c79a943a2b11",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 32,
+    "seed": 42
+  },
+  "metrics": {
+    "accuracy": 0.0,
+    "macro_f1": 0.0
+  },
+  "tps": 28.76442287601722,
+  "p95_latency_ms": 1286.1608050000016,
+  "n_samples": 10,
+  "samples": [
+    {
+      "id": "sample_001",
+      "prediction": "",
+      "expected": "question",
+      "correct": false,
+      "latency_ms": 1286.1608050000016,
+      "input_tokens": 78,
+      "output_tokens": 32,
+      "judge_raw_score": null
+    },
+    {
+      "id": "sample_002",
+      "prediction": "",
+      "expected": "complaint",
+      "correct": false,
+      "latency_ms": 1123.598272999999,
+      "input_tokens": 81,
+      "output_tokens": 32,
+      "judge_raw_score": null
+    },
+    {
+      "id": "sample_003",
+      "prediction": "",
+      "expected": "request",
+      "correct": false,
+      "latency_ms": 1139.566219999999,
+      "input_tokens": 79,
+      "output_tokens": 32,
+      "judge_raw_score": null
+    },
+    {
+      "id": "sample_004",
+      "prediction": "",
+      "expected": "feedback",
+      "correct": false,
+      "latency_ms": 1126.3279619999978,
+      "input_tokens": 83,
+      "output_tokens": 32,
+      "judge_raw_score": null
+    },
+    {
+      "id": "sample_005",
+      "prediction": "",
+      "expected": "question",
+      "correct": false,
+      "latency_ms": 1130.2825380000031,
+      "input_tokens": 77,
+      "output_tokens": 32,
+      "judge_raw_score": null
+    },
+    {
+      "id": "sample_006",
+      "prediction": "",
+      "expected": "complaint",
+      "correct": false,
+      "latency_ms": 1130.9005760000018,
+      "input_tokens": 82,
+      "output_tokens": 32,
+      "judge_raw_score": null
+    },
+    {
+      "id": "sample_007",
+      "prediction": "",
+      "expected": "request",
+      "correct": false,
+      "latency_ms": 1116.654767,
+      "input_tokens": 81,
+      "output_tokens": 32,
+      "judge_raw_score": null
+    },
+    {
+      "id": "sample_008",
+      "prediction": "",
+      "expected": "feedback",
+      "correct": false,
+      "latency_ms": 975.9918320000054,
+      "input_tokens": 79,
+      "output_tokens": 32,
+      "judge_raw_score": null
+    },
+    {
+      "id": "sample_009",
+      "prediction": "",
+      "expected": "question",
+      "correct": false,
+      "latency_ms": 980.2355449999993,
+      "input_tokens": 78,
+      "output_tokens": 32,
+      "judge_raw_score": null
+    },
+    {
+      "id": "sample_010",
+      "prediction": "",
+      "expected": "complaint",
+      "correct": false,
+      "latency_ms": 1115.1353119999997,
+      "input_tokens": 83,
+      "output_tokens": 32,
+      "judge_raw_score": null
+    }
+  ],
+  "created_at": "2026-04-09T17:23:49+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": null,
+  "judge_model_revision": null,
+  "judge_prompt_hash": null
+}
