@@ -1,11 +1,22 @@
 {
-  "generated_at": "2026-04-08T05:07:27+00:00",
+  "generated_at": "2026-04-09T12:30:13+00:00",
   "tasks": [
     {
       "id": "extractive_qa",
       "version": "1.0",
       "primary_metric": "exact_match",
       "secondary_metrics": [
+        "tps",
+        "p95_latency_ms"
+      ],
+      "n_samples": 10
+    },
+    {
+      "id": "intent_classification",
+      "version": "1.0",
+      "primary_metric": "accuracy",
+      "secondary_metrics": [
+        "macro_f1",
         "tps",
         "p95_latency_ms"
       ],
