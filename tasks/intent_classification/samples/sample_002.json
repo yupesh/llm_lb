@@ -1,0 +1,5 @@
+{
+  "id": "sample_002",
+  "prompt": "Your app keeps crashing every time I open it.",
+  "expected": "complaint"
+}

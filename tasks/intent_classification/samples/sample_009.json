@@ -1,0 +1,5 @@
+{
+  "id": "sample_009",
+  "prompt": "What payment methods do you accept?",
+  "expected": "question"
+}

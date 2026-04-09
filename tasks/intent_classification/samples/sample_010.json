@@ -1,0 +1,5 @@
+{
+  "id": "sample_010",
+  "prompt": "I asked for support two days ago and still no response.",
+  "expected": "complaint"
+}

@@ -1,0 +1,5 @@
+{
+  "id": "sample_001",
+  "prompt": "How can I reset my password?",
+  "expected": "question"
+}
