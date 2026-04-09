@@ -1,0 +1,20 @@
+name: intent_classification
+version: "1.0"
+description: Classify user intent in short messages into predefined categories.
+metric:
+  primary: accuracy
+  secondary: [macro_f1, tps, p95_latency_ms]
+labels: [question, complaint, request, feedback]
+llm_params:
+  temperature: 0.0
+  max_tokens: 4
+  seed: 42
+system_prompt: |
+  You are an intent classifier. Reply with exactly one word:
+  "question", "complaint", "request", or "feedback".
+  Do not add any explanation.
+prompt_template: |
+  Classify the intent of the following message. Reply with one word.
+
+  Message: {prompt}
+  Intent:
