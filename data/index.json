@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-09T16:45:45+00:00",
+  "generated_at": "2026-04-10T03:40:41+00:00",
   "tasks": [
     {
       "id": "extractive_qa",
@@ -64,6 +64,17 @@
       "hardware": {
         "gpu_count": 0,
         "gpu_type": "cpu",
+        "quantization": null
+      }
+    },
+    {
+      "id": "gemma-4-31b-it@vllm",
+      "display_name": "Gemma-4-31B-IT (vLLM)",
+      "provider": "openai_compat",
+      "hf_uri": "google/gemma-4-31b-it",
+      "hardware": {
+        "gpu_count": 1,
+        "gpu_type": "H200",
         "quantization": null
       }
     },
