@@ -2,7 +2,7 @@
    display_name: Gemma-4-31B-IT (vLLM)
    provider: openai_compat
    endpoint_kind: openai_chat
-   hf_uri: google/gemma-4-31b-it
+   hf_uri: google/gemma-4-31B-it
    revision: "2026-04-02"
    endpoint_url: http://lnsigo.mipt.ru:4000/v1
    api_key_env: VLLM_PROXY_KEY     # <-- name of env var, not the key
