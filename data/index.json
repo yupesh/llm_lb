@@ -68,6 +68,17 @@
       }
     },
     {
+      "id": "gemma-4-31b-it@vllm",
+      "display_name": "Gemma-4-31B-IT (vLLM)",
+      "provider": "openai_compat",
+      "hf_uri": "google/gemma-4-31b-it",
+      "hardware": {
+        "gpu_count": 1,
+        "gpu_type": "H200",
+        "quantization": null
+      }
+    },
+    {
       "id": "gpt-4o-mini@openai",
       "display_name": "GPT-4o mini",
       "provider": "openai",
