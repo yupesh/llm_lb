@@ -1,12 +1,15 @@
 # Only admins may approve changes to scored results, leaderboards, the global
-# index, and the generated JSON schemas. Replace @REPLACE-ME-admins with your
-# actual GitHub team or user handles before enabling branch protection.
+# index, generated JSON schemas, the runner package and CI workflows.
+#
+# CODEOWNERS only enforces review on PRs — it does NOT protect main from
+# direct pushes. Enable branch protection in Settings → Branches to also
+# require PRs and passing CI before merging.
 #
 # See https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-security/customizing-your-repository/about-code-owners
 
-tasks/*/results/        @REPLACE-ME-admins
-**/leaderboard.json     @REPLACE-ME-admins
-/data/                  @REPLACE-ME-admins
-/schemas/               @REPLACE-ME-admins
-/.github/               @REPLACE-ME-admins
-/runner/                @REPLACE-ME-admins
+tasks/*/results/        @yupesh
+**/leaderboard.json     @yupesh
+/data/                  @yupesh
+/schemas/               @yupesh
+/.github/               @yupesh
+/runner/                @yupesh
