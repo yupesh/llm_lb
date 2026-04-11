@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-10T04:32:32+00:00",
+  "generated_at": "2026-04-11T06:04:04+00:00",
   "tasks": [
     {
       "id": "extractive_qa",
@@ -90,6 +90,17 @@
       "display_name": "Qwen3-30B (vLLM)",
       "provider": "openai_compat",
       "hf_uri": "Qwen/Qwen3-30B-A3B",
+      "hardware": {
+        "gpu_count": 1,
+        "gpu_type": "A100",
+        "quantization": null
+      }
+    },
+    {
+      "id": "qwen3.5-27b@vllm",
+      "display_name": "Qwen3.5-27B (vLLM)",
+      "provider": "openai_compat",
+      "hf_uri": "Qwen/Qwen3.5-27B",
       "hardware": {
         "gpu_count": 1,
         "gpu_type": "A100",
