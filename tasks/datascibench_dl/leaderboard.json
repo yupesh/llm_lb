@@ -1,0 +1,19 @@
+{
+  "task_id": "datascibench_dl",
+  "task_version": "1.0",
+  "primary_metric": "judge_score",
+  "ranking": [
+    {
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.0,
+      "metrics": {
+        "judge_score": 0.0
+      },
+      "tps": 38.889655567453985,
+      "p95_latency_ms": 53058.99702400003,
+      "cost_usd": null,
+      "result_file": "results/qwen3-30b@vllm__2026-04-15T07-57-22Z.json"
+    }
+  ],
+  "updated_at": "2026-04-15T07:57:23+00:00"
+}

@@ -4,8 +4,15 @@
   <id>tag:yupesh.github.io,2026:llm_lb/feed</id>
   <link href="https://yupesh.github.io/llm_lb/" rel="alternate" type="text/html"/>
   <link href="https://yupesh.github.io/llm_lb/data/feed.xml" rel="self" type="application/atom+xml"/>
-  <updated>2026-04-10T04:32:32+00:00</updated>
+  <updated>2026-04-15T07:57:22+00:00</updated>
   <author><name>LLM Leaderboard</name></author>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_dl/1.0/qwen3-30b@vllm/2026-04-15T07:57:22+00:00</id>
+    <title>qwen3-30b@vllm scored 0.000 judge_score on datascibench_dl v1.0</title>
+    <updated>2026-04-15T07:57:22+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_dl" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.000</summary>
+  </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/summarization/1.0/qwen3-30b@vllm/2026-04-10T04:32:32+00:00</id>
     <title>qwen3-30b@vllm scored 0.680 judge_score on summarization v1.0</title>
