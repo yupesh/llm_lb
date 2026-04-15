@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-15T14:48:27+00:00",
+  "generated_at": "2026-04-15T16:15:38+00:00",
   "tasks": [
     {
       "id": "conversational_memory_qa",
@@ -167,6 +167,19 @@
     }
   ],
   "matrix": [
+    {
+      "task_id": "conversational_memory_qa",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.7466666666666666,
+      "metrics": {
+        "judge_score": 0.7466666666666666
+      },
+      "tps": 21.591238260532997,
+      "p95_latency_ms": 36701.371862,
+      "cost_usd": null,
+      "result_file": "tasks/conversational_memory_qa/results/qwen3-30b@vllm__2026-04-15T16-15-38Z.json"
+    },
     {
       "task_id": "datascibench_dl",
       "task_version": "1.0",
