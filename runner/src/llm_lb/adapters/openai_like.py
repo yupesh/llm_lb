@@ -36,7 +36,12 @@ def openai_chat(
         body["seed"] = params.seed
     with httpx.Client(timeout=timeout) as client:
         r = client.post(f"{base_url.rstrip('/')}/chat/completions", headers=headers, json=body)
-        r.raise_for_status()
+        if r.is_error:
+            # Surface the response body so CI logs show what the endpoint rejected.
+            detail = r.text[:500] if r.text else "(empty body)"
+            raise RuntimeError(
+                f"{r.status_code} from {base_url} model={served_name}: {detail}"
+            )
         data = r.json()
     text = data["choices"][0]["message"]["content"] or ""
     usage = data.get("usage") or {}
