@@ -1,0 +1,131 @@
+{
+  "model_id": "qwen3-30b@vllm",
+  "model_revision": "2025-12-01",
+  "task_id": "datascibench_dl",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "21dd9767cd26eba5",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 2048,
+    "seed": 42
+  },
+  "metrics": {
+    "judge_score": 0.0
+  },
+  "tps": 38.889655567453985,
+  "p95_latency_ms": 53058.99702400003,
+  "n_samples": 10,
+  "samples": [
+    {
+      "id": "dl_0",
+      "prediction": "",
+      "expected": "1. Data cleaning: Missing Value Percentage — combined_data.csv complete. 2. Data exploration: Descriptive Statistics Comparison. 3. Data mining: Cluster Quality (Silhouette Score) on segmented data. 4. Report generation: classification_report.txt and confusion_matrix.png exist.",
+      "correct": false,
+      "latency_ms": 52601.318477999994,
+      "input_tokens": 397,
+      "output_tokens": 2048,
+      "judge_raw_score": 0.0
+    },
+    {
+      "id": "dl_1",
+      "prediction": "",
+      "expected": "1. Data cleaning: Data Completeness Percentage — cleaned_data.xlsx produced. 2. Predictive modeling: Model MAE — SSA-BP optimization applied, predictions.csv written. 3. Report: R-squared Value — performance_metrics.txt with RMSE, MAPE, MAE, R2.",
+      "correct": false,
+      "latency_ms": 52801.67169,
+      "input_tokens": 290,
+      "output_tokens": 2048,
+      "judge_raw_score": 0.0
+    },
+    {
+      "id": "dl_6",
+      "prediction": "",
+      "expected": "1. Data cleaning: Data Cleaning Accuracy — null values and duplicates removed in cleaned_data.csv. 2. Data exploration: Basic Statistical Analysis Completeness — analysis_results.csv with descriptive stats. 3. Data mining: Clustering Validity — clustering_results.csv with Cluster column.",
+      "correct": false,
+      "latency_ms": 52681.116478,
+      "input_tokens": 339,
+      "output_tokens": 2048,
+      "judge_raw_score": 0.0
+    },
+    {
+      "id": "dl_9",
+      "prediction": "",
+      "expected": "1. Data cleaning: Data Processing Correctness — sales data converted to time series format in processed_data.csv. 2. Predictive modeling: Model Accuracy — neural network trained on historical data, sales_model.h5 saved, predicted_sales.csv with 7-day forecast.",
+      "correct": false,
+      "latency_ms": 52732.20745400002,
+      "input_tokens": 292,
+      "output_tokens": 2048,
+      "judge_raw_score": 0.0
+    },
+    {
+      "id": "dl_10",
+      "prediction": "",
+      "expected": "1. Data exploration: EDA Completion Rate — eda_results.csv with distribution analysis. 2. Report generation: Evaluation Metrics Report — model_evaluation_results.csv with accuracy/precision/recall metrics. success_rate_model.pkl saved.",
+      "correct": false,
+      "latency_ms": 53058.99702400003,
+      "input_tokens": 217,
+      "output_tokens": 2048,
+      "judge_raw_score": 0.0
+    },
+    {
+      "id": "dl_13",
+      "prediction": "",
+      "expected": "1. Predictive modeling: Model Structure Validation — TensorFlow linear regression with w=0.8, b=0.7. 2. Data cleaning: Training Loss Evaluation — training_log.csv with 500 steps of loss values. 3. Visualization: Data Flow Graph Assessment — tensorboard_screenshot.png.",
+      "correct": false,
+      "latency_ms": 52504.533529000015,
+      "input_tokens": 202,
+      "output_tokens": 2048,
+      "judge_raw_score": 0.0
+    },
+    {
+      "id": "dl_15",
+      "prediction": "",
+      "expected": "1. Predictive modeling: Code Completeness — nn.Module model defined, trained, pruned, fine-tuned. 2. Report: L1 Norm Calculation — l1_norms.csv with per-layer norms. 3. Data exploration: Weight Pruning Efficiency — pruned_model.pth with zeroed weights.",
+      "correct": false,
+      "latency_ms": 52606.759329,
+      "input_tokens": 282,
+      "output_tokens": 2048,
+      "judge_raw_score": 0.0
+    },
+    {
+      "id": "dl_16",
+      "prediction": "",
+      "expected": "1. Predictive modeling: Clustering Result Consistency — k-means with 3 initial centers, clustering_results.csv. 2. Visualization: Visualization Quality — scatter_plot.png with color/shape-coded clusters.",
+      "correct": false,
+      "latency_ms": 52414.78202999997,
+      "input_tokens": 231,
+      "output_tokens": 2048,
+      "judge_raw_score": 0.0
+    },
+    {
+      "id": "dl_30",
+      "prediction": "",
+      "expected": "1. Visualization: Visualization Validation — training_results.png, cost_function_plot.png, 3D_contour_plot.png all generated. 2. Report: Report Completeness Score — experimental_report.pdf with dataset description, gradient descent steps, results analysis.",
+      "correct": false,
+      "latency_ms": 52689.77379299997,
+      "input_tokens": 240,
+      "output_tokens": 2048,
+      "judge_raw_score": 0.0
+    },
+    {
+      "id": "dl_31",
+      "prediction": "",
+      "expected": "1. Data cleaning: Data Completeness — cleaned_data.csv with valid red (1-33) and blue (1-16) numbers. 2. Data exploration: Data Distributions Comparison — train/test split. 3. Predictive modeling: Model Performance — CNN trained, evaluation_results.csv and predicted_numbers.csv produced.",
+      "correct": false,
+      "latency_ms": 52527.02956099995,
+      "input_tokens": 280,
+      "output_tokens": 2048,
+      "judge_raw_score": 0.0
+    }
+  ],
+  "created_at": "2026-04-15T07:57:22+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": "judge@openai",
+  "judge_model_revision": null,
+  "judge_prompt_hash": "5870f39086f85b4e"
+}
