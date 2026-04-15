@@ -1,0 +1,49 @@
+name: conversational_memory_qa
+version: "1.0"
+description: |
+  QA over conversational memory — the final stage of our pipeline.
+  The model receives retrieved context (conversation formatted as memory
+  items) and a question, and must produce a concise factual answer.
+  Uses the exact prompts from our production system:
+  - system_prompt = INSTRUCTION_LITELLM (from prompts.py)
+  - user prompt = LTM_AGENT_PROMPT format (from prompts.py)
+  - conversation formatted as "[timestamp] Speaker said: ..." (memory items)
+  - category 2 questions include the temporal hint suffix
+  Covers QA categories 1-4 (factual, temporal, multi-hop, open-ended).
+  judge_score is used because gold answers vary from single words
+  to comma-separated lists and natural-language phrases.
+metric:
+  primary: judge_score
+llm_params:
+  temperature: 0.0
+  max_tokens: 64
+  seed: 42
+system_prompt: >-
+  Use the provided context as the only source of information when answering.
+  When the context contains relative time expressions (e.g. 'last week', 'yesterday')
+  alongside a conversation timestamp, resolve them to a specific date or date range —
+  e.g. 'last week' in a message from 9 June 2023 means 'the week before 9 June 2023'.
+  Give a direct, concise answer. Do not include fabricated details.
+prompt_template: |
+  {prompt}
+judge:
+  model: gpt-4o-mini@openai
+  scale_min: 0
+  scale_max: 5
+  forbid_self_judge: true
+  prompt: |
+    You are evaluating a conversational QA system. Score the candidate answer
+    on correctness compared to the reference, on a scale 0..5:
+      0 = completely wrong or unrelated
+      1 = mostly wrong, maybe one minor detail correct
+      2 = partially correct but missing key information
+      3 = correct core answer but imprecise or has extra wrong details
+      4 = correct and concise, minor wording differences
+      5 = perfect match in meaning
+
+    Question: {prompt}
+    Reference answer: {expected}
+    Candidate answer: {prediction}
+
+    Reply with a single integer 0..5 and nothing else.
+    Score:
