@@ -30,14 +30,21 @@ def openai_chat(
         "messages": messages,
         "temperature": params.temperature,
         "top_p": params.top_p,
-        "max_tokens": params.max_tokens,
+        # Newer OpenAI models require `max_completion_tokens` instead of
+        # `max_tokens`. Try the new name first; on 400 retry with the old one.
+        "max_completion_tokens": params.max_tokens,
     }
     if params.seed is not None:
         body["seed"] = params.seed
+    url = f"{base_url.rstrip('/')}/chat/completions"
     with httpx.Client(timeout=timeout) as client:
-        r = client.post(f"{base_url.rstrip('/')}/chat/completions", headers=headers, json=body)
+        r = client.post(url, headers=headers, json=body)
+        if r.status_code == 400 and "max_completion_tokens" in (r.text or ""):
+            # Endpoint doesn't support new-style param — fall back.
+            del body["max_completion_tokens"]
+            body["max_tokens"] = params.max_tokens
+            r = client.post(url, headers=headers, json=body)
         if r.is_error:
-            # Surface the response body so CI logs show what the endpoint rejected.
             detail = r.text[:500] if r.text else "(empty body)"
             raise RuntimeError(
                 f"{r.status_code} from {base_url} model={served_name}: {detail}"
