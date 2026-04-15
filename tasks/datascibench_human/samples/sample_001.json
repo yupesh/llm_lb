@@ -1,0 +1,5 @@
+{
+  "id": "human_0",
+  "prompt": "You are given a list of tickers and their daily closing prices in \"data.csv\". Implement a function most_corr that accepts a dataframe of closing prices and returns a tuple of the two tickers with the highest correlation based on daily percentage changes. Output the result to \"most_corr_output.csv\" with columns \"Ticker 1\" and \"Ticker 2\".",
+  "expected": "1. Data exploration: Summary Statistics Comparison — daily percentage changes computed correctly. 2. Predictive modeling: Model Accuracy — correlation matrix built, most correlated pair identified and saved to most_corr_output.csv."
+}

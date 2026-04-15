@@ -1,0 +1,12 @@
+model_id: judge@openai
+display_name: Judge (OpenAI-compatible)
+provider: openai
+endpoint_kind: openai_chat
+# All three parameters come from environment variables, so the same card
+# works with any OpenAI-compatible endpoint (OpenAI, Azure, local proxy).
+#   JUDGE_BASE_URL    — e.g. https://api.openai.com/v1
+#   JUDGE_API_KEY     — bearer token
+#   JUDGE_MODEL_NAME  — e.g. gpt-4o-mini, Qwen/Qwen3-30B-A3B, etc.
+endpoint_url_env: JUDGE_BASE_URL
+api_key_env: JUDGE_API_KEY
+served_model_name_env: JUDGE_MODEL_NAME

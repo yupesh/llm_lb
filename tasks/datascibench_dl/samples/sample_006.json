@@ -1,0 +1,5 @@
+{
+  "id": "dl_13",
+  "prompt": "Implement a linear regression model y = wx + b, where w = 0.8 and b = 0.7. You need to:\n\n1. Build the model using Tensorflow. Input: \"data.csv\". Output: \"model.py\" (complete code implementation)\n\n2. Train the model for 500 steps. Output: \"training_log.csv\" (log of training progress, including loss values at each step)\n\n3. Observe the data flow graph of the model using Tensorboard. Output: \"tensorboard_screenshot.png\" (a screenshot of the data flow graph showcasing the model's structure and training process)\n\nPlease ensure all outputs reflect the quality of completion for each subtask, facilitating further evaluation.",
+  "expected": "1. Predictive modeling: Model Structure Validation — TensorFlow linear regression with w=0.8, b=0.7. 2. Data cleaning: Training Loss Evaluation — training_log.csv with 500 steps of loss values. 3. Visualization: Data Flow Graph Assessment — tensorboard_screenshot.png."
+}

@@ -10,6 +10,10 @@ DEFAULT_BASE_URL = "https://api.openai.com/v1"
 
 
 def _served_name(model: ModelCard) -> str:
+    if model.served_model_name_env:
+        from_env = os.environ.get(model.served_model_name_env, "")
+        if from_env:
+            return from_env
     if model.served_model_name:
         return model.served_model_name
     # Strip our internal `@provider` suffix from the slug.
@@ -27,7 +31,10 @@ class OpenAIAdapter:
                 f"openai adapter: environment variable {env_var!r} is not set"
             )
         self.headers = {"Authorization": f"Bearer {api_key}"}
-        self.base_url = model.endpoint_url or os.environ.get("OPENAI_BASE_URL", DEFAULT_BASE_URL)
+        if model.endpoint_url_env:
+            self.base_url = os.environ.get(model.endpoint_url_env, "")
+        if not getattr(self, "base_url", ""):
+            self.base_url = model.endpoint_url or os.environ.get("OPENAI_BASE_URL", DEFAULT_BASE_URL)
         self.timeout = float(os.environ.get("LLM_LB_HTTP_TIMEOUT", "60"))
         self.served_name = _served_name(model)
 

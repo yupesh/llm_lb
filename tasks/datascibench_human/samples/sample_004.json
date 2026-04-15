@@ -1,0 +1,5 @@
+{
+  "id": "human_3",
+  "prompt": "A company stores login data and passwords in two different containers:\n1. id_name_verified (DataFrame from \"data.csv\") with columns: Id, Login, Verified.\n2. id_password (NumPy array from \"passwords.npy\") where each element is [Id, Password].\n\nImplement the function login_table that modifies the DataFrame in-place:\n- Remove the Verified column\n- Add Password from the NumPy array as the last column\n\nOutput: Save the modified DataFrame to \"output.csv\".\n\nExample:\nInput DataFrame: [[1, 'JohnDoe', True], [2, 'AnnFranklin', False]]\nInput array: [[1, 987340123], [2, 187031122]]\nResult: Id=1, Login=JohnDoe, Password=987340123; Id=2, Login=AnnFranklin, Password=187031122",
+  "expected": "1. Data cleaning: Column Integrity Check — Verified column removed, Password column added. 2. Data exploration: Row Count Comparison — output.csv has same number of rows as input."
+}

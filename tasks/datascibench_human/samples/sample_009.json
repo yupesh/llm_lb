@@ -1,0 +1,5 @@
+{
+  "id": "human_10",
+  "prompt": "Undertake a comprehensive analysis and construct a robust predictive model using the \"Housing Prices\" dataset from Kaggle to forecast residential property values.\n\n1. Data Import and Cleaning: Input: housing_prices.csv -> Output: cleaned_data.csv\n2. Predictive Model Development: Input: cleaned_data.csv -> Output: predicted_prices.csv (predicted vs actual values)\n3. Model Evaluation: Output: model_evaluation_metrics.csv (MAE, RMSE)\n4. Data Visualization: Output: visualizations.png (scatter plots, histograms, box plots)\n5. Comprehensive Report: Output: housing_prices_analysis_report.pdf (data cleaning, modeling, evaluation, insights, all visualizations)",
+  "expected": "1. Data cleaning: Data Cleaning Completeness — cleaned_data.csv. 2. Predictive modeling: MAE — predicted_prices.csv + model_evaluation_metrics.csv. 3. Visualization: Visualization Completeness — visualizations.png. 4. Report: Report Completeness — housing_prices_analysis_report.pdf."
+}

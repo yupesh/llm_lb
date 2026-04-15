@@ -57,6 +57,10 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           LLM_LB_API_KEY: ${{ secrets.LLM_LB_API_KEY }}
           VLLM_PROXY_KEY: ${{ secrets.VLLM_PROXY_KEY }}
+          # Judge model env vars (used by models/judge@openai.yaml)
+          JUDGE_BASE_URL: ${{ secrets.JUDGE_BASE_URL }}
+          JUDGE_API_KEY: ${{ secrets.JUDGE_API_KEY }}
+          JUDGE_MODEL_NAME: ${{ secrets.JUDGE_MODEL_NAME }}
         run: |
           uv run llm-lb run \
             --task "../${{ github.event.inputs.task }}" \

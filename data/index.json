@@ -1,6 +1,36 @@
 {
-  "generated_at": "2026-04-11T06:04:04+00:00",
+  "generated_at": "2026-04-15T05:43:01+00:00",
   "tasks": [
+    {
+      "id": "datascibench_csv_excel",
+      "version": "1.0",
+      "primary_metric": "judge_score",
+      "secondary_metrics": [
+        "tps",
+        "p95_latency_ms"
+      ],
+      "n_samples": 10
+    },
+    {
+      "id": "datascibench_dl",
+      "version": "1.0",
+      "primary_metric": "judge_score",
+      "secondary_metrics": [
+        "tps",
+        "p95_latency_ms"
+      ],
+      "n_samples": 10
+    },
+    {
+      "id": "datascibench_human",
+      "version": "1.0",
+      "primary_metric": "judge_score",
+      "secondary_metrics": [
+        "tps",
+        "p95_latency_ms"
+      ],
+      "n_samples": 10
+    },
     {
       "id": "extractive_qa",
       "version": "1.0",
@@ -81,6 +111,13 @@
     {
       "id": "gpt-4o-mini@openai",
       "display_name": "GPT-4o mini",
+      "provider": "openai",
+      "hf_uri": null,
+      "hardware": null
+    },
+    {
+      "id": "judge@openai",
+      "display_name": "Judge (OpenAI-compatible)",
       "provider": "openai",
       "hf_uri": null,
       "hardware": null

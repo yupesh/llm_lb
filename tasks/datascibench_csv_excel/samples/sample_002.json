@@ -1,0 +1,5 @@
+{
+  "id": "csv_excel_1",
+  "prompt": "Open the 'sheet1' worksheet of the Excel file source.xlsx, and filter the rows where the value in column D is greater than or equal to 8 and less than 8.0010, at the same time, the value in column F should be equal to 18, and the value in column G should be greater than the value of the second row in column G. Copy the values from the filtered rows in column G and paste them into the corresponding cells of the 'sheet1' worksheet in another Excel file target.xlsx.",
+  "expected": "1. Data cleaning and preprocessing: Data Completeness — filtered rows correctly identified by multi-condition filter (D>=8 AND D<8.001 AND F==18 AND G>G[row2]). 2. Data transformation: Transformation Accuracy — correct column G values copied to target.xlsx sheet1."
+}
