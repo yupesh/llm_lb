@@ -40,7 +40,7 @@ class OpenAICompatAdapter:
             {"Authorization": f"Bearer {api_key}"} if api_key else {}
         )
         self.base_url = base_url
-        self.timeout = float(os.environ.get("LLM_LB_HTTP_TIMEOUT", "120"))
+        self.timeout = float(os.environ.get("LLM_LB_HTTP_TIMEOUT", "600"))
         self.served_name = _served_name(model)
 
     def chat(self, system: str | None, user: str, params: LLMParams) -> Completion:
