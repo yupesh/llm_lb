@@ -11,7 +11,7 @@ metric:
   secondary: [tps, p95_latency_ms]
 llm_params:
   temperature: 0.0
-  max_tokens: 2048
+  max_tokens: 16384
   seed: 42
 system_prompt: |
   You are an expert Python data-science programmer. Write complete, runnable
