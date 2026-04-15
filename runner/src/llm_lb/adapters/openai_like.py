@@ -19,7 +19,7 @@ def openai_chat(
     system: str | None,
     user: str,
     params: LLMParams,
-    timeout: float = 120.0,
+    timeout: float = 600.0,
 ) -> Completion:
     messages: list[dict[str, str]] = []
     if system:
