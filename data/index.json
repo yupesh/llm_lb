@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-15T05:43:01+00:00",
+  "generated_at": "2026-04-15T07:57:23+00:00",
   "tasks": [
     {
       "id": "datascibench_csv_excel",
@@ -146,6 +146,19 @@
     }
   ],
   "matrix": [
+    {
+      "task_id": "datascibench_dl",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.0,
+      "metrics": {
+        "judge_score": 0.0
+      },
+      "tps": 38.889655567453985,
+      "p95_latency_ms": 53058.99702400003,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_dl/results/qwen3-30b@vllm__2026-04-15T07-57-22Z.json"
+    },
     {
       "task_id": "intent_classification",
       "task_version": "1.0",
