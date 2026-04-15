@@ -71,7 +71,7 @@ def score_sample(
     completion = judge_client.chat(
         system=None,
         user=user,
-        params=LLMParams(temperature=0.0, max_tokens=8, seed=0),
+        params=LLMParams(temperature=0.0, max_tokens=400),
     )
     m = _INT_RE.search(completion.text or "")
     if not m:
