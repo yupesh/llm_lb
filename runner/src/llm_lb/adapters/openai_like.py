@@ -30,19 +30,20 @@ def openai_chat(
         "messages": messages,
         "temperature": params.temperature,
         "top_p": params.top_p,
-        # Newer OpenAI models require `max_completion_tokens` instead of
-        # `max_tokens`. Try the new name first; on 400 retry with the old one.
-        "max_completion_tokens": params.max_tokens,
+        # Most endpoints (vLLM, TGI, older OpenAI) use `max_tokens`.
+        # Newer OpenAI models require `max_completion_tokens` instead.
+        # Try `max_tokens` first; on 400 retry with the new name.
+        "max_tokens": params.max_tokens,
     }
     if params.seed is not None:
         body["seed"] = params.seed
     url = f"{base_url.rstrip('/')}/chat/completions"
     with httpx.Client(timeout=timeout) as client:
         r = client.post(url, headers=headers, json=body)
-        if r.status_code == 400 and "max_completion_tokens" in (r.text or ""):
-            # Endpoint doesn't support new-style param — fall back.
-            del body["max_completion_tokens"]
-            body["max_tokens"] = params.max_tokens
+        if r.status_code == 400 and "max_tokens" in (r.text or ""):
+            # Endpoint requires new-style param — retry.
+            del body["max_tokens"]
+            body["max_completion_tokens"] = params.max_tokens
             r = client.post(url, headers=headers, json=body)
         if r.is_error:
             detail = r.text[:500] if r.text else "(empty body)"
