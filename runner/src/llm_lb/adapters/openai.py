@@ -35,7 +35,7 @@ class OpenAIAdapter:
             self.base_url = os.environ.get(model.endpoint_url_env, "")
         if not getattr(self, "base_url", ""):
             self.base_url = model.endpoint_url or os.environ.get("OPENAI_BASE_URL", DEFAULT_BASE_URL)
-        self.timeout = float(os.environ.get("LLM_LB_HTTP_TIMEOUT", "60"))
+        self.timeout = float(os.environ.get("LLM_LB_HTTP_TIMEOUT", "600"))
         self.served_name = _served_name(model)
 
     def chat(self, system: str | None, user: str, params: LLMParams) -> Completion:
