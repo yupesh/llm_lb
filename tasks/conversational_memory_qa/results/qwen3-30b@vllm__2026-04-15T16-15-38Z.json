@@ -1,0 +1,181 @@
+{
+  "model_id": "qwen3-30b@vllm",
+  "model_revision": "2025-12-01",
+  "task_id": "conversational_memory_qa",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "7cf0fe997cd695f7",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 2000,
+    "seed": 42
+  },
+  "metrics": {
+    "judge_score": 0.7466666666666666
+  },
+  "tps": 21.591238260532997,
+  "p95_latency_ms": 36701.371862,
+  "n_samples": 15,
+  "samples": [
+    {
+      "id": "sample_001",
+      "prediction": "Not mentioned.",
+      "expected": "2 July 2023",
+      "correct": false,
+      "latency_ms": 55073.37377499999,
+      "input_tokens": 22490,
+      "output_tokens": 1663,
+      "judge_raw_score": 1.0
+    },
+    {
+      "id": "sample_002",
+      "prediction": "Contemporary.",
+      "expected": "Contemporary",
+      "correct": true,
+      "latency_ms": 9937.085624999994,
+      "input_tokens": 18458,
+      "output_tokens": 202,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "sample_003",
+      "prediction": "John volunteered at a 5K charity run for veterans and their families.",
+      "expected": "career fair at a local school",
+      "correct": false,
+      "latency_ms": 20398.33116199999,
+      "input_tokens": 34657,
+      "output_tokens": 360,
+      "judge_raw_score": 1.0
+    },
+    {
+      "id": "sample_004",
+      "prediction": "Whispering Falls on 12 May 2022.",
+      "expected": "Whispering Falls waterfall",
+      "correct": false,
+      "latency_ms": 16386.01149600001,
+      "input_tokens": 30540,
+      "output_tokens": 294,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "sample_005",
+      "prediction": "John collects basketball shoes, books, a painting, and a map.",
+      "expected": "sneakers, fantasy movie DVDs, jerseys",
+      "correct": false,
+      "latency_ms": 34053.68872,
+      "input_tokens": 34470,
+      "output_tokens": 800,
+      "judge_raw_score": 2.0
+    },
+    {
+      "id": "sample_006",
+      "prediction": "Audrey believed positive reinforcement is important for bonding with pets and because dogs are quick learners who respond well to rewards.",
+      "expected": "To have pets learn how to behave in a positive way",
+      "correct": false,
+      "latency_ms": 19504.535578999992,
+      "input_tokens": 33711,
+      "output_tokens": 324,
+      "judge_raw_score": 4.0
+    },
+    {
+      "id": "sample_007",
+      "prediction": "James supports Liverpool in football matches.",
+      "expected": "Liverpool",
+      "correct": false,
+      "latency_ms": 13686.983736999991,
+      "input_tokens": 33684,
+      "output_tokens": 148,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "sample_008",
+      "prediction": "Jolene adopted Susie two years before the conversation on 1 August 2023, which would be approximately **2021**.",
+      "expected": "in 2021",
+      "correct": false,
+      "latency_ms": 36701.371862,
+      "input_tokens": 32373,
+      "output_tokens": 928,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "sample_009",
+      "prediction": "Gastritis.",
+      "expected": "Gastritis",
+      "correct": true,
+      "latency_ms": 13731.402102000004,
+      "input_tokens": 25916,
+      "output_tokens": 248,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "sample_010",
+      "prediction": "Calvin describes adding electronic elements to his songs as \"experimenting with different genres, pushing myself out of my comfort zone\" to create a \"fresh vibe.\"",
+      "expected": "gives them a fresh vibe",
+      "correct": false,
+      "latency_ms": 16047.433966000028,
+      "input_tokens": 31241,
+      "output_tokens": 267,
+      "judge_raw_score": 3.0
+    },
+    {
+      "id": "sample_011",
+      "prediction": "Melanie's friend adopted a child in 2022.",
+      "expected": "2022",
+      "correct": false,
+      "latency_ms": 14423.772487999997,
+      "input_tokens": 22489,
+      "output_tokens": 326,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "sample_012",
+      "prediction": "Gina offers to help Jon with making content and managing his social media accounts.",
+      "expected": "Helping with making content and managing his social media accounts.",
+      "correct": false,
+      "latency_ms": 8461.12373599999,
+      "input_tokens": 18460,
+      "output_tokens": 137,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "sample_013",
+      "prediction": "Maria started volunteering at the homeless shelter after witnessing a family struggling on the streets, which inspired her to reach out to the shelter and offer her help. They accepted her, and she has been volunteering there ever since.",
+      "expected": "Witnessed a family struggling on the streets and reached out to the shelter",
+      "correct": false,
+      "latency_ms": 15605.404991999989,
+      "input_tokens": 34658,
+      "output_tokens": 199,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "sample_014",
+      "prediction": "\"Little Women\" and \"The Lord of the Rings\" trilogy.",
+      "expected": "\"Little Women\", \"Lord of the Rings\"",
+      "correct": false,
+      "latency_ms": 19846.323777999998,
+      "input_tokens": 30527,
+      "output_tokens": 388,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "sample_015",
+      "prediction": "Not mentioned.",
+      "expected": "signed basketball",
+      "correct": false,
+      "latency_ms": 32479.234375000033,
+      "input_tokens": 34475,
+      "output_tokens": 762,
+      "judge_raw_score": 0.0
+    }
+  ],
+  "created_at": "2026-04-15T16:15:38+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": "gpt-4o-mini@openai",
+  "judge_model_revision": "2024-07-18",
+  "judge_prompt_hash": "18f44b8c39bda787"
+}
