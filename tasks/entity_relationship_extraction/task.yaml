@@ -1,0 +1,64 @@
+name: entity_relationship_extraction
+version: "1.0"
+description: |
+  Entity and relationship extraction from conversational text.
+  First stage of our LightRAG-based memory pipeline: the model receives
+  1-2 conversation sessions and must extract structured entities
+  (Person, Location, Event, etc.) AND their relationships, using
+  the exact prompt format from lightrag-hku.
+  Evaluates the LLM's ability to perform knowledge graph construction
+  from natural dialogue — the foundation of our retrieval system.
+metric:
+  primary: judge_score
+llm_params:
+  temperature: 0.0
+  max_tokens: 2000
+  seed: 42
+system_prompt: |
+  ---Role---
+  You are a Knowledge Graph Specialist responsible for extracting
+  entities and relationships from the input text.
+
+  ---Instructions---
+  1. Identify clearly defined and meaningful entities in the input text.
+     For each entity, extract: entity_name (title case), entity_type
+     (one of: Person, Creature, Organization, Location, Event, Concept,
+     Method, Content, Data, Artifact, NaturalObject, or Other),
+     entity_description (concise, based only on the input text).
+     Format: entity<|#|>entity_name<|#|>entity_type<|#|>entity_description
+
+  2. Identify direct, clearly stated relationships between extracted entities.
+     Decompose N-ary relationships into binary pairs.
+     For each: source_entity, target_entity, relationship_keywords (comma-separated),
+     relationship_description.
+     Format: relation<|#|>source_entity<|#|>target_entity<|#|>relationship_keywords<|#|>relationship_description
+
+  3. Output all entities first, then all relationships.
+  4. Use third person. Avoid pronouns.
+  5. Output <|COMPLETE|> as the final line.
+prompt_template: |
+  {prompt}
+judge:
+  model: gpt-4o-mini@openai
+  scale_min: 0
+  scale_max: 5
+  forbid_self_judge: true
+  prompt: |
+    You are evaluating entity and relationship extraction from conversation text.
+    The reference lists key entities, relationships, and facts that must be captured.
+    Score the candidate extraction on a scale 0..5:
+      0 = missed all key entities and relationships
+      1 = found some entities but missed most relationships
+      2 = found main persons but missed important entities or relationships
+      3 = captured most entities and some relationships, minor gaps
+      4 = comprehensive extraction — entities, types, and relationships correct
+      5 = excellent — all key entities, relationships, and <|COMPLETE|> present
+
+    Reference extraction:
+    {expected}
+
+    Candidate extraction:
+    {prediction}
+
+    Reply with a single integer 0..5 and nothing else.
+    Score:

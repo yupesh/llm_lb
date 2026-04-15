@@ -1,0 +1,47 @@
+name: temporal_information_extraction
+version: "1.0"
+description: |
+  Temporal information extraction from conversational text.
+  Key stage of our temporal reasoning pipeline: the model receives a
+  conversation session with timestamps and must extract ALL dates,
+  time periods, relative expressions, and intervals in structured JSON
+  with YYYY-MM-DD format and Unix timestamps.
+  Uses the exact prompt from memory/light_rag/temporal/prompts.py.
+  Evaluates the LLM's ability to parse dates from natural dialogue —
+  required for building the temporal index that powers time-aware retrieval.
+metric:
+  primary: judge_score
+llm_params:
+  temperature: 0.0
+  max_tokens: 1000
+  seed: 42
+system_prompt: >-
+  You are an expert at extracting temporal information from text.
+  You identify all dates, time periods, and temporal intervals mentioned.
+prompt_template: |
+  {prompt}
+judge:
+  model: gpt-4o-mini@openai
+  scale_min: 0
+  scale_max: 5
+  forbid_self_judge: true
+  prompt: |
+    You are evaluating temporal information extraction from conversation text.
+    The reference contains dates (YYYY-MM-DD with timestamps), relative time
+    expressions, and overall time bounds that should be captured.
+    Score the candidate extraction on a scale 0..5:
+      0 = no dates extracted or completely wrong
+      1 = found session timestamp but missed relative expressions and other dates
+      2 = found some dates but missing timestamps, wrong format, or incomplete
+      3 = most dates correct with timestamps, minor gaps in relative expressions
+      4 = comprehensive extraction with correct YYYY-MM-DD, timestamps, and bounds
+      5 = perfect — all dates, relative refs, timestamps, and start_ts/end_ts correct
+
+    Reference (expected temporal information):
+    {expected}
+
+    Candidate extraction:
+    {prediction}
+
+    Reply with a single integer 0..5 and nothing else.
+    Score:

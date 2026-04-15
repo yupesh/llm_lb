@@ -1,6 +1,13 @@
 {
-  "generated_at": "2026-04-15T07:57:23+00:00",
+  "generated_at": "2026-04-15T12:52:42+00:00",
   "tasks": [
+    {
+      "id": "conversational_memory_qa",
+      "version": "1.0",
+      "primary_metric": "judge_score",
+      "secondary_metrics": [],
+      "n_samples": 15
+    },
     {
       "id": "datascibench_csv_excel",
       "version": "1.0",
@@ -32,6 +39,13 @@
       "n_samples": 10
     },
     {
+      "id": "entity_relationship_extraction",
+      "version": "1.0",
+      "primary_metric": "judge_score",
+      "secondary_metrics": [],
+      "n_samples": 15
+    },
+    {
       "id": "extractive_qa",
       "version": "1.0",
       "primary_metric": "exact_match",
@@ -61,6 +75,13 @@
         "p95_latency_ms"
       ],
       "n_samples": 5
+    },
+    {
+      "id": "temporal_information_extraction",
+      "version": "1.0",
+      "primary_metric": "judge_score",
+      "secondary_metrics": [],
+      "n_samples": 15
     },
     {
       "id": "text_classification",
