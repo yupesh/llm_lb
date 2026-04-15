@@ -39,9 +39,16 @@ class ModelCard(BaseModel):
     added_at: Optional[str] = None  # ISO date
     # Endpoint config (LLMasJ_URI). Used by openai_compat / self-hosted adapters.
     endpoint_url: Optional[str] = None
+    # Name of env var that holds the endpoint URL. When set, the runtime value
+    # of this env var overrides `endpoint_url` (handy for judge models whose
+    # endpoint varies between local / CI / prod).
+    endpoint_url_env: Optional[str] = None
     # Name under which the served model is advertised by the endpoint
     # (e.g. vLLM `--served-model-name`). Falls back to `hf_uri`, then to `model_id`.
     served_model_name: Optional[str] = None
+    # Name of env var that holds the served model name. When set, the runtime
+    # value of this env var overrides `served_model_name`.
+    served_model_name_env: Optional[str] = None
     # Name of env var that holds the API key for this endpoint. Defaults are
     # provider-specific (OPENAI_API_KEY for openai, HF_TOKEN for hf).
     api_key_env: Optional[str] = None

@@ -10,6 +10,10 @@ from .openai_like import openai_chat
 
 
 def _served_name(model: ModelCard) -> str:
+    if model.served_model_name_env:
+        from_env = os.environ.get(model.served_model_name_env, "")
+        if from_env:
+            return from_env
     if model.served_model_name:
         return model.served_model_name
     if model.hf_uri:
@@ -21,9 +25,13 @@ def _served_name(model: ModelCard) -> str:
 class OpenAICompatAdapter:
     def __init__(self, model: ModelCard) -> None:
         self.model = model
-        if not model.endpoint_url:
+        base_url = model.endpoint_url
+        if model.endpoint_url_env:
+            base_url = os.environ.get(model.endpoint_url_env, "") or base_url
+        if not base_url:
             raise RuntimeError(
                 f"openai_compat adapter: model {model.model_id!r} requires `endpoint_url`"
+                f" or `endpoint_url_env`"
             )
         # Local endpoints often don't need a key — only set Authorization if we have one.
         env_var = model.api_key_env or "LLM_LB_API_KEY"
@@ -31,7 +39,7 @@ class OpenAICompatAdapter:
         self.headers: dict[str, str] = (
             {"Authorization": f"Bearer {api_key}"} if api_key else {}
         )
-        self.base_url = model.endpoint_url
+        self.base_url = base_url
         self.timeout = float(os.environ.get("LLM_LB_HTTP_TIMEOUT", "120"))
         self.served_name = _served_name(model)
 

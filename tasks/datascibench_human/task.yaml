@@ -1,0 +1,50 @@
+name: datascibench_human
+version: "1.0"
+description: |
+  Human-evaluation coding tasks from DeepPavlov DataSciBench (human subset).
+  End-to-end data science problems: EDA, ML pipelines, clustering, reporting.
+  The model must produce complete Python code; an LLM judge evaluates it.
+  Source: https://github.com/deeppavlov/DataSciBench
+metric:
+  primary: judge_score
+  secondary: [tps, p95_latency_ms]
+llm_params:
+  temperature: 0.0
+  max_tokens: 2048
+  seed: 42
+system_prompt: |
+  You are an expert Python data-science programmer. Write complete, runnable
+  Python code that solves the given task. Output ONLY the code, no explanations.
+  Include all necessary imports. The code must be self-contained.
+prompt_template: |
+  {prompt}
+judge:
+  model: judge@openai
+  scale_min: 0
+  scale_max: 5
+  forbid_self_judge: true
+  prompt: |
+    You are a strict code reviewer evaluating data-science Python code.
+
+    TASK DESCRIPTION:
+    {prompt}
+
+    EXPECTED EVALUATION CRITERIA:
+    {expected}
+
+    CANDIDATE CODE:
+    {prediction}
+
+    Score the candidate code on an integer scale 0..5:
+      0 = code is nonsensical, completely wrong, or not Python
+      1 = code runs but solves a fundamentally different problem
+      2 = partially correct approach but missing key steps or major bugs
+      3 = correct approach, handles most requirements, minor bugs or missing outputs
+      4 = correct and complete, minor style issues or edge cases missed
+      5 = perfect, all requirements met, clean, runnable, produces all expected outputs
+
+    Consider: Does the code handle data loading, cleaning, modeling and output?
+    Does it produce all required output files? Would it pass the evaluation criteria?
+
+    Reply with a single integer 0..5 and nothing else.
+    Score:

@@ -1,0 +1,5 @@
+{
+  "id": "csv_excel_29",
+  "prompt": "Please complete the following task:\nWrite a complete LSTM (Long Short-Term Memory) neural network for time series prediction based on PyTorch. Use 'data.csv' as the dataset for this task. Implement the actual training and prediction of the LSTM model. Use data from column \"Value1\" from the CSV file 'data.csv' to train the LSTM model. Then make predictions and save to 'predictions.csv' and visualize it with an image 'predictions_chart.png'.",
+  "expected": "1. Data cleaning and preprocessing: Data Consistency Ratio — data.csv Value1 column read and preprocessed for LSTM input sequences. 2. Predictive modeling: Model MAE — LSTM trained in PyTorch, predictions saved to predictions.csv. 3. Data visualization: Visualization Quality — predictions_chart.png shows actual vs predicted time series."
+}

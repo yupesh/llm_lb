@@ -1,0 +1,5 @@
+{
+  "id": "dl_10",
+  "prompt": "Please write a Python code to predict the success rate of applying for overseas university study qualifications using data mining techniques. You need to use a dataset of master's program-related indicators for foreign universities, named \"data.csv\", to complete the following tasks:\n\n1. Data Analysis: Conduct exploratory data analysis (EDA) on the dataset to understand the distribution and characteristics of the data. Output: \"eda_results.csv\"\n\n2. Feature Engineering: Based on the results of the data analysis, perform feature selection and preprocessing. Output: \"processed_features.csv\"\n\n3. Model Building: Build a machine learning model to predict the success rate of study abroad applications. Output: \"success_rate_model.pkl\"\n\n4. Model Evaluation: Evaluate the performance of the model and output the evaluation metrics. Output: \"model_evaluation_results.csv\"",
+  "expected": "1. Data exploration: EDA Completion Rate — eda_results.csv with distribution analysis. 2. Report generation: Evaluation Metrics Report — model_evaluation_results.csv with accuracy/precision/recall metrics. success_rate_model.pkl saved."
+}

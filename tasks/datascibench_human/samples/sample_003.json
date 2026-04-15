@@ -1,0 +1,5 @@
+{
+  "id": "human_2",
+  "prompt": "Implement the desired_marketing_expenditure function which returns the required amount of money to invest in a new marketing campaign to sell the desired number of units.\n\nInput: campaign_data.csv (columns: Campaign, Marketing expenditure, Units sold).\nOutput: cleaned_campaign_data.csv, model_parameters.csv (linear regression coefficients), required_expenditure.txt (single float).\n\nUse linear regression to model how units sold grow with expenditure. Example data:\nCampaign #1: 300000 expenditure -> 60000 units\nCampaign #2: 200000 -> 50000\nCampaign #3: 400000 -> 90000\nCampaign #4: 300000 -> 80000\nCampaign #5: 100000 -> 30000\n\nWith desired_units_sold=60000, the function should return 250000.0.",
+  "expected": "1. Data cleaning: Data Cleaning Completeness — cleaned_campaign_data.csv produced. 2. Predictive modeling: Model Performance (R-squared) — linear regression trained. 3. Predictive modeling: Expenditure Accuracy — required_expenditure.txt with correct float value."
+}

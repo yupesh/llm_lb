@@ -148,6 +148,18 @@
       "default": null,
       "title": "Endpoint Url"
     },
+    "endpoint_url_env": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Endpoint Url Env"
+    },
     "served_model_name": {
       "anyOf": [
         {
@@ -159,6 +171,18 @@
       ],
       "default": null,
       "title": "Served Model Name"
+    },
+    "served_model_name_env": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Served Model Name Env"
     },
     "api_key_env": {
       "anyOf": [

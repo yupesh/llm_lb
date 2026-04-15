@@ -1,0 +1,5 @@
+{
+  "id": "csv_excel_10",
+  "prompt": "Write a piece of neural network prediction code that establishes a relationship between inputs and outputs, and saves this mapping relationship to a pkl model. Utilize the input dataset from \"input_data.csv\", which contains 500 rows and 12 columns (each row represents a set of inputs). The known outputs are in \"output_data.csv\", a matrix with 7 rows and 500 columns. Ensure the data dimensions are automatically corresponded.\n\nUse the data to train the model and save the parameters in \"model.pkl\" and output model evaluation results in \"evaluation_results.csv\" (with columns \"Loss\" and \"MeanAbsoluteError\").",
+  "expected": "1. Data cleaning and preprocessing: Data Completeness — input (500x12) and output (7x500, transposed to 500x7) dimensions handled correctly. 2. Predictive modeling: Model Performance (MAE) — neural network trained, model.pkl saved via pickle/joblib. 3. Report generation: Report Quality — evaluation_results.csv with Loss and MeanAbsoluteError columns."
+}
