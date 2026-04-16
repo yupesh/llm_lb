@@ -4,8 +4,15 @@
   <id>tag:yupesh.github.io,2026:llm_lb/feed</id>
   <link href="https://yupesh.github.io/llm_lb/" rel="alternate" type="text/html"/>
   <link href="https://yupesh.github.io/llm_lb/data/feed.xml" rel="self" type="application/atom+xml"/>
-  <updated>2026-04-16T17:11:44+00:00</updated>
+  <updated>2026-04-16T17:35:04+00:00</updated>
   <author><name>LLM Leaderboard</name></author>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_ambiguity/1.0/qwen3.5-397b@vllm/2026-04-16T17:35:04+00:00</id>
+    <title>qwen3.5-397b@vllm scored 0.583 judge_score on text2sql_ambiguity v1.0</title>
+    <updated>2026-04-16T17:35:04+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_ambiguity" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.583</summary>
+  </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/agent_tool_calling/1.0/qwen3-30b@vllm/2026-04-16T17:11:44+00:00</id>
     <title>qwen3-30b@vllm scored 0.600 judge_score on agent_tool_calling v1.0</title>
@@ -14,11 +21,32 @@
     <summary>judge_score=0.600</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/temporal_information_extraction/1.0/qwen3.5-397b@vllm/2026-04-16T17:03:33+00:00</id>
+    <title>qwen3.5-397b@vllm scored 0.680 judge_score on temporal_information_extraction v1.0</title>
+    <updated>2026-04-16T17:03:33+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/temporal_information_extraction" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.680</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/conversational_memory_qa/1.0/qwen3.5-397b@vllm/2026-04-16T17:00:30+00:00</id>
+    <title>qwen3.5-397b@vllm scored 0.787 judge_score on conversational_memory_qa v1.0</title>
+    <updated>2026-04-16T17:00:30+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/conversational_memory_qa" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.787</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/agent_tool_calling/1.0/qwen3.5-397b@vllm/2026-04-16T16:52:21+00:00</id>
     <title>qwen3.5-397b@vllm scored 0.573 judge_score on agent_tool_calling v1.0</title>
     <updated>2026-04-16T16:52:21+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/agent_tool_calling" rel="alternate" type="text/html"/>
     <summary>judge_score=0.573</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_ambiguity/1.0/qwen3.5-397b@vllm/2026-04-16T16:29:47+00:00</id>
+    <title>qwen3.5-397b@vllm scored 0.608 judge_score on text2sql_ambiguity v1.0</title>
+    <updated>2026-04-16T16:29:47+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_ambiguity" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.608</summary>
   </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/retail_agent_dialog/1.0/qwen3.5-397b@vllm/2026-04-16T13:47:44+00:00</id>

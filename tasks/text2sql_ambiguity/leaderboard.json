@@ -1,0 +1,19 @@
+{
+  "task_id": "text2sql_ambiguity",
+  "task_version": "1.0",
+  "primary_metric": "judge_score",
+  "ranking": [
+    {
+      "model_id": "qwen3.5-397b@vllm",
+      "score": 0.6083333333333333,
+      "metrics": {
+        "judge_score": 0.6083333333333333
+      },
+      "tps": 99.46345678603278,
+      "p95_latency_ms": 41514.11357999998,
+      "cost_usd": null,
+      "result_file": "results/qwen3.5-397b@vllm__2026-04-16T16-29-47Z.json"
+    }
+  ],
+  "updated_at": "2026-04-16T18:26:03+00:00"
+}

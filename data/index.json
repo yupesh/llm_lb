@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-16T17:11:44+00:00",
+  "generated_at": "2026-04-16T18:26:03+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -390,6 +390,32 @@
       "p95_latency_ms": 10263.405290000008,
       "cost_usd": null,
       "result_file": "tasks/summarization/results/qwen3-30b@vllm__2026-04-10T04-32-32Z.json"
+    },
+    {
+      "task_id": "temporal_information_extraction",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-397b@vllm",
+      "score": 0.6799999999999999,
+      "metrics": {
+        "judge_score": 0.6799999999999999
+      },
+      "tps": 95.59445524735108,
+      "p95_latency_ms": 67018.43252599998,
+      "cost_usd": null,
+      "result_file": "tasks/temporal_information_extraction/results/qwen3.5-397b@vllm__2026-04-16T17-03-33Z.json"
+    },
+    {
+      "task_id": "text2sql_ambiguity",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-397b@vllm",
+      "score": 0.6083333333333333,
+      "metrics": {
+        "judge_score": 0.6083333333333333
+      },
+      "tps": 99.46345678603278,
+      "p95_latency_ms": 41514.11357999998,
+      "cost_usd": null,
+      "result_file": "tasks/text2sql_ambiguity/results/qwen3.5-397b@vllm__2026-04-16T16-29-47Z.json"
     },
     {
       "task_id": "text_classification",
