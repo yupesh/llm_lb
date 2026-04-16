@@ -13,10 +13,14 @@ name: aggregate
 #
 # Requires:
 #   - `contents: write` (declared below)
-#   - branch protection on main must allow `github-actions[bot]` to push
-#     directly (Settings → Branches → main → Allow specified actors to
-#     bypass required pull requests). Without this, the final `git push`
-#     will fail and leaderboards will stay stale until a human runs aggregate.
+#   - A repo Deploy key with write access, whose private half is stored as
+#     the `AGGREGATE_DEPLOY_KEY` secret, and whose public half is listed in
+#     the `main` ruleset's bypass list. The built-in `GITHUB_TOKEN` /
+#     `github-actions[bot]` cannot be added to Rulesets bypass on every repo
+#     (depends on the account), so we use a Deploy key instead — it's
+#     repo-scoped and shows up in the bypass picker explicitly.
+#     Without this setup the final `git push` will fail and leaderboards
+#     will stay stale until a human runs aggregate.
 
 on:
   push:
@@ -44,6 +48,11 @@ jobs:
         with:
           # Need full history so aggregate can walk every result file.
           fetch-depth: 0
+          # SSH deploy key so the later `git push origin HEAD:main` goes
+          # through under the deploy-key identity (present in the `main`
+          # ruleset bypass list). actions/checkout rewrites the `origin`
+          # remote to the SSH URL and writes the key to ~/.ssh.
+          ssh-key: ${{ secrets.AGGREGATE_DEPLOY_KEY }}
 
       - uses: astral-sh/setup-uv@v3
         with:
