@@ -1,0 +1,10 @@
+{
+  "id": "amb_267",
+  "prompt": "What are the street addresses and cities of the rental properties in the database?",
+  "expected": "{\"is_ambiguous\": false, \"sql\": \"SELECT P.Street_Address, City from Transactions AS T LEFT JOIN Properties AS P ON T.property_id = P.property_id WHERE T.TypeOfTransaction LIKE 'Rent'\"}",
+  "meta": {
+    "db_id": "vague_2cols_location",
+    "type": "clear",
+    "source_question_id": 267
+  }
+}

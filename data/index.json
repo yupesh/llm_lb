@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-16T12:41:10+00:00",
+  "generated_at": "2026-04-16T15:58:08+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -102,6 +102,16 @@
       "primary_metric": "judge_score",
       "secondary_metrics": [],
       "n_samples": 15
+    },
+    {
+      "id": "text2sql_ambiguity",
+      "version": "1.0",
+      "primary_metric": "judge_score",
+      "secondary_metrics": [
+        "tps",
+        "p95_latency_ms"
+      ],
+      "n_samples": 24
     },
     {
       "id": "text_classification",

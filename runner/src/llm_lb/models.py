@@ -113,6 +113,16 @@ class TaskSpec(BaseModel):
     runner_kind: Optional[str] = None
     # Optional turn cap for dialog_simulation runs. Ignored otherwise.
     max_turns: Optional[int] = None
+    # Optional per-sample context, looked up from an external JSON file.
+    # When set, the runner loads `task_dir / context_file` once (if it exists)
+    # as {key: value_str}, then for each sample takes value_str at
+    # sample.meta[context_meta_key] and makes it available as `{context}` in
+    # `prompt_template` (and optionally in `judge.prompt`). Missing file or
+    # missing keys resolve to empty string — so local runs without the
+    # external data keep working (at a quality cost). Used e.g. to inject
+    # DB schemas into text2sql prompts without committing them to the repo.
+    context_file: Optional[str] = None
+    context_meta_key: Optional[str] = None
 
 
 class Sample(BaseModel):

@@ -59,14 +59,20 @@ def score_sample(
     spec: JudgeSpec,
     sample: Sample,
     prediction: str,
+    context: str = "",
 ) -> float:
     """Run the judge on one sample, return the *raw* integer score
     (clamped into [scale_min, scale_max]). Returns scale_min on parse failure.
+
+    `context` is the per-sample extra context from `task.context_file` (see
+    TaskSpec). Passed to the judge prompt as `{context}` so judges can also
+    see e.g. a DB schema when evaluating free-form outputs.
     """
     user = spec.prompt.format(
         prompt=sample.prompt,
         expected=sample.expected,
         prediction=prediction,
+        context=context,
     )
     completion = judge_client.chat(
         system=None,

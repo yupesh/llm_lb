@@ -1,0 +1,10 @@
+{
+  "id": "amb_004",
+  "prompt": "List all restaurants and also list cafes that serve Italian cuisine.",
+  "expected": "{\"is_ambiguous\": false, \"sql\": \"SELECT Restaurants.Name \\r\\nFROM Restaurants\\r\\nWHERE Restaurants.Food_Service = \\\"Restaurant\\\" OR Restaurants.Food_Service = \\\"Café\\\" AND Restaurants.Cuisine = \\\"Italian\\\"\"}",
+  "meta": {
+    "db_id": "attachment_1tab_val_food_service",
+    "type": "clear",
+    "source_question_id": 4
+  }
+}

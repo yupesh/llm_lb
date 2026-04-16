@@ -1,0 +1,10 @@
+{
+  "id": "amb_262",
+  "prompt": "What compensation is offered to software developers?",
+  "expected": "{\"is_ambiguous\": true, \"interpretations\": [\"select s.Salary_Range \\r\\nfrom position as p \\r\\njoin salarydetails as s \\r\\non p.id=s.positionid \\r\\nwhere p.title = 'Software Developer'\", \"select s.Hourly_Rate \\r\\nfrom position as p \\r\\njoin salarydetails as s \\r\\non p.id=s.positionid \\r\\nwhere p.title = 'Software Developer'\", \"select s.Salary_Range, Hourly_Rate \\r\\nfrom position as p \\r\\njoin salarydetails as s \\r\\non p.id=s.positionid \\r\\nwhere p.title = 'Software Developer'\"]}",
+  "meta": {
+    "db_id": "vague_2cols_compensation",
+    "type": "ambiguous",
+    "source_question_id": 262
+  }
+}

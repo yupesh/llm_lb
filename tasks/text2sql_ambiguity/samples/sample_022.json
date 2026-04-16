@@ -1,0 +1,10 @@
+{
+  "id": "amb_266",
+  "prompt": "What experience do I need for the open position with the greatest salary?",
+  "expected": "{\"is_ambiguous\": true, \"interpretations\": [\"SELECT Minimum_Years\\r\\nFROM Jobs\\r\\nORDER BY Salary DESC\\r\\nLIMIT 1;\", \"SELECT Preferred_Years\\r\\nFROM Jobs\\r\\nORDER BY Salary DESC\\r\\nLIMIT 1;\", \"SELECT Minimum_Years, Preferred_Years\\r\\nFROM Jobs\\r\\nORDER BY Salary DESC\\r\\nLIMIT 1;\"]}",
+  "meta": {
+    "db_id": "vague_2cols_experience",
+    "type": "ambiguous",
+    "source_question_id": 266
+  }
+}

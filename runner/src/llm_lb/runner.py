@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import hashlib
+import json
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -106,6 +107,15 @@ def run(
         sim_user_prompt = (task_dir / "user_agent_prompt.md").read_text()
         sim_db_path = task_dir / "db.json"
 
+    # Preload external per-sample context (e.g. DB schemas) once. The file is
+    # optional — if it's missing, {context} substitutes to an empty string so
+    # local runs without the external artifact still work.
+    context_data: dict[str, str] = {}
+    if task.context_file:
+        ctx_path = task_dir / task.context_file
+        if ctx_path.exists():
+            context_data = json.loads(ctx_path.read_text())
+
     for s in samples:
         t0 = time.perf_counter()
         if task.runner_kind == "dialog_simulation":
@@ -141,7 +151,12 @@ def run(
                 total_input_tokens += in_tok
             continue
 
-        user = task.prompt_template.format(prompt=s.prompt)
+        ctx = ""
+        if task.context_meta_key and context_data:
+            ctx_key = s.meta.get(task.context_meta_key)
+            if ctx_key:
+                ctx = context_data.get(ctx_key, "")
+        user = task.prompt_template.format(prompt=s.prompt, context=ctx)
         completion = adapter.chat(task.system_prompt, user, task.llm_params)
         dt_ms = (time.perf_counter() - t0) * 1000.0
 
@@ -160,7 +175,7 @@ def run(
 
         if task.judge and judge_client is not None:
             sample_pred.judge_raw_score = judge_mod.score_sample(
-                judge_client, task.judge, s, pred
+                judge_client, task.judge, s, pred, context=ctx
             )
 
         preds.append(sample_pred)
