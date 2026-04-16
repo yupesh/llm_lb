@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-16T18:29:19+00:00",
+  "generated_at": "2026-04-16T23:44:13+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -112,6 +112,16 @@
         "p95_latency_ms"
       ],
       "n_samples": 24
+    },
+    {
+      "id": "text2sql_bird",
+      "version": "1.0",
+      "primary_metric": "judge_score",
+      "secondary_metrics": [
+        "tps",
+        "p95_latency_ms"
+      ],
+      "n_samples": 22
     },
     {
       "id": "text_classification",
