@@ -1,0 +1,5 @@
+{
+  "id": "agent_tc_012",
+  "prompt": "отчисти канву",
+  "expected": "[{\"name\": \"remove_nodes_from_canvas\", \"arguments\": {\"remove_all\": true}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]"
+}

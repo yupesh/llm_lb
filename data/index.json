@@ -1,6 +1,16 @@
 {
-  "generated_at": "2026-04-16T04:22:19+00:00",
+  "generated_at": "2026-04-16T04:41:22+00:00",
   "tasks": [
+    {
+      "id": "agent_tool_calling",
+      "version": "1.0",
+      "primary_metric": "judge_score",
+      "secondary_metrics": [
+        "tps",
+        "p95_latency_ms"
+      ],
+      "n_samples": 22
+    },
     {
       "id": "conversational_memory_qa",
       "version": "1.0",

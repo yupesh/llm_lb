@@ -1,0 +1,145 @@
+name: agent_tool_calling
+version: "1.0"
+description: |
+  Agent tool-calling benchmark. The model acts as an agent that manages a visual
+  flow editor (canvas with assistants and tools, builds, runs, node parameters).
+  Given a user request in Russian and a catalogue of 21 available functions,
+  the model must emit the correct sequence of tool calls (function name +
+  arguments). An LLM judge evaluates whether the predicted calls match the
+  reference trace in terms of intent, tool selection and argument correctness.
+  Source: production logs from the DeepPavlov flow-editor agent.
+metric:
+  primary: judge_score
+  secondary: [tps, p95_latency_ms]
+llm_params:
+  temperature: 0.0
+  max_tokens: 2048
+  seed: 42
+system_prompt: |
+  You are an agent that controls a visual flow editor. Users describe what they
+  want to do with the canvas (add/remove nodes, run builds, inspect state,
+  modify parameters, look up information), and you must respond ONLY with a
+  JSON array of tool calls in the order they should be executed.
+
+  Output format — a JSON array, no prose, no markdown fences:
+    [
+      {"name": "<tool_name>", "arguments": {<args>}},
+      ...
+    ]
+
+  Available tools (21):
+
+  1.  build_tool(task_id?: string)
+      Start a build with current form parameters. Agent chooses the name.
+
+  2.  get_builds()
+      Return all builds (build_id, display_name, status).
+
+  3.  get_editor_state()
+      Return current canvas: nodes, edges, viewport, state_data (incl. nodeErrors).
+
+  4.  start_run_tool(name?: string, port?: int, build_id?: string)
+      Start a run for the selected build.
+
+  5.  get_runs()
+      Return all runs with statuses and display_name/run_id.
+
+  6.  get_available_tools()
+      Return the list of tools available in the platform configuration.
+
+  7.  add_tool_to_canvas(tool_name: string)
+      Add a tool_node to the current flow. Tool name must come from
+      get_available_tools (e.g. "summary_tool", "calculator_tool").
+
+  8.  add_assistant_to_canvas(assistant_name: string)
+      Add an assistant_node to the current flow.
+
+  9.  add_edge_to_canvas(source: string, target: string)
+      Create an edge from a tool_node to an assistant_node.
+
+  10. remove_nodes_from_canvas(node_ids?: string[], remove_all?: bool, keep_assistant?: bool)
+      Remove nodes. With no params or remove_all=true — remove everything.
+
+  11. validate_flow()
+      Check the current flow for configuration errors (e.g. missing file uploads).
+
+  12. get_params_node()
+      Return the list of nodes on the canvas available for interaction.
+
+  13. get_node_requirements(node_id: string)
+      Return parameters of one node with a filled/unfilled flag (JSON-schema based).
+
+  14. get_node_editable_params(node_id: string)
+      Return a node (by id or display name) and its editable parameters with
+      current values, types and options.
+
+  15. set_node_param(node_id: string, param_key: string, param_value: any)
+      Change a node parameter (temperature, prompt, model_name, ...).
+
+  16. rename_process(process_type: "build"|"run", id: string, new_name: string)
+      Rename a build or a run.
+
+  17. add_process_comment(process_type: "build"|"run", id: string, comment: string)
+      Append a comment to a build/run in Build Manager local notes.
+
+  18. get_process_comment(process_type: "build"|"run", id: string)
+      Return the current comment (note) for a build or run.
+
+  19. download_uploaded_file(component_id: string, field_name: string, file_name: string)
+      Download one uploaded file to the user's device.
+
+  20. read_tool_file(node_id: string)
+      Read the text content of a file attached to a tool/assistant node.
+
+  21. upload_file_to_node(node_id: string, field_name: string)
+      Open a file picker dialog and upload a file into a node's file field.
+
+  Rules:
+    - If you need information you don't have (current canvas, available tools,
+      builds, runs, node parameters) — first call the relevant get_* tool.
+    - Prefer the minimal sufficient sequence. Do not call tools the user didn't
+      ask for. After a state-changing call (add, remove, set), you MAY call
+      get_editor_state() to confirm.
+    - Tool names are exactly as listed above. Arguments must be a JSON object.
+    - If the user's request cannot be fulfilled with the available tools,
+      return an empty array: [].
+
+prompt_template: |
+  User request: {prompt}
+judge:
+  model: gpt-4o-mini@openai
+  scale_min: 0
+  scale_max: 5
+  forbid_self_judge: true
+  prompt: |
+    You are evaluating an agent that emits tool calls for a visual flow-editor.
+
+    USER REQUEST:
+    {prompt}
+
+    REFERENCE TOOL-CALL TRACE (ground truth from a working agent):
+    {expected}
+
+    CANDIDATE OUTPUT (what the model under test produced):
+    {prediction}
+
+    Score the candidate on an integer scale 0..5:
+      0 = output is not a JSON array of tool calls, or completely unrelated
+      1 = wrong tools chosen, or argument values are grossly wrong
+      2 = some relevant tools but missing critical steps or major argument errors
+      3 = correct intent, most tools right, minor ordering/argument issues
+      4 = functionally equivalent to the reference (same effect on the system),
+          with small cosmetic differences (extra redundant get_* call, equivalent
+          ordering, argument style)
+      5 = exactly matches the reference trace or is strictly better (fewer
+          redundant calls while achieving the same result)
+
+    Consider:
+    - Did the candidate pick the correct tool_name for each step?
+    - Are the arguments semantically correct (node_id values may differ — that's
+      OK if the tool is the right one and args match the referenced entity)?
+    - Is the order of operations valid (info-gathering before action)?
+    - Does an empty array appear only when the reference is also empty?
+
+    Reply with a single integer 0..5 and nothing else.
+    Score:

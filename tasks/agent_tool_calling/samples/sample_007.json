@@ -1,0 +1,5 @@
+{
+  "id": "agent_tc_007",
+  "prompt": "Добавь  ноду подключение к базе",
+  "expected": "[{\"name\": \"add_tool_to_canvas\", \"arguments\": {\"tool_name\": \"text2sql_tool\"}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]"
+}

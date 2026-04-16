@@ -1,0 +1,5 @@
+{
+  "id": "agent_tc_020",
+  "prompt": "Какие инструменты доступны.",
+  "expected": "[{\"name\": \"get_available_tools\", \"arguments\": {}}]"
+}

@@ -1,0 +1,5 @@
+{
+  "id": "agent_tc_009",
+  "prompt": "Все ноды валидны без ошибок ?",
+  "expected": "[{\"name\": \"validate_flow\", \"arguments\": {}}]"
+}

@@ -1,0 +1,5 @@
+{
+  "id": "agent_tc_021",
+  "prompt": "Посмотри состояние канвы,  какие узлы сейчас есть.",
+  "expected": "[{\"name\": \"get_editor_state\", \"arguments\": {}}]"
+}

@@ -1,0 +1,5 @@
+{
+  "id": "agent_tc_014",
+  "prompt": "Запусти сборку с именем \"тест 1\"",
+  "expected": "[{\"name\": \"build_tool\", \"arguments\": {\"task_id\": \"тест 1\"}}]"
+}

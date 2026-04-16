@@ -1,0 +1,5 @@
+{
+  "id": "agent_tc_011",
+  "prompt": "какие раны прошли успешно",
+  "expected": "[{\"name\": \"get_runs\", \"arguments\": {}}]"
+}

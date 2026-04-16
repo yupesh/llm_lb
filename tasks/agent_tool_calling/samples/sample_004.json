@@ -1,0 +1,5 @@
+{
+  "id": "agent_tc_004",
+  "prompt": "какие праметры у калькултора",
+  "expected": "[{\"name\": \"get_available_tools\", \"arguments\": {}}, {\"name\": \"get_editor_state\", \"arguments\": {}}, {\"name\": \"get_node_editable_params\", \"arguments\": {\"node_id\": \"tool_node-59de848a\"}}]"
+}
