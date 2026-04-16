@@ -1,0 +1,19 @@
+{
+  "task_id": "datascibench_human",
+  "task_version": "1.0",
+  "primary_metric": "judge_score",
+  "ranking": [
+    {
+      "model_id": "qwen3.5-397b@vllm",
+      "score": 0.5800000000000001,
+      "metrics": {
+        "judge_score": 0.5800000000000001
+      },
+      "tps": 100.68733851626733,
+      "p95_latency_ms": 79185.85056199998,
+      "cost_usd": null,
+      "result_file": "results/qwen3.5-397b@vllm__2026-04-16T07-57-31Z.json"
+    }
+  ],
+  "updated_at": "2026-04-16T07:57:31+00:00"
+}

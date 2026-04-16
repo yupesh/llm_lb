@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-16T06:36:18+00:00",
+  "generated_at": "2026-04-16T07:57:31+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -252,6 +252,19 @@
       "p95_latency_ms": 949075.7646020001,
       "cost_usd": null,
       "result_file": "tasks/datascibench_dl/results/qwen3-30b@vllm__2026-04-16T04-22-18Z.json"
+    },
+    {
+      "task_id": "datascibench_human",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-397b@vllm",
+      "score": 0.5800000000000001,
+      "metrics": {
+        "judge_score": 0.5800000000000001
+      },
+      "tps": 100.68733851626733,
+      "p95_latency_ms": 79185.85056199998,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_human/results/qwen3.5-397b@vllm__2026-04-16T07-57-31Z.json"
     },
     {
       "task_id": "entity_relationship_extraction",
