@@ -4,7 +4,7 @@ import os
 
 from ..models import LLMParams, ModelCard
 from .base import Completion, register
-from .openai_like import openai_chat
+from .openai_like import openai_chat, openai_chat_messages
 
 DEFAULT_BASE_URL = "https://api.openai.com/v1"
 
@@ -41,4 +41,20 @@ class OpenAIAdapter:
     def chat(self, system: str | None, user: str, params: LLMParams) -> Completion:
         return openai_chat(
             self.base_url, self.headers, self.served_name, system, user, params, self.timeout
+        )
+
+    def chat_messages(
+        self,
+        messages: list[dict],
+        params: LLMParams,
+        tools: list[dict] | None = None,
+    ) -> dict:
+        return openai_chat_messages(
+            self.base_url,
+            self.headers,
+            self.served_name,
+            messages,
+            params,
+            tools=tools,
+            timeout=self.timeout,
         )

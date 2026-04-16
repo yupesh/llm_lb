@@ -105,6 +105,14 @@ class TaskSpec(BaseModel):
     # judge to compute the `judge_score` metric instead of (or alongside)
     # accuracy / exact_match.
     judge: Optional[JudgeSpec] = None
+    # Execution mode. `None`/`"single_shot"` → classic per-sample
+    # prompt→response. `"dialog_simulation"` → multi-turn user-agent ↔
+    # support-agent simulation (see eval/dialog_sim). Simulation tasks
+    # require additional files in the task directory (policy.md, db.json,
+    # user_agent_prompt.md) and use adapters that support `chat_messages`.
+    runner_kind: Optional[str] = None
+    # Optional turn cap for dialog_simulation runs. Ignored otherwise.
+    max_turns: Optional[int] = None
 
 
 class Sample(BaseModel):

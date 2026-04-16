@@ -10,6 +10,7 @@ import yaml
 from . import __version__
 from .adapters import get_adapter
 from .eval import judge as judge_mod
+from .eval.dialog_sim import simulate_retail_dialog
 from .eval.extract import extract_label, extract_regex, normalize
 from .eval.metrics import accuracy, macro_f1
 from .models import ModelCard, RunResult, Sample, SamplePrediction, TaskSpec
@@ -66,8 +67,15 @@ def _compute_cost_usd(model: ModelCard, in_tokens: int, out_tokens: int) -> floa
     )
 
 
-def run(task_dir: Path, model_path: Path, out_dir: Path | None = None) -> Path:
+def run(
+    task_dir: Path,
+    model_path: Path,
+    out_dir: Path | None = None,
+    limit: int | None = None,
+) -> Path:
     task, samples = load_task(task_dir)
+    if limit is not None and limit > 0:
+        samples = samples[:limit]
     model = load_model(model_path)
     adapter = get_adapter(model)
     template_hash = _hash_template(task.system_prompt, task.prompt_template)
@@ -89,9 +97,51 @@ def run(task_dir: Path, model_path: Path, out_dir: Path | None = None) -> Path:
     total_output_tokens = 0
     total_gen_time_s = 0.0
 
+    # Preload simulator artifacts once (policy, user-agent prompt, db path).
+    sim_policy: str | None = None
+    sim_user_prompt: str | None = None
+    sim_db_path: Path | None = None
+    if task.runner_kind == "dialog_simulation":
+        sim_policy = (task_dir / "policy.md").read_text()
+        sim_user_prompt = (task_dir / "user_agent_prompt.md").read_text()
+        sim_db_path = task_dir / "db.json"
+
     for s in samples:
-        user = task.prompt_template.format(prompt=s.prompt)
         t0 = time.perf_counter()
+        if task.runner_kind == "dialog_simulation":
+            pred, _trace, in_tok, out_tok = simulate_retail_dialog(
+                adapter,
+                policy_prompt=sim_policy or "",
+                user_agent_prompt=sim_user_prompt or "",
+                db_path=sim_db_path,  # type: ignore[arg-type]
+                sample_prompt_json=s.prompt,
+                params=task.llm_params,
+                max_turns=task.max_turns or 10,
+            )
+            dt_ms = (time.perf_counter() - t0) * 1000.0
+            correct = False  # judge decides; `correct` is unused for judge_score tasks
+            sample_pred = SamplePrediction(
+                id=s.id,
+                prediction=pred,
+                expected=s.expected,
+                correct=correct,
+                latency_ms=dt_ms,
+                input_tokens=in_tok,
+                output_tokens=out_tok,
+            )
+            if task.judge and judge_client is not None:
+                sample_pred.judge_raw_score = judge_mod.score_sample(
+                    judge_client, task.judge, s, pred
+                )
+            preds.append(sample_pred)
+            if out_tok:
+                total_output_tokens += out_tok
+                total_gen_time_s += dt_ms / 1000.0
+            if in_tok:
+                total_input_tokens += in_tok
+            continue
+
+        user = task.prompt_template.format(prompt=s.prompt)
         completion = adapter.chat(task.system_prompt, user, task.llm_params)
         dt_ms = (time.perf_counter() - t0) * 1000.0
 

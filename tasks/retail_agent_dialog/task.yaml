@@ -1,0 +1,73 @@
+name: retail_agent_dialog
+version: "1.0"
+description: |
+  Multi-turn customer-support dialog from tau2-bench / partial-mcp (retail
+  domain). One sample = one customer scenario. The model under test plays
+  both the support agent (with 15 retail tools via OpenAI function-calling)
+  and the user agent (different system prompt, no tools). We reset the
+  in-memory retail database between samples, run the conversation to
+  completion, and let an LLM judge score the resulting trace against
+  tau2's expected `evaluation_criteria`.
+
+  Source: https://github.com/deeppavlov/partial-mcp (which wraps tau2-bench).
+  This task pins a snapshot of the retail domain (policy, DB, tasks) at a
+  specific version; upstream changes do not affect scores on version 1.0.
+metric:
+  primary: judge_score
+  secondary: [tps, p95_latency_ms]
+runner_kind: dialog_simulation
+max_turns: 10
+llm_params:
+  temperature: 0.0
+  max_tokens: 4096
+  seed: 42
+# The system prompt and prompt_template below are not used directly by the
+# dialog_simulation runner (which loads policy.md and user_agent_prompt.md
+# from the task directory), but TaskSpec requires them to be non-empty.
+system_prompt: |
+  [dialog_simulation task — see policy.md in the task directory]
+prompt_template: |
+  {prompt}
+judge:
+  model: judge@openai
+  scale_min: 0
+  scale_max: 5
+  forbid_self_judge: true
+  prompt: |
+    You are evaluating a customer-service agent's performance in a
+    multi-turn conversation against a reference tau2-bench evaluation.
+
+    CUSTOMER SCENARIO:
+    {prompt}
+
+    EXPECTED OUTCOMES (tau2 evaluation_criteria):
+    {expected}
+
+    TRANSCRIPT + AGENT TOOL CALLS (what actually happened):
+    {prediction}
+
+    Score the run on an integer scale 0..5:
+      0 = agent produced no meaningful response or crashed
+      1 = agent severely misunderstood the request; wrong tools / wrong actions
+      2 = partial progress but missed critical steps from expected actions
+      3 = correct intent, most of the expected actions performed; minor
+          argument/ordering issues; may have missed communicate_info items
+      4 = all expected tool calls performed with correct arguments (treating
+          read-only lookups as fungible — an extra get_* call or different
+          lookup order is fine); communicate_info items conveyed; may have
+          extra verbose turns
+      5 = matches or exceeds the reference trace: all expected mutating
+          actions performed with exact argument values, user got a clean
+          resolution, no wasted turns
+
+    Consider:
+    - Did the agent call the expected MUTATING tools (cancel/exchange/return/
+      modify/transfer) with the correct item_ids / order_ids / payment
+      methods? That's the main correctness signal.
+    - Read-only lookups (find_user_id, get_*_details, list_all_product_types)
+      may differ in order or count — that's fine if a valid sequence.
+    - Did the agent ask for explicit confirmation where the policy requires?
+    - Did the agent communicate any values listed in `communicate_info`?
+
+    Reply with a single integer 0..5 and nothing else.
+    Score:
