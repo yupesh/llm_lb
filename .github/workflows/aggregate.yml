@@ -1,0 +1,73 @@
+name: aggregate
+
+# Refresh generated artifacts (data/feed.xml, data/index.json, and each task's
+# leaderboard.json) after a score-PR lands on main. Score-PRs deliberately
+# commit ONLY the raw result file under tasks/<task>/results/*.json — they
+# don't touch generated files, which keeps multiple in-flight score-PRs from
+# conflicting with each other on feed.xml / index.json.
+#
+# Path filter ensures we only run when a new result file shows up (or is
+# manually requested via workflow_dispatch). The workflow's OWN commit
+# touches data/** and **/leaderboard.json — NOT tasks/*/results/** — so it
+# does not re-trigger itself.
+#
+# Requires:
+#   - `contents: write` (declared below)
+#   - branch protection on main must allow `github-actions[bot]` to push
+#     directly (Settings → Branches → main → Allow specified actors to
+#     bypass required pull requests). Without this, the final `git push`
+#     will fail and leaderboards will stay stale until a human runs aggregate.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      # Fire on anything that affects leaderboard/index content:
+      # new result files, new/renamed tasks, sample count changes.
+      - 'tasks/**'
+      # NOT data/** or **/leaderboard.json — those ARE the workflow's output,
+      # matching them would self-trigger.
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: aggregate-main
+  cancel-in-progress: false
+
+jobs:
+  aggregate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          # Need full history so aggregate can walk every result file.
+          fetch-depth: 0
+
+      - uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+
+      - name: Install runner
+        working-directory: runner
+        run: uv sync --frozen
+
+      - name: Run aggregate
+        working-directory: runner
+        run: uv run llm-lb aggregate --root ..
+
+      - name: Commit regenerated artifacts
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Stage only the files aggregate is allowed to produce. Anything
+          # else must not sneak in.
+          git add data/ || true
+          git add 'tasks/*/leaderboard.json' || true
+          if git diff --cached --quiet; then
+            echo "nothing to aggregate — skipping commit"
+            exit 0
+          fi
+          git commit -m "aggregate: refresh leaderboards + index"
+          git push origin HEAD:main
