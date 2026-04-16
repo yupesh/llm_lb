@@ -1,0 +1,10 @@
+{
+  "id": "bird_007",
+  "prompt": "What's the French name of the set of cards with \"Tendo Ice Bridge\" is in?\n\nEvidence: French refers to language = 'French'; \"Tendo Ice Bridge\" is a translated name of a card; translated name refers to translation",
+  "expected": "SELECT T2.translation FROM cards AS T1 INNER JOIN set_translations AS T2 ON T2.setCode = T1.setCode WHERE T1.name = 'Tendo Ice Bridge' AND T2.language = 'French' AND T2.translation IS NOT NULL",
+  "meta": {
+    "db_id": "card_games",
+    "difficulty": "moderate",
+    "source_question_id": 498
+  }
+}

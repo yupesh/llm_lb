@@ -1,0 +1,10 @@
+{
+  "id": "bird_003",
+  "prompt": "Rank schools by their average score in Writing where the score is greater than 499, showing their charter numbers.\n\nEvidence: Valid charter number means the number is not null",
+  "expected": "SELECT CharterNum, AvgScrWrite, RANK() OVER (ORDER BY AvgScrWrite DESC) AS WritingScoreRank FROM schools AS T1  INNER JOIN satscores AS T2 ON T1.CDSCode = T2.cds WHERE T2.AvgScrWrite > 499 AND CharterNum is not null",
+  "meta": {
+    "db_id": "california_schools",
+    "difficulty": "simple",
+    "source_question_id": 17
+  }
+}

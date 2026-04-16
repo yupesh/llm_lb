@@ -1,0 +1,91 @@
+name: text2sql_bird
+version: "1.0"
+description: |
+  Text-to-SQL generation against real-world relational databases.
+  Each sample is a natural-language question over one of 7 databases
+  from the BIRD benchmark (Big Bench for Large-Scale Database
+  Grounding). The model must produce a correct SQL query (SQLite
+  dialect) that answers the question.
+
+  Source: BIRD benchmark dev set ("small" split, 22 questions) via
+  the DeepPavlov AdvText2SQL wrapper. Difficulty distribution:
+  9 simple, 10 moderate, 3 challenging.
+
+  Evaluation: LLM-as-Judge comparing candidate SQL to gold SQL on
+  semantic equivalence (not execution-based). This is a lightweight
+  proxy — true BIRD scoring requires executing queries against the
+  actual databases and comparing result sets.
+
+  Database schemas (CREATE TABLE DDL) are committed as
+  db_schemas.json, extracted from the official BIRD dev SQLite files.
+  Some questions include an "evidence" hint (domain knowledge) which
+  is passed through in the prompt.
+metric:
+  primary: judge_score
+  secondary: [tps, p95_latency_ms]
+llm_params:
+  temperature: 0.0
+  max_tokens: 2048
+  seed: 42
+context_file: db_schemas.json
+context_meta_key: db_id
+system_prompt: |
+  You are a text-to-SQL assistant. Given a database schema (SQLite
+  dialect) and a natural-language question, produce a single SQL query
+  that answers the question.
+
+  Rules:
+  - Use the SQLite dialect.
+  - Output ONLY the SQL query, no explanation, no markdown fences.
+  - Do not fabricate table or column names — use only what appears in
+    the schema.
+  - If an "Evidence" hint is provided, use it to disambiguate column
+    meanings or domain abbreviations.
+prompt_template: |
+  Database schema:
+  {context}
+
+  Question:
+  {prompt}
+
+  Write the SQL query that answers the question. Output only the SQL.
+judge:
+  model: judge@openai
+  scale_min: 0
+  scale_max: 5
+  forbid_self_judge: true
+  prompt: |
+    You are evaluating a text-to-SQL model. Compare the candidate SQL
+    query to the gold (reference) SQL query for semantic equivalence.
+
+    DATABASE QUESTION:
+    {prompt}
+
+    GOLD SQL:
+    {expected}
+
+    CANDIDATE SQL:
+    {prediction}
+
+    Score the candidate on an integer scale 0..5:
+      0 = candidate is not valid SQL or is completely unrelated
+      1 = targets correct table(s) but wrong columns, wrong JOINs, or
+          wrong WHERE logic — would return a very different result set
+      2 = partially correct: right tables and some correct conditions
+          but missing or extra filters that materially change the answer
+      3 = mostly correct: would return a superset/subset of the gold
+          result, or has minor column/alias differences that change the
+          answer slightly
+      4 = semantically equivalent: same result set, may differ in
+          aliases, column order, formatting, or use of
+          subquery vs JOIN — but the rows and values match
+      5 = essentially identical: same logic, same columns, only
+          cosmetic differences (whitespace, quoting, alias names)
+
+    Judge semantic equivalence of the result set, not syntactic
+    similarity. Different approaches (subquery vs JOIN, EXISTS vs IN)
+    that produce the same rows should score 4 or 5. Conversely,
+    similar-looking SQL that misses a WHERE clause should score lower.
+
+    Reply with a single integer 0..5 and nothing else.
+    Score:
