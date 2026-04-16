@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-16T08:23:26+00:00",
+  "generated_at": "2026-04-16T08:36:58+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -75,6 +75,16 @@
         "p95_latency_ms"
       ],
       "n_samples": 10
+    },
+    {
+      "id": "retail_agent_dialog",
+      "version": "1.0",
+      "primary_metric": "judge_score",
+      "secondary_metrics": [
+        "tps",
+        "p95_latency_ms"
+      ],
+      "n_samples": 33
     },
     {
       "id": "summarization",
@@ -318,6 +328,19 @@
       "p95_latency_ms": 5689.405180000002,
       "cost_usd": null,
       "result_file": "tasks/intent_classification/results/qwen3-30b@vllm__2026-04-09T17-29-51Z.json"
+    },
+    {
+      "task_id": "retail_agent_dialog",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.4,
+      "metrics": {
+        "judge_score": 0.4
+      },
+      "tps": 44.863204690182144,
+      "p95_latency_ms": 46786.67104803026,
+      "cost_usd": null,
+      "result_file": "tasks/retail_agent_dialog/results/qwen3-30b@vllm__2026-04-16T08-21-59Z.json"
     },
     {
       "task_id": "summarization",
