@@ -1,0 +1,11 @@
+   model_id: qwen3.5-397b@vllm
+   display_name: Qwen3.5-397B (vLLM)
+   provider: openai_compat
+   endpoint_kind: openai_chat
+   hf_uri: Qwen/Qwen3.5-397B-A17B-FP8
+   revision: "2026-04-16"
+   endpoint_url: http://lnsigo.mipt.ru:4000/v1
+   api_key_env: VLLM_PROXY_KEY     # <-- name of env var, not the key
+   hardware:
+     gpu_count: 4
+     gpu_type: H200

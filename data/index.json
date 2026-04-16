@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-16T05:16:37+00:00",
+  "generated_at": "2026-04-16T05:28:48+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -172,6 +172,17 @@
       "hardware": {
         "gpu_count": 1,
         "gpu_type": "A100",
+        "quantization": null
+      }
+    },
+    {
+      "id": "qwen3.5-397b@vllm",
+      "display_name": "Qwen3.5-397B (vLLM)",
+      "provider": "openai_compat",
+      "hf_uri": "Qwen/Qwen3.5-397B-A17B-FP8",
+      "hardware": {
+        "gpu_count": 4,
+        "gpu_type": "H200",
         "quantization": null
       }
     }
