@@ -1,0 +1,5 @@
+{
+  "id": "agent_tc_015",
+  "prompt": "запусти ран от последней успешной сборки.",
+  "expected": "[{\"name\": \"get_builds\", \"arguments\": {}}, {\"name\": \"start_run_tool\", \"arguments\": {}}]"
+}

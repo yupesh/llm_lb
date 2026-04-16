@@ -1,0 +1,5 @@
+{
+  "id": "agent_tc_006",
+  "prompt": "Удали ассистента с канвы",
+  "expected": "[{\"name\": \"remove_nodes_from_canvas\", \"arguments\": {\"node_ids\": [\"assistant-2e65021c\"]}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]"
+}

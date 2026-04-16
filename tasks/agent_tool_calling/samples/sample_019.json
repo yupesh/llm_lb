@@ -1,0 +1,5 @@
+{
+  "id": "agent_tc_019",
+  "prompt": "Удали калькулятор.",
+  "expected": "[{\"name\": \"get_editor_state\", \"arguments\": {}}, {\"name\": \"remove_nodes_from_canvas\", \"arguments\": {}}]"
+}

@@ -1,0 +1,5 @@
+{
+  "id": "agent_tc_005",
+  "prompt": "Увеличь температуру суммаризатора до 1",
+  "expected": "[{\"name\": \"get_node_editable_params\", \"arguments\": {\"node_id\": \"summarizator\"}}, {\"name\": \"set_node_param\", \"arguments\": {\"node_id\": \"summarizator\", \"param_key\": \"llm_temperature\", \"param_value\": \"1\"}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]"
+}

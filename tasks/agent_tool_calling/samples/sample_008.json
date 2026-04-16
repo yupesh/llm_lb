@@ -1,0 +1,5 @@
+{
+  "id": "agent_tc_008",
+  "prompt": "Какие ноды сейчас на канве",
+  "expected": "[{\"name\": \"get_editor_state\", \"arguments\": {}}]"
+}

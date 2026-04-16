@@ -1,0 +1,5 @@
+{
+  "id": "agent_tc_013",
+  "prompt": "Добавь на канву  суммаризатор",
+  "expected": "[{\"name\": \"get_available_tools\", \"arguments\": {}}, {\"name\": \"get_editor_state\", \"arguments\": {}}, {\"name\": \"add_tool_to_canvas\", \"arguments\": {\"tool_name\": \"summary_tool\"}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]"
+}

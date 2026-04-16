@@ -1,0 +1,5 @@
+{
+  "id": "agent_tc_022",
+  "prompt": "Какие параметры есть у калькулятора.",
+  "expected": "[{\"name\": \"get_editor_state\", \"arguments\": {}}, {\"name\": \"get_node_editable_params\", \"arguments\": {\"node_id\": \"calculator_tool\"}}]"
+}

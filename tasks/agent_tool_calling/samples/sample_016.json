@@ -1,0 +1,5 @@
+{
+  "id": "agent_tc_016",
+  "prompt": "Запусти  сборку ,  и от нее запусти ран,   добавь для каждой комментарий и дай подходящее имя.",
+  "expected": "[{\"name\": \"build_tool\", \"arguments\": {}}, {\"name\": \"rename_process\", \"arguments\": {\"process_type\": \"build\"}}, {\"name\": \"add_process_comment\", \"arguments\": {\"process_type\": \"build\"}}, {\"name\": \"start_run_tool\", \"arguments\": {}}, {\"name\": \"rename_process\", \"arguments\": {\"process_type\": \"run\"}}, {\"name\": \"add_process_comment\", \"arguments\": {\"process_type\": \"run\"}}]"
+}

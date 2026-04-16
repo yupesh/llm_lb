@@ -1,0 +1,5 @@
+{
+  "id": "agent_tc_018",
+  "prompt": "Какие раны сейчас запущены успешно.",
+  "expected": "[{\"name\": \"get_runs\", \"arguments\": {}}]"
+}

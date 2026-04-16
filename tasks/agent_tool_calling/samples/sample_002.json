@@ -1,0 +1,5 @@
+{
+  "id": "agent_tc_002",
+  "prompt": "Собери мини проект",
+  "expected": "[{\"name\": \"build_tool\", \"arguments\": {}}, {\"name\": \"get_builds\", \"arguments\": {}}, {\"name\": \"get_editor_state\", \"arguments\": {}}, {\"name\": \"get_available_tools\", \"arguments\": {}}, {\"name\": \"add_assistant_to_canvas\", \"arguments\": {\"assistant_name\": \"assistant\"}}, {\"name\": \"add_tool_to_canvas\", \"arguments\": {\"tool_name\": \"calculator_tool\"}}, {\"name\": \"add_tool_to_canvas\", \"arguments\": {\"tool_name\": \"summary_tool\"}}]"
+}

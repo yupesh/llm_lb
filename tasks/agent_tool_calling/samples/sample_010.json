@@ -1,0 +1,5 @@
+{
+  "id": "agent_tc_010",
+  "prompt": "какие сборки выполнены успешно",
+  "expected": "[{\"name\": \"get_builds\", \"arguments\": {}}]"
+}

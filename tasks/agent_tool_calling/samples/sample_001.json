@@ -1,0 +1,5 @@
+{
+  "id": "agent_tc_001",
+  "prompt": "Добавь  калькулятор и  поиск по документам",
+  "expected": "[{\"name\": \"get_available_tools\", \"arguments\": {}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]"
+}
