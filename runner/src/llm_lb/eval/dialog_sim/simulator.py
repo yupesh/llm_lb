@@ -106,10 +106,18 @@ def simulate_retail_dialog(
     scenario = json.loads(sample_prompt_json)
 
     # ---- user-agent history --------------------------------------------------
+    # The user-agent is given the scenario in its system prompt, then receives
+    # a synthetic "agent greeting" as the first user-role message — this both
+    # gives it something to react to and satisfies OpenAI-compatible proxies
+    # (e.g. litellm) that reject message lists with no user-role messages.
     user_sys = user_agent_prompt + USER_AGENT_END_INSTRUCTION + "\n\n" + json.dumps(
         scenario, ensure_ascii=False, indent=2
     )
-    user_messages: list[dict] = [{"role": "system", "content": user_sys}]
+    agent_greeting = "Hi! How can I help you today?"
+    user_messages: list[dict] = [
+        {"role": "system", "content": user_sys},
+        {"role": "user", "content": agent_greeting},
+    ]
 
     # ---- support-agent history ----------------------------------------------
     support_messages: list[dict] = [{"role": "system", "content": policy_prompt}]
