@@ -1,0 +1,181 @@
+{
+  "model_id": "qwen3.5-397b@vllm",
+  "model_revision": "2026-04-16",
+  "task_id": "temporal_information_extraction",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "a0dd019d44abb76f",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 16384,
+    "seed": 42
+  },
+  "metrics": {
+    "judge_score": 0.6799999999999999
+  },
+  "tps": 95.59445524735108,
+  "p95_latency_ms": 67018.43252599998,
+  "n_samples": 15,
+  "samples": [
+    {
+      "id": "sample_001",
+      "prediction": "```json\n{\n    \"dates\": [\n        {\n            \"date_str\": \"2023-05-08\",\n            \"timestamp\": 1683554160.0,\n            \"context\": \"Timestamp of the chat messages between Caroline and Melanie\"\n        },\n        {\n            \"date_str\": \"2023-05-07\",\n            \"timestamp\": 1683417600.0,\n            \"context\": \"The day Caroline attended the LGBTQ support group (referred to as 'yesterday')\"\n        }\n    ],\n    \"intervals\": [\n        {\n            \"start_date\": \"2022-01-01\",\n            \"end_date\": \"2022-12-31\",\n            \"start_ts\": 1640995200.0,\n            \"end_ts\": 1672531199.0,\n            \"context\": \"The year Melanie painted the lake sunrise (referred to as 'last year')\"\n        }\n    ],\n    \"start_ts\": 1640995200.0,\n    \"end_ts\": 1683554160.0\n}\n```",
+      "expected": "{\n  \"dates\": [\n    {\n      \"date_str\": \"2023-05-08\",\n      \"timestamp\": 1683554160.0,\n      \"context\": \"Conversation timestamp: 1:56 pm on 8 May, 2023\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"relative reference: yesterday\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"relative reference: last year\"\n    }\n  ],\n  \"intervals\": [],\n  \"start_ts\": 1683554160.0,\n  \"end_ts\": 1683554160.0\n}",
+      "correct": false,
+      "latency_ms": 73644.28742100002,
+      "input_tokens": 1129,
+      "output_tokens": 6825,
+      "judge_raw_score": 3.0
+    },
+    {
+      "id": "sample_002",
+      "prediction": "```json\n{\n    \"dates\": [\n        {\n            \"date_str\": \"2023-05-25\",\n            \"timestamp\": 1685020440.0,\n            \"context\": \"Date and time of the chat conversation between Melanie and Caroline (1:14 pm)\"\n        },\n        {\n            \"date_str\": \"2023-05-20\",\n            \"timestamp\": 1684540800.0,\n            \"context\": \"Last Saturday - when Melanie ran the charity race for mental health\"\n        }\n    ],\n    \"intervals\": [\n        {\n            \"start_date\": \"2023-06-01\",\n            \"end_date\": \"2023-06-30\",\n            \"start_ts\": 1685577600.0,\n            \"end_ts\": 1688169599.0,\n            \"context\": \"Next month - when Melanie's family is thinking about going camping\"\n        },\n        {\n            \"start_date\": \"2023-06-21\",\n            \"end_date\": \"2023-09-22\",\n            \"start_ts\": 1687305600.0,\n            \"end_ts\": 1695427199.0,\n            \"context\": \"Summer break/summer 2023 - mentioned regarding kids' break and Caroline's summer plans\"\n        }\n    ],\n    \"start_ts\": 1684540800.0,\n    \"end_ts\": 1695427199.0\n}\n```",
+      "expected": "{\n  \"dates\": [\n    {\n      \"date_str\": \"2023-05-25\",\n      \"timestamp\": 1685020440.0,\n      \"context\": \"Conversation timestamp: 1:14 pm on 25 May, 2023\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"relative reference: last Saturday\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"relative reference: next month\"\n    }\n  ],\n  \"intervals\": [],\n  \"start_ts\": 1685020440.0,\n  \"end_ts\": 1685020440.0\n}",
+      "correct": false,
+      "latency_ms": 17871.473401000003,
+      "input_tokens": 1332,
+      "output_tokens": 1640,
+      "judge_raw_score": 3.0
+    },
+    {
+      "id": "sample_003",
+      "prediction": "```json\n{\n    \"dates\": [\n        {\n            \"date_str\": \"2023-06-09\",\n            \"timestamp\": 1686340500.0,\n            \"context\": \"Date and time of the conversation between Caroline and Melanie (7:55 pm)\"\n        },\n        {\n            \"date_str\": \"2023-06-02\",\n            \"timestamp\": 1685664000.0,\n            \"context\": \"Approximate start of 'last week' when Caroline's school event occurred\"\n        },\n        {\n            \"date_str\": \"2020-06-09\",\n            \"timestamp\": 1591660800.0,\n            \"context\": \"Approximate date when Caroline started transitioning (three years ago from conversation date)\"\n        },\n        {\n            \"date_str\": \"2019-06-09\",\n            \"timestamp\": 1560038400.0,\n            \"context\": \"Approximate date when Caroline moved from home country and met friends (4 years ago)\"\n        },\n        {\n            \"date_str\": \"2018-06-09\",\n            \"timestamp\": 1528502400.0,\n            \"context\": \"Approximate date of Melanie's wedding (5 years ago from conversation date)\"\n        }\n    ],\n    \"intervals\": [\n        {\n            \"start_date\": \"2023-06-02\",\n            \"end_date\": \"2023-06-08\",\n            \"start_ts\": 1685664000.0,\n            \"end_ts\": 1686268799.0,\n            \"context\": \"Last week - when Caroline's school event took place\"\n        },\n        {\n            \"start_date\": \"2020-06-09\",\n            \"end_date\": \"2023-06-09\",\n            \"start_ts\": 1591660800.0,\n            \"end_ts\": 1686340500.0,\n            \"context\": \"Caroline's transition journey duration (three years)\"\n        },\n        {\n            \"start_date\": \"2019-06-09\",\n            \"end_date\": \"2023-06-09\",\n            \"start_ts\": 1560038400.0,\n            \"end_ts\": 1686340500.0,\n            \"context\": \"Duration of Caroline's friendship (4 years since moving from home country)\"\n        },\n        {\n            \"start_date\": \"2018-06-09\",\n            \"end_date\": \"2023-06-09\",\n            \"start_ts\": 1528502400.0,\n            \"end_ts\": 1686340500.0,\n            \"context\": \"Duration of Melanie's marriage (5 years)\"\n        }\n    ],\n    \"start_ts\": 1528502400.0,\n    \"end_ts\": 1686340500.0\n}\n```",
+      "expected": "{\n  \"dates\": [\n    {\n      \"date_str\": \"2023-06-09\",\n      \"timestamp\": 1686340500.0,\n      \"context\": \"Conversation timestamp: 7:55 pm on 9 June, 2023\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"relative reference: yesterday\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"relative reference: last week\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"relative reference: three years ago\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"Duration mentioned: three years\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"Duration mentioned: 4 years\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"Duration mentioned: 5 years\"\n    }\n  ],\n  \"intervals\": [],\n  \"start_ts\": 1686340500.0,\n  \"end_ts\": 1686340500.0\n}",
+      "correct": false,
+      "latency_ms": 31244.31278,
+      "input_tokens": 1823,
+      "output_tokens": 2808,
+      "judge_raw_score": 4.0
+    },
+    {
+      "id": "sample_004",
+      "prediction": "```json\n{\n    \"dates\": [\n        {\n            \"date_str\": \"2023-06-27\",\n            \"timestamp\": 1687862220.0,\n            \"context\": \"Date and time of the chat conversation between Caroline and Melanie (10:37 am)\"\n        },\n        {\n            \"date_str\": \"2013-06-27\",\n            \"timestamp\": 1372291200.0,\n            \"context\": \"Approximate date when Caroline's friend made the hand-painted bowl for her 18th birthday (ten years ago from conversation date)\"\n        },\n        {\n            \"date_str\": \"2023-06-23\",\n            \"timestamp\": 1687478400.0,\n            \"context\": \"Last Friday when Caroline attended an LGBTQ+ counseling workshop\"\n        }\n    ],\n    \"intervals\": [\n        {\n            \"start_date\": \"2023-06-20\",\n            \"end_date\": \"2023-06-26\",\n            \"start_ts\": 1687219200.0,\n            \"end_ts\": 1687823999.0,\n            \"context\": \"Last week when Melanie took her family camping in the mountains\"\n        }\n    ],\n    \"start_ts\": 1372291200.0,\n    \"end_ts\": 1687862220.0\n}\n```",
+      "expected": "{\n  \"dates\": [\n    {\n      \"date_str\": \"2023-06-27\",\n      \"timestamp\": 1687862220.0,\n      \"context\": \"Conversation timestamp: 10:37 am on 27 June, 2023\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"relative reference: last week\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"relative reference: Last Friday\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"relative reference: ten years ago\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"Duration mentioned: ten years\"\n    }\n  ],\n  \"intervals\": [],\n  \"start_ts\": 1687862220.0,\n  \"end_ts\": 1687862220.0\n}",
+      "correct": false,
+      "latency_ms": 11620.049249999995,
+      "input_tokens": 1455,
+      "output_tokens": 1094,
+      "judge_raw_score": 3.0
+    },
+    {
+      "id": "sample_005",
+      "prediction": "```json\n{\n    \"dates\": [\n        {\n            \"date_str\": \"2023-07-03\",\n            \"timestamp\": 1688392560.0,\n            \"context\": \"Timestamp of the chat conversation between Caroline and Melanie\"\n        },\n        {\n            \"date_str\": \"2023-07-02\",\n            \"timestamp\": 1688256000.0,\n            \"context\": \"Yesterday - when Melanie signed up for pottery class\"\n        }\n    ],\n    \"intervals\": [\n        {\n            \"start_date\": \"2023-06-26\",\n            \"end_date\": \"2023-07-02\",\n            \"start_ts\": 1687737600.0,\n            \"end_ts\": 1688342399.0,\n            \"context\": \"Last week - when Caroline attended the LGBTQ+ pride parade\"\n        },\n        {\n            \"start_date\": \"2023-07-01\",\n            \"end_date\": \"2023-07-31\",\n            \"start_ts\": 1688169600.0,\n            \"end_ts\": 1690847999.0,\n            \"context\": \"This month - when Caroline plans to attend the transgender conference\"\n        }\n    ],\n    \"start_ts\": 1687737600.0,\n    \"end_ts\": 1690847999.0\n}\n```",
+      "expected": "{\n  \"dates\": [\n    {\n      \"date_str\": \"2023-07-03\",\n      \"timestamp\": 1688391360.0,\n      \"context\": \"Conversation timestamp: 1:36 pm on 3 July, 2023\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"relative reference: yesterday\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"relative reference: Last week\"\n    }\n  ],\n  \"intervals\": [],\n  \"start_ts\": 1688391360.0,\n  \"end_ts\": 1688391360.0\n}",
+      "correct": false,
+      "latency_ms": 10916.411240000001,
+      "input_tokens": 1205,
+      "output_tokens": 999,
+      "judge_raw_score": 3.0
+    },
+    {
+      "id": "sample_006",
+      "prediction": "```json\n{\n    \"dates\": [\n        {\n            \"date_str\": \"2023-01-20\",\n            \"timestamp\": 1674230640.0,\n            \"context\": \"Chat conversation timestamp (4:04 pm)\"\n        },\n        {\n            \"date_str\": \"2023-01-19\",\n            \"timestamp\": 1674086400.0,\n            \"context\": \"Jon lost his job as a banker (yesterday relative to chat)\"\n        },\n        {\n            \"date_str\": \"2023-01-27\",\n            \"timestamp\": 1674777600.0,\n            \"context\": \"Next Friday - planned dance session between Jon and Gina\"\n        }\n    ],\n    \"intervals\": [\n        {\n            \"start_date\": \"2023-01-01\",\n            \"end_date\": \"2023-01-31\",\n            \"start_ts\": 1672531200.0,\n            \"end_ts\": 1675209599.0,\n            \"context\": \"This month - Gina lost her job at Door Dash\"\n        },\n        {\n            \"start_date\": \"2022-01-01\",\n            \"end_date\": \"2022-12-31\",\n            \"start_ts\": 1640995200.0,\n            \"end_ts\": 1672531199.0,\n            \"context\": \"Last year - Jon's dance crew won first place in local competition\"\n        },\n        {\n            \"start_date\": \"2023-02-01\",\n            \"end_date\": \"2023-02-28\",\n            \"start_ts\": 1675209600.0,\n            \"end_ts\": 1677628799.0,\n            \"context\": \"Next month - Dance festival performance planned\"\n        }\n    ],\n    \"start_ts\": 1640995200.0,\n    \"end_ts\": 1677628799.0\n}\n```",
+      "expected": "{\n  \"dates\": [\n    {\n      \"date_str\": \"2023-01-20\",\n      \"timestamp\": 1674230640.0,\n      \"context\": \"Conversation timestamp: 4:04 pm on 20 January, 2023\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"relative reference: yesterday\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"relative reference: last year\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"relative reference: Next Friday\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"relative reference: next month\"\n    }\n  ],\n  \"intervals\": [],\n  \"start_ts\": 1674230640.0,\n  \"end_ts\": 1674230640.0\n}",
+      "correct": false,
+      "latency_ms": 31285.55351600002,
+      "input_tokens": 1659,
+      "output_tokens": 2930,
+      "judge_raw_score": 3.0
+    },
+    {
+      "id": "sample_007",
+      "prediction": "```json\n{\n    \"dates\": [\n        {\n            \"date_str\": \"2023-01-29\",\n            \"timestamp\": 1675002720.0,\n            \"context\": \"Timestamp of the chat messages between Gina and Jon (2:32 pm)\"\n        },\n        {\n            \"date_str\": \"2023-01-28\",\n            \"timestamp\": 1674864000.0,\n            \"context\": \"Date of Jon's trip to Paris (referred to as 'yesterday' relative to chat date)\"\n        }\n    ],\n    \"intervals\": [],\n    \"start_ts\": 1674864000.0,\n    \"end_ts\": 1675002720.0\n}\n```",
+      "expected": "{\n  \"dates\": [\n    {\n      \"date_str\": \"2023-01-29\",\n      \"timestamp\": 1675002720.0,\n      \"context\": \"Conversation timestamp: 2:32 pm on 29 January, 2023\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"relative reference: yesterday\"\n    }\n  ],\n  \"intervals\": [],\n  \"start_ts\": 1675002720.0,\n  \"end_ts\": 1675002720.0\n}",
+      "correct": false,
+      "latency_ms": 50593.74850500001,
+      "input_tokens": 1296,
+      "output_tokens": 4733,
+      "judge_raw_score": 3.0
+    },
+    {
+      "id": "sample_008",
+      "prediction": "{\n    \"dates\": [\n        {\n            \"date_str\": \"2023-02-01\",\n            \"timestamp\": 1675212480.0,\n            \"context\": \"Timestamp of the chat messages between Jon and Gina\"\n        }\n    ],\n    \"intervals\": [],\n    \"start_ts\": 1675212480.0,\n    \"end_ts\": 1675212480.0\n}",
+      "expected": "{\n  \"dates\": [\n    {\n      \"date_str\": \"2023-02-01\",\n      \"timestamp\": 1675212480.0,\n      \"context\": \"Conversation timestamp: 12:48 am on 1 February, 2023\"\n    }\n  ],\n  \"intervals\": [],\n  \"start_ts\": 1675212480.0,\n  \"end_ts\": 1675212480.0\n}",
+      "correct": false,
+      "latency_ms": 43680.429569000014,
+      "input_tokens": 1173,
+      "output_tokens": 4086,
+      "judge_raw_score": 4.0
+    },
+    {
+      "id": "sample_009",
+      "prediction": "```json\n{\n    \"dates\": [\n        {\n            \"date_str\": \"2023-02-04\",\n            \"timestamp\": 1675507380.0,\n            \"context\": \"Date and time of the chat conversation between Jon and Gina (10:43 am on 4 February, 2023)\"\n        }\n    ],\n    \"intervals\": [\n        {\n            \"start_date\": \"2023-03-01\",\n            \"end_date\": \"2023-03-31\",\n            \"start_ts\": 1677628800.0,\n            \"end_ts\": 1680307199.0,\n            \"context\": \"Next month - when Jon's dance competition is scheduled (relative to February 2023)\"\n        }\n    ],\n    \"start_ts\": 1675507380.0,\n    \"end_ts\": 1680307199.0\n}\n```",
+      "expected": "{\n  \"dates\": [\n    {\n      \"date_str\": \"2023-02-04\",\n      \"timestamp\": 1675507380.0,\n      \"context\": \"Conversation timestamp: 10:43 am on 4 February, 2023\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"relative reference: next month\"\n    }\n  ],\n  \"intervals\": [],\n  \"start_ts\": 1675507380.0,\n  \"end_ts\": 1675507380.0\n}",
+      "correct": false,
+      "latency_ms": 15418.942074000028,
+      "input_tokens": 1290,
+      "output_tokens": 1406,
+      "judge_raw_score": 4.0
+    },
+    {
+      "id": "sample_010",
+      "prediction": "```json\n{\n    \"dates\": [\n        {\n            \"date_str\": \"2023-02-08\",\n            \"timestamp\": 1675848720.0,\n            \"context\": \"Date and time of the chat conversation between Gina and Jon\"\n        }\n    ],\n    \"intervals\": [],\n    \"start_ts\": 1675848720.0,\n    \"end_ts\": 1675848720.0\n}\n```",
+      "expected": "{\n  \"dates\": [\n    {\n      \"date_str\": \"2023-02-08\",\n      \"timestamp\": 1675848720.0,\n      \"context\": \"Conversation timestamp: 9:32 am on 8 February, 2023\"\n    }\n  ],\n  \"intervals\": [],\n  \"start_ts\": 1675848720.0,\n  \"end_ts\": 1675848720.0\n}",
+      "correct": false,
+      "latency_ms": 52077.962668,
+      "input_tokens": 1761,
+      "output_tokens": 4926,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "sample_011",
+      "prediction": "{\n    \"dates\": [\n        {\n            \"date_str\": \"2022-12-17\",\n            \"timestamp\": 1671274860.0,\n            \"context\": \"Timestamp of the chat conversation between Maria and John\"\n        },\n        {\n            \"date_str\": \"2022-12-16\",\n            \"timestamp\": 1671148800.0,\n            \"context\": \"John's family road trip (referred to as 'yesterday')\"\n        }\n    ],\n    \"intervals\": [\n        {\n            \"start_date\": \"2021-01-01\",\n            \"end_date\": \"2021-12-31\",\n            \"start_ts\": 1609459200.0,\n            \"end_ts\": 1640995199.0,\n            \"context\": \"School picture and funding (referred to as 'last year')\"\n        }\n    ],\n    \"start_ts\": 1609459200.0,\n    \"end_ts\": 1671274860.0\n}",
+      "expected": "{\n  \"dates\": [\n    {\n      \"date_str\": \"2022-12-17\",\n      \"timestamp\": 1671274860.0,\n      \"context\": \"Conversation timestamp: 11:01 am on 17 December, 2022\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"relative reference: yesterday\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"relative reference: last year\"\n    }\n  ],\n  \"intervals\": [],\n  \"start_ts\": 1671274860.0,\n  \"end_ts\": 1671274860.0\n}",
+      "correct": false,
+      "latency_ms": 67018.43252599998,
+      "input_tokens": 1135,
+      "output_tokens": 6673,
+      "judge_raw_score": 3.0
+    },
+    {
+      "id": "sample_012",
+      "prediction": "```json\n{\n    \"dates\": [\n        {\n            \"date_str\": \"2022-12-22\",\n            \"timestamp\": 1671732600.0,\n            \"context\": \"Timestamp of the chat messages (6:10 pm)\"\n        },\n        {\n            \"date_str\": \"2022-12-21\",\n            \"timestamp\": 1671580800.0,\n            \"context\": \"Date of car donation to homeless shelter (referred to as 'yesterday')\"\n        }\n    ],\n    \"intervals\": [],\n    \"start_ts\": 1671580800.0,\n    \"end_ts\": 1671732600.0\n}\n```",
+      "expected": "{\n  \"dates\": [\n    {\n      \"date_str\": \"2022-12-22\",\n      \"timestamp\": 1671732600.0,\n      \"context\": \"Conversation timestamp: 6:10 pm on 22 December, 2022\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"relative reference: yesterday\"\n    }\n  ],\n  \"intervals\": [],\n  \"start_ts\": 1671732600.0,\n  \"end_ts\": 1671732600.0\n}",
+      "correct": false,
+      "latency_ms": 50012.97191000004,
+      "input_tokens": 1848,
+      "output_tokens": 5048,
+      "judge_raw_score": 3.0
+    },
+    {
+      "id": "sample_013",
+      "prediction": "```json\n{\n    \"dates\": [\n        {\n            \"date_str\": \"2023-01-01\",\n            \"timestamp\": 1672605000.0,\n            \"context\": \"Timestamp of the conversation between John and Maria (8:30 pm on 1 January, 2023)\"\n        }\n    ],\n    \"intervals\": [\n        {\n            \"start_date\": \"2022-12-25\",\n            \"end_date\": \"2022-12-31\",\n            \"start_ts\": 1671926400.0,\n            \"end_ts\": 1672531199.0,\n            \"context\": \"John joined the service-focused online group 'last week' relative to January 1, 2023\"\n        },\n        {\n            \"start_date\": \"2022-12-01\",\n            \"end_date\": \"2022-12-31\",\n            \"start_ts\": 1669852800.0,\n            \"end_ts\": 1672531199.0,\n            \"context\": \"Maria took a photo at the beach 'last month' relative to January 1, 2023\"\n        }\n    ],\n    \"start_ts\": 1669852800.0,\n    \"end_ts\": 1672605000.0\n}\n```",
+      "expected": "{\n  \"dates\": [\n    {\n      \"date_str\": \"2023-01-01\",\n      \"timestamp\": 1672605000.0,\n      \"context\": \"Conversation timestamp: 8:30 pm on 1 January, 2023\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"relative reference: last week\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"relative reference: last month\"\n    }\n  ],\n  \"intervals\": [],\n  \"start_ts\": 1672605000.0,\n  \"end_ts\": 1672605000.0\n}",
+      "correct": false,
+      "latency_ms": 14416.637433999995,
+      "input_tokens": 1300,
+      "output_tokens": 1360,
+      "judge_raw_score": 4.0
+    },
+    {
+      "id": "sample_014",
+      "prediction": "```json\n{\n    \"dates\": [\n        {\n            \"date_str\": \"2023-01-09\",\n            \"timestamp\": 1673291160.0,\n            \"context\": \"Date and time of the conversation between Maria and John (7:06 pm on 9 January, 2023)\"\n        }\n    ],\n    \"intervals\": [\n        {\n            \"start_date\": \"2023-01-02\",\n            \"end_date\": \"2023-01-08\",\n            \"start_ts\": 1672617600.0,\n            \"end_ts\": 1673222399.0,\n            \"context\": \"Last week - when John had an unexpected incident on his way home\"\n        },\n        {\n            \"start_date\": \"2023-01-16\",\n            \"end_date\": \"2023-01-22\",\n            \"start_ts\": 1673827200.0,\n            \"end_ts\": 1674431999.0,\n            \"context\": \"Next week - when John has a community meeting scheduled to discuss education and infrastructure\"\n        }\n    ],\n    \"start_ts\": 1672617600.0,\n    \"end_ts\": 1674431999.0\n}\n```",
+      "expected": "{\n  \"dates\": [\n    {\n      \"date_str\": \"2023-01-09\",\n      \"timestamp\": 1673291160.0,\n      \"context\": \"Conversation timestamp: 7:06 pm on 9 January, 2023\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"relative reference: last week\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"relative reference: Next week\"\n    }\n  ],\n  \"intervals\": [],\n  \"start_ts\": 1673291160.0,\n  \"end_ts\": 1673291160.0\n}",
+      "correct": false,
+      "latency_ms": 20034.26656399995,
+      "input_tokens": 1570,
+      "output_tokens": 2001,
+      "judge_raw_score": 3.0
+    },
+    {
+      "id": "sample_015",
+      "prediction": "```json\n{\n    \"dates\": [\n        {\n            \"date_str\": \"2023-01-28\",\n            \"timestamp\": 1674911820.0,\n            \"context\": \"Timestamp of the chat messages between John and Maria (1:17 pm)\"\n        }\n    ],\n    \"intervals\": [\n        {\n            \"start_date\": \"2023-01-16\",\n            \"end_date\": \"2023-01-22\",\n            \"start_ts\": 1673827200.0,\n            \"end_ts\": 1674431999.0,\n            \"context\": \"Time period referred to as 'Last week' when Maria volunteered at a shelter\"\n        }\n    ],\n    \"start_ts\": 1673827200.0,\n    \"end_ts\": 1674911820.0\n}\n```",
+      "expected": "{\n  \"dates\": [\n    {\n      \"date_str\": \"2023-01-28\",\n      \"timestamp\": 1674911820.0,\n      \"context\": \"Conversation timestamp: 1:17 pm on 28 January, 2023\"\n    },\n    {\n      \"date_str\": null,\n      \"timestamp\": null,\n      \"context\": \"relative reference: Last week\"\n    }\n  ],\n  \"intervals\": [],\n  \"start_ts\": 1674911820.0,\n  \"end_ts\": 1674911820.0\n}",
+      "correct": false,
+      "latency_ms": 51252.38932600007,
+      "input_tokens": 1359,
+      "output_tokens": 5196,
+      "judge_raw_score": 3.0
+    }
+  ],
+  "created_at": "2026-04-16T17:03:33+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": "gpt-4o-mini@openai",
+  "judge_model_revision": "2024-07-18",
+  "judge_prompt_hash": "8ab5c0c91e10cb2b"
+}
