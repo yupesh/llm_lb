@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-16T13:47:45+00:00",
+  "generated_at": "2026-04-16T16:15:51+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -102,6 +102,16 @@
       "primary_metric": "judge_score",
       "secondary_metrics": [],
       "n_samples": 15
+    },
+    {
+      "id": "text2sql_ambiguity",
+      "version": "1.0",
+      "primary_metric": "judge_score",
+      "secondary_metrics": [
+        "tps",
+        "p95_latency_ms"
+      ],
+      "n_samples": 24
     },
     {
       "id": "text_classification",
@@ -236,6 +246,19 @@
       "p95_latency_ms": 22490.438220000015,
       "cost_usd": null,
       "result_file": "tasks/conversational_memory_qa/results/qwen3.5-397b@vllm__2026-04-16T08-23-26Z.json"
+    },
+    {
+      "task_id": "conversational_memory_qa",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.8,
+      "metrics": {
+        "judge_score": 0.8
+      },
+      "tps": 23.149876783770317,
+      "p95_latency_ms": 157698.74078299996,
+      "cost_usd": null,
+      "result_file": "tasks/conversational_memory_qa/results/qwen3.5-27b@vllm__2026-04-16T12-41-09Z.json"
     },
     {
       "task_id": "conversational_memory_qa",

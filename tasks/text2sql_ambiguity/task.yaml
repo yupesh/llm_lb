@@ -1,0 +1,108 @@
+name: text2sql_ambiguity
+version: "1.0"
+description: |
+  Text-to-SQL ambiguity detection and interpretation enumeration. Each sample
+  is one natural-language question over a small relational database. Some
+  questions have a single unambiguous SQL interpretation; others admit
+  multiple valid readings (scope, attachment, or vagueness ambiguity). The
+  model must decide which case we're in and, for ambiguous ones, list all
+  plausible interpretations with their SQL.
+
+  Source: AMBROSIA benchmark (Saparina & Titov, EdInburgh) via the DeepPavlov
+  AdvText2SQL wrapper. The 24 `*_small` questions (15 unambiguous + 9
+  ambiguous) are used verbatim for `prompt` / `expected`; database schemas
+  come from AMBROSIA's sqlite dumps but are NOT checked into the repo by
+  upstream request — instead the CI workflow materialises
+  `db_schemas.json` from a GitHub Secret at run time (see score.yml).
+
+  Without `db_schemas.json` (e.g. local development without the secret) the
+  task still runs, with an empty schema placeholder; quality suffers for
+  attachment-class ambiguity but scope/vagueness questions are still
+  largely solvable from the wording alone.
+metric:
+  primary: judge_score
+  secondary: [tps, p95_latency_ms]
+llm_params:
+  temperature: 0.0
+  max_tokens: 4096
+  seed: 42
+context_file: db_schemas.json
+context_meta_key: db_id
+system_prompt: |
+  You are a text-to-SQL assistant working with a relational database. Given a
+  database schema and a user question, you must:
+
+    1. Decide whether the question is AMBIGUOUS — i.e. it admits more than
+       one plausible SQL interpretation that the schema allows.
+    2. If not ambiguous, write the single SQL query that answers the question.
+    3. If ambiguous, list ALL plausible interpretations you can identify,
+       each with its SQL query.
+
+  Output format — a single JSON object, no prose, no markdown fences:
+    {
+      "is_ambiguous": true | false,
+      "reasoning": "<one short sentence explaining your decision>",
+      "interpretations": [
+        {"description": "<what this reading means in plain English>",
+         "sql": "<SELECT ...>"},
+        ...
+      ]
+    }
+
+  If `is_ambiguous` is false, put exactly one item in `interpretations`. If
+  true, list every plausible reading you can justify from the schema. Use
+  the PostgreSQL dialect; do not wrap SQL in backticks or code fences.
+prompt_template: |
+  Database schema:
+  {context}
+
+  User question:
+  {prompt}
+
+  Decide if the question is ambiguous over this schema and reply with the
+  required JSON object only.
+judge:
+  model: judge@openai
+  scale_min: 0
+  scale_max: 5
+  forbid_self_judge: true
+  prompt: |
+    You are evaluating a text-to-SQL model's handling of a (possibly
+    ambiguous) question against a gold answer.
+
+    USER QUESTION:
+    {prompt}
+
+    GOLD ANSWER (JSON):
+    {expected}
+    # gold has:
+    #   is_ambiguous: true/false
+    #   sql (only when is_ambiguous=false) — the single gold SQL
+    #   interpretations (only when is_ambiguous=true) — list of gold SQLs,
+    #                   one per plausible reading
+
+    CANDIDATE OUTPUT (as produced by the model):
+    {prediction}
+    # candidate should be JSON with is_ambiguous, reasoning, interpretations[]
+
+    Score the candidate on an integer scale 0..5:
+      0 = candidate output is not valid JSON or is unrelated
+      1 = is_ambiguous label is wrong (said clear when gold is ambiguous,
+          or vice versa)
+      2 = is_ambiguous label is right; for ambiguous: only 1 superficial
+          interpretation listed; for clear: SQL is badly wrong
+      3 = is_ambiguous label is right; for ambiguous: some but not all
+          gold interpretations captured; for clear: SQL is approximately
+          right with minor errors
+      4 = is_ambiguous label is right; for ambiguous: ALL gold interpretations
+          are covered (order doesn't matter, cosmetic SQL differences ok);
+          for clear: SQL is semantically equivalent to gold
+      5 = matches gold exactly in label, count of interpretations, and SQL
+          semantics; no extra spurious interpretations
+
+    For SQL comparison, judge semantic equivalence — different table aliases,
+    column ordering in SELECT, or whitespace are fine. Different WHERE or
+    JOIN semantics are not. Quoted vs unquoted identifiers don't matter.
+
+    Reply with a single integer 0..5 and nothing else.
+    Score:

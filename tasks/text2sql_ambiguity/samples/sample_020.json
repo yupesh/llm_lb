@@ -1,0 +1,10 @@
+{
+  "id": "amb_264",
+  "prompt": "List all the job positions and the associated salary range.",
+  "expected": "{\"is_ambiguous\": false, \"sql\": \"select p.title, s.Salary_Range \\r\\nfrom position as p \\r\\njoin salarydetails as s \\r\\non p.id=s.positionid\"}",
+  "meta": {
+    "db_id": "vague_2cols_compensation",
+    "type": "clear",
+    "source_question_id": 264
+  }
+}

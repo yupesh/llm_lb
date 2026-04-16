@@ -1,0 +1,10 @@
+{
+  "id": "amb_109",
+  "prompt": "Tell me the systems every support specialist works with.",
+  "expected": "{\"is_ambiguous\": true, \"interpretations\": [\"SELECT Systems.system_name  from It_Support_Specialists_Systems join Systems on It_Support_Specialists_Systems.system_id = Systems.system_id join It_Support_Specialists on It_Support_Specialists_Systems.it_specialist_id = It_Support_Specialists.id   GROUP BY It_Support_Specialists_Systems.system_id HAVING COUNT(DISTINCT It_Support_Specialists_Systems.it_specialist_id) = (SELECT COUNT(*) FROM  It_Support_Specialists)\", \"select it_support_specialists.name , systems.system_name from It_Support_Specialists_Systems join Systems on It_Support_Specialists_Systems.system_id = Systems.system_id join It_Support_Specialists on It_Support_Specialists_Systems.it_specialist_id = It_Support_Specialists.id\"]}",
+  "meta": {
+    "db_id": "scope_it_support_specialists_systems",
+    "type": "ambiguous",
+    "source_question_id": 109
+  }
+}

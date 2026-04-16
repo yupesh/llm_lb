@@ -196,6 +196,30 @@
       ],
       "default": null,
       "title": "Max Turns"
+    },
+    "context_file": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Context File"
+    },
+    "context_meta_key": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Context Meta Key"
     }
   },
   "required": [
