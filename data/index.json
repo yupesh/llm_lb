@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-16T08:36:58+00:00",
+  "generated_at": "2026-04-16T13:47:45+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -341,6 +341,19 @@
       "p95_latency_ms": 46786.67104803026,
       "cost_usd": null,
       "result_file": "tasks/retail_agent_dialog/results/qwen3-30b@vllm__2026-04-16T08-21-59Z.json"
+    },
+    {
+      "task_id": "retail_agent_dialog",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-397b@vllm",
+      "score": 0.30303030303030304,
+      "metrics": {
+        "judge_score": 0.30303030303030304
+      },
+      "tps": 98.3830116616304,
+      "p95_latency_ms": 380661.14249600016,
+      "cost_usd": null,
+      "result_file": "tasks/retail_agent_dialog/results/qwen3.5-397b@vllm__2026-04-16T13-47-44Z.json"
     },
     {
       "task_id": "summarization",
