@@ -31,6 +31,22 @@ def test_score_sample_unparseable_returns_min():
     assert judge_mod.score_sample(FakeJudge("blah"), SPEC, s, "p") == 0.0
 
 
+class RaisingJudge:
+    """Fails the test if it gets called — used to prove short-circuit."""
+
+    def chat(self, system, user, params: LLMParams) -> Completion:  # noqa: ARG002
+        raise AssertionError("judge should not be called for empty prediction")
+
+
+def test_score_sample_empty_prediction_skips_judge():
+    s = Sample(id="1", prompt="q", expected="e")
+    # Empty / whitespace-only predictions short-circuit to scale_min without
+    # calling the judge (guards against judges hallucinating scores when
+    # max_tokens truncation eats the model's answer).
+    assert judge_mod.score_sample(RaisingJudge(), SPEC, s, "") == 0.0
+    assert judge_mod.score_sample(RaisingJudge(), SPEC, s, "   \n\t ") == 0.0
+
+
 def test_aggregate_normalises():
     preds = [
         SamplePrediction(id="1", prediction="p", expected="e", correct=False, latency_ms=0, judge_raw_score=5),
