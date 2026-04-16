@@ -80,9 +80,11 @@ jobs:
             --task "../${{ github.event.inputs.task }}" \
             --model "../${{ github.event.inputs.model }}"
 
-      - name: Rebuild leaderboards and global index
-        working-directory: runner
-        run: uv run llm-lb aggregate --root ..
+      # Aggregation (leaderboards + global index + feed) is NOT done here to
+      # keep score-PRs conflict-free: generated files would clash with every
+      # other in-flight score-PR. Aggregation runs as a separate workflow
+      # (.github/workflows/aggregate.yml) on pushes to main that touch
+      # tasks/*/results/**.
 
       - name: Open PR with results
         uses: peter-evans/create-pull-request@v6
@@ -91,6 +93,11 @@ jobs:
           title: "score: ${{ github.event.inputs.model }} on ${{ github.event.inputs.task }}"
           branch: score/${{ github.run_id }}
           labels: score
+          # Only commit the new result file. Anything else the runner may have
+          # touched (schemas materialised from secrets, caches, etc.) stays out
+          # of the PR.
+          add-paths: |
+            tasks/*/results/**
           body: |
             Automated scoring run.
 
@@ -99,4 +106,6 @@ jobs:
             - **Runner:** `${{ github.event.inputs.runner }}`
             - **Run:** ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
-            Requires admin review (see CODEOWNERS).
+            Requires admin review (see CODEOWNERS). Leaderboards + global
+            index are refreshed automatically by the `aggregate` workflow
+            right after this PR is merged to main.
