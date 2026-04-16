@@ -1,0 +1,10 @@
+{
+  "id": "bird_005",
+  "prompt": "What is the label for bond ID TR001_10_11?\n\nEvidence: label = '+' mean molecules are carcinogenic; label = '-' means molecules are non-carcinogenic",
+  "expected": "SELECT T2.label FROM bond AS T1 INNER JOIN molecule AS T2 ON T1.molecule_id = T2.molecule_id WHERE T1.bond_id = 'TR001_10_11'",
+  "meta": {
+    "db_id": "toxicology",
+    "difficulty": "simple",
+    "source_question_id": 279
+  }
+}

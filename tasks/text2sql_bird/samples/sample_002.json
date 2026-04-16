@@ -1,0 +1,10 @@
+{
+  "id": "bird_002",
+  "prompt": "Please list the phone numbers of the schools with the top 3 SAT excellence rate.\n\nEvidence: Excellence rate = NumGE1500 / NumTstTakr",
+  "expected": "SELECT T1.Phone FROM schools AS T1 INNER JOIN satscores AS T2 ON T1.CDSCode = T2.cds ORDER BY CAST(T2.NumGE1500 AS REAL) / T2.NumTstTakr DESC LIMIT 3",
+  "meta": {
+    "db_id": "california_schools",
+    "difficulty": "simple",
+    "source_question_id": 13
+  }
+}

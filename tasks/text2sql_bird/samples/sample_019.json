@@ -1,0 +1,10 @@
+{
+  "id": "bird_019",
+  "prompt": "Which students manage to generate the highest income. State his/her full name along with the income source.\n\nEvidence: name of students means the full name; full name refers to first_name, last_name; generate the highest income refers to MAX(income.amount);",
+  "expected": "SELECT T1.first_name, T1.last_name, T2.source FROM member AS T1 INNER JOIN income AS T2 ON T1.member_id = T2.link_to_member GROUP BY T1.first_name, T1.last_name, T2.source ORDER BY SUM(T2.amount) DESC LIMIT 1",
+  "meta": {
+    "db_id": "student_club",
+    "difficulty": "moderate",
+    "source_question_id": 1388
+  }
+}

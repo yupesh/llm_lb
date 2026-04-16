@@ -1,0 +1,10 @@
+{
+  "id": "bird_012",
+  "prompt": "What is the amount spent by customer \"38508\" at the gas stations? How much had the customer spent in January 2012?\n\nEvidence: January 2012 refers to the Date value = '201201'",
+  "expected": "SELECT SUM(T1.Price) , SUM(IIF(T3.Date = '201201', T1.Price, 0)) FROM transactions_1k AS T1 INNER JOIN gasstations AS T2 ON T1.GasStationID = T2.GasStationID INNER JOIN yearmonth AS T3 ON T1.CustomerID = T3.CustomerID WHERE T1.CustomerID = '38508'",
+  "meta": {
+    "db_id": "debit_card_specializing",
+    "difficulty": "moderate",
+    "source_question_id": 1529
+  }
+}
