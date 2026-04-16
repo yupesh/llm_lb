@@ -1,0 +1,131 @@
+{
+  "model_id": "qwen3-30b@vllm",
+  "model_revision": "2025-12-01",
+  "task_id": "datascibench_csv_excel",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "30718ae5f06c556a",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 32768,
+    "seed": 42
+  },
+  "metrics": {
+    "judge_score": 0.52
+  },
+  "tps": 38.30640120432349,
+  "p95_latency_ms": 227946.882675,
+  "n_samples": 10,
+  "samples": [
+    {
+      "id": "csv_excel_0",
+      "prediction": "import pandas as pd\n\ndata = [\n    [\"2022\", \"农业科技进步贡献率\", \"贡献率\", \"全国\", \"年\", \"%\", \"62.4\"],\n    [\"2021\", \"农业科技进步贡献率\", \"贡献率\", \"全国\", \"年\", \"%\", \"61.5\"],\n    [\"2020\", \"化肥有效利用率\", \"利用率\", \"全国\", \"年\", \"%\", \"40.2\"],\n    [\"2020\", \"农药有效利用率\", \"利用率\", \"全国\", \"年\", \"%\", \"40.6\"],\n    [\"2020\", \"县域数字农业农村发展总体水平\", \"占比\", \"全国\", \"年\", \"%\", \"37.9\"],\n    [\"2020\", \"农业科技进步贡献率\", \"贡献率\", \"全国\", \"年\", \"%\", \"60.7\"],\n    [\"2019\", \"农药有效利用率\", \"利用率\", \"全国\", \"年\", \"%\", \"39.8\"],\n    [\"2019\", \"化肥有效利用率\", \"利用率\", \"全国\", \"年\", \"%\", \"39.2\"],\n    [\"2019\", \"县域数字农业农村发展总体水平\", \"占比\", \"全国\", \"年\", \"%\", \"36.0\"],\n    [\"2019\", \"农业科技进步贡献率\", \"贡献率\", \"全国\", \"年\", \"%\", \"59.2\"],\n    [\"2018\", \"县域数字农业农村发展总体水平\", \"占比\", \"全国\", \"年\", \"%\", \"33.0\"],\n    [\"2018\", \"农业科技进步贡献率\", \"贡献率\", \"全国\", \"年\", \"%\", \"58.3\"],\n    [\"2017\", \"农药有效利用率\", \"利用率\", \"全国\", \"年\", \"%\", \"38.8\"],\n    [\"2017\", \"化肥有效利用率\", \"利用率\", \"全国\", \"年\", \"%\", \"38.8\"],\n    [\"2017\", \"农业科技进步贡献率\", \"贡献率\", \"全国\", \"年\", \"%\", \"57.5\"],\n    [\"2016\", \"农业科技进步贡献率\", \"贡献率\", \"全国\", \"年\", \"%\", \"56.7\"],\n    [\"2015\", \"农药有效利用率\", \"利用率\", \"全国\", \"年\", \"%\", \"36.6\"],\n    [\"2015\", \"化肥有效利用率\", \"利用率\", \"全国\", \"年\", \"%\", \"35.2\"],\n    [\"2015\", \"农业科技进步贡献率\", \"贡献率\", \"全国\", \"年\", \"%\", \"56.1\"],\n    [\"2014\", \"农业科技进步贡献率\", \"贡献率\", \"全国\", \"年\", \"%\", \"55.6\"],\n    [\"2013\", \"农药有效利用率\", \"利用率\", \"全国\", \"年\", \"%\", \"35.0\"],\n    [\"2013\", \"化肥有效利用率\", \"利用率\", \"全国\", \"年\", \"%\", \"33.0\"],\n    [\"2013\", \"农业科技进步贡献率\", \"贡献率\", \"全国\", \"年\", \"%\", \"55.2\"],\n    [\"2012\", \"农业科技进步贡献率\", \"贡献率\", \"全国\", \"年\", \"%\", \"54.5\"],\n]\n\ndf = pd.DataFrame(data, columns=['时间', '品类', '指标', '地区', '周期', '单位', '数值'])\ndf['数值'] = pd.to_numeric(df['数值'])\n\ndf_pivot = df.pivot(index='时间', columns='品类', values='数值')\ndf_pivot.index.name = 'Year'\n\ndf_pivot.to_csv('output.csv')",
+      "expected": "1. Data cleaning and preprocessing: Data Completeness Ratio — all entries from input present in output.csv. 2. Data visualization: Visualization Quality Score — output.csv matches expected pivot structure. 3. Interpretability and report generation: Report Completeness Score — all required category columns present.",
+      "correct": false,
+      "latency_ms": 227946.882675,
+      "input_tokens": 675,
+      "output_tokens": 8648,
+      "judge_raw_score": 3.0
+    },
+    {
+      "id": "csv_excel_1",
+      "prediction": "import pandas as pd\n\nsource_df = pd.read_excel('source.xlsx', sheet_name='sheet1')\nsecond_row_g = source_df.iloc[1]['G']\nfiltered = source_df[\n    (source_df['D'] >= 8) &\n    (source_df['D'] < 8.0010) &\n    (source_df['F'] == 18) &\n    (source_df['G'] > second_row_g)\n]\ntarget_df = pd.read_excel('target.xlsx', sheet_name='sheet1')\nfor idx in filtered.index:\n    target_df.loc[idx, 'G'] = filtered.loc[idx, 'G']\ntarget_df.to_excel('target.xlsx', sheet_name='sheet1', index=False)",
+      "expected": "1. Data cleaning and preprocessing: Data Completeness — filtered rows correctly identified by multi-condition filter (D>=8 AND D<8.001 AND F==18 AND G>G[row2]). 2. Data transformation: Transformation Accuracy — correct column G values copied to target.xlsx sheet1.",
+      "correct": false,
+      "latency_ms": 83512.40156199998,
+      "input_tokens": 168,
+      "output_tokens": 3234,
+      "judge_raw_score": 3.0
+    },
+    {
+      "id": "csv_excel_2",
+      "prediction": "```python\nimport pandas as pd\nimport numpy as np\nfrom scipy.signal import stft\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.metrics import classification_report\nimport h5py\nimport tensorflow as tf\nfrom tensorflow.keras.models import Sequential\nfrom tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout\nimport os\n\ndef data_analysis():\n    df = pd.read_csv('train.csv')\n    with open('data_analysis.txt', 'w') as f:\n        f.write(\"First 5 rows:\\n\")\n        f.write(str(df.head()) + '\\n')\n        f.write(\"\\nSummary statistics:\\n\")\n        f.write(str(df.describe()) + '\\n')\n        f.write(f\"\\nShape: {df.shape}\\n\")\n\ndef filter_samples():\n    df = pd.read_csv('train.csv')\n    z_scores = np.abs((df - df.mean()) / df.std())\n    filtered_df = df[(z_scores < 3).all(axis=1)]\n    filtered_df.to_csv('filtered_train.csv', index=False)\n\ndef stft_processing():\n    df = pd.read_csv('filtered_train.csv')\n    fs = 1.0\n    nperseg = 256\n    spectrograms = []\n    n_freq_list = []\n    n_time_list = []\n    for _, row in df.iterrows():\n        x = row.values\n        f, t, Zxx = stft(x, fs=fs, nperseg=nperseg)\n        magnitude = np.abs(Zxx)\n        spectrograms.append(magnitude.flatten())\n        n_freq_list.append(magnitude.shape[0])\n        n_time_list.append(magnitude.shape[1])\n    with open('stft_params.txt', 'w') as f:\n        f.write(f\"nperseg: {nperseg}\\n\")\n        f.write(f\"n_freq: {np.unique(n_freq_list)[0]}\\n\")\n        f.write(f\"n_time: {np.unique(n_time_list)[0]}\\n\")\n    spectrogram_df = pd.DataFrame(spectrograms)\n    spectrogram_df.to_csv('spectral_images_train.csv', index=False)\n\ndef train_cnn():\n    spectrogram_df = pd.read_csv('spectral_images_train.csv')\n    labels_df = pd.read_csv('filtered_train.csv')\n    labels = labels_df.iloc[:, -1].values\n    unique_labels = np.unique(labels)\n    num_classes = len(unique_labels)\n    labels = tf.keras.utils.to_categorical(labels, num_classes)\n    \n    with open('stft_params.txt', 'r') as f:\n        lines = f.readlines()\n        nperseg = int(lines[0].split(': ')[1])\n        n_freq = int(lines[1].split(': ')[1])\n        n_time = int(lines[2].split(': ')[1])\n    \n    spectrogram_data = spectrogram_df.values\n    spectrogram_data = spectrogram_data.reshape(-1, n_freq, n_time, 1)\n    \n    model = Sequential([\n        Conv2D(32, (3,3), activation='relu', input_shape=(n_freq, n_time, 1)),\n        MaxPooling2D((2,2)),\n        Conv2D(64, (3,3), activation='relu'),\n        MaxPooling2D((2,2)),\n        Flatten(),\n        Dense(64, activation='relu'),\n        Dense(num_classes, activation='softmax')\n    ])\n    model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])\n    model.fit(spectrogram_data, labels, epochs=10, batch_size=32)\n    model.save('cnn_model.h5')\n\ndef test_model():\n    test_df = pd.read_csv('test.csv')\n    with open('stft_params.txt', 'r') as f:\n        lines = f.readlines()\n        nperseg = int(lines[0].split(': ')[1])\n        n_freq = int(lines[1].split(': ')[1])\n        n_time = int(lines[2].split(': ')[1])\n    \n    test_spectrograms = []\n    for _, row in test_df.iterrows():\n        x = row.values\n        f, t, Zxx = stft(x, fs=1.0, nperseg=nperseg)\n        magnitude = np.abs(Zxx)\n        test_spectrograms.append(magnitude.flatten())\n    test_spectrogram_data = np.array(test_spectrograms).reshape(-1, n_freq, n_time, 1)\n    \n    model = tf.keras.models.load_model('cnn_model.h5')\n    predictions = model.predict(test_spectrogram_data)\n    pd.DataFrame(predictions).to_csv('model_evaluation_results.csv', index=False)\n\nif __name__ == \"__main__\":\n    data_analysis()\n    filter_samples()\n    stft_processing()\n    train_cnn()\n    test_model()\n```",
+      "expected": "1. Data cleaning and preprocessing: Missing Value Percentage — filtered_train.csv has no anomalous samples. 2. Predictive modeling: Model Performance Accuracy — CNN trained on STFT spectral features and evaluated. 3. Data visualization: Visualization Completeness — data_analysis.txt produced. 4. Interpretability: Report Completeness — model_evaluation_results.csv written with metrics.",
+      "correct": false,
+      "latency_ms": 172943.50162699993,
+      "input_tokens": 313,
+      "output_tokens": 6657,
+      "judge_raw_score": 1.0
+    },
+    {
+      "id": "csv_excel_3",
+      "prediction": "```python\nimport pandas as pd\n\njson_data = {\n    \"data\": [\n        {\n            \"上映年份\": \"2021\",\n            \"制片地区\": \"中国\",\n            \"导演\": \"陈凯歌 *\",\n            \"提交人\": \"zhchl@fckj\",\n            \"电影名称\": \"长津湖\",\n            \"票房\": \"577524\",\n            \"评分\": \"7.6\"\n        },\n        {\n            \"上映年份\": \"2017\",\n            \"制片地区\": \"中国\",\n            \"导演\": \"吴京\",\n            \"提交人\": \"zhchl@fckj\",\n            \"电影名称\": \"战狼2\",\n            \"票房\": \"569456\",\n            \"评分\": \"7.1\"\n        }\n    ]\n}\n\ndf = pd.json_normalize(json_data['data'])\ndf.to_csv('output.csv', index=False)\n```",
+      "expected": "1. Data cleaning and preprocessing: Data Completeness — output.csv contains all rows and columns from JSON. 2. Data transformation: Transformation Accuracy — pd.json_normalize used correctly, columns match JSON keys. 3. Report generation: Report Completeness — output.csv is well-formed CSV with proper headers.",
+      "correct": false,
+      "latency_ms": 34226.99629500005,
+      "input_tokens": 304,
+      "output_tokens": 1296,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "csv_excel_4",
+      "prediction": "```python\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\n# Load data\ndf = pd.read_csv('ultimate_data.csv')\n\n# Detect outliers using sliding window\nwindow_size = 10\nrolling_mean = df['closing price'].rolling(window=window_size).mean()\nrolling_std = df['closing price'].rolling(window=window_size).std()\n\noutliers = []\nfor i in range(len(df)):\n    if pd.isna(rolling_mean[i]) or pd.isna(rolling_std[i]):\n        outliers.append(False)\n    else:\n        if abs(df['closing price'][i] - rolling_mean[i]) > 3 * rolling_std[i]:\n            outliers.append(True)\n        else:\n            outliers.append(False)\n\n# Save outliers to CSV\noutliers_df = pd.DataFrame({\n    'index': df.index,\n    'value': df['closing price'],\n    'is_outlier': outliers\n})\noutliers_df.to_csv('outliers_detected.csv', index=False)\n\n# Replace outliers with average of 10 nearby values\nsmoothed = df['closing price'].copy()\nfor i in range(len(df)):\n    if outliers[i]:\n        start = max(0, i - 5)\n        end = min(len(df), i + 5)\n        window = df['closing price'][start:end]\n        avg = window.mean()\n        smoothed[i] = avg\n\n# Save smoothed data\nsmoothed_df = pd.DataFrame({\n    'index': df.index,\n    'adjusted_closing_price': smoothed\n})\nsmoothed_df.to_csv('smoothed_data.csv', index=False)\n\n# Plot results\nplt.figure(figsize=(10, 6))\nplt.plot(df.index, df['closing price'], label='Original', alpha=0.5)\nplt.plot(df.index, smoothed, label='Smoothed', color='green')\noutlier_mask = pd.Series(outliers)\noutlier_indices = df.index[outlier_mask]\noutlier_values = df['closing price'][outlier_mask]\nplt.scatter(outlier_indices, outlier_values, color='red', label='Outliers')\nplt.legend()\nplt.title('Original vs Smoothed with Outliers')\nplt.xlabel('Index')\nplt.ylabel('Closing Price')\nplt.savefig('outlier_detection_plot.png')\n```",
+      "expected": "1. Data cleaning: Outlier Detection Accuracy — sliding window method correctly flags outliers in closing price. 2. Data transformation: Smoothing Quality — outliers replaced with average of 10 nearby values, smoothed_data.csv written. 3. Visualization: Plot Completeness — outlier_detection_plot.png shows both original and smoothed series.",
+      "correct": false,
+      "latency_ms": 212859.66557699998,
+      "input_tokens": 256,
+      "output_tokens": 8074,
+      "judge_raw_score": 3.0
+    },
+    {
+      "id": "csv_excel_8",
+      "prediction": "import pandas as pd\nimport torch\nfrom torch.utils.data import Dataset, DataLoader, TensorDataset\nimport torch.nn as nn\nimport torch.optim as optim\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import confusion_matrix, roc_curve, auc\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\npositive = pd.read_csv('positive.csv')\nnegative = pd.read_csv('negative.csv')\n\npositive['label'] = 1\nnegative['label'] = 0\n\ndata = pd.concat([positive, negative], axis=0).sample(frac=1, random_state=42).reset_index(drop=True)\n\nX = data.drop('label', axis=1)\ny = data['label']\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)\n\ntrain_dataset = TensorDataset(torch.tensor(X_train.values, dtype=torch.float32), torch.tensor(y_train.values, dtype=torch.float32))\ntest_dataset = TensorDataset(torch.tensor(X_test.values, dtype=torch.float32), torch.tensor(y_test.values, dtype=torch.float32))\n\ntrain_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=32)\n\ninput_size = X_train.shape[1]\nmodel = nn.Sequential(\n    nn.Linear(input_size, 128),\n    nn.ReLU(),\n    nn.Linear(128, 32),\n    nn.ReLU(),\n    nn.Linear(32, 2),\n    nn.ReLU(),\n    nn.Linear(2, 1),\n    nn.Sigmoid()\n)\n\ncriterion = nn.BCELoss()\noptimizer = optim.Adam(model.parameters(), lr=0.001)\n\nnum_epochs = 10\nfor epoch in range(num_epochs):\n    model.train()\n    for inputs, labels in train_loader:\n        optimizer.zero_grad()\n        outputs = model(inputs)\n        loss = criterion(outputs, labels.view(-1, 1))\n        loss.backward()\n        optimizer.step()\n    print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}')\n\nmodel.eval()\ntest_preds = []\ntest_true = []\nwith torch.no_grad():\n    for inputs, labels in test_loader:\n        outputs = model(inputs)\n        test_preds.extend(outputs.numpy().flatten())\n        test_true.extend(labels.numpy().flatten())\n\ntest_preds_binary = [1 if p >= 0.5 else 0 for p in test_preds]\ncm = confusion_matrix(test_true, test_preds_binary)\n\nsns.heatmap(cm, annot=True, fmt='d', cmap='Blues')\nplt.xlabel('Predicted')\nplt.ylabel('True')\nplt.title('Confusion Matrix')\nplt.savefig('confusion_matrix.png')\nplt.close()\n\nfpr, tpr, _ = roc_curve(test_true, test_preds)\nroc_auc = auc(fpr, tpr)\n\nplt.figure()\nplt.plot(fpr, tpr, color='darkorange', lw=2, label=f'ROC curve (area = {roc_auc:.2f})')\nplt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')\nplt.xlim([0.0, 1.0])\nplt.ylim([0.0, 1.05])\nplt.xlabel('False Positive Rate')\nplt.ylabel('True Positive Rate')\nplt.title('Receiver Operating Characteristic')\nplt.legend(loc=\"lower right\")\nplt.savefig('roc_curve.png')\nplt.close()",
+      "expected": "1. Predictive modeling: Model Accuracy — BP neural network with correct architecture (128-32-2 hidden, ReLU+sigmoid) trained and evaluated. 2. Data visualization: AUC-ROC Score — confusion_matrix.png and roc_curve.png generated from test set predictions.",
+      "correct": false,
+      "latency_ms": 109282.44704700001,
+      "input_tokens": 241,
+      "output_tokens": 4212,
+      "judge_raw_score": 2.0
+    },
+    {
+      "id": "csv_excel_9",
+      "prediction": "import pandas as pd\nfrom collections import defaultdict\n\n# Load data\ndf_close = pd.read_csv('stock_trading_data_close.csv', parse_dates=['Date'], index_col='Date')\ndf_info = pd.read_csv('stock_info_data.csv', index_col='Ticker')\n\n# Get last trading day\nlast_date = df_close.index[-1]\n\n# Find strong stocks\nstrong_stocks = []\nfor stock in df_close.columns:\n    try:\n        close = df_close.loc[last_date, stock]\n        ma60 = df_close[stock].rolling(window=60).mean().loc[last_date]\n        ma5 = df_close[stock].rolling(window=5).mean().loc[last_date]\n        ma20 = df_close[stock].rolling(window=20).mean().loc[last_date]\n        if close > ma60 and ma5 > ma20:\n            strong_stocks.append(stock)\n    except:\n        pass\n\n# Get industries for strong stocks\nstrong_industries = []\nfor stock in strong_stocks:\n    if stock in df_info.index:\n        strong_industries.append(df_info.loc[stock, 'Industry'])\n\n# Count strong stocks by industry\ncount_strong = defaultdict(int)\nfor industry in strong_industries:\n    count_strong[industry] += 1\n\ndf_strong = pd.DataFrame(list(count_strong.items()), columns=['industry', 'count'])\ndf_strong.to_csv('strong_stocks_by_industry_count.csv', index=False)\n\n# Count all stocks by industry\nall_industries = []\nfor stock in df_close.columns:\n    if stock in df_info.index:\n        all_industries.append(df_info.loc[stock, 'Industry'])\n\ncount_all = defaultdict(int)\nfor industry in all_industries:\n    count_all[industry] += 1\n\ndf_all = pd.DataFrame(list(count_all.items()), columns=['industry', 'total_count'])\ndf_all.to_csv('all_stocks_by_industry_count.csv', index=False)",
+      "expected": "1. Predictive modeling: Strong Stock Identification Accuracy — correct multi-condition filter (price>MA60 AND MA5>MA20) applied on last trading day. 2. Data exploration: Industry Count Consistency — strong_stocks_by_industry_count.csv and all_stocks_by_industry_count.csv written with correct groupby counts.",
+      "correct": false,
+      "latency_ms": 115830.48918500003,
+      "input_tokens": 259,
+      "output_tokens": 4512,
+      "judge_raw_score": 3.0
+    },
+    {
+      "id": "csv_excel_10",
+      "prediction": "import pandas as pd\nimport numpy as np\nimport pickle\nfrom tensorflow.keras.models import Sequential\nfrom tensorflow.keras.layers import Dense\nfrom tensorflow.keras.optimizers import Adam\n\n# Load data\ninput_data = pd.read_csv(\"input_data.csv\", header=None)\noutput_data = pd.read_csv(\"output_data.csv\", header=None).T\n\nX = input_data.values\ny = output_data.values\n\n# Build model\nmodel = Sequential([\n    Dense(64, activation='relu', input_shape=(X.shape[1],)),\n    Dense(64, activation='relu'),\n    Dense(y.shape[1])\n])\n\nmodel.compile(optimizer=Adam(), loss='mse', metrics=['mae'])\n\n# Train model\nmodel.fit(X, y, epochs=100, batch_size=32, verbose=0)\n\n# Evaluate\nloss, mae = model.evaluate(X, y, verbose=0)\n\n# Save model\nwith open(\"model.pkl\", \"wb\") as f:\n    pickle.dump(model, f)\n\n# Save evaluation results\nresults_df = pd.DataFrame({\n    \"Loss\": [loss],\n    \"MeanAbsoluteError\": [mae]\n})\nresults_df.to_csv(\"evaluation_results.csv\", index=False)",
+      "expected": "1. Data cleaning and preprocessing: Data Completeness — input (500x12) and output (7x500, transposed to 500x7) dimensions handled correctly. 2. Predictive modeling: Model Performance (MAE) — neural network trained, model.pkl saved via pickle/joblib. 3. Report generation: Report Quality — evaluation_results.csv with Loss and MeanAbsoluteError columns.",
+      "correct": false,
+      "latency_ms": 94249.35777799987,
+      "input_tokens": 187,
+      "output_tokens": 3654,
+      "judge_raw_score": 2.0
+    },
+    {
+      "id": "csv_excel_11",
+      "prediction": "```python\nimport pandas as pd\nfrom sklearn.svm import SVR\nfrom sklearn.multioutput import MultiOutputRegressor\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nimport joblib\nimport matplotlib.pyplot as plt\n\n# Load input and output data\nX = pd.read_csv('12_Input.csv')\nY = pd.read_csv('a_full.csv')\n\n# Ensure Y is a 500x500 matrix\n# Each row of X corresponds to a column in Y\n# Train a MultiOutput SVR model\nmodel = MultiOutputRegressor(SVR())\nmodel.fit(X, Y)\n\n# Save the model\njoblib.dump(model, 'model.pkl')\n\n# Predict using the first input row\ninput_row = X.iloc[0, :].values.reshape(1, -1)\npredicted = model.predict(input_row)\n\n# Get the actual output column (first column of Y)\nactual = Y.iloc[:, 0].values\n\n# Calculate MSE\nmse = mean_squared_error(actual, predicted[0])\nprint(\"Predicted column:\", predicted[0])\nprint(\"Mean Squared Error:\", mse)\n\n# Plot the prediction vs actual\nplt.figure(figsize=(10, 5))\nplt.plot(actual, label='Actual')\nplt.plot(predicted[0], label='Predicted')\nplt.legend()\nplt.title('Prediction vs Actual')\nplt.savefig('prediction_accuracy.png')\n```",
+      "expected": "1. Data visualization: Prediction Accuracy Visualization (R^2 Score) — prediction_accuracy.png shows predicted vs actual values with R^2 metric. SVR model trained on 12_Input.csv -> a_full.csv mapping, saved as model.pkl.",
+      "correct": false,
+      "latency_ms": 202129.3635510001,
+      "input_tokens": 225,
+      "output_tokens": 7688,
+      "judge_raw_score": 2.0
+    },
+    {
+      "id": "csv_excel_29",
+      "prediction": "import pandas as pd\nimport torch\nimport torch.nn as nn\nimport torch.optim as optim\nimport matplotlib.pyplot as plt\n\n# Load data\ndf = pd.read_csv('data.csv')\ndata = df['Value1'].values\n\n# Create sequences\ndef create_sequences(data, seq_length):\n    xs, ys = [], []\n    for i in range(len(data) - seq_length):\n        x = data[i:i+seq_length]\n        y = data[i+seq_length]\n        xs.append(x)\n        ys.append(y)\n    return torch.tensor(xs, dtype=torch.float32).unsqueeze(-1), torch.tensor(ys, dtype=torch.float32)\n\nsequence_length = 10\nX, y = create_sequences(data, sequence_length)\n\n# Split into train and test\ntrain_size = int(0.8 * len(X))\nX_train, X_test = X[:train_size], X[train_size:]\ny_train, y_test = y[:train_size], y[train_size:]\n\n# Define model\nclass LSTMModel(nn.Module):\n    def __init__(self, input_size=1, hidden_size=50, output_size=1):\n        super(LSTMModel, self).__init__()\n        self.lstm = nn.LSTM(input_size, hidden_size, batch_first=True)\n        self.fc = nn.Linear(hidden_size, output_size)\n    \n    def forward(self, x):\n        out, (h_n, _) = self.lstm(x)\n        out = self.fc(out[:, -1, :])\n        return out\n\nmodel = LSTMModel()\ncriterion = nn.MSELoss()\noptimizer = optim.Adam(model.parameters(), lr=0.001)\n\n# Train model\nepochs = 100\nfor epoch in range(epochs):\n    model.train()\n    optimizer.zero_grad()\n    outputs = model(X_train)\n    loss = criterion(outputs, y_train)\n    loss.backward()\n    optimizer.step()\n    if (epoch + 1) % 10 == 0:\n        print(f'Epoch [{epoch+1}/{epochs}], Loss: {loss.item():.4f}')\n\n# Predict\nmodel.eval()\nwith torch.no_grad():\n    predictions = model(X_test).squeeze().numpy()\n\n# Save predictions\npred_df = pd.DataFrame(predictions, columns=['Predictions'])\npred_df.to_csv('predictions.csv', index=False)\n\n# Plot\nplt.figure(figsize=(10, 6))\nplt.plot(y_test.numpy(), label='Actual')\nplt.plot(predictions, label='Predicted')\nplt.legend()\nplt.savefig('predictions_chart.png')\nplt.close()",
+      "expected": "1. Data cleaning and preprocessing: Data Consistency Ratio — data.csv Value1 column read and preprocessed for LSTM input sequences. 2. Predictive modeling: Model MAE — LSTM trained in PyTorch, predictions saved to predictions.csv. 3. Data visualization: Visualization Quality — predictions_chart.png shows actual vs predicted time series.",
+      "correct": false,
+      "latency_ms": 131069.558121,
+      "input_tokens": 151,
+      "output_tokens": 5043,
+      "judge_raw_score": 2.0
+    }
+  ],
+  "created_at": "2026-04-16T06:17:44+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": "judge@openai",
+  "judge_model_revision": null,
+  "judge_prompt_hash": "f5b36bb5da3749e3"
+}
