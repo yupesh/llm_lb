@@ -68,6 +68,15 @@ def score_sample(
     TaskSpec). Passed to the judge prompt as `{context}` so judges can also
     see e.g. a DB schema when evaluating free-form outputs.
     """
+    # Empty prediction is almost always a truncation / crash signal (model
+    # burned its max_tokens budget on hidden reasoning, or errored before
+    # emitting anything). Judges have been observed to answer "5" for an
+    # empty candidate because the rubric gives them nothing wrong to latch
+    # onto — which silently inflates scores. Short-circuit to scale_min
+    # instead of calling the judge.
+    if not (prediction or "").strip():
+        return float(spec.scale_min)
+
     user = spec.prompt.format(
         prompt=sample.prompt,
         expected=sample.expected,
