@@ -1,0 +1,5 @@
+{
+  "id": "retail_94",
+  "prompt": "{\"task_instructions\": \"You are confident, organized, creative, impatient.\", \"reason_for_call\": \"You received a laptop and you want to exchange it to i7 processor, 8GB, 1TB SSD. If the agent asks for which laptop, it is 15-inch, 16GB.\", \"known_info\": \"You name is Lei Wilson and your zip code is 32255.\", \"unknown_info\": \"You do not remember your email address\"}",
+  "expected": "{\"actions\": [{\"action_id\": \"94_0\", \"name\": \"exchange_delivered_order_items\", \"arguments\": {\"order_id\": \"#W2905754\", \"item_ids\": [\"3478699712\"], \"new_item_ids\": [\"9844888101\"], \"payment_method_id\": \"credit_card_3677959\"}, \"info\": null}], \"communicate_info\": [], \"nl_assertions\": null}"
+}

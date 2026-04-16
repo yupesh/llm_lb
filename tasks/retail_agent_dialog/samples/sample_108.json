@@ -1,0 +1,5 @@
+{
+  "id": "retail_108",
+  "prompt": "{\"task_instructions\": \"You want to know how much money you can get back.\", \"reason_for_call\": \"You want to return everything but a tablet in a recently delivered order. There is an E-Reader in the order that you want to return.\", \"known_info\": \"You name is Yusuf Gonzalez and your zip code is 91455.\", \"unknown_info\": \"You do not remember your email address\"}",
+  "expected": "{\"actions\": [{\"action_id\": \"109_0\", \"name\": \"return_delivered_order_items\", \"arguments\": {\"order_id\": \"#W1679211\", \"item_ids\": [\"9612497925\", \"7127170374\", \"6268080249\"], \"payment_method_id\": \"paypal_3022415\"}, \"info\": null}], \"communicate_info\": [\"346.93\"], \"nl_assertions\": [\"Agent should make the return\", \"Agent should communicate the refund to user.\"]}"
+}

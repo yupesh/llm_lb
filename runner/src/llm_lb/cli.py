@@ -28,9 +28,16 @@ def validate(path: Path) -> None:
 def run(
     task: Path = typer.Option(..., exists=True, file_okay=False, dir_okay=True),
     model: Path = typer.Option(..., exists=True, file_okay=True, dir_okay=False),
+    limit: int = typer.Option(
+        0,
+        "--limit",
+        "-n",
+        help="Only run the first N samples (smoke-test). 0 = all.",
+        min=0,
+    ),
 ) -> None:
     """Run a model against a task and write results JSON."""
-    out = run_task(task, model)
+    out = run_task(task, model, limit=limit or None)
     typer.echo(f"wrote: {out}")
 
 

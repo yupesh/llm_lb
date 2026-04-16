@@ -103,3 +103,77 @@ def openai_chat(
 
     # Unreachable: the loop either returns or raises.
     raise RuntimeError(f"openai_chat: exhausted retries ({last_exc})")
+
+
+def openai_chat_messages(
+    base_url: str,
+    headers: dict[str, str],
+    served_name: str,
+    messages: list[dict],
+    params: LLMParams,
+    tools: list[dict] | None = None,
+    timeout: float = 600.0,
+    max_retries: int = 4,
+    backoff_base: float = 2.0,
+) -> dict:
+    """Multi-turn variant of `openai_chat` that returns the raw assistant
+    message (dict with keys `role`, `content`, optional `tool_calls`).
+
+    Used by dialog-simulation tasks where we need the full message history
+    plus optional OpenAI-style function calling.
+    """
+    body: dict = {
+        "model": served_name,
+        "messages": messages,
+        "temperature": params.temperature,
+        "top_p": params.top_p,
+        "max_tokens": params.max_tokens,
+    }
+    if params.seed is not None:
+        body["seed"] = params.seed
+    if tools:
+        body["tools"] = tools
+        body["tool_choice"] = "auto"
+    url = f"{base_url.rstrip('/')}/chat/completions"
+
+    last_exc: Exception | None = None
+    for attempt in range(max_retries + 1):
+        try:
+            with httpx.Client(timeout=timeout) as client:
+                r = client.post(url, headers=headers, json=body)
+                if r.status_code == 400 and "max_tokens" in (r.text or ""):
+                    del body["max_tokens"]
+                    body["max_completion_tokens"] = params.max_tokens
+                    r = client.post(url, headers=headers, json=body)
+                if r.status_code in (429, 500, 502, 503, 504):
+                    last_exc = RuntimeError(
+                        f"{r.status_code} from {base_url} model={served_name}: "
+                        f"{(r.text or '')[:200]}"
+                    )
+                    if attempt < max_retries:
+                        time.sleep(backoff_base**attempt)
+                        continue
+                    raise last_exc
+                if r.is_error:
+                    detail = r.text[:500] if r.text else "(empty body)"
+                    raise RuntimeError(
+                        f"{r.status_code} from {base_url} model={served_name}: {detail}"
+                    )
+                data = r.json()
+            msg = data["choices"][0]["message"]
+            usage = data.get("usage") or {}
+            return {
+                "message": msg,
+                "usage": usage,
+            }
+        except _RETRY_EXCEPTIONS as exc:
+            last_exc = exc
+            if attempt < max_retries:
+                time.sleep(backoff_base**attempt)
+                continue
+            raise RuntimeError(
+                f"network error after {max_retries + 1} attempts to {base_url} "
+                f"model={served_name}: {type(exc).__name__}: {exc}"
+            ) from exc
+
+    raise RuntimeError(f"openai_chat_messages: exhausted retries ({last_exc})")
