@@ -1,0 +1,10 @@
+{
+  "id": "amb_003",
+  "prompt": "What restaurants serve Italian cuisine and what cafes serve the same cuisine?",
+  "expected": "{\"is_ambiguous\": false, \"sql\": \"SELECT Restaurants.Name \\r\\nFROM Restaurants\\r\\nWHERE (Restaurants.Food_Service = \\\"Restaurant\\\" OR Restaurants.Food_Service = \\\"Café\\\") AND Restaurants.Cuisine = \\\"Italian\\\"\"}",
+  "meta": {
+    "db_id": "attachment_1tab_val_food_service",
+    "type": "clear",
+    "source_question_id": 3
+  }
+}

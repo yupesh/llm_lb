@@ -47,6 +47,20 @@ jobs:
         working-directory: runner
         run: uv sync --frozen
 
+      - name: Materialise task context files from secrets
+        # Some tasks reference a `context_file` in task.yaml that's NOT
+        # checked in (e.g. third-party DB schemas we can't re-upload to
+        # GitHub). For each such task, we decode a gzip+base64 GitHub
+        # Secret into the expected path. Missing secret → file not written
+        # → runner degrades gracefully with empty {context}.
+        env:
+          AMBROSIA_SCHEMAS_B64: ${{ secrets.AMBROSIA_SCHEMAS_B64 }}
+        run: |
+          if [ -n "${AMBROSIA_SCHEMAS_B64:-}" ] && [ -d tasks/text2sql_ambiguity ]; then
+            echo "$AMBROSIA_SCHEMAS_B64" | base64 -d | gunzip > tasks/text2sql_ambiguity/db_schemas.json
+            echo "wrote tasks/text2sql_ambiguity/db_schemas.json ($(wc -c < tasks/text2sql_ambiguity/db_schemas.json) bytes)"
+          fi
+
       - name: Run model against task
         working-directory: runner
         env:

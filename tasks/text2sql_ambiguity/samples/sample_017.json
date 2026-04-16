@@ -1,0 +1,10 @@
+{
+  "id": "amb_261",
+  "prompt": "What are the minimum and preferred years of experience for the open position with the greatest salary?",
+  "expected": "{\"is_ambiguous\": false, \"sql\": \"SELECT Minimum_Years, Preferred_Years\\r\\nFROM Jobs\\r\\nORDER BY Salary DESC\\r\\nLIMIT 1;\"}",
+  "meta": {
+    "db_id": "vague_2cols_experience",
+    "type": "clear",
+    "source_question_id": 261
+  }
+}

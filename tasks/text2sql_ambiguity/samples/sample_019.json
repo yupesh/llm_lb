@@ -1,0 +1,10 @@
+{
+  "id": "amb_263",
+  "prompt": "How much might a software developer expect to get paid per hour?",
+  "expected": "{\"is_ambiguous\": false, \"sql\": \"select s.Hourly_Rate \\r\\nfrom position as p \\r\\njoin salarydetails as s \\r\\non p.id=s.positionid \\r\\nwhere p.title = 'Software Developer'\"}",
+  "meta": {
+    "db_id": "vague_2cols_compensation",
+    "type": "clear",
+    "source_question_id": 263
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "amb_112",
+  "prompt": "Which responsibility is shared among all internships?",
+  "expected": "{\"is_ambiguous\": false, \"sql\": \"SELECT Responsibilities.responsibility  from Internships_Responsibilities join Responsibilities on Internships_Responsibilities.responsibilityId = Responsibilities.id join Internships on Internships_Responsibilities.internshipId = Internships.id   GROUP BY Internships_Responsibilities.responsibilityId HAVING COUNT(DISTINCT Internships_Responsibilities.internshipId) = (SELECT COUNT(*) FROM  Internships)\"}",
+  "meta": {
+    "db_id": "scope_internships_responsibilities",
+    "type": "clear",
+    "source_question_id": 112
+  }
+}

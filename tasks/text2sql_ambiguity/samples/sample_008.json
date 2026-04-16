@@ -1,0 +1,10 @@
+{
+  "id": "amb_008",
+  "prompt": "Which chefs speak English and which servers speak the same language?",
+  "expected": "{\"is_ambiguous\": false, \"sql\": \"SELECT Staff.Name \\r\\nFROM Staff\\r\\nWHERE (Staff.Role = \\\"Chef\\\" OR Staff.Role = \\\"Server\\\") AND Staff.Language = \\\"English\\\"\"}",
+  "meta": {
+    "db_id": "attachment_1tab_val_hospitality_staff",
+    "type": "clear",
+    "source_question_id": 8
+  }
+}

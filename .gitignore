@@ -11,3 +11,7 @@ build/
 node_modules/
 site/dist/
 site/public/data/
+
+# Task context files materialised from GitHub Secrets at CI time.
+# See tasks/text2sql_ambiguity/README (if present) and .github/workflows/score.yml.
+tasks/text2sql_ambiguity/db_schemas.json
