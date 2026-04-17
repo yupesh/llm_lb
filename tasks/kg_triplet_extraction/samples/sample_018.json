@@ -1,0 +1,6 @@
+{
+  "id": "kg_te_018",
+  "prompt": "Text: \"Python was created by Guido van Rossum and first released in 1991. It is widely used for machine learning and web development.\"",
+  "expected": "{\"triplets\": [{\"subject\": \"Python\", \"relation\": \"creator\", \"object\": \"Guido van Rossum\", \"qualifiers\": [], \"subject_type\": \"programming language\", \"object_type\": \"human\"}, {\"subject\": \"Python\", \"relation\": \"inception\", \"object\": \"1991\", \"qualifiers\": [], \"subject_type\": \"programming language\", \"object_type\": \"date\"}, {\"subject\": \"Python\", \"relation\": \"use\", \"object\": \"machine learning\", \"qualifiers\": [], \"subject_type\": \"programming language\", \"object_type\": \"field of work\"}, {\"subject\": \"Python\", \"relation\": \"use\", \"object\": \"web development\", \"qualifiers\": [], \"subject_type\": \"programming language\", \"object_type\": \"field of work\"}]}",
+  "meta": {}
+}

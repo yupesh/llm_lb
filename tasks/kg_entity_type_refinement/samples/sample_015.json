@@ -1,0 +1,6 @@
+{
+  "id": "kg_etr_015",
+  "prompt": "Text: \"Django is a Python web framework maintained by the Django Software Foundation.\"\nExtracted Triplet: {\"subject\": \"Django\", \"relation\": \"developer\", \"object\": \"Django Software Foundation\", \"subject_type\": \"software\", \"object_type\": \"organization\"}\nCandidate Subject Types: [\"web framework\", \"free software\", \"software framework\", \"Python library\"]\nCandidate Object Types: [\"organization\", \"non-profit organization\", \"software foundation\", \"open-source project\"]",
+  "expected": "{\"subject_type\": \"web framework\", \"object_type\": \"non-profit organization\"}",
+  "meta": {}
+}

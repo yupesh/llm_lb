@@ -1,0 +1,6 @@
+{
+  "id": "kg_te_001",
+  "prompt": "Text: \"Albert Einstein was born on 14 March 1879 in Ulm, Germany. He received the Nobel Prize in Physics in 1921 for his explanation of the photoelectric effect.\"",
+  "expected": "{\"triplets\": [{\"subject\": \"Albert Einstein\", \"relation\": \"date of birth\", \"object\": \"14 March 1879\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"date\"}, {\"subject\": \"Albert Einstein\", \"relation\": \"place of birth\", \"object\": \"Ulm\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"city\"}, {\"subject\": \"Ulm\", \"relation\": \"country\", \"object\": \"Germany\", \"qualifiers\": [], \"subject_type\": \"city\", \"object_type\": \"country\"}, {\"subject\": \"Albert Einstein\", \"relation\": \"award received\", \"object\": \"Nobel Prize in Physics\", \"qualifiers\": [{\"relation\": \"point in time\", \"object\": \"1921\"}], \"subject_type\": \"human\", \"object_type\": \"award\"}, {\"subject\": \"Albert Einstein\", \"relation\": \"field of work\", \"object\": \"photoelectric effect\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"physical phenomenon\"}]}",
+  "meta": {}
+}

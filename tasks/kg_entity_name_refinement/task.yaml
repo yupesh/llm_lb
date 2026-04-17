@@ -1,0 +1,46 @@
+name: kg_entity_name_refinement
+version: "1.0"
+description: |
+  Knowledge graph entity name refinement — the fourth stage of the Wikontic
+  pipeline.  Given an extracted triplet and a list of candidate entity names
+  from previously seen texts (retrieved by type + name similarity), the model
+  must select the best matching name or return "None" if no candidate fits.
+  Covers both subject and object name refinement in a single task.
+  Uses the production system prompts from wikontic name_refinement.
+  Evaluated with judge_score for flexibility in matching.
+metric:
+  primary: judge_score
+llm_params:
+  temperature: 0.0
+  seed: 42
+prompt_template: |
+  {prompt}
+judge:
+  model: gpt-4o-mini@openai
+  scale_min: 0
+  scale_max: 5
+  forbid_self_judge: true
+  prompt: |
+    You are evaluating entity name refinement for a knowledge graph.
+    The model was given a triplet and candidate entity names, and had to
+    select the best matching name or "None" if no candidate fits.
+
+    The reference shows the expected answer.
+    The candidate shows the model's answer.
+
+    Score the candidate on a scale 0..5:
+      0 = completely wrong name selected
+      1 = wrong name, not semantically close
+      2 = selected a related but incorrect candidate
+      3 = reasonable choice but not the best one
+      4 = correct entity, minor formatting differences
+      5 = perfect match — identical to reference
+
+    Reference:
+    {expected}
+
+    Candidate:
+    {prediction}
+
+    Reply with a single integer 0..5 and nothing else.
+    Score:

@@ -1,0 +1,6 @@
+{
+  "id": "kg_te_012",
+  "prompt": "Text: \"SpaceX was founded by Elon Musk in 2002. The company is headquartered in Hawthorne, California and developed the Falcon 9 rocket.\"",
+  "expected": "{\"triplets\": [{\"subject\": \"SpaceX\", \"relation\": \"founder\", \"object\": \"Elon Musk\", \"qualifiers\": [], \"subject_type\": \"company\", \"object_type\": \"human\"}, {\"subject\": \"SpaceX\", \"relation\": \"inception\", \"object\": \"2002\", \"qualifiers\": [], \"subject_type\": \"company\", \"object_type\": \"date\"}, {\"subject\": \"SpaceX\", \"relation\": \"headquarters location\", \"object\": \"Hawthorne\", \"qualifiers\": [], \"subject_type\": \"company\", \"object_type\": \"city\"}, {\"subject\": \"Hawthorne\", \"relation\": \"located in\", \"object\": \"California\", \"qualifiers\": [], \"subject_type\": \"city\", \"object_type\": \"state\"}, {\"subject\": \"SpaceX\", \"relation\": \"product\", \"object\": \"Falcon 9\", \"qualifiers\": [], \"subject_type\": \"company\", \"object_type\": \"rocket\"}]}",
+  "meta": {}
+}

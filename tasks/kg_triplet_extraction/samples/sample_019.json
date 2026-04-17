@@ -1,0 +1,6 @@
+{
+  "id": "kg_te_019",
+  "prompt": "Text: \"Maria told me she is training for the Berlin Marathon in September. She ran the London Marathon last year in 3 hours 45 minutes.\"",
+  "expected": "{\"triplets\": [{\"subject\": \"Maria\", \"relation\": \"participant in\", \"object\": \"Berlin Marathon\", \"qualifiers\": [{\"relation\": \"point in time\", \"object\": \"September\"}], \"subject_type\": \"human\", \"object_type\": \"sporting event\"}, {\"subject\": \"Maria\", \"relation\": \"participant in\", \"object\": \"London Marathon\", \"qualifiers\": [{\"relation\": \"point in time\", \"object\": \"last year\"}], \"subject_type\": \"human\", \"object_type\": \"sporting event\"}, {\"subject\": \"Maria\", \"relation\": \"performance\", \"object\": \"3 hours 45 minutes\", \"qualifiers\": [{\"relation\": \"applies to\", \"object\": \"London Marathon\"}], \"subject_type\": \"human\", \"object_type\": \"physical quantity\"}]}",
+  "meta": {}
+}

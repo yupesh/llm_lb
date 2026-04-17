@@ -1,0 +1,6 @@
+{
+  "id": "kg_rr_005",
+  "prompt": "Text: \"Tokyo is the capital of Japan.\"\nExtracted Triplet: {\"subject\": \"Japan\", \"relation\": \"capital city\", \"object\": \"Tokyo\", \"subject_type\": \"country\", \"object_type\": \"city\"}\nCandidate relations: [\"capital\", \"capital of\", \"largest city\", \"administrative centre\", \"seat of government\"]",
+  "expected": "{\"relation\": \"capital\"}",
+  "meta": {}
+}

@@ -1,0 +1,6 @@
+{
+  "id": "kg_etr_019",
+  "prompt": "Text: \"Mount Everest is located in the Himalayas on the border of Nepal and Tibet.\"\nExtracted Triplet: {\"subject\": \"Mount Everest\", \"relation\": \"located in\", \"object\": \"Himalayas\", \"subject_type\": \"peak\", \"object_type\": \"mountains\"}\nCandidate Subject Types: [\"mountain\", \"highest point\", \"peak\", \"eight-thousander\"]\nCandidate Object Types: [\"mountain range\", \"mountain system\", \"geographic region\", \"landform\"]",
+  "expected": "{\"subject_type\": \"mountain\", \"object_type\": \"mountain range\"}",
+  "meta": {}
+}

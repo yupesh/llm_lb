@@ -1,0 +1,6 @@
+{
+  "id": "kg_te_009",
+  "prompt": "Text: \"I met Sarah at the conference in Berlin last week. She works as a data scientist at Spotify and just published a paper on recommendation systems.\"",
+  "expected": "{\"triplets\": [{\"subject\": \"speaker\", \"relation\": \"knows\", \"object\": \"Sarah\", \"qualifiers\": [{\"relation\": \"location\", \"object\": \"Berlin\"}], \"subject_type\": \"human\", \"object_type\": \"human\"}, {\"subject\": \"Sarah\", \"relation\": \"employer\", \"object\": \"Spotify\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"company\"}, {\"subject\": \"Sarah\", \"relation\": \"occupation\", \"object\": \"data scientist\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"profession\"}, {\"subject\": \"Sarah\", \"relation\": \"author of\", \"object\": \"paper on recommendation systems\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"scholarly article\"}]}",
+  "meta": {}
+}

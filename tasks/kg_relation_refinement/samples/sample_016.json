@@ -1,0 +1,6 @@
+{
+  "id": "kg_rr_016",
+  "prompt": "Text: \"The Eiffel Tower was completed in 1889.\"\nExtracted Triplet: {\"subject\": \"Eiffel Tower\", \"relation\": \"built in\", \"object\": \"1889\", \"subject_type\": \"building\", \"object_type\": \"date\"}\nCandidate relations: [\"inception\", \"date of official opening\", \"service entry\", \"significant event\", \"start time\"]",
+  "expected": "{\"relation\": \"inception\"}",
+  "meta": {}
+}

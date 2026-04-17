@@ -1,0 +1,6 @@
+{
+  "id": "kg_etr_018",
+  "prompt": "Text: \"She is reading War and Peace by Leo Tolstoy.\"\nExtracted Triplet: {\"subject\": \"War and Peace\", \"relation\": \"author\", \"object\": \"Leo Tolstoy\", \"subject_type\": \"book\", \"object_type\": \"writer\"}\nCandidate Subject Types: [\"novel\", \"literary work\", \"epic novel\", \"written work\"]\nCandidate Object Types: [\"human\", \"writer\", \"novelist\", \"Russian writer\"]",
+  "expected": "{\"subject_type\": \"novel\", \"object_type\": \"human\"}",
+  "meta": {}
+}

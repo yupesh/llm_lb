@@ -1,0 +1,6 @@
+{
+  "id": "kg_rr_015",
+  "prompt": "Text: \"My daughter Emma is studying computer science.\"\nExtracted Triplet: {\"subject\": \"speaker\", \"relation\": \"has daughter\", \"object\": \"Emma\", \"subject_type\": \"human\", \"object_type\": \"human\"}\nCandidate relations: [\"child\", \"relative\", \"family member\", \"sibling\", \"father\"]",
+  "expected": "{\"relation\": \"child\"}",
+  "meta": {}
+}

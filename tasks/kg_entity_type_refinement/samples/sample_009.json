@@ -1,0 +1,6 @@
+{
+  "id": "kg_etr_009",
+  "prompt": "Text: \"He speaks fluent Mandarin and some Japanese.\"\nExtracted Triplet: {\"subject\": \"he\", \"relation\": \"language spoken\", \"object\": \"Mandarin\", \"subject_type\": \"person\", \"object_type\": \"tongue\"}\nCandidate Subject Types: [\"human\", \"fictional character\", \"person\", \"speaker\"]\nCandidate Object Types: [\"language\", \"natural language\", \"dialect\", \"Chinese language\"]",
+  "expected": "{\"subject_type\": \"human\", \"object_type\": \"language\"}",
+  "meta": {}
+}

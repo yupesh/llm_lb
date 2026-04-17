@@ -1,0 +1,6 @@
+{
+  "id": "kg_etr_012",
+  "prompt": "Text: \"My friend plays violin in the Berlin Philharmonic.\"\nExtracted Triplet: {\"subject\": \"friend\", \"relation\": \"member of\", \"object\": \"Berlin Philharmonic\", \"subject_type\": \"person\", \"object_type\": \"orchestra\"}\nCandidate Subject Types: [\"human\", \"musician\", \"instrumentalist\", \"violinist\"]\nCandidate Object Types: [\"orchestra\", \"symphony orchestra\", \"musical ensemble\", \"performing arts group\"]",
+  "expected": "{\"subject_type\": \"human\", \"object_type\": \"orchestra\"}",
+  "meta": {}
+}

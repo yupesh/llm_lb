@@ -1,0 +1,6 @@
+{
+  "id": "kg_te_013",
+  "prompt": "Text: \"We visited the Louvre Museum during our trip to Paris. The Mona Lisa by Leonardo da Vinci is displayed there.\"",
+  "expected": "{\"triplets\": [{\"subject\": \"Louvre Museum\", \"relation\": \"located in\", \"object\": \"Paris\", \"qualifiers\": [], \"subject_type\": \"museum\", \"object_type\": \"city\"}, {\"subject\": \"Mona Lisa\", \"relation\": \"creator\", \"object\": \"Leonardo da Vinci\", \"qualifiers\": [], \"subject_type\": \"painting\", \"object_type\": \"human\"}, {\"subject\": \"Mona Lisa\", \"relation\": \"collection\", \"object\": \"Louvre Museum\", \"qualifiers\": [], \"subject_type\": \"painting\", \"object_type\": \"museum\"}]}",
+  "meta": {}
+}

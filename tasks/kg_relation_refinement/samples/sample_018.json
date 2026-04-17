@@ -1,0 +1,6 @@
+{
+  "id": "kg_rr_018",
+  "prompt": "Text: \"The film grossed over $2 billion at the box office.\"\nExtracted Triplet: {\"subject\": \"film\", \"relation\": \"earnings\", \"object\": \"$2 billion\", \"subject_type\": \"film\", \"object_type\": \"monetary value\"}\nCandidate relations: [\"box office\", \"budget\", \"cost\", \"revenue\", \"production cost\"]",
+  "expected": "{\"relation\": \"box office\"}",
+  "meta": {}
+}

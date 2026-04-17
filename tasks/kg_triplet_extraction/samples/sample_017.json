@@ -1,0 +1,6 @@
+{
+  "id": "kg_te_017",
+  "prompt": "Text: \"My wife and I celebrated our 10th wedding anniversary in Rome last month. We stayed at the Hotel Hassler near the Spanish Steps.\"",
+  "expected": "{\"triplets\": [{\"subject\": \"speaker\", \"relation\": \"spouse\", \"object\": \"wife\", \"qualifiers\": [{\"relation\": \"duration\", \"object\": \"10 years\"}], \"subject_type\": \"human\", \"object_type\": \"human\"}, {\"subject\": \"speaker\", \"relation\": \"visited\", \"object\": \"Rome\", \"qualifiers\": [{\"relation\": \"point in time\", \"object\": \"last month\"}], \"subject_type\": \"human\", \"object_type\": \"city\"}, {\"subject\": \"Hotel Hassler\", \"relation\": \"located near\", \"object\": \"Spanish Steps\", \"qualifiers\": [], \"subject_type\": \"hotel\", \"object_type\": \"landmark\"}, {\"subject\": \"Hotel Hassler\", \"relation\": \"located in\", \"object\": \"Rome\", \"qualifiers\": [], \"subject_type\": \"hotel\", \"object_type\": \"city\"}]}",
+  "meta": {}
+}

@@ -1,0 +1,6 @@
+{
+  "id": "kg_rr_008",
+  "prompt": "Text: \"She speaks fluent French and Italian.\"\nExtracted Triplet: {\"subject\": \"she\", \"relation\": \"speaks\", \"object\": \"French\", \"subject_type\": \"human\", \"object_type\": \"language\"}\nCandidate relations: [\"languages spoken, written or signed\", \"native language\", \"writing language\", \"official language\", \"language of work\"]",
+  "expected": "{\"relation\": \"languages spoken, written or signed\"}",
+  "meta": {}
+}

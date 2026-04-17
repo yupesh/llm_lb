@@ -1,0 +1,6 @@
+{
+  "id": "kg_etr_004",
+  "prompt": "Text: \"She studied biology at Harvard University.\"\nExtracted Triplet: {\"subject\": \"she\", \"relation\": \"educated at\", \"object\": \"Harvard University\", \"subject_type\": \"person\", \"object_type\": \"school\"}\nCandidate Subject Types: [\"human\", \"student\", \"fictional character\", \"group of humans\"]\nCandidate Object Types: [\"university\", \"educational institution\", \"research university\", \"college\"]",
+  "expected": "{\"subject_type\": \"human\", \"object_type\": \"university\"}",
+  "meta": {}
+}

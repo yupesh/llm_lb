@@ -1,0 +1,6 @@
+{
+  "id": "kg_etr_003",
+  "prompt": "Text: \"The Great Gatsby was written by F. Scott Fitzgerald.\"\nExtracted Triplet: {\"subject\": \"The Great Gatsby\", \"relation\": \"author\", \"object\": \"F. Scott Fitzgerald\", \"subject_type\": \"book\", \"object_type\": \"writer\"}\nCandidate Subject Types: [\"literary work\", \"novel\", \"written work\", \"book\"]\nCandidate Object Types: [\"human\", \"writer\", \"novelist\", \"literary critic\"]",
+  "expected": "{\"subject_type\": \"novel\", \"object_type\": \"human\"}",
+  "meta": {}
+}

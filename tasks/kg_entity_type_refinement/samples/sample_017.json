@@ -1,0 +1,6 @@
+{
+  "id": "kg_etr_017",
+  "prompt": "Text: \"The Treaty of Versailles was signed on 28 June 1919.\"\nExtracted Triplet: {\"subject\": \"Treaty of Versailles\", \"relation\": \"date of signature\", \"object\": \"28 June 1919\", \"subject_type\": \"agreement\", \"object_type\": \"date\"}\nCandidate Subject Types: [\"peace treaty\", \"treaty\", \"international agreement\", \"legal document\"]\nCandidate Object Types: [\"point in time\", \"date\", \"calendar date\", \"day\"]",
+  "expected": "{\"subject_type\": \"peace treaty\", \"object_type\": \"point in time\"}",
+  "meta": {}
+}

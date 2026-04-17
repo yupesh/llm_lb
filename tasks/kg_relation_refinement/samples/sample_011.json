@@ -1,0 +1,6 @@
+{
+  "id": "kg_rr_011",
+  "prompt": "Text: \"The company has about 50,000 employees worldwide.\"\nExtracted Triplet: {\"subject\": \"company\", \"relation\": \"number of workers\", \"object\": \"50,000\", \"subject_type\": \"company\", \"object_type\": \"natural number\"}\nCandidate relations: [\"number of employees\", \"members count\", \"number of works\", \"population\", \"staff size\"]",
+  "expected": "{\"relation\": \"number of employees\"}",
+  "meta": {}
+}

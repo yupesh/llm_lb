@@ -1,0 +1,6 @@
+{
+  "id": "kg_te_007",
+  "prompt": "Text: \"We adopted a golden retriever named Max from the shelter in March. He is about two years old and loves swimming.\"",
+  "expected": "{\"triplets\": [{\"subject\": \"speaker\", \"relation\": \"pet\", \"object\": \"Max\", \"qualifiers\": [{\"relation\": \"point in time\", \"object\": \"March\"}], \"subject_type\": \"human\", \"object_type\": \"dog\"}, {\"subject\": \"Max\", \"relation\": \"instance of\", \"object\": \"golden retriever\", \"qualifiers\": [], \"subject_type\": \"dog\", \"object_type\": \"dog breed\"}, {\"subject\": \"Max\", \"relation\": \"age\", \"object\": \"two years\", \"qualifiers\": [], \"subject_type\": \"dog\", \"object_type\": \"physical quantity\"}]}",
+  "meta": {}
+}

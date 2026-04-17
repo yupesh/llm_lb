@@ -1,0 +1,6 @@
+{
+  "id": "kg_rr_010",
+  "prompt": "Text: \"Tom is married to Sarah since 2015.\"\nExtracted Triplet: {\"subject\": \"Tom\", \"relation\": \"married to\", \"object\": \"Sarah\", \"subject_type\": \"human\", \"object_type\": \"human\"}\nCandidate relations: [\"spouse\", \"partner\", \"significant person\", \"relative\", \"unmarried partner\"]",
+  "expected": "{\"relation\": \"spouse\"}",
+  "meta": {}
+}

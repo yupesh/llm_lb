@@ -1,0 +1,6 @@
+{
+  "id": "kg_rr_014",
+  "prompt": "Text: \"BMW is headquartered in Munich, Germany.\"\nExtracted Triplet: {\"subject\": \"BMW\", \"relation\": \"based in\", \"object\": \"Munich\", \"subject_type\": \"automobile manufacturer\", \"object_type\": \"city\"}\nCandidate relations: [\"headquarters location\", \"location\", \"country\", \"place of formation\", \"location of formation\"]",
+  "expected": "{\"relation\": \"headquarters location\"}",
+  "meta": {}
+}

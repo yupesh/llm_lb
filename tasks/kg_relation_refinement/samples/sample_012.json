@@ -1,0 +1,6 @@
+{
+  "id": "kg_rr_012",
+  "prompt": "Text: \"The Amazon River is approximately 6,400 km long.\"\nExtracted Triplet: {\"subject\": \"Amazon River\", \"relation\": \"size\", \"object\": \"6,400 km\", \"subject_type\": \"river\", \"object_type\": \"physical quantity\"}\nCandidate relations: [\"length\", \"width\", \"depth\", \"area\", \"watershed area\"]",
+  "expected": "{\"relation\": \"length\"}",
+  "meta": {}
+}

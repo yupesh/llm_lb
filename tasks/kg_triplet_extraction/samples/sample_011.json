@@ -1,0 +1,6 @@
+{
+  "id": "kg_te_011",
+  "prompt": "Text: \"My brother Tom moved to Vancouver last year. He teaches mathematics at the University of British Columbia.\"",
+  "expected": "{\"triplets\": [{\"subject\": \"speaker\", \"relation\": \"sibling\", \"object\": \"Tom\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"human\"}, {\"subject\": \"Tom\", \"relation\": \"residence\", \"object\": \"Vancouver\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"city\"}, {\"subject\": \"Tom\", \"relation\": \"employer\", \"object\": \"University of British Columbia\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"university\"}, {\"subject\": \"Tom\", \"relation\": \"occupation\", \"object\": \"teacher\", \"qualifiers\": [{\"relation\": \"field of work\", \"object\": \"mathematics\"}], \"subject_type\": \"human\", \"object_type\": \"profession\"}]}",
+  "meta": {}
+}

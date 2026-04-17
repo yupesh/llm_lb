@@ -1,0 +1,6 @@
+{
+  "id": "kg_rr_013",
+  "prompt": "Text: \"She published her research paper in Nature last month.\"\nExtracted Triplet: {\"subject\": \"she\", \"relation\": \"published in\", \"object\": \"Nature\", \"subject_type\": \"human\", \"object_type\": \"scientific journal\"}\nCandidate relations: [\"published in\", \"work featured in\", \"author of\", \"contributor to\", \"editor of\"]",
+  "expected": "{\"relation\": \"published in\"}",
+  "meta": {}
+}

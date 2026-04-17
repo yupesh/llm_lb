@@ -1,0 +1,6 @@
+{
+  "id": "kg_etr_010",
+  "prompt": "Text: \"The painting Starry Night was created by Vincent van Gogh in 1889.\"\nExtracted Triplet: {\"subject\": \"Starry Night\", \"relation\": \"creator\", \"object\": \"Vincent van Gogh\", \"subject_type\": \"artwork\", \"object_type\": \"artist\"}\nCandidate Subject Types: [\"painting\", \"oil painting\", \"work of art\", \"visual artwork\"]\nCandidate Object Types: [\"human\", \"painter\", \"artist\", \"post-impressionist\"]",
+  "expected": "{\"subject_type\": \"painting\", \"object_type\": \"human\"}",
+  "meta": {}
+}

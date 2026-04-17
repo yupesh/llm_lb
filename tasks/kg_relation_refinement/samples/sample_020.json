@@ -1,0 +1,6 @@
+{
+  "id": "kg_rr_020",
+  "prompt": "Text: \"She volunteers at the local Red Cross chapter every weekend.\"\nExtracted Triplet: {\"subject\": \"she\", \"relation\": \"volunteers at\", \"object\": \"Red Cross\", \"subject_type\": \"human\", \"object_type\": \"international organization\"}\nCandidate relations: [\"member of\", \"employer\", \"participant in\", \"affiliation\", \"volunteer of\"]",
+  "expected": "{\"relation\": \"member of\"}",
+  "meta": {}
+}
