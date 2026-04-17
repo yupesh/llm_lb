@@ -16,7 +16,6 @@ metric:
   primary: judge_score
 llm_params:
   temperature: 0.0
-  max_tokens: 30000
   seed: 42
 system_prompt: >-
   Use the provided context as the only source of information when answering.

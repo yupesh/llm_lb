@@ -62,7 +62,7 @@ class LLMParams(BaseModel):
     model_config = _BASE
     temperature: float = 0.0
     top_p: float = 1.0
-    max_tokens: int = 256
+    max_tokens: Optional[int] = None
     seed: Optional[int] = None
 
 

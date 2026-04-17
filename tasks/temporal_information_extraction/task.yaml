@@ -13,7 +13,6 @@ metric:
   primary: judge_score
 llm_params:
   temperature: 0.0
-  max_tokens: 16384
   seed: 42
 system_prompt: >-
   You are an expert at extracting temporal information from text.

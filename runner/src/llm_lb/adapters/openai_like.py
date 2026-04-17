@@ -47,11 +47,12 @@ def openai_chat(
         "messages": messages,
         "temperature": params.temperature,
         "top_p": params.top_p,
+    }
+    if params.max_tokens is not None:
         # Most endpoints (vLLM, TGI, older OpenAI) use `max_tokens`.
         # Newer OpenAI models require `max_completion_tokens` instead.
         # Try `max_tokens` first; on 400 retry with the new name.
-        "max_tokens": params.max_tokens,
-    }
+        body["max_tokens"] = params.max_tokens
     if params.seed is not None:
         body["seed"] = params.seed
     url = f"{base_url.rstrip('/')}/chat/completions"
@@ -63,7 +64,7 @@ def openai_chat(
         try:
             with httpx.Client(timeout=timeout) as client:
                 r = client.post(url, headers=headers, json=body)
-                if r.status_code == 400 and "max_tokens" in (r.text or ""):
+                if r.status_code == 400 and "max_tokens" in body and "max_tokens" in (r.text or ""):
                     # Endpoint requires new-style param — retry.
                     del body["max_tokens"]
                     body["max_completion_tokens"] = params.max_tokens
@@ -127,8 +128,9 @@ def openai_chat_messages(
         "messages": messages,
         "temperature": params.temperature,
         "top_p": params.top_p,
-        "max_tokens": params.max_tokens,
     }
+    if params.max_tokens is not None:
+        body["max_tokens"] = params.max_tokens
     if params.seed is not None:
         body["seed"] = params.seed
     if tools:
@@ -141,7 +143,7 @@ def openai_chat_messages(
         try:
             with httpx.Client(timeout=timeout) as client:
                 r = client.post(url, headers=headers, json=body)
-                if r.status_code == 400 and "max_tokens" in (r.text or ""):
+                if r.status_code == 400 and "max_tokens" in body and "max_tokens" in (r.text or ""):
                     del body["max_tokens"]
                     body["max_completion_tokens"] = params.max_tokens
                     r = client.post(url, headers=headers, json=body)

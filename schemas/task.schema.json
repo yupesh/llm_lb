@@ -49,9 +49,16 @@
           "type": "number"
         },
         "max_tokens": {
-          "default": 256,
-          "title": "Max Tokens",
-          "type": "integer"
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Max Tokens"
         },
         "seed": {
           "anyOf": [
