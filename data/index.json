@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-17T09:59:52+00:00",
+  "generated_at": "2026-04-17T13:31:07+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -75,6 +75,34 @@
         "p95_latency_ms"
       ],
       "n_samples": 10
+    },
+    {
+      "id": "kg_entity_name_refinement",
+      "version": "1.0",
+      "primary_metric": "judge_score",
+      "secondary_metrics": [],
+      "n_samples": 20
+    },
+    {
+      "id": "kg_entity_type_refinement",
+      "version": "1.0",
+      "primary_metric": "judge_score",
+      "secondary_metrics": [],
+      "n_samples": 20
+    },
+    {
+      "id": "kg_relation_refinement",
+      "version": "1.0",
+      "primary_metric": "judge_score",
+      "secondary_metrics": [],
+      "n_samples": 20
+    },
+    {
+      "id": "kg_triplet_extraction",
+      "version": "1.0",
+      "primary_metric": "judge_score",
+      "secondary_metrics": [],
+      "n_samples": 20
     },
     {
       "id": "retail_agent_dialog",
