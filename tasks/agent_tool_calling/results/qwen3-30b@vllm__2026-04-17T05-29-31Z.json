@@ -1,0 +1,251 @@
+{
+  "model_id": "qwen3-30b@vllm",
+  "model_revision": "2025-12-01",
+  "task_id": "agent_tool_calling",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "e754aed9b4fbe821",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "judge_score": 0.5727272727272728
+  },
+  "tps": 38.701398459592774,
+  "p95_latency_ms": 54567.74854899999,
+  "n_samples": 22,
+  "samples": [
+    {
+      "id": "agent_tc_001",
+      "prediction": "[\n    {\"name\": \"add_tool_to_canvas\", \"arguments\": {\"tool_name\": \"calculator_tool\"}},\n    {\"name\": \"add_tool_to_canvas\", \"arguments\": {\"tool_name\": \"summary_tool\"}}\n]",
+      "expected": "[{\"name\": \"get_available_tools\", \"arguments\": {}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 4447.597391999999,
+      "input_tokens": 863,
+      "output_tokens": 169,
+      "judge_raw_score": 1.0
+    },
+    {
+      "id": "agent_tc_002",
+      "prediction": "[\n  {\"name\": \"get_available_tools\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"build_tool\", \"arguments\": {}}, {\"name\": \"get_builds\", \"arguments\": {}}, {\"name\": \"get_editor_state\", \"arguments\": {}}, {\"name\": \"get_available_tools\", \"arguments\": {}}, {\"name\": \"add_assistant_to_canvas\", \"arguments\": {\"assistant_name\": \"assistant\"}}, {\"name\": \"add_tool_to_canvas\", \"arguments\": {\"tool_name\": \"calculator_tool\"}}, {\"name\": \"add_tool_to_canvas\", \"arguments\": {\"tool_name\": \"summary_tool\"}}]",
+      "correct": false,
+      "latency_ms": 9967.793604,
+      "input_tokens": 854,
+      "output_tokens": 448,
+      "judge_raw_score": 1.0
+    },
+    {
+      "id": "agent_tc_003",
+      "prediction": "[\n  {\"name\": \"get_node_editable_params\", \"arguments\": {\"node_id\": \"calculator_tool\"}}\n]",
+      "expected": "[]",
+      "correct": false,
+      "latency_ms": 13775.883995,
+      "input_tokens": 858,
+      "output_tokens": 633,
+      "judge_raw_score": 3.0
+    },
+    {
+      "id": "agent_tc_004",
+      "prediction": "[\n  {\"name\": \"get_available_tools\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_available_tools\", \"arguments\": {}}, {\"name\": \"get_editor_state\", \"arguments\": {}}, {\"name\": \"get_node_editable_params\", \"arguments\": {\"node_id\": \"tool_node-59de848a\"}}]",
+      "correct": false,
+      "latency_ms": 51037.25212499999,
+      "input_tokens": 860,
+      "output_tokens": 2445,
+      "judge_raw_score": 1.0
+    },
+    {
+      "id": "agent_tc_005",
+      "prediction": "[\n  {\"name\": \"set_node_param\", \"arguments\": {\"node_id\": \"summarizer_node_id\", \"param_key\": \"temperature\", \"param_value\": 1}}\n]",
+      "expected": "[{\"name\": \"get_node_editable_params\", \"arguments\": {\"node_id\": \"summarizator\"}}, {\"name\": \"set_node_param\", \"arguments\": {\"node_id\": \"summarizator\", \"param_key\": \"llm_temperature\", \"param_value\": \"1\"}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 19236.493032999988,
+      "input_tokens": 863,
+      "output_tokens": 898,
+      "judge_raw_score": 2.0
+    },
+    {
+      "id": "agent_tc_006",
+      "prediction": "[{\"name\": \"remove_nodes_from_canvas\", \"arguments\": {\"remove_all\": true, \"keep_assistant\": false}}]",
+      "expected": "[{\"name\": \"remove_nodes_from_canvas\", \"arguments\": {\"node_ids\": [\"assistant-2e65021c\"]}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 21379.149267999994,
+      "input_tokens": 858,
+      "output_tokens": 1015,
+      "judge_raw_score": 2.0
+    },
+    {
+      "id": "agent_tc_007",
+      "prediction": "[]",
+      "expected": "[{\"name\": \"add_tool_to_canvas\", \"arguments\": {\"tool_name\": \"text2sql_tool\"}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 5500.233603000026,
+      "input_tokens": 860,
+      "output_tokens": 239,
+      "judge_raw_score": 0.0
+    },
+    {
+      "id": "agent_tc_008",
+      "prediction": "[\n  {\"name\": \"get_editor_state\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": true,
+      "latency_ms": 5083.510431999997,
+      "input_tokens": 857,
+      "output_tokens": 232,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "agent_tc_009",
+      "prediction": "[\n  {\"name\": \"get_editor_state\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"validate_flow\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 3843.4696799999983,
+      "input_tokens": 859,
+      "output_tokens": 171,
+      "judge_raw_score": 1.0
+    },
+    {
+      "id": "agent_tc_010",
+      "prediction": "[\n  {\"name\": \"get_builds\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_builds\", \"arguments\": {}}]",
+      "correct": true,
+      "latency_ms": 5487.3707890000105,
+      "input_tokens": 854,
+      "output_tokens": 235,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "agent_tc_011",
+      "prediction": "[\n  {\"name\": \"get_runs\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_runs\", \"arguments\": {}}]",
+      "correct": true,
+      "latency_ms": 4974.968311999987,
+      "input_tokens": 854,
+      "output_tokens": 226,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "agent_tc_012",
+      "prediction": "[\n    {\"name\": \"remove_nodes_from_canvas\", \"arguments\": {\"remove_all\": true}}\n]",
+      "expected": "[{\"name\": \"remove_nodes_from_canvas\", \"arguments\": {\"remove_all\": true}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 3170.944270999996,
+      "input_tokens": 853,
+      "output_tokens": 139,
+      "judge_raw_score": 3.0
+    },
+    {
+      "id": "agent_tc_013",
+      "prediction": "[\n    {\"name\": \"add_tool_to_canvas\", \"arguments\": {\"tool_name\": \"summary_tool\"}}\n]",
+      "expected": "[{\"name\": \"get_available_tools\", \"arguments\": {}}, {\"name\": \"get_editor_state\", \"arguments\": {}}, {\"name\": \"add_tool_to_canvas\", \"arguments\": {\"tool_name\": \"summary_tool\"}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 3918.0491390000043,
+      "input_tokens": 858,
+      "output_tokens": 175,
+      "judge_raw_score": 1.0
+    },
+    {
+      "id": "agent_tc_014",
+      "prediction": "[\n  {\"name\": \"build_tool\", \"arguments\": {\"task_id\": \"тест 1\"}}\n]",
+      "expected": "[{\"name\": \"build_tool\", \"arguments\": {\"task_id\": \"тест 1\"}}]",
+      "correct": true,
+      "latency_ms": 3198.43408600002,
+      "input_tokens": 863,
+      "output_tokens": 140,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "agent_tc_015",
+      "prediction": "[\n  {\"name\": \"get_builds\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_builds\", \"arguments\": {}}, {\"name\": \"start_run_tool\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 21556.777396,
+      "input_tokens": 859,
+      "output_tokens": 1023,
+      "judge_raw_score": 2.0
+    },
+    {
+      "id": "agent_tc_016",
+      "prediction": "[\n  {\"name\": \"build_tool\", \"arguments\": {}},\n  {\"name\": \"get_builds\", \"arguments\": {}},\n  {\"name\": \"start_run_tool\", \"arguments\": {\"build_id\": \"latest_build_id\"}},\n  {\"name\": \"get_runs\", \"arguments\": {}},\n  {\"name\": \"add_process_comment\", \"arguments\": {\"process_type\": \"build\", \"id\": \"latest_build_id\", \"comment\": \"Initial build comment\"}},\n  {\"name\": \"add_process_comment\", \"arguments\": {\"process_type\": \"run\", \"id\": \"latest_run_id\", \"comment\": \"Initial run comment\"}},\n  {\"name\": \"rename_process\", \"arguments\": {\"process_type\": \"build\", \"id\": \"latest_build_id\", \"new_name\": \"My Build\"}},\n  {\"name\": \"rename_process\", \"arguments\": {\"process_type\": \"run\", \"id\": \"latest_run_id\", \"new_name\": \"My Run\"}}\n]",
+      "expected": "[{\"name\": \"build_tool\", \"arguments\": {}}, {\"name\": \"rename_process\", \"arguments\": {\"process_type\": \"build\"}}, {\"name\": \"add_process_comment\", \"arguments\": {\"process_type\": \"build\"}}, {\"name\": \"start_run_tool\", \"arguments\": {}}, {\"name\": \"rename_process\", \"arguments\": {\"process_type\": \"run\"}}, {\"name\": \"add_process_comment\", \"arguments\": {\"process_type\": \"run\"}}]",
+      "correct": false,
+      "latency_ms": 72480.91698300002,
+      "input_tokens": 882,
+      "output_tokens": 2372,
+      "judge_raw_score": 3.0
+    },
+    {
+      "id": "agent_tc_017",
+      "prediction": "[\n  {\"name\": \"get_builds\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_builds\", \"arguments\": {}}]",
+      "correct": true,
+      "latency_ms": 4737.52347300001,
+      "input_tokens": 854,
+      "output_tokens": 146,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "agent_tc_018",
+      "prediction": "[\n  {\"name\": \"get_runs\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_runs\", \"arguments\": {}}]",
+      "correct": true,
+      "latency_ms": 5890.371372000004,
+      "input_tokens": 857,
+      "output_tokens": 265,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "agent_tc_019",
+      "prediction": "[\n  {\"name\": \"get_editor_state\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_editor_state\", \"arguments\": {}}, {\"name\": \"remove_nodes_from_canvas\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 54567.74854899999,
+      "input_tokens": 856,
+      "output_tokens": 1593,
+      "judge_raw_score": 1.0
+    },
+    {
+      "id": "agent_tc_020",
+      "prediction": "[\n  {\"name\": \"get_available_tools\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_available_tools\", \"arguments\": {}}]",
+      "correct": true,
+      "latency_ms": 14183.112839999978,
+      "input_tokens": 857,
+      "output_tokens": 179,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "agent_tc_021",
+      "prediction": "[\n  {\"name\": \"get_editor_state\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": true,
+      "latency_ms": 6565.154894999978,
+      "input_tokens": 862,
+      "output_tokens": 193,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "agent_tc_022",
+      "prediction": "[\n  {\"name\": \"get_node_requirements\", \"arguments\": {\"node_id\": \"calculator_tool\"}}\n]",
+      "expected": "[{\"name\": \"get_editor_state\", \"arguments\": {}}, {\"name\": \"get_node_editable_params\", \"arguments\": {\"node_id\": \"calculator_tool\"}}]",
+      "correct": false,
+      "latency_ms": 10023.536615000012,
+      "input_tokens": 860,
+      "output_tokens": 417,
+      "judge_raw_score": 2.0
+    }
+  ],
+  "created_at": "2026-04-17T05:29:31+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": "gpt-4o-mini@openai",
+  "judge_model_revision": "2024-07-18",
+  "judge_prompt_hash": "8c7ef62de93530b1"
+}
