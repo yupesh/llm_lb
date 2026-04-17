@@ -1,0 +1,6 @@
+{
+  "id": "kg_te_015",
+  "prompt": "Text: \"The Great Wall of China was built over many centuries, primarily during the Ming Dynasty (1368-1644). It stretches approximately 21,196 km.\"",
+  "expected": "{\"triplets\": [{\"subject\": \"Great Wall of China\", \"relation\": \"significant event\", \"object\": \"construction\", \"qualifiers\": [{\"relation\": \"point in time\", \"object\": \"Ming Dynasty (1368-1644)\"}], \"subject_type\": \"building\", \"object_type\": \"event\"}, {\"subject\": \"Great Wall of China\", \"relation\": \"length\", \"object\": \"21,196 km\", \"qualifiers\": [], \"subject_type\": \"building\", \"object_type\": \"physical quantity\"}, {\"subject\": \"Great Wall of China\", \"relation\": \"country\", \"object\": \"China\", \"qualifiers\": [], \"subject_type\": \"building\", \"object_type\": \"country\"}]}",
+  "meta": {}
+}

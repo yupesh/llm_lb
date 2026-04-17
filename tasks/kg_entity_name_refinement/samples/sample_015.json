@@ -1,0 +1,8 @@
+{
+  "id": "kg_enr_015",
+  "prompt": "Text: \"He works at the WHO coordinating pandemic response.\"\nExtracted Triplet: {\"subject\": \"he\", \"relation\": \"employer\", \"object\": \"WHO\"}\nOriginal Entity: WHO\nCandidate Entities: [\"World Health Organization\", \"World Heritage Organization\", \"Women Helping Others\"]",
+  "expected": "World Health Organization",
+  "meta": {
+    "refinement_type": "object"
+  }
+}

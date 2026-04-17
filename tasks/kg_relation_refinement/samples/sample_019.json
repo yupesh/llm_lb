@@ -1,0 +1,6 @@
+{
+  "id": "kg_rr_019",
+  "prompt": "Text: \"Mars has two natural satellites: Phobos and Deimos.\"\nExtracted Triplet: {\"subject\": \"Mars\", \"relation\": \"has moon\", \"object\": \"Phobos\", \"subject_type\": \"planet\", \"object_type\": \"natural satellite\"}\nCandidate relations: [\"has part\", \"natural satellite\", \"child astronomical body\", \"orbits\", \"part of\"]",
+  "expected": "{\"relation\": \"natural satellite\"}",
+  "meta": {}
+}

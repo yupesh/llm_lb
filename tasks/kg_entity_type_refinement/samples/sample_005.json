@@ -1,0 +1,6 @@
+{
+  "id": "kg_etr_005",
+  "prompt": "Text: \"The Nile flows through Egypt and Sudan.\"\nExtracted Triplet: {\"subject\": \"Nile\", \"relation\": \"country\", \"object\": \"Egypt\", \"subject_type\": \"river\", \"object_type\": \"nation\"}\nCandidate Subject Types: [\"river\", \"watercourse\", \"body of water\", \"stream\"]\nCandidate Object Types: [\"country\", \"sovereign state\", \"state\", \"republic\"]",
+  "expected": "{\"subject_type\": \"river\", \"object_type\": \"country\"}",
+  "meta": {}
+}

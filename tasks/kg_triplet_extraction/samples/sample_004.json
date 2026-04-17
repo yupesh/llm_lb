@@ -1,0 +1,6 @@
+{
+  "id": "kg_te_004",
+  "prompt": "Text: \"My daughter Emma graduated from MIT with a degree in Computer Science last June. She is now doing her PhD at Stanford.\"",
+  "expected": "{\"triplets\": [{\"subject\": \"Emma\", \"relation\": \"educated at\", \"object\": \"MIT\", \"qualifiers\": [{\"relation\": \"academic major\", \"object\": \"Computer Science\"}], \"subject_type\": \"human\", \"object_type\": \"university\"}, {\"subject\": \"Emma\", \"relation\": \"educated at\", \"object\": \"Stanford\", \"qualifiers\": [{\"relation\": \"academic degree\", \"object\": \"PhD\"}], \"subject_type\": \"human\", \"object_type\": \"university\"}, {\"subject\": \"speaker\", \"relation\": \"child\", \"object\": \"Emma\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"human\"}]}",
+  "meta": {}
+}

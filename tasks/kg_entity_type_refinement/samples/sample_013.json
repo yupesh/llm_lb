@@ -1,0 +1,6 @@
+{
+  "id": "kg_etr_013",
+  "prompt": "Text: \"Mars has two moons: Phobos and Deimos.\"\nExtracted Triplet: {\"subject\": \"Mars\", \"relation\": \"natural satellite\", \"object\": \"Phobos\", \"subject_type\": \"planet\", \"object_type\": \"moon\"}\nCandidate Subject Types: [\"planet\", \"inner planet\", \"terrestrial planet\", \"solar system body\"]\nCandidate Object Types: [\"natural satellite\", \"moon\", \"astronomical object\", \"minor planet\"]",
+  "expected": "{\"subject_type\": \"inner planet\", \"object_type\": \"natural satellite\"}",
+  "meta": {}
+}

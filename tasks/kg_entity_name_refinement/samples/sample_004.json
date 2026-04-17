@@ -1,0 +1,8 @@
+{
+  "id": "kg_enr_004",
+  "prompt": "Text: \"Gates donated billions to fight malaria.\"\nExtracted Triplet: {\"subject\": \"Gates\", \"relation\": \"donated to\", \"object\": \"malaria research\"}\nOriginal Entity: Gates\nCandidate Entities: [\"Bill Gates\", \"Melinda Gates\", \"Robert Gates\"]",
+  "expected": "Bill Gates",
+  "meta": {
+    "refinement_type": "subject"
+  }
+}

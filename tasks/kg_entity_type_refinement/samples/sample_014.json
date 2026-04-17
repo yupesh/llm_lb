@@ -1,0 +1,6 @@
+{
+  "id": "kg_etr_014",
+  "prompt": "Text: \"She won a gold medal in swimming at the 2024 Olympics.\"\nExtracted Triplet: {\"subject\": \"she\", \"relation\": \"award received\", \"object\": \"gold medal\", \"subject_type\": \"athlete\", \"object_type\": \"prize\"}\nCandidate Subject Types: [\"human\", \"swimmer\", \"athlete\", \"Olympic athlete\"]\nCandidate Object Types: [\"gold medal\", \"Olympic medal\", \"award\", \"medal\"]",
+  "expected": "{\"subject_type\": \"human\", \"object_type\": \"gold medal\"}",
+  "meta": {}
+}

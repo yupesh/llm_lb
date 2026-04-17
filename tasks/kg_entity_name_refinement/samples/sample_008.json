@@ -1,0 +1,8 @@
+{
+  "id": "kg_enr_008",
+  "prompt": "Text: \"Bach composed The Well-Tempered Clavier.\"\nExtracted Triplet: {\"subject\": \"Bach\", \"relation\": \"composer\", \"object\": \"The Well-Tempered Clavier\"}\nOriginal Entity: Bach\nCandidate Entities: [\"Johann Sebastian Bach\", \"C. P. E. Bach\", \"J. C. Bach\"]",
+  "expected": "Johann Sebastian Bach",
+  "meta": {
+    "refinement_type": "subject"
+  }
+}

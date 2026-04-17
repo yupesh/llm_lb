@@ -1,0 +1,6 @@
+{
+  "id": "kg_etr_007",
+  "prompt": "Text: \"We adopted a cat named Whiskers from the animal shelter.\"\nExtracted Triplet: {\"subject\": \"speaker\", \"relation\": \"pet\", \"object\": \"Whiskers\", \"subject_type\": \"person\", \"object_type\": \"animal\"}\nCandidate Subject Types: [\"human\", \"family\", \"group of humans\", \"person\"]\nCandidate Object Types: [\"cat\", \"domestic animal\", \"pet\", \"organism\"]",
+  "expected": "{\"subject_type\": \"human\", \"object_type\": \"cat\"}",
+  "meta": {}
+}

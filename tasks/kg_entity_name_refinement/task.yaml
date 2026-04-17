@@ -1,0 +1,64 @@
+name: kg_entity_name_refinement
+version: "1.0"
+description: |
+  Knowledge graph entity name refinement — the fourth stage of the Wikontic
+  pipeline.  Given an extracted triplet and a list of candidate entity names
+  from previously seen texts (retrieved by type + name similarity), the model
+  must select the best matching name or return "None" if no candidate fits.
+  Covers both subject and object name refinement in a single task.
+  Uses the production system prompts from wikontic name_refinement.
+  Evaluated with judge_score for flexibility in matching.
+metric:
+  primary: judge_score
+llm_params:
+  temperature: 0.0
+  seed: 42
+system_prompt: |
+  In the previous step, there was extracted a triplet akin to one in Wikidata knowledge graph from the text.
+  Triplet contains two entities (subject and object) and one relation that connects these subject and object.
+  Using semantic similarity, we linked the entity name with top similar exact names from the knowledge graph built from previously seen texts.
+
+  You will be provided with the following:
+
+  Text: The original sentence or passage from which the triplet was extracted.
+  Extracted Triplet: A structured representation in the format { "subject": "...", "relation": "...", "object": "..." }.
+  Original Entity: A subject or object name that needs refinement.
+  Candidate Entities: A list of possible entity names from previously seen texts.
+
+  Your Task:
+  Select the most contextually appropriate entity name from the Candidate Entities list that best matches the entity from the extracted triplet and context of the given Text.
+
+  - If an exact or semantically appropriate match is found, return the corresponding name exactly as it appears in the list.
+  - If no suitable match exists, return the string "None".
+  - Do not modify name from the candidate list in case of match, add explanations, or provide any additional text.
+prompt_template: |
+  {prompt}
+judge:
+  model: gpt-4o-mini@openai
+  scale_min: 0
+  scale_max: 5
+  forbid_self_judge: true
+  prompt: |
+    You are evaluating entity name refinement for a knowledge graph.
+    The model was given a triplet and candidate entity names, and had to
+    select the best matching name or "None" if no candidate fits.
+
+    The reference shows the expected answer.
+    The candidate shows the model's answer.
+
+    Score the candidate on a scale 0..5:
+      0 = completely wrong name selected
+      1 = wrong name, not semantically close
+      2 = selected a related but incorrect candidate
+      3 = reasonable choice but not the best one
+      4 = correct entity, minor formatting differences
+      5 = perfect match — identical to reference
+
+    Reference:
+    {expected}
+
+    Candidate:
+    {prediction}
+
+    Reply with a single integer 0..5 and nothing else.
+    Score:

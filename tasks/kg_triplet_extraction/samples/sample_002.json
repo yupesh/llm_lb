@@ -1,0 +1,6 @@
+{
+  "id": "kg_te_002",
+  "prompt": "Text: \"I just started working at Google last month. Before that I was at Microsoft for three years as a software engineer.\"",
+  "expected": "{\"triplets\": [{\"subject\": \"speaker\", \"relation\": \"employer\", \"object\": \"Google\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"company\"}, {\"subject\": \"speaker\", \"relation\": \"employer\", \"object\": \"Microsoft\", \"qualifiers\": [{\"relation\": \"duration\", \"object\": \"three years\"}], \"subject_type\": \"human\", \"object_type\": \"company\"}, {\"subject\": \"speaker\", \"relation\": \"occupation\", \"object\": \"software engineer\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"profession\"}]}",
+  "meta": {}
+}

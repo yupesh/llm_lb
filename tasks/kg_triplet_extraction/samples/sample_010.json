@@ -1,0 +1,6 @@
+{
+  "id": "kg_te_010",
+  "prompt": "Text: \"Beethoven composed his Ninth Symphony between 1822 and 1824. It was first performed in Vienna on 7 May 1824.\"",
+  "expected": "{\"triplets\": [{\"subject\": \"Ninth Symphony\", \"relation\": \"composer\", \"object\": \"Beethoven\", \"qualifiers\": [{\"relation\": \"start time\", \"object\": \"1822\"}, {\"relation\": \"end time\", \"object\": \"1824\"}], \"subject_type\": \"musical composition\", \"object_type\": \"human\"}, {\"subject\": \"Ninth Symphony\", \"relation\": \"first performance\", \"object\": \"7 May 1824\", \"qualifiers\": [{\"relation\": \"location\", \"object\": \"Vienna\"}], \"subject_type\": \"musical composition\", \"object_type\": \"date\"}]}",
+  "meta": {}
+}

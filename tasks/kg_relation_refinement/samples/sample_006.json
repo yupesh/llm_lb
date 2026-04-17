@@ -1,0 +1,6 @@
+{
+  "id": "kg_rr_006",
+  "prompt": "Text: \"Marie Curie received the Nobel Prize in Physics in 1903.\"\nExtracted Triplet: {\"subject\": \"Marie Curie\", \"relation\": \"won\", \"object\": \"Nobel Prize in Physics\", \"subject_type\": \"human\", \"object_type\": \"award\"}\nCandidate relations: [\"award received\", \"nominated for\", \"winner of\", \"prize money\", \"honorific suffix\"]",
+  "expected": "{\"relation\": \"award received\"}",
+  "meta": {}
+}

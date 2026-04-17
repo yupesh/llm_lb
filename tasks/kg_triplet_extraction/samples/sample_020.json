@@ -1,0 +1,6 @@
+{
+  "id": "kg_te_020",
+  "prompt": "Text: \"The meeting with the Tokyo office is scheduled for next Wednesday at 9 AM. Tanaka-san and Yamamoto-san will present the Q3 sales report.\"",
+  "expected": "{\"triplets\": [{\"subject\": \"meeting\", \"relation\": \"location\", \"object\": \"Tokyo office\", \"qualifiers\": [{\"relation\": \"point in time\", \"object\": \"next Wednesday at 9 AM\"}], \"subject_type\": \"event\", \"object_type\": \"office\"}, {\"subject\": \"Tanaka-san\", \"relation\": \"participant in\", \"object\": \"meeting\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"event\"}, {\"subject\": \"Yamamoto-san\", \"relation\": \"participant in\", \"object\": \"meeting\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"event\"}, {\"subject\": \"Tanaka-san\", \"relation\": \"presenter of\", \"object\": \"Q3 sales report\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"report\"}, {\"subject\": \"Yamamoto-san\", \"relation\": \"presenter of\", \"object\": \"Q3 sales report\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"report\"}]}",
+  "meta": {}
+}

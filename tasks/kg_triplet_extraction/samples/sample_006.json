@@ -1,0 +1,6 @@
+{
+  "id": "kg_te_006",
+  "prompt": "Text: \"Christopher Nolan directed Inception in 2010. The film starred Leonardo DiCaprio and won four Academy Awards.\"",
+  "expected": "{\"triplets\": [{\"subject\": \"Inception\", \"relation\": \"director\", \"object\": \"Christopher Nolan\", \"qualifiers\": [], \"subject_type\": \"film\", \"object_type\": \"human\"}, {\"subject\": \"Inception\", \"relation\": \"publication date\", \"object\": \"2010\", \"qualifiers\": [], \"subject_type\": \"film\", \"object_type\": \"date\"}, {\"subject\": \"Inception\", \"relation\": \"cast member\", \"object\": \"Leonardo DiCaprio\", \"qualifiers\": [], \"subject_type\": \"film\", \"object_type\": \"human\"}, {\"subject\": \"Inception\", \"relation\": \"award received\", \"object\": \"Academy Award\", \"qualifiers\": [{\"relation\": \"number of\", \"object\": \"4\"}], \"subject_type\": \"film\", \"object_type\": \"award\"}]}",
+  "meta": {}
+}

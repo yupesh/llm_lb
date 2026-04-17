@@ -1,0 +1,6 @@
+{
+  "id": "kg_te_016",
+  "prompt": "Text: \"Dr. Chen published her research on Alzheimer's disease in Nature last September. She works at Johns Hopkins University.\"",
+  "expected": "{\"triplets\": [{\"subject\": \"Dr. Chen\", \"relation\": \"author of\", \"object\": \"research on Alzheimer's disease\", \"qualifiers\": [{\"relation\": \"published in\", \"object\": \"Nature\"}, {\"relation\": \"point in time\", \"object\": \"last September\"}], \"subject_type\": \"human\", \"object_type\": \"scholarly article\"}, {\"subject\": \"Dr. Chen\", \"relation\": \"employer\", \"object\": \"Johns Hopkins University\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"university\"}]}",
+  "meta": {}
+}

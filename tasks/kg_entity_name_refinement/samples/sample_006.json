@@ -1,0 +1,8 @@
+{
+  "id": "kg_enr_006",
+  "prompt": "Text: \"My neighbor Dr. Smith recommended a new dentist.\"\nExtracted Triplet: {\"subject\": \"Dr. Smith\", \"relation\": \"recommended\", \"object\": \"dentist\"}\nOriginal Entity: Dr. Smith\nCandidate Entities: [\"John Smith\", \"Sarah Smith\", \"Dr. Robert Smith\"]",
+  "expected": "None",
+  "meta": {
+    "refinement_type": "subject"
+  }
+}

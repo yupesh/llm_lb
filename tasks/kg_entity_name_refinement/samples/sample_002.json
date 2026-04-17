@@ -1,0 +1,8 @@
+{
+  "id": "kg_enr_002",
+  "prompt": "Text: \"She told me Tom started a new job at the bank downtown.\"\nExtracted Triplet: {\"subject\": \"Tom\", \"relation\": \"employer\", \"object\": \"bank\"}\nOriginal Entity: Tom\nCandidate Entities: [\"Thomas Anderson\", \"Tom Harris\", \"Tommy Lee\"]",
+  "expected": "None",
+  "meta": {
+    "refinement_type": "subject"
+  }
+}

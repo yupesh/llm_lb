@@ -1,0 +1,8 @@
+{
+  "id": "kg_enr_003",
+  "prompt": "Text: \"Da Vinci painted the Last Supper in the late 15th century.\"\nExtracted Triplet: {\"subject\": \"Da Vinci\", \"relation\": \"creator\", \"object\": \"Last Supper\"}\nOriginal Entity: Da Vinci\nCandidate Entities: [\"Leonardo da Vinci\", \"Leonardo DiCaprio\", \"Da Vinci Code\"]",
+  "expected": "Leonardo da Vinci",
+  "meta": {
+    "refinement_type": "subject"
+  }
+}

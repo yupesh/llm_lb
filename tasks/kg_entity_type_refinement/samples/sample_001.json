@@ -1,0 +1,6 @@
+{
+  "id": "kg_etr_001",
+  "prompt": "Text: \"Albert Einstein was born in Ulm, Germany.\"\nExtracted Triplet: {\"subject\": \"Albert Einstein\", \"relation\": \"place of birth\", \"object\": \"Ulm\", \"subject_type\": \"person\", \"object_type\": \"place\"}\nCandidate Subject Types: [\"human\", \"fictional character\", \"group of humans\", \"deity\"]\nCandidate Object Types: [\"city\", \"village\", \"administrative territorial entity\", \"geographic region\"]",
+  "expected": "{\"subject_type\": \"human\", \"object_type\": \"city\"}",
+  "meta": {}
+}

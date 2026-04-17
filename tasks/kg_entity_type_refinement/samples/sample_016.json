@@ -1,0 +1,6 @@
+{
+  "id": "kg_etr_016",
+  "prompt": "Text: \"We had dinner at a sushi restaurant in Shibuya.\"\nExtracted Triplet: {\"subject\": \"speaker\", \"relation\": \"visited\", \"object\": \"sushi restaurant\", \"subject_type\": \"person\", \"object_type\": \"eatery\"}\nCandidate Subject Types: [\"human\", \"group of humans\", \"person\", \"tourist\"]\nCandidate Object Types: [\"restaurant\", \"eating establishment\", \"Japanese restaurant\", \"sushi bar\"]",
+  "expected": "{\"subject_type\": \"human\", \"object_type\": \"restaurant\"}",
+  "meta": {}
+}

@@ -1,0 +1,6 @@
+{
+  "id": "kg_rr_017",
+  "prompt": "Text: \"He is a member of the European Parliament.\"\nExtracted Triplet: {\"subject\": \"he\", \"relation\": \"belongs to\", \"object\": \"European Parliament\", \"subject_type\": \"human\", \"object_type\": \"organization\"}\nCandidate relations: [\"member of\", \"position held\", \"affiliation\", \"part of\", \"participant in\"]",
+  "expected": "{\"relation\": \"member of\"}",
+  "meta": {}
+}

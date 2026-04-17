@@ -1,0 +1,8 @@
+{
+  "id": "kg_enr_012",
+  "prompt": "Text: \"He moved to NYC last year for a new job.\"\nExtracted Triplet: {\"subject\": \"he\", \"relation\": \"residence\", \"object\": \"NYC\"}\nOriginal Entity: NYC\nCandidate Entities: [\"New York City\", \"New York (state)\", \"New York metropolitan area\"]",
+  "expected": "New York City",
+  "meta": {
+    "refinement_type": "object"
+  }
+}

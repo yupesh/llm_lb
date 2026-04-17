@@ -1,0 +1,8 @@
+{
+  "id": "kg_enr_020",
+  "prompt": "Text: \"He donated to the WWF to protect endangered species.\"\nExtracted Triplet: {\"subject\": \"he\", \"relation\": \"donated to\", \"object\": \"WWF\"}\nOriginal Entity: WWF\nCandidate Entities: [\"World Wildlife Fund\", \"World Wrestling Federation\", \"World Wide Fund for Nature\"]",
+  "expected": "World Wildlife Fund",
+  "meta": {
+    "refinement_type": "object"
+  }
+}

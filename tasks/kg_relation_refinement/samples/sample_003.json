@@ -1,0 +1,6 @@
+{
+  "id": "kg_rr_003",
+  "prompt": "Text: \"The Mona Lisa was painted by Leonardo da Vinci.\"\nExtracted Triplet: {\"subject\": \"Mona Lisa\", \"relation\": \"painted by\", \"object\": \"Leonardo da Vinci\", \"subject_type\": \"painting\", \"object_type\": \"human\"}\nCandidate relations: [\"creator\", \"author\", \"designer\", \"manufacturer\", \"commissioned by\"]",
+  "expected": "{\"relation\": \"creator\"}",
+  "meta": {}
+}

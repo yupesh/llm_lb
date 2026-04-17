@@ -1,0 +1,8 @@
+{
+  "id": "kg_enr_001",
+  "prompt": "Text: \"Einstein published his theory of general relativity in 1915.\"\nExtracted Triplet: {\"subject\": \"Einstein\", \"relation\": \"author of\", \"object\": \"theory of general relativity\"}\nOriginal Entity: Einstein\nCandidate Entities: [\"Albert Einstein\", \"Albert Brooks\", \"Alfred Einstein\"]",
+  "expected": "Albert Einstein",
+  "meta": {
+    "refinement_type": "subject"
+  }
+}

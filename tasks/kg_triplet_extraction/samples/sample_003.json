@@ -1,0 +1,6 @@
+{
+  "id": "kg_te_003",
+  "prompt": "Text: \"The Eiffel Tower, designed by Gustave Eiffel, was completed in 1889 in Paris. It stands 330 meters tall and attracts about 7 million visitors annually.\"",
+  "expected": "{\"triplets\": [{\"subject\": \"Eiffel Tower\", \"relation\": \"creator\", \"object\": \"Gustave Eiffel\", \"qualifiers\": [], \"subject_type\": \"building\", \"object_type\": \"human\"}, {\"subject\": \"Eiffel Tower\", \"relation\": \"inception\", \"object\": \"1889\", \"qualifiers\": [], \"subject_type\": \"building\", \"object_type\": \"date\"}, {\"subject\": \"Eiffel Tower\", \"relation\": \"located in\", \"object\": \"Paris\", \"qualifiers\": [], \"subject_type\": \"building\", \"object_type\": \"city\"}, {\"subject\": \"Eiffel Tower\", \"relation\": \"height\", \"object\": \"330 meters\", \"qualifiers\": [], \"subject_type\": \"building\", \"object_type\": \"physical quantity\"}]}",
+  "meta": {}
+}

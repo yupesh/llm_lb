@@ -1,0 +1,6 @@
+{
+  "id": "kg_etr_020",
+  "prompt": "Text: \"He donated $5 million to the Red Cross after the earthquake.\"\nExtracted Triplet: {\"subject\": \"he\", \"relation\": \"donated to\", \"object\": \"Red Cross\", \"subject_type\": \"person\", \"object_type\": \"charity\"}\nCandidate Subject Types: [\"human\", \"philanthropist\", \"donor\", \"person\"]\nCandidate Object Types: [\"international organization\", \"charitable organization\", \"non-governmental organization\", \"humanitarian organization\"]",
+  "expected": "{\"subject_type\": \"human\", \"object_type\": \"international organization\"}",
+  "meta": {}
+}

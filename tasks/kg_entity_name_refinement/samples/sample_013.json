@@ -1,0 +1,8 @@
+{
+  "id": "kg_enr_013",
+  "prompt": "Text: \"She is studying ML at the university.\"\nExtracted Triplet: {\"subject\": \"she\", \"relation\": \"field of work\", \"object\": \"ML\"}\nOriginal Entity: ML\nCandidate Entities: [\"machine learning\", \"markup language\", \"milliliter\"]",
+  "expected": "machine learning",
+  "meta": {
+    "refinement_type": "object"
+  }
+}

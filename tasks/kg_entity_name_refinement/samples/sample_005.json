@@ -1,0 +1,8 @@
+{
+  "id": "kg_enr_005",
+  "prompt": "Text: \"Queen released Bohemian Rhapsody in 1975.\"\nExtracted Triplet: {\"subject\": \"Queen\", \"relation\": \"performer\", \"object\": \"Bohemian Rhapsody\"}\nOriginal Entity: Queen\nCandidate Entities: [\"Queen (band)\", \"Queen Elizabeth II\", \"Queen Latifah\"]",
+  "expected": "Queen (band)",
+  "meta": {
+    "refinement_type": "subject"
+  }
+}

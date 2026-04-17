@@ -1,0 +1,8 @@
+{
+  "id": "kg_enr_018",
+  "prompt": "Text: \"The kids love watching Frozen every weekend.\"\nExtracted Triplet: {\"subject\": \"kids\", \"relation\": \"likes\", \"object\": \"Frozen\"}\nOriginal Entity: Frozen\nCandidate Entities: [\"Frozen (2013 film)\", \"Frozen (musical)\", \"Frozen food\"]",
+  "expected": "Frozen (2013 film)",
+  "meta": {
+    "refinement_type": "object"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "id": "kg_etr_008",
+  "prompt": "Text: \"The conference on climate change was held in Geneva, Switzerland.\"\nExtracted Triplet: {\"subject\": \"conference on climate change\", \"relation\": \"location\", \"object\": \"Geneva\", \"subject_type\": \"meeting\", \"object_type\": \"place\"}\nCandidate Subject Types: [\"conference\", \"academic conference\", \"summit\", \"event\"]\nCandidate Object Types: [\"city\", \"municipality\", \"town\", \"administrative territorial entity\"]",
+  "expected": "{\"subject_type\": \"conference\", \"object_type\": \"city\"}",
+  "meta": {}
+}

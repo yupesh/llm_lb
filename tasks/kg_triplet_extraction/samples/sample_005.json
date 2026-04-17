@@ -1,0 +1,6 @@
+{
+  "id": "kg_te_005",
+  "prompt": "Text: \"Tokyo is the capital of Japan and has a population of about 14 million people. The official language is Japanese.\"",
+  "expected": "{\"triplets\": [{\"subject\": \"Japan\", \"relation\": \"capital\", \"object\": \"Tokyo\", \"qualifiers\": [], \"subject_type\": \"country\", \"object_type\": \"city\"}, {\"subject\": \"Tokyo\", \"relation\": \"population\", \"object\": \"14 million\", \"qualifiers\": [], \"subject_type\": \"city\", \"object_type\": \"natural number\"}, {\"subject\": \"Japan\", \"relation\": \"official language\", \"object\": \"Japanese\", \"qualifiers\": [], \"subject_type\": \"country\", \"object_type\": \"language\"}]}",
+  "meta": {}
+}

@@ -1,0 +1,6 @@
+{
+  "id": "kg_te_008",
+  "prompt": "Text: \"The Amazon River flows through Brazil, Peru, and Colombia. It is approximately 6,400 km long, making it the second longest river in the world.\"",
+  "expected": "{\"triplets\": [{\"subject\": \"Amazon River\", \"relation\": \"country\", \"object\": \"Brazil\", \"qualifiers\": [], \"subject_type\": \"river\", \"object_type\": \"country\"}, {\"subject\": \"Amazon River\", \"relation\": \"country\", \"object\": \"Peru\", \"qualifiers\": [], \"subject_type\": \"river\", \"object_type\": \"country\"}, {\"subject\": \"Amazon River\", \"relation\": \"country\", \"object\": \"Colombia\", \"qualifiers\": [], \"subject_type\": \"river\", \"object_type\": \"country\"}, {\"subject\": \"Amazon River\", \"relation\": \"length\", \"object\": \"6,400 km\", \"qualifiers\": [], \"subject_type\": \"river\", \"object_type\": \"physical quantity\"}]}",
+  "meta": {}
+}

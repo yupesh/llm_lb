@@ -1,0 +1,6 @@
+{
+  "id": "kg_rr_002",
+  "prompt": "Text: \"She works as a data scientist at Google.\"\nExtracted Triplet: {\"subject\": \"she\", \"relation\": \"works at\", \"object\": \"Google\", \"subject_type\": \"human\", \"object_type\": \"technology company\"}\nCandidate relations: [\"employer\", \"member of\", \"owned by\", \"affiliation\", \"founded by\"]",
+  "expected": "{\"relation\": \"employer\"}",
+  "meta": {}
+}

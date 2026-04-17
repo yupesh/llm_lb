@@ -1,0 +1,6 @@
+{
+  "id": "kg_te_014",
+  "prompt": "Text: \"I have been learning Spanish for two years now. My teacher is from Madrid and we have classes every Tuesday and Thursday evening.\"",
+  "expected": "{\"triplets\": [{\"subject\": \"speaker\", \"relation\": \"language spoken\", \"object\": \"Spanish\", \"qualifiers\": [{\"relation\": \"duration\", \"object\": \"two years\"}], \"subject_type\": \"human\", \"object_type\": \"language\"}, {\"subject\": \"teacher\", \"relation\": \"place of birth\", \"object\": \"Madrid\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"city\"}]}",
+  "meta": {}
+}

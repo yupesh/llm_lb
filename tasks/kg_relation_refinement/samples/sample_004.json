@@ -1,0 +1,6 @@
+{
+  "id": "kg_rr_004",
+  "prompt": "Text: \"He graduated from MIT with a degree in physics.\"\nExtracted Triplet: {\"subject\": \"he\", \"relation\": \"graduated from\", \"object\": \"MIT\", \"subject_type\": \"human\", \"object_type\": \"university\"}\nCandidate relations: [\"educated at\", \"academic degree\", \"student of\", \"member of\", \"employer\"]",
+  "expected": "{\"relation\": \"educated at\"}",
+  "meta": {}
+}

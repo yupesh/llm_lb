@@ -1,0 +1,6 @@
+{
+  "id": "kg_etr_002",
+  "prompt": "Text: \"Google was founded by Larry Page and Sergey Brin.\"\nExtracted Triplet: {\"subject\": \"Google\", \"relation\": \"founder\", \"object\": \"Larry Page\", \"subject_type\": \"company\", \"object_type\": \"person\"}\nCandidate Subject Types: [\"business enterprise\", \"public company\", \"technology company\", \"organization\"]\nCandidate Object Types: [\"human\", \"fictional character\", \"entrepreneur\", \"computer scientist\"]",
+  "expected": "{\"subject_type\": \"technology company\", \"object_type\": \"human\"}",
+  "meta": {}
+}

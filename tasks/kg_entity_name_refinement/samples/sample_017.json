@@ -1,0 +1,8 @@
+{
+  "id": "kg_enr_017",
+  "prompt": "Text: \"He is reading a paper about BERT for his research.\"\nExtracted Triplet: {\"subject\": \"he\", \"relation\": \"studies\", \"object\": \"BERT\"}\nOriginal Entity: BERT\nCandidate Entities: [\"BERT (language model)\", \"Bert (Sesame Street)\", \"Bert Kreischer\"]",
+  "expected": "BERT (language model)",
+  "meta": {
+    "refinement_type": "object"
+  }
+}

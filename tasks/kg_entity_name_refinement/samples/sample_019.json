@@ -1,0 +1,8 @@
+{
+  "id": "kg_enr_019",
+  "prompt": "Text: \"She works at a small bakery on Elm Street.\"\nExtracted Triplet: {\"subject\": \"she\", \"relation\": \"employer\", \"object\": \"bakery on Elm Street\"}\nOriginal Entity: bakery on Elm Street\nCandidate Entities: [\"Elm Street Bakery\", \"Elm Street Cafe\", \"Main Street Bakery\"]",
+  "expected": "None",
+  "meta": {
+    "refinement_type": "object"
+  }
+}

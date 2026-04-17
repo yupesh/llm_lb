@@ -1,0 +1,8 @@
+{
+  "id": "kg_enr_010",
+  "prompt": "Text: \"Tesla unveiled its Cybertruck at the event.\"\nExtracted Triplet: {\"subject\": \"Tesla\", \"relation\": \"product\", \"object\": \"Cybertruck\"}\nOriginal Entity: Tesla\nCandidate Entities: [\"Tesla, Inc.\", \"Nikola Tesla\", \"Tesla (band)\"]",
+  "expected": "Tesla, Inc.",
+  "meta": {
+    "refinement_type": "subject"
+  }
+}

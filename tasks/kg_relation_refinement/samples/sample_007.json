@@ -1,0 +1,6 @@
+{
+  "id": "kg_rr_007",
+  "prompt": "Text: \"Python was created by Guido van Rossum.\"\nExtracted Triplet: {\"subject\": \"Python\", \"relation\": \"invented by\", \"object\": \"Guido van Rossum\", \"subject_type\": \"programming language\", \"object_type\": \"human\"}\nCandidate relations: [\"developer\", \"creator\", \"designer\", \"founded by\", \"maintainer\"]",
+  "expected": "{\"relation\": \"developer\"}",
+  "meta": {}
+}

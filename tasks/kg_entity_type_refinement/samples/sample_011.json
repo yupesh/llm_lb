@@ -1,0 +1,6 @@
+{
+  "id": "kg_etr_011",
+  "prompt": "Text: \"BMW manufactures cars at its factory in Munich.\"\nExtracted Triplet: {\"subject\": \"BMW\", \"relation\": \"headquarters location\", \"object\": \"Munich\", \"subject_type\": \"brand\", \"object_type\": \"location\"}\nCandidate Subject Types: [\"automobile manufacturer\", \"company\", \"corporation\", \"brand\"]\nCandidate Object Types: [\"city\", \"big city\", \"municipality\", \"urban area\"]",
+  "expected": "{\"subject_type\": \"automobile manufacturer\", \"object_type\": \"city\"}",
+  "meta": {}
+}

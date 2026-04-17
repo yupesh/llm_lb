@@ -1,0 +1,8 @@
+{
+  "id": "kg_enr_011",
+  "prompt": "Text: \"She graduated from Stanford with a degree in economics.\"\nExtracted Triplet: {\"subject\": \"she\", \"relation\": \"educated at\", \"object\": \"Stanford\"}\nOriginal Entity: Stanford\nCandidate Entities: [\"Stanford University\", \"Stanford Medical Center\", \"Stanford Linear Accelerator\"]",
+  "expected": "Stanford University",
+  "meta": {
+    "refinement_type": "object"
+  }
+}

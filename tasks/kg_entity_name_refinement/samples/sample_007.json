@@ -1,0 +1,8 @@
+{
+  "id": "kg_enr_007",
+  "prompt": "Text: \"Apple announced a new iPhone model at the keynote.\"\nExtracted Triplet: {\"subject\": \"Apple\", \"relation\": \"product\", \"object\": \"iPhone\"}\nOriginal Entity: Apple\nCandidate Entities: [\"Apple Inc.\", \"Apple Records\", \"Apple (fruit)\"]",
+  "expected": "Apple Inc.",
+  "meta": {
+    "refinement_type": "subject"
+  }
+}

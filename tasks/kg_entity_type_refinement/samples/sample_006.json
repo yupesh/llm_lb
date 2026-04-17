@@ -1,0 +1,6 @@
+{
+  "id": "kg_etr_006",
+  "prompt": "Text: \"Taylor Swift released her album Midnights in October 2022.\"\nExtracted Triplet: {\"subject\": \"Taylor Swift\", \"relation\": \"discography\", \"object\": \"Midnights\", \"subject_type\": \"singer\", \"object_type\": \"album\"}\nCandidate Subject Types: [\"human\", \"musician\", \"singer-songwriter\", \"recording artist\"]\nCandidate Object Types: [\"album\", \"studio album\", \"musical work\", \"release\"]",
+  "expected": "{\"subject_type\": \"human\", \"object_type\": \"studio album\"}",
+  "meta": {}
+}

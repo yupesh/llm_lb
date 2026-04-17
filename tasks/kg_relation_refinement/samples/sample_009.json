@@ -1,0 +1,6 @@
+{
+  "id": "kg_rr_009",
+  "prompt": "Text: \"Christopher Nolan directed the film Inception.\"\nExtracted Triplet: {\"subject\": \"Inception\", \"relation\": \"directed by\", \"object\": \"Christopher Nolan\", \"subject_type\": \"film\", \"object_type\": \"human\"}\nCandidate relations: [\"director\", \"producer\", \"screenwriter\", \"cast member\", \"creator\"]",
+  "expected": "{\"relation\": \"director\"}",
+  "meta": {}
+}

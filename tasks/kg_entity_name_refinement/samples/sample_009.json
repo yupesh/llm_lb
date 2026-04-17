@@ -1,0 +1,8 @@
+{
+  "id": "kg_enr_009",
+  "prompt": "Text: \"Washington crossed the Delaware River in 1776.\"\nExtracted Triplet: {\"subject\": \"Washington\", \"relation\": \"participant in\", \"object\": \"crossing of the Delaware\"}\nOriginal Entity: Washington\nCandidate Entities: [\"George Washington\", \"Washington D.C.\", \"Washington (state)\"]",
+  "expected": "George Washington",
+  "meta": {
+    "refinement_type": "subject"
+  }
+}

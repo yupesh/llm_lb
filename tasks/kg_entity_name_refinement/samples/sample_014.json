@@ -1,0 +1,8 @@
+{
+  "id": "kg_enr_014",
+  "prompt": "Text: \"They visited the Met during their trip to New York.\"\nExtracted Triplet: {\"subject\": \"they\", \"relation\": \"visited\", \"object\": \"the Met\"}\nOriginal Entity: the Met\nCandidate Entities: [\"Metropolitan Museum of Art\", \"Met Opera\", \"Met Gala\"]",
+  "expected": "Metropolitan Museum of Art",
+  "meta": {
+    "refinement_type": "object"
+  }
+}
