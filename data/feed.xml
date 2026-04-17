@@ -35,6 +35,13 @@
     <summary>judge_score=0.640</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/agent_tool_calling/1.0/qwen3.5-27b@vllm/2026-04-17T13:21:35+00:00</id>
+    <title>qwen3.5-27b@vllm scored 0.491 judge_score on agent_tool_calling v1.0</title>
+    <updated>2026-04-17T13:21:35+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/agent_tool_calling" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.491</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/conversational_memory_qa/1.0/qwen3.5-27b@vllm/2026-04-17T08:04:01+00:00</id>
     <title>qwen3.5-27b@vllm scored 0.760 judge_score on conversational_memory_qa v1.0</title>
     <updated>2026-04-17T08:04:01+00:00</updated>
