@@ -21,6 +21,13 @@
     <summary>judge_score=0.933</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/temporal_information_extraction/1.0/qwen3.5-397b@vllm/2026-04-16T18:59:47+00:00</id>
+    <title>qwen3.5-397b@vllm scored 0.653 judge_score on temporal_information_extraction v1.0</title>
+    <updated>2026-04-16T18:59:47+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/temporal_information_extraction" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.653</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/conversational_memory_qa/1.0/qwen3.5-397b@vllm/2026-04-16T18:47:15+00:00</id>
     <title>qwen3.5-397b@vllm scored 0.813 judge_score on conversational_memory_qa v1.0</title>
     <updated>2026-04-16T18:47:15+00:00</updated>
