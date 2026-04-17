@@ -1,0 +1,251 @@
+{
+  "model_id": "qwen3-30b@vllm",
+  "model_revision": "2025-12-01",
+  "task_id": "agent_tool_calling",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "e754aed9b4fbe821",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 16384,
+    "seed": 42
+  },
+  "metrics": {
+    "judge_score": 0.5818181818181819
+  },
+  "tps": 46.12909392369861,
+  "p95_latency_ms": 66584.53789099997,
+  "n_samples": 22,
+  "samples": [
+    {
+      "id": "agent_tc_001",
+      "prediction": "[\n  {\"name\": \"add_tool_to_canvas\", \"arguments\": {\"tool_name\": \"calculator_tool\"}},\n  {\"name\": \"add_tool_to_canvas\", \"arguments\": {\"tool_name\": \"summary_tool\"}}\n]",
+      "expected": "[{\"name\": \"get_available_tools\", \"arguments\": {}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 5528.56585699999,
+      "input_tokens": 863,
+      "output_tokens": 198,
+      "judge_raw_score": 1.0
+    },
+    {
+      "id": "agent_tc_002",
+      "prediction": "[]",
+      "expected": "[{\"name\": \"build_tool\", \"arguments\": {}}, {\"name\": \"get_builds\", \"arguments\": {}}, {\"name\": \"get_editor_state\", \"arguments\": {}}, {\"name\": \"get_available_tools\", \"arguments\": {}}, {\"name\": \"add_assistant_to_canvas\", \"arguments\": {\"assistant_name\": \"assistant\"}}, {\"name\": \"add_tool_to_canvas\", \"arguments\": {\"tool_name\": \"calculator_tool\"}}, {\"name\": \"add_tool_to_canvas\", \"arguments\": {\"tool_name\": \"summary_tool\"}}]",
+      "correct": false,
+      "latency_ms": 8353.973136999968,
+      "input_tokens": 854,
+      "output_tokens": 352,
+      "judge_raw_score": 0.0
+    },
+    {
+      "id": "agent_tc_003",
+      "prediction": "[\n  {\"name\": \"get_params_node\", \"arguments\": {}}\n]",
+      "expected": "[]",
+      "correct": false,
+      "latency_ms": 23387.400774000012,
+      "input_tokens": 858,
+      "output_tokens": 1085,
+      "judge_raw_score": 3.0
+    },
+    {
+      "id": "agent_tc_004",
+      "prediction": "[\n  {\"name\": \"add_tool_to_canvas\", \"arguments\": {\"tool_name\": \"calculator_tool\"}},\n  {\"name\": \"get_editor_state\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_available_tools\", \"arguments\": {}}, {\"name\": \"get_editor_state\", \"arguments\": {}}, {\"name\": \"get_node_editable_params\", \"arguments\": {\"node_id\": \"tool_node-59de848a\"}}]",
+      "correct": false,
+      "latency_ms": 60271.12347899998,
+      "input_tokens": 860,
+      "output_tokens": 2884,
+      "judge_raw_score": 1.0
+    },
+    {
+      "id": "agent_tc_005",
+      "prediction": "[\n  {\"name\": \"get_params_node\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_node_editable_params\", \"arguments\": {\"node_id\": \"summarizator\"}}, {\"name\": \"set_node_param\", \"arguments\": {\"node_id\": \"summarizator\", \"param_key\": \"llm_temperature\", \"param_value\": \"1\"}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 27424.225397999977,
+      "input_tokens": 863,
+      "output_tokens": 1273,
+      "judge_raw_score": 1.0
+    },
+    {
+      "id": "agent_tc_006",
+      "prediction": "[]",
+      "expected": "[{\"name\": \"remove_nodes_from_canvas\", \"arguments\": {\"node_ids\": [\"assistant-2e65021c\"]}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 31103.606825000043,
+      "input_tokens": 858,
+      "output_tokens": 1463,
+      "judge_raw_score": 0.0
+    },
+    {
+      "id": "agent_tc_007",
+      "prediction": "[\n    {\"name\": \"add_tool_to_canvas\", \"arguments\": {\"tool_name\": \"database_connector\"}}\n]",
+      "expected": "[{\"name\": \"add_tool_to_canvas\", \"arguments\": {\"tool_name\": \"text2sql_tool\"}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 9130.375227000002,
+      "input_tokens": 860,
+      "output_tokens": 423,
+      "judge_raw_score": 3.0
+    },
+    {
+      "id": "agent_tc_008",
+      "prediction": "[\n  {\"name\": \"get_editor_state\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": true,
+      "latency_ms": 5961.191301999975,
+      "input_tokens": 857,
+      "output_tokens": 232,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "agent_tc_009",
+      "prediction": "[\n  {\"name\": \"get_editor_state\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"validate_flow\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 6964.385531000062,
+      "input_tokens": 859,
+      "output_tokens": 300,
+      "judge_raw_score": 1.0
+    },
+    {
+      "id": "agent_tc_010",
+      "prediction": "[\n  {\"name\": \"get_builds\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_builds\", \"arguments\": {}}]",
+      "correct": true,
+      "latency_ms": 7371.984002999966,
+      "input_tokens": 854,
+      "output_tokens": 296,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "agent_tc_011",
+      "prediction": "[{\"name\": \"get_runs\", \"arguments\": {}}]",
+      "expected": "[{\"name\": \"get_runs\", \"arguments\": {}}]",
+      "correct": true,
+      "latency_ms": 6906.2276099999735,
+      "input_tokens": 854,
+      "output_tokens": 274,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "agent_tc_012",
+      "prediction": "[\n    {\"name\": \"remove_nodes_from_canvas\", \"arguments\": {\"remove_all\": true}}\n]",
+      "expected": "[{\"name\": \"remove_nodes_from_canvas\", \"arguments\": {\"remove_all\": true}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 4623.198264999928,
+      "input_tokens": 853,
+      "output_tokens": 204,
+      "judge_raw_score": 3.0
+    },
+    {
+      "id": "agent_tc_013",
+      "prediction": "[\n    {\"name\": \"add_tool_to_canvas\", \"arguments\": {\"tool_name\": \"summary_tool\"}}\n]",
+      "expected": "[{\"name\": \"get_available_tools\", \"arguments\": {}}, {\"name\": \"get_editor_state\", \"arguments\": {}}, {\"name\": \"add_tool_to_canvas\", \"arguments\": {\"tool_name\": \"summary_tool\"}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 4229.737788999955,
+      "input_tokens": 858,
+      "output_tokens": 185,
+      "judge_raw_score": 1.0
+    },
+    {
+      "id": "agent_tc_014",
+      "prediction": "[\n  {\"name\": \"build_tool\", \"arguments\": {\"task_id\": \"тест 1\"}}\n]",
+      "expected": "[{\"name\": \"build_tool\", \"arguments\": {\"task_id\": \"тест 1\"}}]",
+      "correct": true,
+      "latency_ms": 3322.387605000017,
+      "input_tokens": 863,
+      "output_tokens": 140,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "agent_tc_015",
+      "prediction": "[\n  {\"name\": \"get_builds\", \"arguments\": {}},\n  {\"name\": \"start_run_tool\", \"arguments\": {\"build_id\": \"last_successful_build_id\"}}\n]",
+      "expected": "[{\"name\": \"get_builds\", \"arguments\": {}}, {\"name\": \"start_run_tool\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 21642.54784500008,
+      "input_tokens": 859,
+      "output_tokens": 1026,
+      "judge_raw_score": 4.0
+    },
+    {
+      "id": "agent_tc_016",
+      "prediction": "[\n  {\"name\": \"build_tool\", \"arguments\": {}},\n  {\"name\": \"get_builds\", \"arguments\": {}},\n  {\"name\": \"start_run_tool\", \"arguments\": {\"build_id\": \"latest_build_id\"}},\n  {\"name\": \"get_runs\", \"arguments\": {}},\n  {\"name\": \"rename_process\", \"arguments\": {\"process_type\": \"build\", \"id\": \"latest_build_id\", \"new_name\": \"MyBuild\"}},\n  {\"name\": \"rename_process\", \"arguments\": {\"process_type\": \"run\", \"id\": \"latest_run_id\", \"new_name\": \"MyRun\"}},\n  {\"name\": \"add_process_comment\", \"arguments\": {\"process_type\": \"build\", \"id\": \"latest_build_id\", \"comment\": \"Initial build comment\"}},\n  {\"name\": \"add_process_comment\", \"arguments\": {\"process_type\": \"run\", \"id\": \"latest_run_id\", \"comment\": \"Initial run comment\"}}\n]",
+      "expected": "[{\"name\": \"build_tool\", \"arguments\": {}}, {\"name\": \"rename_process\", \"arguments\": {\"process_type\": \"build\"}}, {\"name\": \"add_process_comment\", \"arguments\": {\"process_type\": \"build\"}}, {\"name\": \"start_run_tool\", \"arguments\": {}}, {\"name\": \"rename_process\", \"arguments\": {\"process_type\": \"run\"}}, {\"name\": \"add_process_comment\", \"arguments\": {\"process_type\": \"run\"}}]",
+      "correct": false,
+      "latency_ms": 66584.53789099997,
+      "input_tokens": 882,
+      "output_tokens": 3165,
+      "judge_raw_score": 3.0
+    },
+    {
+      "id": "agent_tc_017",
+      "prediction": "[\n  {\"name\": \"get_builds\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_builds\", \"arguments\": {}}]",
+      "correct": true,
+      "latency_ms": 4505.702113000098,
+      "input_tokens": 854,
+      "output_tokens": 163,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "agent_tc_018",
+      "prediction": "[\n  {\"name\": \"get_runs\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_runs\", \"arguments\": {}}]",
+      "correct": true,
+      "latency_ms": 7231.098644999975,
+      "input_tokens": 857,
+      "output_tokens": 294,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "agent_tc_019",
+      "prediction": "[\n  {\"name\": \"get_editor_state\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_editor_state\", \"arguments\": {}}, {\"name\": \"remove_nodes_from_canvas\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 36788.15648800003,
+      "input_tokens": 856,
+      "output_tokens": 1727,
+      "judge_raw_score": 1.0
+    },
+    {
+      "id": "agent_tc_020",
+      "prediction": "[\n  {\"name\": \"get_available_tools\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_available_tools\", \"arguments\": {}}]",
+      "correct": true,
+      "latency_ms": 6425.8680400000685,
+      "input_tokens": 857,
+      "output_tokens": 259,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "agent_tc_021",
+      "prediction": "[\n  {\"name\": \"get_editor_state\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": true,
+      "latency_ms": 4005.7009060000155,
+      "input_tokens": 862,
+      "output_tokens": 137,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "agent_tc_022",
+      "prediction": "[\n  {\"name\": \"add_tool_to_canvas\", \"arguments\": {\"tool_name\": \"calculator_tool\"}},\n  {\"name\": \"get_params_node\", \"arguments\": {}},\n  {\"name\": \"get_node_editable_params\", \"arguments\": {\"node_id\": \"node_id_from_previous_step\"}}\n]",
+      "expected": "[{\"name\": \"get_editor_state\", \"arguments\": {}}, {\"name\": \"get_node_editable_params\", \"arguments\": {\"node_id\": \"calculator_tool\"}}]",
+      "correct": false,
+      "latency_ms": 79744.42143600003,
+      "input_tokens": 860,
+      "output_tokens": 3825,
+      "judge_raw_score": 2.0
+    }
+  ],
+  "created_at": "2026-04-17T05:06:59+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": "gpt-4o-mini@openai",
+  "judge_model_revision": "2024-07-18",
+  "judge_prompt_hash": "8c7ef62de93530b1"
+}
