@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-17T23:38:32+00:00",
+  "generated_at": "2026-04-17T23:53:16+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -77,6 +77,17 @@
       "n_samples": 10
     },
     {
+      "id": "jailbreak_detection",
+      "version": "1.0",
+      "primary_metric": "accuracy",
+      "secondary_metrics": [
+        "macro_f1",
+        "tps",
+        "p95_latency_ms"
+      ],
+      "n_samples": 20
+    },
+    {
       "id": "kg_entity_name_refinement",
       "version": "1.0",
       "primary_metric": "judge_score",
@@ -103,6 +114,17 @@
       "primary_metric": "judge_score",
       "secondary_metrics": [],
       "n_samples": 20
+    },
+    {
+      "id": "oos_detection",
+      "version": "1.0",
+      "primary_metric": "accuracy",
+      "secondary_metrics": [
+        "macro_f1",
+        "tps",
+        "p95_latency_ms"
+      ],
+      "n_samples": 30
     },
     {
       "id": "retail_agent_dialog",
