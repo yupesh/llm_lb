@@ -1,0 +1,251 @@
+{
+  "model_id": "qwen3.5-27b@vllm",
+  "model_revision": "2026-04-11",
+  "task_id": "agent_tool_calling",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "e754aed9b4fbe821",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 16384,
+    "seed": 42
+  },
+  "metrics": {
+    "judge_score": 0.5
+  },
+  "tps": 24.086151852979956,
+  "p95_latency_ms": 16019.304227000006,
+  "n_samples": 22,
+  "samples": [
+    {
+      "id": "agent_tc_001",
+      "prediction": "[\n  {\"name\": \"get_available_tools\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_available_tools\", \"arguments\": {}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 8576.843079000004,
+      "input_tokens": 918,
+      "output_tokens": 86,
+      "judge_raw_score": 2.0
+    },
+    {
+      "id": "agent_tc_002",
+      "prediction": "[\n  {\"name\": \"get_available_tools\", \"arguments\": {}},\n  {\"name\": \"get_editor_state\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"build_tool\", \"arguments\": {}}, {\"name\": \"get_builds\", \"arguments\": {}}, {\"name\": \"get_editor_state\", \"arguments\": {}}, {\"name\": \"get_available_tools\", \"arguments\": {}}, {\"name\": \"add_assistant_to_canvas\", \"arguments\": {\"assistant_name\": \"assistant\"}}, {\"name\": \"add_tool_to_canvas\", \"arguments\": {\"tool_name\": \"calculator_tool\"}}, {\"name\": \"add_tool_to_canvas\", \"arguments\": {\"tool_name\": \"summary_tool\"}}]",
+      "correct": false,
+      "latency_ms": 8821.937048000002,
+      "input_tokens": 908,
+      "output_tokens": 154,
+      "judge_raw_score": 1.0
+    },
+    {
+      "id": "agent_tc_003",
+      "prediction": "[{\"name\": \"get_editor_state\"}]",
+      "expected": "[]",
+      "correct": false,
+      "latency_ms": 3894.5202610000038,
+      "input_tokens": 911,
+      "output_tokens": 97,
+      "judge_raw_score": 1.0
+    },
+    {
+      "id": "agent_tc_004",
+      "prediction": "[{\"name\": \"get_editor_state()\"}, {\"name\": \"get_available_tools()\"}]",
+      "expected": "[{\"name\": \"get_available_tools\", \"arguments\": {}}, {\"name\": \"get_editor_state\", \"arguments\": {}}, {\"name\": \"get_node_editable_params\", \"arguments\": {\"node_id\": \"tool_node-59de848a\"}}]",
+      "correct": false,
+      "latency_ms": 6863.111472,
+      "input_tokens": 912,
+      "output_tokens": 179,
+      "judge_raw_score": 2.0
+    },
+    {
+      "id": "agent_tc_005",
+      "prediction": "[{\"name\": \"get_editor_state()\"}]",
+      "expected": "[{\"name\": \"get_node_editable_params\", \"arguments\": {\"node_id\": \"summarizator\"}}, {\"name\": \"set_node_param\", \"arguments\": {\"node_id\": \"summarizator\", \"param_key\": \"llm_temperature\", \"param_value\": \"1\"}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 4099.090393000004,
+      "input_tokens": 915,
+      "output_tokens": 96,
+      "judge_raw_score": 0.0
+    },
+    {
+      "id": "agent_tc_006",
+      "prediction": "[\n  {\"name\": \"get_editor_state\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"remove_nodes_from_canvas\", \"arguments\": {\"node_ids\": [\"assistant-2e65021c\"]}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 3963.444722999995,
+      "input_tokens": 912,
+      "output_tokens": 93,
+      "judge_raw_score": 1.0
+    },
+    {
+      "id": "agent_tc_007",
+      "prediction": "[{\"name\": \"get_available_tools\"}]",
+      "expected": "[{\"name\": \"add_tool_to_canvas\", \"arguments\": {\"tool_name\": \"text2sql_tool\"}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 5981.215773000003,
+      "input_tokens": 913,
+      "output_tokens": 157,
+      "judge_raw_score": 0.0
+    },
+    {
+      "id": "agent_tc_008",
+      "prediction": "[{\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "expected": "[{\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": true,
+      "latency_ms": 3299.1577969999926,
+      "input_tokens": 912,
+      "output_tokens": 80,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "agent_tc_009",
+      "prediction": "[{\"name\": \"get_editor_state\"}]",
+      "expected": "[{\"name\": \"validate_flow\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 4293.8465940000015,
+      "input_tokens": 915,
+      "output_tokens": 104,
+      "judge_raw_score": 1.0
+    },
+    {
+      "id": "agent_tc_010",
+      "prediction": "[{\"name\": \"get_builds\", \"arguments\": {}}]",
+      "expected": "[{\"name\": \"get_builds\", \"arguments\": {}}]",
+      "correct": true,
+      "latency_ms": 2352.66923399999,
+      "input_tokens": 908,
+      "output_tokens": 56,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "agent_tc_011",
+      "prediction": "[{\"name\": \"get_runs\", \"arguments\": {}}]",
+      "expected": "[{\"name\": \"get_runs\", \"arguments\": {}}]",
+      "correct": true,
+      "latency_ms": 3055.363608999997,
+      "input_tokens": 909,
+      "output_tokens": 73,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "agent_tc_012",
+      "prediction": "[{\"name\": \"remove_nodes_from_canvas\", \"arguments\": {\"remove_all\": true}}]",
+      "expected": "[{\"name\": \"remove_nodes_from_canvas\", \"arguments\": {\"remove_all\": true}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 2889.3291830000007,
+      "input_tokens": 909,
+      "output_tokens": 66,
+      "judge_raw_score": 3.0
+    },
+    {
+      "id": "agent_tc_013",
+      "prediction": "[\n  {\"name\": \"get_available_tools\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_available_tools\", \"arguments\": {}}, {\"name\": \"get_editor_state\", \"arguments\": {}}, {\"name\": \"add_tool_to_canvas\", \"arguments\": {\"tool_name\": \"summary_tool\"}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 3860.9886079999997,
+      "input_tokens": 914,
+      "output_tokens": 96,
+      "judge_raw_score": 1.0
+    },
+    {
+      "id": "agent_tc_014",
+      "prediction": "[{\"name\": \"build_tool\"}, {\"name\": \"get_builds\"}]",
+      "expected": "[{\"name\": \"build_tool\", \"arguments\": {\"task_id\": \"тест 1\"}}]",
+      "correct": false,
+      "latency_ms": 20871.582822000008,
+      "input_tokens": 916,
+      "output_tokens": 588,
+      "judge_raw_score": 1.0
+    },
+    {
+      "id": "agent_tc_015",
+      "prediction": "[{\"name\": \"get_builds()\"}]",
+      "expected": "[{\"name\": \"get_builds\", \"arguments\": {}}, {\"name\": \"start_run_tool\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 3536.8274010000105,
+      "input_tokens": 912,
+      "output_tokens": 80,
+      "judge_raw_score": 1.0
+    },
+    {
+      "id": "agent_tc_016",
+      "prediction": "[\n  {\"name\": \"build_tool\", \"arguments\": {}},\n  {\"name\": \"get_builds\", \"arguments\": {}},\n  {\"name\": \"start_run_tool\", \"arguments\": {}},\n  {\"name\": \"get_runs\", \"arguments\": {}},\n  {\"name\": \"rename_process\", \"arguments\": {\"process_type\": \"build\", \"id\": \"\", \"new_name\": \"Основная сборка\"}},\n  {\"name\": \"rename_process\", \"arguments\": {\"process_type\": \"run\", \"id\": \"\", \"new_name\": \"Запуск сборки\"}},\n  {\"name\": \"add_process_comment\", \"arguments\": {\"process_type\": \"build\", \"id\": \"\", \"comment\": \"Сборка создана автоматически\"}},\n  {\"name\": \"add_process_comment\", \"arguments\": {\"process_type\": \"run\", \"id\": \"\", \"comment\": \"Ран запущен от сборки\"}}\n]",
+      "expected": "[{\"name\": \"build_tool\", \"arguments\": {}}, {\"name\": \"rename_process\", \"arguments\": {\"process_type\": \"build\"}}, {\"name\": \"add_process_comment\", \"arguments\": {\"process_type\": \"build\"}}, {\"name\": \"start_run_tool\", \"arguments\": {}}, {\"name\": \"rename_process\", \"arguments\": {\"process_type\": \"run\"}}, {\"name\": \"add_process_comment\", \"arguments\": {\"process_type\": \"run\"}}]",
+      "correct": false,
+      "latency_ms": 16019.304227000006,
+      "input_tokens": 929,
+      "output_tokens": 445,
+      "judge_raw_score": 3.0
+    },
+    {
+      "id": "agent_tc_017",
+      "prediction": "[{\"name\": \"get_builds\", \"arguments\": {}}]",
+      "expected": "[{\"name\": \"get_builds\", \"arguments\": {}}]",
+      "correct": true,
+      "latency_ms": 2673.6361689999912,
+      "input_tokens": 910,
+      "output_tokens": 62,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "agent_tc_018",
+      "prediction": "[{\"name\": \"get_runs\", \"arguments\": {}}]",
+      "expected": "[{\"name\": \"get_runs\", \"arguments\": {}}]",
+      "correct": true,
+      "latency_ms": 2389.8580299999994,
+      "input_tokens": 913,
+      "output_tokens": 54,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "agent_tc_019",
+      "prediction": "[\n  {\"name\": \"get_editor_state\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_editor_state\", \"arguments\": {}}, {\"name\": \"remove_nodes_from_canvas\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 3171.8250549999993,
+      "input_tokens": 910,
+      "output_tokens": 76,
+      "judge_raw_score": 1.0
+    },
+    {
+      "id": "agent_tc_020",
+      "prediction": "[\n  {\"name\": \"get_available_tools\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_available_tools\", \"arguments\": {}}]",
+      "correct": true,
+      "latency_ms": 2907.1181109999884,
+      "input_tokens": 908,
+      "output_tokens": 68,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "agent_tc_021",
+      "prediction": "[{\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "expected": "[{\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": true,
+      "latency_ms": 2093.4878840000124,
+      "input_tokens": 917,
+      "output_tokens": 49,
+      "judge_raw_score": 5.0
+    },
+    {
+      "id": "agent_tc_022",
+      "prediction": "[\n  {\"name\": \"get_available_tools\", \"arguments\": {}},\n  {\"name\": \"get_editor_state\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_editor_state\", \"arguments\": {}}, {\"name\": \"get_node_editable_params\", \"arguments\": {\"node_id\": \"calculator_tool\"}}]",
+      "correct": false,
+      "latency_ms": 7941.316726999986,
+      "input_tokens": 912,
+      "output_tokens": 217,
+      "judge_raw_score": 2.0
+    }
+  ],
+  "created_at": "2026-04-17T05:00:53+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": "gpt-4o-mini@openai",
+  "judge_model_revision": "2024-07-18",
+  "judge_prompt_hash": "8c7ef62de93530b1"
+}
