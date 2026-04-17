@@ -1,0 +1,37 @@
+name: essay_holistic_scoring_condensed
+version: '1.0'
+description: 'Holistic essay quality scoring (ASAP rubric, 1-6 scale). Condensed rubric without worked examples. Source: ISTOK
+  research project.'
+metric:
+  primary: accuracy
+  secondary:
+  - macro_f1
+labels:
+- '1'
+- '2'
+- '3'
+- '4'
+- '5'
+- '6'
+llm_params:
+  temperature: 0.0
+  max_tokens: 512
+  seed: 42
+system_prompt: |-
+  You are an expert essay evaluator. Score student essays from 1 (lowest) to 6 (highest) on overall writing quality.
+
+  Scoring guide:
+  - 6: Clear mastery. Insightful ideas, outstanding reasoning, precise vocabulary, varied sentences, minimal errors.
+  - 5: Consistent quality. Strong ideas with appropriate evidence, good organization, facility with language, few errors.
+  - 4: Adequate. Competent ideas with adequate support, generally organized, some vocabulary/sentence variety, some errors.
+  - 3: Developing. Inconsistent ideas, limited organization, uneven language use, accumulating errors.
+  - 2: Weak. Vague ideas, poor organization, very limited vocabulary, errors obscure meaning.
+  - 1: Very weak. No viable ideas, disorganized, fundamental language errors, meaning persistently unclear.
+prompt_template: |-
+  Evaluate the following student essay according to the ASAP holistic rubric provided in your instructions. Reply with ONLY the numeric score (1-6), nothing else.
+
+  Essay:
+  {prompt}
+
+  Score:
+answer_regex: (\d)

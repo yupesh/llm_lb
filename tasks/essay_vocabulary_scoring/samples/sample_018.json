@@ -1,0 +1,6 @@
+{
+  "id": "sample_018",
+  "prompt": "Dear visitor and friend of our Art Museum, We would like to attract your attention to three current exhibitions of our European Department: Three important painting movements are presenting their collections: The Impressionist Wing, ending on 3 January The Expressionist Wing,ending on 1 Octobre The Cubist Wing, ending on 31 March. The following remarks should shortly introduce you to these Styles: The Impressionists, represented by Claude Monet's famous painting \"The Road Bridge at Argenteuil\", preferred to paint outside and tried to capture the effects of the natural light. They used mainly complementary colours and small brush strokes to convey their sensory experience. The Expressionists , mainly German painters, were organized in two groups: The Bridge and The Blue Rider. Their aim was not to paint the 'outside' of an object or person but the 'inside'. Their composition was radical and they used bold colours. The classic example for this style: \"The Blue Rider\" by Franz Marc. The cubists were inspired by Pablo Picasso and George Braque. They used geometric forms, fragmented objects in multiple viewpoints showing them simultaneously. Featured painting: \"Le jour\" by George Braque.",
+  "expected": "4",
+  "meta": {}
+}

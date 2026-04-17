@@ -1,0 +1,6 @@
+{
+  "id": "sample_005",
+  "prompt": "My family have six peoples. We not ever happy family, but we fun so much. My father is small and some fat. He has straight, short and black hair. Your nose is beautiful and delicate. My mother is small and thin. She has curly, short and brown hair. Your nose is long and thin, but also is beautiful nose. I have two sisters  and both is small and thin. She has curly and brown hair, one has long and the other short hair.%% My brother is tall and thin. He is bald. I'm small and thin. I have straight, long brown hair. Our eyes is big and brown with long cilia, typical of my family.",
+  "expected": "A2",
+  "meta": {}
+}

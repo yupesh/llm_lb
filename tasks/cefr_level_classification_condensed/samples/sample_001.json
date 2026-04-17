@@ -1,0 +1,6 @@
+{
+  "id": "sample_001",
+  "prompt": "Dear mom, We are in Santa Monica now. We are listening to the weather forecast. It is going to rain all afternoon and it is going to be very wet. So in the afternoon we will go to the museum then eat at one of the great restaurant. It is going to be hot and sunny tomorrow. So we will go to the beach. In the evening we will go to the bar. It will be very exciting and great fun! We hope you will have a nice weekend. yours truly, Grace",
+  "expected": "A2",
+  "meta": {}
+}

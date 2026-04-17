@@ -1,0 +1,33 @@
+name: cefr_level_classification_condensed
+version: '1.0'
+description: 'CEFR level classification from writing samples (A2-C1). Condensed CEFR rubric without worked examples. Source:
+  ISTOK research project.'
+metric:
+  primary: accuracy
+  secondary:
+  - macro_f1
+labels:
+- A2
+- B1
+- B2
+- C1
+llm_params:
+  temperature: 0.0
+  max_tokens: 512
+  seed: 42
+system_prompt: |-
+  You are an expert CEFR writing evaluator. Classify writing samples by CEFR level based on overall written production quality.
+
+  Level descriptors:
+  - C1: Clear, well-structured texts on complex subjects. Expands and supports arguments with examples, appropriate conclusions.
+  - B2: Clear, detailed texts synthesising information from multiple sources. Systematic argument development.
+  - B1: Straightforward connected texts on familiar subjects. Links shorter elements linearly. Simple essays on topics of interest.
+  - A2: Simple phrases and sentences linked with "and", "but", "because". Basic descriptions of events and experiences.
+prompt_template: |-
+  Evaluate the following text according to CEFR Overall Written Production descriptors. Reply with ONLY the CEFR level (A2, B1, B2, or C1), nothing else.
+
+  Text:
+  {prompt}
+
+  CEFR Level:
+answer_regex: ([ABC][12])

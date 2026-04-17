@@ -1,0 +1,6 @@
+{
+  "id": "sample_014",
+  "prompt": "Slide #1:  Title: Why social networking services?  BP(bullet point): Social network seems very flexible: -easy way to connect with each other -more comfortable and less formal format Slide #2: Title: Hidden danger BP: Losing you firm succes in the internet -your workers can reveal company strategy -providing information to your competitiors Slide#3: Title:Your family under threat! BP:Don't show your personal information to general access -hide your personal page from general view -don't locate important information in your page Slide#4: Title:your personal information - tool for competitor BP: Competitors can hack your e-mail by knowing something about you -don't use your date of birth in e-mail -don't write too much about your relatives Slide#5: Title:Be careful BP:Don't allow you to make rumors about our company -our image can be drop because of your information in network -pay attention when you add a new friend Thank you!%%",
+  "expected": "3",
+  "meta": {}
+}

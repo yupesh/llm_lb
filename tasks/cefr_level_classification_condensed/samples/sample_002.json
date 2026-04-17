@@ -1,0 +1,6 @@
+{
+  "id": "sample_002",
+  "prompt": "There are four people in my family: me, mother, father, and brother. My name is Uliana. I'm 23 years old. I usually wearing something comfortable like blue jeans and T-shirts. My mother is called Nadezhda. I look like my mother. She is tall and fairly thin. She has long, straight, blonde hair and small brown eyes. My  brother is called Sasha. He looks like father! He is very tall and thin. My father is called Igor'. He is wearing a green sweater and black pants. We are very happy family!",
+  "expected": "A2",
+  "meta": {}
+}

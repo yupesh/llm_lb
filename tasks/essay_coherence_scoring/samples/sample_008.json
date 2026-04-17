@@ -1,0 +1,6 @@
+{
+  "id": "sample_008",
+  "prompt": "Hi, Rene. I'm in the group of 2 TV. I spend watching TV 16-25 hours per week. I watch the next programs: Game shows, Sports, Sitcoms, Movies, News and weather, and some times documentaries. I'm 33 years old but I don't like sopa operas or reality TV. Well I prefer sports 35%, sitcoms 25, movies, 20%, news and weather 15%, and documentaries 5%. In my city the Rating show are very similar as survey as you can see in the report. I prefer the news in the morning. I prefer exciting movies.",
+  "expected": "2",
+  "meta": {}
+}
