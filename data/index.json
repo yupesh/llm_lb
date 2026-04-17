@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-16T23:44:13+00:00",
+  "generated_at": "2026-04-17T04:47:08+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -439,6 +439,19 @@
       "p95_latency_ms": 41514.11357999998,
       "cost_usd": null,
       "result_file": "tasks/text2sql_ambiguity/results/qwen3.5-397b@vllm__2026-04-16T16-29-47Z.json"
+    },
+    {
+      "task_id": "text2sql_bird",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-397b@vllm",
+      "score": 0.6636363636363636,
+      "metrics": {
+        "judge_score": 0.6636363636363636
+      },
+      "tps": 99.69144538563553,
+      "p95_latency_ms": 65352.87071799996,
+      "cost_usd": null,
+      "result_file": "tasks/text2sql_bird/results/qwen3.5-397b@vllm__2026-04-17T00-02-13Z.json"
     },
     {
       "task_id": "text_classification",

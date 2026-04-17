@@ -1,0 +1,19 @@
+{
+  "task_id": "text2sql_bird",
+  "task_version": "1.0",
+  "primary_metric": "judge_score",
+  "ranking": [
+    {
+      "model_id": "qwen3.5-397b@vllm",
+      "score": 0.6636363636363636,
+      "metrics": {
+        "judge_score": 0.6636363636363636
+      },
+      "tps": 99.69144538563553,
+      "p95_latency_ms": 65352.87071799996,
+      "cost_usd": null,
+      "result_file": "results/qwen3.5-397b@vllm__2026-04-17T00-02-13Z.json"
+    }
+  ],
+  "updated_at": "2026-04-17T04:47:08+00:00"
+}
