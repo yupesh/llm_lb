@@ -14,6 +14,13 @@
     <summary>judge_score=0.760</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/entity_relationship_extraction/1.0/qwen3.5-27b@vllm/2026-04-17T07:38:26+00:00</id>
+    <title>qwen3.5-27b@vllm scored 0.893 judge_score on entity_relationship_extraction v1.0</title>
+    <updated>2026-04-17T07:38:26+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/entity_relationship_extraction" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.893</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/agent_tool_calling/1.0/qwen3.5-27b@vllm/2026-04-17T05:00:53+00:00</id>
     <title>qwen3.5-27b@vllm scored 0.500 judge_score on agent_tool_calling v1.0</title>
     <updated>2026-04-17T05:00:53+00:00</updated>
