@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-17T04:48:48+00:00",
+  "generated_at": "2026-04-17T05:21:31+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -243,6 +243,19 @@
       "p95_latency_ms": 23278.673648999982,
       "cost_usd": null,
       "result_file": "tasks/agent_tool_calling/results/qwen3.5-397b@vllm__2026-04-16T16-52-21Z.json"
+    },
+    {
+      "task_id": "agent_tool_calling",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.5,
+      "metrics": {
+        "judge_score": 0.5
+      },
+      "tps": 24.086151852979956,
+      "p95_latency_ms": 16019.304227000006,
+      "cost_usd": null,
+      "result_file": "tasks/agent_tool_calling/results/qwen3.5-27b@vllm__2026-04-17T05-00-53Z.json"
     },
     {
       "task_id": "conversational_memory_qa",
