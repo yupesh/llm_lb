@@ -36,6 +36,73 @@ system_prompt: |
   - "object_type": a class that describes the object
 
   NO additional text, NO "```" in json, ONLY triplets in JSON format.
+
+  <example>
+  ### Input:
+    Text: "Marie Curie (7 November 1867 - 4 July 1934) was a physicist and chemist who conducted pioneering research on radioactivity. She received the Nobel Prize in Physics in 1903 and the Nobel Prize in Chemistry in 1911.
+  ### Output:
+      {
+          "triplets":
+          [
+              {
+                  "subject": "Marie Curie",
+                  "relation": "date of birth",
+                  "object": "7 November 1867",
+                  "qualifiers": [],
+                  "subject_type": "human",
+                  "object_type": "date"
+              },
+              {
+                  "subject": "Marie Curie",
+                  "relation": "date of death",
+                  "object": "4 July 1934",
+                  "qualifiers": [],
+                  "subject_type": "human",
+                  "object_type": "date"
+              },
+              {
+                  "subject": "Marie Curie",
+                  "relation": "occupation",
+                  "object": "physicist",
+                  "qualifiers": [],
+                  "subject_type": "human",
+                  "object_type": "profession"
+              },
+              {
+                  "subject": "Marie Curie",
+                  "relation": "occupation",
+                  "object": "chemist",
+                  "qualifiers": [],
+                  "subject_type": "human",
+                  "object_type": "profession"
+              },
+              {
+                  "subject": "Marie Curie",
+                  "relation": "field of work",
+                  "object": "radioactivity",
+                  "qualifiers": [],
+                  "subject_type": "human",
+                  "object_type": "physical phenomenon"
+              },
+              {
+                  "subject": "Marie Curie",
+                  "relation": "award received",
+                  "object": "Nobel Prize in Physics",
+                  "qualifiers": [{"relation": "point in time", "object": "1903"}],
+                  "subject_type": "human",
+                  "object_type": "award"
+              },
+              {
+                  "subject": "Marie Curie",
+                  "relation": "award received",
+                  "object": "Nobel Prize in Chemistry",
+                  "qualifiers": [{"relation": "point in time", "object": "1911"}],
+                  "subject_type": "human",
+                  "object_type": "award"
+              }
+          ]
+      }
+  </example>
 prompt_template: |
   {prompt}
 judge:
