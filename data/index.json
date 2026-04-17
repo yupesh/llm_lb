@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-17T09:45:04+00:00",
+  "generated_at": "2026-04-17T09:59:52+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -261,27 +261,27 @@
       "task_id": "conversational_memory_qa",
       "task_version": "1.0",
       "model_id": "qwen3.5-397b@vllm",
-      "score": 0.84,
+      "score": 0.8133333333333332,
       "metrics": {
-        "judge_score": 0.84
+        "judge_score": 0.8133333333333332
       },
-      "tps": 85.6500819198764,
-      "p95_latency_ms": 22490.438220000015,
+      "tps": 92.9045631238939,
+      "p95_latency_ms": 61515.433933999986,
       "cost_usd": null,
-      "result_file": "tasks/conversational_memory_qa/results/qwen3.5-397b@vllm__2026-04-16T08-23-26Z.json"
+      "result_file": "tasks/conversational_memory_qa/results/qwen3.5-397b@vllm__2026-04-16T18-47-15Z.json"
     },
     {
       "task_id": "conversational_memory_qa",
       "task_version": "1.0",
       "model_id": "qwen3.5-27b@vllm",
-      "score": 0.8,
+      "score": 0.76,
       "metrics": {
-        "judge_score": 0.8
+        "judge_score": 0.76
       },
-      "tps": 23.149876783770317,
-      "p95_latency_ms": 157698.74078299996,
+      "tps": 23.706318192383925,
+      "p95_latency_ms": 175120.445936,
       "cost_usd": null,
-      "result_file": "tasks/conversational_memory_qa/results/qwen3.5-27b@vllm__2026-04-16T12-41-09Z.json"
+      "result_file": "tasks/conversational_memory_qa/results/qwen3.5-27b@vllm__2026-04-17T08-04-01Z.json"
     },
     {
       "task_id": "conversational_memory_qa",
@@ -483,14 +483,14 @@
       "task_id": "text2sql_ambiguity",
       "task_version": "1.0",
       "model_id": "qwen3.5-397b@vllm",
-      "score": 0.6083333333333333,
+      "score": 0.5833333333333334,
       "metrics": {
-        "judge_score": 0.6083333333333333
+        "judge_score": 0.5833333333333334
       },
-      "tps": 99.46345678603278,
-      "p95_latency_ms": 41514.11357999998,
+      "tps": 101.39200378486858,
+      "p95_latency_ms": 78812.86135900002,
       "cost_usd": null,
-      "result_file": "tasks/text2sql_ambiguity/results/qwen3.5-397b@vllm__2026-04-16T16-29-47Z.json"
+      "result_file": "tasks/text2sql_ambiguity/results/qwen3.5-397b@vllm__2026-04-16T17-35-04Z.json"
     },
     {
       "task_id": "text2sql_bird",
