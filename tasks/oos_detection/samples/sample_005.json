@@ -1,0 +1,6 @@
+{
+  "id": "oos_005",
+  "prompt": "please set a timer to go off in 45 minutes",
+  "expected": "in_scope",
+  "meta": {}
+}

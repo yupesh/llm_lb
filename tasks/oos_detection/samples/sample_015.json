@@ -1,0 +1,6 @@
+{
+  "id": "oos_015",
+  "prompt": "what time is it in london right now",
+  "expected": "in_scope",
+  "meta": {}
+}

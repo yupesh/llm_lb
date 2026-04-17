@@ -1,0 +1,6 @@
+{
+  "id": "oos_003",
+  "prompt": "move 100 dollars from my savings to my checking",
+  "expected": "in_scope",
+  "meta": {}
+}
