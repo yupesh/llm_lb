@@ -21,7 +21,7 @@ prompt_template: |
 
   Summary:
 judge:
-  model: gemma-4-31b-it@vllm
+  model: gpt-4o-mini@openai
   scale_min: 0
   scale_max: 5
   forbid_self_judge: true
