@@ -14,6 +14,13 @@
     <summary>exact_match=0.800</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection/1.0/qwen3.5-397b@vllm/2026-04-18T09:46:01+00:00</id>
+    <title>qwen3.5-397b@vllm scored 1.000 accuracy on jailbreak_detection v1.0</title>
+    <updated>2026-04-18T09:46:01+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection" rel="alternate" type="text/html"/>
+    <summary>accuracy=1.000, macro_f1=1.000</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/topic_classification/1.0/qwen3.5-397b@vllm/2026-04-18T09:43:33+00:00</id>
     <title>qwen3.5-397b@vllm scored 1.000 accuracy on topic_classification v1.0</title>
     <updated>2026-04-18T09:43:33+00:00</updated>

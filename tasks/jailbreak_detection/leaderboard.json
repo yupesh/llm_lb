@@ -1,0 +1,20 @@
+{
+  "task_id": "jailbreak_detection",
+  "task_version": "1.0",
+  "primary_metric": "accuracy",
+  "ranking": [
+    {
+      "model_id": "qwen3.5-397b@vllm",
+      "score": 1.0,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "tps": 92.25611679159557,
+      "p95_latency_ms": 8553.305899999998,
+      "cost_usd": null,
+      "result_file": "results/qwen3.5-397b@vllm__2026-04-18T09-46-01Z.json"
+    }
+  ],
+  "updated_at": "2026-04-18T10:39:16+00:00"
+}
