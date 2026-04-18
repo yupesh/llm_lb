@@ -118,72 +118,92 @@ def run(
 
     for s in samples:
         t0 = time.perf_counter()
-        if task.runner_kind == "dialog_simulation":
-            pred, _trace, in_tok, out_tok = simulate_retail_dialog(
-                adapter,
-                policy_prompt=sim_policy or "",
-                user_agent_prompt=sim_user_prompt or "",
-                db_path=sim_db_path,  # type: ignore[arg-type]
-                sample_prompt_json=s.prompt,
-                params=task.llm_params,
-                max_turns=task.max_turns or 10,
-            )
+        try:
+            if task.runner_kind == "dialog_simulation":
+                pred, _trace, in_tok, out_tok = simulate_retail_dialog(
+                    adapter,
+                    policy_prompt=sim_policy or "",
+                    user_agent_prompt=sim_user_prompt or "",
+                    db_path=sim_db_path,  # type: ignore[arg-type]
+                    sample_prompt_json=s.prompt,
+                    params=task.llm_params,
+                    max_turns=task.max_turns or 10,
+                )
+                dt_ms = (time.perf_counter() - t0) * 1000.0
+                correct = False  # judge decides; `correct` is unused for judge_score tasks
+                sample_pred = SamplePrediction(
+                    id=s.id,
+                    prediction=pred,
+                    expected=s.expected,
+                    correct=correct,
+                    latency_ms=dt_ms,
+                    input_tokens=in_tok,
+                    output_tokens=out_tok,
+                )
+                if task.judge and judge_client is not None:
+                    sample_pred.judge_raw_score = judge_mod.score_sample(
+                        judge_client, task.judge, s, pred
+                    )
+                preds.append(sample_pred)
+                if out_tok:
+                    total_output_tokens += out_tok
+                    total_gen_time_s += dt_ms / 1000.0
+                if in_tok:
+                    total_input_tokens += in_tok
+                continue
+
+            ctx = ""
+            if task.context_meta_key and context_data:
+                ctx_key = s.meta.get(task.context_meta_key)
+                if ctx_key:
+                    ctx = context_data.get(ctx_key, "")
+            user = task.prompt_template.format(prompt=s.prompt, context=ctx)
+            completion = adapter.chat(task.system_prompt, user, task.llm_params)
             dt_ms = (time.perf_counter() - t0) * 1000.0
-            correct = False  # judge decides; `correct` is unused for judge_score tasks
+
+            pred = _extract_prediction(task, completion.text)
+            correct = _is_correct(task, pred, s.expected)
+
             sample_pred = SamplePrediction(
                 id=s.id,
                 prediction=pred,
                 expected=s.expected,
                 correct=correct,
                 latency_ms=dt_ms,
-                input_tokens=in_tok,
-                output_tokens=out_tok,
+                input_tokens=completion.input_tokens,
+                output_tokens=completion.output_tokens,
             )
+
             if task.judge and judge_client is not None:
                 sample_pred.judge_raw_score = judge_mod.score_sample(
-                    judge_client, task.judge, s, pred
+                    judge_client, task.judge, s, pred, context=ctx
                 )
+
             preds.append(sample_pred)
-            if out_tok:
-                total_output_tokens += out_tok
+            if completion.output_tokens:
+                total_output_tokens += completion.output_tokens
                 total_gen_time_s += dt_ms / 1000.0
-            if in_tok:
-                total_input_tokens += in_tok
-            continue
-
-        ctx = ""
-        if task.context_meta_key and context_data:
-            ctx_key = s.meta.get(task.context_meta_key)
-            if ctx_key:
-                ctx = context_data.get(ctx_key, "")
-        user = task.prompt_template.format(prompt=s.prompt, context=ctx)
-        completion = adapter.chat(task.system_prompt, user, task.llm_params)
-        dt_ms = (time.perf_counter() - t0) * 1000.0
-
-        pred = _extract_prediction(task, completion.text)
-        correct = _is_correct(task, pred, s.expected)
-
-        sample_pred = SamplePrediction(
-            id=s.id,
-            prediction=pred,
-            expected=s.expected,
-            correct=correct,
-            latency_ms=dt_ms,
-            input_tokens=completion.input_tokens,
-            output_tokens=completion.output_tokens,
-        )
-
-        if task.judge and judge_client is not None:
-            sample_pred.judge_raw_score = judge_mod.score_sample(
-                judge_client, task.judge, s, pred, context=ctx
+            if completion.input_tokens:
+                total_input_tokens += completion.input_tokens
+        except Exception as exc:
+            # Per-sample error isolation: one flaky backend call (exhausted
+            # retries, timeout, 5xx) must not throw away all the samples that
+            # already succeeded. Record an empty prediction marked
+            # `correct=False` with the error message, keep going. Classification
+            # metrics (accuracy, macro_f1) treat it as a miss; judge_score
+            # short-circuits on empty predictions to scale_min (see eval/judge).
+            dt_ms = (time.perf_counter() - t0) * 1000.0
+            err = f"{type(exc).__name__}: {str(exc)[:400]}"
+            preds.append(
+                SamplePrediction(
+                    id=s.id,
+                    prediction="",
+                    expected=s.expected,
+                    correct=False,
+                    latency_ms=dt_ms,
+                    error=err,
+                )
             )
-
-        preds.append(sample_pred)
-        if completion.output_tokens:
-            total_output_tokens += completion.output_tokens
-            total_gen_time_s += dt_ms / 1000.0
-        if completion.input_tokens:
-            total_input_tokens += completion.input_tokens
 
     # Metrics dispatch: pick whatever the task asks for. We always compute the
     # primary metric, then any secondaries we know how to compute cheaply.
@@ -216,6 +236,7 @@ def run(
         tps=tps,
         p95_latency_ms=p95,
         n_samples=len(samples),
+        n_failed_samples=sum(1 for p in preds if p.error),
         samples=preds,
         created_at=datetime.now(timezone.utc).isoformat(timespec="seconds"),
         env={"provider": model.provider, "endpoint_kind": model.endpoint_kind},
