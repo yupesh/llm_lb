@@ -1,0 +1,6 @@
+{
+  "id": "oos_004",
+  "prompt": "set the timer for 10 minutes",
+  "expected": "in_scope",
+  "meta": {}
+}

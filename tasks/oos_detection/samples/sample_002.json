@@ -1,0 +1,6 @@
+{
+  "id": "oos_002",
+  "prompt": "transfer funds to the other account",
+  "expected": "in_scope",
+  "meta": {}
+}

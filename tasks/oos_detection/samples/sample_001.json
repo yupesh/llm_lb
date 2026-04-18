@@ -1,0 +1,6 @@
+{
+  "id": "oos_001",
+  "prompt": "how do you say hello in japanese",
+  "expected": "in_scope",
+  "meta": {}
+}

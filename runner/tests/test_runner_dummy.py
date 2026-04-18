@@ -29,6 +29,35 @@ def test_aggregate_smoke():
     assert any(e["model_id"] == "dummy@local" for e in idx["matrix"])
 
 
+def test_failing_sample_does_not_abort_run(tmp_path: Path, monkeypatch):
+    """One sample that raises (e.g. backend timeout) must not wipe out the
+    predictions already collected. The run completes with an empty prediction
+    + error marker for the failed sample; other samples still contribute to
+    the metric."""
+    from llm_lb.adapters.dummy import DummyAdapter
+
+    call_count = {"n": 0}
+    original_chat = DummyAdapter.chat
+
+    def flaky_chat(self, system, user, params):
+        call_count["n"] += 1
+        if call_count["n"] == 2:
+            raise RuntimeError("simulated backend timeout")
+        return original_chat(self, system, user, params)
+
+    monkeypatch.setattr(DummyAdapter, "chat", flaky_chat)
+    out = run(TASK, MODEL, out_dir=tmp_path)
+    result = RunResult.model_validate_json(out.read_text())
+    assert result.n_failed_samples == 1
+    errored = [s for s in result.samples if s.error]
+    assert len(errored) == 1
+    assert errored[0].prediction == ""
+    assert errored[0].correct is False
+    assert "simulated backend timeout" in errored[0].error
+    # Other samples still scored — accuracy is non-zero since most succeeded.
+    assert 0.0 < result.metrics["accuracy"] < 1.0
+
+
 def test_aggregate_idempotent():
     """A second `aggregate_all` call must not touch any files on disk —
     otherwise CI's freshness check would fail on every run."""

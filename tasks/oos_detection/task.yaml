@@ -1,0 +1,23 @@
+name: oos_detection
+version: "1.0"
+description: Binary classification of user prompts as in-scope (assistant can help) or out-of-scope.
+metric:
+  primary: accuracy
+  secondary: [macro_f1, tps, p95_latency_ms]
+labels: [in_scope, oos]
+llm_params:
+  temperature: 0.0
+  max_tokens: 8
+  seed: 42
+system_prompt: |
+  You are an intent classifier for a virtual assistant. Determine whether a user prompt
+  is in scope (the assistant can reasonably handle it: questions, commands, information
+  requests, basic tasks) or out of scope (oos: the assistant cannot or should not handle it,
+  such as requests for professional advice outside its competence, subjective opinions on
+  sensitive matters, or requests outside its domain).
+  Reply with exactly one token: "in_scope" or "oos". Do not add any explanation.
+prompt_template: |
+  Classify the following prompt. Reply with one token.
+
+  Prompt: {prompt}
+  Label:

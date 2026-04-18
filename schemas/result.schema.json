@@ -99,6 +99,18 @@
           ],
           "default": null,
           "title": "Judge Raw Score"
+        },
+        "error": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Error"
         }
       },
       "required": [
@@ -166,6 +178,11 @@
     },
     "n_samples": {
       "title": "N Samples",
+      "type": "integer"
+    },
+    "n_failed_samples": {
+      "default": 0,
+      "title": "N Failed Samples",
       "type": "integer"
     },
     "samples": {
