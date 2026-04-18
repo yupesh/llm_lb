@@ -16,7 +16,7 @@ labels:
 - '6'
 llm_params:
   temperature: 0.0
-  max_tokens: 512
+  max_tokens: null  # unlimited — reasoning models need room to think before the short answer
   seed: 42
 system_prompt: |-
   You are an expert essay evaluator. Score student essays from 1 (lowest) to 6 (highest) on overall writing quality.

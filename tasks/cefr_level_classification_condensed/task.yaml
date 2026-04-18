@@ -14,7 +14,7 @@ labels:
 - C1
 llm_params:
   temperature: 0.0
-  max_tokens: 512
+  max_tokens: null  # unlimited — reasoning models need room to think before the short answer
   seed: 42
 system_prompt: |-
   You are an expert CEFR writing evaluator. Classify writing samples by CEFR level based on overall written production quality.
