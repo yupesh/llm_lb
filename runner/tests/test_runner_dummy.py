@@ -1,6 +1,5 @@
 from pathlib import Path
 
-from llm_lb.adapters import get_adapter
 from llm_lb.aggregate import aggregate_all
 from llm_lb.models import RunResult
 from llm_lb.runner import run
