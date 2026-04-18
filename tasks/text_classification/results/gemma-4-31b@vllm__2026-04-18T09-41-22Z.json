@@ -1,0 +1,143 @@
+{
+  "model_id": "gemma-4-31b@vllm",
+  "model_revision": "2026-04-18",
+  "task_id": "text_classification",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "836e0b983717bd5d",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "accuracy": 0.0,
+    "macro_f1": 0.0
+  },
+  "tps": 0.0,
+  "p95_latency_ms": 9518.361566000067,
+  "n_samples": 10,
+  "n_failed_samples": 10,
+  "samples": [
+    {
+      "id": "sample_001",
+      "prediction": "",
+      "expected": "positive",
+      "correct": false,
+      "latency_ms": 1335.6867510000257,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 404 from http://lnsigo.mipt.ru:4000/v1 model=google/gemma-4-31B-it: {\"error\":{\"message\":\"litellm.NotFoundError: NotFoundError: OpenAIException - The model `google/gemma-4-31B-it` does not exist.. Received Model Group=google/gemma-4-31B-it\\nAvailable Model Group Fallbacks=None\",\"type\":null,\"param\":null,\"code\":\"404\"}}"
+    },
+    {
+      "id": "sample_002",
+      "prediction": "",
+      "expected": "negative",
+      "correct": false,
+      "latency_ms": 9518.361566000067,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 404 from http://lnsigo.mipt.ru:4000/v1 model=google/gemma-4-31B-it: {\"error\":{\"message\":\"litellm.NotFoundError: NotFoundError: OpenAIException - The model `google/gemma-4-31B-it` does not exist.. Received Model Group=google/gemma-4-31B-it\\nAvailable Model Group Fallbacks=None\",\"type\":null,\"param\":null,\"code\":\"404\"}}"
+    },
+    {
+      "id": "sample_003",
+      "prediction": "",
+      "expected": "positive",
+      "correct": false,
+      "latency_ms": 9303.908158000013,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 404 from http://lnsigo.mipt.ru:4000/v1 model=google/gemma-4-31B-it: {\"error\":{\"message\":\"litellm.NotFoundError: NotFoundError: OpenAIException - The model `google/gemma-4-31B-it` does not exist.. Received Model Group=google/gemma-4-31B-it\\nAvailable Model Group Fallbacks=None\",\"type\":null,\"param\":null,\"code\":\"404\"}}"
+    },
+    {
+      "id": "sample_004",
+      "prediction": "",
+      "expected": "negative",
+      "correct": false,
+      "latency_ms": 8689.10018300005,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 404 from http://lnsigo.mipt.ru:4000/v1 model=google/gemma-4-31B-it: {\"error\":{\"message\":\"litellm.NotFoundError: NotFoundError: OpenAIException - The model `google/gemma-4-31B-it` does not exist.. Received Model Group=google/gemma-4-31B-it\\nAvailable Model Group Fallbacks=None\",\"type\":null,\"param\":null,\"code\":\"404\"}}"
+    },
+    {
+      "id": "sample_005",
+      "prediction": "",
+      "expected": "positive",
+      "correct": false,
+      "latency_ms": 8620.394876999966,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 404 from http://lnsigo.mipt.ru:4000/v1 model=google/gemma-4-31B-it: {\"error\":{\"message\":\"litellm.NotFoundError: NotFoundError: OpenAIException - The model `google/gemma-4-31B-it` does not exist.. Received Model Group=google/gemma-4-31B-it\\nAvailable Model Group Fallbacks=None\",\"type\":null,\"param\":null,\"code\":\"404\"}}"
+    },
+    {
+      "id": "sample_006",
+      "prediction": "",
+      "expected": "negative",
+      "correct": false,
+      "latency_ms": 8893.327811000063,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 404 from http://lnsigo.mipt.ru:4000/v1 model=google/gemma-4-31B-it: {\"error\":{\"message\":\"litellm.NotFoundError: NotFoundError: OpenAIException - The model `google/gemma-4-31B-it` does not exist.. Received Model Group=google/gemma-4-31B-it\\nAvailable Model Group Fallbacks=None\",\"type\":null,\"param\":null,\"code\":\"404\"}}"
+    },
+    {
+      "id": "sample_007",
+      "prediction": "",
+      "expected": "positive",
+      "correct": false,
+      "latency_ms": 9068.643792999977,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 404 from http://lnsigo.mipt.ru:4000/v1 model=google/gemma-4-31B-it: {\"error\":{\"message\":\"litellm.NotFoundError: NotFoundError: OpenAIException - The model `google/gemma-4-31B-it` does not exist.. Received Model Group=google/gemma-4-31B-it\\nAvailable Model Group Fallbacks=None\",\"type\":null,\"param\":null,\"code\":\"404\"}}"
+    },
+    {
+      "id": "sample_008",
+      "prediction": "",
+      "expected": "negative",
+      "correct": false,
+      "latency_ms": 8472.669203999998,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 404 from http://lnsigo.mipt.ru:4000/v1 model=google/gemma-4-31B-it: {\"error\":{\"message\":\"litellm.NotFoundError: NotFoundError: OpenAIException - The model `google/gemma-4-31B-it` does not exist.. Received Model Group=google/gemma-4-31B-it\\nAvailable Model Group Fallbacks=None\",\"type\":null,\"param\":null,\"code\":\"404\"}}"
+    },
+    {
+      "id": "sample_009",
+      "prediction": "",
+      "expected": "positive",
+      "correct": false,
+      "latency_ms": 8462.045045999957,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 404 from http://lnsigo.mipt.ru:4000/v1 model=google/gemma-4-31B-it: {\"error\":{\"message\":\"litellm.NotFoundError: NotFoundError: OpenAIException - The model `google/gemma-4-31B-it` does not exist.. Received Model Group=google/gemma-4-31B-it\\nAvailable Model Group Fallbacks=None\",\"type\":null,\"param\":null,\"code\":\"404\"}}"
+    },
+    {
+      "id": "sample_010",
+      "prediction": "",
+      "expected": "negative",
+      "correct": false,
+      "latency_ms": 8922.266595999987,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 404 from http://lnsigo.mipt.ru:4000/v1 model=google/gemma-4-31B-it: {\"error\":{\"message\":\"litellm.NotFoundError: NotFoundError: OpenAIException - The model `google/gemma-4-31B-it` does not exist.. Received Model Group=google/gemma-4-31B-it\\nAvailable Model Group Fallbacks=None\",\"type\":null,\"param\":null,\"code\":\"404\"}}"
+    }
+  ],
+  "created_at": "2026-04-18T09:41:22+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": null,
+  "judge_model_revision": null,
+  "judge_prompt_hash": null
+}
