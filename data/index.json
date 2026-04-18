@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-18T10:39:16+00:00",
+  "generated_at": "2026-04-18T10:40:05+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -601,6 +601,20 @@
       "p95_latency_ms": 8553.305899999998,
       "cost_usd": null,
       "result_file": "tasks/jailbreak_detection/results/qwen3.5-397b@vllm__2026-04-18T09-46-01Z.json"
+    },
+    {
+      "task_id": "oos_detection",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-397b@vllm",
+      "score": 0.4666666666666667,
+      "metrics": {
+        "accuracy": 0.4666666666666667,
+        "macro_f1": 0.3181818181818182
+      },
+      "tps": 93.6936030983668,
+      "p95_latency_ms": 8683.944501000013,
+      "cost_usd": null,
+      "result_file": "tasks/oos_detection/results/qwen3.5-397b@vllm__2026-04-18T09-49-51Z.json"
     },
     {
       "task_id": "retail_agent_dialog",
