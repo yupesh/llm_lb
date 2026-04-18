@@ -2,6 +2,18 @@
   "task_id": "extractive_qa",
   "task_version": "1.0",
   "primary_metric": "exact_match",
-  "ranking": [],
-  "updated_at": "2026-04-07T11:40:11+00:00"
+  "ranking": [
+    {
+      "model_id": "qwen3.5-397b@vllm",
+      "score": 0.8,
+      "metrics": {
+        "exact_match": 0.8
+      },
+      "tps": 7.028319828062256,
+      "p95_latency_ms": 616633.0023099999,
+      "cost_usd": null,
+      "result_file": "results/qwen3.5-397b@vllm__2026-04-18T10-12-04Z.json"
+    }
+  ],
+  "updated_at": "2026-04-18T10:27:21+00:00"
 }
