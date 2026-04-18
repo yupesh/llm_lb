@@ -1,0 +1,6 @@
+{
+  "id": "sample_007",
+  "prompt": "Blue Cruise Alaska I want to complaint about my trip to Alaska. The ship wasn't cosy and comfortable, it was a shabby little boat. My cabin was dirty and full of ants; the bed was very unconfortable and the bathrooms were dirty and disgusting. The captain was unfriendly and lazy and we often waste our holiday time. The brochure promised to take us to see different animals living on the untouched coastline but we didn't see most of them. Our package included all expenses but there were asked extra and hidden charges. I think your service was awfull!",
+  "expected": "2",
+  "meta": {}
+}

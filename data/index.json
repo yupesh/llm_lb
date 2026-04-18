@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-18T05:04:51+00:00",
+  "generated_at": "2026-04-18T05:47:21+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -10,6 +10,26 @@
         "p95_latency_ms"
       ],
       "n_samples": 22
+    },
+    {
+      "id": "cefr_level_classification",
+      "version": "1.0",
+      "primary_metric": "accuracy",
+      "secondary_metrics": [
+        "macro_f1",
+        "qwk"
+      ],
+      "n_samples": 20
+    },
+    {
+      "id": "cefr_level_classification_condensed",
+      "version": "1.0",
+      "primary_metric": "accuracy",
+      "secondary_metrics": [
+        "macro_f1",
+        "qwk"
+      ],
+      "n_samples": 20
     },
     {
       "id": "conversational_memory_qa",
@@ -54,6 +74,86 @@
       "primary_metric": "judge_score",
       "secondary_metrics": [],
       "n_samples": 15
+    },
+    {
+      "id": "essay_coherence_scoring",
+      "version": "1.0",
+      "primary_metric": "accuracy",
+      "secondary_metrics": [
+        "macro_f1",
+        "qwk"
+      ],
+      "n_samples": 20
+    },
+    {
+      "id": "essay_coherence_scoring_condensed",
+      "version": "1.0",
+      "primary_metric": "accuracy",
+      "secondary_metrics": [
+        "macro_f1",
+        "qwk"
+      ],
+      "n_samples": 20
+    },
+    {
+      "id": "essay_grammar_scoring",
+      "version": "1.0",
+      "primary_metric": "accuracy",
+      "secondary_metrics": [
+        "macro_f1",
+        "qwk"
+      ],
+      "n_samples": 20
+    },
+    {
+      "id": "essay_grammar_scoring_condensed",
+      "version": "1.0",
+      "primary_metric": "accuracy",
+      "secondary_metrics": [
+        "macro_f1",
+        "qwk"
+      ],
+      "n_samples": 20
+    },
+    {
+      "id": "essay_holistic_scoring",
+      "version": "1.0",
+      "primary_metric": "accuracy",
+      "secondary_metrics": [
+        "macro_f1",
+        "qwk"
+      ],
+      "n_samples": 18
+    },
+    {
+      "id": "essay_holistic_scoring_condensed",
+      "version": "1.0",
+      "primary_metric": "accuracy",
+      "secondary_metrics": [
+        "macro_f1",
+        "qwk"
+      ],
+      "n_samples": 18
+    },
+    {
+      "id": "essay_vocabulary_scoring",
+      "version": "1.0",
+      "primary_metric": "accuracy",
+      "secondary_metrics": [
+        "macro_f1",
+        "qwk"
+      ],
+      "n_samples": 20
+    },
+    {
+      "id": "essay_vocabulary_scoring_condensed",
+      "version": "1.0",
+      "primary_metric": "accuracy",
+      "secondary_metrics": [
+        "macro_f1",
+        "qwk"
+      ],
+      "n_samples": 20
     },
     {
       "id": "extractive_qa",

@@ -1,0 +1,6 @@
+{
+  "id": "sample_012",
+  "prompt": "Hi Anna, I was looking the newspaper yesterday and I found a job that fits to you, it's absolutely amazing job. I will explain: You will be a zookeeper, and works the major zoo in Florida, it's among enourms, you could imagine. There, you will have daily activities, such as feed the animals, but not only small animals, the big animals too, it will be exhilarating, I'm sure. I think I get to encourage you to apply for this because my sister works as zookeeper and I know it's totally safe. The salary is $50000,00 per year and you can spend one month on vacation per year. The zoo offers you accomodation, breakfast, lunch and dinner. And your family can visit the zoo for free, when you are working there. What do you think? It's an excellent job!",
+  "expected": "B2",
+  "meta": {}
+}

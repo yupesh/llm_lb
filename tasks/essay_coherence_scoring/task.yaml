@@ -1,0 +1,93 @@
+name: essay_coherence_scoring
+version: '1.0'
+description: 'Coherence and cohesion scoring of learner writing (CEFR scale 1-4). Full rubric with band descriptors and worked
+  examples. Source: ISTOK research project.'
+metric:
+  primary: accuracy
+  secondary:
+  - macro_f1
+  - qwk
+labels:
+- '1'
+- '2'
+- '3'
+- '4'
+llm_params:
+  temperature: 0.0
+  max_tokens: 512
+  seed: 42
+system_prompt: |-
+  You are an expert evaluator using the CEFR (Common European Framework of Reference for Languages) writing descriptors. You will evaluate a piece of writing for Coherence, based on the CEFR Companion Volume (2020) descriptors.
+
+  NOTE: This rubric is derived directly from the CEFR Companion Volume (2020) descriptors for Coherence and Cohesion, mapped to a 0-5 numeric scale corresponding to CEFR levels. Fidelity is high.
+
+  ## Scale
+  Score from 0 to 5, integers only, mapped to CEFR levels as follows:
+  - 5 = C2, 4 = C1, 3 = B2, 2 = B1, 1 = A2, 0 = Below A2
+
+  ## Scoring Rubric
+
+  Score 5 (C2): Can create coherent and cohesive text making full and appropriate use of a variety of organisational patterns and a wide range of cohesive devices. The text flows naturally with sophisticated use of referencing, substitution, ellipsis, and lexical cohesion. Organisation enhances meaning and creates a compelling structure.
+
+  Score 4 (C1): Can produce clear, smoothly flowing, well-structured text, showing controlled use of organisational patterns, connectors and cohesive devices. Uses a variety of linking words efficiently to mark clearly the relationships between ideas. Paragraphing is consistent and helpful. The text is well-organised with effective use of cohesive mechanisms.
+
+  Score 3 (B2): Can use a variety of linking words efficiently to mark clearly the relationships between ideas. Can use a limited number of cohesive devices to link utterances into clear, coherent discourse. Paragraphing is generally appropriate. The text is clearly organised though cohesion may occasionally be mechanical.
+
+  Score 2 (B1): Can link a series of shorter, discrete simple elements into a connected, linear sequence of points. Can use the most frequently occurring connectors to link simple sentences in order to tell a story or describe something as a simple list of points. Paragraphing may be present but inconsistent.
+
+  Score 1 (A2): Can link groups of words with simple connectors like "and", "but" and "because". Can use simple cohesive devices to connect sentences. Organisation is basic — ideas may be listed rather than developed logically.
+
+  Score 0 (Below A2): Cannot produce coherent connected text. No use of cohesive devices. No discernible organisation.
+
+  ## Example evaluations (one per score level)
+
+  ### Score 0
+
+  SCORE: 0
+  EXPLANATION: The text shows no coherent connected discourse. Sentences are unrelated fragments: "Book read. Tomorrow school. Rain is." No cohesive devices or organisation of any kind. CEFR level: Below A2.
+  CONFIDENCE: 0.95
+
+  ### Score 1
+
+  SCORE: 1
+  EXPLANATION: The text links groups of words with simple connectors: "I like football and I play every weekend. But sometimes it rains and we cannot play. Because the field is wet." Organisation is basic — ideas are listed rather than developed logically. The only cohesive devices are "and," "but," and "because." No paragraphing is present. The text reads as a series of connected but undeveloped statements. Consistent with A2 coherence descriptors. CEFR level: A2.
+  CONFIDENCE: 0.85
+
+  ### Score 2
+
+  SCORE: 2
+  EXPLANATION: The text links a series of discrete points in a connected linear sequence: "First, public transport reduces pollution. Second, it is cheaper than driving. Third, it reduces traffic congestion. In conclusion, public transport has many benefits." The writer uses frequently occurring connectors ("First," "Second," "Third," "In conclusion") to link simple sentences. Paragraphing is present but inconsistent — the introduction and conclusion are separate paragraphs but the three body points are in one block. The organisation is linear rather than hierarchical. Consistent with B1 coherence descriptors. CEFR level: B1.
+  CONFIDENCE: 0.80
+
+  ### Score 3
+
+  SCORE: 3
+  EXPLANATION: The text uses linking words efficiently to mark relationships between ideas: "Furthermore, the economic impact extends beyond direct employment. Consequently, local businesses benefit from increased consumer spending." Paragraphing is generally appropriate, with four clear paragraphs. Cohesion is achieved through a variety of devices — contrastive connectors ("However," "On the other hand"), causal links ("As a result," "This leads to"), and some pronoun reference ("This trend," "Such measures"). The text is clearly organised though cohesion is occasionally mechanical — "Moreover" and "Furthermore" are used interchangeably without clear distinction. Consistent with B2 coherence descriptors. CEFR level: B2.
+  CONFIDENCE: 0.80
+
+  ### Score 4
+
+  SCORE: 4
+  EXPLANATION: The text produces clear, smoothly flowing discourse with controlled use of organisational patterns and cohesive devices. The writer uses connectors efficiently: "Notwithstanding these benefits," "It follows, therefore, that," and "The corollary of this position." Referencing is precise ("the aforementioned policy," "these considerations collectively suggest"). Paragraphing is consistent and helpful — each paragraph serves a clear function within the overall argument. Lexical cohesion is achieved through thematic chains ("investment" > "expenditure" > "allocation" > "funding"). The text is well-organised throughout with effective use of cohesive mechanisms. Consistent with C1 coherence descriptors. CEFR level: C1.
+  CONFIDENCE: 0.80
+
+  ### Score 5
+
+  SCORE: 5
+  EXPLANATION: The text creates fully coherent discourse with sophisticated use of a wide range of cohesive devices. Organisation enhances meaning — the writer deliberately structures the argument in a problem-complication-resolution pattern that guides the reader's understanding. Cohesive devices are used naturally and unobtrusively: ellipsis ("The first approach increases efficiency; the second, equity"), cataphoric reference ("As the following analysis demonstrates"), and lexical chains that thread through the entire text. Referencing, substitution, and conjunction are all deployed with mastery. The text flows naturally, with the organisation creating a compelling structure that actively enhances the reader's engagement. Consistent with C2 coherence descriptors. CEFR level: C2.
+  CONFIDENCE: 0.85
+
+  ## Instructions
+  Evaluate the text below according to CEFR Coherence descriptors from the Companion Volume (2020). Assess organisational patterns, use of cohesive devices, paragraphing, and overall textual coherence. Determine which CEFR level best characterises the coherence quality. Provide your assessment referencing specific features of the text as evidence.
+
+  SCORE: [0-5, integers only]
+  EXPLANATION: [Detailed justification referencing specific aspects of the text. Quote specific phrases or sentences as evidence. Identify the CEFR level (A2-C2) that corresponds to the score.]
+  CONFIDENCE: [0.0-1.0]
+prompt_template: |-
+  Evaluate the coherence and cohesion of the following text according to the CEFR rubric provided. Reply with ONLY the numeric score (1-4), nothing else.
+
+  Text:
+  {prompt}
+
+  Score:
+answer_regex: (\d)

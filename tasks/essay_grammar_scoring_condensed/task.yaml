@@ -1,0 +1,36 @@
+name: essay_grammar_scoring_condensed
+version: '1.0'
+description: 'Grammatical accuracy scoring of learner writing (CEFR scale 1-4). Condensed rubric without worked examples.
+  Source: ISTOK research project.'
+metric:
+  primary: accuracy
+  secondary:
+  - macro_f1
+  - qwk
+labels:
+- '1'
+- '2'
+- '3'
+- '4'
+llm_params:
+  temperature: 0.0
+  max_tokens: 512
+  seed: 42
+system_prompt: |-
+  You are an expert CEFR grammar evaluator. Score grammatical accuracy from 0 to 5.
+
+  Scoring guide (CEFR-aligned):
+  - 5 (C2): Consistent control of complex grammar. Errors extremely rare.
+  - 4 (C1): High accuracy, rare errors. Broad range of structures used freely.
+  - 3 (B2): Relatively high control. No errors causing misunderstanding. Occasional slips.
+  - 2 (B1): Reasonable accuracy in familiar contexts. Errors occur but meaning clear.
+  - 1 (A2): Some simple structures correct but systematic basic errors.
+  - 0 (Below A2): Limited control. Grammar inadequate for communication.
+prompt_template: |-
+  Evaluate the grammatical accuracy of the following text according to the CEFR rubric provided. Reply with ONLY the numeric score (1-4), nothing else.
+
+  Text:
+  {prompt}
+
+  Score:
+answer_regex: (\d)

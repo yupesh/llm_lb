@@ -1,0 +1,6 @@
+{
+  "id": "sample_011",
+  "prompt": "Hi Shelley, I've got good news for you. It seems like I found your sand paintings. Actually, I bought it yesterday but before shipping it to you, I'd like to be sure that I bought the right one.  Here is a brief description of the painting: Its colors are red, yellow and brown. It is C-shaped and inside the C, there's a strange person with a square face, a long, narrow and rectangular body holding both arms towards the sky. He or she (?) is wearing a skirt with an oval on it. Actually, I understand your choice, the whole thing looks really fantastic, I'm sure it will be perfect in your living room and help you cross the many ordeals you are experiencing at the moment. I am waiting for your confirmation and as soon as I get it, I'll ship it to you.  All the best, Isa",
+  "expected": "3",
+  "meta": {}
+}

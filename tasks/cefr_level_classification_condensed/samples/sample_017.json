@@ -1,0 +1,6 @@
+{
+  "id": "sample_017",
+  "prompt": "Our company needs to decide about how to expand: in the market of 15 to 19 year old women or in the market of 18 to 24 year old men.  The second market seems more rentable nowadays. More men purchase at least one magazine a month compared to women - 47% versus 29%. In addition, when it comes to internet more men prefer magazines with extensive website content than women - 72% of men like internet information versus 69% of women who perfer magazines to blogs. After analizing compettion and numbers, the second market still seems more attractive. The men market has less compettion - one long term and 2 recent competitors - than women market - 6 competitors. The purchasing power also bend in favour of men market: 242 billion against 153 billion dollars of women''s market. Finally, the future, 2025. The market estimates that the purchasing power of women will grow more than men''s power - women will grow about 22 billion and men will grow about 2 billion. Furthermore, women''s market will increase from 24 million to 30 million. On the other hand, men''s market will decrease from 25 million to 20 million.%% We have to choose carefully. Thinking in short and mid term, we need to choose men''s market. However, thinking in long term, women''s market seems more promising.",
+  "expected": "C1",
+  "meta": {}
+}

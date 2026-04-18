@@ -1,0 +1,6 @@
+{
+  "id": "sample_015",
+  "prompt": "-The first house has to have renovations for the roof. -The second house does ot need some restorations. It is in the Ionian and it is near the sea. There are 4 bedrooms, which is enought. -The third house has 3 bedrooms. It is an appartment. -In the fourth house, there are severals appartments. It is close to the beaches. The Blight family has two young children. To have several individual appartments is not the best. The most ineresting house for them is the second. It is very expensive but money is no object for Blight family. There are enought bedrooms for each person. It is near the sea and it is in the Ionan. To finish, there is no restorations to do.",
+  "expected": "3",
+  "meta": {}
+}

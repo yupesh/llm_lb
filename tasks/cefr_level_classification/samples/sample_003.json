@@ -1,0 +1,6 @@
+{
+  "id": "sample_003",
+  "prompt": "Hi! This is my family. My dad has short gray hair and brown eyes. He's wearing jeans and white shirt. My mum has short, blonde hair and blue eyes. She's wearing a blue dress. That's my sister. She's thirty-five. She has short blonde hair and brown eyes. She's wearing shorts and black top. My brother is tall and thin. He has short brown hair and brown eyes.%% He's wearing jeand and red T- shirt. I' m tall and slim. I have long, wavy blonde hair and brown eyes. I'm wearing purple dress. We're really happy and fun in this pictures.",
+  "expected": "A2",
+  "meta": {}
+}
