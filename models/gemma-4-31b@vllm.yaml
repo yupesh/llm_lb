@@ -1,0 +1,12 @@
+model_id: gemma-4-31b@vllm
+display_name: Gemma 4 31B IT (vLLM)
+provider: openai_compat
+endpoint_kind: openai_chat
+hf_uri: google/gemma-4-31B-it
+served_model_name: google/gemma-4-31B-it
+revision: "2026-04-18"
+endpoint_url: http://lnsigo.mipt.ru:4000/v1
+api_key_env: VLLM_PROXY_KEY
+hardware:
+  gpu_count: 1
+  gpu_type: A100
