@@ -6,6 +6,7 @@ metric:
   primary: accuracy
   secondary:
   - macro_f1
+  - qwk
 labels:
 - A2
 - B1
