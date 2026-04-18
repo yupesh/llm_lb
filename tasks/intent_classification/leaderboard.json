@@ -4,6 +4,18 @@
   "primary_metric": "accuracy",
   "ranking": [
     {
+      "model_id": "qwen3.5-397b@vllm",
+      "score": 1.0,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "tps": 91.86976513377728,
+      "p95_latency_ms": 7859.129002000003,
+      "cost_usd": null,
+      "result_file": "results/qwen3.5-397b@vllm__2026-04-18T11-28-03Z.json"
+    },
+    {
       "model_id": "qwen3-30b@vllm",
       "score": 1.0,
       "metrics": {
@@ -16,5 +28,5 @@
       "result_file": "results/qwen3-30b@vllm__2026-04-09T17-29-51Z.json"
     }
   ],
-  "updated_at": "2026-04-09T17:29:52+00:00"
+  "updated_at": "2026-04-18T17:08:49+00:00"
 }
