@@ -16,7 +16,7 @@ labels:
 - '6'
 llm_params:
   temperature: 0.0
-  max_tokens: 512
+  max_tokens: null  # unlimited — reasoning models need room to think before the short answer
   seed: 42
 system_prompt: |-
   You are an expert essay evaluator for the Automated Student Assessment Prize (ASAP) writing assessment. You will evaluate a student's independent essay using the official ASAP holistic rubric.

@@ -14,7 +14,7 @@ labels:
 - C1
 llm_params:
   temperature: 0.0
-  max_tokens: 512
+  max_tokens: null  # unlimited — reasoning models need room to think before the short answer
   seed: 42
 system_prompt: |-
   You are an expert evaluator using the CEFR (Common European Framework of Reference for Languages) writing descriptors. You will evaluate a piece of writing for Overall Written Production, based on the CEFR Companion Volume (2020) descriptors.
