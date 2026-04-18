@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-18T10:40:05+00:00",
+  "generated_at": "2026-04-18T16:06:43+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -601,6 +601,19 @@
       "p95_latency_ms": 8553.305899999998,
       "cost_usd": null,
       "result_file": "tasks/jailbreak_detection/results/qwen3.5-397b@vllm__2026-04-18T09-46-01Z.json"
+    },
+    {
+      "task_id": "kg_entity_name_refinement",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-397b@vllm",
+      "score": 0.9,
+      "metrics": {
+        "judge_score": 0.9
+      },
+      "tps": 95.5850559416992,
+      "p95_latency_ms": 24244.774633999994,
+      "cost_usd": null,
+      "result_file": "tasks/kg_entity_name_refinement/results/qwen3.5-397b@vllm__2026-04-18T10-23-00Z.json"
     },
     {
       "task_id": "oos_detection",
