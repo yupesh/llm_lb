@@ -10,7 +10,7 @@ metric:
 labels: [tech, sports, politics, health, entertainment]
 llm_params:
   temperature: 0.0
-  max_tokens: 8
+  max_tokens: null  # unlimited — reasoning models need room to think before the 1-word answer
   seed: 42
 system_prompt: |
   You are a news topic classifier. Reply with exactly one word from the set:
