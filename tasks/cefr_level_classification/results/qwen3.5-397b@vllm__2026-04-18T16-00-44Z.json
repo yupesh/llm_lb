@@ -1,0 +1,254 @@
+{
+  "model_id": "qwen3.5-397b@vllm",
+  "model_revision": "2026-04-16",
+  "task_id": "cefr_level_classification",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "2a2c3308a3fcc443",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "accuracy": 0.35,
+    "macro_f1": 0.26041666666666663,
+    "qwk": 0.08333333333333326
+  },
+  "tps": 9.81946116739028,
+  "p95_latency_ms": 2558845.0166019993,
+  "n_samples": 20,
+  "n_failed_samples": 2,
+  "samples": [
+    {
+      "id": "sample_001",
+      "prediction": "A2",
+      "expected": "A2",
+      "correct": true,
+      "latency_ms": 59530.00322600001,
+      "input_tokens": 1655,
+      "output_tokens": 5940,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_002",
+      "prediction": "A2",
+      "expected": "A2",
+      "correct": true,
+      "latency_ms": 965604.6320170001,
+      "input_tokens": 1672,
+      "output_tokens": 3503,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_003",
+      "prediction": "A2",
+      "expected": "A2",
+      "correct": true,
+      "latency_ms": 1010911.3740709999,
+      "input_tokens": 1685,
+      "output_tokens": 8249,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_004",
+      "prediction": "",
+      "expected": "A2",
+      "correct": false,
+      "latency_ms": 2573413.1089200005,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: network error after 5 attempts to http://lnsigo.mipt.ru:4000/v1 model=Qwen/Qwen3.5-397B-A17B-FP8: ReadError: [Errno 104] Connection reset by peer"
+    },
+    {
+      "id": "sample_005",
+      "prediction": "A2",
+      "expected": "A2",
+      "correct": true,
+      "latency_ms": 420867.9313869998,
+      "input_tokens": 1693,
+      "output_tokens": 7038,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_006",
+      "prediction": "A2",
+      "expected": "B1",
+      "correct": false,
+      "latency_ms": 46779.26442600074,
+      "input_tokens": 1681,
+      "output_tokens": 4279,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_007",
+      "prediction": "B1",
+      "expected": "B1",
+      "correct": true,
+      "latency_ms": 458870.36116699985,
+      "input_tokens": 1666,
+      "output_tokens": 3946,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_008",
+      "prediction": "A2",
+      "expected": "B1",
+      "correct": false,
+      "latency_ms": 118325.50188599998,
+      "input_tokens": 1689,
+      "output_tokens": 10884,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_009",
+      "prediction": "B1",
+      "expected": "B1",
+      "correct": true,
+      "latency_ms": 1663172.7730359999,
+      "input_tokens": 1754,
+      "output_tokens": 9099,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_010",
+      "prediction": "B1",
+      "expected": "B1",
+      "correct": true,
+      "latency_ms": 56264.20969499941,
+      "input_tokens": 1660,
+      "output_tokens": 5627,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_011",
+      "prediction": "B1",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 1363282.8632810006,
+      "input_tokens": 1731,
+      "output_tokens": 4179,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_012",
+      "prediction": "B1",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 66104.7407850001,
+      "input_tokens": 1734,
+      "output_tokens": 6034,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_013",
+      "prediction": "B1",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 1029308.3795359998,
+      "input_tokens": 1699,
+      "output_tokens": 4557,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_014",
+      "prediction": "A2",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 66337.65820999906,
+      "input_tokens": 1756,
+      "output_tokens": 6462,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_015",
+      "prediction": "B1",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 1167310.457683001,
+      "input_tokens": 1713,
+      "output_tokens": 7705,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_016",
+      "prediction": "",
+      "expected": "C1",
+      "correct": false,
+      "latency_ms": 2558845.0166019993,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: network error after 5 attempts to http://lnsigo.mipt.ru:4000/v1 model=Qwen/Qwen3.5-397B-A17B-FP8: ReadError: [Errno 104] Connection reset by peer"
+    },
+    {
+      "id": "sample_017",
+      "prediction": "B1",
+      "expected": "C1",
+      "correct": false,
+      "latency_ms": 43800.71278499963,
+      "input_tokens": 1861,
+      "output_tokens": 3966,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_018",
+      "prediction": "B1",
+      "expected": "C1",
+      "correct": false,
+      "latency_ms": 387352.7076290011,
+      "input_tokens": 1787,
+      "output_tokens": 4902,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_019",
+      "prediction": "B1",
+      "expected": "C1",
+      "correct": false,
+      "latency_ms": 1114765.9326560006,
+      "input_tokens": 1787,
+      "output_tokens": 5766,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_020",
+      "prediction": "B1",
+      "expected": "C1",
+      "correct": false,
+      "latency_ms": 1089210.4987149995,
+      "input_tokens": 1780,
+      "output_tokens": 7133,
+      "judge_raw_score": null,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-18T16:00:44+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": null,
+  "judge_model_revision": null,
+  "judge_prompt_hash": null
+}
