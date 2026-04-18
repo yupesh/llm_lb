@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-18T16:07:10+00:00",
+  "generated_at": "2026-04-18T16:08:10+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -627,6 +627,19 @@
       "p95_latency_ms": 84543.28966800017,
       "cost_usd": null,
       "result_file": "tasks/kg_entity_type_refinement/results/qwen3.5-397b@vllm__2026-04-18T10-48-24Z.json"
+    },
+    {
+      "task_id": "kg_relation_refinement",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-397b@vllm",
+      "score": 0.93,
+      "metrics": {
+        "judge_score": 0.93
+      },
+      "tps": 98.08509919391194,
+      "p95_latency_ms": 35640.75026500001,
+      "cost_usd": null,
+      "result_file": "tasks/kg_relation_refinement/results/qwen3.5-397b@vllm__2026-04-18T10-53-26Z.json"
     },
     {
       "task_id": "oos_detection",
