@@ -146,6 +146,10 @@ class SamplePrediction(BaseModel):
     # configures an LLM-as-Judge metric. Normalised aggregate goes into
     # `RunResult.metrics["judge_score"]`.
     judge_raw_score: Optional[float] = None
+    # Set when the sample failed mid-run (network timeout, adapter exhausted
+    # retries, etc.). The prediction is empty and `correct=False`; the run
+    # itself completes so other samples still contribute to the metrics.
+    error: Optional[str] = None
 
 
 class RunResult(BaseModel):
@@ -161,6 +165,7 @@ class RunResult(BaseModel):
     tps: float
     p95_latency_ms: float
     n_samples: int
+    n_failed_samples: int = 0
     samples: list[SamplePrediction]
     created_at: str
     env: dict[str, Any] = Field(default_factory=dict)
