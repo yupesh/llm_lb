@@ -1,0 +1,19 @@
+{
+  "task_id": "kg_entity_type_refinement",
+  "task_version": "1.0",
+  "primary_metric": "judge_score",
+  "ranking": [
+    {
+      "model_id": "qwen3.5-397b@vllm",
+      "score": 0.66,
+      "metrics": {
+        "judge_score": 0.66
+      },
+      "tps": 59.50160915674948,
+      "p95_latency_ms": 84543.28966800017,
+      "cost_usd": null,
+      "result_file": "results/qwen3.5-397b@vllm__2026-04-18T10-48-24Z.json"
+    }
+  ],
+  "updated_at": "2026-04-18T16:07:10+00:00"
+}
