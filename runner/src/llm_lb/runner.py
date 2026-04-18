@@ -13,7 +13,7 @@ from .adapters import get_adapter
 from .eval import judge as judge_mod
 from .eval.dialog_sim import simulate_retail_dialog
 from .eval.extract import extract_label, extract_regex, normalize
-from .eval.metrics import accuracy, macro_f1
+from .eval.metrics import accuracy, macro_f1, qwk
 from .models import ModelCard, RunResult, Sample, SamplePrediction, TaskSpec
 
 
@@ -219,6 +219,8 @@ def run(
         metrics["exact_match"] = accuracy(preds)  # `correct` already uses normalize()
     if "macro_f1" in wanted and task.labels:
         metrics["macro_f1"] = macro_f1(preds, task.labels)
+    if "qwk" in wanted and task.labels:
+        metrics["qwk"] = qwk(preds, task.labels)
 
     tps = (total_output_tokens / total_gen_time_s) if total_gen_time_s > 0 else 0.0
     p95 = _p95([p.latency_ms for p in preds])
