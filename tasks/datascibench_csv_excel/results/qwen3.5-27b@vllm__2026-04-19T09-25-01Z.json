@@ -12,12 +12,12 @@
     "seed": 42
   },
   "metrics": {
-    "judge_score": 0.7142857142857143
+    "judge_score": 0.6444444444444444
   },
-  "tps": 20.216942281469763,
-  "p95_latency_ms": 905769.051697,
+  "tps": 23.30369737030078,
+  "p95_latency_ms": 903036.049414,
   "n_samples": 10,
-  "n_failed_samples": 3,
+  "n_failed_samples": 1,
   "samples": [
     {
       "id": "csv_excel_0",
@@ -32,25 +32,25 @@
     },
     {
       "id": "csv_excel_1",
-      "prediction": "",
+      "prediction": "```python\nimport pandas as pd\nimport openpyxl\n\n# Read the source Excel file with header=None to treat all rows as data for indexing\ndf = pd.read_excel('source.xlsx', header=None)\n\n# Get the value of the second row in column G (Index 1, Column 6)\n# Column G is the 7th column (0-indexed: 6)\nthreshold = df.iloc[1, 6]\n\n# Filter the data rows (skip the first row which is headers in this context, index 0)\n# We use df.iloc[1:] to get data rows starting from Excel Row 2\ndata_df = df.iloc[1:]\n\n# Apply filtering conditions\n# Column D (Index 3) >= 8 and < 8.0010\n# Column F (Index 5) == 18\n# Column G (Index 6) > threshold\nmask = (\n    (data_df.iloc[:, 3] >= 8) & \n    (data_df.iloc[:, 3] < 8.001) & \n    (data_df.iloc[:, 5] == 18) & \n    (data_df.iloc[:, 6] > threshold)\n)\n\nfiltered_df = data_df[mask]\n\n# Create a new workbook for target.xlsx\nwb = openpyxl.Workbook()\nws = wb.active\nws.title = 'sheet1'\n\n# Copy headers from source (Row 0) to target (Row 1)\nheaders = df.iloc[0].tolist()\nfor i, h in enumerate(headers, 1):\n    ws.cell(row=1, column=i, value=h)\n\n# Paste filtered values from Column G into corresponding cells in target.xlsx\n# The index in filtered_df corresponds to the original row index in df (1, 2, 3...)\n# Excel row number = index + 1\nfor idx, row in filtered_df.iterrows():\n    excel_row = idx + 1\n    value = row.iloc[6]  # Column G value\n    ws.cell(row=excel_row, column=7, value=value)\n\n# Save the target Excel file\nwb.save('target.xlsx')\n```",
       "expected": "1. Data cleaning and preprocessing: Data Completeness — filtered rows correctly identified by multi-condition filter (D>=8 AND D<8.001 AND F==18 AND G>G[row2]). 2. Data transformation: Transformation Accuracy — correct column G values copied to target.xlsx sheet1.",
       "correct": false,
-      "latency_ms": 905769.051697,
-      "input_tokens": null,
-      "output_tokens": null,
-      "judge_raw_score": null,
-      "error": "RuntimeError: network error after 3 attempts to http://lnsigo.mipt.ru:4000/v1 model=Qwen/Qwen3.5-27B: ReadTimeout: timed out"
+      "latency_ms": 536659.4696620001,
+      "input_tokens": 171,
+      "output_tokens": 13705,
+      "judge_raw_score": 2.0,
+      "error": null
     },
     {
       "id": "csv_excel_2",
       "prediction": "",
       "expected": "1. Data cleaning and preprocessing: Missing Value Percentage — filtered_train.csv has no anomalous samples. 2. Predictive modeling: Model Performance Accuracy — CNN trained on STFT spectral features and evaluated. 3. Data visualization: Visualization Completeness — data_analysis.txt produced. 4. Interpretability: Report Completeness — model_evaluation_results.csv written with metrics.",
       "correct": false,
-      "latency_ms": 905495.864621,
+      "latency_ms": 903036.049414,
       "input_tokens": null,
       "output_tokens": null,
       "judge_raw_score": null,
-      "error": "RuntimeError: network error after 3 attempts to http://lnsigo.mipt.ru:4000/v1 model=Qwen/Qwen3.5-27B: ReadTimeout: timed out"
+      "error": "RuntimeError: network error after 3 attempts to http://lnsigo.mipt.ru:4000/v1 model=Qwen/Qwen3.5-27B-dfl: ReadTimeout: timed out"
     },
     {
       "id": "csv_excel_3",
@@ -109,14 +109,14 @@
     },
     {
       "id": "csv_excel_11",
-      "prediction": "",
+      "prediction": "```python\nimport os\nimport numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport joblib\nfrom sklearn.svm import SVR\nfrom sklearn.multioutput import MultiOutputRegressor\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.metrics import mean_squared_error, r2_score\n\n# Set random seed for reproducibility\nnp.random.seed(42)\n\n# Function to generate dummy data if files do not exist\ndef generate_dummy_data():\n    # Input: 500 rows, 12 columns\n    input_data = np.random.rand(500, 12)\n    pd.DataFrame(input_data).to_csv('12_Input.csv', index=False, header=False)\n    \n    # Output: 500 rows, 500 columns\n    # Relationship: Input Row i -> Output Column i\n    output_data = np.zeros((500, 500))\n    for i in range(500):\n        # Create a learnable relationship\n        weights = np.random.rand(12)\n        output_data[:, i] = np.dot(input_data[i], weights) + np.random.normal(0, 0.1, 500)\n    \n    pd.DataFrame(output_data).to_csv('a_full.csv', index=False, header=False)\n\n# Check if files exist, if not generate them\nif not os.path.exists('12_Input.csv') or not os.path.exists('a_full.csv'):\n    generate_dummy_data()\n\n# Load Data\nX = pd.read_csv('12_Input.csv', header=None).values\nY_full = pd.read_csv('a_full.csv', header=None).values\n\n# Mapping: Input Row i corresponds to Output Column i\n# X shape: (500, 12)\n# Y_full shape: (500, 500)\n# We need Y such that Y[i] is the i-th column of Y_full\n# So Y = Y_full.T\nY = Y_full.T\n\n# Split data\nX_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2, random_state=42)\n\n# Scaling\nscaler_X = StandardScaler()\nscaler_Y = StandardScaler()\n\nX_train_scaled = scaler_X.fit_transform(X_train)\nX_test_scaled = scaler_X.transform(X_test)\n\ny_train_scaled = scaler_Y.fit_transform(y_train)\ny_test_scaled = scaler_Y.transform(y_test)\n\n# Model\n# Using MultiOutputRegressor to handle 500 output dimensions\nmodel = MultiOutputRegressor(SVR(kernel='rbf', C=100, gamma='scale'), n_jobs=-1)\nmodel.fit(X_train_scaled, y_train_scaled)\n\n# Save Model\njoblib.dump(model, 'model.pkl')\njoblib.dump(scaler_X, 'scaler_X.pkl')\njoblib.dump(scaler_Y, 'scaler_Y.pkl')\n\n# Prediction on a specific row (e.g., first row of test set)\nsample_idx = 0\nX_sample = X_test[sample_idx].reshape(1, -1)\nX_sample_scaled = scaler_X.transform(X_sample)\n\ny_pred_scaled = model.predict(X_sample_scaled)\ny_pred = scaler_Y.inverse_transform(y_pred_scaled)\ny_true = y_test[sample_idx]\n\n# Print prediction\nprint(f\"Predicted values shape: {y_pred.shape}\")\nprint(f\"First 10 predicted values: {y_pred[0][:10]}\")\n\n# Calculate Accuracy Metrics for this sample\nmse = mean_squared_error(y_true, y_pred[0])\nr2 = r2_score(y_true, y_pred[0])\nprint(f\"Sample MSE: {mse:.4f}\")\nprint(f\"Sample R2 Score: {r2:.4f}\")\n\n# Visualization\nplt.figure(figsize=(10, 6))\nplt.plot(y_true, label='Actual Output', marker='o', markersize=2)\nplt.plot(y_pred[0], label='Predicted Output', marker='x', markersize=2, linestyle='--')\nplt.title(f'SVR Prediction Accuracy (Sample {sample_idx})\\nMSE: {mse:.4f}, R2: {r2:.4f}')\nplt.xlabel('Output Dimension Index')\nplt.ylabel('Value')\nplt.legend()\nplt.grid(True)\nplt.tight_layout()\nplt.savefig('prediction_accuracy.png')\nplt.close()\n```",
       "expected": "1. Data visualization: Prediction Accuracy Visualization (R^2 Score) — prediction_accuracy.png shows predicted vs actual values with R^2 metric. SVR model trained on 12_Input.csv -> a_full.csv mapping, saved as model.pkl.",
       "correct": false,
-      "latency_ms": 905347.9937040001,
-      "input_tokens": null,
-      "output_tokens": null,
-      "judge_raw_score": null,
-      "error": "RuntimeError: network error after 3 attempts to http://lnsigo.mipt.ru:4000/v1 model=Qwen/Qwen3.5-27B: ReadTimeout: timed out"
+      "latency_ms": 175895.3474289999,
+      "input_tokens": 228,
+      "output_tokens": 9507,
+      "judge_raw_score": 2.0,
+      "error": null
     },
     {
       "id": "csv_excel_29",
@@ -130,7 +130,7 @@
       "error": null
     }
   ],
-  "created_at": "2026-04-19T12:28:04+00:00",
+  "created_at": "2026-04-19T23:01:37+00:00",
   "env": {
     "provider": "openai_compat",
     "endpoint_kind": "openai_chat"
