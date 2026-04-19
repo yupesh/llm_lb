@@ -1,0 +1,159 @@
+name: resume
+
+# Retry only the error-marked samples in an existing, already-committed
+# result file and open a PR with the fixed version.
+#
+# When to use: a score PR landed on main but its result has
+# `n_failed_samples > 0` (usually "Connection reset by peer" or transient
+# 5xx from the endpoint on a handful of samples). Running the whole task
+# again would waste compute and duplicate successful predictions; `resume`
+# reruns only the failed samples and merges the new predictions back into
+# the original file in place, then recomputes aggregate metrics.
+#
+# The workflow does NOT auto-merge. The retry opens a follow-up PR for
+# admin review — deliberately, so a persistently broken task can't loop.
+
+on:
+  workflow_dispatch:
+    inputs:
+      result_path:
+        description: "Path to the committed result file (e.g. tasks/cefr_level_classification/results/qwen3.5-397b@vllm__2026-04-19T00-59-11Z.json)"
+        required: true
+      runner:
+        description: "Where to run"
+        required: true
+        default: github
+        type: choice
+        options: [github, self-hosted]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
+jobs:
+  resume:
+    runs-on: ${{ github.event.inputs.runner == 'self-hosted' && fromJSON('["self-hosted","score-runner"]') || fromJSON('["ubuntu-latest"]') }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+
+      - name: Install runner
+        working-directory: runner
+        run: uv sync --frozen
+
+      - name: Resolve task and model from result file
+        id: resolve
+        env:
+          RESULT_PATH: ${{ github.event.inputs.result_path }}
+        run: |
+          python3 <<'PY'
+          import json, os, pathlib, sys
+
+          rp = os.environ["RESULT_PATH"]
+          p = pathlib.Path(rp)
+          if not p.is_file():
+              sys.exit(f"::error::result file not found: {rp}")
+
+          data = json.loads(p.read_text())
+          task_id  = data["task_id"]
+          model_id = data["model_id"]
+          n_failed = data.get("n_failed_samples", 0)
+
+          task_dir   = f"tasks/{task_id}"
+          model_path = f"models/{model_id}.yaml"
+
+          if not pathlib.Path(task_dir, "task.yaml").is_file():
+              sys.exit(f"::error::task dir not found: {task_dir}")
+          if not pathlib.Path(model_path).is_file():
+              sys.exit(f"::error::model file not found: {model_path}")
+
+          if n_failed == 0:
+              print(f"::notice::{rp} has no failed samples; resume will be a no-op")
+
+          out = os.environ["GITHUB_OUTPUT"]
+          with open(out, "a") as f:
+              f.write(f"task_dir={task_dir}\n")
+              f.write(f"model_path={model_path}\n")
+              f.write(f"task_id={task_id}\n")
+              f.write(f"model_id={model_id}\n")
+              f.write(f"n_failed={n_failed}\n")
+          print(f"Will resume {n_failed} failed sample(s) in {rp}")
+          print(f"  task:  {task_dir}")
+          print(f"  model: {model_path}")
+          PY
+
+      - name: Materialise task context files from secrets
+        # Same logic as score.yml — some tasks need a decoded context file
+        # that isn't checked in. Missing secret degrades to empty context.
+        env:
+          AMBROSIA_SCHEMAS_B64: ${{ secrets.AMBROSIA_SCHEMAS_B64 }}
+        run: |
+          if [ -n "${AMBROSIA_SCHEMAS_B64:-}" ] && [ -d tasks/text2sql_ambiguity ]; then
+            echo "$AMBROSIA_SCHEMAS_B64" | base64 -d | gunzip > tasks/text2sql_ambiguity/db_schemas.json
+          fi
+
+      - name: Resume failed samples
+        working-directory: runner
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          LLM_LB_API_KEY: ${{ secrets.LLM_LB_API_KEY }}
+          VLLM_PROXY_KEY: ${{ secrets.VLLM_PROXY_KEY }}
+          JUDGE_BASE_URL: ${{ secrets.JUDGE_BASE_URL }}
+          JUDGE_API_KEY: ${{ secrets.JUDGE_API_KEY }}
+          JUDGE_MODEL_NAME: ${{ secrets.JUDGE_MODEL_NAME }}
+        run: |
+          uv run llm-lb resume \
+            --result "../${{ github.event.inputs.result_path }}" \
+            --task   "../${{ steps.resolve.outputs.task_dir }}" \
+            --model  "../${{ steps.resolve.outputs.model_path }}"
+
+      - name: Summarise resume outcome
+        id: summary
+        env:
+          RESULT_PATH: ${{ github.event.inputs.result_path }}
+        run: |
+          python3 <<'PY'
+          import json, os, pathlib
+          p = pathlib.Path(os.environ["RESULT_PATH"])
+          data = json.loads(p.read_text())
+          nf = data.get("n_failed_samples", 0)
+          metrics = ", ".join(f"{k}={v:.4g}" for k, v in data.get("metrics", {}).items())
+          print(f"::notice::n_failed_samples after resume: {nf}; metrics: {metrics}")
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write(f"n_failed_after={nf}\n")
+              f.write(f"metrics={metrics}\n")
+          PY
+
+      - name: Open PR with resumed result
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "resume: fix failed samples in ${{ github.event.inputs.result_path }}"
+          title: "resume: ${{ steps.resolve.outputs.model_id }} on ${{ steps.resolve.outputs.task_id }} (retry ${{ steps.resolve.outputs.n_failed }} samples)"
+          branch: resume/${{ github.run_id }}
+          labels: resume
+          add-paths: |
+            tasks/*/results/**
+          body: |
+            Automated resume run — retried failed samples in an already-committed result file.
+
+            - **Result file:** `${{ github.event.inputs.result_path }}`
+            - **Task:** `${{ steps.resolve.outputs.task_id }}`
+            - **Model:** `${{ steps.resolve.outputs.model_id }}`
+            - **Failed samples before resume:** ${{ steps.resolve.outputs.n_failed }}
+            - **Failed samples after resume:** ${{ steps.summary.outputs.n_failed_after }}
+            - **Metrics after resume:** ${{ steps.summary.outputs.metrics }}
+            - **Run:** ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+            Merge this PR to replace the result file on main. `aggregate`
+            will then refresh leaderboards. If `n_failed_samples after
+            resume > 0`, the endpoint is still flaky on the same samples —
+            consider investigating the specific sample IDs before retrying
+            again.
