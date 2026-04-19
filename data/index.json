@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-19T15:42:32+00:00",
+  "generated_at": "2026-04-19T15:43:07+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -591,19 +591,6 @@
     {
       "task_id": "datascibench_dl",
       "task_version": "1.0",
-      "model_id": "qwen3.5-27b@vllm",
-      "score": 0.4666666666666666,
-      "metrics": {
-        "judge_score": 0.4666666666666666
-      },
-      "tps": 14.566459823851094,
-      "p95_latency_ms": 826686.0452419997,
-      "cost_usd": null,
-      "result_file": "tasks/datascibench_dl/results/qwen3.5-27b@vllm__2026-04-19T11-20-42Z.json"
-    },
-    {
-      "task_id": "datascibench_dl",
-      "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
       "score": 0.42000000000000004,
       "metrics": {
@@ -613,6 +600,19 @@
       "p95_latency_ms": 949075.7646020001,
       "cost_usd": null,
       "result_file": "tasks/datascibench_dl/results/qwen3-30b@vllm__2026-04-16T04-22-18Z.json"
+    },
+    {
+      "task_id": "datascibench_dl",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.39999999999999997,
+      "metrics": {
+        "judge_score": 0.39999999999999997
+      },
+      "tps": 13.266537559307361,
+      "p95_latency_ms": 905277.831496,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_dl/results/qwen3.5-27b@vllm__2026-04-19T11-20-42Z.json"
     },
     {
       "task_id": "datascibench_human",
