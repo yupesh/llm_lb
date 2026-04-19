@@ -1,0 +1,252 @@
+{
+  "model_id": "qwen3.5-27b@vllm",
+  "model_revision": "2026-04-11",
+  "task_id": "kg_triplet_extraction",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "d757604f93f111dd",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "judge_score": 0.58
+  },
+  "tps": 21.597941542422195,
+  "p95_latency_ms": 478929.2585929998,
+  "n_samples": 20,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "kg_te_001",
+      "prediction": "{\n    \"triplets\": [\n        {\n            \"subject\": \"Albert Einstein\",\n            \"relation\": \"date of birth\",\n            \"object\": \"14 March 1879\",\n            \"qualifiers\": [],\n            \"subject_type\": \"human\",\n            \"object_type\": \"date\"\n        },\n        {\n            \"subject\": \"Albert Einstein\",\n            \"relation\": \"place of birth\",\n            \"object\": \"Ulm, Germany\",\n            \"qualifiers\": [],\n            \"subject_type\": \"human\",\n            \"object_type\": \"location\"\n        },\n        {\n            \"subject\": \"Albert Einstein\",\n            \"relation\": \"award received\",\n            \"object\": \"Nobel Prize in Physics\",\n            \"qualifiers\": [\n                {\n                    \"relation\": \"point in time\",\n                    \"object\": \"1921\"\n                },\n                {\n                    \"relation\": \"reason for award\",\n                    \"object\": \"photoelectric effect\"\n                }\n            ],\n            \"subject_type\": \"human\",\n            \"object_type\": \"award\"\n        }\n    ]\n}",
+      "expected": "{\"triplets\": [{\"subject\": \"Albert Einstein\", \"relation\": \"date of birth\", \"object\": \"14 March 1879\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"date\"}, {\"subject\": \"Albert Einstein\", \"relation\": \"place of birth\", \"object\": \"Ulm\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"city\"}, {\"subject\": \"Ulm\", \"relation\": \"country\", \"object\": \"Germany\", \"qualifiers\": [], \"subject_type\": \"city\", \"object_type\": \"country\"}, {\"subject\": \"Albert Einstein\", \"relation\": \"award received\", \"object\": \"Nobel Prize in Physics\", \"qualifiers\": [{\"relation\": \"point in time\", \"object\": \"1921\"}], \"subject_type\": \"human\", \"object_type\": \"award\"}, {\"subject\": \"Albert Einstein\", \"relation\": \"field of work\", \"object\": \"photoelectric effect\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"physical phenomenon\"}]}",
+      "correct": false,
+      "latency_ms": 786079.033283,
+      "input_tokens": 982,
+      "output_tokens": 5044,
+      "judge_raw_score": 3.0,
+      "error": null
+    },
+    {
+      "id": "kg_te_002",
+      "prediction": "{\n    \"triplets\": [\n        {\n            \"subject\": \"I\",\n            \"relation\": \"employer\",\n            \"object\": \"Google\",\n            \"qualifiers\": [\n                {\n                    \"relation\": \"start time\",\n                    \"object\": \"last month\"\n                }\n            ],\n            \"subject_type\": \"human\",\n            \"object_type\": \"organization\"\n        },\n        {\n            \"subject\": \"I\",\n            \"relation\": \"employer\",\n            \"object\": \"Microsoft\",\n            \"qualifiers\": [\n                {\n                    \"relation\": \"duration\",\n                    \"object\": \"three years\"\n                }\n            ],\n            \"subject_type\": \"human\",\n            \"object_type\": \"organization\"\n        },\n        {\n            \"subject\": \"I\",\n            \"relation\": \"occupation\",\n            \"object\": \"software engineer\",\n            \"qualifiers\": [\n                {\n                    \"relation\": \"employer\",\n                    \"object\": \"Microsoft\"\n                }\n            ],\n            \"subject_type\": \"human\",\n            \"object_type\": \"profession\"\n        }\n    ]\n}",
+      "expected": "{\"triplets\": [{\"subject\": \"speaker\", \"relation\": \"employer\", \"object\": \"Google\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"company\"}, {\"subject\": \"speaker\", \"relation\": \"employer\", \"object\": \"Microsoft\", \"qualifiers\": [{\"relation\": \"duration\", \"object\": \"three years\"}], \"subject_type\": \"human\", \"object_type\": \"company\"}, {\"subject\": \"speaker\", \"relation\": \"occupation\", \"object\": \"software engineer\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"profession\"}]}",
+      "correct": false,
+      "latency_ms": 222282.93185800008,
+      "input_tokens": 963,
+      "output_tokens": 5572,
+      "judge_raw_score": 3.0,
+      "error": null
+    },
+    {
+      "id": "kg_te_003",
+      "prediction": "{\n    \"triplets\": [\n        {\n            \"subject\": \"Eiffel Tower\",\n            \"relation\": \"designer\",\n            \"object\": \"Gustave Eiffel\",\n            \"qualifiers\": [],\n            \"subject_type\": \"tower\",\n            \"object_type\": \"human\"\n        },\n        {\n            \"subject\": \"Eiffel Tower\",\n            \"relation\": \"completion date\",\n            \"object\": \"1889\",\n            \"qualifiers\": [],\n            \"subject_type\": \"tower\",\n            \"object_type\": \"date\"\n        },\n        {\n            \"subject\": \"Eiffel Tower\",\n            \"relation\": \"located in\",\n            \"object\": \"Paris\",\n            \"qualifiers\": [],\n            \"subject_type\": \"tower\",\n            \"object_type\": \"city\"\n        },\n        {\n            \"subject\": \"Eiffel Tower\",\n            \"relation\": \"height\",\n            \"object\": \"330 meters\",\n            \"qualifiers\": [],\n            \"subject_type\": \"tower\",\n            \"object_type\": \"quantity\"\n        },\n        {\n            \"subject\": \"Eiffel Tower\",\n            \"relation\": \"annual visitors\",\n            \"object\": \"7 million\",\n            \"qualifiers\": [],\n            \"subject_type\": \"tower\",\n            \"object_type\": \"quantity\"\n        }\n    ]\n}",
+      "expected": "{\"triplets\": [{\"subject\": \"Eiffel Tower\", \"relation\": \"creator\", \"object\": \"Gustave Eiffel\", \"qualifiers\": [], \"subject_type\": \"building\", \"object_type\": \"human\"}, {\"subject\": \"Eiffel Tower\", \"relation\": \"inception\", \"object\": \"1889\", \"qualifiers\": [], \"subject_type\": \"building\", \"object_type\": \"date\"}, {\"subject\": \"Eiffel Tower\", \"relation\": \"located in\", \"object\": \"Paris\", \"qualifiers\": [], \"subject_type\": \"building\", \"object_type\": \"city\"}, {\"subject\": \"Eiffel Tower\", \"relation\": \"height\", \"object\": \"330 meters\", \"qualifiers\": [], \"subject_type\": \"building\", \"object_type\": \"physical quantity\"}]}",
+      "correct": false,
+      "latency_ms": 253891.40206899992,
+      "input_tokens": 980,
+      "output_tokens": 6496,
+      "judge_raw_score": 3.0,
+      "error": null
+    },
+    {
+      "id": "kg_te_004",
+      "prediction": "{\n    \"triplets\": [\n        {\n            \"subject\": \"Emma\",\n            \"relation\": \"educated at\",\n            \"object\": \"MIT\",\n            \"qualifiers\": [\n                {\n                    \"relation\": \"field of study\",\n                    \"object\": \"Computer Science\"\n                },\n                {\n                    \"relation\": \"point in time\",\n                    \"object\": \"last June\"\n                }\n            ],\n            \"subject_type\": \"human\",\n            \"object_type\": \"educational institution\"\n        },\n        {\n            \"subject\": \"Emma\",\n            \"relation\": \"educated at\",\n            \"object\": \"Stanford\",\n            \"qualifiers\": [\n                {\n                    \"relation\": \"academic degree\",\n                    \"object\": \"PhD\"\n                },\n                {\n                    \"relation\": \"point in time\",\n                    \"object\": \"current\"\n                }\n            ],\n            \"subject_type\": \"human\",\n            \"object_type\": \"educational institution\"\n        }\n    ]\n}",
+      "expected": "{\"triplets\": [{\"subject\": \"Emma\", \"relation\": \"educated at\", \"object\": \"MIT\", \"qualifiers\": [{\"relation\": \"academic major\", \"object\": \"Computer Science\"}], \"subject_type\": \"human\", \"object_type\": \"university\"}, {\"subject\": \"Emma\", \"relation\": \"educated at\", \"object\": \"Stanford\", \"qualifiers\": [{\"relation\": \"academic degree\", \"object\": \"PhD\"}], \"subject_type\": \"human\", \"object_type\": \"university\"}, {\"subject\": \"speaker\", \"relation\": \"child\", \"object\": \"Emma\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"human\"}]}",
+      "correct": false,
+      "latency_ms": 184335.30276500006,
+      "input_tokens": 964,
+      "output_tokens": 4840,
+      "judge_raw_score": 3.0,
+      "error": null
+    },
+    {
+      "id": "kg_te_005",
+      "prediction": "{\n    \"triplets\": [\n        {\n            \"subject\": \"Tokyo\",\n            \"relation\": \"capital of\",\n            \"object\": \"Japan\",\n            \"qualifiers\": [],\n            \"subject_type\": \"city\",\n            \"object_type\": \"country\"\n        },\n        {\n            \"subject\": \"Tokyo\",\n            \"relation\": \"population\",\n            \"object\": \"14 million people\",\n            \"qualifiers\": [\n                {\n                    \"relation\": \"approximate\",\n                    \"object\": \"yes\"\n                }\n            ],\n            \"subject_type\": \"city\",\n            \"object_type\": \"quantity\"\n        },\n        {\n            \"subject\": \"Japan\",\n            \"relation\": \"official language\",\n            \"object\": \"Japanese\",\n            \"qualifiers\": [],\n            \"subject_type\": \"country\",\n            \"object_type\": \"language\"\n        }\n    ]\n}",
+      "expected": "{\"triplets\": [{\"subject\": \"Japan\", \"relation\": \"capital\", \"object\": \"Tokyo\", \"qualifiers\": [], \"subject_type\": \"country\", \"object_type\": \"city\"}, {\"subject\": \"Tokyo\", \"relation\": \"population\", \"object\": \"14 million\", \"qualifiers\": [], \"subject_type\": \"city\", \"object_type\": \"natural number\"}, {\"subject\": \"Japan\", \"relation\": \"official language\", \"object\": \"Japanese\", \"qualifiers\": [], \"subject_type\": \"country\", \"object_type\": \"language\"}]}",
+      "correct": false,
+      "latency_ms": 180736.96765499996,
+      "input_tokens": 965,
+      "output_tokens": 4838,
+      "judge_raw_score": 3.0,
+      "error": null
+    },
+    {
+      "id": "kg_te_006",
+      "prediction": "{\n    \"triplets\": [\n        {\n            \"subject\": \"Christopher Nolan\",\n            \"relation\": \"director\",\n            \"object\": \"Inception\",\n            \"qualifiers\": [\n                {\n                    \"relation\": \"point in time\",\n                    \"object\": \"2010\"\n                }\n            ],\n            \"subject_type\": \"human\",\n            \"object_type\": \"film\"\n        },\n        {\n            \"subject\": \"Inception\",\n            \"relation\": \"cast member\",\n            \"object\": \"Leonardo DiCaprio\",\n            \"qualifiers\": [],\n            \"subject_type\": \"film\",\n            \"object_type\": \"human\"\n        },\n        {\n            \"subject\": \"Inception\",\n            \"relation\": \"award received\",\n            \"object\": \"Academy Awards\",\n            \"qualifiers\": [\n                {\n                    \"relation\": \"number of items\",\n                    \"object\": \"4\"\n                }\n            ],\n            \"subject_type\": \"film\",\n            \"object_type\": \"award\"\n        }\n    ]\n}",
+      "expected": "{\"triplets\": [{\"subject\": \"Inception\", \"relation\": \"director\", \"object\": \"Christopher Nolan\", \"qualifiers\": [], \"subject_type\": \"film\", \"object_type\": \"human\"}, {\"subject\": \"Inception\", \"relation\": \"publication date\", \"object\": \"2010\", \"qualifiers\": [], \"subject_type\": \"film\", \"object_type\": \"date\"}, {\"subject\": \"Inception\", \"relation\": \"cast member\", \"object\": \"Leonardo DiCaprio\", \"qualifiers\": [], \"subject_type\": \"film\", \"object_type\": \"human\"}, {\"subject\": \"Inception\", \"relation\": \"award received\", \"object\": \"Academy Award\", \"qualifiers\": [{\"relation\": \"number of\", \"object\": \"4\"}], \"subject_type\": \"film\", \"object_type\": \"award\"}]}",
+      "correct": false,
+      "latency_ms": 107613.91899399996,
+      "input_tokens": 965,
+      "output_tokens": 2947,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "kg_te_007",
+      "prediction": "{\n    \"triplets\": [\n        {\n            \"subject\": \"Max\",\n            \"relation\": \"breed\",\n            \"object\": \"golden retriever\",\n            \"qualifiers\": [],\n            \"subject_type\": \"animal\",\n            \"object_type\": \"dog breed\"\n        },\n        {\n            \"subject\": \"Max\",\n            \"relation\": \"adopted from\",\n            \"object\": \"shelter\",\n            \"qualifiers\": [\n                {\n                    \"relation\": \"point in time\",\n                    \"object\": \"March\"\n                }\n            ],\n            \"subject_type\": \"animal\",\n            \"object_type\": \"organization\"\n        },\n        {\n            \"subject\": \"Max\",\n            \"relation\": \"age\",\n            \"object\": \"two years old\",\n            \"qualifiers\": [],\n            \"subject_type\": \"animal\",\n            \"object_type\": \"quantity\"\n        },\n        {\n            \"subject\": \"Max\",\n            \"relation\": \"enjoys\",\n            \"object\": \"swimming\",\n            \"qualifiers\": [],\n            \"subject_type\": \"animal\",\n            \"object_type\": \"activity\"\n        }\n    ]\n}",
+      "expected": "{\"triplets\": [{\"subject\": \"speaker\", \"relation\": \"pet\", \"object\": \"Max\", \"qualifiers\": [{\"relation\": \"point in time\", \"object\": \"March\"}], \"subject_type\": \"human\", \"object_type\": \"dog\"}, {\"subject\": \"Max\", \"relation\": \"instance of\", \"object\": \"golden retriever\", \"qualifiers\": [], \"subject_type\": \"dog\", \"object_type\": \"dog breed\"}, {\"subject\": \"Max\", \"relation\": \"age\", \"object\": \"two years\", \"qualifiers\": [], \"subject_type\": \"dog\", \"object_type\": \"physical quantity\"}]}",
+      "correct": false,
+      "latency_ms": 178054.142791,
+      "input_tokens": 964,
+      "output_tokens": 4963,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "kg_te_008",
+      "prediction": "{\n    \"triplets\": [\n        {\n            \"subject\": \"Amazon River\",\n            \"relation\": \"country\",\n            \"object\": \"Brazil\",\n            \"qualifiers\": [],\n            \"subject_type\": \"river\",\n            \"object_type\": \"country\"\n        },\n        {\n            \"subject\": \"Amazon River\",\n            \"relation\": \"country\",\n            \"object\": \"Peru\",\n            \"qualifiers\": [],\n            \"subject_type\": \"river\",\n            \"object_type\": \"country\"\n        },\n        {\n            \"subject\": \"Amazon River\",\n            \"relation\": \"country\",\n            \"object\": \"Colombia\",\n            \"qualifiers\": [],\n            \"subject_type\": \"river\",\n            \"object_type\": \"country\"\n        },\n        {\n            \"subject\": \"Amazon River\",\n            \"relation\": \"length\",\n            \"object\": \"6,400 km\",\n            \"qualifiers\": [],\n            \"subject_type\": \"river\",\n            \"object_type\": \"quantity\"\n        },\n        {\n            \"subject\": \"Amazon River\",\n            \"relation\": \"rank\",\n            \"object\": \"2\",\n            \"qualifiers\": [\n                {\n                    \"relation\": \"ranking criteria\",\n                    \"object\": \"longest river in the world\"\n                }\n            ],\n            \"subject_type\": \"river\",\n            \"object_type\": \"number\"\n        }\n    ]\n}",
+      "expected": "{\"triplets\": [{\"subject\": \"Amazon River\", \"relation\": \"country\", \"object\": \"Brazil\", \"qualifiers\": [], \"subject_type\": \"river\", \"object_type\": \"country\"}, {\"subject\": \"Amazon River\", \"relation\": \"country\", \"object\": \"Peru\", \"qualifiers\": [], \"subject_type\": \"river\", \"object_type\": \"country\"}, {\"subject\": \"Amazon River\", \"relation\": \"country\", \"object\": \"Colombia\", \"qualifiers\": [], \"subject_type\": \"river\", \"object_type\": \"country\"}, {\"subject\": \"Amazon River\", \"relation\": \"length\", \"object\": \"6,400 km\", \"qualifiers\": [], \"subject_type\": \"river\", \"object_type\": \"physical quantity\"}]}",
+      "correct": false,
+      "latency_ms": 152814.2878860001,
+      "input_tokens": 974,
+      "output_tokens": 4338,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "kg_te_009",
+      "prediction": "{\n    \"triplets\": [\n        {\n            \"subject\": \"Sarah\",\n            \"relation\": \"occupation\",\n            \"object\": \"data scientist\",\n            \"qualifiers\": [],\n            \"subject_type\": \"human\",\n            \"object_type\": \"profession\"\n        },\n        {\n            \"subject\": \"Sarah\",\n            \"relation\": \"employer\",\n            \"object\": \"Spotify\",\n            \"qualifiers\": [],\n            \"subject_type\": \"human\",\n            \"object_type\": \"organization\"\n        },\n        {\n            \"subject\": \"Sarah\",\n            \"relation\": \"author of\",\n            \"object\": \"paper\",\n            \"qualifiers\": [\n                {\n                    \"relation\": \"topic\",\n                    \"object\": \"recommendation systems\"\n                }\n            ],\n            \"subject_type\": \"human\",\n            \"object_type\": \"creative work\"\n        },\n        {\n            \"subject\": \"Sarah\",\n            \"relation\": \"attended\",\n            \"object\": \"conference\",\n            \"qualifiers\": [\n                {\n                    \"relation\": \"location\",\n                    \"object\": \"Berlin\"\n                },\n                {\n                    \"relation\": \"point in time\",\n                    \"object\": \"last week\"\n                }\n            ],\n            \"subject_type\": \"human\",\n            \"object_type\": \"event\"\n        }\n    ]\n}",
+      "expected": "{\"triplets\": [{\"subject\": \"speaker\", \"relation\": \"knows\", \"object\": \"Sarah\", \"qualifiers\": [{\"relation\": \"location\", \"object\": \"Berlin\"}], \"subject_type\": \"human\", \"object_type\": \"human\"}, {\"subject\": \"Sarah\", \"relation\": \"employer\", \"object\": \"Spotify\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"company\"}, {\"subject\": \"Sarah\", \"relation\": \"occupation\", \"object\": \"data scientist\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"profession\"}, {\"subject\": \"Sarah\", \"relation\": \"author of\", \"object\": \"paper on recommendation systems\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"scholarly article\"}]}",
+      "correct": false,
+      "latency_ms": 165594.85063600005,
+      "input_tokens": 968,
+      "output_tokens": 4708,
+      "judge_raw_score": 3.0,
+      "error": null
+    },
+    {
+      "id": "kg_te_010",
+      "prediction": "{\n    \"triplets\": [\n        {\n            \"subject\": \"Beethoven\",\n            \"relation\": \"composer\",\n            \"object\": \"Ninth Symphony\",\n            \"qualifiers\": [\n                {\n                    \"relation\": \"start time\",\n                    \"object\": \"1822\"\n                },\n                {\n                    \"relation\": \"end time\",\n                    \"object\": \"1824\"\n                }\n            ],\n            \"subject_type\": \"human\",\n            \"object_type\": \"musical work\"\n        },\n        {\n            \"subject\": \"Ninth Symphony\",\n            \"relation\": \"date of first performance\",\n            \"object\": \"7 May 1824\",\n            \"qualifiers\": [\n                {\n                    \"relation\": \"location of first performance\",\n                    \"object\": \"Vienna\"\n                }\n            ],\n            \"subject_type\": \"musical work\",\n            \"object_type\": \"date\"\n        }\n    ]\n}",
+      "expected": "{\"triplets\": [{\"subject\": \"Ninth Symphony\", \"relation\": \"composer\", \"object\": \"Beethoven\", \"qualifiers\": [{\"relation\": \"start time\", \"object\": \"1822\"}, {\"relation\": \"end time\", \"object\": \"1824\"}], \"subject_type\": \"musical composition\", \"object_type\": \"human\"}, {\"subject\": \"Ninth Symphony\", \"relation\": \"first performance\", \"object\": \"7 May 1824\", \"qualifiers\": [{\"relation\": \"location\", \"object\": \"Vienna\"}], \"subject_type\": \"musical composition\", \"object_type\": \"date\"}]}",
+      "correct": false,
+      "latency_ms": 219456.4189900002,
+      "input_tokens": 975,
+      "output_tokens": 6231,
+      "judge_raw_score": 3.0,
+      "error": null
+    },
+    {
+      "id": "kg_te_011",
+      "prediction": "{\n    \"triplets\": [\n        {\n            \"subject\": \"Tom\",\n            \"relation\": \"residence\",\n            \"object\": \"Vancouver\",\n            \"qualifiers\": [\n                {\n                    \"relation\": \"point in time\",\n                    \"object\": \"last year\"\n                }\n            ],\n            \"subject_type\": \"human\",\n            \"object_type\": \"location\"\n        },\n        {\n            \"subject\": \"Tom\",\n            \"relation\": \"occupation\",\n            \"object\": \"teacher\",\n            \"qualifiers\": [],\n            \"subject_type\": \"human\",\n            \"object_type\": \"profession\"\n        },\n        {\n            \"subject\": \"Tom\",\n            \"relation\": \"employer\",\n            \"object\": \"University of British Columbia\",\n            \"qualifiers\": [],\n            \"subject_type\": \"human\",\n            \"object_type\": \"organization\"\n        },\n        {\n            \"subject\": \"Tom\",\n            \"relation\": \"field of work\",\n            \"object\": \"mathematics\",\n            \"qualifiers\": [],\n            \"subject_type\": \"human\",\n            \"object_type\": \"academic discipline\"\n        }\n    ]\n}",
+      "expected": "{\"triplets\": [{\"subject\": \"speaker\", \"relation\": \"sibling\", \"object\": \"Tom\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"human\"}, {\"subject\": \"Tom\", \"relation\": \"residence\", \"object\": \"Vancouver\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"city\"}, {\"subject\": \"Tom\", \"relation\": \"employer\", \"object\": \"University of British Columbia\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"university\"}, {\"subject\": \"Tom\", \"relation\": \"occupation\", \"object\": \"teacher\", \"qualifiers\": [{\"relation\": \"field of work\", \"object\": \"mathematics\"}], \"subject_type\": \"human\", \"object_type\": \"profession\"}]}",
+      "correct": false,
+      "latency_ms": 133776.6186019999,
+      "input_tokens": 959,
+      "output_tokens": 3795,
+      "judge_raw_score": 3.0,
+      "error": null
+    },
+    {
+      "id": "kg_te_012",
+      "prediction": "{\n    \"triplets\": [\n        {\n            \"subject\": \"SpaceX\",\n            \"relation\": \"founder\",\n            \"object\": \"Elon Musk\",\n            \"qualifiers\": [\n                {\n                    \"relation\": \"point in time\",\n                    \"object\": \"2002\"\n                }\n            ],\n            \"subject_type\": \"organization\",\n            \"object_type\": \"human\"\n        },\n        {\n            \"subject\": \"SpaceX\",\n            \"relation\": \"headquarters location\",\n            \"object\": \"Hawthorne, California\",\n            \"qualifiers\": [],\n            \"subject_type\": \"organization\",\n            \"object_type\": \"location\"\n        },\n        {\n            \"subject\": \"SpaceX\",\n            \"relation\": \"developed\",\n            \"object\": \"Falcon 9 rocket\",\n            \"qualifiers\": [],\n            \"subject_type\": \"organization\",\n            \"object_type\": \"spacecraft\"\n        }\n    ]\n}",
+      "expected": "{\"triplets\": [{\"subject\": \"SpaceX\", \"relation\": \"founder\", \"object\": \"Elon Musk\", \"qualifiers\": [], \"subject_type\": \"company\", \"object_type\": \"human\"}, {\"subject\": \"SpaceX\", \"relation\": \"inception\", \"object\": \"2002\", \"qualifiers\": [], \"subject_type\": \"company\", \"object_type\": \"date\"}, {\"subject\": \"SpaceX\", \"relation\": \"headquarters location\", \"object\": \"Hawthorne\", \"qualifiers\": [], \"subject_type\": \"company\", \"object_type\": \"city\"}, {\"subject\": \"Hawthorne\", \"relation\": \"located in\", \"object\": \"California\", \"qualifiers\": [], \"subject_type\": \"city\", \"object_type\": \"state\"}, {\"subject\": \"SpaceX\", \"relation\": \"product\", \"object\": \"Falcon 9\", \"qualifiers\": [], \"subject_type\": \"company\", \"object_type\": \"rocket\"}]}",
+      "correct": false,
+      "latency_ms": 478929.2585929998,
+      "input_tokens": 971,
+      "output_tokens": 4997,
+      "judge_raw_score": 3.0,
+      "error": null
+    },
+    {
+      "id": "kg_te_013",
+      "prediction": "{\n    \"triplets\": [\n        {\n            \"subject\": \"Louvre Museum\",\n            \"relation\": \"located in\",\n            \"object\": \"Paris\",\n            \"qualifiers\": [],\n            \"subject_type\": \"museum\",\n            \"object_type\": \"city\"\n        },\n        {\n            \"subject\": \"Mona Lisa\",\n            \"relation\": \"creator\",\n            \"object\": \"Leonardo da Vinci\",\n            \"qualifiers\": [],\n            \"subject_type\": \"painting\",\n            \"object_type\": \"human\"\n        },\n        {\n            \"subject\": \"Mona Lisa\",\n            \"relation\": \"located in\",\n            \"object\": \"Louvre Museum\",\n            \"qualifiers\": [],\n            \"subject_type\": \"painting\",\n            \"object_type\": \"museum\"\n        }\n    ]\n}",
+      "expected": "{\"triplets\": [{\"subject\": \"Louvre Museum\", \"relation\": \"located in\", \"object\": \"Paris\", \"qualifiers\": [], \"subject_type\": \"museum\", \"object_type\": \"city\"}, {\"subject\": \"Mona Lisa\", \"relation\": \"creator\", \"object\": \"Leonardo da Vinci\", \"qualifiers\": [], \"subject_type\": \"painting\", \"object_type\": \"human\"}, {\"subject\": \"Mona Lisa\", \"relation\": \"collection\", \"object\": \"Louvre Museum\", \"qualifiers\": [], \"subject_type\": \"painting\", \"object_type\": \"museum\"}]}",
+      "correct": false,
+      "latency_ms": 109504.475533,
+      "input_tokens": 963,
+      "output_tokens": 3052,
+      "judge_raw_score": 3.0,
+      "error": null
+    },
+    {
+      "id": "kg_te_014",
+      "prediction": "{\n    \"triplets\": [\n        {\n            \"subject\": \"the speaker\",\n            \"relation\": \"learning\",\n            \"object\": \"Spanish\",\n            \"qualifiers\": [\n                {\n                    \"relation\": \"duration\",\n                    \"object\": \"two years\"\n                }\n            ],\n            \"subject_type\": \"human\",\n            \"object_type\": \"language\"\n        },\n        {\n            \"subject\": \"the speaker's teacher\",\n            \"relation\": \"place of birth\",\n            \"object\": \"Madrid\",\n            \"qualifiers\": [],\n            \"subject_type\": \"human\",\n            \"object_type\": \"city\"\n        },\n        {\n            \"subject\": \"the speaker\",\n            \"relation\": \"attends\",\n            \"object\": \"Spanish classes\",\n            \"qualifiers\": [\n                {\n                    \"relation\": \"frequency\",\n                    \"object\": \"Tuesday and Thursday evening\"\n                }\n            ],\n            \"subject_type\": \"human\",\n            \"object_type\": \"educational activity\"\n        }\n    ]\n}",
+      "expected": "{\"triplets\": [{\"subject\": \"speaker\", \"relation\": \"language spoken\", \"object\": \"Spanish\", \"qualifiers\": [{\"relation\": \"duration\", \"object\": \"two years\"}], \"subject_type\": \"human\", \"object_type\": \"language\"}, {\"subject\": \"teacher\", \"relation\": \"place of birth\", \"object\": \"Madrid\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"city\"}]}",
+      "correct": false,
+      "latency_ms": 186080.74601199996,
+      "input_tokens": 965,
+      "output_tokens": 5197,
+      "judge_raw_score": 3.0,
+      "error": null
+    },
+    {
+      "id": "kg_te_015",
+      "prediction": "{\n    \"triplets\": [\n        {\n            \"subject\": \"The Great Wall of China\",\n            \"relation\": \"construction period\",\n            \"object\": \"Ming Dynasty\",\n            \"qualifiers\": [\n                {\n                    \"relation\": \"point in time\",\n                    \"object\": \"1368-1644\"\n                }\n            ],\n            \"subject_type\": \"monument\",\n            \"object_type\": \"dynasty\"\n        },\n        {\n            \"subject\": \"The Great Wall of China\",\n            \"relation\": \"length\",\n            \"object\": \"21,196 km\",\n            \"qualifiers\": [],\n            \"subject_type\": \"monument\",\n            \"object_type\": \"quantity\"\n        }\n    ]\n}",
+      "expected": "{\"triplets\": [{\"subject\": \"Great Wall of China\", \"relation\": \"significant event\", \"object\": \"construction\", \"qualifiers\": [{\"relation\": \"point in time\", \"object\": \"Ming Dynasty (1368-1644)\"}], \"subject_type\": \"building\", \"object_type\": \"event\"}, {\"subject\": \"Great Wall of China\", \"relation\": \"length\", \"object\": \"21,196 km\", \"qualifiers\": [], \"subject_type\": \"building\", \"object_type\": \"physical quantity\"}, {\"subject\": \"Great Wall of China\", \"relation\": \"country\", \"object\": \"China\", \"qualifiers\": [], \"subject_type\": \"building\", \"object_type\": \"country\"}]}",
+      "correct": false,
+      "latency_ms": 88669.50161399973,
+      "input_tokens": 979,
+      "output_tokens": 2459,
+      "judge_raw_score": 3.0,
+      "error": null
+    },
+    {
+      "id": "kg_te_016",
+      "prediction": "{\n    \"triplets\": [\n        {\n            \"subject\": \"Dr. Chen\",\n            \"relation\": \"employer\",\n            \"object\": \"Johns Hopkins University\",\n            \"qualifiers\": [],\n            \"subject_type\": \"human\",\n            \"object_type\": \"organization\"\n        },\n        {\n            \"subject\": \"Dr. Chen\",\n            \"relation\": \"field of work\",\n            \"object\": \"Alzheimer's disease\",\n            \"qualifiers\": [],\n            \"subject_type\": \"human\",\n            \"object_type\": \"disease\"\n        },\n        {\n            \"subject\": \"Dr. Chen\",\n            \"relation\": \"published in\",\n            \"object\": \"Nature\",\n            \"qualifiers\": [\n                {\n                    \"relation\": \"point in time\",\n                    \"object\": \"last September\"\n                }\n            ],\n            \"subject_type\": \"human\",\n            \"object_type\": \"journal\"\n        }\n    ]\n}",
+      "expected": "{\"triplets\": [{\"subject\": \"Dr. Chen\", \"relation\": \"author of\", \"object\": \"research on Alzheimer's disease\", \"qualifiers\": [{\"relation\": \"published in\", \"object\": \"Nature\"}, {\"relation\": \"point in time\", \"object\": \"last September\"}], \"subject_type\": \"human\", \"object_type\": \"scholarly article\"}, {\"subject\": \"Dr. Chen\", \"relation\": \"employer\", \"object\": \"Johns Hopkins University\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"university\"}]}",
+      "correct": false,
+      "latency_ms": 112602.45362199975,
+      "input_tokens": 962,
+      "output_tokens": 3119,
+      "judge_raw_score": 3.0,
+      "error": null
+    },
+    {
+      "id": "kg_te_017",
+      "prediction": "{\n    \"triplets\": [\n        {\n            \"subject\": \"My wife and I\",\n            \"relation\": \"celebrated\",\n            \"object\": \"10th wedding anniversary\",\n            \"qualifiers\": [\n                {\n                    \"relation\": \"location\",\n                    \"object\": \"Rome\"\n                },\n                {\n                    \"relation\": \"point in time\",\n                    \"object\": \"last month\"\n                }\n            ],\n            \"subject_type\": \"human\",\n            \"object_type\": \"event\"\n        },\n        {\n            \"subject\": \"My wife and I\",\n            \"relation\": \"stayed at\",\n            \"object\": \"Hotel Hassler\",\n            \"qualifiers\": [\n                {\n                    \"relation\": \"point in time\",\n                    \"object\": \"last month\"\n                }\n            ],\n            \"subject_type\": \"human\",\n            \"object_type\": \"hotel\"\n        },\n        {\n            \"subject\": \"Hotel Hassler\",\n            \"relation\": \"located near\",\n            \"object\": \"Spanish Steps\",\n            \"qualifiers\": [],\n            \"subject_type\": \"hotel\",\n            \"object_type\": \"landmark\"\n        }\n    ]\n}",
+      "expected": "{\"triplets\": [{\"subject\": \"speaker\", \"relation\": \"spouse\", \"object\": \"wife\", \"qualifiers\": [{\"relation\": \"duration\", \"object\": \"10 years\"}], \"subject_type\": \"human\", \"object_type\": \"human\"}, {\"subject\": \"speaker\", \"relation\": \"visited\", \"object\": \"Rome\", \"qualifiers\": [{\"relation\": \"point in time\", \"object\": \"last month\"}], \"subject_type\": \"human\", \"object_type\": \"city\"}, {\"subject\": \"Hotel Hassler\", \"relation\": \"located near\", \"object\": \"Spanish Steps\", \"qualifiers\": [], \"subject_type\": \"hotel\", \"object_type\": \"landmark\"}, {\"subject\": \"Hotel Hassler\", \"relation\": \"located in\", \"object\": \"Rome\", \"qualifiers\": [], \"subject_type\": \"hotel\", \"object_type\": \"city\"}]}",
+      "correct": false,
+      "latency_ms": 182683.42980500028,
+      "input_tokens": 969,
+      "output_tokens": 5047,
+      "judge_raw_score": 3.0,
+      "error": null
+    },
+    {
+      "id": "kg_te_018",
+      "prediction": "{\n    \"triplets\": [\n        {\n            \"subject\": \"Python\",\n            \"relation\": \"creator\",\n            \"object\": \"Guido van Rossum\",\n            \"qualifiers\": [],\n            \"subject_type\": \"programming language\",\n            \"object_type\": \"human\"\n        },\n        {\n            \"subject\": \"Python\",\n            \"relation\": \"publication date\",\n            \"object\": \"1991\",\n            \"qualifiers\": [],\n            \"subject_type\": \"programming language\",\n            \"object_type\": \"date\"\n        },\n        {\n            \"subject\": \"Python\",\n            \"relation\": \"used for\",\n            \"object\": \"machine learning\",\n            \"qualifiers\": [],\n            \"subject_type\": \"programming language\",\n            \"object_type\": \"field of study\"\n        },\n        {\n            \"subject\": \"Python\",\n            \"relation\": \"used for\",\n            \"object\": \"web development\",\n            \"qualifiers\": [],\n            \"subject_type\": \"programming language\",\n            \"object_type\": \"field of study\"\n        }\n    ]\n}",
+      "expected": "{\"triplets\": [{\"subject\": \"Python\", \"relation\": \"creator\", \"object\": \"Guido van Rossum\", \"qualifiers\": [], \"subject_type\": \"programming language\", \"object_type\": \"human\"}, {\"subject\": \"Python\", \"relation\": \"inception\", \"object\": \"1991\", \"qualifiers\": [], \"subject_type\": \"programming language\", \"object_type\": \"date\"}, {\"subject\": \"Python\", \"relation\": \"use\", \"object\": \"machine learning\", \"qualifiers\": [], \"subject_type\": \"programming language\", \"object_type\": \"field of work\"}, {\"subject\": \"Python\", \"relation\": \"use\", \"object\": \"web development\", \"qualifiers\": [], \"subject_type\": \"programming language\", \"object_type\": \"field of work\"}]}",
+      "correct": false,
+      "latency_ms": 114553.84818500033,
+      "input_tokens": 969,
+      "output_tokens": 3146,
+      "judge_raw_score": 3.0,
+      "error": null
+    },
+    {
+      "id": "kg_te_019",
+      "prediction": "{\n    \"triplets\": [\n        {\n            \"subject\": \"Maria\",\n            \"relation\": \"participant of\",\n            \"object\": \"London Marathon\",\n            \"qualifiers\": [\n                {\n                    \"relation\": \"point in time\",\n                    \"object\": \"last year\"\n                },\n                {\n                    \"relation\": \"duration\",\n                    \"object\": \"3 hours 45 minutes\"\n                }\n            ],\n            \"subject_type\": \"human\",\n            \"object_type\": \"sports event\"\n        },\n        {\n            \"subject\": \"Maria\",\n            \"relation\": \"training for\",\n            \"object\": \"Berlin Marathon\",\n            \"qualifiers\": [\n                {\n                    \"relation\": \"point in time\",\n                    \"object\": \"September\"\n                }\n            ],\n            \"subject_type\": \"human\",\n            \"object_type\": \"sports event\"\n        }\n    ]\n}",
+      "expected": "{\"triplets\": [{\"subject\": \"Maria\", \"relation\": \"participant in\", \"object\": \"Berlin Marathon\", \"qualifiers\": [{\"relation\": \"point in time\", \"object\": \"September\"}], \"subject_type\": \"human\", \"object_type\": \"sporting event\"}, {\"subject\": \"Maria\", \"relation\": \"participant in\", \"object\": \"London Marathon\", \"qualifiers\": [{\"relation\": \"point in time\", \"object\": \"last year\"}], \"subject_type\": \"human\", \"object_type\": \"sporting event\"}, {\"subject\": \"Maria\", \"relation\": \"performance\", \"object\": \"3 hours 45 minutes\", \"qualifiers\": [{\"relation\": \"applies to\", \"object\": \"London Marathon\"}], \"subject_type\": \"human\", \"object_type\": \"physical quantity\"}]}",
+      "correct": false,
+      "latency_ms": 212288.94997100043,
+      "input_tokens": 969,
+      "output_tokens": 5888,
+      "judge_raw_score": 3.0,
+      "error": null
+    },
+    {
+      "id": "kg_te_020",
+      "prediction": "{\n    \"triplets\": [\n        {\n            \"subject\": \"meeting\",\n            \"relation\": \"participant\",\n            \"object\": \"Tokyo office\",\n            \"qualifiers\": [],\n            \"subject_type\": \"event\",\n            \"object_type\": \"organization\"\n        },\n        {\n            \"subject\": \"meeting\",\n            \"relation\": \"point in time\",\n            \"object\": \"next Wednesday\",\n            \"qualifiers\": [\n                {\n                    \"relation\": \"time of day\",\n                    \"object\": \"9 AM\"\n                }\n            ],\n            \"subject_type\": \"event\",\n            \"object_type\": \"date\"\n        },\n        {\n            \"subject\": \"Tanaka-san\",\n            \"relation\": \"presented\",\n            \"object\": \"Q3 sales report\",\n            \"qualifiers\": [],\n            \"subject_type\": \"human\",\n            \"object_type\": \"document\"\n        },\n        {\n            \"subject\": \"Yamamoto-san\",\n            \"relation\": \"presented\",\n            \"object\": \"Q3 sales report\",\n            \"qualifiers\": [],\n            \"subject_type\": \"human\",\n            \"object_type\": \"document\"\n        }\n    ]\n}",
+      "expected": "{\"triplets\": [{\"subject\": \"meeting\", \"relation\": \"location\", \"object\": \"Tokyo office\", \"qualifiers\": [{\"relation\": \"point in time\", \"object\": \"next Wednesday at 9 AM\"}], \"subject_type\": \"event\", \"object_type\": \"office\"}, {\"subject\": \"Tanaka-san\", \"relation\": \"participant in\", \"object\": \"meeting\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"event\"}, {\"subject\": \"Yamamoto-san\", \"relation\": \"participant in\", \"object\": \"meeting\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"event\"}, {\"subject\": \"Tanaka-san\", \"relation\": \"presenter of\", \"object\": \"Q3 sales report\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"report\"}, {\"subject\": \"Yamamoto-san\", \"relation\": \"presenter of\", \"object\": \"Q3 sales report\", \"qualifiers\": [], \"subject_type\": \"human\", \"object_type\": \"report\"}]}",
+      "correct": false,
+      "latency_ms": 182493.7515089996,
+      "input_tokens": 971,
+      "output_tokens": 5167,
+      "judge_raw_score": 2.0,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-19T20:14:58+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": "gpt-4o-mini@openai",
+  "judge_model_revision": "2024-07-18",
+  "judge_prompt_hash": "ac8d7b43180d9f91"
+}
