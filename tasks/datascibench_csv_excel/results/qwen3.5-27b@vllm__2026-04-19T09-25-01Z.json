@@ -12,12 +12,12 @@
     "seed": 42
   },
   "metrics": {
-    "judge_score": 0.7333333333333334
+    "judge_score": 0.7142857142857143
   },
-  "tps": 19.813652138339858,
-  "p95_latency_ms": 819990.9972219998,
+  "tps": 20.216942281469763,
+  "p95_latency_ms": 905769.051697,
   "n_samples": 10,
-  "n_failed_samples": 4,
+  "n_failed_samples": 3,
   "samples": [
     {
       "id": "csv_excel_0",
@@ -35,22 +35,22 @@
       "prediction": "",
       "expected": "1. Data cleaning and preprocessing: Data Completeness — filtered rows correctly identified by multi-condition filter (D>=8 AND D<8.001 AND F==18 AND G>G[row2]). 2. Data transformation: Transformation Accuracy — correct column G values copied to target.xlsx sheet1.",
       "correct": false,
-      "latency_ms": 797867.0421650001,
+      "latency_ms": 905769.051697,
       "input_tokens": null,
       "output_tokens": null,
       "judge_raw_score": null,
-      "error": "RuntimeError: network error after 3 attempts to http://lnsigo.mipt.ru:4000/v1 model=Qwen/Qwen3.5-27B: ReadError: [Errno 104] Connection reset by peer"
+      "error": "RuntimeError: network error after 3 attempts to http://lnsigo.mipt.ru:4000/v1 model=Qwen/Qwen3.5-27B: ReadTimeout: timed out"
     },
     {
       "id": "csv_excel_2",
       "prediction": "",
       "expected": "1. Data cleaning and preprocessing: Missing Value Percentage — filtered_train.csv has no anomalous samples. 2. Predictive modeling: Model Performance Accuracy — CNN trained on STFT spectral features and evaluated. 3. Data visualization: Visualization Completeness — data_analysis.txt produced. 4. Interpretability: Report Completeness — model_evaluation_results.csv written with metrics.",
       "correct": false,
-      "latency_ms": 814604.602052,
+      "latency_ms": 905495.864621,
       "input_tokens": null,
       "output_tokens": null,
       "judge_raw_score": null,
-      "error": "RuntimeError: network error after 3 attempts to http://lnsigo.mipt.ru:4000/v1 model=Qwen/Qwen3.5-27B: ReadError: [Errno 104] Connection reset by peer"
+      "error": "RuntimeError: network error after 3 attempts to http://lnsigo.mipt.ru:4000/v1 model=Qwen/Qwen3.5-27B: ReadTimeout: timed out"
     },
     {
       "id": "csv_excel_3",
@@ -112,25 +112,25 @@
       "prediction": "",
       "expected": "1. Data visualization: Prediction Accuracy Visualization (R^2 Score) — prediction_accuracy.png shows predicted vs actual values with R^2 metric. SVR model trained on 12_Input.csv -> a_full.csv mapping, saved as model.pkl.",
       "correct": false,
-      "latency_ms": 819990.9972219998,
+      "latency_ms": 905347.9937040001,
       "input_tokens": null,
       "output_tokens": null,
       "judge_raw_score": null,
-      "error": "RuntimeError: network error after 3 attempts to http://lnsigo.mipt.ru:4000/v1 model=Qwen/Qwen3.5-27B: ReadError: [Errno 104] Connection reset by peer"
+      "error": "RuntimeError: network error after 3 attempts to http://lnsigo.mipt.ru:4000/v1 model=Qwen/Qwen3.5-27B: ReadTimeout: timed out"
     },
     {
       "id": "csv_excel_29",
-      "prediction": "",
+      "prediction": "import os\nimport pandas as pd\nimport numpy as np\nimport torch\nimport torch.nn as nn\nfrom torch.utils.data import Dataset, DataLoader\nfrom sklearn.preprocessing import MinMaxScaler\nimport matplotlib.pyplot as plt\n\n# Set random seeds for reproducibility\nnp.random.seed(42)\ntorch.manual_seed(42)\n\n# Check if data.csv exists, if not create a dummy dataset for runnability\nif not os.path.exists('data.csv'):\n    print(\"data.csv not found. Generating dummy data...\")\n    dates = pd.date_range(start='2020-01-01', periods=1000, freq='D')\n    # Create a synthetic time series with trend, seasonality, and noise\n    t = np.linspace(0, 10, 1000)\n    value1 = 10 * np.sin(t) + 0.01 * t + np.random.normal(0, 0.5, 1000)\n    df = pd.DataFrame({'Date': dates, 'Value1': value1})\n    df.to_csv('data.csv', index=False)\n    print(\"Dummy data.csv created.\")\n\n# Load Data\ndf = pd.read_csv('data.csv')\ndata = df['Value1'].values.reshape(-1, 1)\n\n# Data Preprocessing\nscaler = MinMaxScaler(feature_range=(0, 1))\nscaled_data = scaler.fit_transform(data)\n\n# Create sequences\ndef create_sequences(data, seq_length):\n    X, y = [], []\n    for i in range(len(data) - seq_length):\n        X.append(data[i:i+seq_length])\n        y.append(data[i+seq_length])\n    return np.array(X), np.array(y)\n\nSEQ_LENGTH = 60\nX, y = create_sequences(scaled_data, SEQ_LENGTH)\n\n# Split into Train and Test\ntrain_size = int(len(X) * 0.8)\nX_train, y_train = X[:train_size], y[:train_size]\nX_test, y_test = X[train_size:], y[train_size:]\n\n# Convert to PyTorch Tensors\nX_train = torch.FloatTensor(X_train)\ny_train = torch.FloatTensor(y_train)\nX_test = torch.FloatTensor(X_test)\ny_test = torch.FloatTensor(y_test)\n\n# Create Datasets and DataLoaders\nclass TimeSeriesDataset(Dataset):\n    def __init__(self, X, y):\n        self.X = X\n        self.y = y\n\n    def __len__(self):\n        return len(self.X)\n\n    def __getitem__(self, idx):\n        return self.X[idx], self.y[idx]\n\ntrain_dataset = TimeSeriesDataset(X_train, y_train)\ntest_dataset = TimeSeriesDataset(X_test, y_test)\n\nBATCH_SIZE = 32\ntrain_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=BATCH_SIZE, shuffle=False)\n\n# Define LSTM Model\nclass LSTMModel(nn.Module):\n    def __init__(self, input_size, hidden_size, num_layers, output_size):\n        super(LSTMModel, self).__init__()\n        self.hidden_size = hidden_size\n        self.num_layers = num_layers\n        self.lstm = nn.LSTM(input_size, hidden_size, num_layers, batch_first=True)\n        self.fc = nn.Linear(hidden_size, output_size)\n\n    def forward(self, x):\n        h0 = torch.zeros(self.num_layers, x.size(0), self.hidden_size).to(x.device)\n        c0 = torch.zeros(self.num_layers, x.size(0), self.hidden_size).to(x.device)\n        out, _ = self.lstm(x, (h0, c0))\n        out = self.fc(out[:, -1, :])\n        return out\n\n# Model Hyperparameters\nINPUT_SIZE = 1\nHIDDEN_SIZE = 50\nNUM_LAYERS = 2\nOUTPUT_SIZE = 1\nEPOCHS = 100\nLEARNING_RATE = 0.001\n\n# Initialize Model, Loss, Optimizer\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\nmodel = LSTMModel(INPUT_SIZE, HIDDEN_SIZE, NUM_LAYERS, OUTPUT_SIZE).to(device)\ncriterion = nn.MSELoss()\noptimizer = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE)\n\n# Training Loop\nprint(\"Training started...\")\nfor epoch in range(EPOCHS):\n    model.train()\n    total_loss = 0\n    for batch_X, batch_y in train_loader:\n        batch_X, batch_y = batch_X.to(device), batch_y.to(device)\n        \n        optimizer.zero_grad()\n        outputs = model(batch_X)\n        loss = criterion(outputs, batch_y)\n        loss.backward()\n        optimizer.step()\n        \n        total_loss += loss.item()\n    \n    if (epoch + 1) % 10 == 0:\n        print(f'Epoch [{epoch+1}/{EPOCHS}], Loss: {total_loss/len(train_loader):.4f}')\n\nprint(\"Training finished.\")\n\n# Prediction\nmodel.eval()\npredictions = []\nactuals = []\n\nwith torch.no_grad():\n    for batch_X, batch_y in test_loader:\n        batch_X = batch_X.to(device)\n        outputs = model(batch_X)\n        predictions.extend(outputs.cpu().numpy())\n        actuals.extend(batch_y.numpy())\n\npredictions = np.array(predictions).reshape(-1, 1)\nactuals = np.array(actuals).reshape(-1, 1)\n\n# Inverse Transform\npredictions_rescaled = scaler.inverse_transform(predictions)\nactuals_rescaled = scaler.inverse_transform(actuals)\n\n# Save Predictions to CSV\ndf_predictions = pd.DataFrame({\n    'Actual': actuals_rescaled.flatten(),\n    'Predicted': predictions_rescaled.flatten()\n})\ndf_predictions.to_csv('predictions.csv', index=False)\nprint(\"Predictions saved to predictions.csv\")\n\n# Visualization\nplt.figure(figsize=(14, 7))\nplt.plot(actuals_rescaled, label='Actual', color='blue')\nplt.plot(predictions_rescaled, label='Predicted', color='red', linestyle='--')\nplt.title('LSTM Time Series Prediction')\nplt.xlabel('Time Step')\nplt.ylabel('Value')\nplt.legend()\nplt.grid(True)\nplt.savefig('predictions_chart.png')\nplt.close()\nprint(\"Chart saved to predictions_chart.png\")",
       "expected": "1. Data cleaning and preprocessing: Data Consistency Ratio — data.csv Value1 column read and preprocessed for LSTM input sequences. 2. Predictive modeling: Model MAE — LSTM trained in PyTorch, predictions saved to predictions.csv. 3. Data visualization: Visualization Quality — predictions_chart.png shows actual vs predicted time series.",
       "correct": false,
-      "latency_ms": 813698.5777939999,
-      "input_tokens": null,
-      "output_tokens": null,
-      "judge_raw_score": null,
-      "error": "RuntimeError: network error after 3 attempts to http://lnsigo.mipt.ru:4000/v1 model=Qwen/Qwen3.5-27B: ReadError: [Errno 104] Connection reset by peer"
+      "latency_ms": 185619.7231760002,
+      "input_tokens": 155,
+      "output_tokens": 4541,
+      "judge_raw_score": 3.0,
+      "error": null
     }
   ],
-  "created_at": "2026-04-19T09:25:01+00:00",
+  "created_at": "2026-04-19T12:28:04+00:00",
   "env": {
     "provider": "openai_compat",
     "endpoint_kind": "openai_chat"
