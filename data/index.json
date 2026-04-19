@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-19T04:58:44+00:00",
+  "generated_at": "2026-04-19T05:12:50+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -408,6 +408,51 @@
       "result_file": "tasks/agent_tool_calling/results/qwen3.5-27b@vllm__2026-04-17T05-00-53Z.json"
     },
     {
+      "task_id": "cefr_level_classification",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-397b@vllm",
+      "score": 0.4,
+      "metrics": {
+        "accuracy": 0.4,
+        "macro_f1": 0.29945054945054944,
+        "qwk": 0.29999999999999993
+      },
+      "tps": 11.084126728224183,
+      "p95_latency_ms": 1758049.156186,
+      "cost_usd": null,
+      "result_file": "tasks/cefr_level_classification/results/qwen3.5-397b@vllm__2026-04-19T00-59-11Z.json"
+    },
+    {
+      "task_id": "cefr_level_classification",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.35,
+      "metrics": {
+        "accuracy": 0.35,
+        "macro_f1": 0.24358974358974358,
+        "qwk": 0.44000000000000006
+      },
+      "tps": 38.04538816614204,
+      "p95_latency_ms": 36589.018880000025,
+      "cost_usd": null,
+      "result_file": "tasks/cefr_level_classification/results/qwen3-30b@vllm__2026-04-19T01-49-45Z.json"
+    },
+    {
+      "task_id": "cefr_level_classification_condensed",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.3,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.2153846153846154,
+        "qwk": 0.30434782608695654
+      },
+      "tps": 37.18835911442827,
+      "p95_latency_ms": 22478.423020999984,
+      "cost_usd": null,
+      "result_file": "tasks/cefr_level_classification_condensed/results/qwen3-30b@vllm__2026-04-19T01-55-27Z.json"
+    },
+    {
       "task_id": "conversational_memory_qa",
       "task_version": "1.0",
       "model_id": "qwen3.5-397b@vllm",
@@ -512,6 +557,19 @@
       "result_file": "tasks/datascibench_human/results/qwen3.5-397b@vllm__2026-04-16T07-57-31Z.json"
     },
     {
+      "task_id": "datascibench_human",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.56,
+      "metrics": {
+        "judge_score": 0.56
+      },
+      "tps": 38.570093575960044,
+      "p95_latency_ms": 270930.25656699995,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_human/results/qwen3-30b@vllm__2026-04-19T03-07-29Z.json"
+    },
+    {
       "task_id": "entity_relationship_extraction",
       "task_version": "1.0",
       "model_id": "qwen3.5-397b@vllm",
@@ -549,6 +607,197 @@
       "p95_latency_ms": 97101.952554,
       "cost_usd": null,
       "result_file": "tasks/entity_relationship_extraction/results/qwen3-30b@vllm__2026-04-17T05-46-54Z.json"
+    },
+    {
+      "task_id": "essay_coherence_scoring",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.3,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.23392857142857143,
+        "qwk": 0.32352941176470595
+      },
+      "tps": 38.09491098161781,
+      "p95_latency_ms": 27317.120021999926,
+      "cost_usd": null,
+      "result_file": "tasks/essay_coherence_scoring/results/qwen3-30b@vllm__2026-04-19T02-02-44Z.json"
+    },
+    {
+      "task_id": "essay_coherence_scoring_condensed",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.3,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.2,
+        "qwk": 0.13333333333333341
+      },
+      "tps": 37.68572959178701,
+      "p95_latency_ms": 20804.855887,
+      "cost_usd": null,
+      "result_file": "tasks/essay_coherence_scoring_condensed/results/qwen3-30b@vllm__2026-04-19T02-08-23Z.json"
+    },
+    {
+      "task_id": "essay_grammar_scoring",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.3,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.18154761904761904,
+        "qwk": 1.1102230246251565e-16
+      },
+      "tps": 38.50987497331062,
+      "p95_latency_ms": 30695.150444999996,
+      "cost_usd": null,
+      "result_file": "tasks/essay_grammar_scoring/results/qwen3-30b@vllm__2026-04-19T02-16-14Z.json"
+    },
+    {
+      "task_id": "essay_grammar_scoring_condensed",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.2,
+      "metrics": {
+        "accuracy": 0.2,
+        "macro_f1": 0.12500000000000003,
+        "qwk": 0.12500000000000033
+      },
+      "tps": 38.071001809642645,
+      "p95_latency_ms": 33144.51115200001,
+      "cost_usd": null,
+      "result_file": "tasks/essay_grammar_scoring_condensed/results/qwen3-30b@vllm__2026-04-19T02-24-47Z.json"
+    },
+    {
+      "task_id": "essay_holistic_scoring",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.1111111111111111,
+      "metrics": {
+        "accuracy": 0.1111111111111111,
+        "macro_f1": 0.05128205128205127,
+        "qwk": 0.5555555555555556
+      },
+      "tps": 37.372832435326806,
+      "p95_latency_ms": 16892.370200999947,
+      "cost_usd": null,
+      "result_file": "tasks/essay_holistic_scoring/results/qwen3-30b@vllm__2026-04-19T02-29-03Z.json"
+    },
+    {
+      "task_id": "essay_holistic_scoring_condensed",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-397b@vllm",
+      "score": 0.2777777777777778,
+      "metrics": {
+        "accuracy": 0.2777777777777778,
+        "macro_f1": 0.1455026455026455,
+        "qwk": 0.423728813559322
+      },
+      "tps": 98.54590090518124,
+      "p95_latency_ms": 57289.92568500002,
+      "cost_usd": null,
+      "result_file": "tasks/essay_holistic_scoring_condensed/results/qwen3.5-397b@vllm__2026-04-18T19-02-17Z.json"
+    },
+    {
+      "task_id": "essay_holistic_scoring_condensed",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.2222222222222222,
+      "metrics": {
+        "accuracy": 0.2222222222222222,
+        "macro_f1": 0.10476190476190476,
+        "qwk": 0.33333333333333326
+      },
+      "tps": 37.459145095236835,
+      "p95_latency_ms": 18189.519775000008,
+      "cost_usd": null,
+      "result_file": "tasks/essay_holistic_scoring_condensed/results/qwen3-30b@vllm__2026-04-19T02-33-10Z.json"
+    },
+    {
+      "task_id": "essay_vocabulary_scoring",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-397b@vllm",
+      "score": 0.4,
+      "metrics": {
+        "accuracy": 0.4,
+        "macro_f1": 0.2785714285714286,
+        "qwk": 0.33333333333333326
+      },
+      "tps": 15.694851435725026,
+      "p95_latency_ms": 693812.8691689998,
+      "cost_usd": null,
+      "result_file": "tasks/essay_vocabulary_scoring/results/qwen3.5-397b@vllm__2026-04-18T20-45-52Z.json"
+    },
+    {
+      "task_id": "essay_vocabulary_scoring",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.35,
+      "metrics": {
+        "accuracy": 0.35,
+        "macro_f1": 0.2678571428571429,
+        "qwk": 0.4411764705882353
+      },
+      "tps": 37.97644722288576,
+      "p95_latency_ms": 30734.41566500003,
+      "cost_usd": null,
+      "result_file": "tasks/essay_vocabulary_scoring/results/qwen3-30b@vllm__2026-04-19T02-40-19Z.json"
+    },
+    {
+      "task_id": "essay_vocabulary_scoring_condensed",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-397b@vllm",
+      "score": 0.4,
+      "metrics": {
+        "accuracy": 0.4,
+        "macro_f1": 0.3454545454545454,
+        "qwk": 0.6842105263157895
+      },
+      "tps": 69.01723439294557,
+      "p95_latency_ms": 78923.184233,
+      "cost_usd": null,
+      "result_file": "tasks/essay_vocabulary_scoring_condensed/results/qwen3.5-397b@vllm__2026-04-18T21-02-14Z.json"
+    },
+    {
+      "task_id": "essay_vocabulary_scoring_condensed",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.35,
+      "metrics": {
+        "accuracy": 0.35,
+        "macro_f1": 0.2852564102564103,
+        "qwk": 0.5937500000000001
+      },
+      "tps": 38.22882622390172,
+      "p95_latency_ms": 26586.542039999982,
+      "cost_usd": null,
+      "result_file": "tasks/essay_vocabulary_scoring_condensed/results/qwen3-30b@vllm__2026-04-19T02-46-47Z.json"
+    },
+    {
+      "task_id": "extractive_qa",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 1.0,
+      "metrics": {
+        "exact_match": 1.0
+      },
+      "tps": 35.59195146046229,
+      "p95_latency_ms": 19751.121671999997,
+      "cost_usd": null,
+      "result_file": "tasks/extractive_qa/results/qwen3-30b@vllm__2026-04-19T01-09-32Z.json"
+    },
+    {
+      "task_id": "extractive_qa",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.8,
+      "metrics": {
+        "exact_match": 0.8
+      },
+      "tps": 21.485373501836698,
+      "p95_latency_ms": 88522.70005600002,
+      "cost_usd": null,
+      "result_file": "tasks/extractive_qa/results/qwen3.5-27b@vllm__2026-04-19T04-55-18Z.json"
     },
     {
       "task_id": "extractive_qa",
@@ -592,6 +841,20 @@
       "result_file": "tasks/intent_classification/results/qwen3-30b@vllm__2026-04-09T17-29-51Z.json"
     },
     {
+      "task_id": "intent_classification",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 1.0,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "tps": 20.34451050134257,
+      "p95_latency_ms": 153214.081934,
+      "cost_usd": null,
+      "result_file": "tasks/intent_classification/results/qwen3.5-27b@vllm__2026-04-19T05-00-22Z.json"
+    },
+    {
       "task_id": "jailbreak_detection",
       "task_version": "1.0",
       "model_id": "qwen3.5-397b@vllm",
@@ -620,6 +883,20 @@
       "result_file": "tasks/jailbreak_detection/results/qwen3-30b@vllm__2026-04-19T01-05-20Z.json"
     },
     {
+      "task_id": "jailbreak_detection",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 1.0,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "tps": 20.587822481927002,
+      "p95_latency_ms": 34687.04101,
+      "cost_usd": null,
+      "result_file": "tasks/jailbreak_detection/results/qwen3.5-27b@vllm__2026-04-19T04-40-08Z.json"
+    },
+    {
       "task_id": "kg_entity_name_refinement",
       "task_version": "1.0",
       "model_id": "qwen3.5-397b@vllm",
@@ -631,6 +908,19 @@
       "p95_latency_ms": 24244.774633999994,
       "cost_usd": null,
       "result_file": "tasks/kg_entity_name_refinement/results/qwen3.5-397b@vllm__2026-04-18T10-23-00Z.json"
+    },
+    {
+      "task_id": "kg_entity_name_refinement",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.85,
+      "metrics": {
+        "judge_score": 0.85
+      },
+      "tps": 36.4814747974746,
+      "p95_latency_ms": 20017.411035999998,
+      "cost_usd": null,
+      "result_file": "tasks/kg_entity_name_refinement/results/qwen3-30b@vllm__2026-04-19T01-13-29Z.json"
     },
     {
       "task_id": "kg_entity_type_refinement",
@@ -646,6 +936,19 @@
       "result_file": "tasks/kg_entity_type_refinement/results/qwen3.5-397b@vllm__2026-04-18T10-48-24Z.json"
     },
     {
+      "task_id": "kg_entity_type_refinement",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.64,
+      "metrics": {
+        "judge_score": 0.64
+      },
+      "tps": 38.18756838482498,
+      "p95_latency_ms": 40512.326572000005,
+      "cost_usd": null,
+      "result_file": "tasks/kg_entity_type_refinement/results/qwen3-30b@vllm__2026-04-19T01-21-21Z.json"
+    },
+    {
       "task_id": "kg_relation_refinement",
       "task_version": "1.0",
       "model_id": "qwen3.5-397b@vllm",
@@ -657,6 +960,19 @@
       "p95_latency_ms": 35640.75026500001,
       "cost_usd": null,
       "result_file": "tasks/kg_relation_refinement/results/qwen3.5-397b@vllm__2026-04-18T10-53-26Z.json"
+    },
+    {
+      "task_id": "kg_relation_refinement",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.78,
+      "metrics": {
+        "judge_score": 0.78
+      },
+      "tps": 37.545244130250445,
+      "p95_latency_ms": 20224.439343999962,
+      "cost_usd": null,
+      "result_file": "tasks/kg_relation_refinement/results/qwen3-30b@vllm__2026-04-19T01-25-33Z.json"
     },
     {
       "task_id": "kg_triplet_extraction",
@@ -672,6 +988,33 @@
       "result_file": "tasks/kg_triplet_extraction/results/qwen3.5-397b@vllm__2026-04-18T11-26-00Z.json"
     },
     {
+      "task_id": "kg_triplet_extraction",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.54,
+      "metrics": {
+        "judge_score": 0.54
+      },
+      "tps": 38.783371421488084,
+      "p95_latency_ms": 70434.53462499997,
+      "cost_usd": null,
+      "result_file": "tasks/kg_triplet_extraction/results/qwen3-30b@vllm__2026-04-19T01-42-14Z.json"
+    },
+    {
+      "task_id": "oos_detection",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.5,
+      "metrics": {
+        "accuracy": 0.5,
+        "macro_f1": 0.42233632862644416
+      },
+      "tps": 35.74075511111039,
+      "p95_latency_ms": 7419.284093000002,
+      "cost_usd": null,
+      "result_file": "tasks/oos_detection/results/qwen3-30b@vllm__2026-04-19T01-08-14Z.json"
+    },
+    {
       "task_id": "oos_detection",
       "task_version": "1.0",
       "model_id": "qwen3.5-397b@vllm",
@@ -684,6 +1027,20 @@
       "p95_latency_ms": 8683.944501000013,
       "cost_usd": null,
       "result_file": "tasks/oos_detection/results/qwen3.5-397b@vllm__2026-04-18T09-49-51Z.json"
+    },
+    {
+      "task_id": "oos_detection",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.43333333333333335,
+      "metrics": {
+        "accuracy": 0.43333333333333335,
+        "macro_f1": 0.3023255813953488
+      },
+      "tps": 22.545247203129414,
+      "p95_latency_ms": 29437.621288999937,
+      "cost_usd": null,
+      "result_file": "tasks/oos_detection/results/qwen3.5-27b@vllm__2026-04-19T04-50-51Z.json"
     },
     {
       "task_id": "retail_agent_dialog",
@@ -727,6 +1084,19 @@
     {
       "task_id": "summarization",
       "task_version": "1.0",
+      "model_id": "qwen3.5-397b@vllm",
+      "score": 0.8,
+      "metrics": {
+        "judge_score": 0.8
+      },
+      "tps": 90.88265232552313,
+      "p95_latency_ms": 11155.044340000004,
+      "cost_usd": null,
+      "result_file": "tasks/summarization/results/qwen3.5-397b@vllm__2026-04-18T21-04-30Z.json"
+    },
+    {
+      "task_id": "summarization",
+      "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
       "score": 0.6799999999999999,
       "metrics": {
@@ -736,19 +1106,6 @@
       "p95_latency_ms": 10263.405290000008,
       "cost_usd": null,
       "result_file": "tasks/summarization/results/qwen3-30b@vllm__2026-04-10T04-32-32Z.json"
-    },
-    {
-      "task_id": "summarization",
-      "task_version": "1.0",
-      "model_id": "qwen3.5-397b@vllm",
-      "score": 0.0,
-      "metrics": {
-        "judge_score": 0.0
-      },
-      "tps": 0.0,
-      "p95_latency_ms": 11639.439355,
-      "cost_usd": null,
-      "result_file": "tasks/summarization/results/qwen3.5-397b@vllm__2026-04-18T11-29-15Z.json"
     },
     {
       "task_id": "temporal_information_extraction",
@@ -816,6 +1173,19 @@
       "result_file": "tasks/text2sql_ambiguity/results/qwen3.5-397b@vllm__2026-04-16T17-35-04Z.json"
     },
     {
+      "task_id": "text2sql_ambiguity",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.5333333333333333,
+      "metrics": {
+        "judge_score": 0.5333333333333333
+      },
+      "tps": 35.02922096345897,
+      "p95_latency_ms": 58109.10757700003,
+      "cost_usd": null,
+      "result_file": "tasks/text2sql_ambiguity/results/qwen3-30b@vllm__2026-04-19T03-20-20Z.json"
+    },
+    {
       "task_id": "text2sql_bird",
       "task_version": "1.0",
       "model_id": "qwen3.5-397b@vllm",
@@ -827,6 +1197,19 @@
       "p95_latency_ms": 65352.87071799996,
       "cost_usd": null,
       "result_file": "tasks/text2sql_bird/results/qwen3.5-397b@vllm__2026-04-17T00-02-13Z.json"
+    },
+    {
+      "task_id": "text2sql_bird",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.6090909090909091,
+      "metrics": {
+        "judge_score": 0.6090909090909091
+      },
+      "tps": 25.011996851080994,
+      "p95_latency_ms": 97456.12411199999,
+      "cost_usd": null,
+      "result_file": "tasks/text2sql_bird/results/qwen3-30b@vllm__2026-04-19T03-37-22Z.json"
     },
     {
       "task_id": "text_classification",
@@ -871,6 +1254,20 @@
       "result_file": "tasks/text_classification/results/qwen3-30b@vllm__2026-04-19T01-01-40Z.json"
     },
     {
+      "task_id": "text_classification",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 1.0,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "tps": 21.470741041154135,
+      "p95_latency_ms": 21959.58865,
+      "cost_usd": null,
+      "result_file": "tasks/text_classification/results/qwen3.5-27b@vllm__2026-04-19T04-30-06Z.json"
+    },
+    {
       "task_id": "topic_classification",
       "task_version": "1.0",
       "model_id": "qwen3.5-397b@vllm",
@@ -897,6 +1294,20 @@
       "p95_latency_ms": 9477.69242000001,
       "cost_usd": null,
       "result_file": "tasks/topic_classification/results/qwen3-30b@vllm__2026-04-19T01-02-54Z.json"
+    },
+    {
+      "task_id": "topic_classification",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 1.0,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "tps": 16.584429933687133,
+      "p95_latency_ms": 53719.51544999999,
+      "cost_usd": null,
+      "result_file": "tasks/topic_classification/results/qwen3.5-27b@vllm__2026-04-19T04-33-52Z.json"
     },
     {
       "task_id": "topic_classification",

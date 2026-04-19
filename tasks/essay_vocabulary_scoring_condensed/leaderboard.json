@@ -1,0 +1,34 @@
+{
+  "task_id": "essay_vocabulary_scoring_condensed",
+  "task_version": "1.0",
+  "primary_metric": "accuracy",
+  "ranking": [
+    {
+      "model_id": "qwen3.5-397b@vllm",
+      "score": 0.4,
+      "metrics": {
+        "accuracy": 0.4,
+        "macro_f1": 0.3454545454545454,
+        "qwk": 0.6842105263157895
+      },
+      "tps": 69.01723439294557,
+      "p95_latency_ms": 78923.184233,
+      "cost_usd": null,
+      "result_file": "results/qwen3.5-397b@vllm__2026-04-18T21-02-14Z.json"
+    },
+    {
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.35,
+      "metrics": {
+        "accuracy": 0.35,
+        "macro_f1": 0.2852564102564103,
+        "qwk": 0.5937500000000001
+      },
+      "tps": 38.22882622390172,
+      "p95_latency_ms": 26586.542039999982,
+      "cost_usd": null,
+      "result_file": "results/qwen3-30b@vllm__2026-04-19T02-46-47Z.json"
+    }
+  ],
+  "updated_at": "2026-04-19T05:12:50+00:00"
+}
