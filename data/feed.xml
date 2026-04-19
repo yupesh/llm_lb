@@ -4,8 +4,15 @@
   <id>tag:yupesh.github.io,2026:llm_lb/feed</id>
   <link href="https://yupesh.github.io/llm_lb/" rel="alternate" type="text/html"/>
   <link href="https://yupesh.github.io/llm_lb/data/feed.xml" rel="self" type="application/atom+xml"/>
-  <updated>2026-04-19T22:36:24+00:00</updated>
+  <updated>2026-04-19T23:00:24+00:00</updated>
   <author><name>LLM Leaderboard</name></author>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_dl/1.0/qwen3.5-27b@vllm/2026-04-19T23:00:24+00:00</id>
+    <title>qwen3.5-27b@vllm scored 0.444 judge_score on datascibench_dl v1.0</title>
+    <updated>2026-04-19T23:00:24+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_dl" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.444</summary>
+  </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_human/1.0/qwen3.5-27b@vllm/2026-04-19T22:36:24+00:00</id>
     <title>qwen3.5-27b@vllm scored 0.600 judge_score on datascibench_human v1.0</title>
@@ -82,13 +89,6 @@
     <updated>2026-04-19T14:46:34+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_grammar_scoring" rel="alternate" type="text/html"/>
     <summary>accuracy=0.300, macro_f1=0.235, qwk=0.296</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_dl/1.0/qwen3.5-27b@vllm/2026-04-19T14:11:31+00:00</id>
-    <title>qwen3.5-27b@vllm scored 0.400 judge_score on datascibench_dl v1.0</title>
-    <updated>2026-04-19T14:11:31+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_dl" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.400</summary>
   </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/essay_coherence_scoring_condensed/1.0/qwen3.5-27b@vllm/2026-04-19T13:51:19+00:00</id>
