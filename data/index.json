@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-19T11:15:38+00:00",
+  "generated_at": "2026-04-19T11:45:08+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -587,6 +587,19 @@
       "p95_latency_ms": 173833.971244,
       "cost_usd": null,
       "result_file": "tasks/datascibench_dl/results/qwen3.5-397b@vllm__2026-04-16T05-46-28Z.json"
+    },
+    {
+      "task_id": "datascibench_dl",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.4666666666666666,
+      "metrics": {
+        "judge_score": 0.4666666666666666
+      },
+      "tps": 14.566459823851094,
+      "p95_latency_ms": 826686.0452419997,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_dl/results/qwen3.5-27b@vllm__2026-04-19T11-20-42Z.json"
     },
     {
       "task_id": "datascibench_dl",
