@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-19T15:43:37+00:00",
+  "generated_at": "2026-04-19T16:34:24+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -348,7 +348,7 @@
       "id": "qwen3.5-27b@vllm",
       "display_name": "Qwen3.5-27B (vLLM)",
       "provider": "openai_compat",
-      "hf_uri": "Qwen/Qwen3.5-27B",
+      "hf_uri": "Qwen/Qwen3.5-27B-dfl",
       "hardware": {
         "gpu_count": 1,
         "gpu_type": "A100",
@@ -826,6 +826,21 @@
       "p95_latency_ms": 241908.71306000004,
       "cost_usd": null,
       "result_file": "tasks/essay_grammar_scoring/results/qwen3.5-27b@vllm__2026-04-19T14-46-34Z.json"
+    },
+    {
+      "task_id": "essay_grammar_scoring_condensed",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.35,
+      "metrics": {
+        "accuracy": 0.35,
+        "macro_f1": 0.29820261437908496,
+        "qwk": 0.3421052631578948
+      },
+      "tps": 21.35053179102145,
+      "p95_latency_ms": 419397.27182499995,
+      "cost_usd": null,
+      "result_file": "tasks/essay_grammar_scoring_condensed/results/qwen3.5-27b@vllm__2026-04-19T15-56-48Z.json"
     },
     {
       "task_id": "essay_grammar_scoring_condensed",
