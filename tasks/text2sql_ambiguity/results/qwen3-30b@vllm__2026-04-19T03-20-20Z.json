@@ -1,0 +1,296 @@
+{
+  "model_id": "qwen3-30b@vllm",
+  "model_revision": "2025-12-01",
+  "task_id": "text2sql_ambiguity",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "5b7cd996f70199dd",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "judge_score": 0.5333333333333333
+  },
+  "tps": 35.02922096345897,
+  "p95_latency_ms": 58109.10757700003,
+  "n_samples": 24,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "amb_001",
+      "prediction": "{\n  \"is_ambiguous\": false,\n  \"reasoning\": \"The question clearly asks for EventSpaces where Event_Space is either 'banquet hall' or 'conference room' and Capacity is 200. The schema directly supports this with the EventSpaces table's Event_Space and Capacity columns.\",\n  \"interpretations\": [\n    {\n      \"description\": \"Select banquet halls and conference rooms with capacity exactly 200\",\n      \"sql\": \"SELECT * FROM EventSpaces WHERE (Event_Space = 'banquet hall' OR Event_Space = 'conference room') AND Capacity = 200;\"\n    }\n  ]\n}",
+      "expected": "{\"is_ambiguous\": false, \"sql\": \"SELECT EventSpaces.Name \\r\\nFROM EventSpaces\\r\\nWHERE (EventSpaces.Event_Space = \\\"Banquet Hall\\\" OR EventSpaces.Event_Space = \\\"Conference Room\\\") AND EventSpaces.Capacity = 200\"}",
+      "correct": false,
+      "latency_ms": 12933.97790399996,
+      "input_tokens": 447,
+      "output_tokens": 479,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "amb_002",
+      "prediction": "{\n  \"is_ambiguous\": false,\n  \"reasoning\": \"The question explicitly asks for EventSpaces with specific types (banquet halls and conference rooms) and a fixed capacity, which can be directly translated into a WHERE clause filtering on Event_Space and Capacity.\",\n  \"interpretations\": [\n    {\n      \"description\": \"Select banquet halls and conference rooms with exactly 200 capacity\",\n      \"sql\": \"SELECT Name, Event_Space, Capacity FROM EventSpaces WHERE (Event_Space = 'banquet hall' OR Event_Space = 'conference room') AND Capacity = 200;\"\n    }\n  ]\n}",
+      "expected": "{\"is_ambiguous\": true, \"interpretations\": [\"SELECT EventSpaces.Name \\r\\nFROM EventSpaces\\r\\nWHERE (EventSpaces.Event_Space = \\\"Banquet Hall\\\" OR EventSpaces.Event_Space = \\\"Conference Room\\\") AND EventSpaces.Capacity = 200\", \"SELECT EventSpaces.Name \\r\\nFROM EventSpaces\\r\\nWHERE EventSpaces.Event_Space = \\\"Banquet Hall\\\" OR EventSpaces.Event_Space = \\\"Conference Room\\\" AND EventSpaces.Capacity = 200\"]}",
+      "correct": false,
+      "latency_ms": 12935.23572600003,
+      "input_tokens": 446,
+      "output_tokens": 485,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "amb_003",
+      "prediction": "{\n  \"is_ambiguous\": false,\n  \"reasoning\": \"The question can be answered by querying the Restaurants table for entries with Cuisine = 'Italian' and Food_Service = 'Cafe' to identify cafes, with no ambiguity in schema interpretation.\",\n  \"interpretations\": [\n    {\n      \"description\": \"Retrieve all restaurants serving Italian cuisine and cafes serving Italian cuisine by checking the Food_Service column for 'Cafe'.\",\n      \"sql\": \"SELECT Name FROM Restaurants WHERE Cuisine = 'Italian'; SELECT Name FROM Restaurants WHERE Food_Service = 'Cafe' AND Cuisine = 'Italian';\"\n    }\n  ]\n}",
+      "expected": "{\"is_ambiguous\": false, \"sql\": \"SELECT Restaurants.Name \\r\\nFROM Restaurants\\r\\nWHERE (Restaurants.Food_Service = \\\"Restaurant\\\" OR Restaurants.Food_Service = \\\"Café\\\") AND Restaurants.Cuisine = \\\"Italian\\\"\"}",
+      "correct": false,
+      "latency_ms": 108508.80501400001,
+      "input_tokens": 436,
+      "output_tokens": 4231,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "amb_004",
+      "prediction": "{\n  \"is_ambiguous\": false,\n  \"reasoning\": \"The question clearly asks for two separate lists: all restaurants (from the Restaurants table) and cafes serving Italian cuisine (filtered by Food_Service = 'Cafe' and Cuisine = 'Italian'). No ambiguity exists in the schema interpretation.\",\n  \"interpretations\": [\n    {\n      \"description\": \"Retrieve all restaurants and filter cafes with Italian cuisine\",\n      \"sql\": \"SELECT * FROM Restaurants; SELECT * FROM Restaurants WHERE Food_Service = 'Cafe' AND Cuisine = 'Italian';\"\n    }\n  ]\n}",
+      "expected": "{\"is_ambiguous\": false, \"sql\": \"SELECT Restaurants.Name \\r\\nFROM Restaurants\\r\\nWHERE Restaurants.Food_Service = \\\"Restaurant\\\" OR Restaurants.Food_Service = \\\"Café\\\" AND Restaurants.Cuisine = \\\"Italian\\\"\"}",
+      "correct": false,
+      "latency_ms": 40721.340849,
+      "input_tokens": 435,
+      "output_tokens": 1583,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "amb_005",
+      "prediction": "{\n  \"is_ambiguous\": false,\n  \"reasoning\": \"The schema only contains a Restaurants table with a Cuisine column. The term 'cafes' may be redundant since they are not explicitly modeled, but the query can be interpreted as seeking all restaurants with Italian cuisine.\",\n  \"interpretations\": [\n    {\n      \"description\": \"Retrieve all restaurants (including cafes if they are classified under the Restaurants table) with Italian cuisine\",\n      \"sql\": \"SELECT * FROM Restaurants WHERE Cuisine = 'Italian';\"\n    }\n  ]\n}",
+      "expected": "{\"is_ambiguous\": true, \"interpretations\": [\"SELECT Restaurants.Name \\r\\nFROM Restaurants\\r\\nWHERE (Restaurants.Food_Service = \\\"Restaurant\\\" OR Restaurants.Food_Service = \\\"Café\\\") AND Restaurants.Cuisine = \\\"Italian\\\"\", \"SELECT Restaurants.Name \\r\\nFROM Restaurants\\r\\nWHERE Restaurants.Food_Service = \\\"Restaurant\\\" OR Restaurants.Food_Service = \\\"Café\\\" AND Restaurants.Cuisine = \\\"Italian\\\"\"]}",
+      "correct": false,
+      "latency_ms": 24458.175804999995,
+      "input_tokens": 433,
+      "output_tokens": 935,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "amb_006",
+      "prediction": "{\n  \"is_ambiguous\": false,\n  \"reasoning\": \"The question clearly separates two distinct queries: finding all chefs (Staff with Role='Chef') and servers who speak English (Staff with Role='Server' and Language='English'). The schema directly supports these queries through the Staff table.\",\n  \"interpretations\": [\n    {\n      \"description\": \"List all staff members whose role is 'Chef' and list all staff members whose role is 'Server' and language is 'English'\",\n      \"sql\": \"SELECT Name FROM Staff WHERE Role = 'Chef'; SELECT Name FROM Staff WHERE Role = 'Server' AND Language = 'English';\"\n    }\n  ]\n}",
+      "expected": "{\"is_ambiguous\": false, \"sql\": \"SELECT Staff.Name \\r\\nFROM Staff\\r\\nWHERE Staff.Role = \\\"Chef\\\" OR Staff.Role = \\\"Server\\\" AND Staff.Language = \\\"English\\\"\"}",
+      "correct": false,
+      "latency_ms": 13392.570051000006,
+      "input_tokens": 463,
+      "output_tokens": 518,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "amb_007",
+      "prediction": "{\n  \"is_ambiguous\": false,\n  \"reasoning\": \"The question clearly refers to the Staff table's Role and Language columns, with no conflicting interpretations possible given the schema.\",\n  \"interpretations\": [\n    {\n      \"description\": \"Select staff members whose role is 'chef' or 'server' and who speak English\",\n      \"sql\": \"SELECT Name FROM Staff WHERE Role IN ('chef', 'server') AND Language = 'English';\"\n    }\n  ]\n}",
+      "expected": "{\"is_ambiguous\": true, \"interpretations\": [\"SELECT Staff.Name \\r\\nFROM Staff\\r\\nWHERE (Staff.Role = \\\"Chef\\\" OR Staff.Role = \\\"Server\\\") AND Staff.Language = \\\"English\\\"\", \"SELECT Staff.Name \\r\\nFROM Staff\\r\\nWHERE Staff.Role = \\\"Chef\\\" OR Staff.Role = \\\"Server\\\" AND Staff.Language = \\\"English\\\"\"]}",
+      "correct": false,
+      "latency_ms": 12489.427350000027,
+      "input_tokens": 455,
+      "output_tokens": 473,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "amb_008",
+      "prediction": "{\n  \"is_ambiguous\": true,\n  \"reasoning\": \"The question assumes the existence of 'chefs' and 'servers' as specific roles in the Staff table, but the schema does not define these roles or restrict the Role column's values, leading to multiple possible interpretations of valid role names.\",\n  \"interpretations\": [\n    {\n      \"description\": \"Assumes 'Chef' and 'Server' are exact role names in the Staff table.\",\n      \"sql\": \"SELECT Name FROM Staff WHERE Role = 'Chef' AND Language = 'English'; SELECT Name FROM Staff WHERE Role = 'Server' AND Language = 'English';\"\n    },\n    {\n      \"description\": \"Assumes role names are case-insensitive (e.g., 'chef' or 'SERVER') and matches any variation.\",\n      \"sql\": \"SELECT Name FROM Staff WHERE LOWER(Role) = 'chef' AND Language = 'English'; SELECT Name FROM Staff WHERE LOWER(Role) = 'server' AND Language = 'English';\"\n    }\n  ]\n}",
+      "expected": "{\"is_ambiguous\": false, \"sql\": \"SELECT Staff.Name \\r\\nFROM Staff\\r\\nWHERE (Staff.Role = \\\"Chef\\\" OR Staff.Role = \\\"Server\\\") AND Staff.Language = \\\"English\\\"\"}",
+      "correct": false,
+      "latency_ms": 58109.10757700003,
+      "input_tokens": 458,
+      "output_tokens": 2250,
+      "judge_raw_score": 1.0,
+      "error": null
+    },
+    {
+      "id": "amb_108",
+      "prediction": "{\n  \"is_ambiguous\": false,\n  \"reasoning\": \"The question asks for the salary of a role present in all hospitals, which can be unambiguously interpreted as finding roles with entries in every hospital via Hospitals_Medical_Roles and joining with MedicalRoles.\",\n  \"interpretations\": [\n    {\n      \"description\": \"Find roles that exist in every hospital and return their salary\",\n      \"sql\": \"SELECT mr.Salary FROM MedicalRoles mr WHERE mr.RoleID IN (SELECT hmr.RoleID FROM Hospitals_Medical_Roles hmr GROUP BY hmr.RoleID HAVING COUNT(DISTINCT hmr.HospitalID) = (SELECT COUNT(*) FROM Hospitals))\"\n    }\n  ]\n}",
+      "expected": "{\"is_ambiguous\": false, \"sql\": \"SELECT MedicalRoles.Salary  from Hospitals_Medical_Roles join MedicalRoles on Hospitals_Medical_Roles.RoleID = MedicalRoles.RoleID join Hospitals on Hospitals_Medical_Roles.HospitalID = Hospitals.HospitalID   GROUP BY Hospitals_Medical_Roles.RoleID HAVING COUNT(DISTINCT Hospitals_Medical_Roles.HospitalID) = (SELECT COUNT(*) FROM  Hospitals)\"}",
+      "correct": false,
+      "latency_ms": 39050.71002700004,
+      "input_tokens": 382,
+      "output_tokens": 1519,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "amb_109",
+      "prediction": "{\n  \"is_ambiguous\": false,\n  \"reasoning\": \"The question clearly asks for systems associated with each support specialist via the junction table, requiring a join between It_Support_Specialists, It_Support_Specialists_Systems, and Systems.\",\n  \"interpretations\": [\n    {\n      \"description\": \"List each support specialist's systems by joining all three tables\",\n      \"sql\": \"SELECT s.name, sys.system_name FROM It_Support_Specialists s JOIN It_Support_Specialists_Systems iss ON s.id = iss.it_specialist_id JOIN Systems sys ON iss.system_id = sys.system_id;\"\n    }\n  ]\n}",
+      "expected": "{\"is_ambiguous\": true, \"interpretations\": [\"SELECT Systems.system_name  from It_Support_Specialists_Systems join Systems on It_Support_Specialists_Systems.system_id = Systems.system_id join It_Support_Specialists on It_Support_Specialists_Systems.it_specialist_id = It_Support_Specialists.id   GROUP BY It_Support_Specialists_Systems.system_id HAVING COUNT(DISTINCT It_Support_Specialists_Systems.it_specialist_id) = (SELECT COUNT(*) FROM  It_Support_Specialists)\", \"select it_support_specialists.name , systems.system_name from It_Support_Specialists_Systems join Systems on It_Support_Specialists_Systems.system_id = Systems.system_id join It_Support_Specialists on It_Support_Specialists_Systems.it_specialist_id = It_Support_Specialists.id\"]}",
+      "correct": false,
+      "latency_ms": 25715.45542900003,
+      "input_tokens": 395,
+      "output_tokens": 988,
+      "judge_raw_score": 1.0,
+      "error": null
+    },
+    {
+      "id": "amb_110",
+      "prediction": "{\n  \"is_ambiguous\": false,\n  \"reasoning\": \"The question clearly asks for system names and active statuses associated with each IT support specialist, which requires joining the It_Support_Specialists table with Systems through the junction table.\",\n  \"interpretations\": [\n    {\n      \"description\": \"List all system names and their active statuses for each IT support specialist, showing each specialist's associated systems.\",\n      \"sql\": \"SELECT iss.name AS specialist_name, s.system_name, s.is_active FROM It_Support_Specialists iss JOIN It_Support_Specialists_Systems issys ON iss.id = issys.it_specialist_id JOIN Systems s ON issys.system_id = s.system_id;\"\n    }\n  ]\n}",
+      "expected": "{\"is_ambiguous\": true, \"interpretations\": [\"SELECT Systems.system_name, Systems.is_active  from It_Support_Specialists_Systems join Systems on It_Support_Specialists_Systems.system_id = Systems.system_id join It_Support_Specialists on It_Support_Specialists_Systems.it_specialist_id = It_Support_Specialists.id   GROUP BY It_Support_Specialists_Systems.system_id HAVING COUNT(DISTINCT It_Support_Specialists_Systems.it_specialist_id) = (SELECT COUNT(*) FROM  It_Support_Specialists)\", \"select it_support_specialists.name , systems.system_name , systems.is_active from It_Support_Specialists_Systems join Systems on It_Support_Specialists_Systems.system_id = Systems.system_id join It_Support_Specialists on It_Support_Specialists_Systems.it_specialist_id = It_Support_Specialists.id\"]}",
+      "correct": false,
+      "latency_ms": 24029.376705000002,
+      "input_tokens": 399,
+      "output_tokens": 933,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "amb_111",
+      "prediction": "{\n  \"is_ambiguous\": false,\n  \"reasoning\": \"The question clearly asks for system names and active statuses linked to each IT support specialist through the junction table, which has a direct many-to-many relationship between specialists and systems.\",\n  \"interpretations\": [\n    {\n      \"description\": \"List all system names and their active statuses for each IT support specialist, showing all system associations\",\n      \"sql\": \"SELECT iss.name AS specialist_name, s.system_name, s.is_active FROM It_Support_Specialists iss JOIN It_Support_Specialists_Systems issys ON iss.id = issys.it_specialist_id JOIN Systems s ON issys.system_id = s.system_id;\"\n    }\n  ]\n}",
+      "expected": "{\"is_ambiguous\": false, \"sql\": \"select it_support_specialists.name , systems.system_name , systems.is_active from It_Support_Specialists_Systems join Systems on It_Support_Specialists_Systems.system_id = Systems.system_id join It_Support_Specialists on It_Support_Specialists_Systems.it_specialist_id = It_Support_Specialists.id\"}",
+      "correct": false,
+      "latency_ms": 16309.816963000003,
+      "input_tokens": 401,
+      "output_tokens": 625,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "amb_112",
+      "prediction": "{\n  \"is_ambiguous\": false,\n  \"reasoning\": \"The question asks for a responsibility shared by all internships, which can be unambiguously answered by finding a responsibility linked to every internship via the Internships_Responsibilities table.\",\n  \"interpretations\": [\n    {\n      \"description\": \"Find the responsibility that exists in every internship's responsibilities\",\n      \"sql\": \"SELECT r.responsibility FROM Responsibilities r JOIN Internships_Responsibilities ir ON r.id = ir.responsibilityId GROUP BY r.id HAVING COUNT(DISTINCT ir.internshipId) = (SELECT COUNT(*) FROM Internships);\"\n    }\n  ]\n}",
+      "expected": "{\"is_ambiguous\": false, \"sql\": \"SELECT Responsibilities.responsibility  from Internships_Responsibilities join Responsibilities on Internships_Responsibilities.responsibilityId = Responsibilities.id join Internships on Internships_Responsibilities.internshipId = Internships.id   GROUP BY Internships_Responsibilities.responsibilityId HAVING COUNT(DISTINCT Internships_Responsibilities.internshipId) = (SELECT COUNT(*) FROM  Internships)\"}",
+      "correct": false,
+      "latency_ms": 24608.498724000015,
+      "input_tokens": 497,
+      "output_tokens": 948,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "amb_113",
+      "prediction": "{\n  \"is_ambiguous\": false,\n  \"reasoning\": \"The question asks for responsibilities corresponding to each internship, which are linked via the many-to-many Internships_Responsibilities table. The schema explicitly defines this relationship, so the query must join Internships with Responsibilities through the junction table.\",\n  \"interpretations\": [\n    {\n      \"description\": \"List each internship with all its associated responsibilities from the junction table.\",\n      \"sql\": \"SELECT i.id, r.responsibility FROM Internships i JOIN Internships_Responsibilities ir ON i.id = ir.internshipId JOIN Responsibilities r ON ir.responsibilityId = r.id;\"\n    }\n  ]\n}",
+      "expected": "{\"is_ambiguous\": false, \"sql\": \"select internships.title , responsibilities.responsibility from Internships_Responsibilities join Responsibilities on Internships_Responsibilities.responsibilityId = Responsibilities.id join Internships on Internships_Responsibilities.internshipId = Internships.id\"}",
+      "correct": false,
+      "latency_ms": 22946.29088299996,
+      "input_tokens": 499,
+      "output_tokens": 859,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "amb_114",
+      "prediction": "{\n  \"is_ambiguous\": true,\n  \"reasoning\": \"The question could be interpreted as requiring all support specialists (including those with no systems) or only those with at least one system. The schema allows both interpretations.\",\n  \"interpretations\": [\n    {\n      \"description\": \"List all support specialists and the systems they are assigned to (including those with no systems)\",\n      \"sql\": \"SELECT s.name, sys.system_name FROM It_Support_Specialists s LEFT JOIN It_Support_Specialists_Systems iss ON s.id = iss.it_specialist_id LEFT JOIN Systems sys ON iss.system_id = sys.system_id;\"\n    },\n    {\n      \"description\": \"List only support specialists who are assigned to at least one system\",\n      \"sql\": \"SELECT s.name, sys.system_name FROM It_Support_Specialists s INNER JOIN It_Support_Specialists_Systems iss ON s.id = iss.it_specialist_id INNER JOIN Systems sys ON iss.system_id = sys.system_id;\"\n    }\n  ]\n}",
+      "expected": "{\"is_ambiguous\": false, \"sql\": \"select it_support_specialists.name , systems.system_name from It_Support_Specialists_Systems join Systems on It_Support_Specialists_Systems.system_id = Systems.system_id join It_Support_Specialists on It_Support_Specialists_Systems.it_specialist_id = It_Support_Specialists.id\"}",
+      "correct": false,
+      "latency_ms": 38402.87673700004,
+      "input_tokens": 397,
+      "output_tokens": 1464,
+      "judge_raw_score": 3.0,
+      "error": null
+    },
+    {
+      "id": "amb_115",
+      "prediction": "{\n  \"is_ambiguous\": false,\n  \"reasoning\": \"The question clearly asks for responsibilities linked to internships via the defined many-to-many relationship table Internships_Responsibilities, with no alternative interpretations possible given the schema.\",\n  \"interpretations\": [\n    {\n      \"description\": \"List all responsibilities for each internship by joining Internships with Internships_Responsibilities and Responsibilities tables\",\n      \"sql\": \"SELECT Internships.title, Responsibilities.responsibility FROM Internships JOIN Internships_Responsibilities ON Internships.id = Internships_Responsibilities.internshipId JOIN Responsibilities ON Internships_Responsibilities.responsibilityId = Responsibilities.id;\"\n    }\n  ]\n}",
+      "expected": "{\"is_ambiguous\": true, \"interpretations\": [\"SELECT Responsibilities.responsibility  from Internships_Responsibilities join Responsibilities on Internships_Responsibilities.responsibilityId = Responsibilities.id join Internships on Internships_Responsibilities.internshipId = Internships.id   GROUP BY Internships_Responsibilities.responsibilityId HAVING COUNT(DISTINCT Internships_Responsibilities.internshipId) = (SELECT COUNT(*) FROM  Internships)\", \"select internships.title , responsibilities.responsibility from Internships_Responsibilities join Responsibilities on Internships_Responsibilities.responsibilityId = Responsibilities.id join Internships on Internships_Responsibilities.internshipId = Internships.id\"]}",
+      "correct": false,
+      "latency_ms": 20187.77158900002,
+      "input_tokens": 496,
+      "output_tokens": 579,
+      "judge_raw_score": 1.0,
+      "error": null
+    },
+    {
+      "id": "amb_261",
+      "prediction": "{\n  \"is_ambiguous\": false,\n  \"reasoning\": \"The question can be directly answered by querying the Jobs table for the maximum salary and retrieving the corresponding minimum and preferred years from the same row.\",\n  \"interpretations\": [\n    {\n      \"description\": \"Find the job with the highest salary and return its minimum and preferred years of experience\",\n      \"sql\": \"SELECT Minimum_Years, Preferred_Years FROM Jobs WHERE Salary = (SELECT MAX(Salary) FROM Jobs);\"\n    }\n  ]\n}",
+      "expected": "{\"is_ambiguous\": false, \"sql\": \"SELECT Minimum_Years, Preferred_Years\\r\\nFROM Jobs\\r\\nORDER BY Salary DESC\\r\\nLIMIT 1;\"}",
+      "correct": false,
+      "latency_ms": 27591.61870499997,
+      "input_tokens": 385,
+      "output_tokens": 779,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "amb_262",
+      "prediction": "{\n  \"is_ambiguous\": false,\n  \"reasoning\": \"The question clearly asks for compensation details linked to 'software developers' via the Position and SalaryDetails tables, with a direct join condition on PositionId.\",\n  \"interpretations\": [\n    {\n      \"description\": \"Retrieve salary range and hourly rate for positions titled 'software developer'\",\n      \"sql\": \"SELECT SalaryDetails.Salary_Range, SalaryDetails.Hourly_Rate FROM SalaryDetails JOIN Position ON SalaryDetails.PositionId = Position.Id WHERE Position.Title = 'software developer';\"\n    }\n  ]\n}",
+      "expected": "{\"is_ambiguous\": true, \"interpretations\": [\"select s.Salary_Range \\r\\nfrom position as p \\r\\njoin salarydetails as s \\r\\non p.id=s.positionid \\r\\nwhere p.title = 'Software Developer'\", \"select s.Hourly_Rate \\r\\nfrom position as p \\r\\njoin salarydetails as s \\r\\non p.id=s.positionid \\r\\nwhere p.title = 'Software Developer'\", \"select s.Salary_Range, Hourly_Rate \\r\\nfrom position as p \\r\\njoin salarydetails as s \\r\\non p.id=s.positionid \\r\\nwhere p.title = 'Software Developer'\"]}",
+      "correct": false,
+      "latency_ms": 28284.003675000007,
+      "input_tokens": 464,
+      "output_tokens": 809,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "amb_263",
+      "prediction": "{\n  \"is_ambiguous\": true,\n  \"reasoning\": \"The question is ambiguous because it's unclear whether 'software developer' refers to a specific Position.Title value, a general category requiring text matching in Title/Description, or an aggregated average across multiple positions. The schema also doesn't specify if SalaryDetails.Hourly_Rate represents a fixed rate or range.\",\n  \"interpretations\": [\n    {\n      \"description\": \"Find the exact hourly rate for a position titled 'Software Developer'\",\n      \"sql\": \"SELECT sd.Hourly_Rate FROM Position p JOIN SalaryDetails sd ON p.Id = sd.PositionId WHERE p.Title = 'Software Developer'\"\n    },\n    {\n      \"description\": \"Find average hourly rate for positions with 'software developer' in Title or Description\",\n      \"sql\": \"SELECT AVG(sd.Hourly_Rate) FROM Position p JOIN SalaryDetails sd ON p.Id = sd.PositionId WHERE p.Title ILIKE '%software developer%' OR p.Description ILIKE '%software developer%'\"\n    },\n    {\n      \"description\": \"Retrieve all distinct hourly rates for positions matching 'software developer' in any field\",\n      \"sql\": \"SELECT DISTINCT sd.Hourly_Rate FROM Position p JOIN SalaryDetails sd ON p.Id = sd.PositionId WHERE p.Title ILIKE '%software developer%' OR p.Description ILIKE '%software developer%'\"\n    }\n  ]\n}",
+      "expected": "{\"is_ambiguous\": false, \"sql\": \"select s.Hourly_Rate \\r\\nfrom position as p \\r\\njoin salarydetails as s \\r\\non p.id=s.positionid \\r\\nwhere p.title = 'Software Developer'\"}",
+      "correct": false,
+      "latency_ms": 33693.58783400003,
+      "input_tokens": 469,
+      "output_tokens": 962,
+      "judge_raw_score": 1.0,
+      "error": null
+    },
+    {
+      "id": "amb_264",
+      "prediction": "{\n  \"is_ambiguous\": true,\n  \"reasoning\": \"The question could be interpreted as requiring either all positions (including those without salary details) or only positions with existing salary ranges, depending on whether 'associated' implies a mandatory relationship.\",\n  \"interpretations\": [\n    {\n      \"description\": \"List all positions, including those without salary ranges\",\n      \"sql\": \"SELECT Position.Title, SalaryDetails.Salary_Range FROM Position LEFT JOIN SalaryDetails ON Position.Id = SalaryDetails.PositionId;\"\n    },\n    {\n      \"description\": \"List only positions that have associated salary ranges\",\n      \"sql\": \"SELECT Position.Title, SalaryDetails.Salary_Range FROM Position INNER JOIN SalaryDetails ON Position.Id = SalaryDetails.PositionId;\"\n    }\n  ]\n}",
+      "expected": "{\"is_ambiguous\": false, \"sql\": \"select p.title, s.Salary_Range \\r\\nfrom position as p \\r\\njoin salarydetails as s \\r\\non p.id=s.positionid\"}",
+      "correct": false,
+      "latency_ms": 27157.28735899995,
+      "input_tokens": 467,
+      "output_tokens": 770,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "amb_265",
+      "prediction": "{\n  \"is_ambiguous\": false,\n  \"reasoning\": \"The question asks for the preferred years of experience for the job with the greatest salary. The Jobs table contains both Salary and Preferred_Years columns, allowing a direct query to find the maximum salary and retrieve the corresponding Preferred_Years value.\",\n  \"interpretations\": [\n    {\n      \"description\": \"Retrieve the preferred years of experience from the job with the highest salary.\",\n      \"sql\": \"SELECT Preferred_Years FROM Jobs WHERE Salary = (SELECT MAX(Salary) FROM Jobs);\"\n    }\n  ]\n}",
+      "expected": "{\"is_ambiguous\": false, \"sql\": \"SELECT Preferred_Years\\r\\nFROM Jobs\\r\\nORDER BY Salary DESC\\r\\nLIMIT 1;\"}",
+      "correct": false,
+      "latency_ms": 46622.49492600006,
+      "input_tokens": 383,
+      "output_tokens": 1327,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "amb_266",
+      "prediction": "{\n  \"is_ambiguous\": true,\n  \"reasoning\": \"The question is ambiguous because 'experience' could refer to either Minimum_Years or Preferred_Years from the Jobs table, and the schema doesn't clarify which metric to prioritize for 'experience'.\",\n  \"interpretations\": [\n    {\n      \"description\": \"Retrieve the minimum years of experience required for the job with the highest salary\",\n      \"sql\": \"SELECT Minimum_Years FROM Jobs WHERE Salary = (SELECT MAX(Salary) FROM Jobs)\"\n    },\n    {\n      \"description\": \"Retrieve the preferred years of experience for the job with the greatest salary\",\n      \"sql\": \"SELECT Preferred_Years FROM Jobs WHERE Salary = (SELECT MAX(Salary) FROM Jobs)\"\n    }\n  ]\n}",
+      "expected": "{\"is_ambiguous\": true, \"interpretations\": [\"SELECT Minimum_Years\\r\\nFROM Jobs\\r\\nORDER BY Salary DESC\\r\\nLIMIT 1;\", \"SELECT Preferred_Years\\r\\nFROM Jobs\\r\\nORDER BY Salary DESC\\r\\nLIMIT 1;\", \"SELECT Minimum_Years, Preferred_Years\\r\\nFROM Jobs\\r\\nORDER BY Salary DESC\\r\\nLIMIT 1;\"]}",
+      "correct": false,
+      "latency_ms": 22429.36629299993,
+      "input_tokens": 381,
+      "output_tokens": 629,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "amb_267",
+      "prediction": "{\n  \"is_ambiguous\": false,\n  \"reasoning\": \"The question clearly refers to properties with a 'Rental' type in the Properties table, which directly contains Street_Address and City columns.\",\n  \"interpretations\": [\n    {\n      \"description\": \"Retrieve street addresses and cities of properties where Property_Type is 'Rental'\",\n      \"sql\": \"SELECT Street_Address, City FROM Properties WHERE Property_Type = 'Rental';\"\n    }\n  ]\n}",
+      "expected": "{\"is_ambiguous\": false, \"sql\": \"SELECT P.Street_Address, City from Transactions AS T LEFT JOIN Properties AS P ON T.property_id = P.property_id WHERE T.TypeOfTransaction LIKE 'Rent'\"}",
+      "correct": false,
+      "latency_ms": 23531.384316999945,
+      "input_tokens": 490,
+      "output_tokens": 650,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "amb_279",
+      "prediction": "{\n  \"is_ambiguous\": false,\n  \"reasoning\": \"The question clearly asks for locations (Street_Address, City) of properties where Property_Type is 'rental', which can be directly answered by querying the Properties table with a WHERE clause filtering on Property_Type = 'rental'.\",\n  \"interpretations\": [\n    {\n      \"description\": \"Retrieve street addresses and cities of properties marked as rental in the Properties table\",\n      \"sql\": \"SELECT Street_Address, City FROM Properties WHERE Property_Type = 'rental';\"\n    }\n  ]\n}",
+      "expected": "{\"is_ambiguous\": true, \"interpretations\": [\"SELECT P.Street_Address from Transactions AS T LEFT JOIN Properties AS P ON T.property_id = P.property_id WHERE T.TypeOfTransaction LIKE 'Rent'\", \"SELECT P.City from Transactions AS T LEFT JOIN Properties AS P ON T.property_id = P.property_id WHERE T.TypeOfTransaction LIKE 'Rent'\", \"SELECT P.Street_Address, City from Transactions AS T LEFT JOIN Properties AS P ON T.property_id = P.property_id WHERE T.TypeOfTransaction LIKE 'Rent'\"]}",
+      "correct": false,
+      "latency_ms": 17716.749583000135,
+      "input_tokens": 486,
+      "output_tokens": 490,
+      "judge_raw_score": 2.0,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-19T03:20:20+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": "judge@openai",
+  "judge_model_revision": null,
+  "judge_prompt_hash": "b3dae6bc8634fd04"
+}
