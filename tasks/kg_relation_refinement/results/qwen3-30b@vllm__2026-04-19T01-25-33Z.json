@@ -1,0 +1,252 @@
+{
+  "model_id": "qwen3-30b@vllm",
+  "model_revision": "2025-12-01",
+  "task_id": "kg_relation_refinement",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "06c3a7458e86ac8d",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "judge_score": 0.78
+  },
+  "tps": 37.545244130250445,
+  "p95_latency_ms": 20224.439343999962,
+  "n_samples": 20,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "kg_rr_001",
+      "prediction": "{\"relation\": \"place of birth\"}",
+      "expected": "{\"relation\": \"place of birth\"}",
+      "correct": true,
+      "latency_ms": 7247.84612000002,
+      "input_tokens": 360,
+      "output_tokens": 244,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_002",
+      "prediction": "{\"relation\": \"affiliation\"}",
+      "expected": "{\"relation\": \"employer\"}",
+      "correct": false,
+      "latency_ms": 10449.133139000025,
+      "input_tokens": 357,
+      "output_tokens": 398,
+      "judge_raw_score": 1.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_003",
+      "prediction": "{\"relation\": \"creator\"}",
+      "expected": "{\"relation\": \"creator\"}",
+      "correct": true,
+      "latency_ms": 12931.652778,
+      "input_tokens": 362,
+      "output_tokens": 485,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_004",
+      "prediction": "{\"relation\": \"educated at\"}",
+      "expected": "{\"relation\": \"educated at\"}",
+      "correct": true,
+      "latency_ms": 8271.503625999969,
+      "input_tokens": 358,
+      "output_tokens": 307,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_005",
+      "prediction": "{\"relation\": \"capital\"}",
+      "expected": "{\"relation\": \"capital\"}",
+      "correct": true,
+      "latency_ms": 18290.091879999978,
+      "input_tokens": 358,
+      "output_tokens": 688,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_006",
+      "prediction": "{\"relation\": \"award received\"}",
+      "expected": "{\"relation\": \"award received\"}",
+      "correct": true,
+      "latency_ms": 20224.439343999962,
+      "input_tokens": 374,
+      "output_tokens": 781,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_007",
+      "prediction": "{\"relation\": \"creator\"}",
+      "expected": "{\"relation\": \"developer\"}",
+      "correct": false,
+      "latency_ms": 10039.220992000026,
+      "input_tokens": 362,
+      "output_tokens": 378,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_008",
+      "prediction": "{\"relation\": \"languages spoken, written or signed\"}",
+      "expected": "{\"relation\": \"languages spoken, written or signed\"}",
+      "correct": true,
+      "latency_ms": 11978.977713000006,
+      "input_tokens": 359,
+      "output_tokens": 454,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_009",
+      "prediction": "{\"relation\": \"director\"}",
+      "expected": "{\"relation\": \"director\"}",
+      "correct": true,
+      "latency_ms": 7611.347591999958,
+      "input_tokens": 355,
+      "output_tokens": 279,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_010",
+      "prediction": "{\"relation\": \"spouse\"}",
+      "expected": "{\"relation\": \"spouse\"}",
+      "correct": true,
+      "latency_ms": 5318.794448999995,
+      "input_tokens": 358,
+      "output_tokens": 192,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_011",
+      "prediction": "{\"relation\": \"number of employees\"}",
+      "expected": "{\"relation\": \"number of employees\"}",
+      "correct": true,
+      "latency_ms": 11017.897516999994,
+      "input_tokens": 369,
+      "output_tokens": 415,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_012",
+      "prediction": "{\"relation\": \"length\"}",
+      "expected": "{\"relation\": \"length\"}",
+      "correct": true,
+      "latency_ms": 5545.886217999964,
+      "input_tokens": 364,
+      "output_tokens": 204,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_013",
+      "prediction": "{\"relation\": \"published in\"}",
+      "expected": "{\"relation\": \"published in\"}",
+      "correct": true,
+      "latency_ms": 7901.210421999963,
+      "input_tokens": 360,
+      "output_tokens": 297,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_014",
+      "prediction": "{\"relation\": \"headquarters location\"}",
+      "expected": "{\"relation\": \"headquarters location\"}",
+      "correct": true,
+      "latency_ms": 9852.635076000013,
+      "input_tokens": 360,
+      "output_tokens": 373,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_015",
+      "prediction": "{\"relation\": \"child\"}",
+      "expected": "{\"relation\": \"child\"}",
+      "correct": true,
+      "latency_ms": 5913.948564000009,
+      "input_tokens": 352,
+      "output_tokens": 211,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_016",
+      "prediction": "{\"relation\": \"date of official opening\"}",
+      "expected": "{\"relation\": \"inception\"}",
+      "correct": false,
+      "latency_ms": 9987.836039999991,
+      "input_tokens": 369,
+      "output_tokens": 382,
+      "judge_raw_score": 1.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_017",
+      "prediction": "{\"relation\": \"member of\"}",
+      "expected": "{\"relation\": \"member of\"}",
+      "correct": true,
+      "latency_ms": 9358.667448999995,
+      "input_tokens": 357,
+      "output_tokens": 350,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_018",
+      "prediction": "{\"relation\": \"revenue\"}",
+      "expected": "{\"relation\": \"box office\"}",
+      "correct": false,
+      "latency_ms": 5863.473690000035,
+      "input_tokens": 361,
+      "output_tokens": 210,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_019",
+      "prediction": "{\"relation\": \"orbits\"}",
+      "expected": "{\"relation\": \"natural satellite\"}",
+      "correct": false,
+      "latency_ms": 25429.020417999993,
+      "input_tokens": 366,
+      "output_tokens": 986,
+      "judge_raw_score": 1.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_020",
+      "prediction": "{\"relation\": \"volunteer of\"}",
+      "expected": "{\"relation\": \"member of\"}",
+      "correct": false,
+      "latency_ms": 10881.418386000007,
+      "input_tokens": 361,
+      "output_tokens": 405,
+      "judge_raw_score": 1.0,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-19T01:25:33+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": "gpt-4o-mini@openai",
+  "judge_model_revision": "2024-07-18",
+  "judge_prompt_hash": "4a9e8bce27ce104a"
+}
