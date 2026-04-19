@@ -12,12 +12,12 @@
     "seed": 42
   },
   "metrics": {
-    "judge_score": 0.9263157894736843
+    "judge_score": 0.93
   },
-  "tps": 26.145387702130712,
+  "tps": 34.678546473119646,
   "p95_latency_ms": 66460.45807500002,
   "n_samples": 20,
-  "n_failed_samples": 1,
+  "n_failed_samples": 0,
   "samples": [
     {
       "id": "kg_rr_001",
@@ -219,14 +219,14 @@
     },
     {
       "id": "kg_rr_019",
-      "prediction": "",
+      "prediction": "{\"relation\": \"natural satellite\"}",
       "expected": "{\"relation\": \"natural satellite\"}",
-      "correct": false,
-      "latency_ms": 905971.474552,
-      "input_tokens": null,
-      "output_tokens": null,
-      "judge_raw_score": null,
-      "error": "RuntimeError: network error after 3 attempts to http://lnsigo.mipt.ru:4000/v1 model=Qwen/Qwen3.5-27B: ReadTimeout: timed out"
+      "correct": true,
+      "latency_ms": 215500.19649,
+      "input_tokens": 382,
+      "output_tokens": 12830,
+      "judge_raw_score": 5.0,
+      "error": null
     },
     {
       "id": "kg_rr_020",
@@ -240,7 +240,7 @@
       "error": null
     }
   ],
-  "created_at": "2026-04-19T19:03:31+00:00",
+  "created_at": "2026-04-19T22:32:32+00:00",
   "env": {
     "provider": "openai_compat",
     "endpoint_kind": "openai_chat"
