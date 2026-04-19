@@ -12,12 +12,12 @@
     "seed": 42
   },
   "metrics": {
-    "judge_score": 0.625
+    "judge_score": 0.6222222222222222
   },
-  "tps": 22.393668044344917,
-  "p95_latency_ms": 804048.9637789999,
+  "tps": 17.971274688280232,
+  "p95_latency_ms": 887275.0468879999,
   "n_samples": 10,
-  "n_failed_samples": 2,
+  "n_failed_samples": 1,
   "samples": [
     {
       "id": "human_0",
@@ -76,14 +76,14 @@
     },
     {
       "id": "human_7",
-      "prediction": "",
+      "prediction": "```python\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom mlxtend.frequent_patterns import apriori\nfrom mlxtend.preprocessing import TransactionEncoder\nfrom reportlab.lib.pagesizes import letter\nfrom reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image, Table, TableStyle\nfrom reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle\nfrom reportlab.lib import colors\nfrom reportlab.lib.units import inch\nimport os\nimport warnings\n\nwarnings.filterwarnings('ignore')\n\ndef main():\n    # 1. Load Data\n    try:\n        df = pd.read_csv('online_retail.csv')\n    except FileNotFoundError:\n        print(\"Error: online_retail.csv not found in the current directory.\")\n        return\n\n    # 2. Preprocessing\n    # Drop rows with missing critical values\n    df = df.dropna(subset=['InvoiceNo', 'StockCode', 'Description', 'Quantity', 'UnitPrice', 'InvoiceDate'])\n    \n    # Convert InvoiceDate to datetime (Online Retail II often uses dd/mm/yyyy)\n    df['InvoiceDate'] = pd.to_datetime(df['InvoiceDate'], dayfirst=True, errors='coerce')\n    df = df.dropna(subset=['InvoiceDate'])\n    \n    # Filter out cancellations (negative quantity)\n    df = df[df['Quantity'] > 0]\n    \n    # Calculate Total Price\n    df['TotalPrice'] = df['Quantity'] * df['UnitPrice']\n    \n    # Ensure InvoiceNo is string for grouping\n    df['InvoiceNo'] = df['InvoiceNo'].astype(str)\n\n    # 3. Data Visualization\n    \n    # 3.1 Bar chart of transactions by country\n    plt.figure(figsize=(12, 8))\n    country_counts = df.groupby('Country').size().nlargest(10)\n    country_counts.plot(kind='bar', color='skyblue', edgecolor='black')\n    plt.title('Top 10 Countries by Transaction Count')\n    plt.xlabel('Country')\n    plt.ylabel('Number of Transactions')\n    plt.xticks(rotation=45)\n    plt.tight_layout()\n    plt.savefig('distribution_by_country.png')\n    plt.close()\n\n    # 3.2 Time series of sales trends\n    plt.figure(figsize=(12, 6))\n    df['Date'] = df['InvoiceDate'].dt.date\n    daily_sales = df.groupby('Date')['TotalPrice'].sum()\n    daily_sales.plot(kind='line', color='green', linewidth=2)\n    plt.title('Sales Trends Over Time')\n    plt.xlabel('Date')\n    plt.ylabel('Total Sales ($)')\n    plt.xticks(rotation=45)\n    plt.tight_layout()\n    plt.savefig('sales_trends_over_time.png')\n    plt.close()\n\n    # 3.3 Correlation heatmap\n    plt.figure(figsize=(8, 6))\n    numeric_cols = ['Quantity', 'UnitPrice', 'TotalPrice']\n    corr_matrix = df[numeric_cols].corr()\n    sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', fmt=\".2f\")\n    plt.title('Correlation Heatmap')\n    plt.tight_layout()\n    plt.savefig('correlation_heatmap.png')\n    plt.close()\n\n    # 4. Data Mining\n    \n    # 4.1 Market Basket Analysis (Apriori)\n    # Group items by InvoiceNo\n    transactions = df.groupby('InvoiceNo')['StockCode'].apply(list).reset_index(name='items')\n    \n    # Encode transactions\n    te = TransactionEncoder()\n    te_ary = te.fit(transactions['items']).transform(transactions['items'])\n    trans_df = pd.DataFrame(te_ary, columns=te.columns_)\n    \n    # Apply Apriori\n    frequent_itemsets = apriori(trans_df, min_support=0.001, use_colnames=True)\n    frequent_itemsets.to_csv('frequent_itemsets.csv', index=False)\n    \n    # 4.2 Popular Products Analysis\n    product_analysis = df.groupby(['StockCode', 'Description']).agg(\n        TotalQuantity=('Quantity', 'sum'),\n        TotalRevenue=('TotalPrice', 'sum'),\n        TransactionCount=('InvoiceNo', 'nunique')\n    ).reset_index()\n    \n    product_analysis = product_analysis.sort_values(by='TotalRevenue', ascending=False)\n    product_analysis.to_csv('popular_products_analysis.csv', index=False)\n\n    # 5. Comprehensive Report (PDF)\n    doc = SimpleDocTemplate(\"comprehensive_report.pdf\", pagesize=letter)\n    styles = getSampleStyleSheet()\n    story = []\n\n    # Title\n    title_style = ParagraphStyle('CustomTitle', parent=styles['Heading1'], fontSize=24, spaceAfter=30, alignment=1)\n    story.append(Paragraph(\"Online Retail II Comprehensive Analysis Report\", title_style))\n    story.append(Spacer(1, 0.5*inch))\n\n    # Section 1: Visualizations\n    story.append(Paragraph(\"1. Data Visualization\", styles['Heading2']))\n    story.append(Spacer(1, 0.25*inch))\n    story.append(Paragraph(\"The following visualizations depict transaction distribution, sales trends, and feature correlations.\", styles['Normal']))\n    story.append(Spacer(1, 0.25*inch))\n    \n    for img_name in ['distribution_by_country.png', 'sales_trends_over_time.png', 'correlation_heatmap.png']:\n        if os.path.exists(img_name):\n            story.append(Image(img_name, width=6*inch, height=4*inch))\n            story.append(Spacer(1, 0.5*inch))\n        else:\n            story.append(Paragraph(f\"[Image {img_name} not found]\", styles['Normal']))\n\n    # Section 2: Data Mining\n    story.append(Paragraph(\"2. Data Mining Results\", styles['Heading2']))\n    story.append(Spacer(1, 0.25*inch))\n    story.append(Paragraph(\"Market Basket Analysis was performed using the Apriori algorithm. Frequent itemsets are saved in 'frequent_itemsets.csv'.\", styles['Normal']))\n    story.append(Paragraph(\"Popular products analysis is saved in 'popular_products_analysis.csv'.\", styles['Normal']))\n    story.append(Spacer(1, 0.5*inch))\n    \n    # Add top 5 products table\n    top_products = product_analysis.head(5)\n    data = [['Rank', 'StockCode', 'Description', 'Total Revenue']]\n    for idx, row in top_products.iterrows():\n        data.append([str(idx+1), str(row['StockCode']), str(row['Description']), f\"${row['TotalRevenue']:.2f}\"])\n    \n    table = Table(data)\n    table.setStyle(TableStyle([\n        ('BACKGROUND', (0, 0), (-1, 0), colors.grey),\n        ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),\n        ('ALIGN', (0, 0), (-1, -1), 'CENTER'),\n        ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),\n        ('FONTSIZE', (0, 0), (-1, 0), 12),\n        ('BOTTOMPADDING', (0, 0), (-1, 0), 12),\n        ('BACKGROUND', (0, 1), (-1, -1), colors.beige),\n        ('GRID', (0, 0), (-1, -1), 1, colors.black)\n    ]))\n    story.append(table)\n    story.append(Spacer(1, 0.5*inch))\n\n    # Section 3: Business Implications\n    story.append(Paragraph(\"3. Business Implications\", styles['Heading2']))\n    story.append(Spacer(1, 0.25*inch))\n    story.append(Paragraph(\"1. Focus on top countries for targeted marketing campaigns.\", styles['Normal']))\n    story.append(Paragraph(\"2. Monitor sales trends to anticipate seasonal demand.\", styles['Normal']))\n    story.append(Paragraph(\"3. Utilize frequent itemsets for product bundling and cross-selling strategies.\", styles['Normal']))\n    story.append(Paragraph(\"4. Prioritize inventory management for high-revenue products.\", styles['Normal']))\n\n    # Build PDF\n    doc.build(story)\n    print(\"Analysis complete. Files generated successfully.\")\n\nif __name__ == \"__main__\":\n    main()\n```",
       "expected": "1. Visualization: Visualization Completeness — distribution_by_country.png, sales_trends_over_time.png, correlation_heatmap.png. 2. Data mining: Association Rule Coverage — Apriori frequent_itemsets.csv. 3. Report: Report Completeness — comprehensive_report.pdf.",
       "correct": false,
-      "latency_ms": 804048.9637789999,
-      "input_tokens": null,
-      "output_tokens": null,
-      "judge_raw_score": null,
-      "error": "RuntimeError: network error after 3 attempts to http://lnsigo.mipt.ru:4000/v1 model=Qwen/Qwen3.5-27B: ReadError: [Errno 104] Connection reset by peer"
+      "latency_ms": 874972.084526,
+      "input_tokens": 186,
+      "output_tokens": 7511,
+      "judge_raw_score": 3.0,
+      "error": null
     },
     {
       "id": "human_8",
@@ -112,7 +112,7 @@
       "prediction": "",
       "expected": "1. Data cleaning: Data Cleaning Completeness — cleaned_data.csv. 2. Predictive modeling: MAE — predicted_prices.csv + model_evaluation_metrics.csv. 3. Visualization: Visualization Completeness — visualizations.png. 4. Report: Report Completeness — housing_prices_analysis_report.pdf.",
       "correct": false,
-      "latency_ms": 791537.3601499996,
+      "latency_ms": 887275.0468879999,
       "input_tokens": null,
       "output_tokens": null,
       "judge_raw_score": null,
@@ -130,7 +130,7 @@
       "error": null
     }
   ],
-  "created_at": "2026-04-19T12:18:43+00:00",
+  "created_at": "2026-04-19T16:56:08+00:00",
   "env": {
     "provider": "openai_compat",
     "endpoint_kind": "openai_chat"
