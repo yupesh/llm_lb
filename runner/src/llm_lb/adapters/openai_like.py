@@ -34,8 +34,8 @@ def openai_chat(
     system: str | None,
     user: str,
     params: LLMParams,
-    timeout: float = 600.0,
-    max_retries: int = 4,
+    timeout: float = 300.0,
+    max_retries: int = 2,
     backoff_base: float = 2.0,
 ) -> Completion:
     messages: list[dict[str, str]] = []
@@ -113,8 +113,8 @@ def openai_chat_messages(
     messages: list[dict],
     params: LLMParams,
     tools: list[dict] | None = None,
-    timeout: float = 600.0,
-    max_retries: int = 4,
+    timeout: float = 300.0,
+    max_retries: int = 2,
     backoff_base: float = 2.0,
 ) -> dict:
     """Multi-turn variant of `openai_chat` that returns the raw assistant
