@@ -12,6 +12,7 @@ metric:
 llm_params:
   temperature: 0.0
   seed: 42
+  max_tokens: 10240
 system_prompt: |
   You are an expert Python data-science programmer. Write complete, runnable
   Python code that solves the given task. Output ONLY the code, no explanations.
