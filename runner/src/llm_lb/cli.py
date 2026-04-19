@@ -7,6 +7,7 @@ import typer
 
 from .aggregate import aggregate_all
 from .models import Leaderboard, ModelCard, RunResult, Sample, TaskSpec
+from .runner import resume as resume_run
 from .runner import run as run_task
 from .validate import validate_model_file, validate_task_dir
 
@@ -39,6 +40,20 @@ def run(
     """Run a model against a task and write results JSON."""
     out = run_task(task, model, limit=limit or None)
     typer.echo(f"wrote: {out}")
+
+
+@app.command()
+def resume(
+    result: Path = typer.Option(..., exists=True, file_okay=True, dir_okay=False),
+    task: Path = typer.Option(..., exists=True, file_okay=False, dir_okay=True),
+    model: Path = typer.Option(..., exists=True, file_okay=True, dir_okay=False),
+) -> None:
+    """Retry error-marked samples in an existing result file, merging in place."""
+    path, n = resume_run(result, task, model)
+    if n == 0:
+        typer.echo(f"no error-marked samples in {path}; nothing to do")
+    else:
+        typer.echo(f"resumed {n} sample(s) in {path}")
 
 
 @app.command()

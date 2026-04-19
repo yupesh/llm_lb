@@ -2,7 +2,7 @@ from pathlib import Path
 
 from llm_lb.aggregate import aggregate_all
 from llm_lb.models import RunResult
-from llm_lb.runner import run
+from llm_lb.runner import resume, run
 
 REPO = Path(__file__).resolve().parents[2]
 TASK = REPO / "tasks" / "text_classification"
@@ -56,6 +56,67 @@ def test_failing_sample_does_not_abort_run(tmp_path: Path, monkeypatch):
     assert "simulated backend timeout" in errored[0].error
     # Other samples still scored — accuracy is non-zero since most succeeded.
     assert 0.0 < result.metrics["accuracy"] < 1.0
+
+
+def test_resume_retries_only_errored_samples(tmp_path: Path, monkeypatch):
+    """Resume must re-run only the samples that errored, keep the successful
+    predictions intact, and overwrite the result file with recomputed metrics."""
+    from llm_lb.adapters.dummy import DummyAdapter
+
+    call_count = {"n": 0}
+    original_chat = DummyAdapter.chat
+
+    # First pass: sample #2 fails. Other samples succeed.
+    def flaky_chat(self, system, user, params):
+        call_count["n"] += 1
+        if call_count["n"] == 2:
+            raise RuntimeError("simulated backend timeout")
+        return original_chat(self, system, user, params)
+
+    monkeypatch.setattr(DummyAdapter, "chat", flaky_chat)
+    out = run(TASK, MODEL, out_dir=tmp_path)
+    first = RunResult.model_validate_json(out.read_text())
+    assert first.n_failed_samples == 1
+    errored = [s for s in first.samples if s.error]
+    assert len(errored) == 1
+    errored_id = errored[0].id
+    successful_before = {
+        s.id: (s.prediction, s.latency_ms) for s in first.samples if not s.error
+    }
+
+    # Second pass (resume): endpoint is healthy again. Only the errored sample
+    # should be retried — the dummy adapter resolves it on this call.
+    monkeypatch.setattr(DummyAdapter, "chat", original_chat)
+    path, n = resume(out, TASK, MODEL)
+    assert path == out
+    assert n == 1
+
+    after = RunResult.model_validate_json(out.read_text())
+    assert after.n_failed_samples == 0
+    assert len(after.samples) == len(first.samples)
+    # Retried sample now has a prediction and no error.
+    retried = next(s for s in after.samples if s.id == errored_id)
+    assert retried.error is None
+    assert retried.prediction != ""
+    # Successful samples are untouched (prediction/latency preserved).
+    for s in after.samples:
+        if s.id in successful_before:
+            pred, lat = successful_before[s.id]
+            assert s.prediction == pred
+            assert s.latency_ms == lat
+    # Metrics recomputed: accuracy should now reflect the restored sample.
+    assert after.metrics["accuracy"] >= first.metrics["accuracy"]
+
+
+def test_resume_noop_when_no_errors(tmp_path: Path):
+    """If the result file has no error-marked samples, resume is a no-op and
+    must not touch the file."""
+    out = run(TASK, MODEL, out_dir=tmp_path)
+    before = out.read_bytes()
+    path, n = resume(out, TASK, MODEL)
+    assert path == out
+    assert n == 0
+    assert out.read_bytes() == before
 
 
 def test_aggregate_idempotent():
