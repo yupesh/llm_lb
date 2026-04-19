@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-19T22:27:25+00:00",
+  "generated_at": "2026-04-19T22:43:04+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -1270,11 +1270,11 @@
       "task_id": "kg_relation_refinement",
       "task_version": "1.0",
       "model_id": "qwen3.5-27b@vllm",
-      "score": 0.9263157894736843,
+      "score": 0.93,
       "metrics": {
-        "judge_score": 0.9263157894736843
+        "judge_score": 0.93
       },
-      "tps": 26.145387702130712,
+      "tps": 34.678546473119646,
       "p95_latency_ms": 66460.45807500002,
       "cost_usd": null,
       "result_file": "tasks/kg_relation_refinement/results/qwen3.5-27b@vllm__2026-04-19T19-03-31Z.json"
