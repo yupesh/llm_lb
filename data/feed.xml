@@ -4,8 +4,15 @@
   <id>tag:yupesh.github.io,2026:llm_lb/feed</id>
   <link href="https://yupesh.github.io/llm_lb/" rel="alternate" type="text/html"/>
   <link href="https://yupesh.github.io/llm_lb/data/feed.xml" rel="self" type="application/atom+xml"/>
-  <updated>2026-04-19T20:14:58+00:00</updated>
+  <updated>2026-04-19T20:19:38+00:00</updated>
   <author><name>LLM Leaderboard</name></author>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/summarization/1.0/qwen3.5-27b@vllm/2026-04-19T20:19:38+00:00</id>
+    <title>qwen3.5-27b@vllm scored 0.800 judge_score on summarization v1.0</title>
+    <updated>2026-04-19T20:19:38+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/summarization" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.800</summary>
+  </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/kg_triplet_extraction/1.0/qwen3.5-27b@vllm/2026-04-19T20:14:58+00:00</id>
     <title>qwen3.5-27b@vllm scored 0.580 judge_score on kg_triplet_extraction v1.0</title>
@@ -348,12 +355,5 @@
     <updated>2026-04-18T20:45:52+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring" rel="alternate" type="text/html"/>
     <summary>accuracy=0.400, macro_f1=0.279, qwk=0.333</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_holistic_scoring_condensed/1.0/qwen3.5-397b@vllm/2026-04-18T19:02:17+00:00</id>
-    <title>qwen3.5-397b@vllm scored 0.278 accuracy on essay_holistic_scoring_condensed v1.0</title>
-    <updated>2026-04-18T19:02:17+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_holistic_scoring_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.278, macro_f1=0.146, qwk=0.424</summary>
   </entry>
 </feed>
