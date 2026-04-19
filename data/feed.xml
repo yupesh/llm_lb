@@ -28,6 +28,13 @@
     <summary>accuracy=0.350, macro_f1=0.296, qwk=0.333</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_csv_excel/1.0/qwen3.5-27b@vllm/2026-04-19T12:28:04+00:00</id>
+    <title>qwen3.5-27b@vllm scored 0.714 judge_score on datascibench_csv_excel v1.0</title>
+    <updated>2026-04-19T12:28:04+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_csv_excel" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.714</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_dl/1.0/qwen3.5-27b@vllm/2026-04-19T11:20:42+00:00</id>
     <title>qwen3.5-27b@vllm scored 0.467 judge_score on datascibench_dl v1.0</title>
     <updated>2026-04-19T11:20:42+00:00</updated>
@@ -40,13 +47,6 @@
     <updated>2026-04-19T11:14:04+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_entity_type_refinement" rel="alternate" type="text/html"/>
     <summary>judge_score=0.680</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_csv_excel/1.0/qwen3.5-27b@vllm/2026-04-19T09:25:01+00:00</id>
-    <title>qwen3.5-27b@vllm scored 0.733 judge_score on datascibench_csv_excel v1.0</title>
-    <updated>2026-04-19T09:25:01+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_csv_excel" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.733</summary>
   </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification_condensed/1.0/qwen3.5-27b@vllm/2026-04-19T07:57:57+00:00</id>
