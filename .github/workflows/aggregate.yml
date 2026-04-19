@@ -68,6 +68,7 @@ jobs:
 
       - name: Commit regenerated artifacts
         run: |
+          set -eu
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # Stage only the files aggregate is allowed to produce. Anything
@@ -79,4 +80,20 @@ jobs:
             exit 0
           fi
           git commit -m "aggregate: refresh leaderboards + index"
-          git push origin HEAD:main
+          # Race guard: between our checkout and this push, a score PR may
+          # have been merged into main (or another aggregate run may have
+          # landed before us, even though `concurrency` serialises our own
+          # workflow). Rebase-and-retry recovers from "non-fast-forward"
+          # instead of failing the whole run.
+          i=0
+          until git push origin HEAD:main; do
+            i=$((i + 1))
+            if [ "$i" -ge 5 ]; then
+              echo "::error::push failed after $i attempts"
+              exit 1
+            fi
+            echo "push rejected, rebasing on origin/main (attempt $i/5)"
+            git fetch origin main
+            git rebase origin/main
+            sleep $((RANDOM % 3 + 1))
+          done
