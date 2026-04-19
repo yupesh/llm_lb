@@ -1,30 +1,52 @@
 name: score
 
-# Manually triggered scoring run. Produces a result file in tasks/<task>/results/,
-# rebuilds leaderboards + data/index.json, and opens a PR for an admin to merge.
+# Manually triggered scoring run. Produces one result file per (task, model)
+# pair under tasks/<task>/results/, opens a PR per pair for admin review, and
+# lets `aggregate` rebuild the leaderboards after merge.
 #
-# Two execution modes:
+# Bulk dispatch:
+#   - `tasks`:  "all" | "tasks/text_classification" | "tasks/a,tasks/b" | glob
+#   - `models`: same grammar, default "all"
+#   - `skip_existing`: skip pairs that already have any committed result file
+#
+# Execution modes:
 #   - github       — runs on ubuntu-latest. Suitable for hosted-API providers
-#                    (OpenAI, HF Inference) where the secret keys live in repo
-#                    settings. Do NOT use for models that need a GPU.
+#                    (OpenAI, HF Inference) where the secret keys live in
+#                    repo settings. Do NOT use for models that need a GPU.
 #   - self-hosted  — runs on a runner with the `score-runner` label. Use this
 #                    for vLLM/TGI/local inference where you control the box.
+#
+# The `plan` job always runs on ubuntu-latest (it only enumerates files);
+# the actual scoring jobs run on the selected runner. Matrix jobs execute
+# with `max-parallel: 1` by default — we only have a single shared vLLM
+# endpoint behind the proxy, and parallel calls would stampede it.
 
 on:
   workflow_dispatch:
     inputs:
-      task:
-        description: "Path to task directory (e.g. tasks/text_classification)"
+      tasks:
+        description: 'Tasks: "all", a single path, comma-sep list, or glob (tasks/*essay*)'
         required: true
-      model:
-        description: "Path to model YAML (e.g. models/gpt-4o-mini@openai.yaml)"
+        default: all
+      models:
+        description: 'Models: "all", a single path, comma-sep list, or glob (models/qwen*.yaml)'
         required: true
+        default: all
       runner:
         description: "Where to run"
         required: true
         default: github
         type: choice
         options: [github, self-hosted]
+      skip_existing:
+        description: "Skip (task, model) pairs that already have a committed result file"
+        required: true
+        default: true
+        type: boolean
+      max_parallel:
+        description: "Matrix concurrency. Leave 1 for shared vLLM endpoint; raise for OpenAI/hosted APIs."
+        required: true
+        default: "1"
 
 permissions:
   contents: write
@@ -34,8 +56,124 @@ env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
 
 jobs:
+  plan:
+    # The planner runs cheap on ubuntu-latest even when scoring uses a
+    # self-hosted runner — it only enumerates files and produces a matrix.
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.build.outputs.matrix }}
+      count: ${{ steps.build.outputs.count }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Build (task, model) matrix
+        id: build
+        env:
+          INPUT_TASKS: ${{ github.event.inputs.tasks }}
+          INPUT_MODELS: ${{ github.event.inputs.models }}
+          INPUT_SKIP_EXISTING: ${{ github.event.inputs.skip_existing }}
+        run: |
+          python3 <<'PY'
+          import glob, json, os, pathlib, re, sys, fnmatch
+
+          task_sel  = (os.environ.get("INPUT_TASKS")  or "all").strip()
+          model_sel = (os.environ.get("INPUT_MODELS") or "all").strip()
+          skip_existing = os.environ.get("INPUT_SKIP_EXISTING", "true").lower() == "true"
+
+          all_tasks  = sorted(
+              p for p in glob.glob("tasks/*")
+              if pathlib.Path(p, "task.yaml").exists()
+          )
+          all_models = sorted(glob.glob("models/*.yaml"))
+
+          # Models that shouldn't be in "all" by default. The judge and the
+          # dummy local adapter aren't leaderboard candidates.
+          DEFAULT_SKIP = {"models/dummy@local.yaml", "models/judge@openai.yaml"}
+
+          def resolve(selector: str, universe: list[str], kind: str) -> list[str]:
+              s = selector.strip()
+              if s in ("", "all", "*"):
+                  items = list(universe)
+                  if kind == "model":
+                      items = [m for m in items if m not in DEFAULT_SKIP]
+                  return items
+              wanted = [p.strip() for p in s.split(",") if p.strip()]
+              out: list[str] = []
+              seen: set[str] = set()
+              for w in wanted:
+                  if any(ch in w for ch in "*?["):
+                      matches = [u for u in universe if fnmatch.fnmatch(u, w)]
+                      if not matches:
+                          sys.exit(f"::error::no {kind}s matched glob: {w!r}")
+                      for m in matches:
+                          if m not in seen:
+                              seen.add(m); out.append(m)
+                  else:
+                      if w not in universe:
+                          sys.exit(f"::error::{kind} not found: {w!r}")
+                      if w not in seen:
+                          seen.add(w); out.append(w)
+              return out
+
+          tasks  = resolve(task_sel,  all_tasks,  "task")
+          models = resolve(model_sel, all_models, "model")
+
+          # For each model, read `model_id` from its YAML so we can check for
+          # existing result files (named `<model_id>__<iso-ts>.json`).
+          def model_id(yaml_path: str) -> str:
+              # Tiny hand-rolled parse — avoid pulling PyYAML into the planner.
+              for line in pathlib.Path(yaml_path).read_text().splitlines():
+                  m = re.match(r"^\s*model_id\s*:\s*(.+?)\s*$", line)
+                  if m:
+                      return m.group(1).strip().strip("\"'")
+              sys.exit(f"::error::{yaml_path} has no model_id")
+
+          ids = {m: model_id(m) for m in models}
+
+          pairs = []
+          for t in tasks:
+              for m in models:
+                  mid = ids[m]
+                  if skip_existing:
+                      existing = glob.glob(f"{t}/results/{mid}__*.json")
+                      if existing:
+                          continue
+                  pairs.append({
+                      "task_path":  t,
+                      "model_path": m,
+                      "task_name":  pathlib.Path(t).name,
+                      "model_name": mid,
+                  })
+
+          # GitHub caps matrix at 256 jobs. Warn + truncate earlier so the
+          # workflow fails cleanly instead of silently mid-dispatch.
+          MAX = 100
+          if len(pairs) > MAX:
+              print(f"::warning::matrix capped at {MAX} pairs (had {len(pairs)})")
+              pairs = pairs[:MAX]
+
+          if not pairs:
+              print("::notice::no (task, model) pairs to score "
+                    "(all skipped or none matched)")
+
+          matrix = {"include": pairs}
+          print(f"Planned {len(pairs)} pair(s):")
+          for p in pairs:
+              print(f"  - {p['task_name']} × {p['model_name']}")
+
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write(f"matrix={json.dumps(matrix)}\n")
+              f.write(f"count={len(pairs)}\n")
+          PY
+
   score:
+    needs: plan
+    if: ${{ needs.plan.outputs.count != '0' }}
     runs-on: ${{ github.event.inputs.runner == 'self-hosted' && fromJSON('["self-hosted","score-runner"]') || fromJSON('["ubuntu-latest"]') }}
+    strategy:
+      fail-fast: false
+      max-parallel: ${{ fromJSON(github.event.inputs.max_parallel) }}
+      matrix: ${{ fromJson(needs.plan.outputs.matrix) }}
     steps:
       - uses: actions/checkout@v5
 
@@ -77,8 +215,8 @@ jobs:
           JUDGE_MODEL_NAME: ${{ secrets.JUDGE_MODEL_NAME }}
         run: |
           uv run llm-lb run \
-            --task "../${{ github.event.inputs.task }}" \
-            --model "../${{ github.event.inputs.model }}"
+            --task "../${{ matrix.task_path }}" \
+            --model "../${{ matrix.model_path }}"
 
       # Aggregation (leaderboards + global index + feed) is NOT done here to
       # keep score-PRs conflict-free: generated files would clash with every
@@ -89,23 +227,28 @@ jobs:
       - name: Open PR with results
         uses: peter-evans/create-pull-request@v6
         with:
-          commit-message: "score: ${{ github.event.inputs.model }} on ${{ github.event.inputs.task }}"
-          title: "score: ${{ github.event.inputs.model }} on ${{ github.event.inputs.task }}"
-          branch: score/${{ github.run_id }}
+          commit-message: "score: ${{ matrix.model_path }} on ${{ matrix.task_path }}"
+          title: "score: ${{ matrix.model_path }} on ${{ matrix.task_path }}"
+          # Branch includes job-index so parallel matrix elements never
+          # collide on the same ref.
+          branch: score/${{ github.run_id }}-${{ strategy.job-index }}
           labels: score
           # Only commit the new result file. Anything else the runner may have
-          # touched (schemas materialised from secrets, caches, etc.) stays out
-          # of the PR.
+          # touched (schemas materialised from secrets, caches, etc.) stays
+          # out of the PR.
           add-paths: |
             tasks/*/results/**
           body: |
             Automated scoring run.
 
-            - **Task:** `${{ github.event.inputs.task }}`
-            - **Model:** `${{ github.event.inputs.model }}`
+            - **Task:** `${{ matrix.task_path }}`
+            - **Model:** `${{ matrix.model_path }}`
             - **Runner:** `${{ github.event.inputs.runner }}`
             - **Run:** ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
             Requires admin review (see CODEOWNERS). Leaderboards + global
             index are refreshed automatically by the `aggregate` workflow
             right after this PR is merged to main.
+
+            If the result file has `n_failed_samples > 0`, trigger the
+            `resume` workflow to retry the failed samples in place.
