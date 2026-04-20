@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T03:35:58+00:00",
+  "generated_at": "2026-04-20T03:36:24+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -1822,6 +1822,19 @@
       "p95_latency_ms": 10263.405290000008,
       "cost_usd": null,
       "result_file": "tasks/summarization/results/qwen3-30b@vllm__2026-04-10T04-32-32Z.json"
+    },
+    {
+      "task_id": "temporal_information_extraction",
+      "task_version": "1.0",
+      "model_id": "gpt-oss-120b@vllm",
+      "score": 0.7066666666666667,
+      "metrics": {
+        "judge_score": 0.7066666666666667
+      },
+      "tps": 144.42283388803494,
+      "p95_latency_ms": 17238.419104,
+      "cost_usd": null,
+      "result_file": "tasks/temporal_information_extraction/results/gpt-oss-120b@vllm__2026-04-20T01-50-54Z.json"
     },
     {
       "task_id": "temporal_information_extraction",
