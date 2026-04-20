@@ -1,0 +1,11 @@
+   model_id: gpt-oss-120b@vllm
+   display_name: GPT-OSS-120B (vLLM)
+   provider: openai_compat
+   endpoint_kind: openai_chat
+   hf_uri: openai/gpt-oss-120b
+   revision: "2026-04-20"
+   endpoint_url: http://lnsigo.mipt.ru:4000/v1
+   api_key_env: VLLM_PROXY_KEY     # <-- name of env var, not the key
+   hardware:
+     gpu_count: 2
+     gpu_type: A100
