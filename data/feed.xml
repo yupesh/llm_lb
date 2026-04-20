@@ -4,8 +4,15 @@
   <id>tag:yupesh.github.io,2026:llm_lb/feed</id>
   <link href="https://yupesh.github.io/llm_lb/" rel="alternate" type="text/html"/>
   <link href="https://yupesh.github.io/llm_lb/data/feed.xml" rel="self" type="application/atom+xml"/>
-  <updated>2026-04-20T00:23:04+00:00</updated>
+  <updated>2026-04-20T01:56:01+00:00</updated>
   <author><name>LLM Leaderboard</name></author>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/topic_classification/1.0/gpt-oss-120b@vllm/2026-04-20T01:56:01+00:00</id>
+    <title>gpt-oss-120b@vllm scored 1.000 accuracy on topic_classification v1.0</title>
+    <updated>2026-04-20T01:56:01+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/topic_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=1.000, macro_f1=1.000</summary>
+  </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_human/1.0/qwen3.5-27b@vllm/2026-04-20T00:23:04+00:00</id>
     <title>qwen3.5-27b@vllm scored 0.380 judge_score on datascibench_human v1.0</title>
@@ -348,12 +355,5 @@
     <updated>2026-04-18T21:04:30+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/summarization" rel="alternate" type="text/html"/>
     <summary>judge_score=0.800</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring_condensed/1.0/qwen3.5-397b@vllm/2026-04-18T21:02:14+00:00</id>
-    <title>qwen3.5-397b@vllm scored 0.400 accuracy on essay_vocabulary_scoring_condensed v1.0</title>
-    <updated>2026-04-18T21:02:14+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.400, macro_f1=0.345, qwk=0.684</summary>
   </entry>
 </feed>

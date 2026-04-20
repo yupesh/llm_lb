@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T00:53:29+00:00",
+  "generated_at": "2026-04-20T02:49:14+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -325,6 +325,17 @@
       "provider": "openai",
       "hf_uri": null,
       "hardware": null
+    },
+    {
+      "id": "gpt-oss-120b@vllm",
+      "display_name": "GPT-OSS-120B (vLLM)",
+      "provider": "openai_compat",
+      "hf_uri": "openai/gpt-oss-120b",
+      "hardware": {
+        "gpu_count": 2,
+        "gpu_type": "A100",
+        "quantization": null
+      }
     },
     {
       "id": "judge@openai",
@@ -1637,6 +1648,20 @@
       "p95_latency_ms": 7048.407097999999,
       "cost_usd": null,
       "result_file": "tasks/topic_classification/results/qwen3.5-397b@vllm__2026-04-18T09-43-33Z.json"
+    },
+    {
+      "task_id": "topic_classification",
+      "task_version": "1.0",
+      "model_id": "gpt-oss-120b@vllm",
+      "score": 1.0,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "tps": 56.96932786945501,
+      "p95_latency_ms": 960.7364139999959,
+      "cost_usd": null,
+      "result_file": "tasks/topic_classification/results/gpt-oss-120b@vllm__2026-04-20T01-56-01Z.json"
     },
     {
       "task_id": "topic_classification",
