@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T16:32:18+00:00",
+  "generated_at": "2026-04-20T16:32:51+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -3093,6 +3093,20 @@
       "p95_latency_ms": 11197.790415000043,
       "cost_usd": null,
       "result_file": "tasks/safety_classification/results/qwen3.5-397b@vllm__2026-04-20T14-20-04Z.json"
+    },
+    {
+      "task_id": "safety_classification",
+      "task_version": "1.0",
+      "model_id": "gpt-oss-120b@vllm",
+      "score": 0.5,
+      "metrics": {
+        "accuracy": 0.5,
+        "macro_f1": 0.3333333333333333
+      },
+      "tps": 86.93409311599578,
+      "p95_latency_ms": 1865.5528000000174,
+      "cost_usd": null,
+      "result_file": "tasks/safety_classification/results/gpt-oss-120b@vllm__2026-04-20T16-28-27Z.json"
     },
     {
       "task_id": "safety_classification",
