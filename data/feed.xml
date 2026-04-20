@@ -189,6 +189,27 @@
     <summary>judge_score=0.773</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification_condensed/1.0/gpt-oss-120b@vllm/2026-04-20T00:57:31+00:00</id>
+    <title>gpt-oss-120b@vllm scored 0.400 accuracy on cefr_level_classification_condensed v1.0</title>
+    <updated>2026-04-20T00:57:31+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification_condensed" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.400, macro_f1=0.307, qwk=0.500</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification/1.0/gpt-oss-120b@vllm/2026-04-20T00:56:54+00:00</id>
+    <title>gpt-oss-120b@vllm scored 0.400 accuracy on cefr_level_classification v1.0</title>
+    <updated>2026-04-20T00:56:54+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.400, macro_f1=0.313, qwk=0.520</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/agent_tool_calling/1.0/gpt-oss-120b@vllm/2026-04-20T00:56:08+00:00</id>
+    <title>gpt-oss-120b@vllm scored 0.600 judge_score on agent_tool_calling v1.0</title>
+    <updated>2026-04-20T00:56:08+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/agent_tool_calling" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.600</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_human/1.0/qwen3.5-27b@vllm/2026-04-20T00:23:04+00:00</id>
     <title>qwen3.5-27b@vllm scored 0.380 judge_score on datascibench_human v1.0</title>
     <updated>2026-04-20T00:23:04+00:00</updated>
@@ -334,26 +355,5 @@
     <updated>2026-04-19T04:55:18+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/extractive_qa" rel="alternate" type="text/html"/>
     <summary>exact_match=0.800</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/oos_detection/1.0/qwen3.5-27b@vllm/2026-04-19T04:50:51+00:00</id>
-    <title>qwen3.5-27b@vllm scored 0.433 accuracy on oos_detection v1.0</title>
-    <updated>2026-04-19T04:50:51+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/oos_detection" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.433, macro_f1=0.302</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection/1.0/qwen3.5-27b@vllm/2026-04-19T04:40:08+00:00</id>
-    <title>qwen3.5-27b@vllm scored 1.000 accuracy on jailbreak_detection v1.0</title>
-    <updated>2026-04-19T04:40:08+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection" rel="alternate" type="text/html"/>
-    <summary>accuracy=1.000, macro_f1=1.000</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/topic_classification/1.0/qwen3.5-27b@vllm/2026-04-19T04:33:52+00:00</id>
-    <title>qwen3.5-27b@vllm scored 1.000 accuracy on topic_classification v1.0</title>
-    <updated>2026-04-19T04:33:52+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/topic_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=1.000, macro_f1=1.000</summary>
   </entry>
 </feed>

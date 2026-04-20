@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T02:51:05+00:00",
+  "generated_at": "2026-04-20T02:51:33+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -382,6 +382,19 @@
     {
       "task_id": "agent_tool_calling",
       "task_version": "1.0",
+      "model_id": "gpt-oss-120b@vllm",
+      "score": 0.6,
+      "metrics": {
+        "judge_score": 0.6
+      },
+      "tps": 124.25304945796205,
+      "p95_latency_ms": 5897.713419000006,
+      "cost_usd": null,
+      "result_file": "tasks/agent_tool_calling/results/gpt-oss-120b@vllm__2026-04-20T00-56-08Z.json"
+    },
+    {
+      "task_id": "agent_tool_calling",
+      "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
       "score": 0.6,
       "metrics": {
@@ -417,6 +430,21 @@
       "p95_latency_ms": 16019.304227000006,
       "cost_usd": null,
       "result_file": "tasks/agent_tool_calling/results/qwen3.5-27b@vllm__2026-04-17T05-00-53Z.json"
+    },
+    {
+      "task_id": "cefr_level_classification",
+      "task_version": "1.0",
+      "model_id": "gpt-oss-120b@vllm",
+      "score": 0.4,
+      "metrics": {
+        "accuracy": 0.4,
+        "macro_f1": 0.3131313131313131,
+        "qwk": 0.52
+      },
+      "tps": 110.70154551272454,
+      "p95_latency_ms": 2896.156238000003,
+      "cost_usd": null,
+      "result_file": "tasks/cefr_level_classification/results/gpt-oss-120b@vllm__2026-04-20T00-56-54Z.json"
     },
     {
       "task_id": "cefr_level_classification",
@@ -462,6 +490,21 @@
       "p95_latency_ms": 209172.17487999983,
       "cost_usd": null,
       "result_file": "tasks/cefr_level_classification/results/qwen3.5-27b@vllm__2026-04-19T07-30-20Z.json"
+    },
+    {
+      "task_id": "cefr_level_classification_condensed",
+      "task_version": "1.0",
+      "model_id": "gpt-oss-120b@vllm",
+      "score": 0.4,
+      "metrics": {
+        "accuracy": 0.4,
+        "macro_f1": 0.3068181818181818,
+        "qwk": 0.5
+      },
+      "tps": 107.19808701878794,
+      "p95_latency_ms": 1780.8331390000021,
+      "cost_usd": null,
+      "result_file": "tasks/cefr_level_classification_condensed/results/gpt-oss-120b@vllm__2026-04-20T00-57-31Z.json"
     },
     {
       "task_id": "cefr_level_classification_condensed",
