@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T18:13:55+00:00",
+  "generated_at": "2026-04-20T19:38:22+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -354,9 +354,9 @@
     },
     {
       "id": "glm5.1@llama",
-      "display_name": "GLM-5.1-GGUF:UD-IQ2_M",
+      "display_name": "GLM-5.1-NVFP4",
       "provider": "openai_compat",
-      "hf_uri": "unsloth/GLM-5.1-GGUF:UD-IQ2_M",
+      "hf_uri": "lukealonso/GLM-5.1-NVFP4",
       "hardware": {
         "gpu_count": 4,
         "gpu_type": "H200",

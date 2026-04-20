@@ -1,8 +1,8 @@
    model_id: glm5.1@llama
-   display_name: GLM-5.1-GGUF:UD-IQ2_M
+   display_name: GLM-5.1-NVFP4
    provider: openai_compat
    endpoint_kind: openai_chat
-   hf_uri: unsloth/GLM-5.1-GGUF:UD-IQ2_M
+   hf_uri: lukealonso/GLM-5.1-NVFP4
    revision: "2026-04-02"
    endpoint_url: http://lnsigo.mipt.ru:4000/v1
    api_key_env: VLLM_PROXY_KEY     # <-- name of env var, not the key
