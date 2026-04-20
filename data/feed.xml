@@ -140,6 +140,13 @@
     <summary>accuracy=0.300, macro_f1=0.188, qwk=0.333</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_coherence_scoring_condensed/1.0/qwen3.6-35b@vllm/2026-04-20T06:00:04+00:00</id>
+    <title>qwen3.6-35b@vllm scored 0.450 accuracy on essay_coherence_scoring_condensed v1.0</title>
+    <updated>2026-04-20T06:00:04+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_coherence_scoring_condensed" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.450, macro_f1=0.420, qwk=0.528</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/essay_coherence_scoring/1.0/qwen3.6-35b@vllm/2026-04-20T05:57:13+00:00</id>
     <title>qwen3.6-35b@vllm scored 0.250 accuracy on essay_coherence_scoring v1.0</title>
     <updated>2026-04-20T05:57:13+00:00</updated>
@@ -348,12 +355,5 @@
     <updated>2026-04-20T04:00:37+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_grammar_scoring" rel="alternate" type="text/html"/>
     <summary>accuracy=0.450, macro_f1=0.380, qwk=0.500</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_coherence_scoring_condensed/1.0/gemma-4-31b-it@vllm/2026-04-20T04:00:09+00:00</id>
-    <title>gemma-4-31b-it@vllm scored 0.350 accuracy on essay_coherence_scoring_condensed v1.0</title>
-    <updated>2026-04-20T04:00:09+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_coherence_scoring_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.350, macro_f1=0.265, qwk=0.500</summary>
   </entry>
 </feed>
