@@ -56,6 +56,13 @@
     <summary>judge_score=0.679</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/oos_detection/1.0/qwen3.6-35b@vllm/2026-04-20T06:33:58+00:00</id>
+    <title>qwen3.6-35b@vllm scored 0.433 accuracy on oos_detection v1.0</title>
+    <updated>2026-04-20T06:33:58+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/oos_detection" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.433, macro_f1=0.302</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/kg_triplet_extraction/1.0/qwen3.6-35b@vllm/2026-04-20T06:32:54+00:00</id>
     <title>qwen3.6-35b@vllm scored 0.560 judge_score on kg_triplet_extraction v1.0</title>
     <updated>2026-04-20T06:32:54+00:00</updated>
@@ -348,12 +355,5 @@
     <updated>2026-04-20T04:01:36+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_holistic_scoring" rel="alternate" type="text/html"/>
     <summary>accuracy=0.111, macro_f1=0.051, qwk=0.638</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_grammar_scoring_condensed/1.0/gemma-4-31b-it@vllm/2026-04-20T04:01:09+00:00</id>
-    <title>gemma-4-31b-it@vllm scored 0.300 accuracy on essay_grammar_scoring_condensed v1.0</title>
-    <updated>2026-04-20T04:01:09+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_grammar_scoring_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.300, macro_f1=0.202, qwk=0.324</summary>
   </entry>
 </feed>
