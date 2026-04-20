@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T07:48:13+00:00",
+  "generated_at": "2026-04-20T07:50:23+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -572,6 +572,21 @@
       "p95_latency_ms": 1780.8331390000021,
       "cost_usd": null,
       "result_file": "tasks/cefr_level_classification_condensed/results/gpt-oss-120b@vllm__2026-04-20T00-57-31Z.json"
+    },
+    {
+      "task_id": "cefr_level_classification_condensed",
+      "task_version": "1.0",
+      "model_id": "qwen3.6-35b@vllm",
+      "score": 0.35,
+      "metrics": {
+        "accuracy": 0.35,
+        "macro_f1": 0.27556818181818177,
+        "qwk": 0.5476190476190477
+      },
+      "tps": 183.07152278392567,
+      "p95_latency_ms": 9735.561753000013,
+      "cost_usd": null,
+      "result_file": "tasks/cefr_level_classification_condensed/results/qwen3.6-35b@vllm__2026-04-20T05-21-53Z.json"
     },
     {
       "task_id": "cefr_level_classification_condensed",

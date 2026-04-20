@@ -182,6 +182,13 @@
     <summary>judge_score=0.867</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification_condensed/1.0/qwen3.6-35b@vllm/2026-04-20T05:21:53+00:00</id>
+    <title>qwen3.6-35b@vllm scored 0.350 accuracy on cefr_level_classification_condensed v1.0</title>
+    <updated>2026-04-20T05:21:53+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification_condensed" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.350, macro_f1=0.276, qwk=0.548</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification/1.0/qwen3.6-35b@vllm/2026-04-20T05:19:16+00:00</id>
     <title>qwen3.6-35b@vllm scored 0.250 accuracy on cefr_level_classification v1.0</title>
     <updated>2026-04-20T05:19:16+00:00</updated>
@@ -348,12 +355,5 @@
     <updated>2026-04-20T04:00:09+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_coherence_scoring_condensed" rel="alternate" type="text/html"/>
     <summary>accuracy=0.350, macro_f1=0.265, qwk=0.500</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_coherence_scoring/1.0/gemma-4-31b-it@vllm/2026-04-20T03:59:45+00:00</id>
-    <title>gemma-4-31b-it@vllm scored 0.350 accuracy on essay_coherence_scoring v1.0</title>
-    <updated>2026-04-20T03:59:45+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_coherence_scoring" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.350, macro_f1=0.292, qwk=0.472</summary>
   </entry>
 </feed>
