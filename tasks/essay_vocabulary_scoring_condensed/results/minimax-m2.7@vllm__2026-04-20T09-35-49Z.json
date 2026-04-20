@@ -1,0 +1,254 @@
+{
+  "model_id": "minimax-m2.7@vllm",
+  "model_revision": "2026-04-20",
+  "task_id": "essay_vocabulary_scoring_condensed",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "37badb642518e0c0",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "accuracy": 0.25,
+    "macro_f1": 0.1,
+    "qwk": 0.0
+  },
+  "tps": 87.59875775770567,
+  "p95_latency_ms": 8500.778095999991,
+  "n_samples": 20,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "sample_001",
+      "prediction": "1",
+      "expected": "1",
+      "correct": true,
+      "latency_ms": 4850.015314000004,
+      "input_tokens": 312,
+      "output_tokens": 474,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_002",
+      "prediction": "1",
+      "expected": "1",
+      "correct": true,
+      "latency_ms": 4159.644186000001,
+      "input_tokens": 325,
+      "output_tokens": 408,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_003",
+      "prediction": "1",
+      "expected": "1",
+      "correct": true,
+      "latency_ms": 5849.402951000002,
+      "input_tokens": 332,
+      "output_tokens": 613,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_004",
+      "prediction": "1",
+      "expected": "1",
+      "correct": true,
+      "latency_ms": 3737.9678129999975,
+      "input_tokens": 325,
+      "output_tokens": 388,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_005",
+      "prediction": "1",
+      "expected": "1",
+      "correct": true,
+      "latency_ms": 3927.805821999996,
+      "input_tokens": 348,
+      "output_tokens": 378,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_006",
+      "prediction": "1",
+      "expected": "2",
+      "correct": false,
+      "latency_ms": 7643.770124,
+      "input_tokens": 338,
+      "output_tokens": 431,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_007",
+      "prediction": "1",
+      "expected": "2",
+      "correct": false,
+      "latency_ms": 5225.611015000006,
+      "input_tokens": 320,
+      "output_tokens": 473,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_008",
+      "prediction": "1",
+      "expected": "2",
+      "correct": false,
+      "latency_ms": 3063.2877710000057,
+      "input_tokens": 333,
+      "output_tokens": 317,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_009",
+      "prediction": "1",
+      "expected": "2",
+      "correct": false,
+      "latency_ms": 4944.204528,
+      "input_tokens": 408,
+      "output_tokens": 465,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_010",
+      "prediction": "1",
+      "expected": "2",
+      "correct": false,
+      "latency_ms": 9646.460247999998,
+      "input_tokens": 307,
+      "output_tokens": 427,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_011",
+      "prediction": "1",
+      "expected": "3",
+      "correct": false,
+      "latency_ms": 3762.128293999993,
+      "input_tokens": 383,
+      "output_tokens": 420,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_012",
+      "prediction": "1",
+      "expected": "3",
+      "correct": false,
+      "latency_ms": 4176.875507000005,
+      "input_tokens": 380,
+      "output_tokens": 438,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_013",
+      "prediction": "1",
+      "expected": "3",
+      "correct": false,
+      "latency_ms": 4284.810743000008,
+      "input_tokens": 356,
+      "output_tokens": 481,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_014",
+      "prediction": "1",
+      "expected": "3",
+      "correct": false,
+      "latency_ms": 4008.067338999993,
+      "input_tokens": 406,
+      "output_tokens": 382,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_015",
+      "prediction": "1",
+      "expected": "3",
+      "correct": false,
+      "latency_ms": 4328.389799000007,
+      "input_tokens": 365,
+      "output_tokens": 489,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_016",
+      "prediction": "1",
+      "expected": "4",
+      "correct": false,
+      "latency_ms": 4607.541311999995,
+      "input_tokens": 423,
+      "output_tokens": 425,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_017",
+      "prediction": "1",
+      "expected": "4",
+      "correct": false,
+      "latency_ms": 3610.7349489999906,
+      "input_tokens": 499,
+      "output_tokens": 383,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_018",
+      "prediction": "1",
+      "expected": "4",
+      "correct": false,
+      "latency_ms": 8500.778095999991,
+      "input_tokens": 440,
+      "output_tokens": 388,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_019",
+      "prediction": "1",
+      "expected": "4",
+      "correct": false,
+      "latency_ms": 4398.482311999998,
+      "input_tokens": 440,
+      "output_tokens": 494,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_020",
+      "prediction": "1",
+      "expected": "4",
+      "correct": false,
+      "latency_ms": 4750.31838000001,
+      "input_tokens": 416,
+      "output_tokens": 440,
+      "judge_raw_score": null,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-20T09:35:49+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": null,
+  "judge_model_revision": null,
+  "judge_prompt_hash": null
+}
