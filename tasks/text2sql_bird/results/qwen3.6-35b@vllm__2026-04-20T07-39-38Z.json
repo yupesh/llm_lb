@@ -1,0 +1,274 @@
+{
+  "model_id": "qwen3.6-35b@vllm",
+  "model_revision": "2026-04-20",
+  "task_id": "text2sql_bird",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "985fb5410960dcd5",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "judge_score": 0.6909090909090909
+  },
+  "tps": 184.3928533314861,
+  "p95_latency_ms": 23047.71166400002,
+  "n_samples": 22,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "bird_001",
+      "prediction": "SELECT count(schools.CDSCode) FROM satscores JOIN schools ON satscores.cds = schools.CDSCode WHERE satscores.AvgScrMath > 560 AND schools.FundingType = 'Directly Funded'",
+      "expected": "SELECT COUNT(T2.`School Code`) FROM satscores AS T1 INNER JOIN frpm AS T2 ON T1.cds = T2.CDSCode WHERE T1.AvgScrMath > 560 AND T2.`Charter Funding Type` = 'Directly funded'",
+      "correct": false,
+      "latency_ms": 16919.659136000006,
+      "input_tokens": 1214,
+      "output_tokens": 3071,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "bird_002",
+      "prediction": "SELECT schools.Phone FROM satscores JOIN schools ON satscores.cds = schools.CDSCode ORDER BY satscores.NumGE1500 * 1.0 / satscores.NumTstTakr DESC LIMIT 3",
+      "expected": "SELECT T1.Phone FROM schools AS T1 INNER JOIN satscores AS T2 ON T1.CDSCode = T2.cds ORDER BY CAST(T2.NumGE1500 AS REAL) / T2.NumTstTakr DESC LIMIT 3",
+      "correct": false,
+      "latency_ms": 10309.026245999974,
+      "input_tokens": 1222,
+      "output_tokens": 1776,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "bird_003",
+      "prediction": "SELECT T2.CharterNum, T1.AvgScrWrite FROM satscores T1 JOIN schools T2 ON T1.cds = T2.CDSCode WHERE T1.AvgScrWrite > 499 AND T2.CharterNum IS NOT NULL ORDER BY T1.AvgScrWrite DESC",
+      "expected": "SELECT CharterNum, AvgScrWrite, RANK() OVER (ORDER BY AvgScrWrite DESC) AS WritingScoreRank FROM schools AS T1  INNER JOIN satscores AS T2 ON T1.CDSCode = T2.cds WHERE T2.AvgScrWrite > 499 AND CharterNum is not null",
+      "correct": false,
+      "latency_ms": 16062.956683000039,
+      "input_tokens": 1223,
+      "output_tokens": 2948,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "bird_004",
+      "prediction": "SELECT count(molecule.molecule_id) FROM molecule JOIN atom ON molecule.molecule_id = atom.molecule_id WHERE molecule.label = '+' AND atom.element = 'n'",
+      "expected": "SELECT COUNT(DISTINCT T1.molecule_id) FROM molecule AS T1 INNER JOIN atom AS T2 ON T1.molecule_id = T2.molecule_id WHERE T2.element = 'n' AND T1.label = '+'",
+      "correct": false,
+      "latency_ms": 11246.548640000015,
+      "input_tokens": 473,
+      "output_tokens": 1992,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "bird_005",
+      "prediction": "SELECT m.label FROM bond b JOIN molecule m ON b.molecule_id = m.molecule_id WHERE b.bond_id = 'TR001_10_11'",
+      "expected": "SELECT T2.label FROM bond AS T1 INNER JOIN molecule AS T2 ON T1.molecule_id = T2.molecule_id WHERE T1.bond_id = 'TR001_10_11'",
+      "correct": false,
+      "latency_ms": 9364.262742999983,
+      "input_tokens": 483,
+      "output_tokens": 1599,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "bird_006",
+      "prediction": "SELECT connected.atom_id, connected.atom_id2 FROM connected JOIN bond ON connected.bond_id = bond.bond_id WHERE bond.bond_type = '#'",
+      "expected": "SELECT T2.atom_id, T2.atom_id2 FROM bond AS T1 INNER JOIN connected AS T2 ON T1.bond_id = T2.bond_id WHERE T1.bond_type = '#'",
+      "correct": false,
+      "latency_ms": 7090.562499999976,
+      "input_tokens": 486,
+      "output_tokens": 1292,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "bird_007",
+      "prediction": "SELECT translation\nFROM set_translations\nJOIN cards ON set_translations.setCode = cards.setCode\nWHERE cards.name = 'Tendo Ice Bridge' AND set_translations.language = 'French'",
+      "expected": "SELECT T2.translation FROM cards AS T1 INNER JOIN set_translations AS T2 ON T2.setCode = T1.setCode WHERE T1.name = 'Tendo Ice Bridge' AND T2.language = 'French' AND T2.translation IS NOT NULL",
+      "correct": false,
+      "latency_ms": 10677.761614999952,
+      "input_tokens": 1320,
+      "output_tokens": 1860,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "bird_008",
+      "prediction": "SELECT sum(s.type = 'expansion') * 100.0 / count(t.setCode) FROM set_translations AS t JOIN sets AS s ON t.setCode = s.code WHERE t.language = 'Japanese'",
+      "expected": "SELECT CAST(SUM(CASE WHEN T2.language = 'Japanese' THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(T1.id) FROM sets AS T1 INNER JOIN set_translations AS T2 ON T1.code = T2.setCode WHERE T1.type = 'expansion'",
+      "correct": false,
+      "latency_ms": 19023.312927000006,
+      "input_tokens": 1319,
+      "output_tokens": 3668,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "bird_009",
+      "prediction": "SELECT T2.status \nFROM cards AS T1 \nJOIN legalities AS T2 \n  ON T1.uuid  =  T2.uuid \nWHERE T1.types = 'Artifact' AND T1.side IS NULL AND T2.format = 'vintage'",
+      "expected": "SELECT DISTINCT T2.status FROM cards AS T1 INNER JOIN legalities AS T2 ON T1.uuid = T2.uuid WHERE T1.type = 'Artifact' AND T2.format = 'vintage' AND T1.side IS NULL",
+      "correct": false,
+      "latency_ms": 10084.37881900005,
+      "input_tokens": 1337,
+      "output_tokens": 1739,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "bird_010",
+      "prediction": "SELECT y.Consumption FROM yearmonth y JOIN transactions_1k t ON y.CustomerID = t.CustomerID WHERE t.ProductID = 5 AND t.Price / t.Amount > 29.00 AND y.Date = '201208'",
+      "expected": "SELECT T2.Consumption FROM transactions_1k AS T1 INNER JOIN yearmonth AS T2 ON T1.CustomerID = T2.CustomerID WHERE T1.Price / T1.Amount > 29.00 AND T1.ProductID = 5 AND T2.Date = '201208'",
+      "correct": false,
+      "latency_ms": 14319.658592999986,
+      "input_tokens": 481,
+      "output_tokens": 2737,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "bird_011",
+      "prediction": "SELECT Date\nFROM yearmonth\nJOIN customers ON yearmonth.CustomerID = customers.CustomerID\nWHERE customers.Segment = 'SME' AND yearmonth.Date BETWEEN '201301' AND '201312'\nGROUP BY yearmonth.Date\nORDER BY SUM(yearmonth.Consumption) DESC\nLIMIT 1",
+      "expected": "SELECT SUBSTR(T2.Date, 5, 2) FROM customers AS T1 INNER JOIN yearmonth AS T2 ON T1.CustomerID = T2.CustomerID WHERE SUBSTR(T2.Date, 1, 4) = '2013' AND T1.Segment = 'SME' GROUP BY SUBSTR(T2.Date, 5, 2) ORDER BY SUM(T2.Consumption) DESC LIMIT 1",
+      "correct": false,
+      "latency_ms": 15064.35817900001,
+      "input_tokens": 491,
+      "output_tokens": 2751,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "bird_012",
+      "prediction": "SELECT SUM(Amount), SUM(CASE WHEN Date = '201201' THEN Amount ELSE 0 END) FROM transactions_1k WHERE CustomerID = 38508",
+      "expected": "SELECT SUM(T1.Price) , SUM(IIF(T3.Date = '201201', T1.Price, 0)) FROM transactions_1k AS T1 INNER JOIN gasstations AS T2 ON T1.GasStationID = T2.GasStationID INNER JOIN yearmonth AS T3 ON T1.CustomerID = T3.CustomerID WHERE T1.CustomerID = '38508'",
+      "correct": false,
+      "latency_ms": 21629.852511999958,
+      "input_tokens": 465,
+      "output_tokens": 4128,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "bird_013",
+      "prediction": "SELECT T1.CustomerID FROM yearmonth AS T1 JOIN customers AS T2 ON T1.CustomerID  =  T2.CustomerID WHERE T2.Segment = 'LAM' AND T1.Date BETWEEN '201201' AND '201212' GROUP BY T1.CustomerID ORDER BY sum(T1.Consumption) LIMIT 1",
+      "expected": "SELECT T1.CustomerID FROM customers AS T1 INNER JOIN yearmonth AS T2 ON T1.CustomerID = T2.CustomerID WHERE T1.Segment = 'LAM' AND SUBSTR(T2.Date, 1, 4) = '2012' GROUP BY T1.CustomerID ORDER BY SUM(T2.Consumption) ASC LIMIT 1",
+      "correct": false,
+      "latency_ms": 17894.878964000043,
+      "input_tokens": 473,
+      "output_tokens": 3414,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "bird_014",
+      "prediction": "SELECT client_id FROM client JOIN district ON client.district_id = district.district_id WHERE A2 = 'East Bohemia' AND birth_date BETWEEN '1983-01-01' AND '1987-12-31'",
+      "expected": "SELECT T1.client_id, T3.account_id FROM client AS T1 INNER JOIN district AS T2 ON T1.district_id = T2.district_id INNER JOIN disp AS T4 ON T1.client_id = T4.client_id INNER JOIN account AS T3 ON T2.district_id = T3.district_id and T4.account_id = T3.account_id WHERE T2.A3 = 'east Bohemia' AND STRFTIME('%Y', T1.birth_date) BETWEEN '1983' AND '1987'",
+      "correct": false,
+      "latency_ms": 23047.71166400002,
+      "input_tokens": 924,
+      "output_tokens": 4473,
+      "judge_raw_score": 1.0,
+      "error": null
+    },
+    {
+      "id": "bird_015",
+      "prediction": "SELECT T4.birth_date FROM loan AS T1 JOIN disp AS T2 ON T1.account_id  =  T2.account_id JOIN client AS T4 ON T2.client_id  =  T4.client_id WHERE T1.amount = 98832 AND T1.date = '1996-01-03'",
+      "expected": "SELECT T4.birth_date FROM loan AS T1 INNER JOIN account AS T2 ON T1.account_id = T2.account_id INNER JOIN disp AS T3 ON T2.account_id = T3.account_id INNER JOIN client AS T4 ON T3.client_id = T4.client_id WHERE T1.date = '1996-01-03' AND T1.amount = 98832",
+      "correct": false,
+      "latency_ms": 14153.399119000027,
+      "input_tokens": 918,
+      "output_tokens": 2652,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "bird_016",
+      "prediction": "SELECT Id FROM users ORDER BY Reputation DESC LIMIT 1",
+      "expected": "SELECT Id FROM users WHERE Reputation = ( SELECT MAX(Reputation) FROM users )",
+      "correct": false,
+      "latency_ms": 5027.206068999931,
+      "input_tokens": 1165,
+      "output_tokens": 741,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "bird_017",
+      "prediction": "SELECT ViewCount, LastEditorDisplayName FROM posts WHERE Title = 'Computer Game Datasets'",
+      "expected": "SELECT T2.ViewCount, T3.DisplayName FROM postHistory AS T1 INNER JOIN posts AS T2 ON T1.PostId = T2.Id INNER JOIN users AS T3 ON T2.LastEditorUserId = T3.Id WHERE T1.Text = 'Computer Game Datasets'",
+      "correct": false,
+      "latency_ms": 12002.772598000092,
+      "input_tokens": 1202,
+      "output_tokens": 2233,
+      "judge_raw_score": 1.0,
+      "error": null
+    },
+    {
+      "id": "bird_018",
+      "prediction": "SELECT T1.expense_description FROM expense AS T1 JOIN budget AS T2 ON T1.link_to_budget = T2.budget_id ORDER BY T2.remaining LIMIT 1",
+      "expected": "SELECT T2.expense_description FROM budget AS T1 INNER JOIN expense AS T2 ON T1.budget_id = T2.link_to_budget ORDER BY T1.remaining LIMIT 1",
+      "correct": false,
+      "latency_ms": 6797.6787500000455,
+      "input_tokens": 756,
+      "output_tokens": 1194,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "bird_019",
+      "prediction": "SELECT m.first_name, m.last_name, i.source\nFROM member m\nJOIN income i ON m.member_id = i.link_to_member\nORDER BY i.amount DESC\nLIMIT 1",
+      "expected": "SELECT T1.first_name, T1.last_name, T2.source FROM member AS T1 INNER JOIN income AS T2 ON T1.member_id = T2.link_to_member GROUP BY T1.first_name, T1.last_name, T2.source ORDER BY SUM(T2.amount) DESC LIMIT 1",
+      "correct": false,
+      "latency_ms": 10813.128332000018,
+      "input_tokens": 777,
+      "output_tokens": 1899,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "bird_020",
+      "prediction": "SELECT avg(T1.cost) FROM expense AS T1 JOIN member AS T2 ON T1.link_to_member = T2.member_id WHERE T2.first_name = 'Elijah' AND T2.last_name = 'Allen' AND CAST(substr(T1.expense_date, 6, 2) AS INTEGER) IN (9, 10)",
+      "expected": "SELECT AVG(T2.cost) FROM member AS T1 INNER JOIN expense AS T2 ON T1.member_id = T2.link_to_member WHERE T1.last_name = 'Allen' AND T1.first_name = 'Elijah' AND (SUBSTR(T2.expense_date, 6, 2) = '09' OR SUBSTR(T2.expense_date, 6, 2) = '10')",
+      "correct": false,
+      "latency_ms": 28828.140637000048,
+      "input_tokens": 809,
+      "output_tokens": 5399,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "bird_021",
+      "prediction": "SELECT\n  SUM(CASE WHEN e.event_name = 'Yearly Kickoff' THEN b.amount ELSE 0 END) * 1.0 /\n  SUM(CASE WHEN e.event_name = 'October Meeting' THEN b.amount ELSE 0 END)\nFROM budget b\nJOIN event e ON b.link_to_event = e.event_id\nWHERE b.category = 'Advertisement'",
+      "expected": "SELECT CAST(SUM(CASE WHEN T2.event_name = 'Yearly Kickoff' THEN T1.amount ELSE 0 END) AS REAL) / SUM(CASE WHEN T2.event_name = 'October Meeting' THEN T1.amount ELSE 0 END) FROM budget AS T1 INNER JOIN event AS T2 ON T1.link_to_event = T2.event_id WHERE T1.category = 'Advertisement' AND T2.type = 'Meeting'",
+      "correct": false,
+      "latency_ms": 15120.14413700001,
+      "input_tokens": 790,
+      "output_tokens": 2884,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "bird_022",
+      "prediction": "SELECT event.event_name\nFROM event\nJOIN attendance ON event.event_id = attendance.link_to_event\nJOIN member ON attendance.link_to_member = member.member_id\nWHERE event.type = 'Social' AND member.position = 'Vice President' AND event.location = '900 E. Washington St.'",
+      "expected": "SELECT T2.event_name FROM attendance AS T1 INNER JOIN event AS T2 ON T2.event_id = T1.link_to_event INNER JOIN member AS T3 ON T1.link_to_member = T3.member_id WHERE T3.position = 'Vice President' AND T2.location = '900 E. Washington St.' AND T2.type = 'Social'",
+      "correct": false,
+      "latency_ms": 10385.865254999999,
+      "input_tokens": 786,
+      "output_tokens": 1949,
+      "judge_raw_score": 5.0,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-20T07:39:38+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": "judge@openai",
+  "judge_model_revision": null,
+  "judge_prompt_hash": "e00487042d2bf9fa"
+}
