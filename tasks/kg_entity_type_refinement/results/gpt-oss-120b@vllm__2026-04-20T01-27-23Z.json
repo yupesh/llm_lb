@@ -1,0 +1,252 @@
+{
+  "model_id": "gpt-oss-120b@vllm",
+  "model_revision": "2026-04-20",
+  "task_id": "kg_entity_type_refinement",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "02856cac5074ab47",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "judge_score": 0.56
+  },
+  "tps": 105.66736402848032,
+  "p95_latency_ms": 2311.877240000001,
+  "n_samples": 20,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "kg_etr_001",
+      "prediction": "{\n  \"subject_type\": \"human\",\n  \"object_type\": \"city\"\n}",
+      "expected": "{\"subject_type\": \"human\", \"object_type\": \"city\"}",
+      "correct": true,
+      "latency_ms": 2124.513861999958,
+      "input_tokens": 467,
+      "output_tokens": 98,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_etr_002",
+      "prediction": "{\"subject_type\":\"technology company\",\"object_type\":\"entrepreneur\"}",
+      "expected": "{\"subject_type\": \"technology company\", \"object_type\": \"human\"}",
+      "correct": false,
+      "latency_ms": 2268.8556059999883,
+      "input_tokens": 462,
+      "output_tokens": 175,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "kg_etr_003",
+      "prediction": "{\n  \"subject_type\": \"novel\",\n  \"object_type\": \"novelist\"\n}",
+      "expected": "{\"subject_type\": \"novel\", \"object_type\": \"human\"}",
+      "correct": false,
+      "latency_ms": 2126.0691159999965,
+      "input_tokens": 465,
+      "output_tokens": 169,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "kg_etr_004",
+      "prediction": "{\n  \"subject_type\": \"student\",\n  \"object_type\": \"university\"\n}",
+      "expected": "{\"subject_type\": \"human\", \"object_type\": \"university\"}",
+      "correct": false,
+      "latency_ms": 2184.0411980000454,
+      "input_tokens": 460,
+      "output_tokens": 181,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "kg_etr_005",
+      "prediction": "{\n  \"subject_type\": \"river\",\n  \"object_type\": \"country\"\n}",
+      "expected": "{\"subject_type\": \"river\", \"object_type\": \"country\"}",
+      "correct": true,
+      "latency_ms": 1250.4499330000272,
+      "input_tokens": 458,
+      "output_tokens": 109,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_etr_006",
+      "prediction": "{\n  \"subject_type\": \"singer-songwriter\",\n  \"object_type\": \"studio album\"\n}",
+      "expected": "{\"subject_type\": \"human\", \"object_type\": \"studio album\"}",
+      "correct": false,
+      "latency_ms": 1567.9486490000158,
+      "input_tokens": 469,
+      "output_tokens": 186,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "kg_etr_007",
+      "prediction": "{\n  \"subject_type\": \"person\",\n  \"object_type\": \"cat\"\n}",
+      "expected": "{\"subject_type\": \"human\", \"object_type\": \"cat\"}",
+      "correct": false,
+      "latency_ms": 1659.9231429999577,
+      "input_tokens": 462,
+      "output_tokens": 129,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "kg_etr_008",
+      "prediction": "{\n  \"subject_type\": \"conference\",\n  \"object_type\": \"city\"\n}",
+      "expected": "{\"subject_type\": \"conference\", \"object_type\": \"city\"}",
+      "correct": true,
+      "latency_ms": 1825.5239399999823,
+      "input_tokens": 464,
+      "output_tokens": 160,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_etr_009",
+      "prediction": "{\n  \"subject_type\": \"person\",\n  \"object_type\": \"language\"\n}",
+      "expected": "{\"subject_type\": \"human\", \"object_type\": \"language\"}",
+      "correct": false,
+      "latency_ms": 1682.3483740000142,
+      "input_tokens": 458,
+      "output_tokens": 206,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "kg_etr_010",
+      "prediction": "{\"subject_type\":\"painting\",\"object_type\":\"artist\"}",
+      "expected": "{\"subject_type\": \"painting\", \"object_type\": \"human\"}",
+      "correct": false,
+      "latency_ms": 1883.4958529999994,
+      "input_tokens": 472,
+      "output_tokens": 166,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "kg_etr_011",
+      "prediction": "{\n  \"subject_type\": \"company\",\n  \"object_type\": \"city\"\n}",
+      "expected": "{\"subject_type\": \"automobile manufacturer\", \"object_type\": \"city\"}",
+      "correct": false,
+      "latency_ms": 1910.2933540000322,
+      "input_tokens": 460,
+      "output_tokens": 245,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "kg_etr_012",
+      "prediction": "{\"subject_type\":\"violinist\",\"object_type\":\"symphony orchestra\"}",
+      "expected": "{\"subject_type\": \"human\", \"object_type\": \"orchestra\"}",
+      "correct": false,
+      "latency_ms": 1905.7871750000004,
+      "input_tokens": 469,
+      "output_tokens": 239,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "kg_etr_013",
+      "prediction": "{\"subject_type\":\"planet\",\"object_type\":\"moon\"}",
+      "expected": "{\"subject_type\": \"inner planet\", \"object_type\": \"natural satellite\"}",
+      "correct": false,
+      "latency_ms": 1526.0831250000138,
+      "input_tokens": 465,
+      "output_tokens": 179,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "kg_etr_014",
+      "prediction": "{\n  \"subject_type\": \"athlete\",\n  \"object_type\": \"gold medal\"\n}",
+      "expected": "{\"subject_type\": \"human\", \"object_type\": \"gold medal\"}",
+      "correct": false,
+      "latency_ms": 1968.117967000012,
+      "input_tokens": 468,
+      "output_tokens": 254,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "kg_etr_015",
+      "prediction": "{\n  \"subject_type\": \"web framework\",\n  \"object_type\": \"software foundation\"\n}",
+      "expected": "{\"subject_type\": \"web framework\", \"object_type\": \"non-profit organization\"}",
+      "correct": false,
+      "latency_ms": 1814.2309970000383,
+      "input_tokens": 469,
+      "output_tokens": 230,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "kg_etr_016",
+      "prediction": "{\n  \"subject_type\": \"person\",\n  \"object_type\": \"Japanese restaurant\"\n}",
+      "expected": "{\"subject_type\": \"human\", \"object_type\": \"restaurant\"}",
+      "correct": false,
+      "latency_ms": 2860.781885999984,
+      "input_tokens": 465,
+      "output_tokens": 393,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "kg_etr_017",
+      "prediction": "{\"subject_type\":\"treaty\",\"object_type\":\"date\"}",
+      "expected": "{\"subject_type\": \"peace treaty\", \"object_type\": \"point in time\"}",
+      "correct": false,
+      "latency_ms": 1868.5662859999752,
+      "input_tokens": 473,
+      "output_tokens": 237,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "kg_etr_018",
+      "prediction": "{\"subject_type\":\"novel\",\"object_type\":\"writer\"}",
+      "expected": "{\"subject_type\": \"novel\", \"object_type\": \"human\"}",
+      "correct": false,
+      "latency_ms": 2311.877240000001,
+      "input_tokens": 467,
+      "output_tokens": 251,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "kg_etr_019",
+      "prediction": "{\"subject_type\":\"peak\",\"object_type\":\"mountain range\"}",
+      "expected": "{\"subject_type\": \"mountain\", \"object_type\": \"mountain range\"}",
+      "correct": false,
+      "latency_ms": 1407.206230999975,
+      "input_tokens": 475,
+      "output_tokens": 158,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "kg_etr_020",
+      "prediction": "{\"subject_type\":\"donor\",\"object_type\":\"charitable organization\"}",
+      "expected": "{\"subject_type\": \"human\", \"object_type\": \"international organization\"}",
+      "correct": false,
+      "latency_ms": 2181.708825000044,
+      "input_tokens": 471,
+      "output_tokens": 285,
+      "judge_raw_score": 1.0,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-20T01:27:23+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": "gpt-4o-mini@openai",
+  "judge_model_revision": "2024-07-18",
+  "judge_prompt_hash": "626ab8de70068b11"
+}
