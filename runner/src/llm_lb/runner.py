@@ -13,7 +13,7 @@ from . import __version__
 from .adapters import get_adapter
 from .eval import judge as judge_mod
 from .eval.dialog_sim import simulate_retail_dialog
-from .eval.extract import extract_label, extract_regex, normalize
+from .eval.extract import extract_label, extract_regex, normalize, strip_reasoning
 from .eval.metrics import accuracy, macro_f1, qwk
 from .models import ModelCard, RunResult, Sample, SamplePrediction, TaskSpec
 
@@ -45,6 +45,7 @@ def _p95(values: list[float]) -> float:
 
 
 def _extract_prediction(task: TaskSpec, raw: str) -> str:
+    raw = strip_reasoning(raw)
     if task.labels:
         return extract_label(raw, task.labels)
     if task.answer_regex:
