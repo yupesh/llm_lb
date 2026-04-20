@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T07:53:21+00:00",
+  "generated_at": "2026-04-20T08:18:05+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -343,6 +343,17 @@
       "provider": "openai",
       "hf_uri": null,
       "hardware": null
+    },
+    {
+      "id": "minimax-m2.7@vllm",
+      "display_name": "MiniMax-M2.7 (vLLM)",
+      "provider": "openai_compat",
+      "hf_uri": "MiniMaxAI/MiniMax-M2.7",
+      "hardware": {
+        "gpu_count": 4,
+        "gpu_type": "H200",
+        "quantization": null
+      }
     },
     {
       "id": "qwen3-30b@vllm",
