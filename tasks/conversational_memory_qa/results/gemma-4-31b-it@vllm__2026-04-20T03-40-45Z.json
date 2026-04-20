@@ -1,0 +1,197 @@
+{
+  "model_id": "gemma-4-31b-it@vllm",
+  "model_revision": "2026-04-02",
+  "task_id": "conversational_memory_qa",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "7cf0fe997cd695f7",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "judge_score": 0.8133333333333334
+  },
+  "tps": 0.9119416731068968,
+  "p95_latency_ms": 12065.235895999991,
+  "n_samples": 15,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "sample_001",
+      "prediction": "2 July 2023",
+      "expected": "2 July 2023",
+      "correct": true,
+      "latency_ms": 7196.519813999998,
+      "input_tokens": 23299,
+      "output_tokens": 8,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_002",
+      "prediction": "Contemporary",
+      "expected": "Contemporary",
+      "correct": true,
+      "latency_ms": 5220.397073000001,
+      "input_tokens": 19243,
+      "output_tokens": 2,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_003",
+      "prediction": "A career fair at a local school.",
+      "expected": "career fair at a local school",
+      "correct": false,
+      "latency_ms": 11916.705612999991,
+      "input_tokens": 35994,
+      "output_tokens": 9,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_004",
+      "prediction": "Whispering Falls, around 12 May 2022.",
+      "expected": "Whispering Falls waterfall",
+      "correct": false,
+      "latency_ms": 10066.669200000008,
+      "input_tokens": 31697,
+      "output_tokens": 16,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_005",
+      "prediction": "Jerseys",
+      "expected": "sneakers, fantasy movie DVDs, jerseys",
+      "correct": false,
+      "latency_ms": 11798.877169999998,
+      "input_tokens": 35736,
+      "output_tokens": 3,
+      "judge_raw_score": 1.0,
+      "error": null
+    },
+    {
+      "id": "sample_006",
+      "prediction": "She believes punishment is never the proper way for pets and that positive reinforcement helps owners bond with their dogs.",
+      "expected": "To have pets learn how to behave in a positive way",
+      "correct": false,
+      "latency_ms": 11976.046689000015,
+      "input_tokens": 34956,
+      "output_tokens": 22,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "sample_007",
+      "prediction": "Liverpool",
+      "expected": "Liverpool",
+      "correct": true,
+      "latency_ms": 11419.41683799999,
+      "input_tokens": 34899,
+      "output_tokens": 2,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_008",
+      "prediction": "August 2021",
+      "expected": "in 2021",
+      "correct": false,
+      "latency_ms": 10746.487948999998,
+      "input_tokens": 33117,
+      "output_tokens": 7,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "sample_009",
+      "prediction": "Gastritis",
+      "expected": "Gastritis",
+      "correct": true,
+      "latency_ms": 7711.588480000018,
+      "input_tokens": 26935,
+      "output_tokens": 3,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_010",
+      "prediction": "An exciting process of self-discovery and growth.",
+      "expected": "gives them a fresh vibe",
+      "correct": false,
+      "latency_ms": 10828.639175000006,
+      "input_tokens": 32411,
+      "output_tokens": 11,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "sample_011",
+      "prediction": "Around 2022",
+      "expected": "2022",
+      "correct": false,
+      "latency_ms": 7043.821362999978,
+      "input_tokens": 23299,
+      "output_tokens": 7,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "sample_012",
+      "prediction": "Gina offered to help Jon make content and manage his social media accounts.",
+      "expected": "Helping with making content and managing his social media accounts.",
+      "correct": false,
+      "latency_ms": 5328.925008999988,
+      "input_tokens": 19244,
+      "output_tokens": 15,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_013",
+      "prediction": "She started about a year ago after witnessing a family struggling on the streets.",
+      "expected": "Witnessed a family struggling on the streets and reached out to the shelter",
+      "correct": false,
+      "latency_ms": 12203.853767999988,
+      "input_tokens": 35995,
+      "output_tokens": 16,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_014",
+      "prediction": "Little Women",
+      "expected": "\"Little Women\", \"Lord of the Rings\"",
+      "correct": false,
+      "latency_ms": 10319.476652999982,
+      "input_tokens": 31684,
+      "output_tokens": 3,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "sample_015",
+      "prediction": "A basketball signed by their favorite player.",
+      "expected": "signed basketball",
+      "correct": false,
+      "latency_ms": 12065.235895999991,
+      "input_tokens": 35740,
+      "output_tokens": 9,
+      "judge_raw_score": 4.0,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-20T03:40:45+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": "gpt-4o-mini@openai",
+  "judge_model_revision": "2024-07-18",
+  "judge_prompt_hash": "18f44b8c39bda787"
+}
