@@ -1,0 +1,363 @@
+{
+  "model_id": "gemma-4-31b-it@vllm",
+  "model_revision": "2026-04-02",
+  "task_id": "oos_detection",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "d8d890ad179315ad",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "accuracy": 0.5333333333333333,
+    "macro_f1": 0.475
+  },
+  "tps": 6.229626783952479,
+  "p95_latency_ms": 1347.3070130000053,
+  "n_samples": 30,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "oos_001",
+      "prediction": "in_scope",
+      "expected": "in_scope",
+      "correct": true,
+      "latency_ms": 1403.0345599999946,
+      "input_tokens": 158,
+      "output_tokens": 4,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "oos_002",
+      "prediction": "in_scope",
+      "expected": "in_scope",
+      "correct": true,
+      "latency_ms": 1065.9445349999999,
+      "input_tokens": 157,
+      "output_tokens": 4,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "oos_003",
+      "prediction": "in_scope",
+      "expected": "in_scope",
+      "correct": true,
+      "latency_ms": 597.8153829999968,
+      "input_tokens": 163,
+      "output_tokens": 4,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "oos_004",
+      "prediction": "in_scope",
+      "expected": "in_scope",
+      "correct": true,
+      "latency_ms": 1347.3070130000053,
+      "input_tokens": 159,
+      "output_tokens": 4,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "oos_005",
+      "prediction": "in_scope",
+      "expected": "in_scope",
+      "correct": true,
+      "latency_ms": 437.48145099999647,
+      "input_tokens": 163,
+      "output_tokens": 4,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "oos_006",
+      "prediction": "in_scope",
+      "expected": "in_scope",
+      "correct": true,
+      "latency_ms": 466.5102649999966,
+      "input_tokens": 157,
+      "output_tokens": 4,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "oos_007",
+      "prediction": "in_scope",
+      "expected": "in_scope",
+      "correct": true,
+      "latency_ms": 439.79554599999915,
+      "input_tokens": 157,
+      "output_tokens": 4,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "oos_008",
+      "prediction": "oos",
+      "expected": "in_scope",
+      "correct": false,
+      "latency_ms": 410.0503939999953,
+      "input_tokens": 157,
+      "output_tokens": 2,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "oos_009",
+      "prediction": "oos",
+      "expected": "in_scope",
+      "correct": false,
+      "latency_ms": 412.80444000000216,
+      "input_tokens": 157,
+      "output_tokens": 2,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "oos_010",
+      "prediction": "in_scope",
+      "expected": "in_scope",
+      "correct": true,
+      "latency_ms": 439.64581500000577,
+      "input_tokens": 160,
+      "output_tokens": 4,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "oos_011",
+      "prediction": "in_scope",
+      "expected": "in_scope",
+      "correct": true,
+      "latency_ms": 455.0473360000069,
+      "input_tokens": 157,
+      "output_tokens": 4,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "oos_012",
+      "prediction": "in_scope",
+      "expected": "in_scope",
+      "correct": true,
+      "latency_ms": 1057.2334990000058,
+      "input_tokens": 158,
+      "output_tokens": 4,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "oos_013",
+      "prediction": "in_scope",
+      "expected": "in_scope",
+      "correct": true,
+      "latency_ms": 1067.5969659999964,
+      "input_tokens": 160,
+      "output_tokens": 4,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "oos_014",
+      "prediction": "in_scope",
+      "expected": "in_scope",
+      "correct": true,
+      "latency_ms": 440.19180499999777,
+      "input_tokens": 161,
+      "output_tokens": 4,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "oos_015",
+      "prediction": "in_scope",
+      "expected": "in_scope",
+      "correct": true,
+      "latency_ms": 450.67355300000145,
+      "input_tokens": 159,
+      "output_tokens": 4,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "oos_016",
+      "prediction": "in_scope",
+      "expected": "oos",
+      "correct": false,
+      "latency_ms": 436.9700620000003,
+      "input_tokens": 160,
+      "output_tokens": 4,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "oos_017",
+      "prediction": "in_scope",
+      "expected": "oos",
+      "correct": false,
+      "latency_ms": 1086.153338999992,
+      "input_tokens": 160,
+      "output_tokens": 4,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "oos_018",
+      "prediction": "in_scope",
+      "expected": "oos",
+      "correct": false,
+      "latency_ms": 438.6766350000073,
+      "input_tokens": 162,
+      "output_tokens": 4,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "oos_019",
+      "prediction": "in_scope",
+      "expected": "oos",
+      "correct": false,
+      "latency_ms": 459.2478949999901,
+      "input_tokens": 158,
+      "output_tokens": 4,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "oos_020",
+      "prediction": "in_scope",
+      "expected": "oos",
+      "correct": false,
+      "latency_ms": 441.39274300000864,
+      "input_tokens": 157,
+      "output_tokens": 4,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "oos_021",
+      "prediction": "in_scope",
+      "expected": "oos",
+      "correct": false,
+      "latency_ms": 440.61278599998843,
+      "input_tokens": 157,
+      "output_tokens": 4,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "oos_022",
+      "prediction": "in_scope",
+      "expected": "oos",
+      "correct": false,
+      "latency_ms": 453.2132780000069,
+      "input_tokens": 158,
+      "output_tokens": 4,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "oos_023",
+      "prediction": "oos",
+      "expected": "oos",
+      "correct": true,
+      "latency_ms": 404.3538759999876,
+      "input_tokens": 156,
+      "output_tokens": 2,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "oos_024",
+      "prediction": "in_scope",
+      "expected": "oos",
+      "correct": false,
+      "latency_ms": 438.09853900000917,
+      "input_tokens": 160,
+      "output_tokens": 4,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "oos_025",
+      "prediction": "in_scope",
+      "expected": "oos",
+      "correct": false,
+      "latency_ms": 437.2426310000037,
+      "input_tokens": 154,
+      "output_tokens": 4,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "oos_026",
+      "prediction": "oos",
+      "expected": "oos",
+      "correct": true,
+      "latency_ms": 400.85543400000745,
+      "input_tokens": 162,
+      "output_tokens": 2,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "oos_027",
+      "prediction": "in_scope",
+      "expected": "oos",
+      "correct": false,
+      "latency_ms": 440.0204419999909,
+      "input_tokens": 155,
+      "output_tokens": 4,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "oos_028",
+      "prediction": "in_scope",
+      "expected": "oos",
+      "correct": false,
+      "latency_ms": 451.3727759999995,
+      "input_tokens": 162,
+      "output_tokens": 4,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "oos_029",
+      "prediction": "in_scope",
+      "expected": "oos",
+      "correct": false,
+      "latency_ms": 437.3330909999993,
+      "input_tokens": 156,
+      "output_tokens": 4,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "oos_030",
+      "prediction": "oos",
+      "expected": "oos",
+      "correct": true,
+      "latency_ms": 400.8825129999991,
+      "input_tokens": 160,
+      "output_tokens": 2,
+      "judge_raw_score": null,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-20T04:09:30+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": null,
+  "judge_model_revision": null,
+  "judge_prompt_hash": null
+}

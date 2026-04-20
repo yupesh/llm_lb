@@ -1,0 +1,254 @@
+{
+  "model_id": "gemma-4-31b-it@vllm",
+  "model_revision": "2026-04-02",
+  "task_id": "essay_vocabulary_scoring_condensed",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "37badb642518e0c0",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "accuracy": 0.45,
+    "macro_f1": 0.3449197860962567,
+    "qwk": 0.5238095238095238
+  },
+  "tps": 2.6478227364315208,
+  "p95_latency_ms": 1146.808584999917,
+  "n_samples": 20,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "sample_001",
+      "prediction": "1",
+      "expected": "1",
+      "correct": true,
+      "latency_ms": 1370.1563959999703,
+      "input_tokens": 334,
+      "output_tokens": 2,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_002",
+      "prediction": "1",
+      "expected": "1",
+      "correct": true,
+      "latency_ms": 1119.0355160000536,
+      "input_tokens": 351,
+      "output_tokens": 2,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_003",
+      "prediction": "1",
+      "expected": "1",
+      "correct": true,
+      "latency_ms": 770.277624000073,
+      "input_tokens": 372,
+      "output_tokens": 2,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_004",
+      "prediction": "1",
+      "expected": "1",
+      "correct": true,
+      "latency_ms": 804.5725550000498,
+      "input_tokens": 355,
+      "output_tokens": 2,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_005",
+      "prediction": "1",
+      "expected": "1",
+      "correct": true,
+      "latency_ms": 441.53483499997037,
+      "input_tokens": 372,
+      "output_tokens": 2,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_006",
+      "prediction": "2",
+      "expected": "2",
+      "correct": true,
+      "latency_ms": 1109.7982250000769,
+      "input_tokens": 359,
+      "output_tokens": 2,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_007",
+      "prediction": "2",
+      "expected": "2",
+      "correct": true,
+      "latency_ms": 860.640897000053,
+      "input_tokens": 345,
+      "output_tokens": 2,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_008",
+      "prediction": "1",
+      "expected": "2",
+      "correct": false,
+      "latency_ms": 443.7700210000912,
+      "input_tokens": 370,
+      "output_tokens": 2,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_009",
+      "prediction": "2",
+      "expected": "2",
+      "correct": true,
+      "latency_ms": 1115.7750379999243,
+      "input_tokens": 432,
+      "output_tokens": 2,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_010",
+      "prediction": "2",
+      "expected": "2",
+      "correct": true,
+      "latency_ms": 429.35961299997416,
+      "input_tokens": 342,
+      "output_tokens": 2,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_011",
+      "prediction": "2",
+      "expected": "3",
+      "correct": false,
+      "latency_ms": 444.2367330000252,
+      "input_tokens": 416,
+      "output_tokens": 2,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_012",
+      "prediction": "2",
+      "expected": "3",
+      "correct": false,
+      "latency_ms": 444.74011700003757,
+      "input_tokens": 416,
+      "output_tokens": 2,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_013",
+      "prediction": "2",
+      "expected": "3",
+      "correct": false,
+      "latency_ms": 437.2732350000206,
+      "input_tokens": 378,
+      "output_tokens": 2,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_014",
+      "prediction": "2",
+      "expected": "3",
+      "correct": false,
+      "latency_ms": 1102.9334280000285,
+      "input_tokens": 440,
+      "output_tokens": 2,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_015",
+      "prediction": "2",
+      "expected": "3",
+      "correct": false,
+      "latency_ms": 1096.2533539999413,
+      "input_tokens": 389,
+      "output_tokens": 2,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_016",
+      "prediction": "2",
+      "expected": "4",
+      "correct": false,
+      "latency_ms": 450.37190499999724,
+      "input_tokens": 446,
+      "output_tokens": 2,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_017",
+      "prediction": "2",
+      "expected": "4",
+      "correct": false,
+      "latency_ms": 450.58211299999584,
+      "input_tokens": 541,
+      "output_tokens": 2,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_018",
+      "prediction": "3",
+      "expected": "4",
+      "correct": false,
+      "latency_ms": 452.47783500008154,
+      "input_tokens": 466,
+      "output_tokens": 2,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_019",
+      "prediction": "2",
+      "expected": "4",
+      "correct": false,
+      "latency_ms": 1146.808584999917,
+      "input_tokens": 465,
+      "output_tokens": 2,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_020",
+      "prediction": "3",
+      "expected": "4",
+      "correct": false,
+      "latency_ms": 616.1534389999588,
+      "input_tokens": 465,
+      "output_tokens": 2,
+      "judge_raw_score": null,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-20T04:02:55+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": null,
+  "judge_model_revision": null,
+  "judge_prompt_hash": null
+}
