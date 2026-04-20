@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T12:04:18+00:00",
+  "generated_at": "2026-04-20T12:16:29+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -166,6 +166,17 @@
       "n_samples": 10
     },
     {
+      "id": "hazard_category",
+      "version": "1.0",
+      "primary_metric": "accuracy",
+      "secondary_metrics": [
+        "macro_f1",
+        "tps",
+        "p95_latency_ms"
+      ],
+      "n_samples": 20
+    },
+    {
       "id": "intent_classification",
       "version": "1.0",
       "primary_metric": "accuracy",
@@ -178,6 +189,17 @@
     },
     {
       "id": "jailbreak_detection",
+      "version": "1.0",
+      "primary_metric": "accuracy",
+      "secondary_metrics": [
+        "macro_f1",
+        "tps",
+        "p95_latency_ms"
+      ],
+      "n_samples": 20
+    },
+    {
+      "id": "jailbreak_detection_beavertails",
       "version": "1.0",
       "primary_metric": "accuracy",
       "secondary_metrics": [
@@ -235,6 +257,17 @@
         "p95_latency_ms"
       ],
       "n_samples": 33
+    },
+    {
+      "id": "safety_classification",
+      "version": "1.0",
+      "primary_metric": "accuracy",
+      "secondary_metrics": [
+        "macro_f1",
+        "tps",
+        "p95_latency_ms"
+      ],
+      "n_samples": 20
     },
     {
       "id": "summarization",
