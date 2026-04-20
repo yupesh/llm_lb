@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T04:51:35+00:00",
+  "generated_at": "2026-04-20T05:05:07+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -332,8 +332,8 @@
       "provider": "openai_compat",
       "hf_uri": "openai/gpt-oss-120b",
       "hardware": {
-        "gpu_count": 2,
-        "gpu_type": "A100",
+        "gpu_count": 1,
+        "gpu_type": "H200",
         "quantization": null
       }
     },
@@ -373,6 +373,17 @@
       "hf_uri": "Qwen/Qwen3.5-397B-A17B-FP8",
       "hardware": {
         "gpu_count": 4,
+        "gpu_type": "H200",
+        "quantization": null
+      }
+    },
+    {
+      "id": "qwen3.6-35b@vllm",
+      "display_name": "Qwen3.6-35B (vLLM)",
+      "provider": "openai_compat",
+      "hf_uri": "Qwen/Qwen3.6-35B-A3B",
+      "hardware": {
+        "gpu_count": 1,
         "gpu_type": "H200",
         "quantization": null
       }
