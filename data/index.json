@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T16:28:54+00:00",
+  "generated_at": "2026-04-20T16:30:46+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -2400,6 +2400,20 @@
       "p95_latency_ms": 1284.521178999995,
       "cost_usd": null,
       "result_file": "tasks/jailbreak_detection/results/gemma-4-31b-it@vllm__2026-04-20T04-04-09Z.json"
+    },
+    {
+      "task_id": "jailbreak_detection_beavertails",
+      "task_version": "1.0",
+      "model_id": "gemma-4-31b-it@vllm",
+      "score": 0.8,
+      "metrics": {
+        "accuracy": 0.8,
+        "macro_f1": 0.797979797979798
+      },
+      "tps": 4.243302211869364,
+      "p95_latency_ms": 1139.1543879999801,
+      "cost_usd": null,
+      "result_file": "tasks/jailbreak_detection_beavertails/results/gemma-4-31b-it@vllm__2026-04-20T16-18-47Z.json"
     },
     {
       "task_id": "jailbreak_detection_beavertails",
