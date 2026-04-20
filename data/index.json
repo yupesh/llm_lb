@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T13:40:51+00:00",
+  "generated_at": "2026-04-20T13:42:35+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -2358,6 +2358,20 @@
       "p95_latency_ms": 4642.007580000012,
       "cost_usd": null,
       "result_file": "tasks/jailbreak_detection_beavertails/results/minimax-m2.7@vllm__2026-04-20T13-11-25Z.json"
+    },
+    {
+      "task_id": "jailbreak_detection_beavertails",
+      "task_version": "1.0",
+      "model_id": "qwen3.6-35b@vllm",
+      "score": 0.6,
+      "metrics": {
+        "accuracy": 0.6,
+        "macro_f1": 0.5238095238095238
+      },
+      "tps": 173.7051223049155,
+      "p95_latency_ms": 12862.845854,
+      "cost_usd": null,
+      "result_file": "tasks/jailbreak_detection_beavertails/results/qwen3.6-35b@vllm__2026-04-20T13-41-29Z.json"
     },
     {
       "task_id": "kg_entity_name_refinement",
