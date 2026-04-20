@@ -1,0 +1,252 @@
+{
+  "model_id": "glm5.1@llama",
+  "model_revision": "2026-04-02",
+  "task_id": "kg_entity_name_refinement",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "0de833e421734de2",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "judge_score": 0.9
+  },
+  "tps": 43.28376533903105,
+  "p95_latency_ms": 8971.215037000007,
+  "n_samples": 20,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "kg_enr_001",
+      "prediction": "Albert Einstein",
+      "expected": "Albert Einstein",
+      "correct": true,
+      "latency_ms": 7552.3712940000005,
+      "input_tokens": 309,
+      "output_tokens": 320,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_enr_002",
+      "prediction": "None",
+      "expected": "None",
+      "correct": true,
+      "latency_ms": 11599.249476999994,
+      "input_tokens": 301,
+      "output_tokens": 516,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_enr_003",
+      "prediction": "Leonardo da Vinci",
+      "expected": "Leonardo da Vinci",
+      "correct": true,
+      "latency_ms": 7067.701288999999,
+      "input_tokens": 312,
+      "output_tokens": 306,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_enr_004",
+      "prediction": "Bill Gates",
+      "expected": "Bill Gates",
+      "correct": true,
+      "latency_ms": 8394.357276999997,
+      "input_tokens": 301,
+      "output_tokens": 363,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_enr_005",
+      "prediction": "Queen (band)",
+      "expected": "Queen (band)",
+      "correct": true,
+      "latency_ms": 7488.059402999994,
+      "input_tokens": 311,
+      "output_tokens": 326,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_enr_006",
+      "prediction": "Dr. Robert Smith",
+      "expected": "None",
+      "correct": false,
+      "latency_ms": 6549.774338000006,
+      "input_tokens": 304,
+      "output_tokens": 282,
+      "judge_raw_score": 0.0,
+      "error": null
+    },
+    {
+      "id": "kg_enr_007",
+      "prediction": "Apple Inc.",
+      "expected": "Apple Inc.",
+      "correct": true,
+      "latency_ms": 7509.472649000003,
+      "input_tokens": 299,
+      "output_tokens": 333,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_enr_008",
+      "prediction": "Johann Sebastian Bach",
+      "expected": "Johann Sebastian Bach",
+      "correct": true,
+      "latency_ms": 8289.005011000001,
+      "input_tokens": 316,
+      "output_tokens": 346,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_enr_009",
+      "prediction": "George Washington",
+      "expected": "George Washington",
+      "correct": true,
+      "latency_ms": 7180.938029000004,
+      "input_tokens": 305,
+      "output_tokens": 301,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_enr_010",
+      "prediction": "Tesla, Inc.",
+      "expected": "Tesla, Inc.",
+      "correct": true,
+      "latency_ms": 7476.354220000005,
+      "input_tokens": 303,
+      "output_tokens": 324,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_enr_011",
+      "prediction": "Stanford University",
+      "expected": "Stanford University",
+      "correct": true,
+      "latency_ms": 7432.794442000002,
+      "input_tokens": 305,
+      "output_tokens": 317,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_enr_012",
+      "prediction": "New York City",
+      "expected": "New York City",
+      "correct": true,
+      "latency_ms": 7823.505408999992,
+      "input_tokens": 305,
+      "output_tokens": 341,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_enr_013",
+      "prediction": "machine learning",
+      "expected": "machine learning",
+      "correct": true,
+      "latency_ms": 7772.863954000002,
+      "input_tokens": 298,
+      "output_tokens": 330,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_enr_014",
+      "prediction": "Metropolitan Museum of Art",
+      "expected": "Metropolitan Museum of Art",
+      "correct": true,
+      "latency_ms": 8490.598255999997,
+      "input_tokens": 303,
+      "output_tokens": 379,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_enr_015",
+      "prediction": "World Health Organization",
+      "expected": "World Health Organization",
+      "correct": true,
+      "latency_ms": 6693.5165950000055,
+      "input_tokens": 299,
+      "output_tokens": 282,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_enr_016",
+      "prediction": "Montmartre (Paris)",
+      "expected": "Montmartre (Paris)",
+      "correct": true,
+      "latency_ms": 8971.215037000007,
+      "input_tokens": 312,
+      "output_tokens": 400,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_enr_017",
+      "prediction": "BERT (language model)",
+      "expected": "BERT (language model)",
+      "correct": true,
+      "latency_ms": 7990.789982999985,
+      "input_tokens": 310,
+      "output_tokens": 354,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_enr_018",
+      "prediction": "Frozen (2013 film)",
+      "expected": "Frozen (2013 film)",
+      "correct": true,
+      "latency_ms": 8227.995389,
+      "input_tokens": 300,
+      "output_tokens": 360,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_enr_019",
+      "prediction": "Elm Street Bakery",
+      "expected": "None",
+      "correct": false,
+      "latency_ms": 7749.715036999987,
+      "input_tokens": 309,
+      "output_tokens": 328,
+      "judge_raw_score": 0.0,
+      "error": null
+    },
+    {
+      "id": "kg_enr_020",
+      "prediction": "World Wildlife Fund",
+      "expected": "World Wildlife Fund",
+      "correct": true,
+      "latency_ms": 8806.290851,
+      "input_tokens": 307,
+      "output_tokens": 377,
+      "judge_raw_score": 5.0,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-20T22:51:22+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": "gpt-4o-mini@openai",
+  "judge_model_revision": "2024-07-18",
+  "judge_prompt_hash": "c3a34b7e10532d2b"
+}
