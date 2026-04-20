@@ -68,7 +68,18 @@
       "p95_latency_ms": 6822.1536,
       "cost_usd": null,
       "result_file": "results/gpt-oss-120b@vllm__2026-04-20T01-53-31Z.json"
+    },
+    {
+      "model_id": "minimax-m2.7@vllm",
+      "score": 0.46666666666666673,
+      "metrics": {
+        "judge_score": 0.46666666666666673
+      },
+      "tps": 51.430895206085424,
+      "p95_latency_ms": 60567.50480299996,
+      "cost_usd": null,
+      "result_file": "results/minimax-m2.7@vllm__2026-04-20T10-46-41Z.json"
     }
   ],
-  "updated_at": "2026-04-20T07:46:28+00:00"
+  "updated_at": "2026-04-20T11:22:37+00:00"
 }

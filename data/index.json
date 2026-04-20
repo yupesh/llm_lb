@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T11:22:15+00:00",
+  "generated_at": "2026-04-20T11:22:37+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -2724,6 +2724,19 @@
       "result_file": "tasks/text2sql_ambiguity/results/gpt-oss-120b@vllm__2026-04-20T01-53-31Z.json"
     },
     {
+      "task_id": "text2sql_ambiguity",
+      "task_version": "1.0",
+      "model_id": "minimax-m2.7@vllm",
+      "score": 0.46666666666666673,
+      "metrics": {
+        "judge_score": 0.46666666666666673
+      },
+      "tps": 51.430895206085424,
+      "p95_latency_ms": 60567.50480299996,
+      "cost_usd": null,
+      "result_file": "tasks/text2sql_ambiguity/results/minimax-m2.7@vllm__2026-04-20T10-46-41Z.json"
+    },
+    {
       "task_id": "text2sql_bird",
       "task_version": "1.0",
       "model_id": "gpt-oss-120b@vllm",
@@ -2774,6 +2787,19 @@
       "p95_latency_ms": 65352.87071799996,
       "cost_usd": null,
       "result_file": "tasks/text2sql_bird/results/qwen3.5-397b@vllm__2026-04-17T00-02-13Z.json"
+    },
+    {
+      "task_id": "text2sql_bird",
+      "task_version": "1.0",
+      "model_id": "minimax-m2.7@vllm",
+      "score": 0.6363636363636364,
+      "metrics": {
+        "judge_score": 0.6363636363636364
+      },
+      "tps": 31.42042490840187,
+      "p95_latency_ms": 293978.42934200005,
+      "cost_usd": null,
+      "result_file": "tasks/text2sql_bird/results/minimax-m2.7@vllm__2026-04-20T11-07-00Z.json"
     },
     {
       "task_id": "text2sql_bird",
@@ -2898,6 +2924,20 @@
       "p95_latency_ms": 741.7114280000021,
       "cost_usd": null,
       "result_file": "tasks/text_classification/results/gemma-4-31b-it@vllm__2026-04-20T04-32-14Z.json"
+    },
+    {
+      "task_id": "text_classification",
+      "task_version": "1.0",
+      "model_id": "minimax-m2.7@vllm",
+      "score": 0.7,
+      "metrics": {
+        "accuracy": 0.7,
+        "macro_f1": 0.6703296703296704
+      },
+      "tps": 56.2248690805547,
+      "p95_latency_ms": 1645.804333000001,
+      "cost_usd": null,
+      "result_file": "tasks/text_classification/results/minimax-m2.7@vllm__2026-04-20T11-07-27Z.json"
     },
     {
       "task_id": "topic_classification",

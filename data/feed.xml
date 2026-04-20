@@ -14,6 +14,27 @@
     <summary>accuracy=0.200, macro_f1=0.067</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text_classification/1.0/minimax-m2.7@vllm/2026-04-20T11:07:27+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.700 accuracy on text_classification v1.0</title>
+    <updated>2026-04-20T11:07:27+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.700, macro_f1=0.670</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_bird/1.0/minimax-m2.7@vllm/2026-04-20T11:07:00+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.636 judge_score on text2sql_bird v1.0</title>
+    <updated>2026-04-20T11:07:00+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_bird" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.636</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_ambiguity/1.0/minimax-m2.7@vllm/2026-04-20T10:46:41+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.467 judge_score on text2sql_ambiguity v1.0</title>
+    <updated>2026-04-20T10:46:41+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_ambiguity" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.467</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/topic_classification/1.0/qwen3.6-35b@vllm/2026-04-20T07:41:10+00:00</id>
     <title>qwen3.6-35b@vllm scored 1.000 accuracy on topic_classification v1.0</title>
     <updated>2026-04-20T07:41:10+00:00</updated>
@@ -334,26 +355,5 @@
     <updated>2026-04-20T04:03:17+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/extractive_qa" rel="alternate" type="text/html"/>
     <summary>exact_match=0.800</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring_condensed/1.0/gemma-4-31b-it@vllm/2026-04-20T04:02:55+00:00</id>
-    <title>gemma-4-31b-it@vllm scored 0.450 accuracy on essay_vocabulary_scoring_condensed v1.0</title>
-    <updated>2026-04-20T04:02:55+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.450, macro_f1=0.345, qwk=0.524</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring/1.0/gemma-4-31b-it@vllm/2026-04-20T04:02:26+00:00</id>
-    <title>gemma-4-31b-it@vllm scored 0.450 accuracy on essay_vocabulary_scoring v1.0</title>
-    <updated>2026-04-20T04:02:26+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.450, macro_f1=0.338, qwk=0.452</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_holistic_scoring_condensed/1.0/gemma-4-31b-it@vllm/2026-04-20T04:02:02+00:00</id>
-    <title>gemma-4-31b-it@vllm scored 0.111 accuracy on essay_holistic_scoring_condensed v1.0</title>
-    <updated>2026-04-20T04:02:02+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_holistic_scoring_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.111, macro_f1=0.070, qwk=0.648</summary>
   </entry>
 </feed>
