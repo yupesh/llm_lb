@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "generated_at": "2026-04-20T17:56:41+00:00",
-=======
-  "generated_at": "2026-04-20T17:51:44+00:00",
->>>>>>> main
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -357,11 +353,7 @@
       }
     },
     {
-<<<<<<< HEAD
       "id": "glm5.1@llama",
-=======
-      "id": "llm5.1@llama",
->>>>>>> main
       "display_name": "GLM-5.1-GGUF:UD-IQ2_M",
       "provider": "openai_compat",
       "hf_uri": "glm51",
