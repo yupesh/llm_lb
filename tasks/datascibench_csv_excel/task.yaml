@@ -12,7 +12,7 @@ metric:
 llm_params:
   temperature: 0.0
   seed: 42
-  max_tokens: 10240
+  max_tokens: null  # unlimited — 60k context on the vLLM server gives room for long DS code
 system_prompt: |
   You are an expert Python data-science programmer. Write complete, runnable
   Python code that solves the given task. Output ONLY the code, no explanations.
