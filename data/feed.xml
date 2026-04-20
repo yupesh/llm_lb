@@ -14,6 +14,13 @@
     <summary>accuracy=0.500, macro_f1=0.333</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/hazard_category/1.0/gemma-4-31b-it@vllm/2026-04-20T16:18:18+00:00</id>
+    <title>gemma-4-31b-it@vllm scored 0.550 accuracy on hazard_category v1.0</title>
+    <updated>2026-04-20T16:18:18+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/hazard_category" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.550, macro_f1=0.426</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/qwen3.5-397b@vllm/2026-04-20T14:20:04+00:00</id>
     <title>qwen3.5-397b@vllm scored 0.500 accuracy on safety_classification v1.0</title>
     <updated>2026-04-20T14:20:04+00:00</updated>
@@ -348,12 +355,5 @@
     <updated>2026-04-20T08:42:29+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_csv_excel" rel="alternate" type="text/html"/>
     <summary>judge_score=0.580</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/conversational_memory_qa/1.0/minimax-m2.7@vllm/2026-04-20T08:38:32+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.893 judge_score on conversational_memory_qa v1.0</title>
-    <updated>2026-04-20T08:38:32+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/conversational_memory_qa" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.893</summary>
   </entry>
 </feed>

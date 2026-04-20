@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T16:28:01+00:00",
+  "generated_at": "2026-04-20T16:28:54+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -2134,6 +2134,20 @@
       "p95_latency_ms": 4340.996621000002,
       "cost_usd": null,
       "result_file": "tasks/hazard_category/results/minimax-m2.7@vllm__2026-04-20T13-10-27Z.json"
+    },
+    {
+      "task_id": "hazard_category",
+      "task_version": "1.0",
+      "model_id": "gemma-4-31b-it@vllm",
+      "score": 0.55,
+      "metrics": {
+        "accuracy": 0.55,
+        "macro_f1": 0.4261904761904762
+      },
+      "tps": 10.565061001821709,
+      "p95_latency_ms": 1239.7144049999938,
+      "cost_usd": null,
+      "result_file": "tasks/hazard_category/results/gemma-4-31b-it@vllm__2026-04-20T16-18-18Z.json"
     },
     {
       "task_id": "hazard_category",
