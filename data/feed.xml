@@ -84,6 +84,34 @@
     <summary>judge_score=0.730</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_entity_name_refinement/1.0/minimax-m2.7@vllm/2026-04-20T09:39:35+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.980 judge_score on kg_entity_name_refinement v1.0</title>
+    <updated>2026-04-20T09:39:35+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_entity_name_refinement" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.980</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection/1.0/minimax-m2.7@vllm/2026-04-20T09:38:08+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.550 accuracy on jailbreak_detection v1.0</title>
+    <updated>2026-04-20T09:38:08+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.550, macro_f1=0.436</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/intent_classification/1.0/minimax-m2.7@vllm/2026-04-20T09:37:02+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.300 accuracy on intent_classification v1.0</title>
+    <updated>2026-04-20T09:37:02+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/intent_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.300, macro_f1=0.115</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/extractive_qa/1.0/minimax-m2.7@vllm/2026-04-20T09:36:26+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.000 exact_match on extractive_qa v1.0</title>
+    <updated>2026-04-20T09:36:26+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/extractive_qa" rel="alternate" type="text/html"/>
+    <summary>exact_match=0.000</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/topic_classification/1.0/qwen3.6-35b@vllm/2026-04-20T07:41:10+00:00</id>
     <title>qwen3.6-35b@vllm scored 1.000 accuracy on topic_classification v1.0</title>
     <updated>2026-04-20T07:41:10+00:00</updated>
@@ -327,33 +355,5 @@
     <updated>2026-04-20T04:30:30+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_ambiguity" rel="alternate" type="text/html"/>
     <summary>judge_score=0.608</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/temporal_information_extraction/1.0/gemma-4-31b-it@vllm/2026-04-20T04:28:21+00:00</id>
-    <title>gemma-4-31b-it@vllm scored 0.493 judge_score on temporal_information_extraction v1.0</title>
-    <updated>2026-04-20T04:28:21+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/temporal_information_extraction" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.493</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/summarization/1.0/gemma-4-31b-it@vllm/2026-04-20T04:26:15+00:00</id>
-    <title>gemma-4-31b-it@vllm scored 0.840 judge_score on summarization v1.0</title>
-    <updated>2026-04-20T04:26:15+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/summarization" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.840</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/retail_agent_dialog/1.0/gemma-4-31b-it@vllm/2026-04-20T04:25:54+00:00</id>
-    <title>gemma-4-31b-it@vllm scored 0.679 judge_score on retail_agent_dialog v1.0</title>
-    <updated>2026-04-20T04:25:54+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/retail_agent_dialog" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.679</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/oos_detection/1.0/gemma-4-31b-it@vllm/2026-04-20T04:09:30+00:00</id>
-    <title>gemma-4-31b-it@vllm scored 0.533 accuracy on oos_detection v1.0</title>
-    <updated>2026-04-20T04:09:30+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/oos_detection" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.533, macro_f1=0.475</summary>
   </entry>
 </feed>

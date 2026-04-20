@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T11:24:09+00:00",
+  "generated_at": "2026-04-20T11:24:28+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -1848,6 +1848,19 @@
       "result_file": "tasks/extractive_qa/results/gemma-4-31b-it@vllm__2026-04-20T04-03-17Z.json"
     },
     {
+      "task_id": "extractive_qa",
+      "task_version": "1.0",
+      "model_id": "minimax-m2.7@vllm",
+      "score": 0.0,
+      "metrics": {
+        "exact_match": 0.0
+      },
+      "tps": 33.25572058351239,
+      "p95_latency_ms": 5674.742942000002,
+      "cost_usd": null,
+      "result_file": "tasks/extractive_qa/results/minimax-m2.7@vllm__2026-04-20T09-36-26Z.json"
+    },
+    {
       "task_id": "intent_classification",
       "task_version": "1.0",
       "model_id": "qwen3.6-35b@vllm",
@@ -1932,6 +1945,20 @@
       "result_file": "tasks/intent_classification/results/gpt-oss-120b@vllm__2026-04-20T01-24-49Z.json"
     },
     {
+      "task_id": "intent_classification",
+      "task_version": "1.0",
+      "model_id": "minimax-m2.7@vllm",
+      "score": 0.3,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.11538461538461538
+      },
+      "tps": 65.33014502220955,
+      "p95_latency_ms": 2497.9726970000015,
+      "cost_usd": null,
+      "result_file": "tasks/intent_classification/results/minimax-m2.7@vllm__2026-04-20T09-37-02Z.json"
+    },
+    {
       "task_id": "jailbreak_detection",
       "task_version": "1.0",
       "model_id": "qwen3.6-35b@vllm",
@@ -2014,6 +2041,33 @@
       "p95_latency_ms": 1284.521178999995,
       "cost_usd": null,
       "result_file": "tasks/jailbreak_detection/results/gemma-4-31b-it@vllm__2026-04-20T04-04-09Z.json"
+    },
+    {
+      "task_id": "jailbreak_detection",
+      "task_version": "1.0",
+      "model_id": "minimax-m2.7@vllm",
+      "score": 0.55,
+      "metrics": {
+        "accuracy": 0.55,
+        "macro_f1": 0.4357366771159875
+      },
+      "tps": 43.071046507429664,
+      "p95_latency_ms": 6058.628191999994,
+      "cost_usd": null,
+      "result_file": "tasks/jailbreak_detection/results/minimax-m2.7@vllm__2026-04-20T09-38-08Z.json"
+    },
+    {
+      "task_id": "kg_entity_name_refinement",
+      "task_version": "1.0",
+      "model_id": "minimax-m2.7@vllm",
+      "score": 0.9800000000000001,
+      "metrics": {
+        "judge_score": 0.9800000000000001
+      },
+      "tps": 96.31436717904182,
+      "p95_latency_ms": 3557.9502429999934,
+      "cost_usd": null,
+      "result_file": "tasks/kg_entity_name_refinement/results/minimax-m2.7@vllm__2026-04-20T09-39-35Z.json"
     },
     {
       "task_id": "kg_entity_name_refinement",
