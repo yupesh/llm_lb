@@ -161,6 +161,27 @@
     <summary>judge_score=0.620</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_dl/1.0/qwen3.6-35b@vllm/2026-04-20T05:38:02+00:00</id>
+    <title>qwen3.6-35b@vllm scored 0.500 judge_score on datascibench_dl v1.0</title>
+    <updated>2026-04-20T05:38:02+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_dl" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.500</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_csv_excel/1.0/qwen3.6-35b@vllm/2026-04-20T05:30:45+00:00</id>
+    <title>qwen3.6-35b@vllm scored 0.560 judge_score on datascibench_csv_excel v1.0</title>
+    <updated>2026-04-20T05:30:45+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_csv_excel" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.560</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/conversational_memory_qa/1.0/qwen3.6-35b@vllm/2026-04-20T05:24:49+00:00</id>
+    <title>qwen3.6-35b@vllm scored 0.867 judge_score on conversational_memory_qa v1.0</title>
+    <updated>2026-04-20T05:24:49+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/conversational_memory_qa" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.867</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/topic_classification/1.0/gemma-4-31b-it@vllm/2026-04-20T04:32:34+00:00</id>
     <title>gemma-4-31b-it@vllm scored 1.000 accuracy on topic_classification v1.0</title>
     <updated>2026-04-20T04:32:34+00:00</updated>
@@ -334,26 +355,5 @@
     <updated>2026-04-20T03:55:01+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_human" rel="alternate" type="text/html"/>
     <summary>judge_score=0.540</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_dl/1.0/gemma-4-31b-it@vllm/2026-04-20T03:50:29+00:00</id>
-    <title>gemma-4-31b-it@vllm scored 0.400 judge_score on datascibench_dl v1.0</title>
-    <updated>2026-04-20T03:50:29+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_dl" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.400</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_csv_excel/1.0/gemma-4-31b-it@vllm/2026-04-20T03:44:33+00:00</id>
-    <title>gemma-4-31b-it@vllm scored 0.600 judge_score on datascibench_csv_excel v1.0</title>
-    <updated>2026-04-20T03:44:33+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_csv_excel" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.600</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/conversational_memory_qa/1.0/gemma-4-31b-it@vllm/2026-04-20T03:40:45+00:00</id>
-    <title>gemma-4-31b-it@vllm scored 0.813 judge_score on conversational_memory_qa v1.0</title>
-    <updated>2026-04-20T03:40:45+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/conversational_memory_qa" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.813</summary>
   </entry>
 </feed>

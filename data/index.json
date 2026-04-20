@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T07:47:43+00:00",
+  "generated_at": "2026-04-20T07:47:58+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -608,6 +608,19 @@
     {
       "task_id": "conversational_memory_qa",
       "task_version": "1.0",
+      "model_id": "qwen3.6-35b@vllm",
+      "score": 0.8666666666666667,
+      "metrics": {
+        "judge_score": 0.8666666666666667
+      },
+      "tps": 131.4651451790405,
+      "p95_latency_ms": 8558.996949000004,
+      "cost_usd": null,
+      "result_file": "tasks/conversational_memory_qa/results/qwen3.6-35b@vllm__2026-04-20T05-24-49Z.json"
+    },
+    {
+      "task_id": "conversational_memory_qa",
+      "task_version": "1.0",
       "model_id": "gemma-4-31b-it@vllm",
       "score": 0.8133333333333334,
       "metrics": {
@@ -712,6 +725,19 @@
     {
       "task_id": "datascibench_csv_excel",
       "task_version": "1.0",
+      "model_id": "qwen3.6-35b@vllm",
+      "score": 0.5599999999999999,
+      "metrics": {
+        "judge_score": 0.5599999999999999
+      },
+      "tps": 192.40032566588872,
+      "p95_latency_ms": 52943.93000499997,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_csv_excel/results/qwen3.6-35b@vllm__2026-04-20T05-30-45Z.json"
+    },
+    {
+      "task_id": "datascibench_csv_excel",
+      "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
       "score": 0.52,
       "metrics": {
@@ -734,6 +760,19 @@
       "p95_latency_ms": 169435.79726400002,
       "cost_usd": null,
       "result_file": "tasks/datascibench_csv_excel/results/qwen3.5-27b@vllm__2026-04-19T23-35-38Z.json"
+    },
+    {
+      "task_id": "datascibench_dl",
+      "task_version": "1.0",
+      "model_id": "qwen3.6-35b@vllm",
+      "score": 0.5,
+      "metrics": {
+        "judge_score": 0.5
+      },
+      "tps": 192.95898989733254,
+      "p95_latency_ms": 51508.36865799999,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_dl/results/qwen3.6-35b@vllm__2026-04-20T05-38-02Z.json"
     },
     {
       "task_id": "datascibench_dl",
