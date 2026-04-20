@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T02:50:31+00:00",
+  "generated_at": "2026-04-20T02:50:47+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -736,6 +736,21 @@
     {
       "task_id": "essay_coherence_scoring",
       "task_version": "1.0",
+      "model_id": "gpt-oss-120b@vllm",
+      "score": 0.3,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.21703296703296704,
+        "qwk": 0.5833333333333333
+      },
+      "tps": 107.35580551502262,
+      "p95_latency_ms": 2589.5569919999843,
+      "cost_usd": null,
+      "result_file": "tasks/essay_coherence_scoring/results/gpt-oss-120b@vllm__2026-04-20T01-17-16Z.json"
+    },
+    {
+      "task_id": "essay_coherence_scoring",
+      "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
       "score": 0.3,
       "metrics": {
@@ -781,6 +796,21 @@
     {
       "task_id": "essay_coherence_scoring_condensed",
       "task_version": "1.0",
+      "model_id": "gpt-oss-120b@vllm",
+      "score": 0.35,
+      "metrics": {
+        "accuracy": 0.35,
+        "macro_f1": 0.31666666666666665,
+        "qwk": 0.4761904761904763
+      },
+      "tps": 86.70010931477408,
+      "p95_latency_ms": 2455.545162,
+      "cost_usd": null,
+      "result_file": "tasks/essay_coherence_scoring_condensed/results/gpt-oss-120b@vllm__2026-04-20T01-18-10Z.json"
+    },
+    {
+      "task_id": "essay_coherence_scoring_condensed",
+      "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
       "score": 0.3,
       "metrics": {
@@ -807,6 +837,21 @@
       "p95_latency_ms": 679955.6366849997,
       "cost_usd": null,
       "result_file": "tasks/essay_grammar_scoring/results/qwen3.5-397b@vllm__2026-04-18T18-28-11Z.json"
+    },
+    {
+      "task_id": "essay_grammar_scoring",
+      "task_version": "1.0",
+      "model_id": "gpt-oss-120b@vllm",
+      "score": 0.35,
+      "metrics": {
+        "accuracy": 0.35,
+        "macro_f1": 0.29261363636363635,
+        "qwk": 0.15384615384615374
+      },
+      "tps": 121.94484459929589,
+      "p95_latency_ms": 4549.4339300000065,
+      "cost_usd": null,
+      "result_file": "tasks/essay_grammar_scoring/results/gpt-oss-120b@vllm__2026-04-20T01-19-25Z.json"
     },
     {
       "task_id": "essay_grammar_scoring",
