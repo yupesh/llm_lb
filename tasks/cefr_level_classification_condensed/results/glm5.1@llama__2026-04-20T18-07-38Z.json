@@ -1,0 +1,254 @@
+{
+  "model_id": "glm5.1@llama",
+  "model_revision": "2026-04-02",
+  "task_id": "cefr_level_classification_condensed",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "65570617a85bae65",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "accuracy": 0.0,
+    "macro_f1": 0.0,
+    "qwk": -0.8571428571428572
+  },
+  "tps": 0.0,
+  "p95_latency_ms": 1017.90471999999,
+  "n_samples": 20,
+  "n_failed_samples": 20,
+  "samples": [
+    {
+      "id": "sample_001",
+      "prediction": "",
+      "expected": "A2",
+      "correct": false,
+      "latency_ms": 1119.3882129999793,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 400 from http://lnsigo.mipt.ru:4000/v1 model=glm51: {\"error\":{\"message\":\"{'error': '/chat/completions: Invalid model name passed in model=glm51. Call `/v1/models` to view available models for your key.'}\",\"type\":\"None\",\"param\":\"None\",\"code\":\"400\"}}"
+    },
+    {
+      "id": "sample_002",
+      "prediction": "",
+      "expected": "A2",
+      "correct": false,
+      "latency_ms": 938.7496669999962,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 400 from http://lnsigo.mipt.ru:4000/v1 model=glm51: {\"error\":{\"message\":\"{'error': '/chat/completions: Invalid model name passed in model=glm51. Call `/v1/models` to view available models for your key.'}\",\"type\":\"None\",\"param\":\"None\",\"code\":\"400\"}}"
+    },
+    {
+      "id": "sample_003",
+      "prediction": "",
+      "expected": "A2",
+      "correct": false,
+      "latency_ms": 960.6492719999835,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 400 from http://lnsigo.mipt.ru:4000/v1 model=glm51: {\"error\":{\"message\":\"{'error': '/chat/completions: Invalid model name passed in model=glm51. Call `/v1/models` to view available models for your key.'}\",\"type\":\"None\",\"param\":\"None\",\"code\":\"400\"}}"
+    },
+    {
+      "id": "sample_004",
+      "prediction": "",
+      "expected": "A2",
+      "correct": false,
+      "latency_ms": 597.6654579999945,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 400 from http://lnsigo.mipt.ru:4000/v1 model=glm51: {\"error\":{\"message\":\"{'error': '/chat/completions: Invalid model name passed in model=glm51. Call `/v1/models` to view available models for your key.'}\",\"type\":\"None\",\"param\":\"None\",\"code\":\"400\"}}"
+    },
+    {
+      "id": "sample_005",
+      "prediction": "",
+      "expected": "A2",
+      "correct": false,
+      "latency_ms": 518.33945300001,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 400 from http://lnsigo.mipt.ru:4000/v1 model=glm51: {\"error\":{\"message\":\"{'error': '/chat/completions: Invalid model name passed in model=glm51. Call `/v1/models` to view available models for your key.'}\",\"type\":\"None\",\"param\":\"None\",\"code\":\"400\"}}"
+    },
+    {
+      "id": "sample_006",
+      "prediction": "",
+      "expected": "B1",
+      "correct": false,
+      "latency_ms": 981.7215120000071,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 400 from http://lnsigo.mipt.ru:4000/v1 model=glm51: {\"error\":{\"message\":\"{'error': '/chat/completions: Invalid model name passed in model=glm51. Call `/v1/models` to view available models for your key.'}\",\"type\":\"None\",\"param\":\"None\",\"code\":\"400\"}}"
+    },
+    {
+      "id": "sample_007",
+      "prediction": "",
+      "expected": "B1",
+      "correct": false,
+      "latency_ms": 622.2650100000067,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 400 from http://lnsigo.mipt.ru:4000/v1 model=glm51: {\"error\":{\"message\":\"{'error': '/chat/completions: Invalid model name passed in model=glm51. Call `/v1/models` to view available models for your key.'}\",\"type\":\"None\",\"param\":\"None\",\"code\":\"400\"}}"
+    },
+    {
+      "id": "sample_008",
+      "prediction": "",
+      "expected": "B1",
+      "correct": false,
+      "latency_ms": 932.8866349999885,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 400 from http://lnsigo.mipt.ru:4000/v1 model=glm51: {\"error\":{\"message\":\"{'error': '/chat/completions: Invalid model name passed in model=glm51. Call `/v1/models` to view available models for your key.'}\",\"type\":\"None\",\"param\":\"None\",\"code\":\"400\"}}"
+    },
+    {
+      "id": "sample_009",
+      "prediction": "",
+      "expected": "B1",
+      "correct": false,
+      "latency_ms": 963.2393200000138,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 400 from http://lnsigo.mipt.ru:4000/v1 model=glm51: {\"error\":{\"message\":\"{'error': '/chat/completions: Invalid model name passed in model=glm51. Call `/v1/models` to view available models for your key.'}\",\"type\":\"None\",\"param\":\"None\",\"code\":\"400\"}}"
+    },
+    {
+      "id": "sample_010",
+      "prediction": "",
+      "expected": "B1",
+      "correct": false,
+      "latency_ms": 762.7900520000139,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 400 from http://lnsigo.mipt.ru:4000/v1 model=glm51: {\"error\":{\"message\":\"{'error': '/chat/completions: Invalid model name passed in model=glm51. Call `/v1/models` to view available models for your key.'}\",\"type\":\"None\",\"param\":\"None\",\"code\":\"400\"}}"
+    },
+    {
+      "id": "sample_011",
+      "prediction": "",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 620.3208350000011,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 400 from http://lnsigo.mipt.ru:4000/v1 model=glm51: {\"error\":{\"message\":\"{'error': '/chat/completions: Invalid model name passed in model=glm51. Call `/v1/models` to view available models for your key.'}\",\"type\":\"None\",\"param\":\"None\",\"code\":\"400\"}}"
+    },
+    {
+      "id": "sample_012",
+      "prediction": "",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 362.23631699999714,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 400 from http://lnsigo.mipt.ru:4000/v1 model=glm51: {\"error\":{\"message\":\"{'error': '/chat/completions: Invalid model name passed in model=glm51. Call `/v1/models` to view available models for your key.'}\",\"type\":\"None\",\"param\":\"None\",\"code\":\"400\"}}"
+    },
+    {
+      "id": "sample_013",
+      "prediction": "",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 615.6839229999775,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 400 from http://lnsigo.mipt.ru:4000/v1 model=glm51: {\"error\":{\"message\":\"{'error': '/chat/completions: Invalid model name passed in model=glm51. Call `/v1/models` to view available models for your key.'}\",\"type\":\"None\",\"param\":\"None\",\"code\":\"400\"}}"
+    },
+    {
+      "id": "sample_014",
+      "prediction": "",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 837.751781999998,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 400 from http://lnsigo.mipt.ru:4000/v1 model=glm51: {\"error\":{\"message\":\"{'error': '/chat/completions: Invalid model name passed in model=glm51. Call `/v1/models` to view available models for your key.'}\",\"type\":\"None\",\"param\":\"None\",\"code\":\"400\"}}"
+    },
+    {
+      "id": "sample_015",
+      "prediction": "",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 600.4124030000071,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 400 from http://lnsigo.mipt.ru:4000/v1 model=glm51: {\"error\":{\"message\":\"{'error': '/chat/completions: Invalid model name passed in model=glm51. Call `/v1/models` to view available models for your key.'}\",\"type\":\"None\",\"param\":\"None\",\"code\":\"400\"}}"
+    },
+    {
+      "id": "sample_016",
+      "prediction": "",
+      "expected": "C1",
+      "correct": false,
+      "latency_ms": 1017.90471999999,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 400 from http://lnsigo.mipt.ru:4000/v1 model=glm51: {\"error\":{\"message\":\"{'error': '/chat/completions: Invalid model name passed in model=glm51. Call `/v1/models` to view available models for your key.'}\",\"type\":\"None\",\"param\":\"None\",\"code\":\"400\"}}"
+    },
+    {
+      "id": "sample_017",
+      "prediction": "",
+      "expected": "C1",
+      "correct": false,
+      "latency_ms": 610.0576209999815,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 400 from http://lnsigo.mipt.ru:4000/v1 model=glm51: {\"error\":{\"message\":\"{'error': '/chat/completions: Invalid model name passed in model=glm51. Call `/v1/models` to view available models for your key.'}\",\"type\":\"None\",\"param\":\"None\",\"code\":\"400\"}}"
+    },
+    {
+      "id": "sample_018",
+      "prediction": "",
+      "expected": "C1",
+      "correct": false,
+      "latency_ms": 345.85813099999996,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 400 from http://lnsigo.mipt.ru:4000/v1 model=glm51: {\"error\":{\"message\":\"{'error': '/chat/completions: Invalid model name passed in model=glm51. Call `/v1/models` to view available models for your key.'}\",\"type\":\"None\",\"param\":\"None\",\"code\":\"400\"}}"
+    },
+    {
+      "id": "sample_019",
+      "prediction": "",
+      "expected": "C1",
+      "correct": false,
+      "latency_ms": 956.5990090000014,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 400 from http://lnsigo.mipt.ru:4000/v1 model=glm51: {\"error\":{\"message\":\"{'error': '/chat/completions: Invalid model name passed in model=glm51. Call `/v1/models` to view available models for your key.'}\",\"type\":\"None\",\"param\":\"None\",\"code\":\"400\"}}"
+    },
+    {
+      "id": "sample_020",
+      "prediction": "",
+      "expected": "C1",
+      "correct": false,
+      "latency_ms": 376.28899999998566,
+      "input_tokens": null,
+      "output_tokens": null,
+      "judge_raw_score": null,
+      "error": "RuntimeError: 400 from http://lnsigo.mipt.ru:4000/v1 model=glm51: {\"error\":{\"message\":\"{'error': '/chat/completions: Invalid model name passed in model=glm51. Call `/v1/models` to view available models for your key.'}\",\"type\":\"None\",\"param\":\"None\",\"code\":\"400\"}}"
+    }
+  ],
+  "created_at": "2026-04-20T18:07:38+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": null,
+  "judge_model_revision": null,
+  "judge_prompt_hash": null
+}
