@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T13:01:12+00:00",
+  "generated_at": "2026-04-20T13:01:32+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -2086,6 +2086,20 @@
     {
       "task_id": "jailbreak_detection",
       "task_version": "1.0",
+      "model_id": "minimax-m2.7@vllm",
+      "score": 1.0,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "tps": 84.61838984138198,
+      "p95_latency_ms": 2309.4757750000026,
+      "cost_usd": null,
+      "result_file": "tasks/jailbreak_detection/results/minimax-m2.7@vllm__2026-04-20T12-29-04Z.json"
+    },
+    {
+      "task_id": "jailbreak_detection",
+      "task_version": "1.0",
       "model_id": "gpt-oss-120b@vllm",
       "score": 1.0,
       "metrics": {
@@ -2572,6 +2586,20 @@
       "p95_latency_ms": 3913.8009780000048,
       "cost_usd": null,
       "result_file": "tasks/oos_detection/results/qwen3.6-35b@vllm__2026-04-20T06-33-58Z.json"
+    },
+    {
+      "task_id": "oos_detection",
+      "task_version": "1.0",
+      "model_id": "minimax-m2.7@vllm",
+      "score": 0.43333333333333335,
+      "metrics": {
+        "accuracy": 0.43333333333333335,
+        "macro_f1": 0.3023255813953488
+      },
+      "tps": 81.29237490835739,
+      "p95_latency_ms": 3095.2969629999957,
+      "cost_usd": null,
+      "result_file": "tasks/oos_detection/results/minimax-m2.7@vllm__2026-04-20T12-30-00Z.json"
     },
     {
       "task_id": "oos_detection",
@@ -3083,6 +3111,20 @@
       "p95_latency_ms": 3366.7398550000057,
       "cost_usd": null,
       "result_file": "tasks/text_classification/results/qwen3.5-397b@vllm__2026-04-18T09-38-47Z.json"
+    },
+    {
+      "task_id": "text_classification",
+      "task_version": "1.0",
+      "model_id": "minimax-m2.7@vllm",
+      "score": 1.0,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "tps": 65.5537061483876,
+      "p95_latency_ms": 1656.2136410000007,
+      "cost_usd": null,
+      "result_file": "tasks/text_classification/results/minimax-m2.7@vllm__2026-04-20T12-30-25Z.json"
     },
     {
       "task_id": "text_classification",
