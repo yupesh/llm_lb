@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T11:22:55+00:00",
+  "generated_at": "2026-04-20T11:23:13+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -2096,6 +2096,19 @@
     {
       "task_id": "kg_entity_type_refinement",
       "task_version": "1.0",
+      "model_id": "minimax-m2.7@vllm",
+      "score": 0.73,
+      "metrics": {
+        "judge_score": 0.73
+      },
+      "tps": 102.46431060581246,
+      "p95_latency_ms": 4801.039807999999,
+      "cost_usd": null,
+      "result_file": "tasks/kg_entity_type_refinement/results/minimax-m2.7@vllm__2026-04-20T09-41-23Z.json"
+    },
+    {
+      "task_id": "kg_entity_type_refinement",
+      "task_version": "1.0",
       "model_id": "gemma-4-31b-it@vllm",
       "score": 0.6900000000000001,
       "metrics": {
@@ -2209,6 +2222,19 @@
       "p95_latency_ms": 1251.6735600000004,
       "cost_usd": null,
       "result_file": "tasks/kg_relation_refinement/results/gemma-4-31b-it@vllm__2026-04-20T04-06-27Z.json"
+    },
+    {
+      "task_id": "kg_relation_refinement",
+      "task_version": "1.0",
+      "model_id": "minimax-m2.7@vllm",
+      "score": 0.9199999999999999,
+      "metrics": {
+        "judge_score": 0.9199999999999999
+      },
+      "tps": 96.93025615455242,
+      "p95_latency_ms": 4428.784194999991,
+      "cost_usd": null,
+      "result_file": "tasks/kg_relation_refinement/results/minimax-m2.7@vllm__2026-04-20T09-42-59Z.json"
     },
     {
       "task_id": "kg_relation_refinement",

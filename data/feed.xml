@@ -63,6 +63,20 @@
     <summary>judge_score=0.660</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_relation_refinement/1.0/minimax-m2.7@vllm/2026-04-20T09:42:59+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.920 judge_score on kg_relation_refinement v1.0</title>
+    <updated>2026-04-20T09:42:59+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_relation_refinement" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.920</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_entity_type_refinement/1.0/minimax-m2.7@vllm/2026-04-20T09:41:23+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.730 judge_score on kg_entity_type_refinement v1.0</title>
+    <updated>2026-04-20T09:41:23+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_entity_type_refinement" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.730</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/topic_classification/1.0/qwen3.6-35b@vllm/2026-04-20T07:41:10+00:00</id>
     <title>qwen3.6-35b@vllm scored 1.000 accuracy on topic_classification v1.0</title>
     <updated>2026-04-20T07:41:10+00:00</updated>
@@ -341,19 +355,5 @@
     <updated>2026-04-20T04:08:55+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_triplet_extraction" rel="alternate" type="text/html"/>
     <summary>judge_score=0.580</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_relation_refinement/1.0/gemma-4-31b-it@vllm/2026-04-20T04:06:27+00:00</id>
-    <title>gemma-4-31b-it@vllm scored 0.930 judge_score on kg_relation_refinement v1.0</title>
-    <updated>2026-04-20T04:06:27+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_relation_refinement" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.930</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_entity_type_refinement/1.0/gemma-4-31b-it@vllm/2026-04-20T04:05:44+00:00</id>
-    <title>gemma-4-31b-it@vllm scored 0.690 judge_score on kg_entity_type_refinement v1.0</title>
-    <updated>2026-04-20T04:05:44+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_entity_type_refinement" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.690</summary>
   </entry>
 </feed>
