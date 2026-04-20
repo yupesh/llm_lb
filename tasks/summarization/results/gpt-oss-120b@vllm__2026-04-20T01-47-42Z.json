@@ -1,0 +1,87 @@
+{
+  "model_id": "gpt-oss-120b@vllm",
+  "model_revision": "2026-04-20",
+  "task_id": "summarization",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "2c5723a9c9440b71",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "judge_score": 0.8800000000000001
+  },
+  "tps": 90.53476790327322,
+  "p95_latency_ms": 1409.864220000003,
+  "n_samples": 5,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "sample_001",
+      "prediction": "The James Webb Space Telescope, launched in December 2021 as the largest space‑based optical telescope, uses infrared instruments to study early galaxies and is operated by NASA, ESA, and the Canadian Space Agency.",
+      "expected": "JWST, launched in December 2021, is the largest space telescope and observes early-universe galaxies in infrared as a NASA-ESA-CSA project.",
+      "correct": false,
+      "latency_ms": 1095.0042170000102,
+      "input_tokens": 152,
+      "output_tokens": 78,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "sample_002",
+      "prediction": "Python's asyncio provides an event-loop concurrency model that enables a single thread to manage thousands of network connections by suspending coroutines during I/O, making it the standard approach for high‑throughput pure‑Python network services.",
+      "expected": "Python's asyncio enables high-throughput single-threaded networking by suspending coroutines on I/O via an event loop.",
+      "correct": false,
+      "latency_ms": 1409.864220000003,
+      "input_tokens": 154,
+      "output_tokens": 178,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "sample_003",
+      "prediction": "The 2008 financial crisis, sparked by the U.S. subprime mortgage collapse driven by lax lending and widespread securitisation, led to Lehman Brothers' bankruptcy and a global recession.",
+      "expected": "The 2008 crisis began with the U.S. subprime mortgage collapse, causing Lehman Brothers' failure and a global recession.",
+      "correct": false,
+      "latency_ms": 1113.9581340000007,
+      "input_tokens": 155,
+      "output_tokens": 112,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_004",
+      "prediction": "Photosynthesis is the sunlight-driven conversion of carbon dioxide and water into glucose and oxygen by green plants, forming the base of Earth's food chains.",
+      "expected": "Photosynthesis lets green plants turn CO2 and water into glucose and oxygen using sunlight captured by chlorophyll, underpinning most food chains.",
+      "correct": false,
+      "latency_ms": 887.070799,
+      "input_tokens": 146,
+      "output_tokens": 54,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "sample_005",
+      "prediction": "The 1648 Treaty of Westphalia concluded the Thirty Years' War and established the modern system of sovereign nation‑states based on territorial sovereignty.",
+      "expected": "The 1648 Treaty of Westphalia ended the Thirty Years' War and laid the foundation of the modern sovereignty-based state system.",
+      "correct": false,
+      "latency_ms": 773.8422380000003,
+      "input_tokens": 141,
+      "output_tokens": 56,
+      "judge_raw_score": 5.0,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-20T01:47:42+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": "gpt-4o-mini@openai",
+  "judge_model_revision": "2024-07-18",
+  "judge_prompt_hash": "d679caeb261c214b"
+}
