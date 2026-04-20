@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T04:42:18+00:00",
+  "generated_at": "2026-04-20T04:43:12+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -697,6 +697,19 @@
     {
       "task_id": "datascibench_dl",
       "task_version": "1.0",
+      "model_id": "gemma-4-31b-it@vllm",
+      "score": 0.4,
+      "metrics": {
+        "judge_score": 0.4
+      },
+      "tps": 50.414363242497274,
+      "p95_latency_ms": 50088.141143999994,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_dl/results/gemma-4-31b-it@vllm__2026-04-20T03-50-29Z.json"
+    },
+    {
+      "task_id": "datascibench_dl",
+      "task_version": "1.0",
       "model_id": "qwen3.5-27b@vllm",
       "score": 0.26,
       "metrics": {
@@ -745,6 +758,19 @@
       "p95_latency_ms": 270930.25656699995,
       "cost_usd": null,
       "result_file": "tasks/datascibench_human/results/qwen3-30b@vllm__2026-04-19T03-07-29Z.json"
+    },
+    {
+      "task_id": "datascibench_human",
+      "task_version": "1.0",
+      "model_id": "gemma-4-31b-it@vllm",
+      "score": 0.54,
+      "metrics": {
+        "judge_score": 0.54
+      },
+      "tps": 50.236455060096546,
+      "p95_latency_ms": 43948.75018300002,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_human/results/gemma-4-31b-it@vllm__2026-04-20T03-55-01Z.json"
     },
     {
       "task_id": "datascibench_human",
@@ -801,6 +827,19 @@
     {
       "task_id": "entity_relationship_extraction",
       "task_version": "1.0",
+      "model_id": "gemma-4-31b-it@vllm",
+      "score": 0.8533333333333334,
+      "metrics": {
+        "judge_score": 0.8533333333333334
+      },
+      "tps": 47.69813797910645,
+      "p95_latency_ms": 19151.207226,
+      "cost_usd": null,
+      "result_file": "tasks/entity_relationship_extraction/results/gemma-4-31b-it@vllm__2026-04-20T03-59-14Z.json"
+    },
+    {
+      "task_id": "entity_relationship_extraction",
+      "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
       "score": 0.7866666666666667,
       "metrics": {
@@ -840,6 +879,21 @@
       "p95_latency_ms": 196066.90648200005,
       "cost_usd": null,
       "result_file": "tasks/essay_coherence_scoring/results/qwen3.5-27b@vllm__2026-04-19T13-05-19Z.json"
+    },
+    {
+      "task_id": "essay_coherence_scoring",
+      "task_version": "1.0",
+      "model_id": "gemma-4-31b-it@vllm",
+      "score": 0.35,
+      "metrics": {
+        "accuracy": 0.35,
+        "macro_f1": 0.2916666666666667,
+        "qwk": 0.4722222222222222
+      },
+      "tps": 2.443752331439386,
+      "p95_latency_ms": 1206.9709979999884,
+      "cost_usd": null,
+      "result_file": "tasks/essay_coherence_scoring/results/gemma-4-31b-it@vllm__2026-04-20T03-59-45Z.json"
     },
     {
       "task_id": "essay_coherence_scoring",
@@ -919,6 +973,21 @@
     {
       "task_id": "essay_coherence_scoring_condensed",
       "task_version": "1.0",
+      "model_id": "gemma-4-31b-it@vllm",
+      "score": 0.35,
+      "metrics": {
+        "accuracy": 0.35,
+        "macro_f1": 0.2649122807017544,
+        "qwk": 0.5
+      },
+      "tps": 3.696544247757347,
+      "p95_latency_ms": 846.8199080000147,
+      "cost_usd": null,
+      "result_file": "tasks/essay_coherence_scoring_condensed/results/gemma-4-31b-it@vllm__2026-04-20T04-00-09Z.json"
+    },
+    {
+      "task_id": "essay_coherence_scoring_condensed",
+      "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
       "score": 0.3,
       "metrics": {
@@ -930,6 +999,21 @@
       "p95_latency_ms": 20804.855887,
       "cost_usd": null,
       "result_file": "tasks/essay_coherence_scoring_condensed/results/qwen3-30b@vllm__2026-04-19T02-08-23Z.json"
+    },
+    {
+      "task_id": "essay_grammar_scoring",
+      "task_version": "1.0",
+      "model_id": "gemma-4-31b-it@vllm",
+      "score": 0.45,
+      "metrics": {
+        "accuracy": 0.45,
+        "macro_f1": 0.38014705882352945,
+        "qwk": 0.5
+      },
+      "tps": 2.8084513615518882,
+      "p95_latency_ms": 1213.956483000004,
+      "cost_usd": null,
+      "result_file": "tasks/essay_grammar_scoring/results/gemma-4-31b-it@vllm__2026-04-20T04-00-37Z.json"
     },
     {
       "task_id": "essay_grammar_scoring",
@@ -1024,6 +1108,21 @@
     {
       "task_id": "essay_grammar_scoring_condensed",
       "task_version": "1.0",
+      "model_id": "gemma-4-31b-it@vllm",
+      "score": 0.3,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.20238095238095238,
+        "qwk": 0.32352941176470595
+      },
+      "tps": 2.7408848564309265,
+      "p95_latency_ms": 1250.0344270000028,
+      "cost_usd": null,
+      "result_file": "tasks/essay_grammar_scoring_condensed/results/gemma-4-31b-it@vllm__2026-04-20T04-01-09Z.json"
+    },
+    {
+      "task_id": "essay_grammar_scoring_condensed",
+      "task_version": "1.0",
       "model_id": "gpt-oss-120b@vllm",
       "score": 0.25,
       "metrics": {
@@ -1112,6 +1211,21 @@
       "result_file": "tasks/essay_holistic_scoring/results/qwen3-30b@vllm__2026-04-19T02-29-03Z.json"
     },
     {
+      "task_id": "essay_holistic_scoring",
+      "task_version": "1.0",
+      "model_id": "gemma-4-31b-it@vllm",
+      "score": 0.1111111111111111,
+      "metrics": {
+        "accuracy": 0.1111111111111111,
+        "macro_f1": 0.05128205128205127,
+        "qwk": 0.6376811594202898
+      },
+      "tps": 3.2692946108702894,
+      "p95_latency_ms": 894.8465880000001,
+      "cost_usd": null,
+      "result_file": "tasks/essay_holistic_scoring/results/gemma-4-31b-it@vllm__2026-04-20T04-01-36Z.json"
+    },
+    {
       "task_id": "essay_holistic_scoring_condensed",
       "task_version": "1.0",
       "model_id": "qwen3.5-397b@vllm",
@@ -1170,6 +1284,21 @@
       "p95_latency_ms": 2622.7210419999947,
       "cost_usd": null,
       "result_file": "tasks/essay_holistic_scoring_condensed/results/gpt-oss-120b@vllm__2026-04-20T01-22-26Z.json"
+    },
+    {
+      "task_id": "essay_vocabulary_scoring",
+      "task_version": "1.0",
+      "model_id": "gemma-4-31b-it@vllm",
+      "score": 0.45,
+      "metrics": {
+        "accuracy": 0.45,
+        "macro_f1": 0.33838383838383834,
+        "qwk": 0.45238095238095233
+      },
+      "tps": 3.256419753547631,
+      "p95_latency_ms": 898.3507130000028,
+      "cost_usd": null,
+      "result_file": "tasks/essay_vocabulary_scoring/results/gemma-4-31b-it@vllm__2026-04-20T04-02-26Z.json"
     },
     {
       "task_id": "essay_vocabulary_scoring",
@@ -1264,6 +1393,21 @@
     {
       "task_id": "essay_vocabulary_scoring_condensed",
       "task_version": "1.0",
+      "model_id": "gemma-4-31b-it@vllm",
+      "score": 0.45,
+      "metrics": {
+        "accuracy": 0.45,
+        "macro_f1": 0.3449197860962567,
+        "qwk": 0.5238095238095238
+      },
+      "tps": 2.6478227364315208,
+      "p95_latency_ms": 1146.808584999917,
+      "cost_usd": null,
+      "result_file": "tasks/essay_vocabulary_scoring_condensed/results/gemma-4-31b-it@vllm__2026-04-20T04-02-55Z.json"
+    },
+    {
+      "task_id": "essay_vocabulary_scoring_condensed",
+      "task_version": "1.0",
       "model_id": "qwen3.5-397b@vllm",
       "score": 0.4,
       "metrics": {
@@ -1344,6 +1488,19 @@
       "result_file": "tasks/extractive_qa/results/qwen3.5-397b@vllm__2026-04-18T10-12-04Z.json"
     },
     {
+      "task_id": "extractive_qa",
+      "task_version": "1.0",
+      "model_id": "gemma-4-31b-it@vllm",
+      "score": 0.8,
+      "metrics": {
+        "exact_match": 0.8
+      },
+      "tps": 4.8659265580541025,
+      "p95_latency_ms": 1030.267461000001,
+      "cost_usd": null,
+      "result_file": "tasks/extractive_qa/results/gemma-4-31b-it@vllm__2026-04-20T04-03-17Z.json"
+    },
+    {
       "task_id": "intent_classification",
       "task_version": "1.0",
       "model_id": "qwen3.5-397b@vllm",
@@ -1384,6 +1541,20 @@
       "p95_latency_ms": 153214.081934,
       "cost_usd": null,
       "result_file": "tasks/intent_classification/results/qwen3.5-27b@vllm__2026-04-19T05-00-22Z.json"
+    },
+    {
+      "task_id": "intent_classification",
+      "task_version": "1.0",
+      "model_id": "gemma-4-31b-it@vllm",
+      "score": 1.0,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "tps": 3.1105706317020503,
+      "p95_latency_ms": 1135.1932110000007,
+      "cost_usd": null,
+      "result_file": "tasks/intent_classification/results/gemma-4-31b-it@vllm__2026-04-20T04-03-37Z.json"
     },
     {
       "task_id": "intent_classification",
