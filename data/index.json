@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T13:06:57+00:00",
+  "generated_at": "2026-04-20T13:07:27+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -513,19 +513,6 @@
       "result_file": "tasks/agent_tool_calling/results/qwen3.5-27b@vllm__2026-04-17T05-00-53Z.json"
     },
     {
-      "task_id": "agent_tool_calling",
-      "task_version": "1.0",
-      "model_id": "qwen3.6-35b@vllm",
-      "score": 0.4818181818181818,
-      "metrics": {
-        "judge_score": 0.4818181818181818
-      },
-      "tps": 187.3013483519181,
-      "p95_latency_ms": 207249.483682,
-      "cost_usd": null,
-      "result_file": "tasks/agent_tool_calling/results/qwen3.6-35b@vllm__2026-04-20T05-16-30Z.json"
-    },
-    {
       "task_id": "cefr_level_classification",
       "task_version": "1.0",
       "model_id": "gemma-4-31b-it@vllm",
@@ -877,19 +864,6 @@
       "p95_latency_ms": 42109.275721000005,
       "cost_usd": null,
       "result_file": "tasks/datascibench_csv_excel/results/minimax-m2.7@vllm__2026-04-20T08-42-29Z.json"
-    },
-    {
-      "task_id": "datascibench_csv_excel",
-      "task_version": "1.0",
-      "model_id": "qwen3.6-35b@vllm",
-      "score": 0.5599999999999999,
-      "metrics": {
-        "judge_score": 0.5599999999999999
-      },
-      "tps": 192.40032566588872,
-      "p95_latency_ms": 52943.93000499997,
-      "cost_usd": null,
-      "result_file": "tasks/datascibench_csv_excel/results/qwen3.6-35b@vllm__2026-04-20T05-30-45Z.json"
     },
     {
       "task_id": "datascibench_csv_excel",
