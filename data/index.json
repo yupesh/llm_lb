@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T02:50:01+00:00",
+  "generated_at": "2026-04-20T02:50:31+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -886,6 +886,21 @@
     {
       "task_id": "essay_holistic_scoring",
       "task_version": "1.0",
+      "model_id": "gpt-oss-120b@vllm",
+      "score": 0.2222222222222222,
+      "metrics": {
+        "accuracy": 0.2222222222222222,
+        "macro_f1": 0.10833333333333334,
+        "qwk": 0.29850746268656714
+      },
+      "tps": 123.41370674831053,
+      "p95_latency_ms": 2890.4254629999996,
+      "cost_usd": null,
+      "result_file": "tasks/essay_holistic_scoring/results/gpt-oss-120b@vllm__2026-04-20T01-21-35Z.json"
+    },
+    {
+      "task_id": "essay_holistic_scoring",
+      "task_version": "1.0",
       "model_id": "qwen3.5-27b@vllm",
       "score": 0.2222222222222222,
       "metrics": {
@@ -974,6 +989,21 @@
       "result_file": "tasks/essay_holistic_scoring_condensed/results/qwen3.5-27b@vllm__2026-04-19T17-09-54Z.json"
     },
     {
+      "task_id": "essay_holistic_scoring_condensed",
+      "task_version": "1.0",
+      "model_id": "gpt-oss-120b@vllm",
+      "score": 0.1111111111111111,
+      "metrics": {
+        "accuracy": 0.1111111111111111,
+        "macro_f1": 0.0625,
+        "qwk": 0.22388059701492524
+      },
+      "tps": 99.36235454320219,
+      "p95_latency_ms": 2622.7210419999947,
+      "cost_usd": null,
+      "result_file": "tasks/essay_holistic_scoring_condensed/results/gpt-oss-120b@vllm__2026-04-20T01-22-26Z.json"
+    },
+    {
       "task_id": "essay_vocabulary_scoring",
       "task_version": "1.0",
       "model_id": "qwen3.5-397b@vllm",
@@ -1019,6 +1049,21 @@
       "result_file": "tasks/essay_vocabulary_scoring/results/qwen3.5-27b@vllm__2026-04-19T17-51-43Z.json"
     },
     {
+      "task_id": "essay_vocabulary_scoring",
+      "task_version": "1.0",
+      "model_id": "gpt-oss-120b@vllm",
+      "score": 0.3,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.20512820512820512,
+        "qwk": 0.48
+      },
+      "tps": 119.94503904800202,
+      "p95_latency_ms": 2495.8516079999954,
+      "cost_usd": null,
+      "result_file": "tasks/essay_vocabulary_scoring/results/gpt-oss-120b@vllm__2026-04-20T01-23-13Z.json"
+    },
+    {
       "task_id": "essay_vocabulary_scoring_condensed",
       "task_version": "1.0",
       "model_id": "qwen3.5-27b@vllm",
@@ -1032,6 +1077,21 @@
       "p95_latency_ms": 210651.34969099972,
       "cost_usd": null,
       "result_file": "tasks/essay_vocabulary_scoring_condensed/results/qwen3.5-27b@vllm__2026-04-19T18-37-24Z.json"
+    },
+    {
+      "task_id": "essay_vocabulary_scoring_condensed",
+      "task_version": "1.0",
+      "model_id": "gpt-oss-120b@vllm",
+      "score": 0.45,
+      "metrics": {
+        "accuracy": 0.45,
+        "macro_f1": 0.38888888888888884,
+        "qwk": 0.5
+      },
+      "tps": 101.2806559055711,
+      "p95_latency_ms": 2436.0154230000717,
+      "cost_usd": null,
+      "result_file": "tasks/essay_vocabulary_scoring_condensed/results/gpt-oss-120b@vllm__2026-04-20T01-23-58Z.json"
     },
     {
       "task_id": "essay_vocabulary_scoring_condensed",
@@ -1075,6 +1135,19 @@
       "p95_latency_ms": 19751.121671999997,
       "cost_usd": null,
       "result_file": "tasks/extractive_qa/results/qwen3-30b@vllm__2026-04-19T01-09-32Z.json"
+    },
+    {
+      "task_id": "extractive_qa",
+      "task_version": "1.0",
+      "model_id": "gpt-oss-120b@vllm",
+      "score": 0.8,
+      "metrics": {
+        "exact_match": 0.8
+      },
+      "tps": 63.918401849632765,
+      "p95_latency_ms": 1573.1196449999984,
+      "cost_usd": null,
+      "result_file": "tasks/extractive_qa/results/gpt-oss-120b@vllm__2026-04-20T01-24-23Z.json"
     },
     {
       "task_id": "extractive_qa",
@@ -1145,6 +1218,20 @@
       "result_file": "tasks/intent_classification/results/qwen3.5-27b@vllm__2026-04-19T05-00-22Z.json"
     },
     {
+      "task_id": "intent_classification",
+      "task_version": "1.0",
+      "model_id": "gpt-oss-120b@vllm",
+      "score": 0.9,
+      "metrics": {
+        "accuracy": 0.9,
+        "macro_f1": 0.9
+      },
+      "tps": 36.26523554580773,
+      "p95_latency_ms": 1363.5966970000197,
+      "cost_usd": null,
+      "result_file": "tasks/intent_classification/results/gpt-oss-120b@vllm__2026-04-20T01-24-49Z.json"
+    },
+    {
       "task_id": "jailbreak_detection",
       "task_version": "1.0",
       "model_id": "qwen3.5-397b@vllm",
@@ -1157,6 +1244,20 @@
       "p95_latency_ms": 8553.305899999998,
       "cost_usd": null,
       "result_file": "tasks/jailbreak_detection/results/qwen3.5-397b@vllm__2026-04-18T09-46-01Z.json"
+    },
+    {
+      "task_id": "jailbreak_detection",
+      "task_version": "1.0",
+      "model_id": "gpt-oss-120b@vllm",
+      "score": 1.0,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "tps": 77.07698333596689,
+      "p95_latency_ms": 2676.501300000041,
+      "cost_usd": null,
+      "result_file": "tasks/jailbreak_detection/results/gpt-oss-120b@vllm__2026-04-20T01-25-29Z.json"
     },
     {
       "task_id": "jailbreak_detection",
