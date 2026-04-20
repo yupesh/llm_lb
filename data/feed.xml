@@ -91,6 +91,13 @@
     <summary>accuracy=1.000, macro_f1=1.000</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/intent_classification/1.0/qwen3.6-35b@vllm/2026-04-20T06:20:23+00:00</id>
+    <title>qwen3.6-35b@vllm scored 1.000 accuracy on intent_classification v1.0</title>
+    <updated>2026-04-20T06:20:23+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/intent_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=1.000, macro_f1=1.000</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/extractive_qa/1.0/qwen3.6-35b@vllm/2026-04-20T06:19:40+00:00</id>
     <title>qwen3.6-35b@vllm scored 0.900 exact_match on extractive_qa v1.0</title>
     <updated>2026-04-20T06:19:40+00:00</updated>
@@ -348,12 +355,5 @@
     <updated>2026-04-20T04:01:09+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_grammar_scoring_condensed" rel="alternate" type="text/html"/>
     <summary>accuracy=0.300, macro_f1=0.202, qwk=0.324</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_grammar_scoring/1.0/gemma-4-31b-it@vllm/2026-04-20T04:00:37+00:00</id>
-    <title>gemma-4-31b-it@vllm scored 0.450 accuracy on essay_grammar_scoring v1.0</title>
-    <updated>2026-04-20T04:00:37+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_grammar_scoring" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.450, macro_f1=0.380, qwk=0.500</summary>
   </entry>
 </feed>
