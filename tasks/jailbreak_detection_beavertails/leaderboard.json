@@ -1,0 +1,20 @@
+{
+  "task_id": "jailbreak_detection_beavertails",
+  "task_version": "1.0",
+  "primary_metric": "accuracy",
+  "ranking": [
+    {
+      "model_id": "minimax-m2.7@vllm",
+      "score": 0.75,
+      "metrics": {
+        "accuracy": 0.75,
+        "macro_f1": 0.7333333333333334
+      },
+      "tps": 89.49221449760262,
+      "p95_latency_ms": 4642.007580000012,
+      "cost_usd": null,
+      "result_file": "results/minimax-m2.7@vllm__2026-04-20T13-11-25Z.json"
+    }
+  ],
+  "updated_at": "2026-04-20T13:35:59+00:00"
+}

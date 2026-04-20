@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T13:35:28+00:00",
+  "generated_at": "2026-04-20T13:35:59+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -2096,6 +2096,20 @@
       "result_file": "tasks/extractive_qa/results/gemma-4-31b-it@vllm__2026-04-20T04-03-17Z.json"
     },
     {
+      "task_id": "hazard_category",
+      "task_version": "1.0",
+      "model_id": "minimax-m2.7@vllm",
+      "score": 0.55,
+      "metrics": {
+        "accuracy": 0.55,
+        "macro_f1": 0.4238095238095238
+      },
+      "tps": 95.37450859860446,
+      "p95_latency_ms": 4340.996621000002,
+      "cost_usd": null,
+      "result_file": "tasks/hazard_category/results/minimax-m2.7@vllm__2026-04-20T13-10-27Z.json"
+    },
+    {
       "task_id": "intent_classification",
       "task_version": "1.0",
       "model_id": "qwen3.6-35b@vllm",
@@ -2290,6 +2304,20 @@
       "p95_latency_ms": 1284.521178999995,
       "cost_usd": null,
       "result_file": "tasks/jailbreak_detection/results/gemma-4-31b-it@vllm__2026-04-20T04-04-09Z.json"
+    },
+    {
+      "task_id": "jailbreak_detection_beavertails",
+      "task_version": "1.0",
+      "model_id": "minimax-m2.7@vllm",
+      "score": 0.75,
+      "metrics": {
+        "accuracy": 0.75,
+        "macro_f1": 0.7333333333333334
+      },
+      "tps": 89.49221449760262,
+      "p95_latency_ms": 4642.007580000012,
+      "cost_usd": null,
+      "result_file": "tasks/jailbreak_detection_beavertails/results/minimax-m2.7@vllm__2026-04-20T13-11-25Z.json"
     },
     {
       "task_id": "kg_entity_name_refinement",

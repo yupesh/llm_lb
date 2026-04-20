@@ -14,6 +14,20 @@
     <summary>accuracy=0.500, macro_f1=0.333</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection_beavertails/1.0/minimax-m2.7@vllm/2026-04-20T13:11:25+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.750 accuracy on jailbreak_detection_beavertails v1.0</title>
+    <updated>2026-04-20T13:11:25+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection_beavertails" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.750, macro_f1=0.733</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/hazard_category/1.0/minimax-m2.7@vllm/2026-04-20T13:10:27+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.550 accuracy on hazard_category v1.0</title>
+    <updated>2026-04-20T13:10:27+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/hazard_category" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.550, macro_f1=0.424</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/topic_classification/1.0/minimax-m2.7@vllm/2026-04-20T12:30:58+00:00</id>
     <title>minimax-m2.7@vllm scored 1.000 accuracy on topic_classification v1.0</title>
     <updated>2026-04-20T12:30:58+00:00</updated>
@@ -341,19 +355,5 @@
     <updated>2026-04-20T06:20:23+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/intent_classification" rel="alternate" type="text/html"/>
     <summary>accuracy=1.000, macro_f1=1.000</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/extractive_qa/1.0/qwen3.6-35b@vllm/2026-04-20T06:19:40+00:00</id>
-    <title>qwen3.6-35b@vllm scored 0.900 exact_match on extractive_qa v1.0</title>
-    <updated>2026-04-20T06:19:40+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/extractive_qa" rel="alternate" type="text/html"/>
-    <summary>exact_match=0.900</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring_condensed/1.0/qwen3.6-35b@vllm/2026-04-20T06:19:00+00:00</id>
-    <title>qwen3.6-35b@vllm scored 0.500 accuracy on essay_vocabulary_scoring_condensed v1.0</title>
-    <updated>2026-04-20T06:19:00+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.500, macro_f1=0.496, qwk=0.783</summary>
   </entry>
 </feed>
