@@ -35,6 +35,34 @@
     <summary>judge_score=0.467</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/summarization/1.0/minimax-m2.7@vllm/2026-04-20T10:16:32+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.880 judge_score on summarization v1.0</title>
+    <updated>2026-04-20T10:16:32+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/summarization" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.880</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/retail_agent_dialog/1.0/minimax-m2.7@vllm/2026-04-20T10:16:02+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.479 judge_score on retail_agent_dialog v1.0</title>
+    <updated>2026-04-20T10:16:02+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/retail_agent_dialog" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.479</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/oos_detection/1.0/minimax-m2.7@vllm/2026-04-20T09:46:33+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.467 accuracy on oos_detection v1.0</title>
+    <updated>2026-04-20T09:46:33+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/oos_detection" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.467, macro_f1=0.318</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_triplet_extraction/1.0/minimax-m2.7@vllm/2026-04-20T09:45:36+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.660 judge_score on kg_triplet_extraction v1.0</title>
+    <updated>2026-04-20T09:45:36+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_triplet_extraction" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.660</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/topic_classification/1.0/qwen3.6-35b@vllm/2026-04-20T07:41:10+00:00</id>
     <title>qwen3.6-35b@vllm scored 1.000 accuracy on topic_classification v1.0</title>
     <updated>2026-04-20T07:41:10+00:00</updated>
@@ -327,33 +355,5 @@
     <updated>2026-04-20T04:05:44+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_entity_type_refinement" rel="alternate" type="text/html"/>
     <summary>judge_score=0.690</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_entity_name_refinement/1.0/gemma-4-31b-it@vllm/2026-04-20T04:04:49+00:00</id>
-    <title>gemma-4-31b-it@vllm scored 0.890 judge_score on kg_entity_name_refinement v1.0</title>
-    <updated>2026-04-20T04:04:49+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_entity_name_refinement" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.890</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection/1.0/gemma-4-31b-it@vllm/2026-04-20T04:04:09+00:00</id>
-    <title>gemma-4-31b-it@vllm scored 1.000 accuracy on jailbreak_detection v1.0</title>
-    <updated>2026-04-20T04:04:09+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection" rel="alternate" type="text/html"/>
-    <summary>accuracy=1.000, macro_f1=1.000</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/intent_classification/1.0/gemma-4-31b-it@vllm/2026-04-20T04:03:37+00:00</id>
-    <title>gemma-4-31b-it@vllm scored 1.000 accuracy on intent_classification v1.0</title>
-    <updated>2026-04-20T04:03:37+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/intent_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=1.000, macro_f1=1.000</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/extractive_qa/1.0/gemma-4-31b-it@vllm/2026-04-20T04:03:17+00:00</id>
-    <title>gemma-4-31b-it@vllm scored 0.800 exact_match on extractive_qa v1.0</title>
-    <updated>2026-04-20T04:03:17+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/extractive_qa" rel="alternate" type="text/html"/>
-    <summary>exact_match=0.800</summary>
   </entry>
 </feed>
