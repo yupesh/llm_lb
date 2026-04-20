@@ -14,6 +14,76 @@
     <summary>accuracy=1.000, macro_f1=1.000</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text_classification/1.0/gpt-oss-120b@vllm/2026-04-20T01:55:38+00:00</id>
+    <title>gpt-oss-120b@vllm scored 1.000 accuracy on text_classification v1.0</title>
+    <updated>2026-04-20T01:55:38+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=1.000, macro_f1=1.000</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_bird/1.0/gpt-oss-120b@vllm/2026-04-20T01:55:10+00:00</id>
+    <title>gpt-oss-120b@vllm scored 0.709 judge_score on text2sql_bird v1.0</title>
+    <updated>2026-04-20T01:55:10+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_bird" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.709</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_ambiguity/1.0/gpt-oss-120b@vllm/2026-04-20T01:53:31+00:00</id>
+    <title>gpt-oss-120b@vllm scored 0.508 judge_score on text2sql_ambiguity v1.0</title>
+    <updated>2026-04-20T01:53:31+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_ambiguity" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.508</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/summarization/1.0/gpt-oss-120b@vllm/2026-04-20T01:47:42+00:00</id>
+    <title>gpt-oss-120b@vllm scored 0.880 judge_score on summarization v1.0</title>
+    <updated>2026-04-20T01:47:42+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/summarization" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.880</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/retail_agent_dialog/1.0/gpt-oss-120b@vllm/2026-04-20T01:47:21+00:00</id>
+    <title>gpt-oss-120b@vllm scored 0.552 judge_score on retail_agent_dialog v1.0</title>
+    <updated>2026-04-20T01:47:21+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/retail_agent_dialog" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.552</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/oos_detection/1.0/gpt-oss-120b@vllm/2026-04-20T01:31:25+00:00</id>
+    <title>gpt-oss-120b@vllm scored 0.467 accuracy on oos_detection v1.0</title>
+    <updated>2026-04-20T01:31:25+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/oos_detection" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.467, macro_f1=0.365</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_triplet_extraction/1.0/gpt-oss-120b@vllm/2026-04-20T01:30:42+00:00</id>
+    <title>gpt-oss-120b@vllm scored 0.550 judge_score on kg_triplet_extraction v1.0</title>
+    <updated>2026-04-20T01:30:42+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_triplet_extraction" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.550</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_relation_refinement/1.0/gpt-oss-120b@vllm/2026-04-20T01:28:28+00:00</id>
+    <title>gpt-oss-120b@vllm scored 0.890 judge_score on kg_relation_refinement v1.0</title>
+    <updated>2026-04-20T01:28:28+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_relation_refinement" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.890</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_entity_type_refinement/1.0/gpt-oss-120b@vllm/2026-04-20T01:27:23+00:00</id>
+    <title>gpt-oss-120b@vllm scored 0.560 judge_score on kg_entity_type_refinement v1.0</title>
+    <updated>2026-04-20T01:27:23+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_entity_type_refinement" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.560</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_entity_name_refinement/1.0/gpt-oss-120b@vllm/2026-04-20T01:26:15+00:00</id>
+    <title>gpt-oss-120b@vllm scored 0.850 judge_score on kg_entity_name_refinement v1.0</title>
+    <updated>2026-04-20T01:26:15+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_entity_name_refinement" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.850</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_human/1.0/qwen3.5-27b@vllm/2026-04-20T00:23:04+00:00</id>
     <title>qwen3.5-27b@vllm scored 0.380 judge_score on datascibench_human v1.0</title>
     <updated>2026-04-20T00:23:04+00:00</updated>
@@ -285,75 +355,5 @@
     <updated>2026-04-19T01:42:14+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_triplet_extraction" rel="alternate" type="text/html"/>
     <summary>judge_score=0.540</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_relation_refinement/1.0/qwen3-30b@vllm/2026-04-19T01:25:33+00:00</id>
-    <title>qwen3-30b@vllm scored 0.780 judge_score on kg_relation_refinement v1.0</title>
-    <updated>2026-04-19T01:25:33+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_relation_refinement" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.780</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_entity_type_refinement/1.0/qwen3-30b@vllm/2026-04-19T01:21:21+00:00</id>
-    <title>qwen3-30b@vllm scored 0.640 judge_score on kg_entity_type_refinement v1.0</title>
-    <updated>2026-04-19T01:21:21+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_entity_type_refinement" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.640</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_entity_name_refinement/1.0/qwen3-30b@vllm/2026-04-19T01:13:29+00:00</id>
-    <title>qwen3-30b@vllm scored 0.850 judge_score on kg_entity_name_refinement v1.0</title>
-    <updated>2026-04-19T01:13:29+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_entity_name_refinement" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.850</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/extractive_qa/1.0/qwen3-30b@vllm/2026-04-19T01:09:32+00:00</id>
-    <title>qwen3-30b@vllm scored 1.000 exact_match on extractive_qa v1.0</title>
-    <updated>2026-04-19T01:09:32+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/extractive_qa" rel="alternate" type="text/html"/>
-    <summary>exact_match=1.000</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/oos_detection/1.0/qwen3-30b@vllm/2026-04-19T01:08:14+00:00</id>
-    <title>qwen3-30b@vllm scored 0.500 accuracy on oos_detection v1.0</title>
-    <updated>2026-04-19T01:08:14+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/oos_detection" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.500, macro_f1=0.422</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection/1.0/qwen3-30b@vllm/2026-04-19T01:05:20+00:00</id>
-    <title>qwen3-30b@vllm scored 1.000 accuracy on jailbreak_detection v1.0</title>
-    <updated>2026-04-19T01:05:20+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection" rel="alternate" type="text/html"/>
-    <summary>accuracy=1.000, macro_f1=1.000</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/topic_classification/1.0/qwen3-30b@vllm/2026-04-19T01:02:54+00:00</id>
-    <title>qwen3-30b@vllm scored 1.000 accuracy on topic_classification v1.0</title>
-    <updated>2026-04-19T01:02:54+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/topic_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=1.000, macro_f1=1.000</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/text_classification/1.0/qwen3-30b@vllm/2026-04-19T01:01:40+00:00</id>
-    <title>qwen3-30b@vllm scored 1.000 accuracy on text_classification v1.0</title>
-    <updated>2026-04-19T01:01:40+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/text_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=1.000, macro_f1=1.000</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification/1.0/qwen3.5-397b@vllm/2026-04-19T00:59:11+00:00</id>
-    <title>qwen3.5-397b@vllm scored 0.400 accuracy on cefr_level_classification v1.0</title>
-    <updated>2026-04-19T00:59:11+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.400, macro_f1=0.299, qwk=0.300</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/summarization/1.0/qwen3.5-397b@vllm/2026-04-18T21:04:30+00:00</id>
-    <title>qwen3.5-397b@vllm scored 0.800 judge_score on summarization v1.0</title>
-    <updated>2026-04-18T21:04:30+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/summarization" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.800</summary>
   </entry>
 </feed>

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T02:49:14+00:00",
+  "generated_at": "2026-04-20T02:50:01+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -1202,6 +1202,19 @@
     {
       "task_id": "kg_entity_name_refinement",
       "task_version": "1.0",
+      "model_id": "gpt-oss-120b@vllm",
+      "score": 0.85,
+      "metrics": {
+        "judge_score": 0.85
+      },
+      "tps": 93.81285212549031,
+      "p95_latency_ms": 1659.0145490000054,
+      "cost_usd": null,
+      "result_file": "tasks/kg_entity_name_refinement/results/gpt-oss-120b@vllm__2026-04-20T01-26-15Z.json"
+    },
+    {
+      "task_id": "kg_entity_name_refinement",
+      "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
       "score": 0.85,
       "metrics": {
@@ -1265,6 +1278,19 @@
       "result_file": "tasks/kg_entity_type_refinement/results/qwen3-30b@vllm__2026-04-19T01-21-21Z.json"
     },
     {
+      "task_id": "kg_entity_type_refinement",
+      "task_version": "1.0",
+      "model_id": "gpt-oss-120b@vllm",
+      "score": 0.56,
+      "metrics": {
+        "judge_score": 0.56
+      },
+      "tps": 105.66736402848032,
+      "p95_latency_ms": 2311.877240000001,
+      "cost_usd": null,
+      "result_file": "tasks/kg_entity_type_refinement/results/gpt-oss-120b@vllm__2026-04-20T01-27-23Z.json"
+    },
+    {
       "task_id": "kg_relation_refinement",
       "task_version": "1.0",
       "model_id": "qwen3.5-397b@vllm",
@@ -1289,6 +1315,19 @@
       "p95_latency_ms": 66460.45807500002,
       "cost_usd": null,
       "result_file": "tasks/kg_relation_refinement/results/qwen3.5-27b@vllm__2026-04-19T19-03-31Z.json"
+    },
+    {
+      "task_id": "kg_relation_refinement",
+      "task_version": "1.0",
+      "model_id": "gpt-oss-120b@vllm",
+      "score": 0.89,
+      "metrics": {
+        "judge_score": 0.89
+      },
+      "tps": 83.50678879766032,
+      "p95_latency_ms": 2028.5687009999974,
+      "cost_usd": null,
+      "result_file": "tasks/kg_relation_refinement/results/gpt-oss-120b@vllm__2026-04-20T01-28-28Z.json"
     },
     {
       "task_id": "kg_relation_refinement",
@@ -1328,6 +1367,19 @@
       "p95_latency_ms": 447927.2906839999,
       "cost_usd": null,
       "result_file": "tasks/kg_triplet_extraction/results/qwen3.5-397b@vllm__2026-04-18T11-26-00Z.json"
+    },
+    {
+      "task_id": "kg_triplet_extraction",
+      "task_version": "1.0",
+      "model_id": "gpt-oss-120b@vllm",
+      "score": 0.55,
+      "metrics": {
+        "judge_score": 0.55
+      },
+      "tps": 139.70876660544417,
+      "p95_latency_ms": 6856.595255000002,
+      "cost_usd": null,
+      "result_file": "tasks/kg_triplet_extraction/results/gpt-oss-120b@vllm__2026-04-20T01-30-42Z.json"
     },
     {
       "task_id": "kg_triplet_extraction",
@@ -1373,6 +1425,20 @@
     {
       "task_id": "oos_detection",
       "task_version": "1.0",
+      "model_id": "gpt-oss-120b@vllm",
+      "score": 0.4666666666666667,
+      "metrics": {
+        "accuracy": 0.4666666666666667,
+        "macro_f1": 0.3650793650793651
+      },
+      "tps": 76.0999738594511,
+      "p95_latency_ms": 1864.9019190000047,
+      "cost_usd": null,
+      "result_file": "tasks/oos_detection/results/gpt-oss-120b@vllm__2026-04-20T01-31-25Z.json"
+    },
+    {
+      "task_id": "oos_detection",
+      "task_version": "1.0",
       "model_id": "qwen3.5-27b@vllm",
       "score": 0.43333333333333335,
       "metrics": {
@@ -1400,6 +1466,19 @@
     {
       "task_id": "retail_agent_dialog",
       "task_version": "1.0",
+      "model_id": "gpt-oss-120b@vllm",
+      "score": 0.5515151515151515,
+      "metrics": {
+        "judge_score": 0.5515151515151515
+      },
+      "tps": 114.197970339921,
+      "p95_latency_ms": 48123.081974999994,
+      "cost_usd": null,
+      "result_file": "tasks/retail_agent_dialog/results/gpt-oss-120b@vllm__2026-04-20T01-47-21Z.json"
+    },
+    {
+      "task_id": "retail_agent_dialog",
+      "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
       "score": 0.4,
       "metrics": {
@@ -1422,6 +1501,19 @@
       "p95_latency_ms": 380661.14249600016,
       "cost_usd": null,
       "result_file": "tasks/retail_agent_dialog/results/qwen3.5-397b@vllm__2026-04-16T13-47-44Z.json"
+    },
+    {
+      "task_id": "summarization",
+      "task_version": "1.0",
+      "model_id": "gpt-oss-120b@vllm",
+      "score": 0.8800000000000001,
+      "metrics": {
+        "judge_score": 0.8800000000000001
+      },
+      "tps": 90.53476790327322,
+      "p95_latency_ms": 1409.864220000003,
+      "cost_usd": null,
+      "result_file": "tasks/summarization/results/gpt-oss-120b@vllm__2026-04-20T01-47-42Z.json"
     },
     {
       "task_id": "summarization",
@@ -1541,6 +1633,32 @@
       "result_file": "tasks/text2sql_ambiguity/results/qwen3-30b@vllm__2026-04-19T03-20-20Z.json"
     },
     {
+      "task_id": "text2sql_ambiguity",
+      "task_version": "1.0",
+      "model_id": "gpt-oss-120b@vllm",
+      "score": 0.5083333333333334,
+      "metrics": {
+        "judge_score": 0.5083333333333334
+      },
+      "tps": 142.15791014671774,
+      "p95_latency_ms": 6822.1536,
+      "cost_usd": null,
+      "result_file": "tasks/text2sql_ambiguity/results/gpt-oss-120b@vllm__2026-04-20T01-53-31Z.json"
+    },
+    {
+      "task_id": "text2sql_bird",
+      "task_version": "1.0",
+      "model_id": "gpt-oss-120b@vllm",
+      "score": 0.7090909090909091,
+      "metrics": {
+        "judge_score": 0.7090909090909091
+      },
+      "tps": 124.37212901872131,
+      "p95_latency_ms": 4717.481081000016,
+      "cost_usd": null,
+      "result_file": "tasks/text2sql_bird/results/gpt-oss-120b@vllm__2026-04-20T01-55-10Z.json"
+    },
+    {
       "task_id": "text2sql_bird",
       "task_version": "1.0",
       "model_id": "qwen3.5-27b@vllm",
@@ -1606,6 +1724,20 @@
       "p95_latency_ms": 3366.7398550000057,
       "cost_usd": null,
       "result_file": "tasks/text_classification/results/qwen3.5-397b@vllm__2026-04-18T09-38-47Z.json"
+    },
+    {
+      "task_id": "text_classification",
+      "task_version": "1.0",
+      "model_id": "gpt-oss-120b@vllm",
+      "score": 1.0,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "tps": 34.07832827606269,
+      "p95_latency_ms": 1682.6667670000006,
+      "cost_usd": null,
+      "result_file": "tasks/text_classification/results/gpt-oss-120b@vllm__2026-04-20T01-55-38Z.json"
     },
     {
       "task_id": "text_classification",
