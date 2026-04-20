@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T11:23:13+00:00",
+  "generated_at": "2026-04-20T11:24:09+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -2671,6 +2671,19 @@
       "p95_latency_ms": 67018.43252599998,
       "cost_usd": null,
       "result_file": "tasks/temporal_information_extraction/results/qwen3.5-397b@vllm__2026-04-16T17-03-33Z.json"
+    },
+    {
+      "task_id": "temporal_information_extraction",
+      "task_version": "1.0",
+      "model_id": "minimax-m2.7@vllm",
+      "score": 0.6571428571428571,
+      "metrics": {
+        "judge_score": 0.6571428571428571
+      },
+      "tps": 30.859226443526627,
+      "p95_latency_ms": 274794.8990140001,
+      "cost_usd": null,
+      "result_file": "tasks/temporal_information_extraction/results/minimax-m2.7@vllm__2026-04-20T10-36-40Z.json"
     },
     {
       "task_id": "temporal_information_extraction",

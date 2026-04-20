@@ -35,6 +35,13 @@
     <summary>judge_score=0.467</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/temporal_information_extraction/1.0/minimax-m2.7@vllm/2026-04-20T10:36:40+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.657 judge_score on temporal_information_extraction v1.0</title>
+    <updated>2026-04-20T10:36:40+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/temporal_information_extraction" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.657</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/summarization/1.0/minimax-m2.7@vllm/2026-04-20T10:16:32+00:00</id>
     <title>minimax-m2.7@vllm scored 0.880 judge_score on summarization v1.0</title>
     <updated>2026-04-20T10:16:32+00:00</updated>
@@ -348,12 +355,5 @@
     <updated>2026-04-20T04:09:30+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/oos_detection" rel="alternate" type="text/html"/>
     <summary>accuracy=0.533, macro_f1=0.475</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_triplet_extraction/1.0/gemma-4-31b-it@vllm/2026-04-20T04:08:55+00:00</id>
-    <title>gemma-4-31b-it@vllm scored 0.580 judge_score on kg_triplet_extraction v1.0</title>
-    <updated>2026-04-20T04:08:55+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_triplet_extraction" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.580</summary>
   </entry>
 </feed>
