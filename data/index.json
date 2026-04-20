@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T07:47:58+00:00",
+  "generated_at": "2026-04-20T07:48:13+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -456,6 +456,19 @@
       "result_file": "tasks/agent_tool_calling/results/qwen3.5-27b@vllm__2026-04-17T05-00-53Z.json"
     },
     {
+      "task_id": "agent_tool_calling",
+      "task_version": "1.0",
+      "model_id": "qwen3.6-35b@vllm",
+      "score": 0.4818181818181818,
+      "metrics": {
+        "judge_score": 0.4818181818181818
+      },
+      "tps": 187.3013483519181,
+      "p95_latency_ms": 207249.483682,
+      "cost_usd": null,
+      "result_file": "tasks/agent_tool_calling/results/qwen3.6-35b@vllm__2026-04-20T05-16-30Z.json"
+    },
+    {
       "task_id": "cefr_level_classification",
       "task_version": "1.0",
       "model_id": "gemma-4-31b-it@vllm",
@@ -529,6 +542,21 @@
       "p95_latency_ms": 209172.17487999983,
       "cost_usd": null,
       "result_file": "tasks/cefr_level_classification/results/qwen3.5-27b@vllm__2026-04-19T07-30-20Z.json"
+    },
+    {
+      "task_id": "cefr_level_classification",
+      "task_version": "1.0",
+      "model_id": "qwen3.6-35b@vllm",
+      "score": 0.25,
+      "metrics": {
+        "accuracy": 0.25,
+        "macro_f1": 0.1388888888888889,
+        "qwk": 0.2678571428571429
+      },
+      "tps": 181.58782957775375,
+      "p95_latency_ms": 10041.364384000019,
+      "cost_usd": null,
+      "result_file": "tasks/cefr_level_classification/results/qwen3.6-35b@vllm__2026-04-20T05-19-16Z.json"
     },
     {
       "task_id": "cefr_level_classification_condensed",
