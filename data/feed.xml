@@ -98,6 +98,27 @@
     <summary>accuracy=0.300, macro_f1=0.198, qwk=0.442</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification/1.0/minimax-m2.7@vllm/2026-04-20T12:06:55+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.300 accuracy on cefr_level_classification v1.0</title>
+    <updated>2026-04-20T12:06:55+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.300, macro_f1=0.202, qwk=0.500</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification/1.0/minimax-m2.7@vllm/2026-04-20T12:00:44+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.300 accuracy on cefr_level_classification v1.0</title>
+    <updated>2026-04-20T12:00:44+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.300, macro_f1=0.197, qwk=0.463</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/agent_tool_calling/1.0/minimax-m2.7@vllm/2026-04-20T11:58:37+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.464 judge_score on agent_tool_calling v1.0</title>
+    <updated>2026-04-20T11:58:37+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/agent_tool_calling" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.464</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_bird/1.0/minimax-m2.7@vllm/2026-04-20T11:07:00+00:00</id>
     <title>minimax-m2.7@vllm scored 0.636 judge_score on text2sql_bird v1.0</title>
     <updated>2026-04-20T11:07:00+00:00</updated>
@@ -334,26 +355,5 @@
     <updated>2026-04-20T06:13:02+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_holistic_scoring_condensed" rel="alternate" type="text/html"/>
     <summary>accuracy=0.056, macro_f1=0.026, qwk=0.431</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_holistic_scoring/1.0/qwen3.6-35b@vllm/2026-04-20T06:10:03+00:00</id>
-    <title>qwen3.6-35b@vllm scored 0.167 accuracy on essay_holistic_scoring v1.0</title>
-    <updated>2026-04-20T06:10:03+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_holistic_scoring" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.167, macro_f1=0.098, qwk=0.522</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_grammar_scoring_condensed/1.0/qwen3.6-35b@vllm/2026-04-20T06:06:47+00:00</id>
-    <title>qwen3.6-35b@vllm scored 0.400 accuracy on essay_grammar_scoring_condensed v1.0</title>
-    <updated>2026-04-20T06:06:47+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_grammar_scoring_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.400, macro_f1=0.335, qwk=0.447</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_grammar_scoring/1.0/qwen3.6-35b@vllm/2026-04-20T06:03:45+00:00</id>
-    <title>qwen3.6-35b@vllm scored 0.300 accuracy on essay_grammar_scoring v1.0</title>
-    <updated>2026-04-20T06:03:45+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_grammar_scoring" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.300, macro_f1=0.188, qwk=0.333</summary>
   </entry>
 </feed>

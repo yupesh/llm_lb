@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T13:02:29+00:00",
+  "generated_at": "2026-04-20T13:02:44+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -599,6 +599,21 @@
       "p95_latency_ms": 209172.17487999983,
       "cost_usd": null,
       "result_file": "tasks/cefr_level_classification/results/qwen3.5-27b@vllm__2026-04-19T07-30-20Z.json"
+    },
+    {
+      "task_id": "cefr_level_classification",
+      "task_version": "1.0",
+      "model_id": "minimax-m2.7@vllm",
+      "score": 0.3,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.1970588235294118,
+        "qwk": 0.4629629629629629
+      },
+      "tps": 107.47437670268484,
+      "p95_latency_ms": 7058.7596089999915,
+      "cost_usd": null,
+      "result_file": "tasks/cefr_level_classification/results/minimax-m2.7@vllm__2026-04-20T12-00-44Z.json"
     },
     {
       "task_id": "cefr_level_classification",
