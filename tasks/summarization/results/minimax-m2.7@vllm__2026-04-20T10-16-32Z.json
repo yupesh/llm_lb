@@ -1,0 +1,87 @@
+{
+  "model_id": "minimax-m2.7@vllm",
+  "model_revision": "2026-04-20",
+  "task_id": "summarization",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "2c5723a9c9440b71",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "judge_score": 0.8800000000000001
+  },
+  "tps": 58.39971255296491,
+  "p95_latency_ms": 2144.8492749999987,
+  "n_samples": 5,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "sample_001",
+      "prediction": "<think>The user wants me to summarize the paragraph about the James Webb Space Telescope in a single sentence. I need to capture the key information: what it is, when launched, its significance (largest optical telescope in space), its purpose (observing early galaxies with infrared), and who operates it.\n\nLet me create a concise one-sentence summary.\n</think>\n\nThe James Webb Space Telescope, launched in December 2021 as the largest optical telescope in space, uses infrared instruments to observe early galaxies and is operated by NASA, ESA and the Canadian Space Agency.",
+      "expected": "JWST, launched in December 2021, is the largest space telescope and observes early-universe galaxies in infrared as a NASA-ESA-CSA project.",
+      "correct": false,
+      "latency_ms": 2133.240233999999,
+      "input_tokens": 97,
+      "output_tokens": 112,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "sample_002",
+      "prediction": "<think>The user wants me to summarize a paragraph about Python's asyncio library in a single sentence. The key points are:\n- asyncio library\n- event-loop-based concurrency\n- single thread handling thousands of connections\n- suspending coroutines during I/O wait\n- standard for high-throughput network services in Python\n\nI need to condense this into one concise sentence.\n</think>\n\nPython's `asyncio` provides an event-loop-based concurrency model that enables a single thread to handle thousands of network connections by suspending coroutines during I/O waits, making it the standard for high-throughput network services in pure Python.",
+      "expected": "Python's asyncio enables high-throughput single-threaded networking by suspending coroutines on I/O via an event loop.",
+      "correct": false,
+      "latency_ms": 1967.431001999998,
+      "input_tokens": 97,
+      "output_tokens": 120,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_003",
+      "prediction": "<think>The user wants me to summarize the paragraph about the 2008 financial crisis in a single sentence. I need to capture the key points: the cause (subprime mortgage collapse, lax lending, securitization), the immediate impact (Lehman Brothers bankruptcy), and the broader consequence (global recession).\n\nI should write a concise, factual one-sentence summary.\n</think>\n\nThe 2008 financial crisis, caused by the collapse of the U.S. subprime mortgage market due to lax lending standards and securitisation of risky loans, resulted in Lehman Brothers' bankruptcy and triggered a global recession.",
+      "expected": "The 2008 crisis began with the U.S. subprime mortgage collapse, causing Lehman Brothers' failure and a global recession.",
+      "correct": false,
+      "latency_ms": 1974.3531029999986,
+      "input_tokens": 98,
+      "output_tokens": 120,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "sample_004",
+      "prediction": "<think>The user wants me to summarize the paragraph about photosynthesis in a single sentence. The paragraph explains what photosynthesis is (converting CO2 and water into glucose and oxygen using sunlight) and its importance (foundation of food chains).\n\nI need to condense this into one concise sentence that captures both the process and its significance.\n</think>\n\nPhotosynthesis is the process by which green plants convert carbon dioxide and water into glucose and oxygen using sunlight, forming the foundation of nearly all food chains on Earth.",
+      "expected": "Photosynthesis lets green plants turn CO2 and water into glucose and oxygen using sunlight captured by chlorophyll, underpinning most food chains.",
+      "correct": false,
+      "latency_ms": 1643.1886309999938,
+      "input_tokens": 89,
+      "output_tokens": 98,
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "sample_005",
+      "prediction": "<think>The user wants me to summarize the paragraph about the Treaty of Westphalia in a single sentence. I need to capture the key points:\n- It was signed in 1648\n- It ended the Thirty Years' War\n- It happened in the Holy Roman Empire\n- It's considered the foundation of the modern state system\n- It was based on territorial sovereignty\n\nI should write a concise one-sentence summary that captures these essential facts.\n</think>\n\nThe 1648 Treaty of Westphalia ended the Thirty Years' War in the Holy Roman Empire and established the foundation for the modern state system based on territorial sovereignty.",
+      "expected": "The 1648 Treaty of Westphalia ended the Thirty Years' War and laid the foundation of the modern sovereignty-based state system.",
+      "correct": false,
+      "latency_ms": 2144.8492749999987,
+      "input_tokens": 86,
+      "output_tokens": 126,
+      "judge_raw_score": 5.0,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-20T10:16:32+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": "gpt-4o-mini@openai",
+  "judge_model_revision": "2024-07-18",
+  "judge_prompt_hash": "d679caeb261c214b"
+}
