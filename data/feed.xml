@@ -154,6 +154,41 @@
     <summary>accuracy=0.300, macro_f1=0.217, qwk=0.583</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/entity_relationship_extraction/1.0/gpt-oss-120b@vllm/2026-04-20T01:16:20+00:00</id>
+    <title>gpt-oss-120b@vllm scored 0.920 judge_score on entity_relationship_extraction v1.0</title>
+    <updated>2026-04-20T01:16:20+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/entity_relationship_extraction" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.920</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_human/1.0/gpt-oss-120b@vllm/2026-04-20T01:08:15+00:00</id>
+    <title>gpt-oss-120b@vllm scored 0.620 judge_score on datascibench_human v1.0</title>
+    <updated>2026-04-20T01:08:15+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_human" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.620</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_dl/1.0/gpt-oss-120b@vllm/2026-04-20T01:05:54+00:00</id>
+    <title>gpt-oss-120b@vllm scored 0.440 judge_score on datascibench_dl v1.0</title>
+    <updated>2026-04-20T01:05:54+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_dl" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.440</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_csv_excel/1.0/gpt-oss-120b@vllm/2026-04-20T01:03:08+00:00</id>
+    <title>gpt-oss-120b@vllm scored 0.680 judge_score on datascibench_csv_excel v1.0</title>
+    <updated>2026-04-20T01:03:08+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_csv_excel" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.680</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/conversational_memory_qa/1.0/gpt-oss-120b@vllm/2026-04-20T01:01:22+00:00</id>
+    <title>gpt-oss-120b@vllm scored 0.773 judge_score on conversational_memory_qa v1.0</title>
+    <updated>2026-04-20T01:01:22+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/conversational_memory_qa" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.773</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_human/1.0/qwen3.5-27b@vllm/2026-04-20T00:23:04+00:00</id>
     <title>qwen3.5-27b@vllm scored 0.380 judge_score on datascibench_human v1.0</title>
     <updated>2026-04-20T00:23:04+00:00</updated>
@@ -320,40 +355,5 @@
     <updated>2026-04-19T04:33:52+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/topic_classification" rel="alternate" type="text/html"/>
     <summary>accuracy=1.000, macro_f1=1.000</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/text_classification/1.0/qwen3.5-27b@vllm/2026-04-19T04:30:06+00:00</id>
-    <title>qwen3.5-27b@vllm scored 1.000 accuracy on text_classification v1.0</title>
-    <updated>2026-04-19T04:30:06+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/text_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=1.000, macro_f1=1.000</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_bird/1.0/qwen3-30b@vllm/2026-04-19T03:37:22+00:00</id>
-    <title>qwen3-30b@vllm scored 0.609 judge_score on text2sql_bird v1.0</title>
-    <updated>2026-04-19T03:37:22+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_bird" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.609</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_ambiguity/1.0/qwen3-30b@vllm/2026-04-19T03:20:20+00:00</id>
-    <title>qwen3-30b@vllm scored 0.533 judge_score on text2sql_ambiguity v1.0</title>
-    <updated>2026-04-19T03:20:20+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_ambiguity" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.533</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_human/1.0/qwen3-30b@vllm/2026-04-19T03:07:29+00:00</id>
-    <title>qwen3-30b@vllm scored 0.560 judge_score on datascibench_human v1.0</title>
-    <updated>2026-04-19T03:07:29+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_human" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.560</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring_condensed/1.0/qwen3-30b@vllm/2026-04-19T02:46:47+00:00</id>
-    <title>qwen3-30b@vllm scored 0.350 accuracy on essay_vocabulary_scoring_condensed v1.0</title>
-    <updated>2026-04-19T02:46:47+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.350, macro_f1=0.285, qwk=0.594</summary>
   </entry>
 </feed>
