@@ -56,6 +56,13 @@
     <summary>accuracy=0.250, macro_f1=0.132, qwk=0.379</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_holistic_scoring_condensed/1.0/minimax-m2.7@vllm/2026-04-20T12:19:18+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.111 accuracy on essay_holistic_scoring_condensed v1.0</title>
+    <updated>2026-04-20T12:19:18+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_holistic_scoring_condensed" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.111, macro_f1=0.067, qwk=0.464</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/essay_holistic_scoring/1.0/minimax-m2.7@vllm/2026-04-20T12:17:44+00:00</id>
     <title>minimax-m2.7@vllm scored 0.333 accuracy on essay_holistic_scoring v1.0</title>
     <updated>2026-04-20T12:17:44+00:00</updated>
@@ -348,12 +355,5 @@
     <updated>2026-04-20T06:16:19+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring" rel="alternate" type="text/html"/>
     <summary>accuracy=0.250, macro_f1=0.167, qwk=0.460</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_holistic_scoring_condensed/1.0/qwen3.6-35b@vllm/2026-04-20T06:13:02+00:00</id>
-    <title>qwen3.6-35b@vllm scored 0.056 accuracy on essay_holistic_scoring_condensed v1.0</title>
-    <updated>2026-04-20T06:13:02+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_holistic_scoring_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.056, macro_f1=0.026, qwk=0.431</summary>
   </entry>
 </feed>

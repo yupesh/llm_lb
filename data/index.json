@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T13:02:44+00:00",
+  "generated_at": "2026-04-20T13:06:57+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -1759,6 +1759,21 @@
       "p95_latency_ms": 256794.76020900006,
       "cost_usd": null,
       "result_file": "tasks/essay_holistic_scoring_condensed/results/qwen3.5-27b@vllm__2026-04-19T17-09-54Z.json"
+    },
+    {
+      "task_id": "essay_holistic_scoring_condensed",
+      "task_version": "1.0",
+      "model_id": "minimax-m2.7@vllm",
+      "score": 0.1111111111111111,
+      "metrics": {
+        "accuracy": 0.1111111111111111,
+        "macro_f1": 0.06734006734006734,
+        "qwk": 0.46376811594202894
+      },
+      "tps": 103.05937870520657,
+      "p95_latency_ms": 5230.766758000002,
+      "cost_usd": null,
+      "result_file": "tasks/essay_holistic_scoring_condensed/results/minimax-m2.7@vllm__2026-04-20T12-19-18Z.json"
     },
     {
       "task_id": "essay_holistic_scoring_condensed",
