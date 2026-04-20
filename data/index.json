@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T07:47:30+00:00",
+  "generated_at": "2026-04-20T07:47:43+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -803,6 +803,19 @@
     {
       "task_id": "datascibench_human",
       "task_version": "1.0",
+      "model_id": "qwen3.6-35b@vllm",
+      "score": 0.62,
+      "metrics": {
+        "judge_score": 0.62
+      },
+      "tps": 193.61917567742353,
+      "p95_latency_ms": 52010.914352,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_human/results/qwen3.6-35b@vllm__2026-04-20T05-43-33Z.json"
+    },
+    {
+      "task_id": "datascibench_human",
+      "task_version": "1.0",
       "model_id": "gpt-oss-120b@vllm",
       "score": 0.62,
       "metrics": {
@@ -907,6 +920,19 @@
     {
       "task_id": "entity_relationship_extraction",
       "task_version": "1.0",
+      "model_id": "qwen3.6-35b@vllm",
+      "score": 0.9066666666666666,
+      "metrics": {
+        "judge_score": 0.9066666666666666
+      },
+      "tps": 191.36895305419824,
+      "p95_latency_ms": 46711.54037599999,
+      "cost_usd": null,
+      "result_file": "tasks/entity_relationship_extraction/results/qwen3.6-35b@vllm__2026-04-20T05-53-57Z.json"
+    },
+    {
+      "task_id": "entity_relationship_extraction",
+      "task_version": "1.0",
       "model_id": "gemma-4-31b-it@vllm",
       "score": 0.8533333333333334,
       "metrics": {
@@ -1004,6 +1030,21 @@
       "p95_latency_ms": 27317.120021999926,
       "cost_usd": null,
       "result_file": "tasks/essay_coherence_scoring/results/qwen3-30b@vllm__2026-04-19T02-02-44Z.json"
+    },
+    {
+      "task_id": "essay_coherence_scoring",
+      "task_version": "1.0",
+      "model_id": "qwen3.6-35b@vllm",
+      "score": 0.25,
+      "metrics": {
+        "accuracy": 0.25,
+        "macro_f1": 0.18382352941176472,
+        "qwk": 0.31818181818181823
+      },
+      "tps": 180.6007755571375,
+      "p95_latency_ms": 10797.294513999987,
+      "cost_usd": null,
+      "result_file": "tasks/essay_coherence_scoring/results/qwen3.6-35b@vllm__2026-04-20T05-57-13Z.json"
     },
     {
       "task_id": "essay_coherence_scoring_condensed",

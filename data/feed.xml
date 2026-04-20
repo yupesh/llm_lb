@@ -140,6 +140,27 @@
     <summary>accuracy=0.300, macro_f1=0.188, qwk=0.333</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_coherence_scoring/1.0/qwen3.6-35b@vllm/2026-04-20T05:57:13+00:00</id>
+    <title>qwen3.6-35b@vllm scored 0.250 accuracy on essay_coherence_scoring v1.0</title>
+    <updated>2026-04-20T05:57:13+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_coherence_scoring" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.250, macro_f1=0.184, qwk=0.318</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/entity_relationship_extraction/1.0/qwen3.6-35b@vllm/2026-04-20T05:53:57+00:00</id>
+    <title>qwen3.6-35b@vllm scored 0.907 judge_score on entity_relationship_extraction v1.0</title>
+    <updated>2026-04-20T05:53:57+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/entity_relationship_extraction" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.907</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_human/1.0/qwen3.6-35b@vllm/2026-04-20T05:43:33+00:00</id>
+    <title>qwen3.6-35b@vllm scored 0.620 judge_score on datascibench_human v1.0</title>
+    <updated>2026-04-20T05:43:33+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_human" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.620</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/topic_classification/1.0/gemma-4-31b-it@vllm/2026-04-20T04:32:34+00:00</id>
     <title>gemma-4-31b-it@vllm scored 1.000 accuracy on topic_classification v1.0</title>
     <updated>2026-04-20T04:32:34+00:00</updated>
@@ -334,26 +355,5 @@
     <updated>2026-04-20T03:40:45+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/conversational_memory_qa" rel="alternate" type="text/html"/>
     <summary>judge_score=0.813</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification_condensed/1.0/gemma-4-31b-it@vllm/2026-04-20T03:37:00+00:00</id>
-    <title>gemma-4-31b-it@vllm scored 0.350 accuracy on cefr_level_classification_condensed v1.0</title>
-    <updated>2026-04-20T03:37:00+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.350, macro_f1=0.245, qwk=0.417</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification/1.0/gemma-4-31b-it@vllm/2026-04-20T03:36:37+00:00</id>
-    <title>gemma-4-31b-it@vllm scored 0.450 accuracy on cefr_level_classification v1.0</title>
-    <updated>2026-04-20T03:36:37+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.450, macro_f1=0.352, qwk=0.595</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/agent_tool_calling/1.0/gemma-4-31b-it@vllm/2026-04-20T03:36:05+00:00</id>
-    <title>gemma-4-31b-it@vllm scored 0.582 judge_score on agent_tool_calling v1.0</title>
-    <updated>2026-04-20T03:36:05+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/agent_tool_calling" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.582</summary>
   </entry>
 </feed>
