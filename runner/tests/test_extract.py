@@ -1,4 +1,4 @@
-from llm_lb.eval.extract import extract_regex, normalize
+from llm_lb.eval.extract import extract_regex, normalize, strip_reasoning
 
 
 def test_normalize_strips_punct_and_case():
@@ -17,3 +17,15 @@ def test_extract_regex_no_group_returns_match():
 
 def test_extract_regex_no_match_returns_stripped_input():
     assert extract_regex("  garbage  ", r"\d+") == "garbage"
+
+
+def test_strip_reasoning_removes_think_blocks():
+    assert strip_reasoning("<think>a or b?</think>b") == "b"
+    assert strip_reasoning("<think>x</think>\n\nParis") == "Paris"
+    assert strip_reasoning("<THINK>upper</THINK>x") == "x"
+    assert strip_reasoning("<think>a</think><think>b</think>final") == "final"
+
+
+def test_strip_reasoning_noop_on_plain_text():
+    assert strip_reasoning("plain answer") == "plain answer"
+    assert strip_reasoning("unclosed <think>trace still open") == "unclosed <think>trace still open"

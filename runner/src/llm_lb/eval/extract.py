@@ -2,6 +2,16 @@ from __future__ import annotations
 
 import re
 
+_REASONING_BLOCK_RE = re.compile(r"<think\b[^>]*>.*?</think\s*>", re.DOTALL | re.IGNORECASE)
+
+
+def strip_reasoning(raw: str) -> str:
+    """Drop `<think>...</think>` blocks emitted by reasoning models.
+    Without this, `extract_label` would match whichever label is mentioned
+    first inside the reasoning trace instead of the final answer.
+    """
+    return _REASONING_BLOCK_RE.sub("", raw).strip()
+
 
 def extract_label(raw: str, labels: list[str]) -> str:
     """Pick the first task label that appears (case-insensitive) in the model output.
