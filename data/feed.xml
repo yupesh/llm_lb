@@ -133,6 +133,13 @@
     <summary>accuracy=0.222, macro_f1=0.108, qwk=0.299</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_grammar_scoring_condensed/1.0/gpt-oss-120b@vllm/2026-04-20T01:20:37+00:00</id>
+    <title>gpt-oss-120b@vllm scored 0.250 accuracy on essay_grammar_scoring_condensed v1.0</title>
+    <updated>2026-04-20T01:20:37+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_grammar_scoring_condensed" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.250, macro_f1=0.162, qwk=-0.031</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/essay_grammar_scoring/1.0/gpt-oss-120b@vllm/2026-04-20T01:19:25+00:00</id>
     <title>gpt-oss-120b@vllm scored 0.350 accuracy on essay_grammar_scoring v1.0</title>
     <updated>2026-04-20T01:19:25+00:00</updated>
@@ -348,12 +355,5 @@
     <updated>2026-04-19T05:00:22+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/intent_classification" rel="alternate" type="text/html"/>
     <summary>accuracy=1.000, macro_f1=1.000</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/extractive_qa/1.0/qwen3.5-27b@vllm/2026-04-19T04:55:18+00:00</id>
-    <title>qwen3.5-27b@vllm scored 0.800 exact_match on extractive_qa v1.0</title>
-    <updated>2026-04-19T04:55:18+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/extractive_qa" rel="alternate" type="text/html"/>
-    <summary>exact_match=0.800</summary>
   </entry>
 </feed>
