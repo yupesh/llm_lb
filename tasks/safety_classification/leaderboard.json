@@ -1,0 +1,20 @@
+{
+  "task_id": "safety_classification",
+  "task_version": "1.0",
+  "primary_metric": "accuracy",
+  "ranking": [
+    {
+      "model_id": "minimax-m2.7@vllm",
+      "score": 0.5,
+      "metrics": {
+        "accuracy": 0.5,
+        "macro_f1": 0.3333333333333333
+      },
+      "tps": 81.97569606847813,
+      "p95_latency_ms": 2708.6648510000373,
+      "cost_usd": null,
+      "result_file": "results/minimax-m2.7@vllm__2026-04-20T13-12-19Z.json"
+    }
+  ],
+  "updated_at": "2026-04-20T13:35:28+00:00"
+}
