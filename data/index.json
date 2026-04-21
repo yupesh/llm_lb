@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T01:39:31+00:00",
+  "generated_at": "2026-04-21T01:40:05+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -3164,6 +3164,20 @@
     {
       "task_id": "safety_classification",
       "task_version": "1.0",
+      "model_id": "glm5.1@llama",
+      "score": 0.5,
+      "metrics": {
+        "accuracy": 0.5,
+        "macro_f1": 0.3333333333333333
+      },
+      "tps": 40.92896353886512,
+      "p95_latency_ms": 6638.031912000002,
+      "cost_usd": null,
+      "result_file": "tasks/safety_classification/results/glm5.1@llama__2026-04-20T23-59-22Z.json"
+    },
+    {
+      "task_id": "safety_classification",
+      "task_version": "1.0",
       "model_id": "gemma-4-31b-it@vllm",
       "score": 0.5,
       "metrics": {
@@ -3213,6 +3227,19 @@
       "p95_latency_ms": 8679.650695999982,
       "cost_usd": null,
       "result_file": "tasks/summarization/results/qwen3.6-35b@vllm__2026-04-20T07-21-49Z.json"
+    },
+    {
+      "task_id": "summarization",
+      "task_version": "1.0",
+      "model_id": "glm5.1@llama",
+      "score": 0.8400000000000001,
+      "metrics": {
+        "judge_score": 0.8400000000000001
+      },
+      "tps": 44.34241196471471,
+      "p95_latency_ms": 14248.367575999993,
+      "cost_usd": null,
+      "result_file": "tasks/summarization/results/glm5.1@llama__2026-04-21T00-00-39Z.json"
     },
     {
       "task_id": "summarization",
@@ -3304,6 +3331,19 @@
       "p95_latency_ms": 274794.8990140001,
       "cost_usd": null,
       "result_file": "tasks/temporal_information_extraction/results/minimax-m2.7@vllm__2026-04-20T10-36-40Z.json"
+    },
+    {
+      "task_id": "temporal_information_extraction",
+      "task_version": "1.0",
+      "model_id": "glm5.1@llama",
+      "score": 0.6533333333333334,
+      "metrics": {
+        "judge_score": 0.6533333333333334
+      },
+      "tps": 45.27055991485618,
+      "p95_latency_ms": 112072.029401,
+      "cost_usd": null,
+      "result_file": "tasks/temporal_information_extraction/results/glm5.1@llama__2026-04-21T00-17-07Z.json"
     },
     {
       "task_id": "temporal_information_extraction",
@@ -3449,6 +3489,19 @@
       "result_file": "tasks/text2sql_ambiguity/results/minimax-m2.7@vllm__2026-04-20T10-46-41Z.json"
     },
     {
+      "task_id": "text2sql_ambiguity",
+      "task_version": "1.0",
+      "model_id": "glm5.1@llama",
+      "score": 0.45,
+      "metrics": {
+        "judge_score": 0.45
+      },
+      "tps": 45.19727443135784,
+      "p95_latency_ms": 55852.83304699999,
+      "cost_usd": null,
+      "result_file": "tasks/text2sql_ambiguity/results/glm5.1@llama__2026-04-21T00-30-11Z.json"
+    },
+    {
       "task_id": "text2sql_bird",
       "task_version": "1.0",
       "model_id": "gpt-oss-120b@vllm",
@@ -3525,6 +3578,19 @@
       "p95_latency_ms": 97456.12411199999,
       "cost_usd": null,
       "result_file": "tasks/text2sql_bird/results/qwen3-30b@vllm__2026-04-19T03-37-22Z.json"
+    },
+    {
+      "task_id": "text2sql_bird",
+      "task_version": "1.0",
+      "model_id": "glm5.1@llama",
+      "score": 0.5727272727272728,
+      "metrics": {
+        "judge_score": 0.5727272727272728
+      },
+      "tps": 25.085633345612823,
+      "p95_latency_ms": 39779.853115000005,
+      "cost_usd": null,
+      "result_file": "tasks/text2sql_bird/results/glm5.1@llama__2026-04-21T00-43-18Z.json"
     },
     {
       "task_id": "text2sql_bird",
@@ -3622,6 +3688,20 @@
       "p95_latency_ms": 6358.645018000005,
       "cost_usd": null,
       "result_file": "tasks/text_classification/results/qwen3-30b@vllm__2026-04-19T01-01-40Z.json"
+    },
+    {
+      "task_id": "text_classification",
+      "task_version": "1.0",
+      "model_id": "glm5.1@llama",
+      "score": 1.0,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "tps": 33.160627540562444,
+      "p95_latency_ms": 5929.261485000012,
+      "cost_usd": null,
+      "result_file": "tasks/text_classification/results/glm5.1@llama__2026-04-21T00-44-28Z.json"
     },
     {
       "task_id": "text_classification",

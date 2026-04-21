@@ -79,7 +79,18 @@
       "p95_latency_ms": 60567.50480299996,
       "cost_usd": null,
       "result_file": "results/minimax-m2.7@vllm__2026-04-20T10-46-41Z.json"
+    },
+    {
+      "model_id": "glm5.1@llama",
+      "score": 0.45,
+      "metrics": {
+        "judge_score": 0.45
+      },
+      "tps": 45.19727443135784,
+      "p95_latency_ms": 55852.83304699999,
+      "cost_usd": null,
+      "result_file": "results/glm5.1@llama__2026-04-21T00-30-11Z.json"
     }
   ],
-  "updated_at": "2026-04-20T12:04:18+00:00"
+  "updated_at": "2026-04-21T01:40:05+00:00"
 }

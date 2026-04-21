@@ -14,6 +14,48 @@
     <summary>accuracy=1.000, macro_f1=1.000</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text_classification/1.0/glm5.1@llama/2026-04-21T00:44:28+00:00</id>
+    <title>glm5.1@llama scored 1.000 accuracy on text_classification v1.0</title>
+    <updated>2026-04-21T00:44:28+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=1.000, macro_f1=1.000</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_bird/1.0/glm5.1@llama/2026-04-21T00:43:18+00:00</id>
+    <title>glm5.1@llama scored 0.573 judge_score on text2sql_bird v1.0</title>
+    <updated>2026-04-21T00:43:18+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_bird" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.573</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_ambiguity/1.0/glm5.1@llama/2026-04-21T00:30:11+00:00</id>
+    <title>glm5.1@llama scored 0.450 judge_score on text2sql_ambiguity v1.0</title>
+    <updated>2026-04-21T00:30:11+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_ambiguity" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.450</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/temporal_information_extraction/1.0/glm5.1@llama/2026-04-21T00:17:07+00:00</id>
+    <title>glm5.1@llama scored 0.653 judge_score on temporal_information_extraction v1.0</title>
+    <updated>2026-04-21T00:17:07+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/temporal_information_extraction" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.653</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/summarization/1.0/glm5.1@llama/2026-04-21T00:00:39+00:00</id>
+    <title>glm5.1@llama scored 0.840 judge_score on summarization v1.0</title>
+    <updated>2026-04-21T00:00:39+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/summarization" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.840</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/glm5.1@llama/2026-04-20T23:59:22+00:00</id>
+    <title>glm5.1@llama scored 0.500 accuracy on safety_classification v1.0</title>
+    <updated>2026-04-20T23:59:22+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/safety_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.500, macro_f1=0.333</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/gpt-oss-120b@vllm/2026-04-20T16:28:27+00:00</id>
     <title>gpt-oss-120b@vllm scored 0.500 accuracy on safety_classification v1.0</title>
     <updated>2026-04-20T16:28:27+00:00</updated>
@@ -313,47 +355,5 @@
     <updated>2026-04-20T10:36:40+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/temporal_information_extraction" rel="alternate" type="text/html"/>
     <summary>judge_score=0.657</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/summarization/1.0/minimax-m2.7@vllm/2026-04-20T10:16:32+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.880 judge_score on summarization v1.0</title>
-    <updated>2026-04-20T10:16:32+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/summarization" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.880</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/retail_agent_dialog/1.0/minimax-m2.7@vllm/2026-04-20T10:16:02+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.479 judge_score on retail_agent_dialog v1.0</title>
-    <updated>2026-04-20T10:16:02+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/retail_agent_dialog" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.479</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_triplet_extraction/1.0/minimax-m2.7@vllm/2026-04-20T09:45:36+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.660 judge_score on kg_triplet_extraction v1.0</title>
-    <updated>2026-04-20T09:45:36+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_triplet_extraction" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.660</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_relation_refinement/1.0/minimax-m2.7@vllm/2026-04-20T09:42:59+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.920 judge_score on kg_relation_refinement v1.0</title>
-    <updated>2026-04-20T09:42:59+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_relation_refinement" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.920</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_entity_type_refinement/1.0/minimax-m2.7@vllm/2026-04-20T09:41:23+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.730 judge_score on kg_entity_type_refinement v1.0</title>
-    <updated>2026-04-20T09:41:23+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_entity_type_refinement" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.730</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_entity_name_refinement/1.0/minimax-m2.7@vllm/2026-04-20T09:39:35+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.980 judge_score on kg_entity_name_refinement v1.0</title>
-    <updated>2026-04-20T09:39:35+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_entity_name_refinement" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.980</summary>
   </entry>
 </feed>
