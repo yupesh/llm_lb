@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T09:36:03+00:00",
+  "generated_at": "2026-04-21T09:59:46+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -3139,6 +3139,20 @@
       "p95_latency_ms": 12862.845854,
       "cost_usd": null,
       "result_file": "tasks/jailbreak_detection_beavertails/results/qwen3.6-35b@vllm__2026-04-20T13-41-29Z.json"
+    },
+    {
+      "task_id": "jailbreak_detection_beavertails",
+      "task_version": "1.0",
+      "model_id": "llama-guard4@vllm",
+      "score": 0.6,
+      "metrics": {
+        "accuracy": 0.6,
+        "macro_f1": 0.595959595959596
+      },
+      "tps": 9.044948374119015,
+      "p95_latency_ms": 599.1358229999832,
+      "cost_usd": null,
+      "result_file": "tasks/jailbreak_detection_beavertails/results/llama-guard4@vllm__2026-04-21T09-57-57Z.json"
     },
     {
       "task_id": "kg_entity_name_refinement",
