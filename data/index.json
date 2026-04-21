@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T08:32:46+00:00",
+  "generated_at": "2026-04-21T09:36:03+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -401,8 +401,8 @@
     },
     {
       "id": "llama-guard4@vllm",
-      "display_name": "Llama-Guard-4 (vLLM)",
-      "provider": "openai_compat",
+      "display_name": "Llama-Guard-4-12B (vLLM)",
+      "provider": "llama_guard",
       "hf_uri": "meta-llama/Llama-Guard-4-12B",
       "hardware": {
         "gpu_count": 1,
