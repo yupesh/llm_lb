@@ -14,6 +14,48 @@
     <summary>accuracy=1.000, macro_f1=1.000</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text_classification/1.0/minimax-m2.7@vllm/2026-04-21T11:12:10+00:00</id>
+    <title>minimax-m2.7@vllm scored 1.000 accuracy on text_classification v1.0</title>
+    <updated>2026-04-21T11:12:10+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=1.000, macro_f1=1.000</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_bird/1.0/minimax-m2.7@vllm/2026-04-21T11:11:44+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.636 judge_score on text2sql_bird v1.0</title>
+    <updated>2026-04-21T11:11:44+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_bird" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.636</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_ambiguity/1.0/minimax-m2.7@vllm/2026-04-21T10:44:49+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.458 judge_score on text2sql_ambiguity v1.0</title>
+    <updated>2026-04-21T10:44:49+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_ambiguity" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.458</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/summarization/1.0/minimax-m2.7@vllm/2026-04-21T10:21:44+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.800 judge_score on summarization v1.0</title>
+    <updated>2026-04-21T10:21:44+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/summarization" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.800</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/minimax-m2.7@vllm/2026-04-21T10:21:14+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.850 accuracy on safety_classification v1.0</title>
+    <updated>2026-04-21T10:21:14+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/safety_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.850, macro_f1=0.850</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/retail_agent_dialog/1.0/minimax-m2.7@vllm/2026-04-21T10:20:21+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.503 judge_score on retail_agent_dialog v1.0</title>
+    <updated>2026-04-21T10:20:21+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/retail_agent_dialog" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.503</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection_beavertails/1.0/llama-guard4@vllm/2026-04-21T09:57:57+00:00</id>
     <title>llama-guard4@vllm scored 0.600 accuracy on jailbreak_detection_beavertails v1.0</title>
     <updated>2026-04-21T09:57:57+00:00</updated>
@@ -313,47 +355,5 @@
     <updated>2026-04-21T07:00:18+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/oos_detection" rel="alternate" type="text/html"/>
     <summary>accuracy=0.533, macro_f1=0.475</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_triplet_extraction/1.0/deepseek32exp@vllm/2026-04-21T06:59:40+00:00</id>
-    <title>deepseek32exp@vllm scored 0.580 judge_score on kg_triplet_extraction v1.0</title>
-    <updated>2026-04-21T06:59:40+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_triplet_extraction" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.580</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_relation_refinement/1.0/deepseek32exp@vllm/2026-04-21T06:57:31+00:00</id>
-    <title>deepseek32exp@vllm scored 0.900 judge_score on kg_relation_refinement v1.0</title>
-    <updated>2026-04-21T06:57:31+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_relation_refinement" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.900</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_entity_type_refinement/1.0/deepseek32exp@vllm/2026-04-21T06:56:54+00:00</id>
-    <title>deepseek32exp@vllm scored 0.650 judge_score on kg_entity_type_refinement v1.0</title>
-    <updated>2026-04-21T06:56:54+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_entity_type_refinement" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.650</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_entity_name_refinement/1.0/deepseek32exp@vllm/2026-04-21T06:56:01+00:00</id>
-    <title>deepseek32exp@vllm scored 0.840 judge_score on kg_entity_name_refinement v1.0</title>
-    <updated>2026-04-21T06:56:01+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_entity_name_refinement" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.840</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection_beavertails/1.0/deepseek32exp@vllm/2026-04-21T06:55:16+00:00</id>
-    <title>deepseek32exp@vllm scored 0.650 accuracy on jailbreak_detection_beavertails v1.0</title>
-    <updated>2026-04-21T06:55:16+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection_beavertails" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.650, macro_f1=0.649</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection/1.0/deepseek32exp@vllm/2026-04-21T06:54:46+00:00</id>
-    <title>deepseek32exp@vllm scored 1.000 accuracy on jailbreak_detection v1.0</title>
-    <updated>2026-04-21T06:54:46+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection" rel="alternate" type="text/html"/>
-    <summary>accuracy=1.000, macro_f1=1.000</summary>
   </entry>
 </feed>
