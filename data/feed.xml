@@ -35,6 +35,34 @@
     <summary>accuracy=0.433, macro_f1=0.302</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_triplet_extraction/1.0/minimax-m2.7@vllm/2026-04-21T09:49:07+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.570 judge_score on kg_triplet_extraction v1.0</title>
+    <updated>2026-04-21T09:49:07+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_triplet_extraction" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.570</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_relation_refinement/1.0/minimax-m2.7@vllm/2026-04-21T09:46:34+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.870 judge_score on kg_relation_refinement v1.0</title>
+    <updated>2026-04-21T09:46:34+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_relation_refinement" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.870</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_entity_type_refinement/1.0/minimax-m2.7@vllm/2026-04-21T09:45:03+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.680 judge_score on kg_entity_type_refinement v1.0</title>
+    <updated>2026-04-21T09:45:03+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_entity_type_refinement" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.680</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_entity_name_refinement/1.0/minimax-m2.7@vllm/2026-04-21T09:43:05+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.850 judge_score on kg_entity_name_refinement v1.0</title>
+    <updated>2026-04-21T09:43:05+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_entity_name_refinement" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.850</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/qwen3.5-27b@vllm/2026-04-21T07:50:51+00:00</id>
     <title>qwen3.5-27b@vllm scored 0.900 accuracy on safety_classification v1.0</title>
     <updated>2026-04-21T07:50:51+00:00</updated>
@@ -327,33 +355,5 @@
     <updated>2026-04-21T00:44:28+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/text_classification" rel="alternate" type="text/html"/>
     <summary>accuracy=1.000, macro_f1=1.000</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_bird/1.0/glm5.1@llama/2026-04-21T00:43:18+00:00</id>
-    <title>glm5.1@llama scored 0.573 judge_score on text2sql_bird v1.0</title>
-    <updated>2026-04-21T00:43:18+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_bird" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.573</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_ambiguity/1.0/glm5.1@llama/2026-04-21T00:30:11+00:00</id>
-    <title>glm5.1@llama scored 0.450 judge_score on text2sql_ambiguity v1.0</title>
-    <updated>2026-04-21T00:30:11+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_ambiguity" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.450</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/temporal_information_extraction/1.0/glm5.1@llama/2026-04-21T00:17:07+00:00</id>
-    <title>glm5.1@llama scored 0.653 judge_score on temporal_information_extraction v1.0</title>
-    <updated>2026-04-21T00:17:07+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/temporal_information_extraction" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.653</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/summarization/1.0/glm5.1@llama/2026-04-21T00:00:39+00:00</id>
-    <title>glm5.1@llama scored 0.840 judge_score on summarization v1.0</title>
-    <updated>2026-04-21T00:00:39+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/summarization" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.840</summary>
   </entry>
 </feed>
