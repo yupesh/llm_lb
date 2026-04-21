@@ -29,6 +29,39 @@ def test_aggregate_smoke():
     assert any(e["model_id"] == "dummy@local" for e in idx["matrix"])
 
 
+def test_run_stores_raw_output(tmp_path: Path):
+    """Successful samples must carry `raw_output` (pre-extract model text),
+    so extractor bugs can be fixed offline without a fresh GPU run. Errored
+    samples leave it None."""
+    out = run(TASK, MODEL, out_dir=tmp_path)
+    result = RunResult.model_validate_json(out.read_text())
+    successful = [s for s in result.samples if not s.error]
+    assert successful, "dummy task must have at least one successful sample"
+    for s in successful:
+        assert s.raw_output is not None
+        assert s.raw_output in ("positive", "negative")
+
+
+def test_errored_sample_has_no_raw_output(tmp_path: Path, monkeypatch):
+    from llm_lb.adapters.dummy import DummyAdapter
+
+    call_count = {"n": 0}
+    original_chat = DummyAdapter.chat
+
+    def flaky_chat(self, system, user, params):
+        call_count["n"] += 1
+        if call_count["n"] == 2:
+            raise RuntimeError("simulated backend timeout")
+        return original_chat(self, system, user, params)
+
+    monkeypatch.setattr(DummyAdapter, "chat", flaky_chat)
+    out = run(TASK, MODEL, out_dir=tmp_path)
+    result = RunResult.model_validate_json(out.read_text())
+    errored = [s for s in result.samples if s.error]
+    assert len(errored) == 1
+    assert errored[0].raw_output is None
+
+
 def test_failing_sample_does_not_abort_run(tmp_path: Path, monkeypatch):
     """One sample that raises (e.g. backend timeout) must not wipe out the
     predictions already collected. The run completes with an empty prediction
