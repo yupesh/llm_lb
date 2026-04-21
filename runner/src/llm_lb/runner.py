@@ -47,7 +47,7 @@ def _p95(values: list[float]) -> float:
 def _extract_prediction(task: TaskSpec, raw: str) -> str:
     raw = strip_reasoning(raw)
     if task.labels:
-        return extract_label(raw, task.labels)
+        return extract_label(raw, task.labels, task.label_aliases)
     if task.answer_regex:
         return extract_regex(raw, task.answer_regex)
     return raw.strip()

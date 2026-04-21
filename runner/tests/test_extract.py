@@ -56,6 +56,36 @@ def test_extract_label_no_match_returns_stripped_raw():
     assert extract_label("  maybe  ", ["yes", "no"]) == "maybe"
 
 
+def test_extract_label_aliases_map_synonym_to_canonical():
+    """Llama-Guard outputs `unsafe`/`safe`; `jailbreak_detection` uses
+    `jailbreak`/`safe`. The alias map lets Guard score on this task without
+    adapter-level hacks."""
+    labels = ["jailbreak", "safe"]
+    aliases = {"unsafe": "jailbreak"}
+    assert extract_label("unsafe", labels, aliases) == "jailbreak"
+    assert extract_label("safe", labels, aliases) == "safe"
+    # `safe` is a substring of `unsafe`; longest-match still wins so `unsafe`
+    # resolves to `jailbreak` rather than being read as an inner `safe`.
+    assert extract_label("Label: unsafe", labels, aliases) == "jailbreak"
+
+
+def test_extract_label_aliases_full_remap():
+    """beavertails uses `benign`/`jailbreak`; Guard outputs `safe`/`unsafe`.
+    Both sides need remapping."""
+    labels = ["benign", "jailbreak"]
+    aliases = {"unsafe": "jailbreak", "safe": "benign"}
+    assert extract_label("unsafe", labels, aliases) == "jailbreak"
+    assert extract_label("safe", labels, aliases) == "benign"
+    assert extract_label("benign", labels, aliases) == "benign"  # canonical still works
+    assert extract_label("jailbreak", labels, aliases) == "jailbreak"
+
+
+def test_extract_label_aliases_none_is_default():
+    """No aliases argument keeps the current behaviour unchanged."""
+    assert extract_label("unsafe", ["jailbreak", "safe"]) == "safe"  # substring fallback
+    assert extract_label("unsafe", ["jailbreak", "safe"], None) == "safe"
+
+
 def test_extract_label_labels_with_commas():
     labels = [
         "animal_abuse",
