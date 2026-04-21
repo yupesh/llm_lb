@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T07:49:56+00:00",
+  "generated_at": "2026-04-21T07:50:29+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -2401,6 +2401,20 @@
     {
       "task_id": "hazard_category",
       "task_version": "1.0",
+      "model_id": "deepseek32exp@vllm",
+      "score": 0.55,
+      "metrics": {
+        "accuracy": 0.55,
+        "macro_f1": 0.43809523809523804
+      },
+      "tps": 12.291773833977956,
+      "p95_latency_ms": 1269.6987260000014,
+      "cost_usd": null,
+      "result_file": "tasks/hazard_category/results/deepseek32exp@vllm__2026-04-21T06-53-52Z.json"
+    },
+    {
+      "task_id": "hazard_category",
+      "task_version": "1.0",
       "model_id": "gemma-4-31b-it@vllm",
       "score": 0.55,
       "metrics": {
@@ -2583,6 +2597,20 @@
     {
       "task_id": "intent_classification",
       "task_version": "1.0",
+      "model_id": "deepseek32exp@vllm",
+      "score": 1.0,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "tps": 2.858935539710157,
+      "p95_latency_ms": 1149.4451700000034,
+      "cost_usd": null,
+      "result_file": "tasks/intent_classification/results/deepseek32exp@vllm__2026-04-21T06-54-13Z.json"
+    },
+    {
+      "task_id": "intent_classification",
+      "task_version": "1.0",
       "model_id": "glm5.1@llama",
       "score": 0.9,
       "metrics": {
@@ -2709,6 +2737,20 @@
     {
       "task_id": "jailbreak_detection",
       "task_version": "1.0",
+      "model_id": "deepseek32exp@vllm",
+      "score": 1.0,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "tps": 3.7139233701448338,
+      "p95_latency_ms": 1433.464788000002,
+      "cost_usd": null,
+      "result_file": "tasks/jailbreak_detection/results/deepseek32exp@vllm__2026-04-21T06-54-46Z.json"
+    },
+    {
+      "task_id": "jailbreak_detection",
+      "task_version": "1.0",
       "model_id": "gemma-4-31b-it@vllm",
       "score": 1.0,
       "metrics": {
@@ -2817,6 +2859,20 @@
       "p95_latency_ms": 8884.60489600004,
       "cost_usd": null,
       "result_file": "tasks/jailbreak_detection_beavertails/results/qwen3-30b@vllm__2026-04-20T13-57-02Z.json"
+    },
+    {
+      "task_id": "jailbreak_detection_beavertails",
+      "task_version": "1.0",
+      "model_id": "deepseek32exp@vllm",
+      "score": 0.65,
+      "metrics": {
+        "accuracy": 0.65,
+        "macro_f1": 0.6491228070175439
+      },
+      "tps": 4.770986939737859,
+      "p95_latency_ms": 1117.163081000001,
+      "cost_usd": null,
+      "result_file": "tasks/jailbreak_detection_beavertails/results/deepseek32exp@vllm__2026-04-21T06-55-16Z.json"
     },
     {
       "task_id": "jailbreak_detection_beavertails",
@@ -2937,6 +2993,19 @@
       "result_file": "tasks/kg_entity_name_refinement/results/qwen3.5-27b@vllm__2026-04-19T05-13-24Z.json"
     },
     {
+      "task_id": "kg_entity_name_refinement",
+      "task_version": "1.0",
+      "model_id": "deepseek32exp@vllm",
+      "score": 0.8400000000000001,
+      "metrics": {
+        "judge_score": 0.8400000000000001
+      },
+      "tps": 6.715440432197857,
+      "p95_latency_ms": 1181.5361479999992,
+      "cost_usd": null,
+      "result_file": "tasks/kg_entity_name_refinement/results/deepseek32exp@vllm__2026-04-21T06-56-01Z.json"
+    },
+    {
       "task_id": "kg_entity_type_refinement",
       "task_version": "1.0",
       "model_id": "glm5.1@llama",
@@ -3000,6 +3069,19 @@
       "p95_latency_ms": 84543.28966800017,
       "cost_usd": null,
       "result_file": "tasks/kg_entity_type_refinement/results/qwen3.5-397b@vllm__2026-04-18T10-48-24Z.json"
+    },
+    {
+      "task_id": "kg_entity_type_refinement",
+      "task_version": "1.0",
+      "model_id": "deepseek32exp@vllm",
+      "score": 0.65,
+      "metrics": {
+        "judge_score": 0.65
+      },
+      "tps": 17.360262585065446,
+      "p95_latency_ms": 1364.033556999999,
+      "cost_usd": null,
+      "result_file": "tasks/kg_entity_type_refinement/results/deepseek32exp@vllm__2026-04-21T06-56-54Z.json"
     },
     {
       "task_id": "kg_entity_type_refinement",
