@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T01:41:13+00:00",
+  "generated_at": "2026-04-21T01:41:32+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -1061,6 +1061,19 @@
     {
       "task_id": "datascibench_human",
       "task_version": "1.0",
+      "model_id": "glm5.1@llama",
+      "score": 0.58,
+      "metrics": {
+        "judge_score": 0.58
+      },
+      "tps": 45.53047964958051,
+      "p95_latency_ms": 224529.82470099995,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_human/results/glm5.1@llama__2026-04-20T21-16-58Z.json"
+    },
+    {
+      "task_id": "datascibench_human",
+      "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
       "score": 0.56,
       "metrics": {
@@ -1148,6 +1161,19 @@
       "p95_latency_ms": 48480.63908400002,
       "cost_usd": null,
       "result_file": "tasks/entity_relationship_extraction/results/gpt-oss-120b@vllm__2026-04-20T01-16-20Z.json"
+    },
+    {
+      "task_id": "entity_relationship_extraction",
+      "task_version": "1.0",
+      "model_id": "glm5.1@llama",
+      "score": 0.92,
+      "metrics": {
+        "judge_score": 0.92
+      },
+      "tps": 45.1740837561919,
+      "p95_latency_ms": 126350.849138,
+      "cost_usd": null,
+      "result_file": "tasks/entity_relationship_extraction/results/glm5.1@llama__2026-04-20T21-39-05Z.json"
     },
     {
       "task_id": "entity_relationship_extraction",
@@ -1279,6 +1305,21 @@
     {
       "task_id": "essay_coherence_scoring",
       "task_version": "1.0",
+      "model_id": "glm5.1@llama",
+      "score": 0.3,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.25860805860805863,
+        "qwk": 0.4347826086956521
+      },
+      "tps": 44.86852761702814,
+      "p95_latency_ms": 34583.09488100002,
+      "cost_usd": null,
+      "result_file": "tasks/essay_coherence_scoring/results/glm5.1@llama__2026-04-20T21-47-53Z.json"
+    },
+    {
+      "task_id": "essay_coherence_scoring",
+      "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
       "score": 0.3,
       "metrics": {
@@ -1320,6 +1361,21 @@
       "p95_latency_ms": 9501.350919999993,
       "cost_usd": null,
       "result_file": "tasks/essay_coherence_scoring_condensed/results/qwen3.6-35b@vllm__2026-04-20T06-00-04Z.json"
+    },
+    {
+      "task_id": "essay_coherence_scoring_condensed",
+      "task_version": "1.0",
+      "model_id": "glm5.1@llama",
+      "score": 0.45,
+      "metrics": {
+        "accuracy": 0.45,
+        "macro_f1": 0.38455882352941173,
+        "qwk": 0.6111111111111112
+      },
+      "tps": 44.71220599147569,
+      "p95_latency_ms": 27831.63858499998,
+      "cost_usd": null,
+      "result_file": "tasks/essay_coherence_scoring_condensed/results/glm5.1@llama__2026-04-20T21-54-28Z.json"
     },
     {
       "task_id": "essay_coherence_scoring_condensed",

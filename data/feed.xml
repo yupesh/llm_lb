@@ -154,6 +154,34 @@
     <summary>accuracy=0.400, macro_f1=0.329, qwk=0.455</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_coherence_scoring_condensed/1.0/glm5.1@llama/2026-04-20T21:54:28+00:00</id>
+    <title>glm5.1@llama scored 0.450 accuracy on essay_coherence_scoring_condensed v1.0</title>
+    <updated>2026-04-20T21:54:28+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_coherence_scoring_condensed" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.450, macro_f1=0.385, qwk=0.611</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_coherence_scoring/1.0/glm5.1@llama/2026-04-20T21:47:53+00:00</id>
+    <title>glm5.1@llama scored 0.300 accuracy on essay_coherence_scoring v1.0</title>
+    <updated>2026-04-20T21:47:53+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_coherence_scoring" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.300, macro_f1=0.259, qwk=0.435</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/entity_relationship_extraction/1.0/glm5.1@llama/2026-04-20T21:39:05+00:00</id>
+    <title>glm5.1@llama scored 0.920 judge_score on entity_relationship_extraction v1.0</title>
+    <updated>2026-04-20T21:39:05+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/entity_relationship_extraction" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.920</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_human/1.0/glm5.1@llama/2026-04-20T21:16:58+00:00</id>
+    <title>glm5.1@llama scored 0.580 judge_score on datascibench_human v1.0</title>
+    <updated>2026-04-20T21:16:58+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_human" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.580</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/gpt-oss-120b@vllm/2026-04-20T16:28:27+00:00</id>
     <title>gpt-oss-120b@vllm scored 0.500 accuracy on safety_classification v1.0</title>
     <updated>2026-04-20T16:28:27+00:00</updated>
@@ -327,33 +355,5 @@
     <updated>2026-04-20T12:30:25+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/text_classification" rel="alternate" type="text/html"/>
     <summary>accuracy=1.000, macro_f1=1.000</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/oos_detection/1.0/minimax-m2.7@vllm/2026-04-20T12:30:00+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.433 accuracy on oos_detection v1.0</title>
-    <updated>2026-04-20T12:30:00+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/oos_detection" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.433, macro_f1=0.302</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection/1.0/minimax-m2.7@vllm/2026-04-20T12:29:04+00:00</id>
-    <title>minimax-m2.7@vllm scored 1.000 accuracy on jailbreak_detection v1.0</title>
-    <updated>2026-04-20T12:29:04+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection" rel="alternate" type="text/html"/>
-    <summary>accuracy=1.000, macro_f1=1.000</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/intent_classification/1.0/minimax-m2.7@vllm/2026-04-20T12:28:22+00:00</id>
-    <title>minimax-m2.7@vllm scored 1.000 accuracy on intent_classification v1.0</title>
-    <updated>2026-04-20T12:28:22+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/intent_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=1.000, macro_f1=1.000</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring_condensed/1.0/minimax-m2.7@vllm/2026-04-20T12:27:49+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.350 accuracy on essay_vocabulary_scoring_condensed v1.0</title>
-    <updated>2026-04-20T12:27:49+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.350, macro_f1=0.257, qwk=0.389</summary>
   </entry>
 </feed>
