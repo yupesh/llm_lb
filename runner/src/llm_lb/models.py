@@ -142,6 +142,14 @@ class SamplePrediction(BaseModel):
     latency_ms: float
     input_tokens: Optional[int] = None
     output_tokens: Optional[int] = None
+    # Unprocessed model output — before `strip_reasoning` and before any
+    # label/regex extraction. Stored so extractor bugs (e.g. the
+    # `safe`⊂`unsafe` substring bug that pinned safety_classification at
+    # 0.500) can be fixed offline by re-running the extractor over the
+    # original text, without a fresh GPU run. Nullable: older result files
+    # predate this field, and dialog-simulation tasks don't produce a single
+    # completion string.
+    raw_output: Optional[str] = None
     # Per-sample judge score in the task's raw judge scale, when the task
     # configures an LLM-as-Judge metric. Normalised aggregate goes into
     # `RunResult.metrics["judge_score"]`.

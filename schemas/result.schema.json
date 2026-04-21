@@ -88,6 +88,18 @@
           "default": null,
           "title": "Output Tokens"
         },
+        "raw_output": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Raw Output"
+        },
         "judge_raw_score": {
           "anyOf": [
             {

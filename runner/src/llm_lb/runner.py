@@ -189,6 +189,7 @@ def _execute_sample(
             latency_ms=dt_ms,
             input_tokens=completion.input_tokens,
             output_tokens=completion.output_tokens,
+            raw_output=completion.text,
         )
         if task.judge and ctx.judge_client is not None:
             sample_pred.judge_raw_score = judge_mod.score_sample(
