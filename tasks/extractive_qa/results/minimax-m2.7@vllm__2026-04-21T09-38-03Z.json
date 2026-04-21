@@ -1,0 +1,152 @@
+{
+  "model_id": "minimax-m2.7@vllm",
+  "model_revision": "2026-04-20",
+  "task_id": "extractive_qa",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "275159880584aac7",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "exact_match": 0.9
+  },
+  "tps": 67.66765243414925,
+  "p95_latency_ms": 2234.001121999995,
+  "n_samples": 10,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "sample_001",
+      "prediction": "Paris",
+      "expected": "Paris",
+      "correct": true,
+      "latency_ms": 1016.9555459999913,
+      "input_tokens": 50,
+      "output_tokens": 42,
+      "raw_output": "<think>The user is asking a simple factual question about the capital of France. According to the instructions, I should answer factual questions in as few words as possible, with no explanation and no punctuation.\n</think>\n\nParis",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_002",
+      "prediction": "Mars",
+      "expected": "Mars",
+      "correct": true,
+      "latency_ms": 1235.7607970000117,
+      "input_tokens": 52,
+      "output_tokens": 50,
+      "raw_output": "<think>The user is asking a simple factual question about which planet is known as the \"Red Planet.\" This is Mars. I need to answer in as few words as possible with no explanation, no punctuation, as per the system instructions.\n</think>\n\nMars",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_003",
+      "prediction": "William Shakespeare",
+      "expected": "William Shakespeare",
+      "correct": true,
+      "latency_ms": 876.3977879999914,
+      "input_tokens": 52,
+      "output_tokens": 52,
+      "raw_output": "<think>The user is asking who wrote the play \"Hamlet\". This is a straightforward factual question. According to the instructions, I should answer in as few words as possible, with no explanation and no punctuation.\n\nThe answer is William Shakespeare.\n</think>\n\nWilliam Shakespeare",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_004",
+      "prediction": "Au",
+      "expected": "Au",
+      "correct": true,
+      "latency_ms": 945.9832310000138,
+      "input_tokens": 51,
+      "output_tokens": 63,
+      "raw_output": "<think>The user is asking for the chemical symbol for gold. This is a straightforward factual question.\n\nGold's chemical symbol is Au, which comes from the Latin word \"aurum.\"\n\nI need to answer in as few words as possible, with no explanation and no punctuation, as per the system prompt.\n</think>\n\nAu",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_005",
+      "prediction": "7",
+      "expected": "seven",
+      "correct": false,
+      "latency_ms": 1564.0078010000025,
+      "input_tokens": 49,
+      "output_tokens": 138,
+      "raw_output": "<think>The user is asking a factual question about how many continents there are. This is a straightforward factual question.\n\nHowever, there's some ambiguity here because different models and educational systems teach different numbers of continents:\n- 7 continents (most common in English-speaking countries): Africa, Antarctica, Asia, Australia/Oceania, Europe, North America, South America\n- 6 continents (some models merge Europe and Asia): Africa, Antarctica, Americas, Asia, Australia, Europe\n- 5 continents (Olympic rings model): Africa, Americas, Asia, Europe, Oceania\n\nThe most commonly taught answer in English-speaking countries is 7. I should provide the most standard answer.\n</think>\n\n7",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_006",
+      "prediction": "1945",
+      "expected": "1945",
+      "correct": true,
+      "latency_ms": 772.3495000000185,
+      "input_tokens": 52,
+      "output_tokens": 38,
+      "raw_output": "<think>The user is asking a factual question about when World War II ended. I need to provide a concise answer with no explanation, no punctuation, and no extra text.\n</think>\n\n1945",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_007",
+      "prediction": "Pacific Ocean",
+      "expected": "Pacific Ocean",
+      "correct": true,
+      "latency_ms": 577.936090999998,
+      "input_tokens": 51,
+      "output_tokens": 34,
+      "raw_output": "<think>The user is asking a factual question about the largest ocean on Earth. According to my knowledge, the Pacific Ocean is the largest ocean on Earth.\n</think>\n\nPacific Ocean",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_008",
+      "prediction": "Leonardo da Vinci",
+      "expected": "Leonardo da Vinci",
+      "correct": true,
+      "latency_ms": 987.1940140000106,
+      "input_tokens": 49,
+      "output_tokens": 60,
+      "raw_output": "<think>The user is asking who painted the Mona Lisa. This is a factual question with a well-known answer.\n\nThe Mona Lisa was painted by Leonardo da Vinci.\n\nI need to answer in as few words as possible, with no explanation, no punctuation, and no extra text.\n</think>\n\nLeonardo da Vinci",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_009",
+      "prediction": "299792458",
+      "expected": "299792458",
+      "correct": true,
+      "latency_ms": 2234.001121999995,
+      "input_tokens": 60,
+      "output_tokens": 214,
+      "raw_output": "<think>The user is asking for the speed of light in vacuum in metres per second, rounded.\n\nThe speed of light in vacuum is approximately 299,792,458 metres per second.\n\nRounded to the nearest metre per second, that's 299,792,458 m/s (it's actually exact by definition now, since the metre is defined in terms of the speed of light).\n\nBut if they want it rounded, I should give the number. The exact value is 299,792,458 m/s by definition.\n\nIf rounded to the nearest whole number, it's 299,792,458.\n\nIf they want it simplified/rounded in some other way, I should consider. But typically the answer is just 299,792,458.\n\nActually, let me reconsider. The speed of light is exactly 299,792,458 m/s by definition (since 1983, the metre is defined as the distance light travels in 1/299,792,458 of a second).\n\nSo the answer is 299792458.\n</think>\n\n299792458\n",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_010",
+      "prediction": "Hydrogen",
+      "expected": "Hydrogen",
+      "correct": true,
+      "latency_ms": 946.8870359999926,
+      "input_tokens": 52,
+      "output_tokens": 64,
+      "raw_output": "<think>The user is asking a factual question about which element has atomic number 1. According to my knowledge, hydrogen has atomic number 1.\n\nThe instructions say to answer in as few words as possible, output only the answer, no explanation, no punctuation.\n\nSo I should just say: Hydrogen\n</think>\n\nHydrogen",
+      "judge_raw_score": null,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-21T09:38:03+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": null,
+  "judge_model_revision": null,
+  "judge_prompt_hash": null
+}
