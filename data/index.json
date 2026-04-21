@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T01:41:32+00:00",
+  "generated_at": "2026-04-21T01:41:47+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -719,6 +719,21 @@
     {
       "task_id": "cefr_level_classification_condensed",
       "task_version": "1.0",
+      "model_id": "glm5.1@llama",
+      "score": 0.3,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.20170454545454544,
+        "qwk": 0.5
+      },
+      "tps": 44.621217570728184,
+      "p95_latency_ms": 26032.911291999993,
+      "cost_usd": null,
+      "result_file": "tasks/cefr_level_classification_condensed/results/glm5.1@llama__2026-04-20T20-14-02Z.json"
+    },
+    {
+      "task_id": "cefr_level_classification_condensed",
+      "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
       "score": 0.3,
       "metrics": {
@@ -814,6 +829,19 @@
     {
       "task_id": "conversational_memory_qa",
       "task_version": "1.0",
+      "model_id": "glm5.1@llama",
+      "score": 0.7866666666666667,
+      "metrics": {
+        "judge_score": 0.7866666666666667
+      },
+      "tps": 30.100572440724847,
+      "p95_latency_ms": 28892.236565999952,
+      "cost_usd": null,
+      "result_file": "tasks/conversational_memory_qa/results/glm5.1@llama__2026-04-20T20-20-21Z.json"
+    },
+    {
+      "task_id": "conversational_memory_qa",
+      "task_version": "1.0",
       "model_id": "gpt-oss-120b@vllm",
       "score": 0.7733333333333333,
       "metrics": {
@@ -849,6 +877,19 @@
       "p95_latency_ms": 15855.429785000006,
       "cost_usd": null,
       "result_file": "tasks/datascibench_csv_excel/results/gpt-oss-120b@vllm__2026-04-20T01-03-08Z.json"
+    },
+    {
+      "task_id": "datascibench_csv_excel",
+      "task_version": "1.0",
+      "model_id": "glm5.1@llama",
+      "score": 0.6799999999999999,
+      "metrics": {
+        "judge_score": 0.6799999999999999
+      },
+      "tps": 45.84372409976013,
+      "p95_latency_ms": 223322.63431400002,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_csv_excel/results/glm5.1@llama__2026-04-20T20-33-45Z.json"
     },
     {
       "task_id": "datascibench_csv_excel",
