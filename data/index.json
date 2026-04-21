@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T12:25:38+00:00",
+  "generated_at": "2026-04-21T18:56:50+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -415,6 +415,17 @@
       "display_name": "MiniMax-M2.7 (vLLM)",
       "provider": "openai_compat",
       "hf_uri": "MiniMaxAI/MiniMax-M2.7",
+      "hardware": {
+        "gpu_count": 4,
+        "gpu_type": "H200",
+        "quantization": null
+      }
+    },
+    {
+      "id": "qwen3-235B-A22B@vllm",
+      "display_name": "Qwen3-235B-A22B (vLLM)",
+      "provider": "openai_compat",
+      "hf_uri": "Qwen/Qwen3-235B-A22B-Thinking-2507",
       "hardware": {
         "gpu_count": 4,
         "gpu_type": "H200",
