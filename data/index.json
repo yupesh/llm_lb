@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T01:40:05+00:00",
+  "generated_at": "2026-04-21T01:40:25+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -2618,6 +2618,19 @@
     {
       "task_id": "kg_entity_type_refinement",
       "task_version": "1.0",
+      "model_id": "glm5.1@llama",
+      "score": 0.74,
+      "metrics": {
+        "judge_score": 0.74
+      },
+      "tps": 43.884777847814036,
+      "p95_latency_ms": 17000.312035999996,
+      "cost_usd": null,
+      "result_file": "tasks/kg_entity_type_refinement/results/glm5.1@llama__2026-04-20T22-55-03Z.json"
+    },
+    {
+      "task_id": "kg_entity_type_refinement",
+      "task_version": "1.0",
       "model_id": "minimax-m2.7@vllm",
       "score": 0.73,
       "metrics": {
@@ -2722,6 +2735,19 @@
     {
       "task_id": "kg_relation_refinement",
       "task_version": "1.0",
+      "model_id": "glm5.1@llama",
+      "score": 0.93,
+      "metrics": {
+        "judge_score": 0.93
+      },
+      "tps": 40.09925116779973,
+      "p95_latency_ms": 6740.457159000009,
+      "cost_usd": null,
+      "result_file": "tasks/kg_relation_refinement/results/glm5.1@llama__2026-04-20T22-57-21Z.json"
+    },
+    {
+      "task_id": "kg_relation_refinement",
+      "task_version": "1.0",
       "model_id": "qwen3.5-27b@vllm",
       "score": 0.93,
       "metrics": {
@@ -2809,6 +2835,19 @@
       "p95_latency_ms": 7345.502914999997,
       "cost_usd": null,
       "result_file": "tasks/kg_triplet_extraction/results/minimax-m2.7@vllm__2026-04-20T09-45-36Z.json"
+    },
+    {
+      "task_id": "kg_triplet_extraction",
+      "task_version": "1.0",
+      "model_id": "glm5.1@llama",
+      "score": 0.5900000000000001,
+      "metrics": {
+        "judge_score": 0.5900000000000001
+      },
+      "tps": 45.60061362167083,
+      "p95_latency_ms": 36304.003059000024,
+      "cost_usd": null,
+      "result_file": "tasks/kg_triplet_extraction/results/glm5.1@llama__2026-04-20T23-07-32Z.json"
     },
     {
       "task_id": "kg_triplet_extraction",
@@ -2943,6 +2982,20 @@
       "p95_latency_ms": 1864.9019190000047,
       "cost_usd": null,
       "result_file": "tasks/oos_detection/results/gpt-oss-120b@vllm__2026-04-20T01-31-25Z.json"
+    },
+    {
+      "task_id": "oos_detection",
+      "task_version": "1.0",
+      "model_id": "glm5.1@llama",
+      "score": 0.4666666666666667,
+      "metrics": {
+        "accuracy": 0.4666666666666667,
+        "macro_f1": 0.3181818181818182
+      },
+      "tps": 41.26915774923619,
+      "p95_latency_ms": 9573.749988000003,
+      "cost_usd": null,
+      "result_file": "tasks/oos_detection/results/glm5.1@llama__2026-04-20T23-10-15Z.json"
     },
     {
       "task_id": "oos_detection",

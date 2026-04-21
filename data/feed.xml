@@ -56,6 +56,34 @@
     <summary>accuracy=0.500, macro_f1=0.333</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/oos_detection/1.0/glm5.1@llama/2026-04-20T23:10:15+00:00</id>
+    <title>glm5.1@llama scored 0.467 accuracy on oos_detection v1.0</title>
+    <updated>2026-04-20T23:10:15+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/oos_detection" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.467, macro_f1=0.318</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_triplet_extraction/1.0/glm5.1@llama/2026-04-20T23:07:32+00:00</id>
+    <title>glm5.1@llama scored 0.590 judge_score on kg_triplet_extraction v1.0</title>
+    <updated>2026-04-20T23:07:32+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_triplet_extraction" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.590</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_relation_refinement/1.0/glm5.1@llama/2026-04-20T22:57:21+00:00</id>
+    <title>glm5.1@llama scored 0.930 judge_score on kg_relation_refinement v1.0</title>
+    <updated>2026-04-20T22:57:21+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_relation_refinement" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.930</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_entity_type_refinement/1.0/glm5.1@llama/2026-04-20T22:55:03+00:00</id>
+    <title>glm5.1@llama scored 0.740 judge_score on kg_entity_type_refinement v1.0</title>
+    <updated>2026-04-20T22:55:03+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_entity_type_refinement" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.740</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/gpt-oss-120b@vllm/2026-04-20T16:28:27+00:00</id>
     <title>gpt-oss-120b@vllm scored 0.500 accuracy on safety_classification v1.0</title>
     <updated>2026-04-20T16:28:27+00:00</updated>
@@ -327,33 +355,5 @@
     <updated>2026-04-20T12:00:44+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification" rel="alternate" type="text/html"/>
     <summary>accuracy=0.300, macro_f1=0.197, qwk=0.463</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/agent_tool_calling/1.0/minimax-m2.7@vllm/2026-04-20T11:58:37+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.464 judge_score on agent_tool_calling v1.0</title>
-    <updated>2026-04-20T11:58:37+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/agent_tool_calling" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.464</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_bird/1.0/minimax-m2.7@vllm/2026-04-20T11:07:00+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.636 judge_score on text2sql_bird v1.0</title>
-    <updated>2026-04-20T11:07:00+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_bird" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.636</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_ambiguity/1.0/minimax-m2.7@vllm/2026-04-20T10:46:41+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.467 judge_score on text2sql_ambiguity v1.0</title>
-    <updated>2026-04-20T10:46:41+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_ambiguity" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.467</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/temporal_information_extraction/1.0/minimax-m2.7@vllm/2026-04-20T10:36:40+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.657 judge_score on temporal_information_extraction v1.0</title>
-    <updated>2026-04-20T10:36:40+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/temporal_information_extraction" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.657</summary>
   </entry>
 </feed>
