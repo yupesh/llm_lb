@@ -1,11 +1,15 @@
-   model_id: llama-guard4@vllm
-   display_name: Llama-Guard-4 (vLLM)
-   provider: openai_compat
-   endpoint_kind: openai_chat
-   hf_uri: meta-llama/Llama-Guard-4-12B
-   revision: "2026-04-21"
-   endpoint_url: http://lnsigo.mipt.ru:4000/v1
-   api_key_env: VLLM_PROXY_KEY     # <-- name of env var, not the key
-   hardware:
-     gpu_count: 1
-     gpu_type: H200
+model_id: llama-guard4@vllm
+display_name: Llama-Guard-4-12B (vLLM)
+provider: llama_guard
+endpoint_kind: openai_chat
+hf_uri: meta-llama/Llama-Guard-4-12B
+revision: "2026-04-21"
+# Self-hosted Guard endpoint. Uses its own port because the built-in chat
+# template rejects a system role and requires single-user messages — see
+# adapters/llama_guard.py for the adapter that drops `system` and post-
+# processes the fixed-format response.
+endpoint_url: http://lnsigo.mipt.ru:8009/v1
+api_key_env: VLLM_PROXY_KEY
+hardware:
+  gpu_count: 1
+  gpu_type: H200

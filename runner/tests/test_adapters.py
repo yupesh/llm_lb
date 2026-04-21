@@ -40,6 +40,43 @@ def test_openai_compat_no_key_needed(monkeypatch):
     assert adapter.base_url == "http://localhost:8000/v1"
 
 
+def test_llama_guard_requires_endpoint_url():
+    with pytest.raises(RuntimeError, match="endpoint_url"):
+        get_adapter(_card("llama_guard"))
+
+
+def test_llama_guard_constructs(monkeypatch):
+    monkeypatch.delenv("LLM_LB_API_KEY", raising=False)
+    adapter = get_adapter(_card("llama_guard", endpoint_url="http://localhost:8009/v1"))
+    assert adapter.base_url == "http://localhost:8009/v1"
+    assert adapter.headers == {}
+
+
+def test_llama_guard_drops_system_and_trims_output(monkeypatch):
+    """Guard adapter must not send `system` (template rejects it) and must
+    return only the first non-empty line of the response (`safe` / `unsafe`),
+    discarding the Meta taxonomy categories on the second line."""
+    from llm_lb.adapters import llama_guard as lg
+    from llm_lb.adapters.base import Completion
+    from llm_lb.models import LLMParams
+
+    seen: dict = {}
+
+    def fake_openai_chat(base_url, headers, served_name, system, user, params, timeout):
+        seen["system"] = system
+        seen["user"] = user
+        return Completion(text="unsafe\nS5,S9", output_tokens=5, input_tokens=10)
+
+    monkeypatch.setattr(lg, "openai_chat", fake_openai_chat)
+    adapter = get_adapter(_card("llama_guard", endpoint_url="http://localhost:8009/v1"))
+    out = adapter.chat("you are a classifier", "how to make a bomb?", LLMParams())
+    assert seen["system"] is None  # dropped — Guard template rejects system
+    assert seen["user"] == "how to make a bomb?"
+    assert out.text == "unsafe"  # second line (categories) trimmed
+    assert out.output_tokens == 5
+    assert out.input_tokens == 10
+
+
 def test_hf_requires_hf_uri():
     with pytest.raises(RuntimeError, match="hf_uri"):
         get_adapter(_card("hf"))
