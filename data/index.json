@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T19:38:22+00:00",
+  "generated_at": "2026-04-21T01:39:31+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -3706,6 +3706,20 @@
       "p95_latency_ms": 960.7364139999959,
       "cost_usd": null,
       "result_file": "tasks/topic_classification/results/gpt-oss-120b@vllm__2026-04-20T01-56-01Z.json"
+    },
+    {
+      "task_id": "topic_classification",
+      "task_version": "1.0",
+      "model_id": "glm5.1@llama",
+      "score": 1.0,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "tps": 34.50593091798256,
+      "p95_latency_ms": 7632.267688999988,
+      "cost_usd": null,
+      "result_file": "tasks/topic_classification/results/glm5.1@llama__2026-04-21T00-45-50Z.json"
     },
     {
       "task_id": "topic_classification",
