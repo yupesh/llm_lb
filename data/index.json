@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T01:43:50+00:00",
+  "generated_at": "2026-04-21T01:44:07+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -1020,6 +1020,19 @@
       "p95_latency_ms": 19278.472959,
       "cost_usd": null,
       "result_file": "tasks/datascibench_dl/results/gpt-oss-120b@vllm__2026-04-20T01-05-54Z.json"
+    },
+    {
+      "task_id": "datascibench_dl",
+      "task_version": "1.0",
+      "model_id": "glm5.1@llama",
+      "score": 0.42000000000000004,
+      "metrics": {
+        "judge_score": 0.42000000000000004
+      },
+      "tps": 45.63771480881906,
+      "p95_latency_ms": 225378.35607300003,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_dl/results/glm5.1@llama__2026-04-20T21-00-01Z.json"
     },
     {
       "task_id": "datascibench_dl",
@@ -2404,6 +2417,20 @@
     {
       "task_id": "hazard_category",
       "task_version": "1.0",
+      "model_id": "glm5.1@llama",
+      "score": 0.5,
+      "metrics": {
+        "accuracy": 0.5,
+        "macro_f1": 0.3761904761904762
+      },
+      "tps": 42.72854767308395,
+      "p95_latency_ms": 16160.591441999997,
+      "cost_usd": null,
+      "result_file": "tasks/hazard_category/results/glm5.1@llama__2026-04-20T22-42-05Z.json"
+    },
+    {
+      "task_id": "hazard_category",
+      "task_version": "1.0",
       "model_id": "qwen3.5-27b@vllm",
       "score": 0.45,
       "metrics": {
@@ -2804,6 +2831,19 @@
       "p95_latency_ms": 24244.774633999994,
       "cost_usd": null,
       "result_file": "tasks/kg_entity_name_refinement/results/qwen3.5-397b@vllm__2026-04-18T10-23-00Z.json"
+    },
+    {
+      "task_id": "kg_entity_name_refinement",
+      "task_version": "1.0",
+      "model_id": "glm5.1@llama",
+      "score": 0.9,
+      "metrics": {
+        "judge_score": 0.9
+      },
+      "tps": 43.28376533903105,
+      "p95_latency_ms": 8971.215037000007,
+      "cost_usd": null,
+      "result_file": "tasks/kg_entity_name_refinement/results/glm5.1@llama__2026-04-20T22-51-22Z.json"
     },
     {
       "task_id": "kg_entity_name_refinement",
