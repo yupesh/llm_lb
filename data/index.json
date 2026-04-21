@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T10:01:08+00:00",
+  "generated_at": "2026-04-21T10:02:06+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -585,6 +585,19 @@
       "result_file": "tasks/agent_tool_calling/results/qwen3.5-27b@vllm__2026-04-17T05-00-53Z.json"
     },
     {
+      "task_id": "agent_tool_calling",
+      "task_version": "1.0",
+      "model_id": "llama-guard4@vllm",
+      "score": 0.0,
+      "metrics": {
+        "judge_score": 0.0
+      },
+      "tps": 0.0,
+      "p95_latency_ms": 987.0308839999993,
+      "cost_usd": null,
+      "result_file": "tasks/agent_tool_calling/results/llama-guard4@vllm__2026-04-21T08-37-51Z.json"
+    },
+    {
       "task_id": "cefr_level_classification",
       "task_version": "1.0",
       "model_id": "gemma-4-31b-it@vllm",
@@ -602,6 +615,21 @@
     {
       "task_id": "cefr_level_classification",
       "task_version": "1.0",
+      "model_id": "minimax-m2.7@vllm",
+      "score": 0.5399999999999999,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.20833333333333331,
+        "qwk": 0.5399999999999999
+      },
+      "tps": 107.04094733788806,
+      "p95_latency_ms": 6132.618045000001,
+      "cost_usd": null,
+      "result_file": "tasks/cefr_level_classification/results/minimax-m2.7@vllm__2026-04-21T08-27-23Z.json"
+    },
+    {
+      "task_id": "cefr_level_classification",
+      "task_version": "1.0",
       "model_id": "gpt-oss-120b@vllm",
       "score": 0.52,
       "metrics": {
@@ -613,21 +641,6 @@
       "p95_latency_ms": 2896.156238000003,
       "cost_usd": null,
       "result_file": "tasks/cefr_level_classification/results/gpt-oss-120b@vllm__2026-04-20T00-56-54Z.json"
-    },
-    {
-      "task_id": "cefr_level_classification",
-      "task_version": "1.0",
-      "model_id": "minimax-m2.7@vllm",
-      "score": 0.5,
-      "metrics": {
-        "accuracy": 0.3,
-        "macro_f1": 0.20170454545454544,
-        "qwk": 0.5
-      },
-      "tps": 104.90933540178847,
-      "p95_latency_ms": 6562.571587,
-      "cost_usd": null,
-      "result_file": "tasks/cefr_level_classification/results/minimax-m2.7@vllm__2026-04-20T12-06-55Z.json"
     },
     {
       "task_id": "cefr_level_classification",
@@ -1000,6 +1013,19 @@
     {
       "task_id": "datascibench_csv_excel",
       "task_version": "1.0",
+      "model_id": "minimax-m2.7@vllm",
+      "score": 0.6599999999999999,
+      "metrics": {
+        "judge_score": 0.6599999999999999
+      },
+      "tps": 116.97789170854658,
+      "p95_latency_ms": 41976.142261,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_csv_excel/results/minimax-m2.7@vllm__2026-04-21T08-35-11Z.json"
+    },
+    {
+      "task_id": "datascibench_csv_excel",
+      "task_version": "1.0",
       "model_id": "qwen3.5-397b@vllm",
       "score": 0.64,
       "metrics": {
@@ -1048,19 +1074,6 @@
       "p95_latency_ms": 36849.272566999985,
       "cost_usd": null,
       "result_file": "tasks/datascibench_csv_excel/results/gemma-4-31b-it@vllm__2026-04-20T03-44-33Z.json"
-    },
-    {
-      "task_id": "datascibench_csv_excel",
-      "task_version": "1.0",
-      "model_id": "minimax-m2.7@vllm",
-      "score": 0.58,
-      "metrics": {
-        "judge_score": 0.58
-      },
-      "tps": 117.14006925502855,
-      "p95_latency_ms": 42109.275721000005,
-      "cost_usd": null,
-      "result_file": "tasks/datascibench_csv_excel/results/minimax-m2.7@vllm__2026-04-20T08-42-29Z.json"
     },
     {
       "task_id": "datascibench_csv_excel",
@@ -1143,6 +1156,19 @@
     {
       "task_id": "datascibench_dl",
       "task_version": "1.0",
+      "model_id": "minimax-m2.7@vllm",
+      "score": 0.44000000000000006,
+      "metrics": {
+        "judge_score": 0.44000000000000006
+      },
+      "tps": 59.55640665374093,
+      "p95_latency_ms": 323594.05753000005,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_dl/results/minimax-m2.7@vllm__2026-04-21T08-54-27Z.json"
+    },
+    {
+      "task_id": "datascibench_dl",
+      "task_version": "1.0",
       "model_id": "deepseek32exp@vllm",
       "score": 0.42000000000000004,
       "metrics": {
@@ -1178,19 +1204,6 @@
       "p95_latency_ms": 50088.141143999994,
       "cost_usd": null,
       "result_file": "tasks/datascibench_dl/results/gemma-4-31b-it@vllm__2026-04-20T03-50-29Z.json"
-    },
-    {
-      "task_id": "datascibench_dl",
-      "task_version": "1.0",
-      "model_id": "minimax-m2.7@vllm",
-      "score": 0.38,
-      "metrics": {
-        "judge_score": 0.38
-      },
-      "tps": 117.66464236107832,
-      "p95_latency_ms": 87011.70423999998,
-      "cost_usd": null,
-      "result_file": "tasks/datascibench_dl/results/minimax-m2.7@vllm__2026-04-20T08-52-41Z.json"
     },
     {
       "task_id": "datascibench_dl",
@@ -1300,14 +1313,14 @@
       "task_id": "datascibench_human",
       "task_version": "1.0",
       "model_id": "minimax-m2.7@vllm",
-      "score": 0.42000000000000004,
+      "score": 0.5,
       "metrics": {
-        "judge_score": 0.42000000000000004
+        "judge_score": 0.5
       },
-      "tps": 117.99568594204656,
-      "p95_latency_ms": 86820.74705899999,
+      "tps": 117.34786668342512,
+      "p95_latency_ms": 87404.01154500003,
       "cost_usd": null,
-      "result_file": "tasks/datascibench_human/results/minimax-m2.7@vllm__2026-04-20T09-02-39Z.json"
+      "result_file": "tasks/datascibench_human/results/minimax-m2.7@vllm__2026-04-21T09-04-32Z.json"
     },
     {
       "task_id": "datascibench_human",
@@ -1563,16 +1576,16 @@
       "task_id": "essay_coherence_scoring",
       "task_version": "1.0",
       "model_id": "minimax-m2.7@vllm",
-      "score": 0.22413793103448265,
+      "score": 0.2833333333333333,
       "metrics": {
-        "accuracy": 0.3,
-        "macro_f1": 0.18157894736842106,
-        "qwk": 0.22413793103448265
+        "accuracy": 0.25,
+        "macro_f1": 0.13157894736842105,
+        "qwk": 0.2833333333333333
       },
-      "tps": 106.56571893298718,
-      "p95_latency_ms": 6391.262415,
+      "tps": 100.72453672216388,
+      "p95_latency_ms": 5999.107335000005,
       "cost_usd": null,
-      "result_file": "tasks/essay_coherence_scoring/results/minimax-m2.7@vllm__2026-04-20T12-10-36Z.json"
+      "result_file": "tasks/essay_coherence_scoring/results/minimax-m2.7@vllm__2026-04-21T09-20-49Z.json"
     },
     {
       "task_id": "essay_coherence_scoring_condensed",
