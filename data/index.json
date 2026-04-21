@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T01:40:25+00:00",
+  "generated_at": "2026-04-21T01:40:41+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -2317,6 +2317,20 @@
     {
       "task_id": "intent_classification",
       "task_version": "1.0",
+      "model_id": "glm5.1@llama",
+      "score": 0.9,
+      "metrics": {
+        "accuracy": 0.9,
+        "macro_f1": 0.9142857142857143
+      },
+      "tps": 43.558566931457385,
+      "p95_latency_ms": 15142.614186000017,
+      "cost_usd": null,
+      "result_file": "tasks/intent_classification/results/glm5.1@llama__2026-04-20T22-43-26Z.json"
+    },
+    {
+      "task_id": "intent_classification",
+      "task_version": "1.0",
       "model_id": "gpt-oss-120b@vllm",
       "score": 0.9,
       "metrics": {
@@ -2387,6 +2401,20 @@
     {
       "task_id": "jailbreak_detection",
       "task_version": "1.0",
+      "model_id": "glm5.1@llama",
+      "score": 1.0,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "tps": 40.13428159197793,
+      "p95_latency_ms": 5785.095521999949,
+      "cost_usd": null,
+      "result_file": "tasks/jailbreak_detection/results/glm5.1@llama__2026-04-20T22-45-00Z.json"
+    },
+    {
+      "task_id": "jailbreak_detection",
+      "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
       "score": 1.0,
       "metrics": {
@@ -2453,6 +2481,20 @@
       "p95_latency_ms": 4642.007580000012,
       "cost_usd": null,
       "result_file": "tasks/jailbreak_detection_beavertails/results/minimax-m2.7@vllm__2026-04-20T13-11-25Z.json"
+    },
+    {
+      "task_id": "jailbreak_detection_beavertails",
+      "task_version": "1.0",
+      "model_id": "glm5.1@llama",
+      "score": 0.75,
+      "metrics": {
+        "accuracy": 0.75,
+        "macro_f1": 0.7333333333333334
+      },
+      "tps": 42.94067845525083,
+      "p95_latency_ms": 19798.528680000003,
+      "cost_usd": null,
+      "result_file": "tasks/jailbreak_detection_beavertails/results/glm5.1@llama__2026-04-20T22-48-16Z.json"
     },
     {
       "task_id": "jailbreak_detection_beavertails",

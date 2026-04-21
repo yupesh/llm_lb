@@ -84,6 +84,27 @@
     <summary>judge_score=0.740</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection_beavertails/1.0/glm5.1@llama/2026-04-20T22:48:16+00:00</id>
+    <title>glm5.1@llama scored 0.750 accuracy on jailbreak_detection_beavertails v1.0</title>
+    <updated>2026-04-20T22:48:16+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection_beavertails" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.750, macro_f1=0.733</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection/1.0/glm5.1@llama/2026-04-20T22:45:00+00:00</id>
+    <title>glm5.1@llama scored 1.000 accuracy on jailbreak_detection v1.0</title>
+    <updated>2026-04-20T22:45:00+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection" rel="alternate" type="text/html"/>
+    <summary>accuracy=1.000, macro_f1=1.000</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/intent_classification/1.0/glm5.1@llama/2026-04-20T22:43:26+00:00</id>
+    <title>glm5.1@llama scored 0.900 accuracy on intent_classification v1.0</title>
+    <updated>2026-04-20T22:43:26+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/intent_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.900, macro_f1=0.914</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/gpt-oss-120b@vllm/2026-04-20T16:28:27+00:00</id>
     <title>gpt-oss-120b@vllm scored 0.500 accuracy on safety_classification v1.0</title>
     <updated>2026-04-20T16:28:27+00:00</updated>
@@ -334,26 +355,5 @@
     <updated>2026-04-20T12:10:36+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_coherence_scoring" rel="alternate" type="text/html"/>
     <summary>accuracy=0.300, macro_f1=0.182, qwk=0.224</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification_condensed/1.0/minimax-m2.7@vllm/2026-04-20T12:08:42+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.300 accuracy on cefr_level_classification_condensed v1.0</title>
-    <updated>2026-04-20T12:08:42+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.300, macro_f1=0.198, qwk=0.442</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification/1.0/minimax-m2.7@vllm/2026-04-20T12:06:55+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.300 accuracy on cefr_level_classification v1.0</title>
-    <updated>2026-04-20T12:06:55+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.300, macro_f1=0.202, qwk=0.500</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification/1.0/minimax-m2.7@vllm/2026-04-20T12:00:44+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.300 accuracy on cefr_level_classification v1.0</title>
-    <updated>2026-04-20T12:00:44+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.300, macro_f1=0.197, qwk=0.463</summary>
   </entry>
 </feed>
