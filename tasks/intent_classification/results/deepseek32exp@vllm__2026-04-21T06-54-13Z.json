@@ -1,0 +1,153 @@
+{
+  "model_id": "deepseek32exp@vllm",
+  "model_revision": "2026-04-02",
+  "task_id": "intent_classification",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "92b4c79a943a2b11",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0
+  },
+  "tps": 2.858935539710157,
+  "p95_latency_ms": 1149.4451700000034,
+  "n_samples": 10,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "sample_001",
+      "prediction": "question",
+      "expected": "question",
+      "correct": true,
+      "latency_ms": 1149.4451700000034,
+      "input_tokens": 69,
+      "output_tokens": 2,
+      "raw_output": "question",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_002",
+      "prediction": "complaint",
+      "expected": "complaint",
+      "correct": true,
+      "latency_ms": 674.3616059999979,
+      "input_tokens": 72,
+      "output_tokens": 3,
+      "raw_output": "complaint",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_003",
+      "prediction": "request",
+      "expected": "request",
+      "correct": true,
+      "latency_ms": 642.8887610000018,
+      "input_tokens": 70,
+      "output_tokens": 2,
+      "raw_output": "request",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_004",
+      "prediction": "feedback",
+      "expected": "feedback",
+      "correct": true,
+      "latency_ms": 564.3999589999993,
+      "input_tokens": 74,
+      "output_tokens": 2,
+      "raw_output": "feedback",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_005",
+      "prediction": "question",
+      "expected": "question",
+      "correct": true,
+      "latency_ms": 669.4817280000009,
+      "input_tokens": 68,
+      "output_tokens": 2,
+      "raw_output": "question",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_006",
+      "prediction": "complaint",
+      "expected": "complaint",
+      "correct": true,
+      "latency_ms": 1030.3257610000003,
+      "input_tokens": 73,
+      "output_tokens": 3,
+      "raw_output": "complaint",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_007",
+      "prediction": "request",
+      "expected": "request",
+      "correct": true,
+      "latency_ms": 1142.260548000003,
+      "input_tokens": 72,
+      "output_tokens": 2,
+      "raw_output": "request",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_008",
+      "prediction": "feedback",
+      "expected": "feedback",
+      "correct": true,
+      "latency_ms": 695.6248460000012,
+      "input_tokens": 70,
+      "output_tokens": 2,
+      "raw_output": "feedback",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_009",
+      "prediction": "question",
+      "expected": "question",
+      "correct": true,
+      "latency_ms": 1041.120578999994,
+      "input_tokens": 69,
+      "output_tokens": 2,
+      "raw_output": "question",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_010",
+      "prediction": "complaint",
+      "expected": "complaint",
+      "correct": true,
+      "latency_ms": 435.04332599999884,
+      "input_tokens": 74,
+      "output_tokens": 3,
+      "raw_output": "complaint",
+      "judge_raw_score": null,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-21T06:54:13+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": null,
+  "judge_model_revision": null,
+  "judge_prompt_hash": null
+}
