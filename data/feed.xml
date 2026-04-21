@@ -231,6 +231,13 @@
     <summary>accuracy=0.300, macro_f1=0.202, qwk=0.500</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification/1.0/glm5.1@llama/2026-04-20T20:07:13+00:00</id>
+    <title>glm5.1@llama scored 0.350 accuracy on cefr_level_classification v1.0</title>
+    <updated>2026-04-20T20:07:13+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.350, macro_f1=0.255, qwk=0.457</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/agent_tool_calling/1.0/glm5.1@llama/2026-04-20T20:00:16+00:00</id>
     <title>glm5.1@llama scored 0.545 judge_score on agent_tool_calling v1.0</title>
     <updated>2026-04-20T20:00:16+00:00</updated>
@@ -348,12 +355,5 @@
     <updated>2026-04-20T13:42:46+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/safety_classification" rel="alternate" type="text/html"/>
     <summary>accuracy=0.500, macro_f1=0.333</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection_beavertails/1.0/qwen3.6-35b@vllm/2026-04-20T13:41:29+00:00</id>
-    <title>qwen3.6-35b@vllm scored 0.600 accuracy on jailbreak_detection_beavertails v1.0</title>
-    <updated>2026-04-20T13:41:29+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection_beavertails" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.600, macro_f1=0.524</summary>
   </entry>
 </feed>
