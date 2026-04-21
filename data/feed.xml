@@ -203,6 +203,34 @@
     <summary>judge_score=0.560</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_dl/1.0/deepseek32exp@vllm/2026-04-21T06:38:32+00:00</id>
+    <title>deepseek32exp@vllm scored 0.420 judge_score on datascibench_dl v1.0</title>
+    <updated>2026-04-21T06:38:32+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_dl" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.420</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/qwen3-30b@vllm/2026-04-21T06:35:49+00:00</id>
+    <title>qwen3-30b@vllm scored 0.800 accuracy on safety_classification v1.0</title>
+    <updated>2026-04-21T06:35:49+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/safety_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.800, macro_f1=0.800</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_csv_excel/1.0/deepseek32exp@vllm/2026-04-21T06:31:46+00:00</id>
+    <title>deepseek32exp@vllm scored 0.620 judge_score on datascibench_csv_excel v1.0</title>
+    <updated>2026-04-21T06:31:46+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_csv_excel" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.620</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/conversational_memory_qa/1.0/deepseek32exp@vllm/2026-04-21T06:28:46+00:00</id>
+    <title>deepseek32exp@vllm scored 0.733 judge_score on conversational_memory_qa v1.0</title>
+    <updated>2026-04-21T06:28:46+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/conversational_memory_qa" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.733</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/glm5.1@llama/2026-04-21T06:08:28+00:00</id>
     <title>glm5.1@llama scored 0.800 accuracy on safety_classification v1.0</title>
     <updated>2026-04-21T06:08:28+00:00</updated>
@@ -327,33 +355,5 @@
     <updated>2026-04-20T22:42:05+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/hazard_category" rel="alternate" type="text/html"/>
     <summary>accuracy=0.500, macro_f1=0.376</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/extractive_qa/1.0/glm5.1@llama/2026-04-20T22:39:03+00:00</id>
-    <title>glm5.1@llama scored 0.700 exact_match on extractive_qa v1.0</title>
-    <updated>2026-04-20T22:39:03+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/extractive_qa" rel="alternate" type="text/html"/>
-    <summary>exact_match=0.700</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring_condensed/1.0/glm5.1@llama/2026-04-20T22:37:57+00:00</id>
-    <title>glm5.1@llama scored 0.450 accuracy on essay_vocabulary_scoring_condensed v1.0</title>
-    <updated>2026-04-20T22:37:57+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.450, macro_f1=0.407, qwk=0.711</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring/1.0/glm5.1@llama/2026-04-20T22:30:52+00:00</id>
-    <title>glm5.1@llama scored 0.450 accuracy on essay_vocabulary_scoring v1.0</title>
-    <updated>2026-04-20T22:30:52+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.450, macro_f1=0.342, qwk=0.545</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_holistic_scoring_condensed/1.0/glm5.1@llama/2026-04-20T22:23:02+00:00</id>
-    <title>glm5.1@llama scored 0.167 accuracy on essay_holistic_scoring_condensed v1.0</title>
-    <updated>2026-04-20T22:23:02+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_holistic_scoring_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.167, macro_f1=0.089, qwk=0.508</summary>
   </entry>
 </feed>
