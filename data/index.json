@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T07:50:47+00:00",
+  "generated_at": "2026-04-21T07:51:22+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -1167,6 +1167,19 @@
     {
       "task_id": "datascibench_human",
       "task_version": "1.0",
+      "model_id": "deepseek32exp@vllm",
+      "score": 0.56,
+      "metrics": {
+        "judge_score": 0.56
+      },
+      "tps": 53.42530965462653,
+      "p95_latency_ms": 66411.92121500001,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_human/results/deepseek32exp@vllm__2026-04-21T06-43-47Z.json"
+    },
+    {
+      "task_id": "datascibench_human",
+      "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
       "score": 0.56,
       "metrics": {
@@ -1310,6 +1323,19 @@
     {
       "task_id": "entity_relationship_extraction",
       "task_version": "1.0",
+      "model_id": "deepseek32exp@vllm",
+      "score": 0.8266666666666667,
+      "metrics": {
+        "judge_score": 0.8266666666666667
+      },
+      "tps": 52.36973463877466,
+      "p95_latency_ms": 24782.393993000005,
+      "cost_usd": null,
+      "result_file": "tasks/entity_relationship_extraction/results/deepseek32exp@vllm__2026-04-21T06-49-07Z.json"
+    },
+    {
+      "task_id": "entity_relationship_extraction",
+      "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
       "score": 0.7866666666666667,
       "metrics": {
@@ -1428,6 +1454,21 @@
     {
       "task_id": "essay_coherence_scoring",
       "task_version": "1.0",
+      "model_id": "deepseek32exp@vllm",
+      "score": 0.30000000000000004,
+      "metrics": {
+        "accuracy": 0.35,
+        "macro_f1": 0.2552631578947368,
+        "qwk": 0.30000000000000004
+      },
+      "tps": 2.4609119174531626,
+      "p95_latency_ms": 1472.4502070000085,
+      "cost_usd": null,
+      "result_file": "tasks/essay_coherence_scoring/results/deepseek32exp@vllm__2026-04-21T06-49-39Z.json"
+    },
+    {
+      "task_id": "essay_coherence_scoring",
+      "task_version": "1.0",
       "model_id": "minimax-m2.7@vllm",
       "score": 0.22413793103448265,
       "metrics": {
@@ -1529,6 +1570,21 @@
       "p95_latency_ms": 177465.62912999978,
       "cost_usd": null,
       "result_file": "tasks/essay_coherence_scoring_condensed/results/qwen3.5-27b@vllm__2026-04-19T13-51-19Z.json"
+    },
+    {
+      "task_id": "essay_coherence_scoring_condensed",
+      "task_version": "1.0",
+      "model_id": "deepseek32exp@vllm",
+      "score": 0.4117647058823529,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.22222222222222224,
+        "qwk": 0.4117647058823529
+      },
+      "tps": 2.1759074309167445,
+      "p95_latency_ms": 1444.8908299999914,
+      "cost_usd": null,
+      "result_file": "tasks/essay_coherence_scoring_condensed/results/deepseek32exp@vllm__2026-04-21T06-50-13Z.json"
     },
     {
       "task_id": "essay_coherence_scoring_condensed",
@@ -1653,6 +1709,21 @@
     {
       "task_id": "essay_grammar_scoring",
       "task_version": "1.0",
+      "model_id": "deepseek32exp@vllm",
+      "score": 0.21999999999999997,
+      "metrics": {
+        "accuracy": 0.35,
+        "macro_f1": 0.28809523809523807,
+        "qwk": 0.21999999999999997
+      },
+      "tps": 3.299555453376679,
+      "p95_latency_ms": 981.606517000003,
+      "cost_usd": null,
+      "result_file": "tasks/essay_grammar_scoring/results/deepseek32exp@vllm__2026-04-21T06-50-41Z.json"
+    },
+    {
+      "task_id": "essay_grammar_scoring",
+      "task_version": "1.0",
       "model_id": "gpt-oss-120b@vllm",
       "score": 0.15384615384615374,
       "metrics": {
@@ -1754,6 +1825,21 @@
       "p95_latency_ms": 1250.0344270000028,
       "cost_usd": null,
       "result_file": "tasks/essay_grammar_scoring_condensed/results/gemma-4-31b-it@vllm__2026-04-20T04-01-09Z.json"
+    },
+    {
+      "task_id": "essay_grammar_scoring_condensed",
+      "task_version": "1.0",
+      "model_id": "deepseek32exp@vllm",
+      "score": 0.23529411764705888,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.20833333333333334,
+        "qwk": 0.23529411764705888
+      },
+      "tps": 2.9107872449799173,
+      "p95_latency_ms": 1335.379015000001,
+      "cost_usd": null,
+      "result_file": "tasks/essay_grammar_scoring_condensed/results/deepseek32exp@vllm__2026-04-21T06-51-11Z.json"
     },
     {
       "task_id": "essay_grammar_scoring_condensed",
