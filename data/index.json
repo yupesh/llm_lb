@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T06:10:12+00:00",
+  "generated_at": "2026-04-21T06:18:38+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -330,6 +330,17 @@
     }
   ],
   "models": [
+    {
+      "id": "deepseek32exp@vllm",
+      "display_name": "DeepSeek-32exp (vLLM)",
+      "provider": "openai_compat",
+      "hf_uri": "QuantTrio/DeepSeek-V3.2-Exp-AWQ",
+      "hardware": {
+        "gpu_count": 4,
+        "gpu_type": "H200",
+        "quantization": null
+      }
+    },
     {
       "id": "dummy@local",
       "display_name": "Dummy Heuristic",
