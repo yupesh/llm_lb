@@ -50,7 +50,8 @@
         "hf",
         "vllm",
         "tgi",
-        "dummy"
+        "dummy",
+        "llama_guard"
       ],
       "title": "Provider",
       "type": "string"

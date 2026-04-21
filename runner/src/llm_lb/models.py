@@ -21,7 +21,7 @@ class GPUSpec(BaseModel):
     quantization: Optional[str] = None
 
 
-Provider = Literal["openai", "openai_compat", "hf", "vllm", "tgi", "dummy"]
+Provider = Literal["openai", "openai_compat", "hf", "vllm", "tgi", "dummy", "llama_guard"]
 EndpointKind = Literal["openai_chat", "openai_completion", "hf_inference", "dummy"]
 
 

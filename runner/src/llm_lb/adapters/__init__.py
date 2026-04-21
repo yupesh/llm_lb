@@ -5,3 +5,4 @@ from . import dummy  # noqa: F401
 from . import openai  # noqa: F401
 from . import openai_compat  # noqa: F401
 from . import hf  # noqa: F401
+from . import llama_guard  # noqa: F401
