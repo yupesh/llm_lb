@@ -1,0 +1,252 @@
+{
+  "model_id": "glm5.1@llama",
+  "model_revision": "2026-04-02",
+  "task_id": "kg_relation_refinement",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "06c3a7458e86ac8d",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "judge_score": 0.93
+  },
+  "tps": 40.09925116779973,
+  "p95_latency_ms": 6740.457159000009,
+  "n_samples": 20,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "kg_rr_001",
+      "prediction": "{\n  \"relation\": \"place of birth\"\n}",
+      "expected": "{\"relation\": \"place of birth\"}",
+      "correct": true,
+      "latency_ms": 4580.0960989999985,
+      "input_tokens": 353,
+      "output_tokens": 151,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_002",
+      "prediction": "{\n  \"relation\": \"employer\"\n}",
+      "expected": "{\"relation\": \"employer\"}",
+      "correct": true,
+      "latency_ms": 4147.385400000005,
+      "input_tokens": 350,
+      "output_tokens": 142,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_003",
+      "prediction": "{\n  \"relation\": \"creator\"\n}",
+      "expected": "{\"relation\": \"creator\"}",
+      "correct": true,
+      "latency_ms": 4126.80598,
+      "input_tokens": 355,
+      "output_tokens": 161,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_004",
+      "prediction": "{\n  \"relation\": \"educated at\"\n}",
+      "expected": "{\"relation\": \"educated at\"}",
+      "correct": true,
+      "latency_ms": 5341.181491999997,
+      "input_tokens": 351,
+      "output_tokens": 218,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_005",
+      "prediction": "{\n  \"relation\": \"capital\"\n}",
+      "expected": "{\"relation\": \"capital\"}",
+      "correct": true,
+      "latency_ms": 6740.457159000009,
+      "input_tokens": 351,
+      "output_tokens": 291,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_006",
+      "prediction": "{\n  \"relation\": \"award received\"\n}",
+      "expected": "{\"relation\": \"award received\"}",
+      "correct": true,
+      "latency_ms": 4867.849198000002,
+      "input_tokens": 365,
+      "output_tokens": 204,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_007",
+      "prediction": "{\n  \"relation\": \"creator\"\n}",
+      "expected": "{\"relation\": \"developer\"}",
+      "correct": false,
+      "latency_ms": 4496.699092,
+      "input_tokens": 355,
+      "output_tokens": 178,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_008",
+      "prediction": "{\n  \"relation\": \"languages spoken, written or signed\"\n}",
+      "expected": "{\"relation\": \"languages spoken, written or signed\"}",
+      "correct": true,
+      "latency_ms": 5707.160541999997,
+      "input_tokens": 352,
+      "output_tokens": 214,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_009",
+      "prediction": "{\n  \"relation\": \"director\"\n}",
+      "expected": "{\"relation\": \"director\"}",
+      "correct": true,
+      "latency_ms": 3493.556651999995,
+      "input_tokens": 348,
+      "output_tokens": 125,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_010",
+      "prediction": "{\n  \"relation\": \"spouse\"\n}",
+      "expected": "{\"relation\": \"spouse\"}",
+      "correct": true,
+      "latency_ms": 3327.603577000005,
+      "input_tokens": 349,
+      "output_tokens": 132,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_011",
+      "prediction": "{\n  \"relation\": \"number of employees\"\n}",
+      "expected": "{\"relation\": \"number of employees\"}",
+      "correct": true,
+      "latency_ms": 4260.363150000004,
+      "input_tokens": 356,
+      "output_tokens": 159,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_012",
+      "prediction": "{\n  \"relation\": \"length\"\n}",
+      "expected": "{\"relation\": \"length\"}",
+      "correct": true,
+      "latency_ms": 4534.799105000005,
+      "input_tokens": 353,
+      "output_tokens": 152,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_013",
+      "prediction": "```json\n{\n  \"relation\": \"published in\"\n}\n```",
+      "expected": "{\"relation\": \"published in\"}",
+      "correct": false,
+      "latency_ms": 11654.239415999997,
+      "input_tokens": 353,
+      "output_tokens": 521,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_014",
+      "prediction": "{\n  \"relation\": \"headquarters location\"\n}",
+      "expected": "{\"relation\": \"headquarters location\"}",
+      "correct": true,
+      "latency_ms": 4297.217700000005,
+      "input_tokens": 353,
+      "output_tokens": 169,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_015",
+      "prediction": "{\n  \"relation\": \"child\"\n}",
+      "expected": "{\"relation\": \"child\"}",
+      "correct": true,
+      "latency_ms": 4464.023616000006,
+      "input_tokens": 345,
+      "output_tokens": 186,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_016",
+      "prediction": "{\n  \"relation\": \"inception\"\n}",
+      "expected": "{\"relation\": \"inception\"}",
+      "correct": true,
+      "latency_ms": 5493.5744779999995,
+      "input_tokens": 358,
+      "output_tokens": 233,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_017",
+      "prediction": "{\n  \"relation\": \"member of\"\n}",
+      "expected": "{\"relation\": \"member of\"}",
+      "correct": true,
+      "latency_ms": 3803.6380209999834,
+      "input_tokens": 350,
+      "output_tokens": 155,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_018",
+      "prediction": "{\n  \"relation\": \"box office\"\n}",
+      "expected": "{\"relation\": \"box office\"}",
+      "correct": true,
+      "latency_ms": 4268.598441999984,
+      "input_tokens": 354,
+      "output_tokens": 176,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_019",
+      "prediction": "{\n  \"relation\": \"natural satellite\"\n}",
+      "expected": "{\"relation\": \"natural satellite\"}",
+      "correct": true,
+      "latency_ms": 6244.37602399999,
+      "input_tokens": 359,
+      "output_tokens": 268,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "kg_rr_020",
+      "prediction": "{\n  \"relation\": \"volunteer of\"\n}",
+      "expected": "{\"relation\": \"member of\"}",
+      "correct": false,
+      "latency_ms": 4651.004735000015,
+      "input_tokens": 354,
+      "output_tokens": 195,
+      "judge_raw_score": 1.0,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-20T22:57:21+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": "gpt-4o-mini@openai",
+  "judge_model_revision": "2024-07-18",
+  "judge_prompt_hash": "4a9e8bce27ce104a"
+}
