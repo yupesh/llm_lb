@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T07:58:25+00:00",
+  "generated_at": "2026-04-21T08:32:46+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -398,6 +398,17 @@
       "provider": "openai",
       "hf_uri": null,
       "hardware": null
+    },
+    {
+      "id": "llama-guard4@vllm",
+      "display_name": "Llama-Guard-4 (vLLM)",
+      "provider": "openai_compat",
+      "hf_uri": "meta-llama/Llama-Guard-4-12B",
+      "hardware": {
+        "gpu_count": 1,
+        "gpu_type": "H200",
+        "quantization": null
+      }
     },
     {
       "id": "minimax-m2.7@vllm",
