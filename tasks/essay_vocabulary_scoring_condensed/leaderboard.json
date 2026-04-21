@@ -106,7 +106,20 @@
       "p95_latency_ms": 6494.991852999988,
       "cost_usd": null,
       "result_file": "results/minimax-m2.7@vllm__2026-04-20T12-27-49Z.json"
+    },
+    {
+      "model_id": "deepseek32exp@vllm",
+      "score": 0.2941176470588236,
+      "metrics": {
+        "accuracy": 0.4,
+        "macro_f1": 0.36363636363636365,
+        "qwk": 0.2941176470588236
+      },
+      "tps": 2.877769556779146,
+      "p95_latency_ms": 1074.3764639999968,
+      "cost_usd": null,
+      "result_file": "results/deepseek32exp@vllm__2026-04-21T06-53-06Z.json"
     }
   ],
-  "updated_at": "2026-04-21T05:24:07+00:00"
+  "updated_at": "2026-04-21T07:50:47+00:00"
 }

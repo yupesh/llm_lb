@@ -133,6 +133,34 @@
     <summary>accuracy=0.550, macro_f1=0.438</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/extractive_qa/1.0/deepseek32exp@vllm/2026-04-21T06:53:25+00:00</id>
+    <title>deepseek32exp@vllm scored 1.000 exact_match on extractive_qa v1.0</title>
+    <updated>2026-04-21T06:53:25+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/extractive_qa" rel="alternate" type="text/html"/>
+    <summary>exact_match=1.000</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring_condensed/1.0/deepseek32exp@vllm/2026-04-21T06:53:06+00:00</id>
+    <title>deepseek32exp@vllm scored 0.400 accuracy on essay_vocabulary_scoring_condensed v1.0</title>
+    <updated>2026-04-21T06:53:06+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring_condensed" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.400, macro_f1=0.364, qwk=0.294</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring/1.0/deepseek32exp@vllm/2026-04-21T06:52:37+00:00</id>
+    <title>deepseek32exp@vllm scored 0.400 accuracy on essay_vocabulary_scoring v1.0</title>
+    <updated>2026-04-21T06:52:37+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.400, macro_f1=0.278, qwk=0.250</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_holistic_scoring_condensed/1.0/deepseek32exp@vllm/2026-04-21T06:52:09+00:00</id>
+    <title>deepseek32exp@vllm scored 0.167 accuracy on essay_holistic_scoring_condensed v1.0</title>
+    <updated>2026-04-21T06:52:09+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_holistic_scoring_condensed" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.167, macro_f1=0.104, qwk=0.552</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/glm5.1@llama/2026-04-21T06:08:28+00:00</id>
     <title>glm5.1@llama scored 0.800 accuracy on safety_classification v1.0</title>
     <updated>2026-04-21T06:08:28+00:00</updated>
@@ -327,33 +355,5 @@
     <updated>2026-04-20T21:39:05+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/entity_relationship_extraction" rel="alternate" type="text/html"/>
     <summary>judge_score=0.920</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_human/1.0/glm5.1@llama/2026-04-20T21:16:58+00:00</id>
-    <title>glm5.1@llama scored 0.580 judge_score on datascibench_human v1.0</title>
-    <updated>2026-04-20T21:16:58+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_human" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.580</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_csv_excel/1.0/glm5.1@llama/2026-04-20T20:33:45+00:00</id>
-    <title>glm5.1@llama scored 0.680 judge_score on datascibench_csv_excel v1.0</title>
-    <updated>2026-04-20T20:33:45+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_csv_excel" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.680</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/conversational_memory_qa/1.0/glm5.1@llama/2026-04-20T20:20:21+00:00</id>
-    <title>glm5.1@llama scored 0.787 judge_score on conversational_memory_qa v1.0</title>
-    <updated>2026-04-20T20:20:21+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/conversational_memory_qa" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.787</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification_condensed/1.0/glm5.1@llama/2026-04-20T20:14:02+00:00</id>
-    <title>glm5.1@llama scored 0.300 accuracy on cefr_level_classification_condensed v1.0</title>
-    <updated>2026-04-20T20:14:02+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.300, macro_f1=0.202, qwk=0.500</summary>
   </entry>
 </feed>
