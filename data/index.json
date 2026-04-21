@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T01:41:00+00:00",
+  "generated_at": "2026-04-21T01:41:13+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -1429,6 +1429,21 @@
     {
       "task_id": "essay_grammar_scoring",
       "task_version": "1.0",
+      "model_id": "glm5.1@llama",
+      "score": 0.4,
+      "metrics": {
+        "accuracy": 0.4,
+        "macro_f1": 0.32916666666666666,
+        "qwk": 0.4545454545454545
+      },
+      "tps": 44.84379832314817,
+      "p95_latency_ms": 35945.76839500007,
+      "cost_usd": null,
+      "result_file": "tasks/essay_grammar_scoring/results/glm5.1@llama__2026-04-20T22-03-29Z.json"
+    },
+    {
+      "task_id": "essay_grammar_scoring",
+      "task_version": "1.0",
       "model_id": "qwen3.5-397b@vllm",
       "score": 0.4,
       "metrics": {
@@ -1579,6 +1594,21 @@
     {
       "task_id": "essay_grammar_scoring_condensed",
       "task_version": "1.0",
+      "model_id": "glm5.1@llama",
+      "score": 0.3,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.25396825396825395,
+        "qwk": 0.39473684210526305
+      },
+      "tps": 45.501639655656575,
+      "p95_latency_ms": 36998.81095000001,
+      "cost_usd": null,
+      "result_file": "tasks/essay_grammar_scoring_condensed/results/glm5.1@llama__2026-04-20T22-12-17Z.json"
+    },
+    {
+      "task_id": "essay_grammar_scoring_condensed",
+      "task_version": "1.0",
       "model_id": "gemma-4-31b-it@vllm",
       "score": 0.3,
       "metrics": {
@@ -1695,6 +1725,21 @@
       "p95_latency_ms": 47871.691262000015,
       "cost_usd": null,
       "result_file": "tasks/essay_holistic_scoring/results/qwen3.5-397b@vllm__2026-04-18T18-53-14Z.json"
+    },
+    {
+      "task_id": "essay_holistic_scoring",
+      "task_version": "1.0",
+      "model_id": "glm5.1@llama",
+      "score": 0.1111111111111111,
+      "metrics": {
+        "accuracy": 0.1111111111111111,
+        "macro_f1": 0.06060606060606061,
+        "qwk": 0.7246376811594202
+      },
+      "tps": 44.67538566278515,
+      "p95_latency_ms": 25965.174273000004,
+      "cost_usd": null,
+      "result_file": "tasks/essay_holistic_scoring/results/glm5.1@llama__2026-04-20T22-18-17Z.json"
     },
     {
       "task_id": "essay_holistic_scoring",

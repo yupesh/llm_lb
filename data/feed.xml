@@ -133,6 +133,27 @@
     <summary>accuracy=0.167, macro_f1=0.089, qwk=0.508</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_holistic_scoring/1.0/glm5.1@llama/2026-04-20T22:18:17+00:00</id>
+    <title>glm5.1@llama scored 0.111 accuracy on essay_holistic_scoring v1.0</title>
+    <updated>2026-04-20T22:18:17+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_holistic_scoring" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.111, macro_f1=0.061, qwk=0.725</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_grammar_scoring_condensed/1.0/glm5.1@llama/2026-04-20T22:12:17+00:00</id>
+    <title>glm5.1@llama scored 0.300 accuracy on essay_grammar_scoring_condensed v1.0</title>
+    <updated>2026-04-20T22:12:17+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_grammar_scoring_condensed" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.300, macro_f1=0.254, qwk=0.395</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_grammar_scoring/1.0/glm5.1@llama/2026-04-20T22:03:29+00:00</id>
+    <title>glm5.1@llama scored 0.400 accuracy on essay_grammar_scoring v1.0</title>
+    <updated>2026-04-20T22:03:29+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_grammar_scoring" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.400, macro_f1=0.329, qwk=0.455</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/gpt-oss-120b@vllm/2026-04-20T16:28:27+00:00</id>
     <title>gpt-oss-120b@vllm scored 0.500 accuracy on safety_classification v1.0</title>
     <updated>2026-04-20T16:28:27+00:00</updated>
@@ -334,26 +355,5 @@
     <updated>2026-04-20T12:27:49+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring_condensed" rel="alternate" type="text/html"/>
     <summary>accuracy=0.350, macro_f1=0.257, qwk=0.389</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring/1.0/minimax-m2.7@vllm/2026-04-20T12:21:07+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.250 accuracy on essay_vocabulary_scoring v1.0</title>
-    <updated>2026-04-20T12:21:07+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.250, macro_f1=0.132, qwk=0.379</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_holistic_scoring_condensed/1.0/minimax-m2.7@vllm/2026-04-20T12:19:18+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.111 accuracy on essay_holistic_scoring_condensed v1.0</title>
-    <updated>2026-04-20T12:19:18+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_holistic_scoring_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.111, macro_f1=0.067, qwk=0.464</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_holistic_scoring/1.0/minimax-m2.7@vllm/2026-04-20T12:17:44+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.333 accuracy on essay_holistic_scoring v1.0</title>
-    <updated>2026-04-20T12:17:44+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_holistic_scoring" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.333, macro_f1=0.296, qwk=0.704</summary>
   </entry>
 </feed>
