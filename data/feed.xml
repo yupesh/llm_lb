@@ -210,6 +210,13 @@
     <summary>judge_score=0.464</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/qwen3.6-35b@vllm/2026-04-21T08:04:16+00:00</id>
+    <title>qwen3.6-35b@vllm scored 0.850 accuracy on safety_classification v1.0</title>
+    <updated>2026-04-21T08:04:16+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/safety_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.850, macro_f1=0.850</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/qwen3.5-27b@vllm/2026-04-21T07:50:51+00:00</id>
     <title>qwen3.5-27b@vllm scored 0.900 accuracy on safety_classification v1.0</title>
     <updated>2026-04-21T07:50:51+00:00</updated>
@@ -348,12 +355,5 @@
     <updated>2026-04-21T06:53:52+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/hazard_category" rel="alternate" type="text/html"/>
     <summary>accuracy=0.550, macro_f1=0.438</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/extractive_qa/1.0/deepseek32exp@vllm/2026-04-21T06:53:25+00:00</id>
-    <title>deepseek32exp@vllm scored 1.000 exact_match on extractive_qa v1.0</title>
-    <updated>2026-04-21T06:53:25+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/extractive_qa" rel="alternate" type="text/html"/>
-    <summary>exact_match=1.000</summary>
   </entry>
 </feed>
