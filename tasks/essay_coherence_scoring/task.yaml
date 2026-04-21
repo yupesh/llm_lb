@@ -3,10 +3,10 @@ version: '1.0'
 description: 'Coherence and cohesion scoring of learner writing (CEFR scale 1-4). Full rubric with band descriptors and worked
   examples. Source: ISTOK research project.'
 metric:
-  primary: accuracy
+  primary: qwk
   secondary:
+  - accuracy
   - macro_f1
-  - qwk
 labels:
 - '1'
 - '2'

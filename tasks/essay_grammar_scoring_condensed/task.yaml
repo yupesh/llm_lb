@@ -3,10 +3,10 @@ version: '1.0'
 description: 'Grammatical accuracy scoring of learner writing (CEFR scale 1-4). Condensed rubric without worked examples.
   Source: ISTOK research project.'
 metric:
-  primary: accuracy
+  primary: qwk
   secondary:
+  - accuracy
   - macro_f1
-  - qwk
 labels:
 - '1'
 - '2'
