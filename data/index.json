@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T18:42:48+00:00",
+  "generated_at": "2026-04-21T18:56:50+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -425,7 +425,7 @@
       "id": "qwen3-235B-A22B@vllm",
       "display_name": "Qwen3-235B-A22B (vLLM)",
       "provider": "openai_compat",
-      "hf_uri": "Qwen/Qwen3-235B-A22B-Thinking-250",
+      "hf_uri": "Qwen/Qwen3-235B-A22B-Thinking-2507",
       "hardware": {
         "gpu_count": 4,
         "gpu_type": "H200",
