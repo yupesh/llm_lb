@@ -174,10 +174,59 @@ fieldset label {
 }
 
 .matrix-wrap {
-  overflow-x: auto;
+  overflow: auto;
+  max-height: 75vh;
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 8px;
+}
+/* border-collapse: separate is required for position: sticky cells to render
+   borders correctly while scrolling. */
+.matrix {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.matrix th,
+.matrix td {
+  border-top: none;
+  border-bottom: 1px solid var(--border);
+}
+.matrix thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  /* solid background so scrolled rows don't bleed through */
+  background: #f9fafb;
+  border-bottom: 1px solid var(--border);
+}
+.matrix th:first-child,
+.matrix td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: var(--card);
+  border-right: 1px solid var(--border);
+  white-space: nowrap;
+}
+.matrix thead th:first-child {
+  /* top-left corner has to outrank both axes */
+  z-index: 3;
+  background: #f9fafb;
+}
+.matrix tbody th.model-cell {
+  text-align: left;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 500;
+  color: var(--fg);
+  background: var(--card);
+}
+.matrix td.leader {
+  font-weight: 700;
+}
+.matrix td.avg-cell {
+  font-variant-numeric: tabular-nums;
+  border-left: 1px solid var(--border);
 }
 .matrix th .metric {
   font-size: 10px;
