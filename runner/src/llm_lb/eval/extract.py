@@ -14,16 +14,34 @@ def strip_reasoning(raw: str) -> str:
 
 
 def extract_label(raw: str, labels: list[str]) -> str:
-    """Pick the first task label that appears (case-insensitive) in the model output.
+    """Pick the task label that appears earliest in the model output.
 
     Falls back to the stripped raw text if no label matches — the eval step will
     then mark the prediction as incorrect.
+
+    Why earliest-position rather than iteration-order: when one label is a
+    substring of another (e.g. `safe` ⊂ `unsafe`), an iteration-order check
+    returns whichever label was listed first regardless of what the model
+    actually said. `safety_classification` scored exactly 0.500 across every
+    model because "safe" matched inside every "unsafe" output. Picking the
+    earliest occurrence — with longest-label wins on ties so `unsafe` beats
+    `safe` when both start at position 0 — resolves this without needing a
+    regex word-boundary (which breaks on labels with commas like
+    `controversial_topics,politics` in `hazard_category`).
     """
     raw_lower = raw.lower()
+    # (position, -length, label) — min() picks earliest occurrence, then
+    # longest matching label as tiebreak (negate length so shorter compares
+    # larger, i.e. loses).
+    best: tuple[int, int, str] | None = None
     for label in labels:
-        if label.lower() in raw_lower:
-            return label
-    return raw.strip()
+        idx = raw_lower.find(label.lower())
+        if idx < 0:
+            continue
+        candidate = (idx, -len(label), label)
+        if best is None or candidate < best:
+            best = candidate
+    return best[2] if best is not None else raw.strip()
 
 
 def extract_regex(raw: str, pattern: str) -> str:

@@ -1,4 +1,4 @@
-from llm_lb.eval.extract import extract_regex, normalize, strip_reasoning
+from llm_lb.eval.extract import extract_label, extract_regex, normalize, strip_reasoning
 
 
 def test_normalize_strips_punct_and_case():
@@ -29,3 +29,47 @@ def test_strip_reasoning_removes_think_blocks():
 def test_strip_reasoning_noop_on_plain_text():
     assert strip_reasoning("plain answer") == "plain answer"
     assert strip_reasoning("unclosed <think>trace still open") == "unclosed <think>trace still open"
+
+
+def test_extract_label_plain_match():
+    assert extract_label("benign", ["benign", "jailbreak"]) == "benign"
+    assert extract_label("The answer is jailbreak.", ["benign", "jailbreak"]) == "jailbreak"
+
+
+def test_extract_label_substring_ambiguity():
+    # "safe" is a substring of "unsafe" — the earlier iteration-order
+    # implementation would match "safe" inside every "unsafe" output,
+    # pinning `safety_classification` to 0.500 for every model.
+    assert extract_label("unsafe", ["safe", "unsafe"]) == "unsafe"
+    assert extract_label("Label: unsafe", ["safe", "unsafe"]) == "unsafe"
+    assert extract_label("safe", ["safe", "unsafe"]) == "safe"
+    # Earliest occurrence wins when the candidates are disjoint.
+    assert extract_label("unsafe then safe", ["safe", "unsafe"]) == "unsafe"
+    assert extract_label("It's safe, not unsafe", ["safe", "unsafe"]) == "safe"
+
+
+def test_extract_label_case_insensitive():
+    assert extract_label("UNSAFE", ["safe", "unsafe"]) == "unsafe"
+
+
+def test_extract_label_no_match_returns_stripped_raw():
+    assert extract_label("  maybe  ", ["yes", "no"]) == "maybe"
+
+
+def test_extract_label_labels_with_commas():
+    labels = [
+        "animal_abuse",
+        "controversial_topics,politics",
+        "violence,aiding_and_abetting,incitement",
+    ]
+    assert (
+        extract_label("controversial_topics,politics", labels)
+        == "controversial_topics,politics"
+    )
+    assert (
+        extract_label(
+            "violence,aiding_and_abetting,incitement",
+            labels,
+        )
+        == "violence,aiding_and_abetting,incitement"
+    )
