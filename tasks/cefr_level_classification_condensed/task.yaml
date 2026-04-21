@@ -3,10 +3,10 @@ version: '1.0'
 description: 'CEFR level classification from writing samples (A2-C1). Condensed CEFR rubric without worked examples. Source:
   ISTOK research project.'
 metric:
-  primary: accuracy
+  primary: qwk
   secondary:
+  - accuracy
   - macro_f1
-  - qwk
 labels:
 - A2
 - B1
