@@ -1,0 +1,11 @@
+   model_id: qwen3-235B-A22B@vllm
+   display_name: Qwen3-235B-A22B (vLLM)
+   provider: openai_compat
+   endpoint_kind: openai_chat
+   hf_uri: Qwen/Qwen3-235B-A22B-Thinking-250
+   revision: "2026-04-02"
+   endpoint_url: http://lnsigo.mipt.ru:4000/v1
+   api_key_env: VLLM_PROXY_KEY     # <-- name of env var, not the key
+   hardware:
+     gpu_count: 4
+     gpu_type: H200
