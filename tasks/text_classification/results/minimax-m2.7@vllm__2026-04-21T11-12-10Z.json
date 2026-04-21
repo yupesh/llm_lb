@@ -1,0 +1,153 @@
+{
+  "model_id": "minimax-m2.7@vllm",
+  "model_revision": "2026-04-20",
+  "task_id": "text_classification",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "836e0b983717bd5d",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0
+  },
+  "tps": 55.412942868918,
+  "p95_latency_ms": 1583.2510000000184,
+  "n_samples": 10,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "sample_001",
+      "prediction": "positive",
+      "expected": "positive",
+      "correct": true,
+      "latency_ms": 1437.8596219999906,
+      "input_tokens": 69,
+      "output_tokens": 81,
+      "raw_output": "<think>The user wants me to classify the sentiment of the text \"I love this product, it changed my life!\" as either \"positive\" or \"negative\".\n\nThis text clearly expresses positive sentiment:\n- \"I love\" indicates strong positive emotion\n- \"changed my life\" suggests a transformative, very positive experience\n- The exclamation mark shows enthusiasm\n\nThe answer is clearly \"positive\".\n</think>\n\npositive\n",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_002",
+      "prediction": "negative",
+      "expected": "negative",
+      "correct": true,
+      "latency_ms": 1515.9923130000266,
+      "input_tokens": 67,
+      "output_tokens": 70,
+      "raw_output": "<think>The user wants me to classify the sentiment of the text \"Absolutely terrible, broke after one day.\"\n\nThis is clearly a negative sentiment - the person is expressing dissatisfaction with a product that broke quickly, using strongly negative words like \"terrible\" and describing a negative experience.\n\nI should respond with exactly one word: \"negative\"\n</think>\n\nnegative\n",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_003",
+      "prediction": "positive",
+      "expected": "positive",
+      "correct": true,
+      "latency_ms": 1172.6023169999849,
+      "input_tokens": 70,
+      "output_tokens": 69,
+      "raw_output": "<think>The user wants me to classify the sentiment of the text \"Best purchase I have made this year, highly recommend.\"\n\nThis text is clearly positive - it uses words like \"Best\" and \"highly recommend\" which indicate a very positive sentiment.\n\nI need to reply with exactly one word: \"positive\" or \"negative\"\n</think>\n\npositive\n",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_004",
+      "prediction": "negative",
+      "expected": "negative",
+      "correct": true,
+      "latency_ms": 1266.8559780000237,
+      "input_tokens": 68,
+      "output_tokens": 78,
+      "raw_output": "<think>The user wants me to classify the sentiment of the text \"Awful quality and the worst customer service.\"\n\nThis text is clearly negative - it contains words like \"awful\" and \"worst\" which express strong negative sentiment about quality and customer service.\n\nI need to respond with exactly one word: \"positive\" or \"negative\"\n\nThe answer is: negative\n</think>\n\nnegative\n",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_005",
+      "prediction": "positive",
+      "expected": "positive",
+      "correct": true,
+      "latency_ms": 1150.652646999987,
+      "input_tokens": 69,
+      "output_tokens": 68,
+      "raw_output": "<think>The user wants me to classify the sentiment of the text \"Works great, exactly as described, very happy.\"\n\nThis text contains positive words like \"great,\" \"exactly as described,\" and \"very happy.\" The sentiment is clearly positive.\n\nI need to reply with exactly one word: \"positive\" or \"negative\"\n</think>\n\npositive\n",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_006",
+      "prediction": "negative",
+      "expected": "negative",
+      "correct": true,
+      "latency_ms": 1028.5004530000208,
+      "input_tokens": 69,
+      "output_tokens": 71,
+      "raw_output": "<think>The user wants me to classify the sentiment of the text \"Horrible experience, I want my money back.\"\n\nThis is clearly a negative sentiment - the person is expressing dissatisfaction, using the word \"horrible\" which is strongly negative, and requesting a refund which indicates they're unhappy.\n\nI should respond with exactly one word: \"negative\"\n</think>\n\nnegative",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_007",
+      "prediction": "positive",
+      "expected": "positive",
+      "correct": true,
+      "latency_ms": 1327.3703639999894,
+      "input_tokens": 68,
+      "output_tokens": 84,
+      "raw_output": "<think>The user wants me to classify the sentiment of the text \"Amazing build, sleek design, fantastic value.\"\n\nLooking at the words:\n- \"Amazing\" - positive\n- \"sleek\" - positive\n- \"fantastic\" - positive\n\nAll three descriptors are clearly positive. This is a positive sentiment.\n\nI need to reply with exactly one word: \"positive\" or \"negative\"\n</think>\n\npositive\n",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_008",
+      "prediction": "negative",
+      "expected": "negative",
+      "correct": true,
+      "latency_ms": 1104.8941770000056,
+      "input_tokens": 68,
+      "output_tokens": 61,
+      "raw_output": "<think>The user wants me to classify the sentiment of the text \"Bad packaging, item arrived damaged and unusable.\"\n\nThis text is clearly negative - it expresses dissatisfaction about packaging quality and a damaged/unusable item.\n\nI need to respond with exactly one word: \"positive\" or \"negative\"\n</think>\n\nnegative\n",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_009",
+      "prediction": "positive",
+      "expected": "positive",
+      "correct": true,
+      "latency_ms": 1531.6997159999914,
+      "input_tokens": 66,
+      "output_tokens": 70,
+      "raw_output": "<think>The user wants me to classify the sentiment of the text \"Excellent! Far exceeded my expectations.\" as either \"positive\" or \"negative\".\n\nThis text is clearly expressing very positive sentiment. The words \"Excellent!\" and \"Far exceeded my expectations\" are strongly positive indicators.\n\nI should respond with exactly one word: \"positive\"\n</think>\n\npositive\n",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_010",
+      "prediction": "negative",
+      "expected": "negative",
+      "correct": true,
+      "latency_ms": 1583.2510000000184,
+      "input_tokens": 69,
+      "output_tokens": 75,
+      "raw_output": "<think>The user wants me to classify the sentiment of the text \"Do not buy this, complete waste of money.\"\n\nThis text is clearly negative - it expresses dissatisfaction and warns others not to purchase something, calling it a \"complete waste of money.\"\n\nI need to respond with exactly one word: \"positive\" or \"negative\"\n\nThe answer is: negative\n</think>\n\nnegative\n",
+      "judge_raw_score": null,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-21T11:12:10+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": null,
+  "judge_model_revision": null,
+  "judge_prompt_hash": null
+}
