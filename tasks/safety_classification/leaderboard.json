@@ -16,6 +16,18 @@
       "result_file": "results/glm5.1@llama__2026-04-21T06-08-28Z.json"
     },
     {
+      "model_id": "gemma-4-31b-it@vllm",
+      "score": 0.8,
+      "metrics": {
+        "accuracy": 0.8,
+        "macro_f1": 0.8000000000000002
+      },
+      "tps": 3.1082732080088995,
+      "p95_latency_ms": 954.6050910000048,
+      "cost_usd": null,
+      "result_file": "results/gemma-4-31b-it@vllm__2026-04-21T07-35-59Z.json"
+    },
+    {
       "model_id": "gpt-oss-120b@vllm",
       "score": 0.75,
       "metrics": {
@@ -28,5 +40,5 @@
       "result_file": "results/gpt-oss-120b@vllm__2026-04-21T07-43-00Z.json"
     }
   ],
-  "updated_at": "2026-04-21T07:49:03+00:00"
+  "updated_at": "2026-04-21T07:49:39+00:00"
 }

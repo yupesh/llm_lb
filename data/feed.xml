@@ -14,6 +14,55 @@
     <summary>accuracy=0.750, macro_f1=0.749</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/topic_classification/1.0/deepseek32exp@vllm/2026-04-21T07:36:18+00:00</id>
+    <title>deepseek32exp@vllm scored 1.000 accuracy on topic_classification v1.0</title>
+    <updated>2026-04-21T07:36:18+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/topic_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=1.000, macro_f1=1.000</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/gemma-4-31b-it@vllm/2026-04-21T07:35:59+00:00</id>
+    <title>gemma-4-31b-it@vllm scored 0.800 accuracy on safety_classification v1.0</title>
+    <updated>2026-04-21T07:35:59+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/safety_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.800, macro_f1=0.800</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text_classification/1.0/deepseek32exp@vllm/2026-04-21T07:35:58+00:00</id>
+    <title>deepseek32exp@vllm scored 1.000 accuracy on text_classification v1.0</title>
+    <updated>2026-04-21T07:35:58+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=1.000, macro_f1=1.000</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_bird/1.0/deepseek32exp@vllm/2026-04-21T07:35:38+00:00</id>
+    <title>deepseek32exp@vllm scored 0.664 judge_score on text2sql_bird v1.0</title>
+    <updated>2026-04-21T07:35:38+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_bird" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.664</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_ambiguity/1.0/deepseek32exp@vllm/2026-04-21T07:34:16+00:00</id>
+    <title>deepseek32exp@vllm scored 0.500 judge_score on text2sql_ambiguity v1.0</title>
+    <updated>2026-04-21T07:34:16+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_ambiguity" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.500</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/temporal_information_extraction/1.0/deepseek32exp@vllm/2026-04-21T07:31:48+00:00</id>
+    <title>deepseek32exp@vllm scored 0.440 judge_score on temporal_information_extraction v1.0</title>
+    <updated>2026-04-21T07:31:48+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/temporal_information_extraction" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.440</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/summarization/1.0/deepseek32exp@vllm/2026-04-21T07:30:04+00:00</id>
+    <title>deepseek32exp@vllm scored 0.800 judge_score on summarization v1.0</title>
+    <updated>2026-04-21T07:30:04+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/summarization" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.800</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/glm5.1@llama/2026-04-21T06:08:28+00:00</id>
     <title>glm5.1@llama scored 0.800 accuracy on safety_classification v1.0</title>
     <updated>2026-04-21T06:08:28+00:00</updated>
@@ -306,54 +355,5 @@
     <updated>2026-04-20T14:02:06+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/hazard_category" rel="alternate" type="text/html"/>
     <summary>accuracy=0.450, macro_f1=0.340</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection_beavertails/1.0/qwen3-30b@vllm/2026-04-20T13:57:02+00:00</id>
-    <title>qwen3-30b@vllm scored 0.700 accuracy on jailbreak_detection_beavertails v1.0</title>
-    <updated>2026-04-20T13:57:02+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection_beavertails" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.700, macro_f1=0.697</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/hazard_category/1.0/qwen3-30b@vllm/2026-04-20T13:54:45+00:00</id>
-    <title>qwen3-30b@vllm scored 0.400 accuracy on hazard_category v1.0</title>
-    <updated>2026-04-20T13:54:45+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/hazard_category" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.400, macro_f1=0.315</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection_beavertails/1.0/qwen3.6-35b@vllm/2026-04-20T13:41:29+00:00</id>
-    <title>qwen3.6-35b@vllm scored 0.600 accuracy on jailbreak_detection_beavertails v1.0</title>
-    <updated>2026-04-20T13:41:29+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection_beavertails" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.600, macro_f1=0.524</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/hazard_category/1.0/qwen3.6-35b@vllm/2026-04-20T13:39:15+00:00</id>
-    <title>qwen3.6-35b@vllm scored 0.500 accuracy on hazard_category v1.0</title>
-    <updated>2026-04-20T13:39:15+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/hazard_category" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.500, macro_f1=0.388</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_csv_excel/1.0/qwen3.6-35b@vllm/2026-04-20T13:24:16+00:00</id>
-    <title>qwen3.6-35b@vllm scored 0.620 judge_score on datascibench_csv_excel v1.0</title>
-    <updated>2026-04-20T13:24:16+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_csv_excel" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.620</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/agent_tool_calling/1.0/qwen3.6-35b@vllm/2026-04-20T13:13:53+00:00</id>
-    <title>qwen3.6-35b@vllm scored 0.527 judge_score on agent_tool_calling v1.0</title>
-    <updated>2026-04-20T13:13:53+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/agent_tool_calling" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.527</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection_beavertails/1.0/minimax-m2.7@vllm/2026-04-20T13:11:25+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.750 accuracy on jailbreak_detection_beavertails v1.0</title>
-    <updated>2026-04-20T13:11:25+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection_beavertails" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.750, macro_f1=0.733</summary>
   </entry>
 </feed>

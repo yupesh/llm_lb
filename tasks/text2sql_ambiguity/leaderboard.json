@@ -70,6 +70,17 @@
       "result_file": "results/gpt-oss-120b@vllm__2026-04-20T01-53-31Z.json"
     },
     {
+      "model_id": "deepseek32exp@vllm",
+      "score": 0.5,
+      "metrics": {
+        "judge_score": 0.5
+      },
+      "tps": 46.68890010532885,
+      "p95_latency_ms": 6277.029655000007,
+      "cost_usd": null,
+      "result_file": "results/deepseek32exp@vllm__2026-04-21T07-34-16Z.json"
+    },
+    {
       "model_id": "minimax-m2.7@vllm",
       "score": 0.46666666666666673,
       "metrics": {
@@ -92,5 +103,5 @@
       "result_file": "results/glm5.1@llama__2026-04-21T00-30-11Z.json"
     }
   ],
-  "updated_at": "2026-04-21T01:40:05+00:00"
+  "updated_at": "2026-04-21T07:49:39+00:00"
 }
