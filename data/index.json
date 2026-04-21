@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T07:58:09+00:00",
+  "generated_at": "2026-04-21T07:58:25+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -737,6 +737,21 @@
       "p95_latency_ms": 9735.561753000013,
       "cost_usd": null,
       "result_file": "tasks/cefr_level_classification_condensed/results/qwen3.6-35b@vllm__2026-04-20T05-21-53Z.json"
+    },
+    {
+      "task_id": "cefr_level_classification_condensed",
+      "task_version": "1.0",
+      "model_id": "deepseek32exp@vllm",
+      "score": 0.5238095238095238,
+      "metrics": {
+        "accuracy": 0.45,
+        "macro_f1": 0.3449197860962567,
+        "qwk": 0.5238095238095238
+      },
+      "tps": 3.5964337077873325,
+      "p95_latency_ms": 1314.4606679999952,
+      "cost_usd": null,
+      "result_file": "tasks/cefr_level_classification_condensed/results/deepseek32exp@vllm__2026-04-21T06-26-30Z.json"
     },
     {
       "task_id": "cefr_level_classification_condensed",
@@ -2057,6 +2072,21 @@
       "p95_latency_ms": 12032.753190999983,
       "cost_usd": null,
       "result_file": "tasks/essay_holistic_scoring/results/qwen3.6-35b@vllm__2026-04-20T06-10-03Z.json"
+    },
+    {
+      "task_id": "essay_holistic_scoring",
+      "task_version": "1.0",
+      "model_id": "deepseek32exp@vllm",
+      "score": 0.5074626865671643,
+      "metrics": {
+        "accuracy": 0.1111111111111111,
+        "macro_f1": 0.06060606060606061,
+        "qwk": 0.5074626865671643
+      },
+      "tps": 2.5379109068850627,
+      "p95_latency_ms": 1250.9538170000028,
+      "cost_usd": null,
+      "result_file": "tasks/essay_holistic_scoring/results/deepseek32exp@vllm__2026-04-21T06-51-40Z.json"
     },
     {
       "task_id": "essay_holistic_scoring",
@@ -3397,6 +3427,19 @@
       "p95_latency_ms": 4428.784194999991,
       "cost_usd": null,
       "result_file": "tasks/kg_relation_refinement/results/minimax-m2.7@vllm__2026-04-20T09-42-59Z.json"
+    },
+    {
+      "task_id": "kg_relation_refinement",
+      "task_version": "1.0",
+      "model_id": "deepseek32exp@vllm",
+      "score": 0.9,
+      "metrics": {
+        "judge_score": 0.9
+      },
+      "tps": 15.376784662257249,
+      "p95_latency_ms": 616.1509649999957,
+      "cost_usd": null,
+      "result_file": "tasks/kg_relation_refinement/results/deepseek32exp@vllm__2026-04-21T06-57-31Z.json"
     },
     {
       "task_id": "kg_relation_refinement",
