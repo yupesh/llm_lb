@@ -79,7 +79,18 @@
       "p95_latency_ms": 1030.267461000001,
       "cost_usd": null,
       "result_file": "results/gemma-4-31b-it@vllm__2026-04-20T04-03-17Z.json"
+    },
+    {
+      "model_id": "glm5.1@llama",
+      "score": 0.7,
+      "metrics": {
+        "exact_match": 0.7
+      },
+      "tps": 41.69756851873186,
+      "p95_latency_ms": 11519.141066999964,
+      "cost_usd": null,
+      "result_file": "results/glm5.1@llama__2026-04-20T22-39-03Z.json"
     }
   ],
-  "updated_at": "2026-04-20T12:04:18+00:00"
+  "updated_at": "2026-04-21T01:41:00+00:00"
 }
