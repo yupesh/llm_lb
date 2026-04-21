@@ -105,6 +105,13 @@
     <summary>accuracy=0.350, macro_f1=0.272, qwk=0.421</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring/1.0/minimax-m2.7@vllm/2026-04-21T09:35:59+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.250 accuracy on essay_vocabulary_scoring v1.0</title>
+    <updated>2026-04-21T09:35:59+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.250, macro_f1=0.125, qwk=0.317</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/essay_holistic_scoring_condensed/1.0/minimax-m2.7@vllm/2026-04-21T09:29:42+00:00</id>
     <title>minimax-m2.7@vllm scored 0.167 accuracy on essay_holistic_scoring_condensed v1.0</title>
     <updated>2026-04-21T09:29:42+00:00</updated>
@@ -348,12 +355,5 @@
     <updated>2026-04-21T06:54:13+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/intent_classification" rel="alternate" type="text/html"/>
     <summary>accuracy=1.000, macro_f1=1.000</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/hazard_category/1.0/deepseek32exp@vllm/2026-04-21T06:53:52+00:00</id>
-    <title>deepseek32exp@vllm scored 0.550 accuracy on hazard_category v1.0</title>
-    <updated>2026-04-21T06:53:52+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/hazard_category" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.550, macro_f1=0.438</summary>
   </entry>
 </feed>
