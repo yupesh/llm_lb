@@ -1,0 +1,274 @@
+{
+  "model_id": "glm5.1@llama",
+  "model_revision": "2026-04-02",
+  "task_id": "agent_tool_calling",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "e754aed9b4fbe821",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "judge_score": 0.5454545454545454
+  },
+  "tps": 29.746224046968102,
+  "p95_latency_ms": 4364.211021000017,
+  "n_samples": 22,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "agent_tc_001",
+      "prediction": "```json\n[\n  {\"name\": \"get_available_tools\", \"arguments\": {}}\n]\n```",
+      "expected": "[{\"name\": \"get_available_tools\", \"arguments\": {}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 7003.278125000008,
+      "input_tokens": 840,
+      "output_tokens": 75,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "agent_tc_002",
+      "prediction": "[\n  {\"name\": \"get_editor_state\", \"arguments\": {}},\n  {\"name\": \"get_available_tools\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"build_tool\", \"arguments\": {}}, {\"name\": \"get_builds\", \"arguments\": {}}, {\"name\": \"get_editor_state\", \"arguments\": {}}, {\"name\": \"get_available_tools\", \"arguments\": {}}, {\"name\": \"add_assistant_to_canvas\", \"arguments\": {\"assistant_name\": \"assistant\"}}, {\"name\": \"add_tool_to_canvas\", \"arguments\": {\"tool_name\": \"calculator_tool\"}}, {\"name\": \"add_tool_to_canvas\", \"arguments\": {\"tool_name\": \"summary_tool\"}}]",
+      "correct": false,
+      "latency_ms": 2474.8788710000013,
+      "input_tokens": 832,
+      "output_tokens": 82,
+      "judge_raw_score": 1.0,
+      "error": null
+    },
+    {
+      "id": "agent_tc_003",
+      "prediction": "Сначала нужно узнать текущее состояние холста, чтобы найти узел калькулятора и его ID.\n\n[\n  {\"name\": \"get_editor_state\", \"arguments\": {}}\n]",
+      "expected": "[]",
+      "correct": false,
+      "latency_ms": 3874.9272820000015,
+      "input_tokens": 834,
+      "output_tokens": 162,
+      "judge_raw_score": 3.0,
+      "error": null
+    },
+    {
+      "id": "agent_tc_004",
+      "prediction": "[\n  {\"name\": \"get_editor_state\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_available_tools\", \"arguments\": {}}, {\"name\": \"get_editor_state\", \"arguments\": {}}, {\"name\": \"get_node_editable_params\", \"arguments\": {\"node_id\": \"tool_node-59de848a\"}}]",
+      "correct": false,
+      "latency_ms": 2966.3985749999993,
+      "input_tokens": 837,
+      "output_tokens": 105,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "agent_tc_005",
+      "prediction": "```json\n[\n  {\"name\": \"get_editor_state\", \"arguments\": {}}\n]\n```",
+      "expected": "[{\"name\": \"get_node_editable_params\", \"arguments\": {\"node_id\": \"summarizator\"}}, {\"name\": \"set_node_param\", \"arguments\": {\"node_id\": \"summarizator\", \"param_key\": \"llm_temperature\", \"param_value\": \"1\"}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 2493.9066379999986,
+      "input_tokens": 842,
+      "output_tokens": 67,
+      "judge_raw_score": 0.0,
+      "error": null
+    },
+    {
+      "id": "agent_tc_006",
+      "prediction": "[\n  {\"name\": \"get_editor_state\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"remove_nodes_from_canvas\", \"arguments\": {\"node_ids\": [\"assistant-2e65021c\"]}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 1789.721510999996,
+      "input_tokens": 837,
+      "output_tokens": 66,
+      "judge_raw_score": 1.0,
+      "error": null
+    },
+    {
+      "id": "agent_tc_007",
+      "prediction": "Сначала нужно узнать, какие инструменты доступны на платформе, чтобы найти подходящий для подключения к базе данных.</think>[{\"name\": \"get_available_tools\", \"arguments\": {}}]",
+      "expected": "[{\"name\": \"add_tool_to_canvas\", \"arguments\": {\"tool_name\": \"text2sql_tool\"}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 1903.8621699999821,
+      "input_tokens": 837,
+      "output_tokens": 71,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "agent_tc_008",
+      "prediction": "```json\n[\n  {\"name\": \"get_editor_state\", \"arguments\": {}}\n]\n```",
+      "expected": "[{\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 2059.7113750000062,
+      "input_tokens": 835,
+      "output_tokens": 49,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "agent_tc_009",
+      "prediction": "```json\n[\n  {\"name\": \"get_editor_state\", \"arguments\": {}},\n  {\"name\": \"validate_flow\", \"arguments\": {}}\n]\n```",
+      "expected": "[{\"name\": \"validate_flow\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 3130.0215699999967,
+      "input_tokens": 838,
+      "output_tokens": 98,
+      "judge_raw_score": 3.0,
+      "error": null
+    },
+    {
+      "id": "agent_tc_010",
+      "prediction": "[\n  {\"name\": \"get_builds\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_builds\", \"arguments\": {}}]",
+      "correct": true,
+      "latency_ms": 2029.5358059999842,
+      "input_tokens": 834,
+      "output_tokens": 45,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "agent_tc_011",
+      "prediction": "[\n  {\"name\": \"get_runs\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_runs\", \"arguments\": {}}]",
+      "correct": true,
+      "latency_ms": 1558.8818809999907,
+      "input_tokens": 833,
+      "output_tokens": 43,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "agent_tc_012",
+      "prediction": "[\n  {\"name\": \"remove_nodes_from_canvas\", \"arguments\": {\"remove_all\": true}}\n]",
+      "expected": "[{\"name\": \"remove_nodes_from_canvas\", \"arguments\": {\"remove_all\": true}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 2012.7415090000227,
+      "input_tokens": 833,
+      "output_tokens": 46,
+      "judge_raw_score": 3.0,
+      "error": null
+    },
+    {
+      "id": "agent_tc_013",
+      "prediction": "```json\n[\n  {\"name\": \"get_available_tools\", \"arguments\": {}}\n]\n```",
+      "expected": "[{\"name\": \"get_available_tools\", \"arguments\": {}}, {\"name\": \"get_editor_state\", \"arguments\": {}}, {\"name\": \"add_tool_to_canvas\", \"arguments\": {\"tool_name\": \"summary_tool\"}}, {\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 2502.5235429999952,
+      "input_tokens": 838,
+      "output_tokens": 65,
+      "judge_raw_score": 1.0,
+      "error": null
+    },
+    {
+      "id": "agent_tc_014",
+      "prediction": "[\n  {\"name\": \"get_builds\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"build_tool\", \"arguments\": {\"task_id\": \"тест 1\"}}]",
+      "correct": false,
+      "latency_ms": 2434.095337999992,
+      "input_tokens": 840,
+      "output_tokens": 63,
+      "judge_raw_score": 1.0,
+      "error": null
+    },
+    {
+      "id": "agent_tc_015",
+      "prediction": "```json\n[\n  {\"name\": \"get_builds\", \"arguments\": {}}\n]\n```",
+      "expected": "[{\"name\": \"get_builds\", \"arguments\": {}}, {\"name\": \"start_run_tool\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 2112.1039300000175,
+      "input_tokens": 839,
+      "output_tokens": 51,
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "agent_tc_016",
+      "prediction": "Сначала мне нужно получить информацию о текущем состоянии редактора и существующих сборках, чтобы подобрать подходящие имена и комментарии.</think>```json\n[\n  {\"name\": \"get_editor_state\", \"arguments\": {}},\n  {\"name\": \"get_builds\", \"arguments\": {}},\n  {\"name\": \"get_runs\", \"arguments\": {}}\n]\n```",
+      "expected": "[{\"name\": \"build_tool\", \"arguments\": {}}, {\"name\": \"rename_process\", \"arguments\": {\"process_type\": \"build\"}}, {\"name\": \"add_process_comment\", \"arguments\": {\"process_type\": \"build\"}}, {\"name\": \"start_run_tool\", \"arguments\": {}}, {\"name\": \"rename_process\", \"arguments\": {\"process_type\": \"run\"}}, {\"name\": \"add_process_comment\", \"arguments\": {\"process_type\": \"run\"}}]",
+      "correct": false,
+      "latency_ms": 4364.211021000017,
+      "input_tokens": 856,
+      "output_tokens": 185,
+      "judge_raw_score": 1.0,
+      "error": null
+    },
+    {
+      "id": "agent_tc_017",
+      "prediction": "[\n  {\"name\": \"get_builds\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_builds\", \"arguments\": {}}]",
+      "correct": true,
+      "latency_ms": 1791.5949350000062,
+      "input_tokens": 833,
+      "output_tokens": 47,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "agent_tc_018",
+      "prediction": "[\n  {\"name\": \"get_runs\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_runs\", \"arguments\": {}}]",
+      "correct": true,
+      "latency_ms": 1285.7758060000037,
+      "input_tokens": 836,
+      "output_tokens": 41,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "agent_tc_019",
+      "prediction": "[\n  {\"name\": \"get_editor_state\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_editor_state\", \"arguments\": {}}, {\"name\": \"remove_nodes_from_canvas\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 1540.593696000002,
+      "input_tokens": 834,
+      "output_tokens": 52,
+      "judge_raw_score": 1.0,
+      "error": null
+    },
+    {
+      "id": "agent_tc_020",
+      "prediction": "[\n  {\"name\": \"get_available_tools\", \"arguments\": {}}\n]",
+      "expected": "[{\"name\": \"get_available_tools\", \"arguments\": {}}]",
+      "correct": true,
+      "latency_ms": 1452.0702159999814,
+      "input_tokens": 831,
+      "output_tokens": 46,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "agent_tc_021",
+      "prediction": "```json\n[\n  {\"name\": \"get_editor_state\", \"arguments\": {}}\n]\n```",
+      "expected": "[{\"name\": \"get_editor_state\", \"arguments\": {}}]",
+      "correct": false,
+      "latency_ms": 1419.7972270000037,
+      "input_tokens": 841,
+      "output_tokens": 47,
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "agent_tc_022",
+      "prediction": "```json\n[\n  {\"name\": \"get_editor_state\", \"arguments\": {}}\n]\n```",
+      "expected": "[{\"name\": \"get_editor_state\", \"arguments\": {}}, {\"name\": \"get_node_editable_params\", \"arguments\": {\"node_id\": \"calculator_tool\"}}]",
+      "correct": false,
+      "latency_ms": 3873.712977999986,
+      "input_tokens": 835,
+      "output_tokens": 162,
+      "judge_raw_score": 2.0,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-20T20:00:16+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": "gpt-4o-mini@openai",
+  "judge_model_revision": "2024-07-18",
+  "judge_prompt_hash": "8c7ef62de93530b1"
+}
