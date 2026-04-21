@@ -74,7 +74,19 @@
       "p95_latency_ms": 1972.709457999997,
       "cost_usd": null,
       "result_file": "results/gpt-oss-120b@vllm__2026-04-21T07-43-00Z.json"
+    },
+    {
+      "model_id": "llama-guard4@vllm",
+      "score": 0.7,
+      "metrics": {
+        "accuracy": 0.7,
+        "macro_f1": 0.6969696969696968
+      },
+      "tps": 5.920748235561997,
+      "p95_latency_ms": 1197.5378509999928,
+      "cost_usd": null,
+      "result_file": "results/llama-guard4@vllm__2026-04-21T09-55-46Z.json"
     }
   ],
-  "updated_at": "2026-04-21T07:58:09+00:00"
+  "updated_at": "2026-04-21T10:00:03+00:00"
 }
