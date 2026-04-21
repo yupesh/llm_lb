@@ -1,0 +1,153 @@
+{
+  "model_id": "minimax-m2.7@vllm",
+  "model_revision": "2026-04-20",
+  "task_id": "intent_classification",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "92b4c79a943a2b11",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0
+  },
+  "tps": 82.42024293467512,
+  "p95_latency_ms": 1962.6689190000022,
+  "n_samples": 10,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "sample_001",
+      "prediction": "question",
+      "expected": "question",
+      "correct": true,
+      "latency_ms": 1788.0381810000044,
+      "input_tokens": 81,
+      "output_tokens": 130,
+      "raw_output": "<think>The user is asking me to classify the intent of the message \"How can I reset my password?\"\n\nThis is a question - the user is asking how to do something (reset their password). They want information or guidance.\n\n- \"question\" - this is asking for information or how to do something\n- \"complaint\" - this would be expressing dissatisfaction\n- \"request\" - this would be asking for something to be done for them\n- \"feedback\" - this would be providing opinions or comments\n\n\"How can I reset my password?\" is clearly a question asking for information/instructions.\n\nThe answer is: question\n</think>\n\nquestion",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_002",
+      "prediction": "complaint",
+      "expected": "complaint",
+      "correct": true,
+      "latency_ms": 1843.389391999999,
+      "input_tokens": 84,
+      "output_tokens": 157,
+      "raw_output": "<think>The user wants me to classify the intent of the message \"Your app keeps crashing every time I open it.\"\n\nLet me analyze this:\n- \"Your app keeps crashing\" - This is reporting a problem/bug\n- This is expressing dissatisfaction about an issue with the app\n- It's not asking for something (request)\n- It's not providing positive feedback\n- It's not a general comment\n\nThis is a complaint - the user is expressing frustration about a problem (the app crashing) and is likely seeking help or wanting the issue resolved.\n\nThe instruction says to reply with exactly one word: \"question\", \"complaint\", \"request\", or \"feedback\"\n\nThis is clearly a \"complaint\" - the user is reporting a problem/bug with the app.\n</think>\n\ncomplaint",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_003",
+      "prediction": "request",
+      "expected": "request",
+      "correct": true,
+      "latency_ms": 1812.7790219999938,
+      "input_tokens": 82,
+      "output_tokens": 161,
+      "raw_output": "<think>The user is asking me to classify the intent of the message \"Please add dark mode to the app.\"\n\nLet me analyze this:\n- \"Please add dark mode to the app\" is a request for a feature/functionality to be added\n- This is clearly a request - the user is asking for something to be done\n\nThe four options are:\n- \"question\" - this is asking for information, not applicable here\n- \"complaint\" - this is expressing dissatisfaction, not applicable here\n- \"request\" - this is asking for something to be done, which fits perfectly\n- \"feedback\" - this is providing opinions or reactions, not quite a request\n\nThe answer is clearly \"request\" as the user is requesting a feature to be added to the app.\n</think>\n\nrequest",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_004",
+      "prediction": "feedback",
+      "expected": "feedback",
+      "correct": true,
+      "latency_ms": 1248.0708809999967,
+      "input_tokens": 85,
+      "output_tokens": 112,
+      "raw_output": "<think>The user wants me to classify the intent of the message \"I really like the new design, it's much cleaner.\"\n\nLet me analyze this:\n- \"I really like\" - expresses positive sentiment\n- \"the new design\" - subject being discussed\n- \"it's much cleaner\" - additional positive feedback\n\nThis is clearly expressing a positive opinion/feedback about something (the new design). It's not a question, not a complaint, and not really a request. It's feedback - expressing an opinion or reaction.\n\nThe answer should be: feedback\n</think>\n\nfeedback",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_005",
+      "prediction": "question",
+      "expected": "question",
+      "correct": true,
+      "latency_ms": 1962.6689190000022,
+      "input_tokens": 80,
+      "output_tokens": 102,
+      "raw_output": "<think>The user wants me to classify the intent of the message \"Why is my order delayed?\"\n\nLet me analyze this:\n- \"Why is my order delayed?\" - This is a question asking for an explanation about a delayed order.\n\nThis is clearly a question - the user is asking why something happened. It's not a complaint (though it could be related to one, the message itself is phrased as a question), it's not a request, and it's not feedback.\n\nThe intent is \"question\"\n</think>\n\nquestion",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_006",
+      "prediction": "complaint",
+      "expected": "complaint",
+      "correct": true,
+      "latency_ms": 1933.085312000003,
+      "input_tokens": 84,
+      "output_tokens": 176,
+      "raw_output": "<think>The user wants me to classify the intent of the message \"This is the worst customer service I've ever experienced.\"\n\nLet me analyze this:\n- \"worst customer service\" - This is expressing dissatisfaction with a service\n- The person is complaining about their experience\n- This is clearly a negative expression about a service they received\n\nThis is a complaint. The person is expressing dissatisfaction/frustration with customer service they received.\n\nThe options are:\n- question: No, this isn't asking a question\n- complaint: Yes, this is expressing dissatisfaction\n- request: No, this isn't making a request\n- feedback: This could be considered feedback, but it's more of a complaint\n\nThe word \"worst\" indicates strong negative emotion and dissatisfaction, which is characteristic of a complaint rather than neutral feedback.\n\nI should reply with just one word: \"complaint\"\n</think>\n\ncomplaint",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_007",
+      "prediction": "request",
+      "expected": "request",
+      "correct": true,
+      "latency_ms": 1717.7664179999965,
+      "input_tokens": 84,
+      "output_tokens": 168,
+      "raw_output": "<think>The user is asking me to classify the intent of the message \"Can you send me a copy of the invoice?\"\n\nLet me analyze this:\n- \"Can you send me\" - This is asking for something to be done\n- \"a copy of the invoice\" - The specific request\n\nThis is clearly a request - the person is asking for something to be sent to them. It's not a complaint (no problem being reported), not feedback (no opinion or evaluation), and while it could be seen as a question grammatically, the intent is clearly to request something.\n\nThe instruction says to reply with exactly one word: \"question\", \"complaint\", \"request\", or \"feedback\".\n\nThis is a \"request\" - the person is asking for an action to be performed (sending a copy of the invoice).\n</think>\n\nrequest",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_008",
+      "prediction": "feedback",
+      "expected": "feedback",
+      "correct": true,
+      "latency_ms": 1493.2633849999988,
+      "input_tokens": 82,
+      "output_tokens": 122,
+      "raw_output": "<think>The user wants me to classify the intent of the message \"The checkout process is smooth and fast.\"\n\nLet me analyze this:\n- \"The checkout process is smooth and fast\" - This is a statement expressing a positive opinion about the checkout process. It's describing their experience with the checkout process in a favorable way.\n\nThis is not:\n- A question (no question being asked)\n- A complaint (it's positive, not negative)\n- A request (no request being made)\n\nThis is feedback - it's providing an opinion/experience about a product or service feature.\n\nThe answer should be: feedback\n</think>\n\nfeedback",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_009",
+      "prediction": "question",
+      "expected": "question",
+      "correct": true,
+      "latency_ms": 1211.1220310000022,
+      "input_tokens": 81,
+      "output_tokens": 87,
+      "raw_output": "<think>The user wants me to classify the intent of the message \"What payment methods do you accept?\"\n\nLet me analyze this:\n- This is a question asking about payment methods\n- The user is seeking information\n- This is clearly a question\n\nThe four options are:\n- question\n- complaint\n- request\n- feedback\n\nThis is clearly a \"question\" - the user is asking for information about payment methods.\n</think>\n\nquestion",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_010",
+      "prediction": "complaint",
+      "expected": "complaint",
+      "correct": true,
+      "latency_ms": 1599.813605999998,
+      "input_tokens": 86,
+      "output_tokens": 154,
+      "raw_output": "<think>The user wants me to classify the intent of the message: \"I asked for support two days ago and still no response.\"\n\nLet me analyze this:\n- The person is expressing dissatisfaction about not receiving a response to their support request\n- They are complaining about the lack of response\n- This is clearly a complaint about service or support\n\nThe options are:\n- question\n- complaint\n- request\n- feedback\n\nThis is clearly a complaint - they're expressing frustration about not getting a response to their support request. It's not a question (no question being asked), not a request (they're not asking for something new), and while it could be considered feedback, the primary intent is to express dissatisfaction/complaint.\n\nThe answer is: complaint\n</think>\n\ncomplaint",
+      "judge_raw_score": null,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-21T09:39:55+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": null,
+  "judge_model_revision": null,
+  "judge_prompt_hash": null
+}
