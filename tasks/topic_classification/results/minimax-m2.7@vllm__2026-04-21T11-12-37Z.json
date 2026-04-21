@@ -1,0 +1,153 @@
+{
+  "model_id": "minimax-m2.7@vllm",
+  "model_revision": "2026-04-20",
+  "task_id": "topic_classification",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "380fec3e6944c1e4",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0
+  },
+  "tps": 76.27159800505338,
+  "p95_latency_ms": 1976.733304999982,
+  "n_samples": 10,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "sample_001",
+      "prediction": "tech",
+      "expected": "tech",
+      "correct": true,
+      "latency_ms": 1426.4434979999976,
+      "input_tokens": 80,
+      "output_tokens": 97,
+      "raw_output": "<think>The user wants me to classify the headline \"Apple unveils new M5 chip with on-device transformer accelerator\" into one of the given categories: tech, sports, politics, health, entertainment.\n\nThis headline is clearly about:\n- Apple (a technology company)\n- A new M5 chip (computer hardware/processor)\n- On-device transformer accelerator (AI/ML hardware feature)\n\nThis is definitely a technology-related news story. The answer should be \"tech\".\n</think>\n\ntech\n",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_002",
+      "prediction": "sports",
+      "expected": "sports",
+      "correct": true,
+      "latency_ms": 1371.7078939999965,
+      "input_tokens": 79,
+      "output_tokens": 109,
+      "raw_output": "<think>The user wants me to classify the headline \"Real Madrid sign teenage striker from Brazilian league for record fee\" into one of the given categories: tech, sports, politics, health, entertainment.\n\nThis headline is about:\n- Real Madrid (a football/soccer club)\n- Signing a player (transfer)\n- A striker (football position)\n- From the Brazilian league\n- A record fee (transfer fee)\n\nThis is clearly about sports - specifically football/soccer transfer news.\n\nI should respond with just one word: sports\n</think>\n\nsports\n",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_003",
+      "prediction": "politics",
+      "expected": "politics",
+      "correct": true,
+      "latency_ms": 1759.8214900000073,
+      "input_tokens": 76,
+      "output_tokens": 161,
+      "raw_output": "<think>The user wants me to classify the headline \"Senate passes bipartisan bill on critical infrastructure cybersecurity\" into one of the given categories: tech, sports, politics, health, entertainment.\n\nLet me analyze this headline:\n- \"Senate passes\" - This refers to a legislative body, which is political\n- \"bipartisan bill\" - This is clearly about politics/government\n- \"critical infrastructure cybersecurity\" - While this involves technology/cybersecurity, the main focus of the headline is about the Senate passing a bill, which is a political action\n\nThe primary topic here is the political action of passing a bill, even though the subject matter involves cybersecurity. The headline is about government/legislative action, which falls under politics.\n\nI should classify this as \"politics\".\n</think>\n\npolitics\n",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_004",
+      "prediction": "health",
+      "expected": "health",
+      "correct": true,
+      "latency_ms": 1351.7458190000013,
+      "input_tokens": 79,
+      "output_tokens": 105,
+      "raw_output": "<think>The user wants me to classify the headline \"WHO warns of measles resurgence in countries with declining vaccination rates\" into one of the given categories: tech, sports, politics, health, entertainment.\n\nLet me analyze this headline:\n- WHO (World Health Organization) is a health organization\n- It talks about measles resurgence\n- It mentions vaccination rates\n- This is clearly about health/medical issues\n\nThis should be classified as \"health\" as it deals with disease, vaccination, and public health warnings.\n</think>\n\nhealth\n",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_005",
+      "prediction": "entertainment",
+      "expected": "entertainment",
+      "correct": true,
+      "latency_ms": 1683.2492579999894,
+      "input_tokens": 80,
+      "output_tokens": 102,
+      "raw_output": "<think>The user wants me to classify the headline \"New Marvel film breaks opening-weekend box office record across Asia\" into one of the given categories: tech, sports, politics, health, entertainment.\n\nThis headline is about:\n- A Marvel film (entertainment/movies)\n- Box office records (entertainment industry)\n- Opening weekend performance (movie release)\n\nThis is clearly about entertainment - specifically movies/film industry news.\n\nI should respond with just one word: entertainment\n</think>\n\nentertainment",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_006",
+      "prediction": "tech",
+      "expected": "tech",
+      "correct": true,
+      "latency_ms": 1976.733304999982,
+      "input_tokens": 79,
+      "output_tokens": 108,
+      "raw_output": "<think>The user wants me to classify the headline \"Open-source vector database adds GPU-accelerated query planner\" into one of the given categories: tech, sports, politics, health, entertainment.\n\nLet me analyze the headline:\n- \"Open-source vector database\" - This is about software/technology\n- \"GPU-accelerated query planner\" - This is a technical feature related to computing/databases\n\nThis is clearly a technology-related headline. It's about a software/database technology update.\n\nThe answer should be: tech\n</think>\n\ntech\n",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_007",
+      "prediction": "sports",
+      "expected": "sports",
+      "correct": true,
+      "latency_ms": 1200.1922369999818,
+      "input_tokens": 81,
+      "output_tokens": 108,
+      "raw_output": "<think>The user wants me to classify the headline \"Olympic committee approves new mixed-team relay event for 2028 games\" into one of the given categories: tech, sports, politics, health, entertainment.\n\nThis headline is clearly about:\n- The Olympic committee\n- A new event for the 2028 games\n- Sports/athletics\n\nThis is definitely a sports-related headline. The Olympics and sporting events fall under the \"sports\" category.\n\nI should respond with just the word \"sports\" and nothing else.\n</think>\n\nsports\n",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_008",
+      "prediction": "politics",
+      "expected": "politics",
+      "correct": true,
+      "latency_ms": 1164.1587610000101,
+      "input_tokens": 77,
+      "output_tokens": 87,
+      "raw_output": "<think>The user wants me to classify the headline \"Prime minister announces snap election after losing confidence vote\" into one of the given categories: tech, sports, politics, health, entertainment.\n\nThis headline is clearly about:\n- A prime minister\n- A snap election\n- A confidence vote\n\nThis is clearly a political topic. It involves government, elections, and political processes.\n\nThe answer should be: politics\n</think>\n\npolitics\n",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_009",
+      "prediction": "health",
+      "expected": "health",
+      "correct": true,
+      "latency_ms": 1408.5605819999785,
+      "input_tokens": 78,
+      "output_tokens": 133,
+      "raw_output": "<think>The user wants me to classify the headline \"Large clinical trial confirms new diabetes drug reduces cardiovascular risk\" into one of the given categories: tech, sports, politics, health, entertainment.\n\nLet me analyze the headline:\n- It mentions a \"clinical trial\" - medical research\n- It mentions \"diabetes drug\" - medication for a health condition\n- It mentions \"cardiovascular risk\" - heart health\n\nThis is clearly about health/medical news. It's not about:\n- tech (technology)\n- sports (athletics)\n- politics (government/policy)\n- entertainment (movies, music, celebrities)\n\nThe answer is: health\n</think>\n\nhealth\n",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_010",
+      "prediction": "entertainment",
+      "expected": "entertainment",
+      "correct": true,
+      "latency_ms": 1354.863402999996,
+      "input_tokens": 80,
+      "output_tokens": 111,
+      "raw_output": "<think>The user wants me to classify the headline \"Beyonce announces world tour with thirty stadium dates across three continents\" into one of the given categories: tech, sports, politics, health, entertainment.\n\nThis headline is about:\n- Beyonce (a famous singer/artist)\n- A world tour announcement\n- Concert/stadium dates\n\nThis clearly falls under \"entertainment\" as it relates to music, concerts, and celebrity news.\n\nI need to reply with exactly one word from the set, with no explanation.\n</think>\n\nentertainment\n",
+      "judge_raw_score": null,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-21T11:12:37+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": null,
+  "judge_model_revision": null,
+  "judge_prompt_hash": null
+}
