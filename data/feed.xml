@@ -231,6 +231,20 @@
     <summary>judge_score=0.733</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification/1.0/deepseek32exp@vllm/2026-04-21T06:25:58+00:00</id>
+    <title>deepseek32exp@vllm scored 0.450 accuracy on cefr_level_classification v1.0</title>
+    <updated>2026-04-21T06:25:58+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.450, macro_f1=0.341, qwk=0.316</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/agent_tool_calling/1.0/deepseek32exp@vllm/2026-04-21T06:25:33+00:00</id>
+    <title>deepseek32exp@vllm scored 0.718 judge_score on agent_tool_calling v1.0</title>
+    <updated>2026-04-21T06:25:33+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/agent_tool_calling" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.718</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/glm5.1@llama/2026-04-21T06:08:28+00:00</id>
     <title>glm5.1@llama scored 0.800 accuracy on safety_classification v1.0</title>
     <updated>2026-04-21T06:08:28+00:00</updated>
@@ -341,19 +355,5 @@
     <updated>2026-04-20T22:45:00+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection" rel="alternate" type="text/html"/>
     <summary>accuracy=1.000, macro_f1=1.000</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/intent_classification/1.0/glm5.1@llama/2026-04-20T22:43:26+00:00</id>
-    <title>glm5.1@llama scored 0.900 accuracy on intent_classification v1.0</title>
-    <updated>2026-04-20T22:43:26+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/intent_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.900, macro_f1=0.914</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/hazard_category/1.0/glm5.1@llama/2026-04-20T22:42:05+00:00</id>
-    <title>glm5.1@llama scored 0.500 accuracy on hazard_category v1.0</title>
-    <updated>2026-04-20T22:42:05+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/hazard_category" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.500, macro_f1=0.376</summary>
   </entry>
 </feed>

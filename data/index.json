@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T07:51:40+00:00",
+  "generated_at": "2026-04-21T07:52:07+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -472,6 +472,19 @@
     {
       "task_id": "agent_tool_calling",
       "task_version": "1.0",
+      "model_id": "deepseek32exp@vllm",
+      "score": 0.7181818181818183,
+      "metrics": {
+        "judge_score": 0.7181818181818183
+      },
+      "tps": 29.399047369916016,
+      "p95_latency_ms": 3345.902305999999,
+      "cost_usd": null,
+      "result_file": "tasks/agent_tool_calling/results/deepseek32exp@vllm__2026-04-21T06-25-33Z.json"
+    },
+    {
+      "task_id": "agent_tool_calling",
+      "task_version": "1.0",
       "model_id": "gpt-oss-120b@vllm",
       "score": 0.6,
       "metrics": {
@@ -649,6 +662,21 @@
       "p95_latency_ms": 209172.17487999983,
       "cost_usd": null,
       "result_file": "tasks/cefr_level_classification/results/qwen3.5-27b@vllm__2026-04-19T07-30-20Z.json"
+    },
+    {
+      "task_id": "cefr_level_classification",
+      "task_version": "1.0",
+      "model_id": "deepseek32exp@vllm",
+      "score": 0.3157894736842104,
+      "metrics": {
+        "accuracy": 0.45,
+        "macro_f1": 0.3412698412698413,
+        "qwk": 0.3157894736842104
+      },
+      "tps": 5.078646202315616,
+      "p95_latency_ms": 948.4373680000004,
+      "cost_usd": null,
+      "result_file": "tasks/cefr_level_classification/results/deepseek32exp@vllm__2026-04-21T06-25-58Z.json"
     },
     {
       "task_id": "cefr_level_classification",
