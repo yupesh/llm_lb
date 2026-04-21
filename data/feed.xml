@@ -63,6 +63,34 @@
     <summary>judge_score=0.800</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/deepseek32exp@vllm/2026-04-21T07:29:31+00:00</id>
+    <title>deepseek32exp@vllm scored 0.800 accuracy on safety_classification v1.0</title>
+    <updated>2026-04-21T07:29:31+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/safety_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.800, macro_f1=0.798</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/retail_agent_dialog/1.0/deepseek32exp@vllm/2026-04-21T07:29:00+00:00</id>
+    <title>deepseek32exp@vllm scored 0.412 judge_score on retail_agent_dialog v1.0</title>
+    <updated>2026-04-21T07:29:00+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/retail_agent_dialog" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.412</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/oos_detection/1.0/deepseek32exp@vllm/2026-04-21T07:00:18+00:00</id>
+    <title>deepseek32exp@vllm scored 0.533 accuracy on oos_detection v1.0</title>
+    <updated>2026-04-21T07:00:18+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/oos_detection" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.533, macro_f1=0.475</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_triplet_extraction/1.0/deepseek32exp@vllm/2026-04-21T06:59:40+00:00</id>
+    <title>deepseek32exp@vllm scored 0.580 judge_score on kg_triplet_extraction v1.0</title>
+    <updated>2026-04-21T06:59:40+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_triplet_extraction" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.580</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/glm5.1@llama/2026-04-21T06:08:28+00:00</id>
     <title>glm5.1@llama scored 0.800 accuracy on safety_classification v1.0</title>
     <updated>2026-04-21T06:08:28+00:00</updated>
@@ -327,33 +355,5 @@
     <updated>2026-04-20T16:18:18+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/hazard_category" rel="alternate" type="text/html"/>
     <summary>accuracy=0.550, macro_f1=0.426</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection_beavertails/1.0/qwen3.5-397b@vllm/2026-04-20T14:16:46+00:00</id>
-    <title>qwen3.5-397b@vllm scored 0.700 accuracy on jailbreak_detection_beavertails v1.0</title>
-    <updated>2026-04-20T14:16:46+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection_beavertails" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.700, macro_f1=0.697</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection_beavertails/1.0/qwen3.5-27b@vllm/2026-04-20T14:15:32+00:00</id>
-    <title>qwen3.5-27b@vllm scored 0.700 accuracy on jailbreak_detection_beavertails v1.0</title>
-    <updated>2026-04-20T14:15:32+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection_beavertails" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.700, macro_f1=0.697</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/hazard_category/1.0/qwen3.5-397b@vllm/2026-04-20T14:10:00+00:00</id>
-    <title>qwen3.5-397b@vllm scored 0.500 accuracy on hazard_category v1.0</title>
-    <updated>2026-04-20T14:10:00+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/hazard_category" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.500, macro_f1=0.388</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/hazard_category/1.0/qwen3.5-27b@vllm/2026-04-20T14:02:06+00:00</id>
-    <title>qwen3.5-27b@vllm scored 0.450 accuracy on hazard_category v1.0</title>
-    <updated>2026-04-20T14:02:06+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/hazard_category" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.450, macro_f1=0.340</summary>
   </entry>
 </feed>

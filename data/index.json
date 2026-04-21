@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T07:49:39+00:00",
+  "generated_at": "2026-04-21T07:49:56+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -3173,6 +3173,19 @@
     {
       "task_id": "kg_triplet_extraction",
       "task_version": "1.0",
+      "model_id": "deepseek32exp@vllm",
+      "score": 0.58,
+      "metrics": {
+        "judge_score": 0.58
+      },
+      "tps": 45.84134877258501,
+      "p95_latency_ms": 6251.008079000002,
+      "cost_usd": null,
+      "result_file": "tasks/kg_triplet_extraction/results/deepseek32exp@vllm__2026-04-21T06-59-40Z.json"
+    },
+    {
+      "task_id": "kg_triplet_extraction",
+      "task_version": "1.0",
       "model_id": "gemma-4-31b-it@vllm",
       "score": 0.58,
       "metrics": {
@@ -3261,6 +3274,20 @@
       "p95_latency_ms": 1347.3070130000053,
       "cost_usd": null,
       "result_file": "tasks/oos_detection/results/gemma-4-31b-it@vllm__2026-04-20T04-09-30Z.json"
+    },
+    {
+      "task_id": "oos_detection",
+      "task_version": "1.0",
+      "model_id": "deepseek32exp@vllm",
+      "score": 0.5333333333333333,
+      "metrics": {
+        "accuracy": 0.5333333333333333,
+        "macro_f1": 0.475
+      },
+      "tps": 5.740663426336188,
+      "p95_latency_ms": 1143.6123059999943,
+      "cost_usd": null,
+      "result_file": "tasks/oos_detection/results/deepseek32exp@vllm__2026-04-21T07-00-18Z.json"
     },
     {
       "task_id": "oos_detection",
@@ -3441,6 +3468,19 @@
     {
       "task_id": "retail_agent_dialog",
       "task_version": "1.0",
+      "model_id": "deepseek32exp@vllm",
+      "score": 0.4121212121212121,
+      "metrics": {
+        "judge_score": 0.4121212121212121
+      },
+      "tps": 45.33858198715356,
+      "p95_latency_ms": 75245.52564700002,
+      "cost_usd": null,
+      "result_file": "tasks/retail_agent_dialog/results/deepseek32exp@vllm__2026-04-21T07-29-00Z.json"
+    },
+    {
+      "task_id": "retail_agent_dialog",
+      "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
       "score": 0.4,
       "metrics": {
@@ -3477,6 +3517,20 @@
       "p95_latency_ms": 8619.866836999989,
       "cost_usd": null,
       "result_file": "tasks/safety_classification/results/glm5.1@llama__2026-04-21T06-08-28Z.json"
+    },
+    {
+      "task_id": "safety_classification",
+      "task_version": "1.0",
+      "model_id": "deepseek32exp@vllm",
+      "score": 0.8,
+      "metrics": {
+        "accuracy": 0.8,
+        "macro_f1": 0.797979797979798
+      },
+      "tps": 3.271349133794096,
+      "p95_latency_ms": 1280.8463799999856,
+      "cost_usd": null,
+      "result_file": "tasks/safety_classification/results/deepseek32exp@vllm__2026-04-21T07-29-31Z.json"
     },
     {
       "task_id": "safety_classification",

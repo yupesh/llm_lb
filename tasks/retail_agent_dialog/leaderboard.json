@@ -70,6 +70,17 @@
       "result_file": "results/minimax-m2.7@vllm__2026-04-20T10-16-02Z.json"
     },
     {
+      "model_id": "deepseek32exp@vllm",
+      "score": 0.4121212121212121,
+      "metrics": {
+        "judge_score": 0.4121212121212121
+      },
+      "tps": 45.33858198715356,
+      "p95_latency_ms": 75245.52564700002,
+      "cost_usd": null,
+      "result_file": "results/deepseek32exp@vllm__2026-04-21T07-29-00Z.json"
+    },
+    {
       "model_id": "qwen3-30b@vllm",
       "score": 0.4,
       "metrics": {
@@ -92,5 +103,5 @@
       "result_file": "results/qwen3.5-397b@vllm__2026-04-16T13-47-44Z.json"
     }
   ],
-  "updated_at": "2026-04-21T01:43:50+00:00"
+  "updated_at": "2026-04-21T07:49:56+00:00"
 }
