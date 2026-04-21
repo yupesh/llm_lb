@@ -5,6 +5,10 @@ metric:
   primary: accuracy
   secondary: [macro_f1, tps, p95_latency_ms]
 labels: [jailbreak, safe]
+# Accept safety-classifier vocabulary as equivalent: Llama-Guard outputs
+# `unsafe`, which is semantically the same as this task's `jailbreak`.
+label_aliases:
+  unsafe: jailbreak
 llm_params:
   temperature: 0.0
   max_tokens: null  # unlimited — reasoning models need room to think before the 1-word answer

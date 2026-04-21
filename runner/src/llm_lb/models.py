@@ -95,6 +95,12 @@ class TaskSpec(BaseModel):
     description: Optional[str] = None
     metric: MetricSpec
     labels: Optional[list[str]] = None  # for classification tasks
+    # Synonym → canonical label map. Extends `extract_label`'s search space
+    # without changing the task's reported label set. Purpose-built for safety
+    # tasks where different models use different vocabulary — Llama-Guard
+    # outputs `unsafe`, mainstream chat models output `jailbreak` — but both
+    # mean the same thing for `jailbreak_detection`.
+    label_aliases: Optional[dict[str, str]] = None
     llm_params: LLMParams
     system_prompt: Optional[str] = None
     prompt_template: str  # placeholder: {prompt}

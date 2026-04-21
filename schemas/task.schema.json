@@ -138,6 +138,21 @@
       "default": null,
       "title": "Labels"
     },
+    "label_aliases": {
+      "anyOf": [
+        {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Label Aliases"
+    },
     "llm_params": {
       "$ref": "#/$defs/LLMParams"
     },

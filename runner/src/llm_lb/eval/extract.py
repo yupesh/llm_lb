@@ -13,7 +13,9 @@ def strip_reasoning(raw: str) -> str:
     return _REASONING_BLOCK_RE.sub("", raw).strip()
 
 
-def extract_label(raw: str, labels: list[str]) -> str:
+def extract_label(
+    raw: str, labels: list[str], aliases: dict[str, str] | None = None
+) -> str:
     """Pick the task label that appears earliest in the model output.
 
     Falls back to the stripped raw text if no label matches — the eval step will
@@ -28,19 +30,31 @@ def extract_label(raw: str, labels: list[str]) -> str:
     `safe` when both start at position 0 — resolves this without needing a
     regex word-boundary (which breaks on labels with commas like
     `controversial_topics,politics` in `hazard_category`).
+
+    `aliases`, if given, maps synonyms to a canonical label in `labels`. E.g.
+    `aliases={"unsafe": "jailbreak"}` lets Llama-Guard's `unsafe`/`safe` output
+    score on a task whose labels are `{jailbreak, safe}`. Synonyms participate
+    in the same earliest-position/longest-match contest as real labels.
     """
     raw_lower = raw.lower()
-    # (position, -length, label) — min() picks earliest occurrence, then
-    # longest matching label as tiebreak (negate length so shorter compares
-    # larger, i.e. loses).
+    # Build the search space: real labels keep their identity, aliases resolve
+    # to their canonical target. Longest-label tiebreak handles `safe` ⊂ `unsafe`
+    # correctly for both labels and alias keys.
+    candidates: list[tuple[str, str]] = [(lab, lab) for lab in labels]
+    if aliases:
+        for syn, canonical in aliases.items():
+            candidates.append((syn, canonical))
+
     best: tuple[int, int, str] | None = None
-    for label in labels:
-        idx = raw_lower.find(label.lower())
+    for needle, resolved in candidates:
+        idx = raw_lower.find(needle.lower())
         if idx < 0:
             continue
-        candidate = (idx, -len(label), label)
-        if best is None or candidate < best:
-            best = candidate
+        # (position, -length, resolved-label) — min() picks earliest, then
+        # longest matching text as tiebreak.
+        key = (idx, -len(needle), resolved)
+        if best is None or key < best:
+            best = key
     return best[2] if best is not None else raw.strip()
 
 
