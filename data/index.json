@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T01:42:04+00:00",
+  "generated_at": "2026-04-21T01:43:50+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -3293,6 +3293,19 @@
       "p95_latency_ms": 29437.621288999937,
       "cost_usd": null,
       "result_file": "tasks/oos_detection/results/qwen3.5-27b@vllm__2026-04-19T04-50-51Z.json"
+    },
+    {
+      "task_id": "retail_agent_dialog",
+      "task_version": "1.0",
+      "model_id": "glm5.1@llama",
+      "score": 0.709090909090909,
+      "metrics": {
+        "judge_score": 0.709090909090909
+      },
+      "tps": 39.85239538829241,
+      "p95_latency_ms": 137931.98355299956,
+      "cost_usd": null,
+      "result_file": "tasks/retail_agent_dialog/results/glm5.1@llama__2026-04-20T23-57-45Z.json"
     },
     {
       "task_id": "retail_agent_dialog",
