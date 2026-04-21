@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T07:52:07+00:00",
+  "generated_at": "2026-04-21T07:58:09+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -3796,6 +3796,20 @@
       "p95_latency_ms": 380661.14249600016,
       "cost_usd": null,
       "result_file": "tasks/retail_agent_dialog/results/qwen3.5-397b@vllm__2026-04-16T13-47-44Z.json"
+    },
+    {
+      "task_id": "safety_classification",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.9,
+      "metrics": {
+        "accuracy": 0.9,
+        "macro_f1": 0.9
+      },
+      "tps": 55.94479304365598,
+      "p95_latency_ms": 17442.505950000013,
+      "cost_usd": null,
+      "result_file": "tasks/safety_classification/results/qwen3.5-27b@vllm__2026-04-21T07-50-51Z.json"
     },
     {
       "task_id": "safety_classification",
