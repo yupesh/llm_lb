@@ -56,13 +56,6 @@
     <summary>judge_score=0.840</summary>
   </entry>
   <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/glm5.1@llama/2026-04-20T23:59:22+00:00</id>
-    <title>glm5.1@llama scored 0.500 accuracy on safety_classification v1.0</title>
-    <updated>2026-04-20T23:59:22+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/safety_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.500, macro_f1=0.333</summary>
-  </entry>
-  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/retail_agent_dialog/1.0/glm5.1@llama/2026-04-20T23:57:45+00:00</id>
     <title>glm5.1@llama scored 0.709 judge_score on retail_agent_dialog v1.0</title>
     <updated>2026-04-20T23:57:45+00:00</updated>
@@ -245,13 +238,6 @@
     <summary>judge_score=0.545</summary>
   </entry>
   <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/gpt-oss-120b@vllm/2026-04-20T16:28:27+00:00</id>
-    <title>gpt-oss-120b@vllm scored 0.500 accuracy on safety_classification v1.0</title>
-    <updated>2026-04-20T16:28:27+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/safety_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.500, macro_f1=0.333</summary>
-  </entry>
-  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection_beavertails/1.0/gpt-oss-120b@vllm/2026-04-20T16:27:51+00:00</id>
     <title>gpt-oss-120b@vllm scored 0.700 accuracy on jailbreak_detection_beavertails v1.0</title>
     <updated>2026-04-20T16:27:51+00:00</updated>
@@ -266,13 +252,6 @@
     <summary>accuracy=0.350, macro_f1=0.283</summary>
   </entry>
   <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/gemma-4-31b-it@vllm/2026-04-20T16:19:16+00:00</id>
-    <title>gemma-4-31b-it@vllm scored 0.500 accuracy on safety_classification v1.0</title>
-    <updated>2026-04-20T16:19:16+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/safety_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.500, macro_f1=0.333</summary>
-  </entry>
-  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection_beavertails/1.0/gemma-4-31b-it@vllm/2026-04-20T16:18:47+00:00</id>
     <title>gemma-4-31b-it@vllm scored 0.800 accuracy on jailbreak_detection_beavertails v1.0</title>
     <updated>2026-04-20T16:18:47+00:00</updated>
@@ -285,20 +264,6 @@
     <updated>2026-04-20T16:18:18+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/hazard_category" rel="alternate" type="text/html"/>
     <summary>accuracy=0.550, macro_f1=0.426</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/qwen3.5-397b@vllm/2026-04-20T14:20:04+00:00</id>
-    <title>qwen3.5-397b@vllm scored 0.500 accuracy on safety_classification v1.0</title>
-    <updated>2026-04-20T14:20:04+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/safety_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.500, macro_f1=0.333</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/qwen3.5-27b@vllm/2026-04-20T14:19:35+00:00</id>
-    <title>qwen3.5-27b@vllm scored 0.500 accuracy on safety_classification v1.0</title>
-    <updated>2026-04-20T14:19:35+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/safety_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.500, macro_f1=0.333</summary>
   </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection_beavertails/1.0/qwen3.5-397b@vllm/2026-04-20T14:16:46+00:00</id>
@@ -329,13 +294,6 @@
     <summary>accuracy=0.450, macro_f1=0.340</summary>
   </entry>
   <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/qwen3-30b@vllm/2026-04-20T13:58:49+00:00</id>
-    <title>qwen3-30b@vllm scored 0.500 accuracy on safety_classification v1.0</title>
-    <updated>2026-04-20T13:58:49+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/safety_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.500, macro_f1=0.333</summary>
-  </entry>
-  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection_beavertails/1.0/qwen3-30b@vllm/2026-04-20T13:57:02+00:00</id>
     <title>qwen3-30b@vllm scored 0.700 accuracy on jailbreak_detection_beavertails v1.0</title>
     <updated>2026-04-20T13:57:02+00:00</updated>
@@ -350,10 +308,52 @@
     <summary>accuracy=0.400, macro_f1=0.315</summary>
   </entry>
   <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/qwen3.6-35b@vllm/2026-04-20T13:42:46+00:00</id>
-    <title>qwen3.6-35b@vllm scored 0.500 accuracy on safety_classification v1.0</title>
-    <updated>2026-04-20T13:42:46+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/safety_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.500, macro_f1=0.333</summary>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection_beavertails/1.0/qwen3.6-35b@vllm/2026-04-20T13:41:29+00:00</id>
+    <title>qwen3.6-35b@vllm scored 0.600 accuracy on jailbreak_detection_beavertails v1.0</title>
+    <updated>2026-04-20T13:41:29+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection_beavertails" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.600, macro_f1=0.524</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/hazard_category/1.0/qwen3.6-35b@vllm/2026-04-20T13:39:15+00:00</id>
+    <title>qwen3.6-35b@vllm scored 0.500 accuracy on hazard_category v1.0</title>
+    <updated>2026-04-20T13:39:15+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/hazard_category" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.500, macro_f1=0.388</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_csv_excel/1.0/qwen3.6-35b@vllm/2026-04-20T13:24:16+00:00</id>
+    <title>qwen3.6-35b@vllm scored 0.620 judge_score on datascibench_csv_excel v1.0</title>
+    <updated>2026-04-20T13:24:16+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_csv_excel" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.620</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/agent_tool_calling/1.0/qwen3.6-35b@vllm/2026-04-20T13:13:53+00:00</id>
+    <title>qwen3.6-35b@vllm scored 0.527 judge_score on agent_tool_calling v1.0</title>
+    <updated>2026-04-20T13:13:53+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/agent_tool_calling" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.527</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection_beavertails/1.0/minimax-m2.7@vllm/2026-04-20T13:11:25+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.750 accuracy on jailbreak_detection_beavertails v1.0</title>
+    <updated>2026-04-20T13:11:25+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection_beavertails" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.750, macro_f1=0.733</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/hazard_category/1.0/minimax-m2.7@vllm/2026-04-20T13:10:27+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.550 accuracy on hazard_category v1.0</title>
+    <updated>2026-04-20T13:10:27+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/hazard_category" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.550, macro_f1=0.424</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/topic_classification/1.0/minimax-m2.7@vllm/2026-04-20T12:30:58+00:00</id>
+    <title>minimax-m2.7@vllm scored 1.000 accuracy on topic_classification v1.0</title>
+    <updated>2026-04-20T12:30:58+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/topic_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=1.000, macro_f1=1.000</summary>
   </entry>
 </feed>
