@@ -8,7 +8,7 @@ revision: "2026-04-21"
 # template rejects a system role and requires single-user messages — see
 # adapters/llama_guard.py for the adapter that drops `system` and post-
 # processes the fixed-format response.
-endpoint_url: http://lnsigo.mipt.ru:8009/v1
+endpoint_url: http://lnsigo.mipt.ru:4000/v1
 api_key_env: VLLM_PROXY_KEY
 hardware:
   gpu_count: 1
