@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T10:00:03+00:00",
+  "generated_at": "2026-04-21T10:01:08+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -2132,6 +2132,21 @@
     {
       "task_id": "essay_holistic_scoring_condensed",
       "task_version": "1.0",
+      "model_id": "minimax-m2.7@vllm",
+      "score": 0.56,
+      "metrics": {
+        "accuracy": 0.16666666666666666,
+        "macro_f1": 0.1537037037037037,
+        "qwk": 0.56
+      },
+      "tps": 107.5952140892618,
+      "p95_latency_ms": 4611.6923430000015,
+      "cost_usd": null,
+      "result_file": "tasks/essay_holistic_scoring_condensed/results/minimax-m2.7@vllm__2026-04-21T09-29-42Z.json"
+    },
+    {
+      "task_id": "essay_holistic_scoring_condensed",
+      "task_version": "1.0",
       "model_id": "deepseek32exp@vllm",
       "score": 0.5522388059701494,
       "metrics": {
@@ -2173,21 +2188,6 @@
       "p95_latency_ms": 23644.296506,
       "cost_usd": null,
       "result_file": "tasks/essay_holistic_scoring_condensed/results/glm5.1@llama__2026-04-20T22-23-02Z.json"
-    },
-    {
-      "task_id": "essay_holistic_scoring_condensed",
-      "task_version": "1.0",
-      "model_id": "minimax-m2.7@vllm",
-      "score": 0.46376811594202894,
-      "metrics": {
-        "accuracy": 0.1111111111111111,
-        "macro_f1": 0.06734006734006734,
-        "qwk": 0.46376811594202894
-      },
-      "tps": 103.05937870520657,
-      "p95_latency_ms": 5230.766758000002,
-      "cost_usd": null,
-      "result_file": "tasks/essay_holistic_scoring_condensed/results/minimax-m2.7@vllm__2026-04-20T12-19-18Z.json"
     },
     {
       "task_id": "essay_holistic_scoring_condensed",
@@ -2493,16 +2493,16 @@
       "task_id": "essay_vocabulary_scoring_condensed",
       "task_version": "1.0",
       "model_id": "minimax-m2.7@vllm",
-      "score": 0.38888888888888895,
+      "score": 0.42105263157894735,
       "metrics": {
         "accuracy": 0.35,
-        "macro_f1": 0.256578947368421,
-        "qwk": 0.38888888888888895
+        "macro_f1": 0.27192982456140347,
+        "qwk": 0.42105263157894735
       },
-      "tps": 21.590112218167125,
-      "p95_latency_ms": 6494.991852999988,
+      "tps": 102.13190275153634,
+      "p95_latency_ms": 5579.576441,
       "cost_usd": null,
-      "result_file": "tasks/essay_vocabulary_scoring_condensed/results/minimax-m2.7@vllm__2026-04-20T12-27-49Z.json"
+      "result_file": "tasks/essay_vocabulary_scoring_condensed/results/minimax-m2.7@vllm__2026-04-21T09-37-38Z.json"
     },
     {
       "task_id": "essay_vocabulary_scoring_condensed",
