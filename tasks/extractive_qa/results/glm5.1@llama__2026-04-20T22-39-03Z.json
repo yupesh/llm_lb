@@ -1,0 +1,142 @@
+{
+  "model_id": "glm5.1@llama",
+  "model_revision": "2026-04-02",
+  "task_id": "extractive_qa",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "275159880584aac7",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "exact_match": 0.7
+  },
+  "tps": 41.69756851873186,
+  "p95_latency_ms": 11519.141066999964,
+  "n_samples": 10,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "sample_001",
+      "prediction": "Paris",
+      "expected": "Paris",
+      "correct": true,
+      "latency_ms": 4426.67875799998,
+      "input_tokens": 40,
+      "output_tokens": 174,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_002",
+      "prediction": "Mars",
+      "expected": "Mars",
+      "correct": true,
+      "latency_ms": 4453.754159000027,
+      "input_tokens": 42,
+      "output_tokens": 178,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_003",
+      "prediction": "Shakespeare",
+      "expected": "William Shakespeare",
+      "correct": false,
+      "latency_ms": 11519.141066999964,
+      "input_tokens": 42,
+      "output_tokens": 511,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_004",
+      "prediction": "Au",
+      "expected": "Au",
+      "correct": true,
+      "latency_ms": 4284.290445999886,
+      "input_tokens": 41,
+      "output_tokens": 176,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_005",
+      "prediction": "7",
+      "expected": "seven",
+      "correct": false,
+      "latency_ms": 5523.980467999991,
+      "input_tokens": 39,
+      "output_tokens": 232,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_006",
+      "prediction": "1945",
+      "expected": "1945",
+      "correct": true,
+      "latency_ms": 4172.912033000102,
+      "input_tokens": 42,
+      "output_tokens": 178,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_007",
+      "prediction": "Pacific Ocean",
+      "expected": "Pacific Ocean",
+      "correct": true,
+      "latency_ms": 5097.473565999962,
+      "input_tokens": 41,
+      "output_tokens": 213,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_008",
+      "prediction": "Leonardo da Vinci",
+      "expected": "Leonardo da Vinci",
+      "correct": true,
+      "latency_ms": 5382.0143079999525,
+      "input_tokens": 39,
+      "output_tokens": 224,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_009",
+      "prediction": "300000000",
+      "expected": "299792458",
+      "correct": false,
+      "latency_ms": 5676.778795000018,
+      "input_tokens": 49,
+      "output_tokens": 240,
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_010",
+      "prediction": "Hydrogen",
+      "expected": "Hydrogen",
+      "correct": true,
+      "latency_ms": 4526.13911100002,
+      "input_tokens": 42,
+      "output_tokens": 170,
+      "judge_raw_score": null,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-20T22:39:03+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": null,
+  "judge_model_revision": null,
+  "judge_prompt_hash": null
+}
