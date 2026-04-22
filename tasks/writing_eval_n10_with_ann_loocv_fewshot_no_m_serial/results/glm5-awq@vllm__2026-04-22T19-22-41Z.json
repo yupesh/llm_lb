@@ -1,0 +1,154 @@
+{
+  "model_id": "glm5-awq@vllm",
+  "model_revision": "2026-04-22",
+  "task_id": "writing_eval_n10_with_ann_loocv_fewshot_no_m_serial",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "b603bc66a0195308",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 0.8,
+    "max_tokens": 4096,
+    "seed": null
+  },
+  "metrics": {
+    "accuracy": 0.5,
+    "adjacent_accuracy": 0.9,
+    "qwk": 0.0
+  },
+  "tps": 45.061131267043585,
+  "p95_latency_ms": 90111.09575000001,
+  "n_samples": 10,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "sample_07001",
+      "prediction": "B1",
+      "expected": "A2",
+      "correct": false,
+      "latency_ms": 61353.27788699999,
+      "input_tokens": 5669,
+      "output_tokens": 2746,
+      "raw_output": "```json\n{\n    \"cefr_level\": \"B1\",\n    \"grammar_score\": 0.6,\n    \"corrections\": [\n        \"Hi, I had a similar problem.\",\n        \"Here are the tips that helped me.\",\n        \"You can find these apps at Play Market.\",\n        \"Don't spend a lot of time on TV and social media.\",\n        \"You should leave useless groups on VK...\",\n        \"It will bring you enough energy.\",\n        \"I hope my tips will help you.\",\n        \"For more information, you can write to me in personal messages.\"\n    ],\n    \"feedback\": \"Your response is well-organized and directly addresses the task with practical advice, which is a strength. The use of a numbered list makes your ideas easy to follow. However, there are frequent errors in basic grammar and spelling, such as 'simular' (similar), 'enought' (enough), and subject-verb agreement ('Here is the tips'). You also struggled with prepositions (e.g., 'time to TV' instead of 'time on TV'). While your meaning is clear, proofreading for these basic errors would significantly improve your score.\"\n}\n```",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07002",
+      "prediction": "B2",
+      "expected": "B1",
+      "correct": false,
+      "latency_ms": 54647.322349999995,
+      "input_tokens": 4617,
+      "output_tokens": 2453,
+      "raw_output": "```json\n{\n    \"cefr_level\": \"B2\",\n    \"grammar_score\": 0.75,\n    \"corrections\": [\n        \"decition -> decision\",\n        \"tips how to get it -> tips on how to get it\",\n        \"options how to organize -> options on how to organize\",\n        \"each my day -> each of my days\",\n        \"other's works -> others' work\",\n        \"But very important thing -> But a very important thing\"\n    ],\n    \"feedback\": \"This is a strong B2 text. You have done an excellent job organizing your response with clear discourse markers (Actually, However, Firstly, For example), which makes your argument easy to follow. Your vocabulary is a highlight, with good use of words like 'overload', 'resources', and 'abuse' in appropriate contexts. While there are several grammar errors, they are mostly localized to articles, prepositions, and word order ('each my day', 'other's works'), and they do not impede communication. With more attention to grammatical accuracy, this could approach C1 level.\"\n}\n```",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07003",
+      "prediction": "B1",
+      "expected": "B1",
+      "correct": true,
+      "latency_ms": 65913.44336599999,
+      "input_tokens": 4802,
+      "output_tokens": 2992,
+      "raw_output": "```json\n{\n    \"cefr_level\": \"B1\",\n    \"grammar_score\": 0.55,\n    \"corrections\": [\n        \"I want to tell you about my two tips, which help me...\",\n        \"Firstly, I recommend communicating more with other people.\",\n        \"They can help you look at life simply.\",\n        \"In the future, good networking will give you many opportunities.\",\n        \"Secondly, you need to count your time and do time management.\",\n        \"If you think that you study all the time and don't have free time...\",\n        \"...try noting your day.\",\n        \"In my experience, all guys who do this find some bad habits...\",\n        \"Delete them and live more freely.\",\n        \"I believe my tips will help you.\"\n    ],\n    \"feedback\": \"Your text demonstrates good organizational skills and an attempt to use advanced vocabulary such as 'networking', 'motivation', and 'time management', which places you firmly in the B1 level. You successfully used linking words ('Firstly', 'Secondly') to structure your advice. However, your score is lowered by frequent spelling mistakes ('futcher', 'beleave', 'unlacky') and errors with basic grammar structures like word order ('two my own tips') and verb patterns ('recommend more communicate'). Focus on proofreading your spelling and reviewing verb patterns to improve your accuracy.\"\n}\n```",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07005",
+      "prediction": "B1",
+      "expected": "B1",
+      "correct": true,
+      "latency_ms": 79792.00819299996,
+      "input_tokens": 4528,
+      "output_tokens": 3611,
+      "raw_output": "```json\n{\n    \"cefr_level\": \"B1\",\n    \"grammar_score\": 0.6,\n    \"corrections\": [\n        \"Hellow -> Hello\",\n        \"and me to -> and me too\",\n        \"In first semester -> In the first semester\",\n        \"wery -> very\",\n        \"ideas how can I fix -> ideas how I can fix\",\n        \"I will give you them -> I will give them to you\",\n        \"enouth -> enough\",\n        \"bust -> boost\"\n    ],\n    \"feedback\": \"Your text is well-organized and you use some impressive B2-level vocabulary such as 'prioritize', 'productivity', and 'task-management system', which is a strength. However, the text is let down by frequent basic spelling errors ('Hellow', 'wery', 'enouth') and elementary grammar mistakes ('and me to', 'how can I fix'). To reach a B2 level, you need to improve your spelling accuracy and master basic word order and article usage.\"\n}\n```",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07006",
+      "prediction": "B1",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 61643.56556199999,
+      "input_tokens": 3978,
+      "output_tokens": 2774,
+      "raw_output": "```json\n{\n    \"cefr_level\": \"B1\",\n    \"grammar_score\": 0.4,\n    \"corrections\": [\n        \"It is easy. (Original: It is easily.)\",\n        \"pass all exams (Original: pass all exam)\",\n        \"Now I want to give some tips to make difficult studying easier. (Original: Now I want to some tips for became diffiecult study easilier.)\",\n        \"It is not an obvious tip (Original: It is not obviously tip)\",\n        \"your brain relaxes and does (Original: your brain relax and do)\",\n        \"you can spend less time doing homework (Original: you can solve spend less time for doing homework)\",\n        \"If you sleep approximately (Original: If you sleep aproximately)\",\n        \"Do homework immediately after receiving it. (Original: Do homework after getting.)\"\n    ],\n    \"feedback\": \"The text demonstrates a B1 level of proficiency. You have successfully organized your response using a clear structure (Tip number one, two, etc.), which is a strong point. You also attempt complex sentences and reasoning (e.g., 'If you sleep more than six hours, you wake up and understand...'), showing an ability to link ideas. However, the text contains frequent grammar errors, particularly with word forms (adjectives vs. adverbs like 'easily' vs 'easy'), subject-verb agreement, and sentence structure. Some phrases are unclear or require effort to understand ('for became diffiecult study easilier'). Focusing on accuracy in basic grammar rules will help improve the clarity of your good ideas.\"\n}\n```",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07018",
+      "prediction": "B2",
+      "expected": "B2",
+      "correct": true,
+      "latency_ms": 68685.73540199998,
+      "input_tokens": 4604,
+      "output_tokens": 3090,
+      "raw_output": "```json\n{\n    \"cefr_level\": \"B2\",\n    \"grammar_score\": 0.65,\n    \"corrections\": [\n        \"I think, that -> I think that\",\n        \"TODO list -> to-do list\",\n        \"with the list like this -> with a list like this\",\n        \"Also you can -> Also, you can\",\n        \"for TODO list -> for the to-do list\",\n        \"into the smaller ones -> into smaller ones\",\n        \"this tips -> these tips\",\n        \"would't -> wouldn't\"\n    ],\n    \"feedback\": \"The text is well-organized and directly addresses the task with relevant advice. You demonstrate a good command of vocabulary for the topic (e.g., 'productive', 'satisfied', 'concentrate', 'stick to') and use complex sentence structures effectively, such as conditional sentences ('If you stick to...'). While there are frequent minor errors in grammar (plural agreement) and spelling ('would't'), they do not impede communication. With more attention to detail regarding articles and word forms, this could easily reach a higher level.\"\n}\n```",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07019",
+      "prediction": "",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 90111.09575000001,
+      "input_tokens": 4787,
+      "output_tokens": 4096,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07070",
+      "prediction": "B2",
+      "expected": "B2",
+      "correct": true,
+      "latency_ms": 72413.78183400002,
+      "input_tokens": 5142,
+      "output_tokens": 3249,
+      "raw_output": "```json\n{\n    \"cefr_level\": \"B2\",\n    \"grammar_score\": 0.7,\n    \"corrections\": [\n        \"I cannot agree with this point.\",\n        \"But there is a different situation.\",\n        \"Or maybe they want to work in science or in other difficult areas.\",\n        \"At university, people study different complex subjects.\",\n        \"And the knowledge that the university gives is complex.\"\n    ],\n    \"feedback\": \"This is a well-organized essay that presents a clear opinion and supports it with relevant arguments. You have successfully used complex sentence structures, such as 'the field in which they want to work', and good collocations like 'gain work experience' and 'builds a career', which are characteristic of a B2 level. While there are some errors with articles and plural forms (e.g., 'different situation', 'difficult area'), they do not impede communication. To improve, focus on accuracy with articles and ensuring nouns are pluralized correctly when referring to general concepts.\"\n}\n```",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07087",
+      "prediction": "B1",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 69022.91883700002,
+      "input_tokens": 5353,
+      "output_tokens": 3078,
+      "raw_output": "```json\n{\n    \"cefr_level\": \"B1\",\n    \"grammar_score\": 0.5,\n    \"corrections\": [\n        \"our planet has become a more polluted place\",\n        \"Do these pollutants affect environmental problems?\",\n        \"making the pollution problem look not vital but dumb\",\n        \"It causes politicians not to look at the main point\",\n        \"People who care about environmental health are significantly overreacting\",\n        \"Climate change is not just the fantasy of crazy eco-activists\",\n        \"In conclusion, only people are responsible for pollution\"\n    ],\n    \"feedback\": \"The essay demonstrates a good attempt at organizing an argument with a clear introduction, body paragraphs, and conclusion, which is characteristic of B1 level writing. You have used some ambitious vocabulary (e.g., 'eco-activists', 'vital', 'observing') and attempted complex sentence structures (e.g., 'But as long as we live there...'). However, the text is hindered by frequent grammar errors, particularly with subject-verb agreement ('People who cares', 'It cause'), verb forms ('has became'), and sentence fragments. To improve, focus on ensuring every sentence has a main verb and that subjects and verbs agree in number.\"\n}\n```",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07099",
+      "prediction": "B2",
+      "expected": "B2",
+      "correct": true,
+      "latency_ms": 53008.83026400004,
+      "input_tokens": 4321,
+      "output_tokens": 2399,
+      "raw_output": "```json\n{\n    \"cefr_level\": \"B2\",\n    \"grammar_score\": 0.8,\n    \"corrections\": [\n        \"part in becoming -> part of becoming\",\n        \"werelucky -> were lucky\",\n        \"talant -> talent\",\n        \"alwaysbeats -> always beats\",\n        \"On my point of view -> From my point of view\"\n    ],\n    \"feedback\": \"This is a strong B2 level essay. You have presented a well-structured argument with a clear introduction, body, and conclusion. The text demonstrates good control of complex sentence structures, such as 'There are countless examples of people who were lucky enough...' and effective use of discourse markers ('However', 'On the other hand', 'All in all'). Your vocabulary is varied and appropriate for the topic, including words like 'fundamental', 'self-assured', and 'rely on'. The main areas for improvement are spelling (particularly 'talent') and mechanical errors like missing spaces between words. The phrase 'On my point of view' is also a minor collocation error, but it does not impede communication.\"\n}\n```",
+      "judge_raw_score": null,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-22T19:22:41+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": null,
+  "judge_model_revision": null,
+  "judge_prompt_hash": null
+}
