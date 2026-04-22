@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T03:45:24+00:00",
+  "generated_at": "2026-04-22T03:45:52+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -1011,6 +1011,19 @@
       "p95_latency_ms": 6152.80676399999,
       "cost_usd": null,
       "result_file": "tasks/conversational_memory_qa/results/gpt-oss-120b@vllm__2026-04-20T01-01-22Z.json"
+    },
+    {
+      "task_id": "conversational_memory_qa",
+      "task_version": "1.0",
+      "model_id": "qwen3-235B-A22B@vllm",
+      "score": 0.76,
+      "metrics": {
+        "judge_score": 0.76
+      },
+      "tps": 60.71654962060415,
+      "p95_latency_ms": 42526.825127,
+      "cost_usd": null,
+      "result_file": "tasks/conversational_memory_qa/results/qwen3-235B-A22B@vllm__2026-04-22T00-00-03Z.json"
     },
     {
       "task_id": "conversational_memory_qa",
