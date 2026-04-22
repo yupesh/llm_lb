@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T03:44:20+00:00",
+  "generated_at": "2026-04-22T03:44:48+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -3197,6 +3197,20 @@
     {
       "task_id": "jailbreak_detection",
       "task_version": "1.0",
+      "model_id": "qwen3-235B-A22B@vllm",
+      "score": 1.0,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "tps": 59.18499998781267,
+      "p95_latency_ms": 3008.195810000004,
+      "cost_usd": null,
+      "result_file": "tasks/jailbreak_detection/results/qwen3-235B-A22B@vllm__2026-04-22T01-33-39Z.json"
+    },
+    {
+      "task_id": "jailbreak_detection",
+      "task_version": "1.0",
       "model_id": "glm5.1@llama",
       "score": 1.0,
       "metrics": {
@@ -4208,6 +4222,19 @@
       "p95_latency_ms": 380661.14249600016,
       "cost_usd": null,
       "result_file": "tasks/retail_agent_dialog/results/qwen3.5-397b@vllm__2026-04-16T13-47-44Z.json"
+    },
+    {
+      "task_id": "retail_agent_dialog",
+      "task_version": "1.0",
+      "model_id": "qwen3-235B-A22B@vllm",
+      "score": 0.0,
+      "metrics": {
+        "judge_score": 0.0
+      },
+      "tps": 0.0,
+      "p95_latency_ms": 39149.638951000044,
+      "cost_usd": null,
+      "result_file": "tasks/retail_agent_dialog/results/qwen3-235B-A22B@vllm__2026-04-22T02-25-57Z.json"
     },
     {
       "task_id": "safety_classification",
