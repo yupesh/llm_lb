@@ -4,8 +4,15 @@
   <id>tag:yupesh.github.io,2026:llm_lb/feed</id>
   <link href="https://yupesh.github.io/llm_lb/" rel="alternate" type="text/html"/>
   <link href="https://yupesh.github.io/llm_lb/data/feed.xml" rel="self" type="application/atom+xml"/>
-  <updated>2026-04-22T09:14:11+00:00</updated>
+  <updated>2026-04-22T12:53:18+00:00</updated>
   <author><name>LLM Leaderboard</name></author>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_entity_name_refinement/1.0/glm5-awq@vllm/2026-04-22T12:53:18+00:00</id>
+    <title>glm5-awq@vllm scored 0.900 judge_score on kg_entity_name_refinement v1.0</title>
+    <updated>2026-04-22T12:53:18+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_entity_name_refinement" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.900</summary>
+  </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring_condensed/1.1/qwen3-30b@vllm/2026-04-22T09:14:11+00:00</id>
     <title>qwen3-30b@vllm scored 0.350 accuracy on essay_vocabulary_scoring_condensed v1.1</title>
@@ -348,12 +355,5 @@
     <updated>2026-04-21T23:55:40+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification_condensed" rel="alternate" type="text/html"/>
     <summary>accuracy=0.250, macro_f1=0.192, qwk=0.455</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/agent_tool_calling/1.0/qwen3-235B-A22B@vllm/2026-04-21T23:50:53+00:00</id>
-    <title>qwen3-235B-A22B@vllm scored 0.600 judge_score on agent_tool_calling v1.0</title>
-    <updated>2026-04-21T23:50:53+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/agent_tool_calling" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.600</summary>
   </entry>
 </feed>
