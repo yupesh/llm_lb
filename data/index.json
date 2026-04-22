@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T08:54:45+00:00",
+  "generated_at": "2026-04-22T09:05:18+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -862,6 +862,21 @@
       "result_file": "tasks/agent_tool_calling/results/llama-guard4@vllm__2026-04-21T08-37-51Z.json"
     },
     {
+      "task_id": "cefr_level_classification",
+      "task_version": "1.1",
+      "model_id": "qwen3-235B-A22B@vllm",
+      "score": 0.33999999999999997,
+      "metrics": {
+        "accuracy": 0.4,
+        "macro_f1": 0.2738095238095238,
+        "qwk": 0.33999999999999997
+      },
+      "tps": 73.34294454283436,
+      "p95_latency_ms": 7700.051042000013,
+      "cost_usd": null,
+      "result_file": "tasks/cefr_level_classification/results/qwen3-235B-A22B@vllm__2026-04-22T05-47-59Z.json"
+    },
+    {
       "task_id": "cefr_level_classification_condensed",
       "task_version": "1.0",
       "model_id": "qwen3.5-27b@vllm",
@@ -1662,6 +1677,66 @@
       "result_file": "tasks/entity_relationship_extraction/results/qwen3-30b@vllm__2026-04-17T05-46-54Z.json"
     },
     {
+      "task_id": "essay_coherence_scoring",
+      "task_version": "1.1",
+      "model_id": "qwen3-235B-A22B@vllm",
+      "score": 0.19999999999999996,
+      "metrics": {
+        "accuracy": 0.2,
+        "macro_f1": 0.13333333333333333,
+        "qwk": 0.19999999999999996
+      },
+      "tps": 72.44775884107152,
+      "p95_latency_ms": 8578.323056000003,
+      "cost_usd": null,
+      "result_file": "tasks/essay_coherence_scoring/results/qwen3-235B-A22B@vllm__2026-04-22T05-50-46Z.json"
+    },
+    {
+      "task_id": "essay_coherence_scoring_condensed",
+      "task_version": "1.1",
+      "model_id": "qwen3-235B-A22B@vllm",
+      "score": 0.3478260869565216,
+      "metrics": {
+        "accuracy": 0.25,
+        "macro_f1": 0.22014652014652014,
+        "qwk": 0.3478260869565216
+      },
+      "tps": 73.17016853604504,
+      "p95_latency_ms": 8015.661521000005,
+      "cost_usd": null,
+      "result_file": "tasks/essay_coherence_scoring_condensed/results/qwen3-235B-A22B@vllm__2026-04-22T05-53-06Z.json"
+    },
+    {
+      "task_id": "essay_grammar_scoring",
+      "task_version": "1.1",
+      "model_id": "qwen3-235B-A22B@vllm",
+      "score": 0.30434782608695654,
+      "metrics": {
+        "accuracy": 0.45,
+        "macro_f1": 0.3586080586080586,
+        "qwk": 0.30434782608695654
+      },
+      "tps": 72.17764347891436,
+      "p95_latency_ms": 9329.195504999994,
+      "cost_usd": null,
+      "result_file": "tasks/essay_grammar_scoring/results/qwen3-235B-A22B@vllm__2026-04-22T05-55-48Z.json"
+    },
+    {
+      "task_id": "essay_grammar_scoring_condensed",
+      "task_version": "1.1",
+      "model_id": "qwen3-235B-A22B@vllm",
+      "score": 0.03333333333333344,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.17613636363636365,
+        "qwk": 0.03333333333333344
+      },
+      "tps": 73.98344572126612,
+      "p95_latency_ms": 8037.957894999991,
+      "cost_usd": null,
+      "result_file": "tasks/essay_grammar_scoring_condensed/results/qwen3-235B-A22B@vllm__2026-04-22T05-58-12Z.json"
+    },
+    {
       "task_id": "essay_holistic_scoring",
       "task_version": "1.0",
       "model_id": "glm5.1@llama",
@@ -1960,6 +2035,36 @@
       "p95_latency_ms": 2622.7210419999947,
       "cost_usd": null,
       "result_file": "tasks/essay_holistic_scoring_condensed/results/gpt-oss-120b@vllm__2026-04-20T01-22-26Z.json"
+    },
+    {
+      "task_id": "essay_vocabulary_scoring",
+      "task_version": "1.1",
+      "model_id": "qwen3-235B-A22B@vllm",
+      "score": 0.3571428571428572,
+      "metrics": {
+        "accuracy": 0.4,
+        "macro_f1": 0.29292929292929293,
+        "qwk": 0.3571428571428572
+      },
+      "tps": 73.85543877606685,
+      "p95_latency_ms": 8737.243322999973,
+      "cost_usd": null,
+      "result_file": "tasks/essay_vocabulary_scoring/results/qwen3-235B-A22B@vllm__2026-04-22T06-00-45Z.json"
+    },
+    {
+      "task_id": "essay_vocabulary_scoring_condensed",
+      "task_version": "1.1",
+      "model_id": "qwen3-235B-A22B@vllm",
+      "score": 0.4761904761904763,
+      "metrics": {
+        "accuracy": 0.5,
+        "macro_f1": 0.4163483575248281,
+        "qwk": 0.4761904761904763
+      },
+      "tps": 72.4179047347081,
+      "p95_latency_ms": 6793.017847000002,
+      "cost_usd": null,
+      "result_file": "tasks/essay_vocabulary_scoring_condensed/results/qwen3-235B-A22B@vllm__2026-04-22T06-02-55Z.json"
     },
     {
       "task_id": "extractive_qa",

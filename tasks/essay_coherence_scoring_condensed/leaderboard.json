@@ -1,0 +1,21 @@
+{
+  "task_id": "essay_coherence_scoring_condensed",
+  "task_version": "1.1",
+  "primary_metric": "qwk",
+  "ranking": [
+    {
+      "model_id": "qwen3-235B-A22B@vllm",
+      "score": 0.3478260869565216,
+      "metrics": {
+        "accuracy": 0.25,
+        "macro_f1": 0.22014652014652014,
+        "qwk": 0.3478260869565216
+      },
+      "tps": 73.17016853604504,
+      "p95_latency_ms": 8015.661521000005,
+      "cost_usd": null,
+      "result_file": "results/qwen3-235B-A22B@vllm__2026-04-22T05-53-06Z.json"
+    }
+  ],
+  "updated_at": "2026-04-22T07:57:51+00:00"
+}
