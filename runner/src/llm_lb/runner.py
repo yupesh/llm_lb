@@ -11,10 +11,19 @@ import yaml
 
 from . import __version__
 from .adapters import get_adapter
+from .adapters.base import Completion
 from .eval import judge as judge_mod
 from .eval.dialog_sim import simulate_retail_dialog
 from .eval.extract import extract_label, extract_regex, normalize, strip_reasoning
-from .eval.metrics import accuracy, macro_f1, qwk
+from .eval.metrics import (
+    accuracy,
+    adjacent_accuracy,
+    boundary_accuracy,
+    boundary_kappa,
+    macro_f1,
+    qwk,
+    signed_diff,
+)
 from .models import ModelCard, RunResult, Sample, SamplePrediction, TaskSpec
 
 
@@ -46,10 +55,10 @@ def _p95(values: list[float]) -> float:
 
 def _extract_prediction(task: TaskSpec, raw: str) -> str:
     raw = strip_reasoning(raw)
-    if task.labels:
-        return extract_label(raw, task.labels, task.label_aliases)
     if task.answer_regex:
         return extract_regex(raw, task.answer_regex)
+    if task.labels:
+        return extract_label(raw, task.labels, task.label_aliases)
     return raw.strip()
 
 
@@ -174,8 +183,24 @@ def _execute_sample(
             ctx_key = s.meta.get(task.context_meta_key)
             if ctx_key:
                 ctx_str = ctx.context_data.get(ctx_key, "")
-        user = task.prompt_template.format(prompt=s.prompt, context=ctx_str)
-        completion = ctx.adapter.chat(task.system_prompt, user, task.llm_params)
+        sample_messages = s.meta.get("messages")
+        if sample_messages is not None:
+            if not hasattr(ctx.adapter, "chat_messages"):
+                raise RuntimeError(
+                    f"Adapter for model does not support sample-level chat histories: {type(ctx.adapter).__name__}"
+                )
+            result = ctx.adapter.chat_messages(sample_messages, task.llm_params)
+            msg = result["message"]
+            usage = result.get("usage") or {}
+            text = msg.get("content") or ""
+            completion = Completion(
+                text=text,
+                input_tokens=usage.get("prompt_tokens"),
+                output_tokens=usage.get("completion_tokens"),
+            )
+        else:
+            user = task.prompt_template.format(prompt=s.prompt, context=ctx_str)
+            completion = ctx.adapter.chat(task.system_prompt, user, task.llm_params)
         dt_ms = (time.perf_counter() - t0) * 1000.0
 
         pred = _extract_prediction(task, completion.text)
@@ -238,8 +263,16 @@ def _compute_metrics(task: TaskSpec, preds: list[SamplePrediction]) -> dict[str,
         metrics["exact_match"] = accuracy(preds)  # `correct` already uses normalize()
     if "macro_f1" in wanted and task.labels:
         metrics["macro_f1"] = macro_f1(preds, task.labels)
+    if "adjacent_accuracy" in wanted and task.labels:
+        metrics["adjacent_accuracy"] = adjacent_accuracy(preds, task.labels)
     if "qwk" in wanted and task.labels:
         metrics["qwk"] = qwk(preds, task.labels)
+    if "boundary_accuracy" in wanted and task.labels:
+        metrics["boundary_accuracy"] = boundary_accuracy(preds, task.labels)
+    if "boundary_kappa" in wanted and task.labels:
+        metrics["boundary_kappa"] = boundary_kappa(preds, task.labels)
+    if "signed_diff" in wanted and task.labels:
+        metrics["signed_diff"] = signed_diff(preds, task.labels)
     return metrics
 
 

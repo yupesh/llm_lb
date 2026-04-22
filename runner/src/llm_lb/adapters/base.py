@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Protocol
+from typing import Any, Protocol
 
 from ..models import LLMParams, ModelCard
 
@@ -15,6 +15,13 @@ class Completion:
 
 class LLMClient(Protocol):
     def chat(self, system: str | None, user: str, params: LLMParams) -> Completion: ...
+
+    def chat_messages(
+        self,
+        messages: list[dict[str, Any]],
+        params: LLMParams,
+        tools: list[dict] | None = None,
+    ) -> dict: ...
 
 
 _REGISTRY: dict[str, type] = {}
