@@ -1,0 +1,21 @@
+{
+  "task_id": "writing_eval_n10_no_ann_with_m_serial",
+  "task_version": "1.0",
+  "primary_metric": "qwk",
+  "ranking": [
+    {
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.33333333333333326,
+      "metrics": {
+        "accuracy": 0.4,
+        "adjacent_accuracy": 1.0,
+        "qwk": 0.33333333333333326
+      },
+      "tps": 40.46738759290122,
+      "p95_latency_ms": 47263.134983999975,
+      "cost_usd": null,
+      "result_file": "results/qwen3-30b@vllm__2026-04-22T10-45-04Z.json"
+    }
+  ],
+  "updated_at": "2026-04-22T13:02:14+00:00"
+}
