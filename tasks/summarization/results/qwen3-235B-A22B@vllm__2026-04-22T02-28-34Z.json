@@ -1,0 +1,92 @@
+{
+  "model_id": "qwen3-235B-A22B@vllm",
+  "model_revision": "2026-04-02",
+  "task_id": "summarization",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "2c5723a9c9440b71",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "judge_score": 0.8400000000000001
+  },
+  "tps": 70.99783873864064,
+  "p95_latency_ms": 6911.117073999996,
+  "n_samples": 5,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "sample_001",
+      "prediction": "The James Webb Space Telescope, launched in December 2021 as the largest optical space telescope, uses infrared instruments to observe early galaxies and is operated by NASA, ESA, and the Canadian Space Agency.",
+      "expected": "JWST, launched in December 2021, is the largest space telescope and observes early-universe galaxies in infrared as a NASA-ESA-CSA project.",
+      "correct": false,
+      "latency_ms": 5938.270093000004,
+      "input_tokens": 98,
+      "output_tokens": 431,
+      "raw_output": "\n\nThe James Webb Space Telescope, launched in December 2021 as the largest optical space telescope, uses infrared instruments to observe early galaxies and is operated by NASA, ESA, and the Canadian Space Agency.",
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "sample_002",
+      "prediction": "Python's asyncio provides an event-loop concurrency model enabling a single thread to manage thousands of network connections by suspending coroutines during I/O waits, establishing it as the standard for high-throughput network services in Python.",
+      "expected": "Python's asyncio enables high-throughput single-threaded networking by suspending coroutines on I/O via an event loop.",
+      "correct": false,
+      "latency_ms": 5820.950906999997,
+      "input_tokens": 98,
+      "output_tokens": 406,
+      "raw_output": "\n\nPython's asyncio provides an event-loop concurrency model enabling a single thread to manage thousands of network connections by suspending coroutines during I/O waits, establishing it as the standard for high-throughput network services in Python.",
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "sample_003",
+      "prediction": "The 2008 financial crisis, sparked by the collapse of the U.S. subprime mortgage market due to lax lending and risky loan securitization, resulted in Lehman Brothers' bankruptcy and a global recession.",
+      "expected": "The 2008 crisis began with the U.S. subprime mortgage collapse, causing Lehman Brothers' failure and a global recession.",
+      "correct": false,
+      "latency_ms": 4624.521254000001,
+      "input_tokens": 102,
+      "output_tokens": 337,
+      "raw_output": "\n\nThe 2008 financial crisis, sparked by the collapse of the U.S. subprime mortgage market due to lax lending and risky loan securitization, resulted in Lehman Brothers' bankruptcy and a global recession.",
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_004",
+      "prediction": "Photosynthesis is the process by which green plants use sunlight, captured by chlorophyll in chloroplasts, to convert carbon dioxide and water into glucose and oxygen, forming the foundation of nearly all food chains on Earth.",
+      "expected": "Photosynthesis lets green plants turn CO2 and water into glucose and oxygen using sunlight captured by chlorophyll, underpinning most food chains.",
+      "correct": false,
+      "latency_ms": 6911.117073999996,
+      "input_tokens": 91,
+      "output_tokens": 468,
+      "raw_output": "\n\nPhotosynthesis is the process by which green plants use sunlight, captured by chlorophyll in chloroplasts, to convert carbon dioxide and water into glucose and oxygen, forming the foundation of nearly all food chains on Earth.",
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "sample_005",
+      "prediction": "The 1648 Treaty of Westphalia ended the Thirty Years' War in the Holy Roman Empire and established the foundation of the modern state system based on territorial sovereignty.",
+      "expected": "The 1648 Treaty of Westphalia ended the Thirty Years' War and laid the foundation of the modern sovereignty-based state system.",
+      "correct": false,
+      "latency_ms": 5001.776677999998,
+      "input_tokens": 87,
+      "output_tokens": 367,
+      "raw_output": "\n\nThe 1648 Treaty of Westphalia ended the Thirty Years' War in the Holy Roman Empire and established the foundation of the modern state system based on territorial sovereignty.",
+      "judge_raw_score": 4.0,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-22T02:28:34+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": "gpt-4o-mini@openai",
+  "judge_model_revision": "2024-07-18",
+  "judge_prompt_hash": "d679caeb261c214b"
+}
