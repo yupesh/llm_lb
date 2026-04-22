@@ -63,6 +63,20 @@
     <summary>accuracy=0.500, macro_f1=0.422</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_triplet_extraction/1.0/qwen3-235B-A22B@vllm/2026-04-22T02:14:30+00:00</id>
+    <title>qwen3-235B-A22B@vllm scored 0.590 judge_score on kg_triplet_extraction v1.0</title>
+    <updated>2026-04-22T02:14:30+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_triplet_extraction" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.590</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_relation_refinement/1.0/qwen3-235B-A22B@vllm/2026-04-22T01:49:09+00:00</id>
+    <title>qwen3-235B-A22B@vllm scored 0.890 judge_score on kg_relation_refinement v1.0</title>
+    <updated>2026-04-22T01:49:09+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_relation_refinement" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.890</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/topic_classification/1.0/minimax-m2.7@vllm/2026-04-21T11:12:37+00:00</id>
     <title>minimax-m2.7@vllm scored 1.000 accuracy on topic_classification v1.0</title>
     <updated>2026-04-21T11:12:37+00:00</updated>
@@ -341,19 +355,5 @@
     <updated>2026-04-21T07:50:51+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/safety_classification" rel="alternate" type="text/html"/>
     <summary>accuracy=0.900, macro_f1=0.900</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/gpt-oss-120b@vllm/2026-04-21T07:43:00+00:00</id>
-    <title>gpt-oss-120b@vllm scored 0.750 accuracy on safety_classification v1.0</title>
-    <updated>2026-04-21T07:43:00+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/safety_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.750, macro_f1=0.749</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/topic_classification/1.0/deepseek32exp@vllm/2026-04-21T07:36:18+00:00</id>
-    <title>deepseek32exp@vllm scored 1.000 accuracy on topic_classification v1.0</title>
-    <updated>2026-04-21T07:36:18+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/topic_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=1.000, macro_f1=1.000</summary>
   </entry>
 </feed>
