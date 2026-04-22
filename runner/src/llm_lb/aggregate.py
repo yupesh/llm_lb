@@ -48,6 +48,11 @@ def aggregate_task(task_dir: Path) -> Leaderboard:
     if results_dir.exists():
         for p in sorted(results_dir.glob("*.json")):
             r = RunResult.model_validate_json(p.read_text())
+            # When a task spec changes and its version is bumped, keep old runs
+            # attributable to the old version instead of mixing them into the
+            # current leaderboard.
+            if r.task_version != task.version:
+                continue
             score = r.metrics.get(primary, 0.0)
             cur = best.get(r.model_id)
             if cur is None or score > cur[0].metrics.get(primary, 0.0):

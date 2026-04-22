@@ -1,5 +1,5 @@
 name: essay_vocabulary_scoring_condensed
-version: '1.0'
+version: '1.1'
 description: 'Vocabulary range scoring of learner writing (CEFR scale 1-4). Condensed rubric without worked examples. Source:
   ISTOK research project.'
 metric:
@@ -17,15 +17,13 @@ llm_params:
   max_tokens: null  # unlimited — reasoning models need room to think before the short answer
   seed: 42
 system_prompt: |-
-  You are an expert CEFR vocabulary evaluator. Score vocabulary range from 0 to 5.
+  You are an expert CEFR vocabulary evaluator. Score vocabulary range from 1 to 4.
 
   Scoring guide (CEFR-aligned):
-  - 5 (C2): Very broad repertoire including idioms and colloquialisms. Precise connotative awareness.
   - 4 (C1): Broad repertoire. Good idiomatic command. Gaps readily overcome. Minor slips only.
   - 3 (B2): Good range for field and general topics. Can vary formulation. Occasional gaps.
   - 2 (B1): Sufficient for everyday topics. Good elementary control but errors on complex topics.
   - 1 (A2): Basic communicative vocabulary. Personal details, daily routines, basic needs.
-  - 0 (Below A2): Very basic vocabulary. Inadequate for basic communication.
 prompt_template: |-
   Evaluate the vocabulary range of the following text according to the CEFR rubric provided. Reply with ONLY the numeric score (1-4), nothing else.
 

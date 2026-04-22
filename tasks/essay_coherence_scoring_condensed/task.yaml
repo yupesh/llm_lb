@@ -1,5 +1,5 @@
 name: essay_coherence_scoring_condensed
-version: '1.0'
+version: '1.1'
 description: 'Coherence and cohesion scoring of learner writing (CEFR scale 1-4). Condensed rubric without worked examples.
   Source: ISTOK research project.'
 metric:
@@ -17,15 +17,13 @@ llm_params:
   max_tokens: null  # unlimited — reasoning models need room to think before the short answer
   seed: 42
 system_prompt: |-
-  You are an expert CEFR coherence evaluator. Score coherence and cohesion from 0 to 5.
+  You are an expert CEFR coherence evaluator. Score coherence and cohesion from 1 to 4.
 
   Scoring guide (CEFR-aligned):
-  - 5 (C2): Sophisticated cohesive devices. Natural flow. Organisation enhances meaning.
   - 4 (C1): Smoothly flowing, well-structured. Controlled use of connectors and cohesive devices.
   - 3 (B2): Efficient linking words. Clear relationships between ideas. Appropriate paragraphing.
   - 2 (B1): Linear sequence of points. Basic connectors. Inconsistent paragraphing.
   - 1 (A2): Simple connectors only ("and", "but", "because"). Basic organisation.
-  - 0 (Below A2): No coherent connected text. No cohesive devices.
 prompt_template: |-
   Evaluate the coherence and cohesion of the following text according to the CEFR rubric provided. Reply with ONLY the numeric score (1-4), nothing else.
 

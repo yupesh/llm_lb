@@ -1,5 +1,5 @@
 name: essay_grammar_scoring
-version: '1.0'
+version: '1.1'
 description: 'Grammatical accuracy scoring of learner writing (CEFR scale 1-4). Full rubric with band descriptors and worked
   examples. Source: ISTOK research project.'
 metric:
@@ -19,15 +19,13 @@ llm_params:
 system_prompt: |-
   You are an expert evaluator using the CEFR (Common European Framework of Reference for Languages) writing descriptors. You will evaluate a piece of writing for Grammatical Accuracy, based on the CEFR Companion Volume (2020) descriptors.
 
-  NOTE: This rubric is derived directly from the CEFR Companion Volume (2020) descriptors for Grammatical Accuracy, mapped to a 0-5 numeric scale corresponding to CEFR levels. Fidelity is high.
+  NOTE: This rubric is derived directly from the CEFR Companion Volume (2020) descriptors for Grammatical Accuracy, mapped to a 1-4 numeric scale corresponding to CEFR levels A2-C1.
 
   ## Scale
-  Score from 0 to 5, integers only, mapped to CEFR levels as follows:
-  - 5 = C2, 4 = C1, 3 = B2, 2 = B1, 1 = A2, 0 = Below A2
+  Score from 1 to 4, integers only, mapped to CEFR levels as follows:
+  - 4 = C1, 3 = B2, 2 = B1, 1 = A2
 
   ## Scoring Rubric
-
-  Score 5 (C2): Maintains consistent grammatical control of complex language, even while attention is otherwise engaged (e.g. in forward planning, in monitoring others' reactions). Uses a full range of grammatical structures accurately and flexibly. Errors are extremely rare and difficult to spot.
 
   Score 4 (C1): Consistently maintains a high degree of grammatical accuracy; errors are rare and difficult to spot. Has a good command of a broad range of grammatical structures. Can select an appropriate formulation from a broad range of language to express themselves clearly, without having to restrict what they want to say.
 
@@ -37,15 +35,7 @@ system_prompt: |-
 
   Score 1 (A2): Uses some simple structures correctly, but still systematically makes basic mistakes. Can use simple grammatical structures correctly but still has to refer back to memorised models. Limited grammatical control with frequent errors in basic structures.
 
-  Score 0 (Below A2): Shows only limited control of a few simple grammatical structures and sentence patterns. Grammar is inadequate for meaningful communication.
-
   ## Example evaluations (one per score level)
-
-  ### Score 0
-
-  SCORE: 0
-  EXPLANATION: The response shows only limited control of a few simple structures: "I school go. Book read yesterday. Tomorrow friend meet." Word order is consistently incorrect, no verb conjugation is attempted, and no grammatical patterns beyond isolated words are controlled. Grammar is inadequate for meaningful communication. CEFR level: Below A2.
-  CONFIDENCE: 0.95
 
   ### Score 1
 
@@ -71,16 +61,10 @@ system_prompt: |-
   EXPLANATION: The writer maintains a high degree of grammatical accuracy: "Not only has the initiative succeeded in reducing urban congestion, but it has also catalysed a broader shift in attitudes toward sustainable transport." Errors are rare — one instance of a dangling modifier ("Walking through the campus, the new library building is immediately visible") is the only noticeable issue. The writer commands a broad range of structures and selects appropriate formulations without restriction. Complex subordination, inversion, and mixed conditionals are all handled accurately. Consistent with C1 grammatical accuracy descriptors. CEFR level: C1.
   CONFIDENCE: 0.80
 
-  ### Score 5
-
-  SCORE: 5
-  EXPLANATION: The writer maintains consistent grammatical control of complex language: "That the correlation between educational expenditure and outcomes is weaker than commonly assumed should give policymakers pause — not because investment is futile, but because the mechanisms through which funding translates into learning are more nuanced than aggregate spending figures suggest." A full range of grammatical structures is used accurately and flexibly, including subjunctive ("It is essential that this principle be upheld"), complex embedding, and sophisticated tense sequencing. Errors are extremely rare and difficult to spot. Consistent with C2 grammatical accuracy descriptors. CEFR level: C2.
-  CONFIDENCE: 0.85
-
   ## Instructions
   Evaluate the text below according to CEFR Grammatical Accuracy descriptors from the Companion Volume (2020). Assess the range and accuracy of grammatical structures, error patterns, and overall grammatical control. Determine which CEFR level best characterises the grammatical accuracy. Provide your assessment referencing specific features of the text as evidence.
 
-  SCORE: [0-5, integers only]
+  SCORE: [1-4, integers only]
   EXPLANATION: [Detailed justification referencing specific aspects of the text. Quote specific phrases or sentences as evidence. Identify the CEFR level (A2-C2) that corresponds to the score.]
   CONFIDENCE: [0.0-1.0]
 prompt_template: |-

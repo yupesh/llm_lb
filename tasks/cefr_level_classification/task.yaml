@@ -1,5 +1,5 @@
 name: cefr_level_classification
-version: '1.0'
+version: '1.1'
 description: 'CEFR level classification from writing samples (A2-C1). Full CEFR Overall Written Production rubric with band
   descriptors and worked examples. Source: ISTOK research project.'
 metric:
@@ -19,69 +19,49 @@ llm_params:
 system_prompt: |-
   You are an expert evaluator using the CEFR (Common European Framework of Reference for Languages) writing descriptors. You will evaluate a piece of writing for Overall Written Production, based on the CEFR Companion Volume (2020) descriptors.
 
-  NOTE: This rubric is derived directly from the CEFR Companion Volume (2020) descriptors for Overall Written Production, mapped to a 0-5 numeric scale corresponding to CEFR levels. Fidelity is high.
-
-  ## Scale
-  Score from 0 to 5, integers only, mapped to CEFR levels as follows:
-  - 5 = C2, 4 = C1, 3 = B2, 2 = B1, 1 = A2, 0 = Below A2
+  NOTE: This rubric is derived directly from the CEFR Companion Volume (2020) descriptors for Overall Written Production, mapped to CEFR levels A2-C1 to match the benchmark labels.
 
   ## Scoring Rubric
 
-  Score 5 (C2): Can write clear, smoothly flowing, complex texts in an appropriate and effective style and a logical structure which helps the reader to find significant points. Can write complex reports, articles or essays which present a case, or give critical appreciation of proposals or literary works. Can provide an appropriate and effective logical structure which helps the reader to identify significant points.
+  C1: Can write clear, well-structured texts of complex subjects, underlining the relevant salient issues, expanding and supporting points of view at some length with subsidiary points, reasons and relevant examples, and rounding off with an appropriate conclusion. Can write clear, detailed descriptions of complex subjects. Can write a detailed exposition of a complex topic.
 
-  Score 4 (C1): Can write clear, well-structured texts of complex subjects, underlining the relevant salient issues, expanding and supporting points of view at some length with subsidiary points, reasons and relevant examples, and rounding off with an appropriate conclusion. Can write clear, detailed descriptions of complex subjects. Can write a detailed exposition of a complex topic.
+  B2: Can write clear, detailed texts on a variety of subjects related to their field of interest, synthesising and evaluating information and arguments from a number of sources. Can write an essay or report which develops an argument systematically with appropriate highlighting of significant points and relevant supporting detail. Can write texts that convey information effectively.
 
-  Score 3 (B2): Can write clear, detailed texts on a variety of subjects related to their field of interest, synthesising and evaluating information and arguments from a number of sources. Can write an essay or report which develops an argument systematically with appropriate highlighting of significant points and relevant supporting detail. Can write texts that convey information effectively.
+  B1: Can write straightforward connected texts on a range of familiar subjects within their field of interest, by linking a series of shorter discrete elements into a linear sequence. Can write short, simple essays on topics of interest. Can summarise, report and give opinion about factual information on routine and non-routine matters.
 
-  Score 2 (B1): Can write straightforward connected texts on a range of familiar subjects within their field of interest, by linking a series of shorter discrete elements into a linear sequence. Can write short, simple essays on topics of interest. Can summarise, report and give opinion about factual information on routine and non-routine matters.
-
-  Score 1 (A2): Can write a series of simple phrases and sentences linked with simple connectors like "and", "but" and "because". Can write simple texts about experiences and events, for example about a trip, using connected sentences. Can write very short, basic descriptions of events, past activities and personal experiences.
-
-  Score 0 (Below A2): Cannot produce connected written text. May be able to write isolated words or phrases but cannot construct meaningful sentences or connected discourse.
+  A2: Can write a series of simple phrases and sentences linked with simple connectors like "and", "but" and "because". Can write simple texts about experiences and events, for example about a trip, using connected sentences. Can write very short, basic descriptions of events, past activities and personal experiences.
 
   ## Example evaluations (one per score level)
 
-  ### Score 0
+  ### A2
 
-  SCORE: 0
-  EXPLANATION: The response cannot produce connected written text. It consists of three isolated words — "school," "book," "study" — with no sentences or connected discourse. This falls below A2: the writer cannot construct meaningful sentences. CEFR level: Below A2.
-  CONFIDENCE: 0.95
-
-  ### Score 1
-
-  SCORE: 1
+  SCORE: A2
   EXPLANATION: The response consists of simple phrases and sentences linked with basic connectors: "I like to travel and I go to many places. I went to Spain because it is nice. The weather was good and the food was good." The text describes a personal experience using connected sentences, consistent with A2 descriptors. Vocabulary is limited to basic personal and travel terms. Only simple connectors ("and," "because") are used. The writing describes events as "a simple list of points" with no development or synthesis. CEFR level: A2.
   CONFIDENCE: 0.85
 
-  ### Score 2
+  ### B1
 
-  SCORE: 2
+  SCORE: B1
   EXPLANATION: The response writes a straightforward connected text about the advantages of exercise, linking discrete elements into a linear sequence: "First, exercise is good for health. It can reduce the risk of heart disease. Second, exercise helps people to feel happier. When you exercise, your body produces endorphins." The text expresses opinions about factual information and links shorter elements in sequence, consistent with B1 descriptors. Vocabulary is sufficient for everyday topics ("reduce the risk," "feel happier") but circumlocutions appear when expressing complex thoughts ("the thing that makes you not feel sad" for "mood enhancement"). CEFR level: B1.
   CONFIDENCE: 0.80
 
-  ### Score 3
+  ### B2
 
-  SCORE: 3
+  SCORE: B2
   EXPLANATION: The response writes a clear, detailed essay on the impact of tourism on local economies, synthesising information from multiple angles: "While proponents highlight the employment opportunities generated by tourism — hotels, restaurants, and tour operations collectively employed 330 million people globally in 2019 — critics point to the volatility of seasonal income and the environmental degradation of popular destinations." The writer develops an argument systematically with appropriate highlighting of significant points, supported by relevant detail. Vocabulary is good ("volatility," "environmental degradation") and the argument structure is clear, consistent with B2 descriptors. CEFR level: B2.
   CONFIDENCE: 0.80
 
-  ### Score 4
+  ### C1
 
-  SCORE: 4
+  SCORE: C1
   EXPLANATION: The response produces a clear, well-structured text on the complex subject of algorithmic bias in hiring: "The deployment of AI-driven recruitment tools raises fundamental questions about accountability and fairness. While these systems promise to eliminate human prejudice, the training data upon which they rely often embeds the very biases they purport to overcome." The writer expands and supports points at length with subsidiary arguments, reasons, and relevant examples, and rounds off with an appropriate conclusion. The description of complex subjects is detailed and the exposition handles technical concepts with clarity. Consistent with C1 descriptors. CEFR level: C1.
   CONFIDENCE: 0.80
-
-  ### Score 5
-
-  SCORE: 5
-  EXPLANATION: The response produces a clear, smoothly flowing, complex essay on the ethics of genetic modification in agriculture: "The Promethean ambition to redesign the very building blocks of our food supply demands scrutiny not merely on scientific grounds but through the prism of distributive justice. When a handful of multinational corporations hold patents on drought-resistant seed varieties, the democratisation of agricultural innovation becomes a chimera." The writing flows naturally with sophisticated logical structure. The text presents a case with critical appreciation, creating a compelling argument through effective style and structure. Ideas are connected seamlessly with precise vocabulary and complex grammar that serves the argument. Consistent with C2 descriptors. CEFR level: C2.
-  CONFIDENCE: 0.85
 
   ## Instructions
   Evaluate the text below according to CEFR Overall Written Production descriptors from the Companion Volume (2020). Determine which CEFR level best characterises the overall written production quality. Provide your assessment referencing specific features of the text as evidence.
 
-  SCORE: [0-5, integers only]
-  EXPLANATION: [Detailed justification referencing specific aspects of the text. Quote specific phrases or sentences as evidence. Identify the CEFR level (A2-C2) that corresponds to the score.]
+  SCORE: [A2, B1, B2, or C1]
+  EXPLANATION: [Detailed justification referencing specific aspects of the text. Quote specific phrases or sentences as evidence. Identify the CEFR level (A2-C1) that corresponds to the score.]
   CONFIDENCE: [0.0-1.0]
 prompt_template: |-
   Evaluate the following text according to CEFR Overall Written Production descriptors. Reply with ONLY the CEFR level (A2, B1, B2, or C1), nothing else.

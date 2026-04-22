@@ -14,6 +14,8 @@ from html import escape
 from pathlib import Path
 from typing import Any
 
+import yaml
+
 from .models import RunResult
 
 # Default canonical site URL. Override at call time if the repo is forked.
@@ -34,6 +36,13 @@ def _collect_runs(repo_root: Path) -> list[dict[str, Any]]:
     if not tasks_dir.exists():
         return runs
     for task_dir in sorted(p for p in tasks_dir.iterdir() if p.is_dir()):
+        task_file = task_dir / "task.yaml"
+        if not task_file.exists():
+            continue
+        try:
+            task_version = str(yaml.safe_load(task_file.read_text())["version"])
+        except Exception:
+            continue
         results_dir = task_dir / "results"
         if not results_dir.exists():
             continue
@@ -41,6 +50,8 @@ def _collect_runs(repo_root: Path) -> list[dict[str, Any]]:
             try:
                 r = RunResult.model_validate_json(p.read_text())
             except Exception:
+                continue
+            if r.task_version != task_version:
                 continue
             primary = next(iter(r.metrics), None)
             score = r.metrics.get(primary, 0.0) if primary else 0.0
