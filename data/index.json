@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T12:58:38+00:00",
+  "generated_at": "2026-04-22T12:59:01+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -1527,6 +1527,19 @@
     {
       "task_id": "datascibench_human",
       "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.58,
+      "metrics": {
+        "judge_score": 0.58
+      },
+      "tps": 43.83412983823762,
+      "p95_latency_ms": 220890.67075499997,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_human/results/glm5-awq@vllm__2026-04-22T11-12-45Z.json"
+    },
+    {
+      "task_id": "datascibench_human",
+      "task_version": "1.0",
       "model_id": "qwen3-235B-A22B@vllm",
       "score": 0.56,
       "metrics": {
@@ -2434,6 +2447,21 @@
       "p95_latency_ms": 9257.177978000002,
       "cost_usd": null,
       "result_file": "tasks/essay_vocabulary_scoring_condensed/results/qwen3.6-35b@vllm__2026-04-22T08-40-56Z.json"
+    },
+    {
+      "task_id": "essay_vocabulary_scoring_condensed",
+      "task_version": "1.1",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.6590909090909091,
+      "metrics": {
+        "accuracy": 0.4,
+        "macro_f1": 0.31547619047619047,
+        "qwk": 0.6590909090909091
+      },
+      "tps": 59.38674885884547,
+      "p95_latency_ms": 86907.35265400007,
+      "cost_usd": null,
+      "result_file": "tasks/essay_vocabulary_scoring_condensed/results/qwen3.5-27b@vllm__2026-04-22T10-58-57Z.json"
     },
     {
       "task_id": "essay_vocabulary_scoring_condensed",
@@ -5023,6 +5051,21 @@
       "p95_latency_ms": 0.019620987586677074,
       "cost_usd": 0.0,
       "result_file": "tasks/topic_classification/results/dummy@local__2026-04-08T05-07-23Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_no_target_ann_loocv_fewshot_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.0,
+      "metrics": {
+        "accuracy": 0.3,
+        "adjacent_accuracy": 1.0,
+        "qwk": 0.0
+      },
+      "tps": 35.66267145466684,
+      "p95_latency_ms": 32721.891306000005,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_no_target_ann_loocv_fewshot_no_m_serial/results/qwen3-30b@vllm__2026-04-22T11-00-51Z.json"
     },
     {
       "task_id": "writing_eval_n10_no_target_ann_loocv_fewshot_with_m_serial",
