@@ -15,6 +15,6 @@ labels:
 llm_params:
   temperature: 0.0
   top_p: 0.95
-  max_tokens: 4096
+  max_tokens: null
 prompt_template: '{prompt}'
 answer_regex: \b(A1|A2|B1|B2|C1|C2)\b
