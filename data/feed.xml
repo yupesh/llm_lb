@@ -224,6 +224,13 @@
     <summary>accuracy=0.400, macro_f1=0.315, qwk=0.659</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n10_no_target_ann_loocv_error_retrieval_with_m_serial/1.0/qwen3-30b@vllm/2026-04-22T10:56:16+00:00</id>
+    <title>qwen3-30b@vllm scored 0.200 accuracy on writing_eval_n10_no_target_ann_loocv_error_retrieval_with_m_serial v1.0</title>
+    <updated>2026-04-22T10:56:16+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n10_no_target_ann_loocv_error_retrieval_with_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.200, adjacent_accuracy=1.000, qwk=0.111</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_dl/1.0/glm5-awq@vllm/2026-04-22T10:52:07+00:00</id>
     <title>glm5-awq@vllm scored 0.520 judge_score on datascibench_dl v1.0</title>
     <updated>2026-04-22T10:52:07+00:00</updated>
@@ -348,12 +355,5 @@
     <updated>2026-04-22T09:14:11+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring_condensed" rel="alternate" type="text/html"/>
     <summary>accuracy=0.350, macro_f1=0.268, qwk=0.594</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring/1.1/qwen3-30b@vllm/2026-04-22T09:08:18+00:00</id>
-    <title>qwen3-30b@vllm scored 0.400 accuracy on essay_vocabulary_scoring v1.1</title>
-    <updated>2026-04-22T09:08:18+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.400, macro_f1=0.318, qwk=0.550</summary>
   </entry>
 </feed>
