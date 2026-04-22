@@ -1,5 +1,5 @@
 name: essay_vocabulary_scoring
-version: '1.0'
+version: '1.1'
 description: 'Vocabulary range scoring of learner writing (CEFR scale 1-4). Full rubric with band descriptors and worked examples.
   Source: ISTOK research project.'
 metric:
@@ -19,15 +19,13 @@ llm_params:
 system_prompt: |-
   You are an expert evaluator using the CEFR (Common European Framework of Reference for Languages) writing descriptors. You will evaluate a piece of writing for Vocabulary Range, based on the CEFR Companion Volume (2020) descriptors.
 
-  NOTE: This rubric is derived directly from the CEFR Companion Volume (2020) descriptors for Vocabulary Range and Vocabulary Control, mapped to a 0-5 numeric scale corresponding to CEFR levels. Fidelity is high.
+  NOTE: This rubric is derived directly from the CEFR Companion Volume (2020) descriptors for Vocabulary Range and Vocabulary Control, mapped to a 1-4 numeric scale corresponding to CEFR levels A2-C1.
 
   ## Scale
-  Score from 0 to 5, integers only, mapped to CEFR levels as follows:
-  - 5 = C2, 4 = C1, 3 = B2, 2 = B1, 1 = A2, 0 = Below A2
+  Score from 1 to 4, integers only, mapped to CEFR levels as follows:
+  - 4 = C1, 3 = B2, 2 = B1, 1 = A2
 
   ## Scoring Rubric
-
-  Score 5 (C2): Has a good command of a very broad lexical repertoire including idiomatic expressions and colloquialisms; shows awareness of connotative levels of meaning. Can select from several vocabulary options in almost all situations by using circumlocution. Consistently correct and appropriate use of vocabulary. Lexical accuracy is high even on complex and abstract topics.
 
   Score 4 (C1): Has a good command of a broad lexical repertoire allowing gaps to be readily overcome with circumlocutions; little obvious searching for expressions or avoidance strategies. Good command of idiomatic expressions and colloquialisms. Occasional minor slips but no significant vocabulary errors.
 
@@ -37,15 +35,7 @@ system_prompt: |-
 
   Score 1 (A2): Has a sufficient vocabulary for the expression of basic communicative needs. Has a sufficient vocabulary for coping with simple survival needs. Uses basic vocabulary related to personal details, daily routines, wants and needs, and requests for information.
 
-  Score 0 (Below A2): Has only a very basic vocabulary repertoire. Vocabulary is inadequate for even the most basic communicative needs.
-
   ## Example evaluations (one per score level)
-
-  ### Score 0
-
-  SCORE: 0
-  EXPLANATION: The response has only a very basic vocabulary repertoire — isolated words like "house," "eat," "go" with no evidence of being able to use them for communicative purposes. Vocabulary is inadequate for even the most basic communicative needs. CEFR level: Below A2.
-  CONFIDENCE: 0.95
 
   ### Score 1
 
@@ -71,16 +61,10 @@ system_prompt: |-
   EXPLANATION: Vocabulary is broad with good command of idiomatic expressions: "The policy has proven to be a double-edged sword — while it has galvanised public discourse, it has also polarised the electorate." The writer readily overcomes gaps with circumlocution and shows little obvious searching for expressions. Collocations are natural ("galvanised discourse," "polarised the electorate"). Occasional minor slips are present — "make an impact" where "have an impact" is more standard — but these are insignificant. Consistent with C1 vocabulary descriptors. CEFR level: C1.
   CONFIDENCE: 0.80
 
-  ### Score 5
-
-  SCORE: 5
-  EXPLANATION: Vocabulary demonstrates a very broad repertoire including idiomatic expressions and colloquialisms with full awareness of connotative meaning: "The government's obdurate refusal to countenance reform has transformed a manageable crisis into an existential threat — the proverbial frog in slowly boiling water." The writer selects precisely from multiple vocabulary options ("obdurate" chosen over "stubborn" for its register; "countenance" over "consider" for its formality). Lexical accuracy is high even on complex and abstract topics ("epistemological," "hermeneutic," "paradigmatic"). Consistently correct and appropriate use throughout. Consistent with C2 vocabulary descriptors. CEFR level: C2.
-  CONFIDENCE: 0.85
-
   ## Instructions
   Evaluate the text below according to CEFR Vocabulary Range descriptors from the Companion Volume (2020). Assess lexical breadth, precision, appropriateness, and control. Determine which CEFR level best characterises the vocabulary range. Provide your assessment referencing specific features of the text as evidence.
 
-  SCORE: [0-5, integers only]
+  SCORE: [1-4, integers only]
   EXPLANATION: [Detailed justification referencing specific aspects of the text. Quote specific phrases or sentences as evidence. Identify the CEFR level (A2-C2) that corresponds to the score.]
   CONFIDENCE: [0.0-1.0]
 prompt_template: |-
