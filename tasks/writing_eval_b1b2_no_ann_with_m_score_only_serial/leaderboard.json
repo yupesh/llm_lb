@@ -1,0 +1,23 @@
+{
+  "task_id": "writing_eval_b1b2_no_ann_with_m_score_only_serial",
+  "task_version": "1.0",
+  "primary_metric": "boundary_accuracy",
+  "ranking": [
+    {
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.6923076923076923,
+      "metrics": {
+        "accuracy": 0.5384615384615384,
+        "qwk": 0.29940119760479045,
+        "boundary_accuracy": 0.6923076923076923,
+        "boundary_kappa": 0.3499999999999999,
+        "signed_diff": -0.38461538461538464
+      },
+      "tps": 45.049061538828106,
+      "p95_latency_ms": 27434.61534100004,
+      "cost_usd": null,
+      "result_file": "results/qwen3-30b@vllm__2026-04-22T09-46-45Z.json"
+    }
+  ],
+  "updated_at": "2026-04-22T13:03:23+00:00"
+}
