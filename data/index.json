@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T12:56:39+00:00",
+  "generated_at": "2026-04-22T12:57:06+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -2245,6 +2245,21 @@
     {
       "task_id": "essay_vocabulary_scoring",
       "task_version": "1.1",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.41666666666666663,
+      "metrics": {
+        "accuracy": 0.35,
+        "macro_f1": 0.24523809523809526,
+        "qwk": 0.41666666666666663
+      },
+      "tps": 60.04008819673239,
+      "p95_latency_ms": 78538.98125800003,
+      "cost_usd": null,
+      "result_file": "tasks/essay_vocabulary_scoring/results/qwen3.5-27b@vllm__2026-04-22T12-45-28Z.json"
+    },
+    {
+      "task_id": "essay_vocabulary_scoring",
+      "task_version": "1.1",
       "model_id": "qwen3-235B-A22B@vllm",
       "score": 0.3571428571428572,
       "metrics": {
@@ -2631,6 +2646,20 @@
     {
       "task_id": "intent_classification",
       "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 1.0,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "tps": 41.03321346164652,
+      "p95_latency_ms": 10802.458650000006,
+      "cost_usd": null,
+      "result_file": "tasks/intent_classification/results/glm5-awq@vllm__2026-04-22T12-44-09Z.json"
+    },
+    {
+      "task_id": "intent_classification",
+      "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
       "score": 1.0,
       "metrics": {
@@ -2781,6 +2810,20 @@
       "p95_latency_ms": 3008.195810000004,
       "cost_usd": null,
       "result_file": "tasks/jailbreak_detection/results/qwen3-235B-A22B@vllm__2026-04-22T01-33-39Z.json"
+    },
+    {
+      "task_id": "jailbreak_detection",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 1.0,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "tps": 40.67070056944033,
+      "p95_latency_ms": 9962.741363999996,
+      "cost_usd": null,
+      "result_file": "tasks/jailbreak_detection/results/glm5-awq@vllm__2026-04-22T12-45-53Z.json"
     },
     {
       "task_id": "jailbreak_detection",
@@ -3019,6 +3062,20 @@
       "p95_latency_ms": 599.1358229999832,
       "cost_usd": null,
       "result_file": "tasks/jailbreak_detection_beavertails/results/llama-guard4@vllm__2026-04-21T09-57-57Z.json"
+    },
+    {
+      "task_id": "jailbreak_detection_beavertails",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.5,
+      "metrics": {
+        "accuracy": 0.5,
+        "macro_f1": 0.3333333333333333
+      },
+      "tps": 43.69269419552624,
+      "p95_latency_ms": 13573.441149999979,
+      "cost_usd": null,
+      "result_file": "tasks/jailbreak_detection_beavertails/results/glm5-awq@vllm__2026-04-22T12-48-31Z.json"
     },
     {
       "task_id": "kg_entity_name_refinement",
@@ -4790,6 +4847,21 @@
       "p95_latency_ms": 0.019620987586677074,
       "cost_usd": 0.0,
       "result_file": "tasks/topic_classification/results/dummy@local__2026-04-08T05-07-23Z.json"
+    },
+    {
+      "task_id": "writing_eval_n42_no_ann_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.5994550408719346,
+      "metrics": {
+        "accuracy": 0.47619047619047616,
+        "adjacent_accuracy": 0.9523809523809523,
+        "qwk": 0.5994550408719346
+      },
+      "tps": 33.419742549009776,
+      "p95_latency_ms": 63935.57881099991,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n42_no_ann_with_m_serial/results/qwen3-30b@vllm__2026-04-22T12-51-46Z.json"
     }
   ]
 }
