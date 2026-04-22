@@ -147,6 +147,20 @@
     <summary>accuracy=0.250, macro_f1=0.150, qwk=0.300</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_grammar_scoring/1.0/qwen3-235B-A22B@vllm/2026-04-22T01:13:12+00:00</id>
+    <title>qwen3-235B-A22B@vllm scored 0.200 accuracy on essay_grammar_scoring v1.0</title>
+    <updated>2026-04-22T01:13:12+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_grammar_scoring" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.200, macro_f1=0.142, qwk=0.182</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_coherence_scoring_condensed/1.0/qwen3-235B-A22B@vllm/2026-04-22T01:10:28+00:00</id>
+    <title>qwen3-235B-A22B@vllm scored 0.250 accuracy on essay_coherence_scoring_condensed v1.0</title>
+    <updated>2026-04-22T01:10:28+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_coherence_scoring_condensed" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.250, macro_f1=0.218, qwk=0.095</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/topic_classification/1.0/minimax-m2.7@vllm/2026-04-21T11:12:37+00:00</id>
     <title>minimax-m2.7@vllm scored 1.000 accuracy on topic_classification v1.0</title>
     <updated>2026-04-21T11:12:37+00:00</updated>
@@ -341,19 +355,5 @@
     <updated>2026-04-21T09:22:35+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_coherence_scoring_condensed" rel="alternate" type="text/html"/>
     <summary>accuracy=0.250, macro_f1=0.114, qwk=0.029</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_coherence_scoring/1.0/minimax-m2.7@vllm/2026-04-21T09:20:49+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.250 accuracy on essay_coherence_scoring v1.0</title>
-    <updated>2026-04-21T09:20:49+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_coherence_scoring" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.250, macro_f1=0.132, qwk=0.283</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/entity_relationship_extraction/1.0/minimax-m2.7@vllm/2026-04-21T09:18:52+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.933 judge_score on entity_relationship_extraction v1.0</title>
-    <updated>2026-04-21T09:18:52+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/entity_relationship_extraction" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.933</summary>
   </entry>
 </feed>
