@@ -43,6 +43,7 @@ def aggregate_task(task_dir: Path) -> Leaderboard:
     task = _load_task(task_dir)
     primary = task.metric.primary
     results_dir = task_dir / "results"
+    expected_samples = len(list((task_dir / "samples").glob("*.json")))
 
     best: dict[str, tuple[RunResult, str]] = {}
     if results_dir.exists():
@@ -52,6 +53,12 @@ def aggregate_task(task_dir: Path) -> Leaderboard:
             # attributable to the old version instead of mixing them into the
             # current leaderboard.
             if r.task_version != task.version:
+                continue
+            # Benchmark leaderboards must only rank full task runs. Partial
+            # results can happen via interrupted CI jobs or ad-hoc `--limit`
+            # experiments; keeping them would silently compare 1-sample probes
+            # against full evaluations.
+            if r.n_samples != expected_samples or len(r.samples) != expected_samples:
                 continue
             score = r.metrics.get(primary, 0.0)
             cur = best.get(r.model_id)

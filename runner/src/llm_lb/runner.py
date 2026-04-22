@@ -79,6 +79,26 @@ def _compute_cost_usd(model: ModelCard, in_tokens: int, out_tokens: int) -> floa
     )
 
 
+def _empty_completion_error(task: TaskSpec, completion: Completion) -> str | None:
+    """Detect backend responses that spent tokens but produced no visible text.
+
+    We have seen OpenAI-compatible endpoints return `completion_tokens > 0`
+    while `message.content` is empty, especially when a model burns through its
+    generation budget on hidden reasoning or malformed structured output. Those
+    samples should count as infra/format failures, not ordinary wrong answers.
+    """
+    if (completion.text or "").strip():
+        return None
+    if not (completion.output_tokens or 0):
+        return None
+    if task.llm_params.max_tokens is not None and completion.output_tokens >= task.llm_params.max_tokens:
+        return (
+            "empty completion text after consuming the full output token budget "
+            f"({completion.output_tokens}/{task.llm_params.max_tokens})"
+        )
+    return f"empty completion text despite {completion.output_tokens} output tokens"
+
+
 @dataclass
 class _RunContext:
     """Everything `_execute_sample` needs that doesn't change across samples."""
@@ -202,6 +222,25 @@ def _execute_sample(
             user = task.prompt_template.format(prompt=s.prompt, context=ctx_str)
             completion = ctx.adapter.chat(task.system_prompt, user, task.llm_params)
         dt_ms = (time.perf_counter() - t0) * 1000.0
+
+        empty_err = _empty_completion_error(task, completion)
+        if empty_err is not None:
+            return (
+                SamplePrediction(
+                    id=s.id,
+                    prediction="",
+                    expected=s.expected,
+                    correct=False,
+                    latency_ms=dt_ms,
+                    input_tokens=completion.input_tokens,
+                    output_tokens=completion.output_tokens,
+                    raw_output=completion.text,
+                    error=empty_err,
+                ),
+                0,
+                0,
+                0.0,
+            )
 
         pred = _extract_prediction(task, completion.text)
         correct = _is_correct(task, pred, s.expected)
