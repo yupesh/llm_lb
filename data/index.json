@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T13:03:23+00:00",
+  "generated_at": "2026-04-22T13:03:39+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -1865,10 +1865,10 @@
         "macro_f1": 0.23809523809523808,
         "qwk": 0.38
       },
-      "tps": 49.578488960405615,
-      "p95_latency_ms": 93870.50857,
+      "tps": 59.80703564472926,
+      "p95_latency_ms": 80937.74376099986,
       "cost_usd": null,
-      "result_file": "tasks/essay_coherence_scoring/results/qwen3.5-27b@vllm__2026-04-22T11-28-29Z.json"
+      "result_file": "tasks/essay_coherence_scoring/results/qwen3.5-27b@vllm__2026-04-22T09-25-20Z.json"
     },
     {
       "task_id": "essay_coherence_scoring",

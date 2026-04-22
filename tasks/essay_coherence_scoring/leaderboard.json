@@ -24,10 +24,10 @@
         "macro_f1": 0.23809523809523808,
         "qwk": 0.38
       },
-      "tps": 49.578488960405615,
-      "p95_latency_ms": 93870.50857,
+      "tps": 59.80703564472926,
+      "p95_latency_ms": 80937.74376099986,
       "cost_usd": null,
-      "result_file": "results/qwen3.5-27b@vllm__2026-04-22T11-28-29Z.json"
+      "result_file": "results/qwen3.5-27b@vllm__2026-04-22T09-25-20Z.json"
     },
     {
       "model_id": "qwen3.6-35b@vllm",
@@ -69,5 +69,5 @@
       "result_file": "results/qwen3-30b@vllm__2026-04-22T08-46-35Z.json"
     }
   ],
-  "updated_at": "2026-04-22T13:01:49+00:00"
+  "updated_at": "2026-04-22T13:03:39+00:00"
 }
