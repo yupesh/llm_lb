@@ -1,0 +1,154 @@
+{
+  "model_id": "qwen3.5-27b@vllm",
+  "model_revision": "2026-04-11",
+  "task_id": "writing_eval_n10_no_target_ann_loocv_fewshot_no_m_serial",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "b603bc66a0195308",
+  "llm_params": {
+    "temperature": 0.15,
+    "top_p": 0.95,
+    "max_tokens": 4096,
+    "seed": null
+  },
+  "metrics": {
+    "accuracy": 0.1,
+    "adjacent_accuracy": 0.4,
+    "qwk": -0.3255813953488371
+  },
+  "tps": 57.71393441398049,
+  "p95_latency_ms": 71198.835529,
+  "n_samples": 10,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "sample_07001",
+      "prediction": "B1",
+      "expected": "A2",
+      "correct": false,
+      "latency_ms": 69217.92094300002,
+      "input_tokens": 5776,
+      "output_tokens": 3965,
+      "raw_output": "\n\n{\n    \"cefr_level\": \"B1\",\n    \"grammar_score\": 0.7,\n    \"corrections\": [\n        \"i -> I\",\n        \"simular -> similar\",\n        \"Here is the tips -> Here are the tips\",\n        \"this apps -> these apps\",\n        \"spend a lot of time to TV -> spend a lot of time on TV\",\n        \"leave from useless groups -> leave useless groups\",\n        \"enought -> enough\",\n        \"I hope, my tips -> I hope my tips\",\n        \"write me at personal messages -> write me in personal messages\"\n    ],\n    \"feedback\": \"You have successfully addressed the task with a clear structure and logical organization, which demonstrates good communicative competence. Your message is easy to understand, and you effectively used imperatives to give advice. However, to solidify your B1 level and aim for B2, you need to improve accuracy with basic grammar rules, specifically subject-verb agreement ('Here is the tips'), plural demonstratives ('this apps'), and prepositions ('time to TV', 'at personal messages'). Additionally, try to expand your vocabulary beyond basic terms like 'good food' and 'special apps' to show greater lexical range.\"\n}",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07002",
+      "prediction": "",
+      "expected": "B1",
+      "correct": false,
+      "latency_ms": 70544.60930199997,
+      "input_tokens": 4286,
+      "output_tokens": 4096,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07003",
+      "prediction": "",
+      "expected": "B1",
+      "correct": false,
+      "latency_ms": 71072.45434599997,
+      "input_tokens": 3717,
+      "output_tokens": 4096,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07005",
+      "prediction": "B1",
+      "expected": "B1",
+      "correct": true,
+      "latency_ms": 50373.59898800003,
+      "input_tokens": 4353,
+      "output_tokens": 2876,
+      "raw_output": "\n\n{\n    \"cefr_level\": \"B1\",\n    \"grammar_score\": 0.65,\n    \"corrections\": [\n        \"Hellow -> Hello\",\n        \"me to -> me too\",\n        \"wery -> very\",\n        \"In first semester -> In the first semester\",\n        \"how can I fix it -> how I can fix it\",\n        \"give you them -> give them to you\",\n        \"enouth -> enough\",\n        \"cause -> because\",\n        \"bust -> boost\"\n    ],\n    \"feedback\": \"You have successfully addressed the task with a clear structure and appropriate tone for a Telegram chat. Your vocabulary shows B1 proficiency, particularly with terms like 'task-management system', 'prioritize', and 'productivity', which are more advanced than typical A2 language. However, there are frequent spelling errors ('Hellow', 'wery', 'enouth') and grammatical issues regarding articles ('In first semester'), word order in indirect questions ('how can I'), and pronoun placement ('give you them'). The word 'bust' likely should be 'boost' to make sense in context. With better proofreading and attention to basic grammar rules, this could easily reach a B2 level.\"\n}",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07006",
+      "prediction": "B1",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 70792.538068,
+      "input_tokens": 3175,
+      "output_tokens": 4096,
+      "raw_output": "\n\n{\n    \"cefr_level\": \"B1\",\n    \"grammar_score\": 0.65,\n    \"corrections\": [\n        \"It is easily. -> It is easy.\",\n        \"pass all exam -> pass all exams\",\n        \"for became diffiecult study easilier -> to make difficult study easier\",\n        \"rewrite solution -> rewrite solutions\",\n        \"what your friend write -> what your friend writes\",\n        \"it really work -> it really works\",\n        \"solve spend less time -> spend less time solving\",\n        \"aproximately -> approximately\",\n        \"you ed",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07018",
+      "prediction": "",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 71198.835529,
+      "input_tokens": 4437,
+      "output_tokens": 4096,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07019",
+      "prediction": "",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 70271.22496599998,
+      "input_tokens": 4364,
+      "output_tokens": 4096,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07070",
+      "prediction": "",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 71085.97847999999,
+      "input_tokens": 5019,
+      "output_tokens": 4096,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07087",
+      "prediction": "B1",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 54755.553245999974,
+      "input_tokens": 4418,
+      "output_tokens": 3145,
+      "raw_output": "\n\n{\n    \"cefr_level\": \"B1\",\n    \"grammar_score\": 0.5,\n    \"corrections\": [\n        \"has became -> has become\",\n        \"pollutions -> pollution\",\n        \"climate changes is -> climate change is\",\n        \"It cause -> It causes\",\n        \"People who cares -> People who care\",\n        \"overreacting -> are overreacting\",\n        \"more clear -> cleaner\",\n        \"Collecting all thoughts -> In conclusion\"\n    ],\n    \"feedback\": \"The essay demonstrates a clear 4-paragraph structure and attempts to address the prompt with relevant vocabulary (e.g., 'eco-activists', 'vital', 'overreact'). However, the writing is hindered by frequent grammatical errors, particularly in subject-verb agreement ('People who cares'), verb tenses ('has became'), and noun countability ('pollutions', 'climate changes'). The conclusion contains a sentence fragment that affects coherence. To reach a higher level, focus on accuracy in basic grammar rules and sentence structure.\"\n}",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07099",
+      "prediction": "",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 70508.19493899996,
+      "input_tokens": 4005,
+      "output_tokens": 4096,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-22T17:05:27+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": null,
+  "judge_model_revision": null,
+  "judge_prompt_hash": null
+}
