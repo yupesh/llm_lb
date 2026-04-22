@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T21:12:04+00:00",
+  "generated_at": "2026-04-22T21:13:10+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -5421,6 +5421,38 @@
       "result_file": "tasks/writing_eval_b1b2_with_ann_with_m_serial/results/qwen3-30b@vllm__2026-04-22T10-34-00Z.json"
     },
     {
+      "task_id": "writing_eval_b1b2_with_ann_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.38461538461538464,
+      "metrics": {
+        "accuracy": 0.34615384615384615,
+        "qwk": -0.05177993527508096,
+        "boundary_accuracy": 0.38461538461538464,
+        "boundary_kappa": 0.10071942446043171,
+        "signed_diff": -0.64
+      },
+      "tps": 44.82166821650666,
+      "p95_latency_ms": 181390.52122499992,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_b1b2_with_ann_with_m_serial/results/glm5-awq@vllm__2026-04-22T17-57-54Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_no_ann_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.4285714285714286,
+      "metrics": {
+        "accuracy": 0.6,
+        "adjacent_accuracy": 1.0,
+        "qwk": 0.4285714285714286
+      },
+      "tps": 45.14103185488085,
+      "p95_latency_ms": 82698.68767499998,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_no_ann_no_m_serial/results/glm5-awq@vllm__2026-04-22T18-08-34Z.json"
+    },
+    {
       "task_id": "writing_eval_n10_no_ann_no_m_serial",
       "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
@@ -5451,6 +5483,21 @@
       "result_file": "tasks/writing_eval_n10_no_ann_with_m_serial/results/qwen3-30b@vllm__2026-04-22T10-45-04Z.json"
     },
     {
+      "task_id": "writing_eval_n10_no_ann_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.23076923076923073,
+      "metrics": {
+        "accuracy": 0.3,
+        "adjacent_accuracy": 0.9,
+        "qwk": 0.23076923076923073
+      },
+      "tps": 44.65582962406732,
+      "p95_latency_ms": 90943.88612900002,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_no_ann_with_m_serial/results/glm5-awq@vllm__2026-04-22T18-19-44Z.json"
+    },
+    {
       "task_id": "writing_eval_n10_no_target_ann_loocv_error_retrieval_no_m_serial",
       "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
@@ -5464,6 +5511,36 @@
       "p95_latency_ms": 41408.717903000026,
       "cost_usd": null,
       "result_file": "tasks/writing_eval_n10_no_target_ann_loocv_error_retrieval_no_m_serial/results/qwen3-30b@vllm__2026-04-22T10-49-24Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_no_target_ann_loocv_error_retrieval_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.06666666666666654,
+      "metrics": {
+        "accuracy": 0.4,
+        "adjacent_accuracy": 0.9,
+        "qwk": 0.06666666666666654
+      },
+      "tps": 45.65034311532881,
+      "p95_latency_ms": 89582.11437700003,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_no_target_ann_loocv_error_retrieval_no_m_serial/results/glm5-awq@vllm__2026-04-22T18-32-46Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_no_target_ann_loocv_error_retrieval_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.23076923076923073,
+      "metrics": {
+        "accuracy": 0.3,
+        "adjacent_accuracy": 0.9,
+        "qwk": 0.23076923076923073
+      },
+      "tps": 45.06690175731073,
+      "p95_latency_ms": 90935.61453899997,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_no_target_ann_loocv_error_retrieval_with_m_serial/results/glm5-awq@vllm__2026-04-22T18-44-35Z.json"
     },
     {
       "task_id": "writing_eval_n10_no_target_ann_loocv_error_retrieval_with_m_serial",
@@ -5494,6 +5571,36 @@
       "p95_latency_ms": 32721.891306000005,
       "cost_usd": null,
       "result_file": "tasks/writing_eval_n10_no_target_ann_loocv_fewshot_no_m_serial/results/qwen3-30b@vllm__2026-04-22T11-00-51Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_no_target_ann_loocv_fewshot_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": -0.42105263157894735,
+      "metrics": {
+        "accuracy": 0.6,
+        "adjacent_accuracy": 0.8,
+        "qwk": -0.42105263157894735
+      },
+      "tps": 44.853159349485324,
+      "p95_latency_ms": 91858.82046900001,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_no_target_ann_loocv_fewshot_no_m_serial/results/glm5-awq@vllm__2026-04-22T18-56-43Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_no_target_ann_loocv_fewshot_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.052631578947368474,
+      "metrics": {
+        "accuracy": 0.3,
+        "adjacent_accuracy": 0.8,
+        "qwk": 0.052631578947368474
+      },
+      "tps": 45.113445106251,
+      "p95_latency_ms": 90845.29086599991,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_no_target_ann_loocv_fewshot_with_m_serial/results/glm5-awq@vllm__2026-04-22T19-11-02Z.json"
     },
     {
       "task_id": "writing_eval_n10_no_target_ann_loocv_fewshot_with_m_serial",
@@ -5556,6 +5663,21 @@
       "result_file": "tasks/writing_eval_n10_with_ann_loocv_fewshot_with_m_serial/results/glm5-awq@vllm__2026-04-22T19-36-50Z.json"
     },
     {
+      "task_id": "writing_eval_n10_with_ann_loocv_fewshot_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": -0.459016393442623,
+      "metrics": {
+        "accuracy": 0.0,
+        "adjacent_accuracy": 0.1,
+        "qwk": -0.459016393442623
+      },
+      "tps": 59.04254609467036,
+      "p95_latency_ms": 70447.14181300002,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_with_ann_loocv_fewshot_with_m_serial/results/qwen3.5-27b@vllm__2026-04-22T17-39-55Z.json"
+    },
+    {
       "task_id": "writing_eval_n10_with_ann_no_m_serial",
       "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
@@ -5584,6 +5706,21 @@
       "p95_latency_ms": 115665.03554299999,
       "cost_usd": null,
       "result_file": "tasks/writing_eval_n10_with_ann_no_m_serial/results/glm5-awq@vllm__2026-04-22T19-50-41Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_with_ann_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": -0.5185185185185186,
+      "metrics": {
+        "accuracy": 0.3,
+        "adjacent_accuracy": 0.6,
+        "qwk": -0.5185185185185186
+      },
+      "tps": 58.32528099135207,
+      "p95_latency_ms": 139958.20457099998,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_with_ann_no_m_serial/results/qwen3.5-27b@vllm__2026-04-22T17-58-37Z.json"
     },
     {
       "task_id": "writing_eval_n10_with_ann_with_m_serial",
@@ -5616,6 +5753,21 @@
       "result_file": "tasks/writing_eval_n10_with_ann_with_m_serial/results/glm5-awq@vllm__2026-04-22T20-05-11Z.json"
     },
     {
+      "task_id": "writing_eval_n10_with_ann_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.0,
+      "metrics": {
+        "accuracy": 0.3,
+        "adjacent_accuracy": 1.0,
+        "qwk": 0.0
+      },
+      "tps": 58.673761137681744,
+      "p95_latency_ms": 94815.55754500005,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_with_ann_with_m_serial/results/qwen3.5-27b@vllm__2026-04-22T18-07-22Z.json"
+    },
+    {
       "task_id": "writing_eval_n42_no_ann_no_m_serial",
       "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
@@ -5644,6 +5796,21 @@
       "p95_latency_ms": 110470.51871199983,
       "cost_usd": null,
       "result_file": "tasks/writing_eval_n42_no_ann_no_m_serial/results/glm5-awq@vllm__2026-04-22T21-02-28Z.json"
+    },
+    {
+      "task_id": "writing_eval_n42_no_ann_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.6493955094991364,
+      "metrics": {
+        "accuracy": 0.4523809523809524,
+        "adjacent_accuracy": 0.9523809523809523,
+        "qwk": 0.6493955094991364
+      },
+      "tps": 58.2530104663512,
+      "p95_latency_ms": 135116.66182499993,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n42_no_ann_no_m_serial/results/qwen3.5-27b@vllm__2026-04-22T19-14-10Z.json"
     },
     {
       "task_id": "writing_eval_n42_no_ann_with_m_serial",
