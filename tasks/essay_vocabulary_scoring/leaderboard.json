@@ -119,7 +119,20 @@
       "p95_latency_ms": 1113.5577239999889,
       "cost_usd": null,
       "result_file": "results/deepseek32exp@vllm__2026-04-21T06-52-37Z.json"
+    },
+    {
+      "model_id": "qwen3-235B-A22B@vllm",
+      "score": 0.04347826086956541,
+      "metrics": {
+        "accuracy": 0.35,
+        "macro_f1": 0.25,
+        "qwk": 0.04347826086956541
+      },
+      "tps": 73.84866498677391,
+      "p95_latency_ms": 8862.016127999994,
+      "cost_usd": null,
+      "result_file": "results/qwen3-235B-A22B@vllm__2026-04-22T01-25-07Z.json"
     }
   ],
-  "updated_at": "2026-04-21T07:50:47+00:00"
+  "updated_at": "2026-04-22T03:41:43+00:00"
 }
