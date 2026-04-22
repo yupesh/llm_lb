@@ -1,0 +1,21 @@
+{
+  "task_id": "essay_grammar_scoring_condensed",
+  "task_version": "1.1",
+  "primary_metric": "qwk",
+  "ranking": [
+    {
+      "model_id": "qwen3-235B-A22B@vllm",
+      "score": 0.03333333333333344,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.17613636363636365,
+        "qwk": 0.03333333333333344
+      },
+      "tps": 73.98344572126612,
+      "p95_latency_ms": 8037.957894999991,
+      "cost_usd": null,
+      "result_file": "results/qwen3-235B-A22B@vllm__2026-04-22T05-58-12Z.json"
+    }
+  ],
+  "updated_at": "2026-04-22T07:57:51+00:00"
+}
