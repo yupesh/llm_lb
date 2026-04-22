@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T03:45:52+00:00",
+  "generated_at": "2026-04-22T05:36:13+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -4256,6 +4256,19 @@
     {
       "task_id": "retail_agent_dialog",
       "task_version": "1.0",
+      "model_id": "qwen3-235B-A22B@vllm",
+      "score": 0.38181818181818183,
+      "metrics": {
+        "judge_score": 0.38181818181818183
+      },
+      "tps": 75.33902136119461,
+      "p95_latency_ms": 231568.20475599988,
+      "cost_usd": null,
+      "result_file": "tasks/retail_agent_dialog/results/qwen3-235B-A22B@vllm__2026-04-22T05-28-14Z.json"
+    },
+    {
+      "task_id": "retail_agent_dialog",
+      "task_version": "1.0",
       "model_id": "qwen3.5-397b@vllm",
       "score": 0.30303030303030304,
       "metrics": {
@@ -4265,19 +4278,6 @@
       "p95_latency_ms": 380661.14249600016,
       "cost_usd": null,
       "result_file": "tasks/retail_agent_dialog/results/qwen3.5-397b@vllm__2026-04-16T13-47-44Z.json"
-    },
-    {
-      "task_id": "retail_agent_dialog",
-      "task_version": "1.0",
-      "model_id": "qwen3-235B-A22B@vllm",
-      "score": 0.0,
-      "metrics": {
-        "judge_score": 0.0
-      },
-      "tps": 0.0,
-      "p95_latency_ms": 39149.638951000044,
-      "cost_usd": null,
-      "result_file": "tasks/retail_agent_dialog/results/qwen3-235B-A22B@vllm__2026-04-22T02-25-57Z.json"
     },
     {
       "task_id": "safety_classification",
