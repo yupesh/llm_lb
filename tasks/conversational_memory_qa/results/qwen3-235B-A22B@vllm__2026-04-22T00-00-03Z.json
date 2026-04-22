@@ -1,0 +1,212 @@
+{
+  "model_id": "qwen3-235B-A22B@vllm",
+  "model_revision": "2026-04-02",
+  "task_id": "conversational_memory_qa",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "7cf0fe997cd695f7",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "judge_score": 0.76
+  },
+  "tps": 60.71654962060415,
+  "p95_latency_ms": 42526.825127,
+  "n_samples": 15,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "sample_001",
+      "prediction": "July 2, 2023",
+      "expected": "2 July 2023",
+      "correct": false,
+      "latency_ms": 5308.250643999998,
+      "input_tokens": 22492,
+      "output_tokens": 198,
+      "raw_output": "\n\nJuly 2, 2023",
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_002",
+      "prediction": "contemporary",
+      "expected": "Contemporary",
+      "correct": true,
+      "latency_ms": 4503.342210000028,
+      "input_tokens": 18460,
+      "output_tokens": 212,
+      "raw_output": "\n\ncontemporary",
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_003",
+      "prediction": "5K charity run for veterans and their families",
+      "expected": "career fair at a local school",
+      "correct": false,
+      "latency_ms": 18297.583916999996,
+      "input_tokens": 34659,
+      "output_tokens": 1080,
+      "raw_output": "\n\n5K charity run for veterans and their families",
+      "judge_raw_score": 1.0,
+      "error": null
+    },
+    {
+      "id": "sample_004",
+      "prediction": "May 10, 2022",
+      "expected": "Whispering Falls waterfall",
+      "correct": false,
+      "latency_ms": 53648.030376999995,
+      "input_tokens": 30542,
+      "output_tokens": 3708,
+      "raw_output": "\n\nMay 10, 2022",
+      "judge_raw_score": 1.0,
+      "error": null
+    },
+    {
+      "id": "sample_005",
+      "prediction": "jerseys",
+      "expected": "sneakers, fantasy movie DVDs, jerseys",
+      "correct": false,
+      "latency_ms": 13032.68139100004,
+      "input_tokens": 34472,
+      "output_tokens": 680,
+      "raw_output": "\n\njerseys",
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "sample_006",
+      "prediction": "She doesn't want to hurt her dogs and believes punishment is never the proper way for pets.",
+      "expected": "To have pets learn how to behave in a positive way",
+      "correct": false,
+      "latency_ms": 10163.444979000018,
+      "input_tokens": 33713,
+      "output_tokens": 518,
+      "raw_output": "\n\nShe doesn't want to hurt her dogs and believes punishment is never the proper way for pets.",
+      "judge_raw_score": 3.0,
+      "error": null
+    },
+    {
+      "id": "sample_007",
+      "prediction": "Liverpool",
+      "expected": "Liverpool",
+      "correct": true,
+      "latency_ms": 5602.348622000022,
+      "input_tokens": 33686,
+      "output_tokens": 185,
+      "raw_output": "\n\nLiverpool",
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_008",
+      "prediction": "August 1, 2021",
+      "expected": "in 2021",
+      "correct": false,
+      "latency_ms": 6837.221774999989,
+      "input_tokens": 32375,
+      "output_tokens": 239,
+      "raw_output": "\n\nAugust 1, 2021",
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "sample_009",
+      "prediction": "gastritis",
+      "expected": "Gastritis",
+      "correct": true,
+      "latency_ms": 5603.531598000018,
+      "input_tokens": 25918,
+      "output_tokens": 233,
+      "raw_output": "\n\ngastritis",
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_010",
+      "prediction": "gives them a fresh vibe",
+      "expected": "gives them a fresh vibe",
+      "correct": true,
+      "latency_ms": 6082.740316000013,
+      "input_tokens": 31243,
+      "output_tokens": 217,
+      "raw_output": "\n\ngives them a fresh vibe",
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_011",
+      "prediction": "2022",
+      "expected": "2022",
+      "correct": true,
+      "latency_ms": 3742.807174999996,
+      "input_tokens": 22491,
+      "output_tokens": 232,
+      "raw_output": "\n\n2022",
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_012",
+      "prediction": "I could help you with making content or even managing your accounts",
+      "expected": "Helping with making content and managing his social media accounts.",
+      "correct": false,
+      "latency_ms": 4401.407214000017,
+      "input_tokens": 18462,
+      "output_tokens": 283,
+      "raw_output": "\n\nI could help you with making content or even managing your accounts",
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_013",
+      "prediction": "Maria started volunteering after witnessing a family struggling on the streets, so she reached out to the shelter to ask if they needed volunteers.",
+      "expected": "Witnessed a family struggling on the streets and reached out to the shelter",
+      "correct": false,
+      "latency_ms": 5699.354002999997,
+      "input_tokens": 34660,
+      "output_tokens": 343,
+      "raw_output": "\n\nMaria started volunteering after witnessing a family struggling on the streets, so she reached out to the shelter to ask if they needed volunteers.",
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_014",
+      "prediction": "The Lord of the Rings Trilogy, Little Women",
+      "expected": "\"Little Women\", \"Lord of the Rings\"",
+      "correct": false,
+      "latency_ms": 11761.900585999967,
+      "input_tokens": 30529,
+      "output_tokens": 808,
+      "raw_output": "\n\nThe Lord of the Rings Trilogy, Little Women",
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_015",
+      "prediction": "basketball shoes",
+      "expected": "signed basketball",
+      "correct": false,
+      "latency_ms": 42526.825127,
+      "input_tokens": 34477,
+      "output_tokens": 3038,
+      "raw_output": "\n\nbasketball shoes",
+      "judge_raw_score": 1.0,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-22T00:00:03+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": "gpt-4o-mini@openai",
+  "judge_model_revision": "2024-07-18",
+  "judge_prompt_hash": "18f44b8c39bda787"
+}
