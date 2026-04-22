@@ -168,7 +168,9 @@ def boundary_accuracy(preds: list[SamplePrediction], labels: list[str]) -> float
     if not preds or len(labels) != 2:
         return 0.0
     low, high = labels
-    label_to_idx = _label_indices(_CEFR_ORDER if all(l.upper() in _CEFR_ORDER for l in labels) else labels)
+    label_to_idx = _label_indices(
+        _CEFR_ORDER if all(label.upper() in _CEFR_ORDER for label in labels) else labels
+    )
     ok = 0
     for p in preds:
         clipped = _clip_to_boundary(p.prediction, low, high, label_to_idx)
@@ -184,7 +186,9 @@ def boundary_kappa(preds: list[SamplePrediction], labels: list[str]) -> float:
     if not preds or len(labels) != 2:
         return 0.0
     low, high = labels
-    label_to_idx = _label_indices(_CEFR_ORDER if all(l.upper() in _CEFR_ORDER for l in labels) else labels)
+    label_to_idx = _label_indices(
+        _CEFR_ORDER if all(label.upper() in _CEFR_ORDER for label in labels) else labels
+    )
     confusion = [[0, 0], [0, 0]]
     for p in preds:
         ti = 0 if p.expected.strip().lower() == low.strip().lower() else 1
