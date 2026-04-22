@@ -28,6 +28,20 @@
     <summary>judge_score=0.664</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_ambiguity/1.0/qwen3-235B-A22B@vllm/2026-04-22T03:25:45+00:00</id>
+    <title>qwen3-235B-A22B@vllm scored 0.500 judge_score on text2sql_ambiguity v1.0</title>
+    <updated>2026-04-22T03:25:45+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_ambiguity" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.500</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/temporal_information_extraction/1.0/qwen3-235B-A22B@vllm/2026-04-22T02:59:59+00:00</id>
+    <title>qwen3-235B-A22B@vllm scored 0.533 judge_score on temporal_information_extraction v1.0</title>
+    <updated>2026-04-22T02:59:59+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/temporal_information_extraction" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.533</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/topic_classification/1.0/minimax-m2.7@vllm/2026-04-21T11:12:37+00:00</id>
     <title>minimax-m2.7@vllm scored 1.000 accuracy on topic_classification v1.0</title>
     <updated>2026-04-21T11:12:37+00:00</updated>
@@ -341,19 +355,5 @@
     <updated>2026-04-21T07:35:38+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_bird" rel="alternate" type="text/html"/>
     <summary>judge_score=0.664</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_ambiguity/1.0/deepseek32exp@vllm/2026-04-21T07:34:16+00:00</id>
-    <title>deepseek32exp@vllm scored 0.500 judge_score on text2sql_ambiguity v1.0</title>
-    <updated>2026-04-21T07:34:16+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_ambiguity" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.500</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/temporal_information_extraction/1.0/deepseek32exp@vllm/2026-04-21T07:31:48+00:00</id>
-    <title>deepseek32exp@vllm scored 0.440 judge_score on temporal_information_extraction v1.0</title>
-    <updated>2026-04-21T07:31:48+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/temporal_information_extraction" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.440</summary>
   </entry>
 </feed>
