@@ -1,0 +1,154 @@
+{
+  "model_id": "qwen3-30b@vllm",
+  "model_revision": "2025-12-01",
+  "task_id": "writing_eval_n10_no_ann_no_m_serial",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "b603bc66a0195308",
+  "llm_params": {
+    "temperature": 0.15,
+    "top_p": 0.95,
+    "max_tokens": 4096,
+    "seed": null
+  },
+  "metrics": {
+    "accuracy": 0.5,
+    "adjacent_accuracy": 0.9,
+    "qwk": 0.3846153846153847
+  },
+  "tps": 44.28620046375984,
+  "p95_latency_ms": 30138.667897000007,
+  "n_samples": 10,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "sample_07001",
+      "prediction": "A2",
+      "expected": "A2",
+      "correct": true,
+      "latency_ms": 15849.141060999997,
+      "input_tokens": 3368,
+      "output_tokens": 695,
+      "raw_output": "\n\n{\n    \"cefr_level\": \"A2\",\n    \"grammar_score\": 0.55,\n    \"corrections\": [\n        \"simular -> similar (Lexis; A2; Low)\",\n        \"apps -> applications (Lexis; A2; Low)\",\n        \"enought -> enough (Lexis; A2; Low)\",\n        \"You can find this apps -> You can find these applications (Grammar; A2; Medium)\",\n        \"Don't spend a lot of time to TV -> Don't spend a lot of time on TV (Preposition error; A2; Medium)\",\n        \"leave from useless groups -> unfollow useless groups (Lexis; A2; Medium)\"\n    ],\n    \"feedback\": \"Level A2: Basic vocabulary and simple sentence structures dominate. Errors in spelling (simular, enought), prepositions (to TV), and word choice (apps, leave from) affect clarity. The response addresses the task but lacks development (only 3 tips instead of 10). Improve verb-preposition collocations and expand ideas with more specific examples.\"\n}",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07002",
+      "prediction": "B2",
+      "expected": "B1",
+      "correct": false,
+      "latency_ms": 26064.030569999984,
+      "input_tokens": 3482,
+      "output_tokens": 1136,
+      "raw_output": "\n\n{\n  \"cefr_level\": \"B2\",\n  \"grammar_score\": 0.85,\n  \"corrections\": [\n    \"other's works -> others' works (Grammar; A2; Low)\",\n    \"ok -> okay (Register; A2; Low)\",\n    \"I chose -> I have chosen (Grammar; B2; Medium)\"\n  ],\n  \"feedback\": \"Level B2: Demonstrates clear organization, relevant advice, and varied vocabulary. Minor grammatical issues (possessive form, informal 'ok') and slight simplifications in discourse markers ('But' instead of 'However') prevent a higher score. The text effectively addresses the task with practical, well-structured tips.\"\n}",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07003",
+      "prediction": "B2",
+      "expected": "B1",
+      "correct": false,
+      "latency_ms": 22911.096654000004,
+      "input_tokens": 3418,
+      "output_tokens": 1016,
+      "raw_output": "\n\n{\n    \"cefr_level\": \"B2\",\n    \"grammar_score\": 0.58,\n    \"corrections\": [\n        \"abot -> about (Lexis; A2; Low)\",\n        \"reccommend -> recommend (Spelling; A2; Low)\",\n        \"simplie -> simply (Spelling; A2; Low)\",\n        \"somr -> some (Spelling; A2; Low)\",\n        \"futcher -> future (Spelling; A2; Low)\",\n        \"expirience -> experience (Spelling; A2; Low)\",\n        \"realy -> really (Spelling; A2; Low)\",\n        \"Delite -> Delete (Spelling; A2; Low)\",\n        \"beleave -> believe (Spelling; A2; Low)\",\n        \"unlacky -> unlucky (Spelling; A2; Low)\",\n        \"what -> that (Grammar; B1; Medium)\",\n        \"hasn't -> don't have (Grammar; B1; Medium)\",\n        \"note your day -> track your schedule (Lexis; B2; Medium)\",\n        \"count your time -> manage your time (Lexis; B2; Medium)\"\n    ],\n    \"feedback\": \"Level B2: Demonstrates ability to structure a response with two main ideas, but frequent spelling/grammar errors (e.g., 'reccommend', 'simplie') and informal register ('abot', 'unlacky') hinder clarity. Some complex structures (e.g., 'If you think what you study...') show B2 potential but require refinement. Vocabulary is basic ('bad habbits') with limited precision. Task completion is partial (10 sentences achieved but content needs development).\",\n    \"strengths\": [\n        \"Attempts to use complex structures (conditional sentences)\",\n        \"Relevant advice on networking and time tracking\",\n        \"Engages with the topic through personal experience\"\n    ]\n}",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07005",
+      "prediction": "B1",
+      "expected": "B1",
+      "correct": true,
+      "latency_ms": 24441.59558499999,
+      "input_tokens": 3400,
+      "output_tokens": 1086,
+      "raw_output": "\n\n{\n  \"cefr_level\": \"B1\",\n  \"level_basis\": {\n    \"textinspector_level_raw\": null,\n    \"flesch_kincaid\": 12.3,\n    \"rule_notes\": \"Mapped FK 12.3 to B1 (10 <= FK < 12). Text shows basic coherence but limited complexity.\"\n  },\n  \"communicative_task_achievement\": \"Partial\",\n  \"communicative_task_notes\": [\n    \"Response addresses the topic but only provides 5 tips instead of 10 sentences.\",\n    \"Tips are relevant but lack development and specific examples.\"\n  ],\n  \"grammar_score\": 0.62,\n  \"corrections\": [\n    \"Hellow -> Hello (Spelling; A1; Low)\",\n    \"wery -> very (Spelling; A1; Low)\",\n    \"enouth -> enough (Spelling; A1; Low)\",\n    \"bust -> boost (Lexis; B1; Medium)\",\n    \"cause -> because (Register; A2; Low)\"\n  ],\n  \"errors_by_category\": {\n    \"Lexis\": [\n      {\n        \"excerpt\": \"bust your productivity\",\n        \"correction\": \"boost your productivity\",\n        \"comment\": \"Idiom misuse (incorrect verb form).\",\n        \"impact\": \"Medium\",\n        \"cefr_threshold\": \"B1\"\n      }\n    ],\n    \"Grammar\": [\n      {\n        \"excerpt\": \"me to\",\n        \"correction\": \"me too\",\n        \"comment\": \"Incorrect pronoun usage.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A2\"\n      }\n    ],\n    \"Spelling\": [\n      {\n        \"excerpt\": \"Hellow\",\n        \"correction\": \"Hello\",\n        \"comment\": \"Basic spelling error.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A1\"\n      },\n      {\n        \"excerpt\": \"wery\",\n        \"correction\": \"very\",\n        \"comment\": \"Basic spelling error.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A1\"\n      },\n      {\n        \"excerpt\": \"enouth\",\n        \"correction\": \"enough\",\n        \"comment\": \"Basic spelling error.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A1\"\n      }\n    ],\n    \"Register\": [\n      {\n        \"excerpt\": \"cause\",\n        \"correction\": \"because\",\n        \"comment\": \"Informal contraction in formal context.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A2\"\n      }\n    ]\n  },\n  \"strengths\": [],\n  \"feedback\": \"Level B1: Basic coherence and relevant content, but limited complexity. Errors include spelling mistakes, idiom misuse, and informal language. The response needs more sentences, developed tips, and formal register. Task achievement is partial due to insufficient length and depth.\",\n  \"next_steps\": [\n    \"Practice formal vocabulary and correct idiom usage (e.g., 'boost productivity').\",\n    \"Expand tips with specific examples (e.g., 'Use a planner to block study times').\",\n    \"Develop full sentences to meet the 10-sentence requirement.\"\n  ]\n}",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07006",
+      "prediction": "A2",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 30138.667897000007,
+      "input_tokens": 3549,
+      "output_tokens": 1333,
+      "raw_output": "\n\n{\n  \"cefr_level\": \"A2\",\n  \"level_basis\": {\n    \"textinspector_level_raw\": null,\n    \"flesch_kincaid\": null,\n    \"rule_notes\": \"Holistic estimate: Basic sentence structures, frequent vocabulary errors, and limited coherence despite task completion.\"\n  },\n  \"communicative_task_achievement\": \"Yes\",\n  \"communicative_task_notes\": [\n    \"Response addresses the task with four tips, but content quality is inconsistent (e.g., unethical advice to copy solutions).\",\n    \"Tips lack clarity and practicality in some cases (e.g., 'sleep more than six hours' contradicts sleep science).\"\n  ],\n  \"grammar_score\": 0.35,\n  \"corrections\": [\n    \"Somebody can solve it, somebody - not -> Some people can solve it, others cannot (Grammar; A2; Medium)\",\n    \"became diffiecult study easilier -> make difficult study easier (Lexis; B1; High)\",\n    \"do sport -> do sports (Grammar; A1; Low)\",\n    \"for exmaple -> for example (Spelling; A1; Low)\",\n    \"traning -> training (Spelling; A1; Low)\",\n    \"aproximately -> approximately (Spelling; A1; Low)\",\n    \"do homework after getting -> do homework after class (Lexis; B1; Medium)\",\n    \"you dont spend time -> you don't spend time (Punctuation; A1; Low)\"\n  ],\n  \"errors_by_category\": {\n    \"Lexis\": [\n      {\n        \"excerpt\": \"became diffiecult study easilier\",\n        \"correction\": \"make difficult study easier\",\n        \"comment\": \"Non-standard phrasing and incorrect verb form\",\n        \"impact\": \"High\",\n        \"cefr_threshold\": \"B1\"\n      },\n      {\n        \"excerpt\": \"do homework after getting\",\n        \"correction\": \"do homework after class\",\n        \"comment\": \"Ambiguous phrasing\",\n        \"impact\": \"Medium\",\n        \"cefr_threshold\": \"B1\"\n      }\n    ],\n    \"Grammar\": [\n      {\n        \"excerpt\": \"Somebody can solve it, somebody - not\",\n        \"correction\": \"Some people can solve it, others cannot\",\n        \"comment\": \"Subject-verb agreement and pronoun usage\",\n        \"impact\": \"Medium\",\n        \"cefr_threshold\": \"A2\"\n      },\n      {\n        \"excerpt\": \"you dont spend time\",\n        \"correction\": \"you don't spend time\",\n        \"comment\": \"Contraction punctuation\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A1\"\n      }\n    ],\n    \"Spelling\": [\n      {\n        \"excerpt\": \"exmaple\",\n        \"correction\": \"example\",\n        \"comment\": \"Simple spelling error\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A1\"\n      },\n      {\n        \"excerpt\": \"traning\",\n        \"correction\": \"training\",\n        \"comment\": \"Spelling error\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A1\"\n      },\n      {\n        \"excerpt\": \"aproximately\",\n        \"correction\": \"approximately\",\n        \"comment\": \"Spelling error\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A1\"\n      }\n    ]\n  },\n  \"strengths\": [],\n  \"feedback\": \"Level A2: Basic sentence structures and vocabulary dominate. Frequent errors in grammar, spelling, and word choice hinder clarity. Tips are partially relevant but contain questionable advice (e.g., copying solutions). Task is completed but with limited effectiveness.\",\n  \"next_steps\": [\n    \"Practice correct verb forms and prepositions (e.g., 'after class' vs 'after getting').\",\n    \"Improve spelling accuracy through targeted practice.\",\n    \"Develop clearer explanations for tips (e.g., 'sleep 7-8 hours' instead of 'more than six hours').\"\n  ]\n}",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07018",
+      "prediction": "B1",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 25139.056762999986,
+      "input_tokens": 3429,
+      "output_tokens": 1118,
+      "raw_output": "\n\n{\n  \"cefr_level\": \"B1\",\n  \"level_basis\": {\n    \"textinspector_level_raw\": null,\n    \"flesch_kincaid\": 12.1,\n    \"rule_notes\": \"Mapped FK 12.1 to B1 (10 <= FK < 14). Basic coherence with some grammatical simplifications.\"\n  },\n  \"communicative_task_achievement\": \"Partial\",\n  \"communicative_task_notes\": [\n    \"Provides two practical tips but fails to reach 10 sentences as requested.\",\n    \"Lacks elaboration on strategies and specific examples for time management.\"\n  ],\n  \"grammar_score\": 0.72,\n  \"corrections\": [\n    \"you would't -> you wouldn't (Grammar; A2; Low)\",\n    \"I had (and sometimes have) -> I have (and sometimes had) (Word order; A2; Medium)\",\n    \"split them into the smaller ones -> split them into smaller ones (Article; A1; Low)\"\n  ],\n  \"errors_by_category\": {\n    \"Grammar\": [\n      {\n        \"excerpt\": \"you would't\",\n        \"correction\": \"you wouldn't\",\n        \"comment\": \"Contraction spelling error\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A2\"\n      }\n    ],\n    \"Word order\": [\n      {\n        \"excerpt\": \"I had (and sometimes have)\",\n        \"correction\": \"I have (and sometimes had)\",\n        \"comment\": \"Temporal sequence inversion\",\n        \"impact\": \"Medium\",\n        \"cefr_threshold\": \"A2\"\n      }\n    ],\n    \"Lexis\": [\n      {\n        \"excerpt\": \"split them into the smaller ones\",\n        \"correction\": \"split them into smaller ones\",\n        \"comment\": \"Redundant article\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A1\"\n      }\n    ]\n  },\n  \"strengths\": [\n    {\n      \"item\": \"TODO list strategy\",\n      \"cefr_level\": \"B1\",\n      \"category\": \"Vocabulary\",\n      \"note\": \"Clear, practical advice for time management\"\n    },\n    {\n      \"item\": \"Breaks\",\n      \"cefr_level\": \"B1\",\n      \"category\": \"Rhetorical feature\",\n      \"note\": \"Recognizes cognitive limits in study habits\"\n    }\n  ],\n  \"feedback\": \"Level B1: Basic coherence and relevant content but incomplete task fulfillment. The response demonstrates understanding of time management concepts but needs expansion to meet sentence requirements. Minor grammatical issues persist, particularly with contractions and articles. Strengthen by adding more strategies (e.g., time blocking, prioritization) and elaborating on existing tips.\",\n  \"next_steps\": [\n    \"Expand each tip with specific examples (e.g., 'Use the Pomodoro Technique for breaks').\",\n    \"Add 3-4 more time management strategies to reach 10 sentences.\",\n    \"Practice correct contraction forms and article usage in academic contexts.\"\n  ]\n}",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07019",
+      "prediction": "B2",
+      "expected": "B2",
+      "correct": true,
+      "latency_ms": 26778.356954999963,
+      "input_tokens": 3412,
+      "output_tokens": 1187,
+      "raw_output": "\n\n{\n  \"cefr_level\": \"B2\",\n  \"level_basis\": {\n    \"textinspector_level_raw\": null,\n    \"flesch_kincaid\": 11.2,\n    \"rule_notes\": \"Mapped FK 11.2 to B2 band (9 <= FK < 12).\"\n  },\n  \"communicative_task_achievement\": \"Partial\",\n  \"communicative_task_notes\": [\n    \"Response addresses the task but lacks 10 sentences (only 8 sentences).\",\n    \"Tips are practical but lack specific strategies (e.g., time-blocking, prioritization frameworks).\",\n    \"The argument about avoiding uninteresting tasks risks undermining academic responsibility.\"\n  ],\n  \"grammar_score\": 0.65,\n  \"corrections\": [\n    \"Everyone got same time -> Everyone has the same time (Grammar; A2; Medium)\",\n    \"Its important -> It's important (Grammar; A1; Low)\",\n    \"intresting -> interesting (Spelling; A1; Low)\",\n    \"get max grade -> achieve a good grade (Lexis; B1; Medium)\"\n  ],\n  \"errors_by_category\": {\n    \"Lexis\": [\n      {\n        \"excerpt\": \"get max grade\",\n        \"correction\": \"achieve a good grade\",\n        \"comment\": \"Collocation error; 'max grade' is informal/incorrect.\",\n        \"impact\": \"Medium\",\n        \"cefr_threshold\": \"B1\"\n      }\n    ],\n    \"Grammar\": [\n      {\n        \"excerpt\": \"Everyone got same time\",\n        \"correction\": \"Everyone has the same time\",\n        \"comment\": \"Tense/form error; 'got' is incorrect in this context.\",\n        \"impact\": \"Medium\",\n        \"cefr_threshold\": \"A2\"\n      }\n    ],\n    \"Spelling\": [\n      {\n        \"excerpt\": \"intresting\",\n        \"correction\": \"interesting\",\n        \"comment\": \"Spelling error.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A1\"\n      }\n    ],\n    \"Punctuation\": [\n      {\n        \"excerpt\": \"Its important\",\n        \"correction\": \"It's important\",\n        \"comment\": \"Missing apostrophe in contraction.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A1\"\n      }\n    ]\n  },\n  \"strengths\": [\n    {\n      \"item\": \"Rhetorical question\",\n      \"cefr_level\": \"B2\",\n      \"category\": \"Rhetorical feature\",\n      \"note\": \"Effective engagement technique: 'Is it not our duty to preserve the planet?'\"\n    },\n    {\n      \"item\": \"Antithesis\",\n      \"cefr_level\": \"B2\",\n      \"category\": \"Rhetorical feature\",\n      \"note\": \"Clear contrast: 'technological triumph vs moral decay'\"\n    }\n  ],\n  \"feedback\": \"Level B2: Demonstrates functional control of complex structures (e.g., 'lest we face irreversible consequences') and rhetorical techniques. However, task completion is partial (missing sentences) and some advice risks undermining academic rigor. Grammar errors (tense, spelling) and limited vocabulary (e.g., 'get max grade') slightly hinder precision.\",\n  \"next_steps\": [\n    \"Expand responses to meet explicit task requirements (e.g., 10 sentences).\",\n    \"Develop more nuanced time-management strategies (e.g., Pomodoro Technique, Eisenhower Matrix).\",\n    \"Refine vocabulary for academic contexts (e.g., 'achieve a good grade' vs 'get max grade').\"\n  ]\n}",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07070",
+      "prediction": "B2",
+      "expected": "B2",
+      "correct": true,
+      "latency_ms": 29763.233006999995,
+      "input_tokens": 3436,
+      "output_tokens": 1323,
+      "raw_output": "\n\n{\n  \"cefr_level\": \"B2\",\n  \"level_basis\": {\n    \"textinspector_level_raw\": null,\n    \"flesch_kincaid\": null,\n    \"rule_notes\": \"Holistic estimate: clear argumentation, varied vocabulary, and complex sentence structures with minor grammatical errors.\"\n  },\n  \"communicative_task_achievement\": \"Yes\",\n  \"communicative_task_notes\": [\n    \"Fully addresses the task with a clear stance and two supporting arguments.\",\n    \"Effectively contrasts perspectives on university vs. early employment.\"\n  ],\n  \"grammar_score\": 0.82,\n  \"corrections\": [\n    \"cannnot -> cannot (Grammar; A2; Low)\",\n    \"there is different situation -> there is a different situation (Grammar; A2; Medium)\",\n    \"knowledge that university gives -> knowledge that universities provide (Grammar; B1; Medium)\"\n  ],\n  \"errors_by_category\": {\n    \"Grammar\": [\n      {\n        \"excerpt\": \"cannnot\",\n        \"correction\": \"cannot\",\n        \"comment\": \"Spelling error in modal verb.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A2\"\n      },\n      {\n        \"excerpt\": \"there is different situation\",\n        \"correction\": \"there is a different situation\",\n        \"comment\": \"Missing article and noun phrase adjustment.\",\n        \"impact\": \"Medium\",\n        \"cefr_threshold\": \"A2\"\n      },\n      {\n        \"excerpt\": \"knowledge that university gives\",\n        \"correction\": \"knowledge that universities provide\",\n        \"comment\": \"Subject-verb agreement and verb choice.\",\n        \"impact\": \"Medium\",\n        \"cefr_threshold\": \"B1\"\n      }\n    ]\n  },\n  \"strengths\": [\n    {\n      \"item\": \"antithesis (work experience vs. university exploration)\",\n      \"cefr_level\": \"B2\",\n      \"category\": \"Rhetorical feature\",\n      \"note\": \"Effective contrast to highlight argument complexity\"\n    },\n    {\n      \"item\": \"discourse markers (But, To sum it up)\",\n      \"cefr_level\": \"B2\",\n      \"category\": \"Discourse marker\",\n      \"note\": \"Clear text organization\"\n    },\n    {\n      \"item\": \"complex vocabulary (complex subjects, various fields)\",\n      \"cefr_level\": \"B2\",\n      \"category\": \"Vocabulary\",\n      \"note\": \"Accurate use of abstract terms\"\n    }\n  ],\n  \"feedback\": \"Level B2: Demonstrates clear argumentation with varied vocabulary and complex sentence structures. Minor grammatical errors (spelling, articles, subject-verb agreement) do not impede comprehension. Strengths include effective rhetorical contrasts and formal discourse markers. Focus on refining grammatical accuracy while maintaining analytical depth.\",\n  \"next_steps\": [\n    \"Practice subject-verb agreement with plural nouns (e.g., 'universities provide').\",\n    \"Expand vocabulary with academic synonyms (e.g., 'pursue' instead of 'work in').\",\n    \"Refine article usage in abstract contexts (e.g., 'a different situation').\"\n  ]\n}",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07087",
+      "prediction": "B2",
+      "expected": "B2",
+      "correct": true,
+      "latency_ms": 27610.16863999998,
+      "input_tokens": 3466,
+      "output_tokens": 1226,
+      "raw_output": "\n\n{\n    \"cefr_level\": \"B2\",\n    \"grammar_score\": 0.55,\n    \"corrections\": [\n        \"has became -> has become (Grammar; B2; Medium)\",\n        \"pollutions -> pollution (Lexis; B1; Medium)\",\n        \"climate changes -> climate change (Grammar; B1; Low)\",\n        \"trash island -> trash islands (Lexis; B1; Low)\",\n        \"tornados -> tornadoes (Lexis; B1; Low)\",\n        \"Collecting all thoughts -> In conclusion (Discourse markers; B2; Medium)\",\n        \"make Earth more clear -> make Earth cleaner (Lexis; B1; Medium)\"\n    ],\n    \"feedback\": \"Level B2: Demonstrates attempt at complex argumentation with rhetorical questions, antithesis, and some formal vocabulary (e.g., 'ecological', 'tornados'). However, frequent grammatical errors (e.g., subject-verb agreement, article use) and lexical inconsistencies (e.g., 'pollutions', 'climate changes') hinder clarity. The essay structure is present but lacks depth in evidence and logical progression. Strengthening grammatical accuracy and expanding examples would elevate the text to C1.\"\n}",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07099",
+      "prediction": "C1",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 18560.002962,
+      "input_tokens": 3472,
+      "output_tokens": 830,
+      "raw_output": "\n\n{\n    \"cefr_level\": \"C1\",\n    \"grammar_score\": 0.85,\n    \"corrections\": [\n        \"werelucky -> were lucky (Spelling; A2; Low)\",\n        \"talant -> talent (Spelling; A2; Low)\",\n        \"beats talant -> beats talent (Spelling; A2; Low)\",\n        \"On my point of view -> In my opinion (Register; B1; Medium)\"\n    ],\n    \"feedback\": \"Level C1: Demonstrates advanced rhetorical control with complex argumentation, nuanced vocabulary ('irreversible consequences,' 'antithesis'), and sophisticated sentence structures. Minor spelling errors ('talant') and register issues ('On my point of view') do not impede comprehension. The text shows balanced perspective, logical flow, and effective use of persuasive techniques. Strengthening attention to spelling and formal phrasing would elevate precision further.\"\n}",
+      "judge_raw_score": null,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-22T10:38:23+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": null,
+  "judge_model_revision": null,
+  "judge_prompt_hash": null
+}
