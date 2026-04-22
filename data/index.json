@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T03:42:33+00:00",
+  "generated_at": "2026-04-22T03:42:50+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -1427,6 +1427,19 @@
     {
       "task_id": "entity_relationship_extraction",
       "task_version": "1.0",
+      "model_id": "qwen3-235B-A22B@vllm",
+      "score": 0.8533333333333334,
+      "metrics": {
+        "judge_score": 0.8533333333333334
+      },
+      "tps": 77.44473132401264,
+      "p95_latency_ms": 127131.77631100001,
+      "cost_usd": null,
+      "result_file": "tasks/entity_relationship_extraction/results/qwen3-235B-A22B@vllm__2026-04-22T01-05-14Z.json"
+    },
+    {
+      "task_id": "entity_relationship_extraction",
+      "task_version": "1.0",
       "model_id": "gemma-4-31b-it@vllm",
       "score": 0.8533333333333334,
       "metrics": {
@@ -1597,6 +1610,21 @@
       "p95_latency_ms": 5999.107335000005,
       "cost_usd": null,
       "result_file": "tasks/essay_coherence_scoring/results/minimax-m2.7@vllm__2026-04-21T09-20-49Z.json"
+    },
+    {
+      "task_id": "essay_coherence_scoring",
+      "task_version": "1.0",
+      "model_id": "qwen3-235B-A22B@vllm",
+      "score": 0.0652173913043479,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.24374999999999997,
+        "qwk": 0.0652173913043479
+      },
+      "tps": 74.44740156099067,
+      "p95_latency_ms": 9834.387081000003,
+      "cost_usd": null,
+      "result_file": "tasks/essay_coherence_scoring/results/qwen3-235B-A22B@vllm__2026-04-22T01-07-59Z.json"
     },
     {
       "task_id": "essay_coherence_scoring_condensed",
