@@ -1,0 +1,20 @@
+name: writing_eval_n10_no_target_ann_loocv_fewshot_with_m_serial
+version: '1.0'
+description: Base writing evaluation, N10 holdout. No target annotation, LOOCV few-shot
+  calibration, methodology-enabled. Canonical prompt/messages taken from best run
+  `20260225_041015` in `base_writing_eval_logs_report_20260225.md`.
+metric:
+  primary: qwk
+  secondary:
+  - accuracy
+  - adjacent_accuracy
+labels:
+- A2
+- B1
+- B2
+llm_params:
+  temperature: 0.0
+  top_p: 0.95
+  max_tokens: 4096
+prompt_template: '{prompt}'
+answer_regex: \b(A1|A2|B1|B2|C1|C2)\b

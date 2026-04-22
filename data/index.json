@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T07:57:52+00:00",
+  "generated_at": "2026-04-22T09:05:18+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -327,6 +327,246 @@
         "p95_latency_ms"
       ],
       "n_samples": 10
+    },
+    {
+      "id": "writing_eval_b1b2_no_ann_no_m_serial",
+      "version": "1.0",
+      "primary_metric": "boundary_accuracy",
+      "secondary_metrics": [
+        "accuracy",
+        "qwk",
+        "boundary_kappa",
+        "signed_diff"
+      ],
+      "n_samples": 26
+    },
+    {
+      "id": "writing_eval_b1b2_no_ann_with_m_score_only_serial",
+      "version": "1.0",
+      "primary_metric": "boundary_accuracy",
+      "secondary_metrics": [
+        "accuracy",
+        "qwk",
+        "boundary_kappa",
+        "signed_diff"
+      ],
+      "n_samples": 26
+    },
+    {
+      "id": "writing_eval_b1b2_no_ann_with_m_serial",
+      "version": "1.0",
+      "primary_metric": "boundary_accuracy",
+      "secondary_metrics": [
+        "accuracy",
+        "qwk",
+        "boundary_kappa",
+        "signed_diff"
+      ],
+      "n_samples": 26
+    },
+    {
+      "id": "writing_eval_b1b2_with_ann_no_m_serial",
+      "version": "1.0",
+      "primary_metric": "boundary_accuracy",
+      "secondary_metrics": [
+        "accuracy",
+        "qwk",
+        "boundary_kappa",
+        "signed_diff"
+      ],
+      "n_samples": 26
+    },
+    {
+      "id": "writing_eval_b1b2_with_ann_with_m_serial",
+      "version": "1.0",
+      "primary_metric": "boundary_accuracy",
+      "secondary_metrics": [
+        "accuracy",
+        "qwk",
+        "boundary_kappa",
+        "signed_diff"
+      ],
+      "n_samples": 26
+    },
+    {
+      "id": "writing_eval_n10_no_ann_no_m_serial",
+      "version": "1.0",
+      "primary_metric": "qwk",
+      "secondary_metrics": [
+        "accuracy",
+        "adjacent_accuracy"
+      ],
+      "n_samples": 10
+    },
+    {
+      "id": "writing_eval_n10_no_ann_with_m_serial",
+      "version": "1.0",
+      "primary_metric": "qwk",
+      "secondary_metrics": [
+        "accuracy",
+        "adjacent_accuracy"
+      ],
+      "n_samples": 10
+    },
+    {
+      "id": "writing_eval_n10_no_target_ann_loocv_error_retrieval_no_m_serial",
+      "version": "1.0",
+      "primary_metric": "qwk",
+      "secondary_metrics": [
+        "accuracy",
+        "adjacent_accuracy"
+      ],
+      "n_samples": 10
+    },
+    {
+      "id": "writing_eval_n10_no_target_ann_loocv_error_retrieval_with_m_serial",
+      "version": "1.0",
+      "primary_metric": "qwk",
+      "secondary_metrics": [
+        "accuracy",
+        "adjacent_accuracy"
+      ],
+      "n_samples": 10
+    },
+    {
+      "id": "writing_eval_n10_no_target_ann_loocv_fewshot_no_m_serial",
+      "version": "1.0",
+      "primary_metric": "qwk",
+      "secondary_metrics": [
+        "accuracy",
+        "adjacent_accuracy"
+      ],
+      "n_samples": 10
+    },
+    {
+      "id": "writing_eval_n10_no_target_ann_loocv_fewshot_with_m_serial",
+      "version": "1.0",
+      "primary_metric": "qwk",
+      "secondary_metrics": [
+        "accuracy",
+        "adjacent_accuracy"
+      ],
+      "n_samples": 10
+    },
+    {
+      "id": "writing_eval_n10_with_ann_loocv_fewshot_no_m_serial",
+      "version": "1.0",
+      "primary_metric": "qwk",
+      "secondary_metrics": [
+        "accuracy",
+        "adjacent_accuracy"
+      ],
+      "n_samples": 10
+    },
+    {
+      "id": "writing_eval_n10_with_ann_loocv_fewshot_with_m_serial",
+      "version": "1.0",
+      "primary_metric": "qwk",
+      "secondary_metrics": [
+        "accuracy",
+        "adjacent_accuracy"
+      ],
+      "n_samples": 10
+    },
+    {
+      "id": "writing_eval_n10_with_ann_no_m_serial",
+      "version": "1.0",
+      "primary_metric": "qwk",
+      "secondary_metrics": [
+        "accuracy",
+        "adjacent_accuracy"
+      ],
+      "n_samples": 10
+    },
+    {
+      "id": "writing_eval_n10_with_ann_with_m_serial",
+      "version": "1.0",
+      "primary_metric": "qwk",
+      "secondary_metrics": [
+        "accuracy",
+        "adjacent_accuracy"
+      ],
+      "n_samples": 10
+    },
+    {
+      "id": "writing_eval_n42_no_ann_no_m_serial",
+      "version": "1.0",
+      "primary_metric": "qwk",
+      "secondary_metrics": [
+        "accuracy",
+        "adjacent_accuracy"
+      ],
+      "n_samples": 42
+    },
+    {
+      "id": "writing_eval_n42_no_ann_with_m_serial",
+      "version": "1.0",
+      "primary_metric": "qwk",
+      "secondary_metrics": [
+        "accuracy",
+        "adjacent_accuracy"
+      ],
+      "n_samples": 42
+    },
+    {
+      "id": "writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial",
+      "version": "1.0",
+      "primary_metric": "qwk",
+      "secondary_metrics": [
+        "accuracy",
+        "adjacent_accuracy"
+      ],
+      "n_samples": 42
+    },
+    {
+      "id": "writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial",
+      "version": "1.0",
+      "primary_metric": "qwk",
+      "secondary_metrics": [
+        "accuracy",
+        "adjacent_accuracy"
+      ],
+      "n_samples": 42
+    },
+    {
+      "id": "writing_eval_n42_with_ann_loocv_fewshot_no_m_serial",
+      "version": "1.0",
+      "primary_metric": "qwk",
+      "secondary_metrics": [
+        "accuracy",
+        "adjacent_accuracy"
+      ],
+      "n_samples": 42
+    },
+    {
+      "id": "writing_eval_n42_with_ann_loocv_fewshot_with_m_serial",
+      "version": "1.0",
+      "primary_metric": "qwk",
+      "secondary_metrics": [
+        "accuracy",
+        "adjacent_accuracy"
+      ],
+      "n_samples": 42
+    },
+    {
+      "id": "writing_eval_n42_with_ann_no_m_serial",
+      "version": "1.0",
+      "primary_metric": "qwk",
+      "secondary_metrics": [
+        "accuracy",
+        "adjacent_accuracy"
+      ],
+      "n_samples": 42
+    },
+    {
+      "id": "writing_eval_n42_with_ann_with_m_serial",
+      "version": "1.0",
+      "primary_metric": "qwk",
+      "secondary_metrics": [
+        "accuracy",
+        "adjacent_accuracy"
+      ],
+      "n_samples": 42
     }
   ],
   "models": [
