@@ -28,6 +28,18 @@
       "result_file": "results/deepseek32exp@vllm__2026-04-21T07-00-18Z.json"
     },
     {
+      "model_id": "qwen3-235B-A22B@vllm",
+      "score": 0.5,
+      "metrics": {
+        "accuracy": 0.5,
+        "macro_f1": 0.42233632862644416
+      },
+      "tps": 67.77492164087391,
+      "p95_latency_ms": 5586.662318999998,
+      "cost_usd": null,
+      "result_file": "results/qwen3-235B-A22B@vllm__2026-04-22T02-16-13Z.json"
+    },
+    {
       "model_id": "qwen3-30b@vllm",
       "score": 0.5,
       "metrics": {
@@ -112,5 +124,5 @@
       "result_file": "results/qwen3.5-27b@vllm__2026-04-19T04-50-51Z.json"
     }
   ],
-  "updated_at": "2026-04-21T07:49:56+00:00"
+  "updated_at": "2026-04-22T03:40:13+00:00"
 }

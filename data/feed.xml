@@ -56,6 +56,13 @@
     <summary>accuracy=0.700, macro_f1=0.688</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/oos_detection/1.0/qwen3-235B-A22B@vllm/2026-04-22T02:16:13+00:00</id>
+    <title>qwen3-235B-A22B@vllm scored 0.500 accuracy on oos_detection v1.0</title>
+    <updated>2026-04-22T02:16:13+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/oos_detection" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.500, macro_f1=0.422</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/topic_classification/1.0/minimax-m2.7@vllm/2026-04-21T11:12:37+00:00</id>
     <title>minimax-m2.7@vllm scored 1.000 accuracy on topic_classification v1.0</title>
     <updated>2026-04-21T11:12:37+00:00</updated>
@@ -348,12 +355,5 @@
     <updated>2026-04-21T07:36:18+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/topic_classification" rel="alternate" type="text/html"/>
     <summary>accuracy=1.000, macro_f1=1.000</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/gemma-4-31b-it@vllm/2026-04-21T07:35:59+00:00</id>
-    <title>gemma-4-31b-it@vllm scored 0.800 accuracy on safety_classification v1.0</title>
-    <updated>2026-04-21T07:35:59+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/safety_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.800, macro_f1=0.800</summary>
   </entry>
 </feed>
