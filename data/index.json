@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T03:40:35+00:00",
+  "generated_at": "2026-04-22T03:40:57+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -3125,6 +3125,20 @@
     {
       "task_id": "jailbreak_detection_beavertails",
       "task_version": "1.0",
+      "model_id": "qwen3-235B-A22B@vllm",
+      "score": 0.7,
+      "metrics": {
+        "accuracy": 0.7,
+        "macro_f1": 0.7
+      },
+      "tps": 75.84741096399108,
+      "p95_latency_ms": 27855.59938100002,
+      "cost_usd": null,
+      "result_file": "tasks/jailbreak_detection_beavertails/results/qwen3-235B-A22B@vllm__2026-04-22T01-38-06Z.json"
+    },
+    {
+      "task_id": "jailbreak_detection_beavertails",
+      "task_version": "1.0",
       "model_id": "qwen3.5-27b@vllm",
       "score": 0.7,
       "metrics": {
@@ -3273,6 +3287,19 @@
     {
       "task_id": "kg_entity_name_refinement",
       "task_version": "1.0",
+      "model_id": "qwen3-235B-A22B@vllm",
+      "score": 0.85,
+      "metrics": {
+        "judge_score": 0.85
+      },
+      "tps": 74.2486692737771,
+      "p95_latency_ms": 26872.93011899999,
+      "cost_usd": null,
+      "result_file": "tasks/kg_entity_name_refinement/results/qwen3-235B-A22B@vllm__2026-04-22T01-41-17Z.json"
+    },
+    {
+      "task_id": "kg_entity_name_refinement",
+      "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
       "score": 0.85,
       "metrics": {
@@ -3412,6 +3439,19 @@
       "p95_latency_ms": 8088.976995999999,
       "cost_usd": null,
       "result_file": "tasks/kg_entity_type_refinement/results/qwen3.6-35b@vllm__2026-04-20T06-25-26Z.json"
+    },
+    {
+      "task_id": "kg_entity_type_refinement",
+      "task_version": "1.0",
+      "model_id": "qwen3-235B-A22B@vllm",
+      "score": 0.6,
+      "metrics": {
+        "judge_score": 0.6
+      },
+      "tps": 76.36862811361517,
+      "p95_latency_ms": 23906.343848000004,
+      "cost_usd": null,
+      "result_file": "tasks/kg_entity_type_refinement/results/qwen3-235B-A22B@vllm__2026-04-22T01-45-49Z.json"
     },
     {
       "task_id": "kg_entity_type_refinement",
