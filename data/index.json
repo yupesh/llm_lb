@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T03:39:03+00:00",
+  "generated_at": "2026-04-22T03:39:25+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -4422,6 +4422,19 @@
     {
       "task_id": "text2sql_bird",
       "task_version": "1.0",
+      "model_id": "qwen3-235B-A22B@vllm",
+      "score": 0.6636363636363637,
+      "metrics": {
+        "judge_score": 0.6636363636363637
+      },
+      "tps": 77.04442068030505,
+      "p95_latency_ms": 54256.181333999964,
+      "cost_usd": null,
+      "result_file": "tasks/text2sql_bird/results/qwen3-235B-A22B@vllm__2026-04-22T03-33-34Z.json"
+    },
+    {
+      "task_id": "text2sql_bird",
+      "task_version": "1.0",
       "model_id": "deepseek32exp@vllm",
       "score": 0.6636363636363637,
       "metrics": {
@@ -4552,6 +4565,20 @@
       "p95_latency_ms": 1656.2136410000007,
       "cost_usd": null,
       "result_file": "tasks/text_classification/results/minimax-m2.7@vllm__2026-04-20T12-30-25Z.json"
+    },
+    {
+      "task_id": "text_classification",
+      "task_version": "1.0",
+      "model_id": "qwen3-235B-A22B@vllm",
+      "score": 1.0,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "tps": 53.83190749561148,
+      "p95_latency_ms": 2514.8416179999986,
+      "cost_usd": null,
+      "result_file": "tasks/text_classification/results/qwen3-235B-A22B@vllm__2026-04-22T03-34-05Z.json"
     },
     {
       "task_id": "text_classification",

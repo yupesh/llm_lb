@@ -14,6 +14,20 @@
     <summary>accuracy=1.000, macro_f1=1.000</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text_classification/1.0/qwen3-235B-A22B@vllm/2026-04-22T03:34:05+00:00</id>
+    <title>qwen3-235B-A22B@vllm scored 1.000 accuracy on text_classification v1.0</title>
+    <updated>2026-04-22T03:34:05+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=1.000, macro_f1=1.000</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_bird/1.0/qwen3-235B-A22B@vllm/2026-04-22T03:33:34+00:00</id>
+    <title>qwen3-235B-A22B@vllm scored 0.664 judge_score on text2sql_bird v1.0</title>
+    <updated>2026-04-22T03:33:34+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_bird" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.664</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/topic_classification/1.0/minimax-m2.7@vllm/2026-04-21T11:12:37+00:00</id>
     <title>minimax-m2.7@vllm scored 1.000 accuracy on topic_classification v1.0</title>
     <updated>2026-04-21T11:12:37+00:00</updated>
@@ -341,19 +355,5 @@
     <updated>2026-04-21T07:31:48+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/temporal_information_extraction" rel="alternate" type="text/html"/>
     <summary>judge_score=0.440</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/summarization/1.0/deepseek32exp@vllm/2026-04-21T07:30:04+00:00</id>
-    <title>deepseek32exp@vllm scored 0.800 judge_score on summarization v1.0</title>
-    <updated>2026-04-21T07:30:04+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/summarization" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.800</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/deepseek32exp@vllm/2026-04-21T07:29:31+00:00</id>
-    <title>deepseek32exp@vllm scored 0.800 accuracy on safety_classification v1.0</title>
-    <updated>2026-04-21T07:29:31+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/safety_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.800, macro_f1=0.798</summary>
   </entry>
 </feed>
