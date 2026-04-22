@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T09:23:18+00:00",
+  "generated_at": "2026-04-22T09:23:42+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -864,6 +864,21 @@
     {
       "task_id": "cefr_level_classification",
       "task_version": "1.1",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.3749999999999999,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.1888888888888889,
+        "qwk": 0.3749999999999999
+      },
+      "tps": 46.15914326191771,
+      "p95_latency_ms": 19140.152188,
+      "cost_usd": null,
+      "result_file": "tasks/cefr_level_classification/results/qwen3-30b@vllm__2026-04-22T08-42-09Z.json"
+    },
+    {
+      "task_id": "cefr_level_classification",
+      "task_version": "1.1",
       "model_id": "qwen3-235B-A22B@vllm",
       "score": 0.33999999999999997,
       "metrics": {
@@ -1707,6 +1722,21 @@
       "result_file": "tasks/essay_coherence_scoring/results/qwen3-235B-A22B@vllm__2026-04-22T05-50-46Z.json"
     },
     {
+      "task_id": "essay_coherence_scoring",
+      "task_version": "1.1",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.10416666666666663,
+      "metrics": {
+        "accuracy": 0.15,
+        "macro_f1": 0.10267857142857142,
+        "qwk": 0.10416666666666663
+      },
+      "tps": 45.710509154798686,
+      "p95_latency_ms": 20574.73036000002,
+      "cost_usd": null,
+      "result_file": "tasks/essay_coherence_scoring/results/qwen3-30b@vllm__2026-04-22T08-46-35Z.json"
+    },
+    {
       "task_id": "essay_coherence_scoring_condensed",
       "task_version": "1.1",
       "model_id": "qwen3-235B-A22B@vllm",
@@ -1765,6 +1795,21 @@
       "p95_latency_ms": 27510.062540999996,
       "cost_usd": null,
       "result_file": "tasks/essay_grammar_scoring/results/qwen3-30b@vllm__2026-04-22T08-57-00Z.json"
+    },
+    {
+      "task_id": "essay_grammar_scoring_condensed",
+      "task_version": "1.1",
+      "model_id": "qwen3.6-35b@vllm",
+      "score": 0.2941176470588236,
+      "metrics": {
+        "accuracy": 0.4,
+        "macro_f1": 0.3299916457811195,
+        "qwk": 0.2941176470588236
+      },
+      "tps": 177.54807719162946,
+      "p95_latency_ms": 11420.047265999983,
+      "cost_usd": null,
+      "result_file": "tasks/essay_grammar_scoring_condensed/results/qwen3.6-35b@vllm__2026-04-22T08-35-27Z.json"
     },
     {
       "task_id": "essay_grammar_scoring_condensed",
@@ -2114,6 +2159,21 @@
     {
       "task_id": "essay_vocabulary_scoring",
       "task_version": "1.1",
+      "model_id": "qwen3.6-35b@vllm",
+      "score": 0.5399999999999999,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.20833333333333331,
+        "qwk": 0.5399999999999999
+      },
+      "tps": 176.7820155550148,
+      "p95_latency_ms": 10981.056490000014,
+      "cost_usd": null,
+      "result_file": "tasks/essay_vocabulary_scoring/results/qwen3.6-35b@vllm__2026-04-22T08-38-15Z.json"
+    },
+    {
+      "task_id": "essay_vocabulary_scoring",
+      "task_version": "1.1",
       "model_id": "qwen3-235B-A22B@vllm",
       "score": 0.3571428571428572,
       "metrics": {
@@ -2125,6 +2185,21 @@
       "p95_latency_ms": 8737.243322999973,
       "cost_usd": null,
       "result_file": "tasks/essay_vocabulary_scoring/results/qwen3-235B-A22B@vllm__2026-04-22T06-00-45Z.json"
+    },
+    {
+      "task_id": "essay_vocabulary_scoring_condensed",
+      "task_version": "1.1",
+      "model_id": "qwen3.6-35b@vllm",
+      "score": 0.7380952380952381,
+      "metrics": {
+        "accuracy": 0.45,
+        "macro_f1": 0.3939393939393939,
+        "qwk": 0.7380952380952381
+      },
+      "tps": 177.53906632013906,
+      "p95_latency_ms": 9257.177978000002,
+      "cost_usd": null,
+      "result_file": "tasks/essay_vocabulary_scoring_condensed/results/qwen3.6-35b@vllm__2026-04-22T08-40-56Z.json"
     },
     {
       "task_id": "essay_vocabulary_scoring_condensed",

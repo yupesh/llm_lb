@@ -49,6 +49,41 @@
     <summary>accuracy=0.300, macro_f1=0.176, qwk=0.233</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_coherence_scoring/1.1/qwen3-30b@vllm/2026-04-22T08:46:35+00:00</id>
+    <title>qwen3-30b@vllm scored 0.150 accuracy on essay_coherence_scoring v1.1</title>
+    <updated>2026-04-22T08:46:35+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_coherence_scoring" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.150, macro_f1=0.103, qwk=0.104</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification/1.1/qwen3-30b@vllm/2026-04-22T08:42:09+00:00</id>
+    <title>qwen3-30b@vllm scored 0.300 accuracy on cefr_level_classification v1.1</title>
+    <updated>2026-04-22T08:42:09+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.300, macro_f1=0.189, qwk=0.375</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring_condensed/1.1/qwen3.6-35b@vllm/2026-04-22T08:40:56+00:00</id>
+    <title>qwen3.6-35b@vllm scored 0.450 accuracy on essay_vocabulary_scoring_condensed v1.1</title>
+    <updated>2026-04-22T08:40:56+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring_condensed" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.450, macro_f1=0.394, qwk=0.738</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring/1.1/qwen3.6-35b@vllm/2026-04-22T08:38:15+00:00</id>
+    <title>qwen3.6-35b@vllm scored 0.300 accuracy on essay_vocabulary_scoring v1.1</title>
+    <updated>2026-04-22T08:38:15+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.300, macro_f1=0.208, qwk=0.540</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_grammar_scoring_condensed/1.1/qwen3.6-35b@vllm/2026-04-22T08:35:27+00:00</id>
+    <title>qwen3.6-35b@vllm scored 0.400 accuracy on essay_grammar_scoring_condensed v1.1</title>
+    <updated>2026-04-22T08:35:27+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_grammar_scoring_condensed" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.400, macro_f1=0.330, qwk=0.294</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring_condensed/1.1/qwen3-235B-A22B@vllm/2026-04-22T06:02:55+00:00</id>
     <title>qwen3-235B-A22B@vllm scored 0.500 accuracy on essay_vocabulary_scoring_condensed v1.1</title>
     <updated>2026-04-22T06:02:55+00:00</updated>
@@ -320,40 +355,5 @@
     <updated>2026-04-21T10:44:49+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_ambiguity" rel="alternate" type="text/html"/>
     <summary>judge_score=0.458</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/temporal_information_extraction/1.0/minimax-m2.7@vllm/2026-04-21T10:34:33+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.507 judge_score on temporal_information_extraction v1.0</title>
-    <updated>2026-04-21T10:34:33+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/temporal_information_extraction" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.507</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/summarization/1.0/minimax-m2.7@vllm/2026-04-21T10:21:44+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.800 judge_score on summarization v1.0</title>
-    <updated>2026-04-21T10:21:44+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/summarization" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.800</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/minimax-m2.7@vllm/2026-04-21T10:21:14+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.850 accuracy on safety_classification v1.0</title>
-    <updated>2026-04-21T10:21:14+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/safety_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.850, macro_f1=0.850</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/retail_agent_dialog/1.0/minimax-m2.7@vllm/2026-04-21T10:20:21+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.503 judge_score on retail_agent_dialog v1.0</title>
-    <updated>2026-04-21T10:20:21+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/retail_agent_dialog" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.503</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection_beavertails/1.0/llama-guard4@vllm/2026-04-21T09:57:57+00:00</id>
-    <title>llama-guard4@vllm scored 0.600 accuracy on jailbreak_detection_beavertails v1.0</title>
-    <updated>2026-04-21T09:57:57+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection_beavertails" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.600, macro_f1=0.596</summary>
   </entry>
 </feed>
