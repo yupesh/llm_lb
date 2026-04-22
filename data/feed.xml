@@ -4,8 +4,15 @@
   <id>tag:yupesh.github.io,2026:llm_lb/feed</id>
   <link href="https://yupesh.github.io/llm_lb/" rel="alternate" type="text/html"/>
   <link href="https://yupesh.github.io/llm_lb/data/feed.xml" rel="self" type="application/atom+xml"/>
-  <updated>2026-04-22T03:34:38+00:00</updated>
+  <updated>2026-04-22T05:28:14+00:00</updated>
   <author><name>LLM Leaderboard</name></author>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/retail_agent_dialog/1.0/qwen3-235B-A22B@vllm/2026-04-22T05:28:14+00:00</id>
+    <title>qwen3-235B-A22B@vllm scored 0.382 judge_score on retail_agent_dialog v1.0</title>
+    <updated>2026-04-22T05:28:14+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/retail_agent_dialog" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.382</summary>
+  </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/topic_classification/1.0/qwen3-235B-A22B@vllm/2026-04-22T03:34:38+00:00</id>
     <title>qwen3-235B-A22B@vllm scored 1.000 accuracy on topic_classification v1.0</title>
