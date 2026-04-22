@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T13:04:07+00:00",
+  "generated_at": "2026-04-22T13:04:38+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -1925,10 +1925,10 @@
         "macro_f1": 0.3353705118411001,
         "qwk": 0.6470588235294118
       },
-      "tps": 59.13033545316783,
-      "p95_latency_ms": 88551.31823099998,
+      "tps": 59.83818913354132,
+      "p95_latency_ms": 88529.82928699999,
       "cost_usd": null,
-      "result_file": "tasks/essay_coherence_scoring_condensed/results/qwen3.5-27b@vllm__2026-04-22T11-41-03Z.json"
+      "result_file": "tasks/essay_coherence_scoring_condensed/results/qwen3.5-27b@vllm__2026-04-22T09-37-40Z.json"
     },
     {
       "task_id": "essay_coherence_scoring_condensed",
@@ -2054,16 +2054,16 @@
       "task_id": "essay_grammar_scoring",
       "task_version": "1.1",
       "model_id": "qwen3.5-27b@vllm",
-      "score": 0.23076923076923073,
+      "score": 0.2407407407407408,
       "metrics": {
-        "accuracy": 0.35,
-        "macro_f1": 0.2852564102564103,
-        "qwk": 0.23076923076923073
+        "accuracy": 0.3,
+        "macro_f1": 0.2426470588235294,
+        "qwk": 0.2407407407407408
       },
-      "tps": 49.3949768762831,
-      "p95_latency_ms": 113443.21756800002,
+      "tps": 48.36640306836479,
+      "p95_latency_ms": 100128.44462800013,
       "cost_usd": null,
-      "result_file": "tasks/essay_grammar_scoring/results/qwen3.5-27b@vllm__2026-04-22T12-07-30Z.json"
+      "result_file": "tasks/essay_grammar_scoring/results/qwen3.5-27b@vllm__2026-04-22T10-05-44Z.json"
     },
     {
       "task_id": "essay_grammar_scoring_condensed",
