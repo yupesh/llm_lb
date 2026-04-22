@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T09:24:01+00:00",
+  "generated_at": "2026-04-22T09:40:27+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -599,6 +599,17 @@
       "hf_uri": "google/gemma-4-31B-it",
       "hardware": {
         "gpu_count": 1,
+        "gpu_type": "H200",
+        "quantization": null
+      }
+    },
+    {
+      "id": "glm5-awq@vllm",
+      "display_name": "GLM-5-AWQ (vLLM)",
+      "provider": "openai_compat",
+      "hf_uri": "QuantTrio/GLM-5-AWQ",
+      "hardware": {
+        "gpu_count": 4,
         "gpu_type": "H200",
         "quantization": null
       }
