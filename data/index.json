@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T12:57:06+00:00",
+  "generated_at": "2026-04-22T12:57:24+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -2260,6 +2260,21 @@
     {
       "task_id": "essay_vocabulary_scoring",
       "task_version": "1.1",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.36,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.19999999999999998,
+        "qwk": 0.36
+      },
+      "tps": 45.02315579293704,
+      "p95_latency_ms": 22335.332002000003,
+      "cost_usd": null,
+      "result_file": "tasks/essay_vocabulary_scoring/results/glm5-awq@vllm__2026-04-22T12-33-54Z.json"
+    },
+    {
+      "task_id": "essay_vocabulary_scoring",
+      "task_version": "1.1",
       "model_id": "qwen3-235B-A22B@vllm",
       "score": 0.3571428571428572,
       "metrics": {
@@ -2286,6 +2301,21 @@
       "p95_latency_ms": 9257.177978000002,
       "cost_usd": null,
       "result_file": "tasks/essay_vocabulary_scoring_condensed/results/qwen3.6-35b@vllm__2026-04-22T08-40-56Z.json"
+    },
+    {
+      "task_id": "essay_vocabulary_scoring_condensed",
+      "task_version": "1.1",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.6578947368421053,
+      "metrics": {
+        "accuracy": 0.5,
+        "macro_f1": 0.42847222222222225,
+        "qwk": 0.6578947368421053
+      },
+      "tps": 44.1143872120779,
+      "p95_latency_ms": 19716.606716000002,
+      "cost_usd": null,
+      "result_file": "tasks/essay_vocabulary_scoring_condensed/results/glm5-awq@vllm__2026-04-22T12-38-42Z.json"
     },
     {
       "task_id": "essay_vocabulary_scoring_condensed",
@@ -2355,6 +2385,19 @@
       "p95_latency_ms": 4579.208614999999,
       "cost_usd": null,
       "result_file": "tasks/extractive_qa/results/qwen3.6-35b@vllm__2026-04-20T06-19-40Z.json"
+    },
+    {
+      "task_id": "extractive_qa",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.9,
+      "metrics": {
+        "exact_match": 0.9
+      },
+      "tps": 42.961395551036304,
+      "p95_latency_ms": 27403.562278999998,
+      "cost_usd": null,
+      "result_file": "tasks/extractive_qa/results/glm5-awq@vllm__2026-04-22T12-40-21Z.json"
     },
     {
       "task_id": "extractive_qa",

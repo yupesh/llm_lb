@@ -49,6 +49,27 @@
     <summary>accuracy=1.000, macro_f1=1.000</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/extractive_qa/1.0/glm5-awq@vllm/2026-04-22T12:40:21+00:00</id>
+    <title>glm5-awq@vllm scored 0.900 exact_match on extractive_qa v1.0</title>
+    <updated>2026-04-22T12:40:21+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/extractive_qa" rel="alternate" type="text/html"/>
+    <summary>exact_match=0.900</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring_condensed/1.1/glm5-awq@vllm/2026-04-22T12:38:42+00:00</id>
+    <title>glm5-awq@vllm scored 0.500 accuracy on essay_vocabulary_scoring_condensed v1.1</title>
+    <updated>2026-04-22T12:38:42+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring_condensed" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.500, macro_f1=0.428, qwk=0.658</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring/1.1/glm5-awq@vllm/2026-04-22T12:33:54+00:00</id>
+    <title>glm5-awq@vllm scored 0.300 accuracy on essay_vocabulary_scoring v1.1</title>
+    <updated>2026-04-22T12:33:54+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.300, macro_f1=0.200, qwk=0.360</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring_condensed/1.1/qwen3-30b@vllm/2026-04-22T09:14:11+00:00</id>
     <title>qwen3-30b@vllm scored 0.350 accuracy on essay_vocabulary_scoring_condensed v1.1</title>
     <updated>2026-04-22T09:14:11+00:00</updated>
@@ -334,26 +355,5 @@
     <updated>2026-04-22T01:28:29+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/extractive_qa" rel="alternate" type="text/html"/>
     <summary>exact_match=0.700</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_holistic_scoring_condensed/1.0/qwen3-235B-A22B@vllm/2026-04-22T01:22:29+00:00</id>
-    <title>qwen3-235B-A22B@vllm scored 0.167 accuracy on essay_holistic_scoring_condensed v1.0</title>
-    <updated>2026-04-22T01:22:29+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_holistic_scoring_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.167, macro_f1=0.107, qwk=0.476</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_holistic_scoring/1.0/qwen3-235B-A22B@vllm/2026-04-22T01:19:19+00:00</id>
-    <title>qwen3-235B-A22B@vllm scored 0.222 accuracy on essay_holistic_scoring v1.0</title>
-    <updated>2026-04-22T01:19:19+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_holistic_scoring" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.222, macro_f1=0.125, qwk=0.615</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/entity_relationship_extraction/1.0/qwen3-235B-A22B@vllm/2026-04-22T01:05:14+00:00</id>
-    <title>qwen3-235B-A22B@vllm scored 0.853 judge_score on entity_relationship_extraction v1.0</title>
-    <updated>2026-04-22T01:05:14+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/entity_relationship_extraction" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.853</summary>
   </entry>
 </feed>
