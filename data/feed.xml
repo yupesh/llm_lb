@@ -217,6 +217,13 @@
     <summary>judge_score=0.640</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification_condensed/1.0/qwen3-235B-A22B@vllm/2026-04-21T23:55:40+00:00</id>
+    <title>qwen3-235B-A22B@vllm scored 0.250 accuracy on cefr_level_classification_condensed v1.0</title>
+    <updated>2026-04-21T23:55:40+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification_condensed" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.250, macro_f1=0.192, qwk=0.455</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification/1.0/qwen3-235B-A22B@vllm/2026-04-21T23:53:21+00:00</id>
     <title>qwen3-235B-A22B@vllm scored 0.350 accuracy on cefr_level_classification v1.0</title>
     <updated>2026-04-21T23:53:21+00:00</updated>
@@ -348,12 +355,5 @@
     <updated>2026-04-21T09:41:45+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection_beavertails" rel="alternate" type="text/html"/>
     <summary>accuracy=0.750, macro_f1=0.733</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection/1.0/minimax-m2.7@vllm/2026-04-21T09:40:44+00:00</id>
-    <title>minimax-m2.7@vllm scored 1.000 accuracy on jailbreak_detection v1.0</title>
-    <updated>2026-04-21T09:40:44+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection" rel="alternate" type="text/html"/>
-    <summary>accuracy=1.000, macro_f1=1.000</summary>
   </entry>
 </feed>
