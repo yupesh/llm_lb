@@ -1,0 +1,92 @@
+{
+  "model_id": "glm5-awq@vllm",
+  "model_revision": "2026-04-22",
+  "task_id": "summarization",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "2c5723a9c9440b71",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "judge_score": 0.8
+  },
+  "tps": 44.81429432068764,
+  "p95_latency_ms": 17387.567461000002,
+  "n_samples": 5,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "sample_001",
+      "prediction": "Launched in December 2021, the James Webb Space Telescope is the largest optical telescope in space and uses infrared instruments to observe early galaxies through a collaboration between NASA, ESA, and the Canadian Space Agency.",
+      "expected": "JWST, launched in December 2021, is the largest space telescope and observes early-universe galaxies in infrared as a NASA-ESA-CSA project.",
+      "correct": false,
+      "latency_ms": 14126.434688000003,
+      "input_tokens": 87,
+      "output_tokens": 614,
+      "raw_output": "Launched in December 2021, the James Webb Space Telescope is the largest optical telescope in space and uses infrared instruments to observe early galaxies through a collaboration between NASA, ESA, and the Canadian Space Agency.",
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "sample_002",
+      "prediction": "Python's `asyncio` library uses an event-loop model to allow a single thread to handle thousands of network connections, establishing the standard for high-throughput network services in Python.",
+      "expected": "Python's asyncio enables high-throughput single-threaded networking by suspending coroutines on I/O via an event loop.",
+      "correct": false,
+      "latency_ms": 15245.595761000004,
+      "input_tokens": 89,
+      "output_tokens": 673,
+      "raw_output": "Python's `asyncio` library uses an event-loop model to allow a single thread to handle thousands of network connections, establishing the standard for high-throughput network services in Python.",
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "sample_003",
+      "prediction": "The 2008 financial crisis, triggered by the U.S. subprime mortgage market collapse due to lax lending and securitisation, resulted in Lehman Brothers' bankruptcy and a global recession.",
+      "expected": "The 2008 crisis began with the U.S. subprime mortgage collapse, causing Lehman Brothers' failure and a global recession.",
+      "correct": false,
+      "latency_ms": 13631.092765000005,
+      "input_tokens": 91,
+      "output_tokens": 623,
+      "raw_output": "The 2008 financial crisis, triggered by the U.S. subprime mortgage market collapse due to lax lending and securitisation, resulted in Lehman Brothers' bankruptcy and a global recession.",
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "sample_004",
+      "prediction": "Photosynthesis is the process by which green plants use sunlight to convert carbon dioxide and water into glucose and oxygen, serving as the foundation of nearly all food chains on Earth.",
+      "expected": "Photosynthesis lets green plants turn CO2 and water into glucose and oxygen using sunlight captured by chlorophyll, underpinning most food chains.",
+      "correct": false,
+      "latency_ms": 17387.567461000002,
+      "input_tokens": 82,
+      "output_tokens": 794,
+      "raw_output": "Photosynthesis is the process by which green plants use sunlight to convert carbon dioxide and water into glucose and oxygen, serving as the foundation of nearly all food chains on Earth.",
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "sample_005",
+      "prediction": "The 1648 Treaty of Westphalia ended the Thirty Years' War and established the modern state system based on territorial sovereignty.",
+      "expected": "The 1648 Treaty of Westphalia ended the Thirty Years' War and laid the foundation of the modern sovereignty-based state system.",
+      "correct": false,
+      "latency_ms": 13648.185765999984,
+      "input_tokens": 76,
+      "output_tokens": 614,
+      "raw_output": "The 1648 Treaty of Westphalia ended the Thirty Years' War and established the modern state system based on territorial sovereignty.",
+      "judge_raw_score": 4.0,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-22T14:28:20+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": "gpt-4o-mini@openai",
+  "judge_model_revision": "2024-07-18",
+  "judge_prompt_hash": "d679caeb261c214b"
+}

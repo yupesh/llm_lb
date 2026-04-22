@@ -4,6 +4,32 @@
   "primary_metric": "qwk",
   "ranking": [
     {
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.6470588235294118,
+      "metrics": {
+        "accuracy": 0.4,
+        "macro_f1": 0.3353705118411001,
+        "qwk": 0.6470588235294118
+      },
+      "tps": 59.83818913354132,
+      "p95_latency_ms": 88529.82928699999,
+      "cost_usd": null,
+      "result_file": "results/qwen3.5-27b@vllm__2026-04-22T09-37-40Z.json"
+    },
+    {
+      "model_id": "glm5-awq@vllm",
+      "score": 0.5750000000000001,
+      "metrics": {
+        "accuracy": 0.45,
+        "macro_f1": 0.38055555555555565,
+        "qwk": 0.5750000000000001
+      },
+      "tps": 44.86406315399115,
+      "p95_latency_ms": 16171.939633000022,
+      "cost_usd": null,
+      "result_file": "results/glm5-awq@vllm__2026-04-22T12-01-36Z.json"
+    },
+    {
       "model_id": "qwen3.6-35b@vllm",
       "score": 0.47058823529411786,
       "metrics": {
@@ -43,5 +69,5 @@
       "result_file": "results/qwen3-30b@vllm__2026-04-22T08-50-50Z.json"
     }
   ],
-  "updated_at": "2026-04-22T09:24:01+00:00"
+  "updated_at": "2026-04-22T13:04:37+00:00"
 }

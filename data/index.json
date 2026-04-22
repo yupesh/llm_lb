@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T09:40:27+00:00",
+  "generated_at": "2026-04-22T21:27:22+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -862,6 +862,19 @@
     {
       "task_id": "agent_tool_calling",
       "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.4818181818181818,
+      "metrics": {
+        "judge_score": 0.4818181818181818
+      },
+      "tps": 38.25003019596948,
+      "p95_latency_ms": 4616.409652999977,
+      "cost_usd": null,
+      "result_file": "tasks/agent_tool_calling/results/glm5-awq@vllm__2026-04-22T09-49-32Z.json"
+    },
+    {
+      "task_id": "agent_tool_calling",
+      "task_version": "1.0",
       "model_id": "llama-guard4@vllm",
       "score": 0.0,
       "metrics": {
@@ -871,6 +884,21 @@
       "p95_latency_ms": 987.0308839999993,
       "cost_usd": null,
       "result_file": "tasks/agent_tool_calling/results/llama-guard4@vllm__2026-04-21T08-37-51Z.json"
+    },
+    {
+      "task_id": "cefr_level_classification",
+      "task_version": "1.1",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.47916666666666663,
+      "metrics": {
+        "accuracy": 0.35,
+        "macro_f1": 0.25,
+        "qwk": 0.47916666666666663
+      },
+      "tps": 45.099920399067635,
+      "p95_latency_ms": 24381.769657999997,
+      "cost_usd": null,
+      "result_file": "tasks/cefr_level_classification/results/glm5-awq@vllm__2026-04-22T09-55-42Z.json"
     },
     {
       "task_id": "cefr_level_classification",
@@ -995,6 +1023,21 @@
     {
       "task_id": "cefr_level_classification_condensed",
       "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.5,
+      "metrics": {
+        "accuracy": 0.45,
+        "macro_f1": 0.3351648351648352,
+        "qwk": 0.5
+      },
+      "tps": 45.52218311326623,
+      "p95_latency_ms": 52866.368228999985,
+      "cost_usd": null,
+      "result_file": "tasks/cefr_level_classification_condensed/results/glm5-awq@vllm__2026-04-22T10-04-26Z.json"
+    },
+    {
+      "task_id": "cefr_level_classification_condensed",
+      "task_version": "1.0",
       "model_id": "glm5.1@llama",
       "score": 0.5,
       "metrics": {
@@ -1107,6 +1150,19 @@
       "p95_latency_ms": 8558.996949000004,
       "cost_usd": null,
       "result_file": "tasks/conversational_memory_qa/results/qwen3.6-35b@vllm__2026-04-20T05-24-49Z.json"
+    },
+    {
+      "task_id": "conversational_memory_qa",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.8666666666666667,
+      "metrics": {
+        "judge_score": 0.8666666666666667
+      },
+      "tps": 36.909238723809025,
+      "p95_latency_ms": 37847.83625300002,
+      "cost_usd": null,
+      "result_file": "tasks/conversational_memory_qa/results/glm5-awq@vllm__2026-04-22T10-13-49Z.json"
     },
     {
       "task_id": "conversational_memory_qa",
@@ -1280,6 +1336,19 @@
     {
       "task_id": "datascibench_csv_excel",
       "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.64,
+      "metrics": {
+        "judge_score": 0.64
+      },
+      "tps": 46.195838006671124,
+      "p95_latency_ms": 207832.01373900002,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_csv_excel/results/glm5-awq@vllm__2026-04-22T10-25-50Z.json"
+    },
+    {
+      "task_id": "datascibench_csv_excel",
+      "task_version": "1.0",
       "model_id": "qwen3.6-35b@vllm",
       "score": 0.62,
       "metrics": {
@@ -1341,6 +1410,19 @@
       "p95_latency_ms": 169435.79726400002,
       "cost_usd": null,
       "result_file": "tasks/datascibench_csv_excel/results/qwen3.5-27b@vllm__2026-04-19T23-35-38Z.json"
+    },
+    {
+      "task_id": "datascibench_dl",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.52,
+      "metrics": {
+        "judge_score": 0.52
+      },
+      "tps": 46.36185394725946,
+      "p95_latency_ms": 249728.31770900005,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_dl/results/glm5-awq@vllm__2026-04-22T10-52-07Z.json"
     },
     {
       "task_id": "datascibench_dl",
@@ -1527,6 +1609,19 @@
     {
       "task_id": "datascibench_human",
       "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.58,
+      "metrics": {
+        "judge_score": 0.58
+      },
+      "tps": 43.83412983823762,
+      "p95_latency_ms": 220890.67075499997,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_human/results/glm5-awq@vllm__2026-04-22T11-12-45Z.json"
+    },
+    {
+      "task_id": "datascibench_human",
+      "task_version": "1.0",
       "model_id": "qwen3-235B-A22B@vllm",
       "score": 0.56,
       "metrics": {
@@ -1657,6 +1752,19 @@
     {
       "task_id": "entity_relationship_extraction",
       "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.92,
+      "metrics": {
+        "judge_score": 0.92
+      },
+      "tps": 38.894807100154864,
+      "p95_latency_ms": 205392.41797900014,
+      "cost_usd": null,
+      "result_file": "tasks/entity_relationship_extraction/results/glm5-awq@vllm__2026-04-22T11-50-42Z.json"
+    },
+    {
+      "task_id": "entity_relationship_extraction",
+      "task_version": "1.0",
       "model_id": "qwen3.5-27b@vllm",
       "score": 0.92,
       "metrics": {
@@ -1735,6 +1843,36 @@
     {
       "task_id": "essay_coherence_scoring",
       "task_version": "1.1",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.39583333333333326,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.21428571428571427,
+        "qwk": 0.39583333333333326
+      },
+      "tps": 45.52966812144584,
+      "p95_latency_ms": 36302.597311,
+      "cost_usd": null,
+      "result_file": "tasks/essay_coherence_scoring/results/glm5-awq@vllm__2026-04-22T11-57-11Z.json"
+    },
+    {
+      "task_id": "essay_coherence_scoring",
+      "task_version": "1.1",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.38,
+      "metrics": {
+        "accuracy": 0.35,
+        "macro_f1": 0.23809523809523808,
+        "qwk": 0.38
+      },
+      "tps": 59.80703564472926,
+      "p95_latency_ms": 80937.74376099986,
+      "cost_usd": null,
+      "result_file": "tasks/essay_coherence_scoring/results/qwen3.5-27b@vllm__2026-04-22T09-25-20Z.json"
+    },
+    {
+      "task_id": "essay_coherence_scoring",
+      "task_version": "1.1",
       "model_id": "qwen3.6-35b@vllm",
       "score": 0.25,
       "metrics": {
@@ -1776,6 +1914,36 @@
       "p95_latency_ms": 20574.73036000002,
       "cost_usd": null,
       "result_file": "tasks/essay_coherence_scoring/results/qwen3-30b@vllm__2026-04-22T08-46-35Z.json"
+    },
+    {
+      "task_id": "essay_coherence_scoring_condensed",
+      "task_version": "1.1",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.6470588235294118,
+      "metrics": {
+        "accuracy": 0.4,
+        "macro_f1": 0.3353705118411001,
+        "qwk": 0.6470588235294118
+      },
+      "tps": 59.83818913354132,
+      "p95_latency_ms": 88529.82928699999,
+      "cost_usd": null,
+      "result_file": "tasks/essay_coherence_scoring_condensed/results/qwen3.5-27b@vllm__2026-04-22T09-37-40Z.json"
+    },
+    {
+      "task_id": "essay_coherence_scoring_condensed",
+      "task_version": "1.1",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.5750000000000001,
+      "metrics": {
+        "accuracy": 0.45,
+        "macro_f1": 0.38055555555555565,
+        "qwk": 0.5750000000000001
+      },
+      "tps": 44.86406315399115,
+      "p95_latency_ms": 16171.939633000022,
+      "cost_usd": null,
+      "result_file": "tasks/essay_coherence_scoring_condensed/results/glm5-awq@vllm__2026-04-22T12-01-36Z.json"
     },
     {
       "task_id": "essay_coherence_scoring_condensed",
@@ -1825,6 +1993,21 @@
     {
       "task_id": "essay_grammar_scoring",
       "task_version": "1.1",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.35185185185185186,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.23014705882352943,
+        "qwk": 0.35185185185185186
+      },
+      "tps": 45.3753848237405,
+      "p95_latency_ms": 44101.082474999996,
+      "cost_usd": null,
+      "result_file": "tasks/essay_grammar_scoring/results/glm5-awq@vllm__2026-04-22T12-08-48Z.json"
+    },
+    {
+      "task_id": "essay_grammar_scoring",
+      "task_version": "1.1",
       "model_id": "qwen3.6-35b@vllm",
       "score": 0.34615384615384615,
       "metrics": {
@@ -1866,6 +2049,51 @@
       "p95_latency_ms": 27510.062540999996,
       "cost_usd": null,
       "result_file": "tasks/essay_grammar_scoring/results/qwen3-30b@vllm__2026-04-22T08-57-00Z.json"
+    },
+    {
+      "task_id": "essay_grammar_scoring",
+      "task_version": "1.1",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.2407407407407408,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.2426470588235294,
+        "qwk": 0.2407407407407408
+      },
+      "tps": 48.36640306836479,
+      "p95_latency_ms": 100128.44462800013,
+      "cost_usd": null,
+      "result_file": "tasks/essay_grammar_scoring/results/qwen3.5-27b@vllm__2026-04-22T10-05-44Z.json"
+    },
+    {
+      "task_id": "essay_grammar_scoring_condensed",
+      "task_version": "1.1",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.3125,
+      "metrics": {
+        "accuracy": 0.35,
+        "macro_f1": 0.2648809523809524,
+        "qwk": 0.3125
+      },
+      "tps": 59.75019958054528,
+      "p95_latency_ms": 105304.71231000002,
+      "cost_usd": null,
+      "result_file": "tasks/essay_grammar_scoring_condensed/results/qwen3.5-27b@vllm__2026-04-22T10-23-33Z.json"
+    },
+    {
+      "task_id": "essay_grammar_scoring_condensed",
+      "task_version": "1.1",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.3125,
+      "metrics": {
+        "accuracy": 0.35,
+        "macro_f1": 0.2648809523809524,
+        "qwk": 0.3125
+      },
+      "tps": 45.729028820471875,
+      "p95_latency_ms": 69343.02623500003,
+      "cost_usd": null,
+      "result_file": "tasks/essay_grammar_scoring_condensed/results/glm5-awq@vllm__2026-04-22T12-19-43Z.json"
     },
     {
       "task_id": "essay_grammar_scoring_condensed",
@@ -1941,6 +2169,21 @@
       "p95_latency_ms": 5388.648958000004,
       "cost_usd": null,
       "result_file": "tasks/essay_holistic_scoring/results/minimax-m2.7@vllm__2026-04-20T12-17-44Z.json"
+    },
+    {
+      "task_id": "essay_holistic_scoring",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.6712328767123288,
+      "metrics": {
+        "accuracy": 0.16666666666666666,
+        "macro_f1": 0.1037037037037037,
+        "qwk": 0.6712328767123288
+      },
+      "tps": 44.94447102525038,
+      "p95_latency_ms": 17716.693426000005,
+      "cost_usd": null,
+      "result_file": "tasks/essay_holistic_scoring/results/glm5-awq@vllm__2026-04-22T12-24-03Z.json"
     },
     {
       "task_id": "essay_holistic_scoring",
@@ -2110,6 +2353,21 @@
     {
       "task_id": "essay_holistic_scoring_condensed",
       "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.5522388059701493,
+      "metrics": {
+        "accuracy": 0.16666666666666666,
+        "macro_f1": 0.09722222222222221,
+        "qwk": 0.5522388059701493
+      },
+      "tps": 44.22611378792777,
+      "p95_latency_ms": 17617.945476000015,
+      "cost_usd": null,
+      "result_file": "tasks/essay_holistic_scoring_condensed/results/glm5-awq@vllm__2026-04-22T12-28-21Z.json"
+    },
+    {
+      "task_id": "essay_holistic_scoring_condensed",
+      "task_version": "1.0",
       "model_id": "qwen3.5-27b@vllm",
       "score": 0.5245901639344264,
       "metrics": {
@@ -2245,6 +2503,36 @@
     {
       "task_id": "essay_vocabulary_scoring",
       "task_version": "1.1",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.41666666666666663,
+      "metrics": {
+        "accuracy": 0.35,
+        "macro_f1": 0.24523809523809526,
+        "qwk": 0.41666666666666663
+      },
+      "tps": 59.74251281163593,
+      "p95_latency_ms": 79226.24650900002,
+      "cost_usd": null,
+      "result_file": "tasks/essay_vocabulary_scoring/results/qwen3.5-27b@vllm__2026-04-22T10-43-51Z.json"
+    },
+    {
+      "task_id": "essay_vocabulary_scoring",
+      "task_version": "1.1",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.36,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.19999999999999998,
+        "qwk": 0.36
+      },
+      "tps": 45.02315579293704,
+      "p95_latency_ms": 22335.332002000003,
+      "cost_usd": null,
+      "result_file": "tasks/essay_vocabulary_scoring/results/glm5-awq@vllm__2026-04-22T12-33-54Z.json"
+    },
+    {
+      "task_id": "essay_vocabulary_scoring",
+      "task_version": "1.1",
       "model_id": "qwen3-235B-A22B@vllm",
       "score": 0.3571428571428572,
       "metrics": {
@@ -2271,6 +2559,36 @@
       "p95_latency_ms": 9257.177978000002,
       "cost_usd": null,
       "result_file": "tasks/essay_vocabulary_scoring_condensed/results/qwen3.6-35b@vllm__2026-04-22T08-40-56Z.json"
+    },
+    {
+      "task_id": "essay_vocabulary_scoring_condensed",
+      "task_version": "1.1",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.6590909090909091,
+      "metrics": {
+        "accuracy": 0.4,
+        "macro_f1": 0.31547619047619047,
+        "qwk": 0.6590909090909091
+      },
+      "tps": 59.38674885884547,
+      "p95_latency_ms": 86907.35265400007,
+      "cost_usd": null,
+      "result_file": "tasks/essay_vocabulary_scoring_condensed/results/qwen3.5-27b@vllm__2026-04-22T10-58-57Z.json"
+    },
+    {
+      "task_id": "essay_vocabulary_scoring_condensed",
+      "task_version": "1.1",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.6578947368421053,
+      "metrics": {
+        "accuracy": 0.5,
+        "macro_f1": 0.42847222222222225,
+        "qwk": 0.6578947368421053
+      },
+      "tps": 44.1143872120779,
+      "p95_latency_ms": 19716.606716000002,
+      "cost_usd": null,
+      "result_file": "tasks/essay_vocabulary_scoring_condensed/results/glm5-awq@vllm__2026-04-22T12-38-42Z.json"
     },
     {
       "task_id": "essay_vocabulary_scoring_condensed",
@@ -2340,6 +2658,19 @@
       "p95_latency_ms": 4579.208614999999,
       "cost_usd": null,
       "result_file": "tasks/extractive_qa/results/qwen3.6-35b@vllm__2026-04-20T06-19-40Z.json"
+    },
+    {
+      "task_id": "extractive_qa",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.9,
+      "metrics": {
+        "exact_match": 0.9
+      },
+      "tps": 42.961395551036304,
+      "p95_latency_ms": 27403.562278999998,
+      "cost_usd": null,
+      "result_file": "tasks/extractive_qa/results/glm5-awq@vllm__2026-04-22T12-40-21Z.json"
     },
     {
       "task_id": "extractive_qa",
@@ -2519,6 +2850,20 @@
     {
       "task_id": "hazard_category",
       "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.5,
+      "metrics": {
+        "accuracy": 0.5,
+        "macro_f1": 0.3904761904761905
+      },
+      "tps": 43.33199769047916,
+      "p95_latency_ms": 12748.949147999994,
+      "cost_usd": null,
+      "result_file": "tasks/hazard_category/results/glm5-awq@vllm__2026-04-22T12-42-49Z.json"
+    },
+    {
+      "task_id": "hazard_category",
+      "task_version": "1.0",
       "model_id": "glm5.1@llama",
       "score": 0.5,
       "metrics": {
@@ -2627,6 +2972,20 @@
       "p95_latency_ms": 4326.8379380000115,
       "cost_usd": null,
       "result_file": "tasks/intent_classification/results/qwen3-235B-A22B@vllm__2026-04-22T01-32-42Z.json"
+    },
+    {
+      "task_id": "intent_classification",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 1.0,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "tps": 41.03321346164652,
+      "p95_latency_ms": 10802.458650000006,
+      "cost_usd": null,
+      "result_file": "tasks/intent_classification/results/glm5-awq@vllm__2026-04-22T12-44-09Z.json"
     },
     {
       "task_id": "intent_classification",
@@ -2781,6 +3140,20 @@
       "p95_latency_ms": 3008.195810000004,
       "cost_usd": null,
       "result_file": "tasks/jailbreak_detection/results/qwen3-235B-A22B@vllm__2026-04-22T01-33-39Z.json"
+    },
+    {
+      "task_id": "jailbreak_detection",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 1.0,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "tps": 40.67070056944033,
+      "p95_latency_ms": 9962.741363999996,
+      "cost_usd": null,
+      "result_file": "tasks/jailbreak_detection/results/glm5-awq@vllm__2026-04-22T12-45-53Z.json"
     },
     {
       "task_id": "jailbreak_detection",
@@ -3021,6 +3394,20 @@
       "result_file": "tasks/jailbreak_detection_beavertails/results/llama-guard4@vllm__2026-04-21T09-57-57Z.json"
     },
     {
+      "task_id": "jailbreak_detection_beavertails",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.5,
+      "metrics": {
+        "accuracy": 0.5,
+        "macro_f1": 0.3333333333333333
+      },
+      "tps": 43.69269419552624,
+      "p95_latency_ms": 13573.441149999979,
+      "cost_usd": null,
+      "result_file": "tasks/jailbreak_detection_beavertails/results/glm5-awq@vllm__2026-04-22T12-48-31Z.json"
+    },
+    {
       "task_id": "kg_entity_name_refinement",
       "task_version": "1.0",
       "model_id": "minimax-m2.7@vllm",
@@ -3045,6 +3432,19 @@
       "p95_latency_ms": 24244.774633999994,
       "cost_usd": null,
       "result_file": "tasks/kg_entity_name_refinement/results/qwen3.5-397b@vllm__2026-04-18T10-23-00Z.json"
+    },
+    {
+      "task_id": "kg_entity_name_refinement",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.9,
+      "metrics": {
+        "judge_score": 0.9
+      },
+      "tps": 43.68221019036245,
+      "p95_latency_ms": 17821.236862000034,
+      "cost_usd": null,
+      "result_file": "tasks/kg_entity_name_refinement/results/glm5-awq@vllm__2026-04-22T12-53-18Z.json"
     },
     {
       "task_id": "kg_entity_name_refinement",
@@ -3179,6 +3579,19 @@
     {
       "task_id": "kg_entity_type_refinement",
       "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.7,
+      "metrics": {
+        "judge_score": 0.7
+      },
+      "tps": 45.365058734236385,
+      "p95_latency_ms": 82967.37488700001,
+      "cost_usd": null,
+      "result_file": "tasks/kg_entity_type_refinement/results/glm5-awq@vllm__2026-04-22T13-04-50Z.json"
+    },
+    {
+      "task_id": "kg_entity_type_refinement",
+      "task_version": "1.0",
       "model_id": "gemma-4-31b-it@vllm",
       "score": 0.6900000000000001,
       "metrics": {
@@ -3292,6 +3705,19 @@
       "p95_latency_ms": 35640.75026500001,
       "cost_usd": null,
       "result_file": "tasks/kg_relation_refinement/results/qwen3.5-397b@vllm__2026-04-18T10-53-26Z.json"
+    },
+    {
+      "task_id": "kg_relation_refinement",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.93,
+      "metrics": {
+        "judge_score": 0.93
+      },
+      "tps": 45.03681284708671,
+      "p95_latency_ms": 20745.294618000004,
+      "cost_usd": null,
+      "result_file": "tasks/kg_relation_refinement/results/glm5-awq@vllm__2026-04-22T13-10-30Z.json"
     },
     {
       "task_id": "kg_relation_refinement",
@@ -3530,6 +3956,19 @@
     {
       "task_id": "kg_triplet_extraction",
       "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.55,
+      "metrics": {
+        "judge_score": 0.55
+      },
+      "tps": 46.40104126359486,
+      "p95_latency_ms": 97791.66879499996,
+      "cost_usd": null,
+      "result_file": "tasks/kg_triplet_extraction/results/glm5-awq@vllm__2026-04-22T13-31-39Z.json"
+    },
+    {
+      "task_id": "kg_triplet_extraction",
+      "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
       "score": 0.54,
       "metrics": {
@@ -3581,6 +4020,20 @@
       "p95_latency_ms": 5586.662318999998,
       "cost_usd": null,
       "result_file": "tasks/oos_detection/results/qwen3-235B-A22B@vllm__2026-04-22T02-16-13Z.json"
+    },
+    {
+      "task_id": "oos_detection",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.5,
+      "metrics": {
+        "accuracy": 0.5,
+        "macro_f1": 0.3333333333333333
+      },
+      "tps": 41.73295733088426,
+      "p95_latency_ms": 8592.032389,
+      "cost_usd": null,
+      "result_file": "tasks/oos_detection/results/glm5-awq@vllm__2026-04-22T13-34-00Z.json"
     },
     {
       "task_id": "oos_detection",
@@ -3718,6 +4171,19 @@
       "p95_latency_ms": 151315.52118699983,
       "cost_usd": null,
       "result_file": "tasks/retail_agent_dialog/results/qwen3.6-35b@vllm__2026-04-20T07-20-55Z.json"
+    },
+    {
+      "task_id": "retail_agent_dialog",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.6727272727272727,
+      "metrics": {
+        "judge_score": 0.6727272727272727
+      },
+      "tps": 41.27516734384119,
+      "p95_latency_ms": 143263.03284000006,
+      "cost_usd": null,
+      "result_file": "tasks/retail_agent_dialog/results/glm5-awq@vllm__2026-04-22T14-24-28Z.json"
     },
     {
       "task_id": "retail_agent_dialog",
@@ -3865,6 +4331,20 @@
       "p95_latency_ms": 6557.079745999999,
       "cost_usd": null,
       "result_file": "tasks/safety_classification/results/qwen3-30b@vllm__2026-04-21T06-35-49Z.json"
+    },
+    {
+      "task_id": "safety_classification",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.8,
+      "metrics": {
+        "accuracy": 0.8,
+        "macro_f1": 0.8000000000000002
+      },
+      "tps": 41.37642368411777,
+      "p95_latency_ms": 9337.814015000007,
+      "cost_usd": null,
+      "result_file": "tasks/safety_classification/results/glm5-awq@vllm__2026-04-22T14-26-41Z.json"
     },
     {
       "task_id": "safety_classification",
@@ -4044,6 +4524,19 @@
     {
       "task_id": "summarization",
       "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.8,
+      "metrics": {
+        "judge_score": 0.8
+      },
+      "tps": 44.81429432068764,
+      "p95_latency_ms": 17387.567461000002,
+      "cost_usd": null,
+      "result_file": "tasks/summarization/results/glm5-awq@vllm__2026-04-22T14-28-20Z.json"
+    },
+    {
+      "task_id": "summarization",
+      "task_version": "1.0",
       "model_id": "qwen3.5-27b@vllm",
       "score": 0.8,
       "metrics": {
@@ -4131,6 +4624,19 @@
       "p95_latency_ms": 112072.029401,
       "cost_usd": null,
       "result_file": "tasks/temporal_information_extraction/results/glm5.1@llama__2026-04-21T00-17-07Z.json"
+    },
+    {
+      "task_id": "temporal_information_extraction",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.6533333333333334,
+      "metrics": {
+        "judge_score": 0.6533333333333334
+      },
+      "tps": 36.76899637446682,
+      "p95_latency_ms": 144068.16740199996,
+      "cost_usd": null,
+      "result_file": "tasks/temporal_information_extraction/results/glm5-awq@vllm__2026-04-22T14-54-51Z.json"
     },
     {
       "task_id": "temporal_information_extraction",
@@ -4341,6 +4847,19 @@
       "result_file": "tasks/text2sql_ambiguity/results/glm5.1@llama__2026-04-21T00-30-11Z.json"
     },
     {
+      "task_id": "text2sql_ambiguity",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.44166666666666665,
+      "metrics": {
+        "judge_score": 0.44166666666666665
+      },
+      "tps": 46.19503773053169,
+      "p95_latency_ms": 41707.260477,
+      "cost_usd": null,
+      "result_file": "tasks/text2sql_ambiguity/results/glm5-awq@vllm__2026-04-22T15-09-52Z.json"
+    },
+    {
       "task_id": "text2sql_bird",
       "task_version": "1.0",
       "model_id": "gpt-oss-120b@vllm",
@@ -4460,6 +4979,19 @@
     {
       "task_id": "text2sql_bird",
       "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.5636363636363636,
+      "metrics": {
+        "judge_score": 0.5636363636363636
+      },
+      "tps": 45.60280076259212,
+      "p95_latency_ms": 100521.57233999998,
+      "cost_usd": null,
+      "result_file": "tasks/text2sql_bird/results/glm5-awq@vllm__2026-04-22T15-25-50Z.json"
+    },
+    {
+      "task_id": "text2sql_bird",
+      "task_version": "1.0",
       "model_id": "gemma-4-31b-it@vllm",
       "score": 0.5454545454545454,
       "metrics": {
@@ -4539,6 +5071,20 @@
       "p95_latency_ms": 2514.8416179999986,
       "cost_usd": null,
       "result_file": "tasks/text_classification/results/qwen3-235B-A22B@vllm__2026-04-22T03-34-05Z.json"
+    },
+    {
+      "task_id": "text_classification",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 1.0,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "tps": 38.59940122521913,
+      "p95_latency_ms": 6051.496017000005,
+      "cost_usd": null,
+      "result_file": "tasks/text_classification/results/glm5-awq@vllm__2026-04-22T15-26-58Z.json"
     },
     {
       "task_id": "text_classification",
@@ -4697,6 +5243,20 @@
     {
       "task_id": "topic_classification",
       "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 1.0,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "tps": 42.23556390248073,
+      "p95_latency_ms": 8590.776086000005,
+      "cost_usd": null,
+      "result_file": "tasks/topic_classification/results/glm5-awq@vllm__2026-04-22T15-28-33Z.json"
+    },
+    {
+      "task_id": "topic_classification",
+      "task_version": "1.0",
       "model_id": "glm5.1@llama",
       "score": 1.0,
       "metrics": {
@@ -4777,6 +5337,891 @@
       "p95_latency_ms": 0.019620987586677074,
       "cost_usd": 0.0,
       "result_file": "tasks/topic_classification/results/dummy@local__2026-04-08T05-07-23Z.json"
+    },
+    {
+      "task_id": "writing_eval_b1b2_no_ann_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.5,
+      "metrics": {
+        "accuracy": 0.38461538461538464,
+        "qwk": 0.28767123287671226,
+        "boundary_accuracy": 0.5,
+        "boundary_kappa": 0.17560975609756097,
+        "signed_diff": -0.5384615384615384
+      },
+      "tps": 43.58096244133749,
+      "p95_latency_ms": 41861.28786200004,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_b1b2_no_ann_no_m_serial/results/qwen3-30b@vllm__2026-04-22T09-38-53Z.json"
+    },
+    {
+      "task_id": "writing_eval_b1b2_no_ann_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.19230769230769232,
+      "metrics": {
+        "accuracy": 0.07692307692307693,
+        "qwk": -0.02677376171352086,
+        "boundary_accuracy": 0.19230769230769232,
+        "boundary_kappa": 0.031088082901554404,
+        "signed_diff": -0.9545454545454546
+      },
+      "tps": 59.867809055948065,
+      "p95_latency_ms": 136399.67177900008,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_b1b2_no_ann_no_m_serial/results/qwen3.5-27b@vllm__2026-04-22T13-39-37Z.json"
+    },
+    {
+      "task_id": "writing_eval_b1b2_no_ann_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.15384615384615385,
+      "metrics": {
+        "accuracy": 0.07692307692307693,
+        "qwk": 0.0845070422535209,
+        "boundary_accuracy": 0.15384615384615385,
+        "boundary_kappa": 0.0,
+        "signed_diff": -1.0
+      },
+      "tps": 45.177161811195006,
+      "p95_latency_ms": 57363.04898800006,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_b1b2_no_ann_no_m_serial/results/glm5-awq@vllm__2026-04-22T15-48-16Z.json"
+    },
+    {
+      "task_id": "writing_eval_b1b2_no_ann_with_m_score_only_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.6923076923076923,
+      "metrics": {
+        "accuracy": 0.5384615384615384,
+        "qwk": 0.29940119760479045,
+        "boundary_accuracy": 0.6923076923076923,
+        "boundary_kappa": 0.3499999999999999,
+        "signed_diff": -0.38461538461538464
+      },
+      "tps": 45.049061538828106,
+      "p95_latency_ms": 27434.61534100004,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_b1b2_no_ann_with_m_score_only_serial/results/qwen3-30b@vllm__2026-04-22T09-46-45Z.json"
+    },
+    {
+      "task_id": "writing_eval_b1b2_no_ann_with_m_score_only_serial",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.4230769230769231,
+      "metrics": {
+        "accuracy": 0.38461538461538464,
+        "qwk": 0.11864406779661019,
+        "boundary_accuracy": 0.4230769230769231,
+        "boundary_kappa": 0.13793103448275865,
+        "signed_diff": -0.6
+      },
+      "tps": 45.28799008506119,
+      "p95_latency_ms": 158157.64018,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_b1b2_no_ann_with_m_score_only_serial/results/glm5-awq@vllm__2026-04-22T16-18-03Z.json"
+    },
+    {
+      "task_id": "writing_eval_b1b2_no_ann_with_m_score_only_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.3076923076923077,
+      "metrics": {
+        "accuracy": 0.23076923076923078,
+        "qwk": 0.0859375,
+        "boundary_accuracy": 0.3076923076923077,
+        "boundary_kappa": 0.07692307692307689,
+        "signed_diff": -0.75
+      },
+      "tps": 59.897658770175305,
+      "p95_latency_ms": 136445.653344,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_b1b2_no_ann_with_m_score_only_serial/results/qwen3.5-27b@vllm__2026-04-22T14-14-54Z.json"
+    },
+    {
+      "task_id": "writing_eval_b1b2_no_ann_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.34615384615384615,
+      "metrics": {
+        "accuracy": 0.34615384615384615,
+        "qwk": 0.035608308605341366,
+        "boundary_accuracy": 0.34615384615384615,
+        "boundary_kappa": 0.09090909090909091,
+        "signed_diff": -0.64
+      },
+      "tps": 45.237820146400125,
+      "p95_latency_ms": 180095.41144000003,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_b1b2_no_ann_with_m_serial/results/glm5-awq@vllm__2026-04-22T16-53-46Z.json"
+    },
+    {
+      "task_id": "writing_eval_b1b2_no_ann_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.34615384615384615,
+      "metrics": {
+        "accuracy": 0.19230769230769232,
+        "qwk": 0.17894736842105274,
+        "boundary_accuracy": 0.34615384615384615,
+        "boundary_kappa": 0.008968609865470815,
+        "signed_diff": -0.6923076923076923
+      },
+      "tps": 40.2561410276653,
+      "p95_latency_ms": 34784.60671000005,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_b1b2_no_ann_with_m_serial/results/qwen3-30b@vllm__2026-04-22T09-58-50Z.json"
+    },
+    {
+      "task_id": "writing_eval_b1b2_no_ann_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.19230769230769232,
+      "metrics": {
+        "accuracy": 0.19230769230769232,
+        "qwk": -0.12802275960170695,
+        "boundary_accuracy": 0.19230769230769232,
+        "boundary_kappa": 0.03448275862068963,
+        "signed_diff": -0.7619047619047619
+      },
+      "tps": 59.56669270696278,
+      "p95_latency_ms": 137094.49928000005,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_b1b2_no_ann_with_m_serial/results/qwen3.5-27b@vllm__2026-04-22T14-53-17Z.json"
+    },
+    {
+      "task_id": "writing_eval_b1b2_with_ann_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.7692307692307693,
+      "metrics": {
+        "accuracy": 0.6538461538461539,
+        "qwk": 0.36585365853658536,
+        "boundary_accuracy": 0.7692307692307693,
+        "boundary_kappa": 0.4507042253521128,
+        "signed_diff": -0.23076923076923078
+      },
+      "tps": 41.76640961556567,
+      "p95_latency_ms": 57133.94003999997,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_b1b2_with_ann_no_m_serial/results/qwen3-30b@vllm__2026-04-22T10-16-01Z.json"
+    },
+    {
+      "task_id": "writing_eval_b1b2_with_ann_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.19230769230769232,
+      "metrics": {
+        "accuracy": 0.11538461538461539,
+        "qwk": 0.09592326139088725,
+        "boundary_accuracy": 0.19230769230769232,
+        "boundary_kappa": 0.014440433212996397,
+        "signed_diff": -0.9615384615384616
+      },
+      "tps": 45.14885141975763,
+      "p95_latency_ms": 92876.74916999992,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_b1b2_with_ann_no_m_serial/results/glm5-awq@vllm__2026-04-22T17-21-43Z.json"
+    },
+    {
+      "task_id": "writing_eval_b1b2_with_ann_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.11538461538461539,
+      "metrics": {
+        "accuracy": 0.07692307692307693,
+        "qwk": -0.2165137614678898,
+        "boundary_accuracy": 0.11538461538461539,
+        "boundary_kappa": 0.008620689655172417,
+        "signed_diff": -0.9565217391304348
+      },
+      "tps": 59.40195250419071,
+      "p95_latency_ms": 137671.586758,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_b1b2_with_ann_no_m_serial/results/qwen3.5-27b@vllm__2026-04-22T15-31-01Z.json"
+    },
+    {
+      "task_id": "writing_eval_b1b2_with_ann_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.7692307692307693,
+      "metrics": {
+        "accuracy": 0.6538461538461539,
+        "qwk": 0.36585365853658536,
+        "boundary_accuracy": 0.7692307692307693,
+        "boundary_kappa": 0.4507042253521128,
+        "signed_diff": -0.23076923076923078
+      },
+      "tps": 39.776202904275024,
+      "p95_latency_ms": 57470.897452,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_b1b2_with_ann_with_m_serial/results/qwen3-30b@vllm__2026-04-22T10-34-00Z.json"
+    },
+    {
+      "task_id": "writing_eval_b1b2_with_ann_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.38461538461538464,
+      "metrics": {
+        "accuracy": 0.34615384615384615,
+        "qwk": -0.05177993527508096,
+        "boundary_accuracy": 0.38461538461538464,
+        "boundary_kappa": 0.10071942446043171,
+        "signed_diff": -0.64
+      },
+      "tps": 44.82166821650666,
+      "p95_latency_ms": 181390.52122499992,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_b1b2_with_ann_with_m_serial/results/glm5-awq@vllm__2026-04-22T17-57-54Z.json"
+    },
+    {
+      "task_id": "writing_eval_b1b2_with_ann_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.19230769230769232,
+      "metrics": {
+        "accuracy": 0.11538461538461539,
+        "qwk": 0.02188782489740071,
+        "boundary_accuracy": 0.19230769230769232,
+        "boundary_kappa": 0.020942408376963352,
+        "signed_diff": -0.8636363636363636
+      },
+      "tps": 59.25904300392716,
+      "p95_latency_ms": 137940.5854019999,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_b1b2_with_ann_with_m_serial/results/qwen3.5-27b@vllm__2026-04-22T16-08-21Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_no_ann_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.4285714285714286,
+      "metrics": {
+        "accuracy": 0.6,
+        "adjacent_accuracy": 1.0,
+        "qwk": 0.4285714285714286
+      },
+      "tps": 45.14103185488085,
+      "p95_latency_ms": 82698.68767499998,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_no_ann_no_m_serial/results/glm5-awq@vllm__2026-04-22T18-08-34Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_no_ann_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.3846153846153847,
+      "metrics": {
+        "accuracy": 0.5,
+        "adjacent_accuracy": 0.9,
+        "qwk": 0.3846153846153847
+      },
+      "tps": 44.28620046375984,
+      "p95_latency_ms": 30138.667897000007,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_no_ann_no_m_serial/results/qwen3-30b@vllm__2026-04-22T10-38-23Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_no_ann_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": -0.46938775510204067,
+      "metrics": {
+        "accuracy": 0.1,
+        "adjacent_accuracy": 0.3,
+        "qwk": -0.46938775510204067
+      },
+      "tps": 58.277853084315744,
+      "p95_latency_ms": 70646.63324299999,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_no_ann_no_m_serial/results/qwen3.5-27b@vllm__2026-04-22T16-20-24Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_no_ann_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.33333333333333326,
+      "metrics": {
+        "accuracy": 0.4,
+        "adjacent_accuracy": 1.0,
+        "qwk": 0.33333333333333326
+      },
+      "tps": 40.46738759290122,
+      "p95_latency_ms": 47263.134983999975,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_no_ann_with_m_serial/results/qwen3-30b@vllm__2026-04-22T10-45-04Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_no_ann_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.23076923076923073,
+      "metrics": {
+        "accuracy": 0.3,
+        "adjacent_accuracy": 0.9,
+        "qwk": 0.23076923076923073
+      },
+      "tps": 44.65582962406732,
+      "p95_latency_ms": 90943.88612900002,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_no_ann_with_m_serial/results/glm5-awq@vllm__2026-04-22T18-19-44Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_no_ann_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": -0.5599999999999998,
+      "metrics": {
+        "accuracy": 0.2,
+        "adjacent_accuracy": 0.7,
+        "qwk": -0.5599999999999998
+      },
+      "tps": 58.23505909713547,
+      "p95_latency_ms": 70894.60589499999,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_no_ann_with_m_serial/results/qwen3.5-27b@vllm__2026-04-22T16-30-35Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_no_target_ann_loocv_error_retrieval_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.5454545454545454,
+      "metrics": {
+        "accuracy": 0.5,
+        "adjacent_accuracy": 1.0,
+        "qwk": 0.5454545454545454
+      },
+      "tps": 45.53976694463785,
+      "p95_latency_ms": 41408.717903000026,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_no_target_ann_loocv_error_retrieval_no_m_serial/results/qwen3-30b@vllm__2026-04-22T10-49-24Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_no_target_ann_loocv_error_retrieval_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.06666666666666654,
+      "metrics": {
+        "accuracy": 0.4,
+        "adjacent_accuracy": 0.9,
+        "qwk": 0.06666666666666654
+      },
+      "tps": 45.65034311532881,
+      "p95_latency_ms": 89582.11437700003,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_no_target_ann_loocv_error_retrieval_no_m_serial/results/glm5-awq@vllm__2026-04-22T18-32-46Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_no_target_ann_loocv_error_retrieval_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": -0.14814814814814814,
+      "metrics": {
+        "accuracy": 0.3,
+        "adjacent_accuracy": 0.7,
+        "qwk": -0.14814814814814814
+      },
+      "tps": 59.13631942972326,
+      "p95_latency_ms": 69549.00338800001,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_no_target_ann_loocv_error_retrieval_no_m_serial/results/qwen3.5-27b@vllm__2026-04-22T16-42-03Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_no_target_ann_loocv_error_retrieval_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.23076923076923073,
+      "metrics": {
+        "accuracy": 0.3,
+        "adjacent_accuracy": 0.9,
+        "qwk": 0.23076923076923073
+      },
+      "tps": 45.06690175731073,
+      "p95_latency_ms": 90935.61453899997,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_no_target_ann_loocv_error_retrieval_with_m_serial/results/glm5-awq@vllm__2026-04-22T18-44-35Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_no_target_ann_loocv_error_retrieval_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.11111111111111116,
+      "metrics": {
+        "accuracy": 0.2,
+        "adjacent_accuracy": 1.0,
+        "qwk": 0.11111111111111116
+      },
+      "tps": 45.02914442882212,
+      "p95_latency_ms": 62940.91332700003,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_no_target_ann_loocv_error_retrieval_with_m_serial/results/qwen3-30b@vllm__2026-04-22T10-56-16Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_no_target_ann_loocv_error_retrieval_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": -0.5151515151515151,
+      "metrics": {
+        "accuracy": 0.2,
+        "adjacent_accuracy": 0.5,
+        "qwk": -0.5151515151515151
+      },
+      "tps": 58.68199580832233,
+      "p95_latency_ms": 70019.451674,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_no_target_ann_loocv_error_retrieval_with_m_serial/results/qwen3.5-27b@vllm__2026-04-22T16-53-57Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_no_target_ann_loocv_fewshot_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.0,
+      "metrics": {
+        "accuracy": 0.3,
+        "adjacent_accuracy": 1.0,
+        "qwk": 0.0
+      },
+      "tps": 35.66267145466684,
+      "p95_latency_ms": 32721.891306000005,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_no_target_ann_loocv_fewshot_no_m_serial/results/qwen3-30b@vllm__2026-04-22T11-00-51Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_no_target_ann_loocv_fewshot_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": -0.3255813953488371,
+      "metrics": {
+        "accuracy": 0.1,
+        "adjacent_accuracy": 0.4,
+        "qwk": -0.3255813953488371
+      },
+      "tps": 57.71393441398049,
+      "p95_latency_ms": 71198.835529,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_no_target_ann_loocv_fewshot_no_m_serial/results/qwen3.5-27b@vllm__2026-04-22T17-05-27Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_no_target_ann_loocv_fewshot_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": -0.42105263157894735,
+      "metrics": {
+        "accuracy": 0.6,
+        "adjacent_accuracy": 0.8,
+        "qwk": -0.42105263157894735
+      },
+      "tps": 44.853159349485324,
+      "p95_latency_ms": 91858.82046900001,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_no_target_ann_loocv_fewshot_no_m_serial/results/glm5-awq@vllm__2026-04-22T18-56-43Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_no_target_ann_loocv_fewshot_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.052631578947368474,
+      "metrics": {
+        "accuracy": 0.3,
+        "adjacent_accuracy": 0.8,
+        "qwk": 0.052631578947368474
+      },
+      "tps": 45.113445106251,
+      "p95_latency_ms": 90845.29086599991,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_no_target_ann_loocv_fewshot_with_m_serial/results/glm5-awq@vllm__2026-04-22T19-11-02Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_no_target_ann_loocv_fewshot_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.0,
+      "metrics": {
+        "accuracy": 0.3,
+        "adjacent_accuracy": 1.0,
+        "qwk": 0.0
+      },
+      "tps": 21.93817997875729,
+      "p95_latency_ms": 352553.44173,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_no_target_ann_loocv_fewshot_with_m_serial/results/qwen3-30b@vllm__2026-04-22T11-15-41Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_no_target_ann_loocv_fewshot_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": -0.47272727272727266,
+      "metrics": {
+        "accuracy": 0.0,
+        "adjacent_accuracy": 0.2,
+        "qwk": -0.47272727272727266
+      },
+      "tps": 59.29157829986296,
+      "p95_latency_ms": 69673.18720700001,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_no_target_ann_loocv_fewshot_with_m_serial/results/qwen3.5-27b@vllm__2026-04-22T17-17-15Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_with_ann_loocv_fewshot_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.5714285714285715,
+      "metrics": {
+        "accuracy": 0.7,
+        "adjacent_accuracy": 1.0,
+        "qwk": 0.5714285714285715
+      },
+      "tps": 32.563564785612414,
+      "p95_latency_ms": 36879.293739999994,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_with_ann_loocv_fewshot_no_m_serial/results/qwen3-30b@vllm__2026-04-22T11-20-28Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_with_ann_loocv_fewshot_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.0,
+      "metrics": {
+        "accuracy": 0.5,
+        "adjacent_accuracy": 0.9,
+        "qwk": 0.0
+      },
+      "tps": 45.061131267043585,
+      "p95_latency_ms": 90111.09575000001,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_with_ann_loocv_fewshot_no_m_serial/results/glm5-awq@vllm__2026-04-22T19-22-41Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_with_ann_loocv_fewshot_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": -0.5161290322580645,
+      "metrics": {
+        "accuracy": 0.2,
+        "adjacent_accuracy": 0.6,
+        "qwk": -0.5161290322580645
+      },
+      "tps": 59.20483889424486,
+      "p95_latency_ms": 69622.39576599996,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_with_ann_loocv_fewshot_no_m_serial/results/qwen3.5-27b@vllm__2026-04-22T17-28-05Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_with_ann_loocv_fewshot_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.1428571428571429,
+      "metrics": {
+        "accuracy": 0.4,
+        "adjacent_accuracy": 1.0,
+        "qwk": 0.1428571428571429
+      },
+      "tps": 33.35168882964157,
+      "p95_latency_ms": 107144.68260199999,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_with_ann_loocv_fewshot_with_m_serial/results/qwen3-30b@vllm__2026-04-22T11-31-36Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_with_ann_loocv_fewshot_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.11764705882352933,
+      "metrics": {
+        "accuracy": 0.3,
+        "adjacent_accuracy": 0.9,
+        "qwk": 0.11764705882352933
+      },
+      "tps": 45.253169194103464,
+      "p95_latency_ms": 90762.88167500001,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_with_ann_loocv_fewshot_with_m_serial/results/glm5-awq@vllm__2026-04-22T19-36-50Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_with_ann_loocv_fewshot_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": -0.459016393442623,
+      "metrics": {
+        "accuracy": 0.0,
+        "adjacent_accuracy": 0.1,
+        "qwk": -0.459016393442623
+      },
+      "tps": 59.04254609467036,
+      "p95_latency_ms": 70447.14181300002,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_with_ann_loocv_fewshot_with_m_serial/results/qwen3.5-27b@vllm__2026-04-22T17-39-55Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_with_ann_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.7272727272727273,
+      "metrics": {
+        "accuracy": 0.7,
+        "adjacent_accuracy": 1.0,
+        "qwk": 0.7272727272727273
+      },
+      "tps": 32.92081950205644,
+      "p95_latency_ms": 58490.26730800005,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_with_ann_no_m_serial/results/qwen3-30b@vllm__2026-04-22T11-37-50Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_with_ann_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.5555555555555556,
+      "metrics": {
+        "accuracy": 0.6,
+        "adjacent_accuracy": 1.0,
+        "qwk": 0.5555555555555556
+      },
+      "tps": 44.8850241662386,
+      "p95_latency_ms": 115665.03554299999,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_with_ann_no_m_serial/results/glm5-awq@vllm__2026-04-22T19-50-41Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_with_ann_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": -0.5185185185185186,
+      "metrics": {
+        "accuracy": 0.3,
+        "adjacent_accuracy": 0.6,
+        "qwk": -0.5185185185185186
+      },
+      "tps": 58.32528099135207,
+      "p95_latency_ms": 139958.20457099998,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_with_ann_no_m_serial/results/qwen3.5-27b@vllm__2026-04-22T17-58-37Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_with_ann_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.15384615384615385,
+      "metrics": {
+        "accuracy": 0.7,
+        "adjacent_accuracy": 0.9,
+        "qwk": 0.15384615384615385
+      },
+      "tps": 33.50150808489892,
+      "p95_latency_ms": 93627.21372500005,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_with_ann_with_m_serial/results/qwen3-30b@vllm__2026-04-22T11-48-56Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_with_ann_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.11764705882352933,
+      "metrics": {
+        "accuracy": 0.3,
+        "adjacent_accuracy": 0.9,
+        "qwk": 0.11764705882352933
+      },
+      "tps": 45.29385643040206,
+      "p95_latency_ms": 179329.17962100005,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_with_ann_with_m_serial/results/glm5-awq@vllm__2026-04-22T20-05-11Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_with_ann_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.0,
+      "metrics": {
+        "accuracy": 0.3,
+        "adjacent_accuracy": 1.0,
+        "qwk": 0.0
+      },
+      "tps": 58.673761137681744,
+      "p95_latency_ms": 94815.55754500005,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_with_ann_with_m_serial/results/qwen3.5-27b@vllm__2026-04-22T18-07-22Z.json"
+    },
+    {
+      "task_id": "writing_eval_n42_no_ann_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.6832786885245902,
+      "metrics": {
+        "accuracy": 0.6666666666666666,
+        "adjacent_accuracy": 0.9285714285714286,
+        "qwk": 0.6832786885245902
+      },
+      "tps": 33.34308566294327,
+      "p95_latency_ms": 60617.89869799999,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n42_no_ann_no_m_serial/results/qwen3-30b@vllm__2026-04-22T12-19-22Z.json"
+    },
+    {
+      "task_id": "writing_eval_n42_no_ann_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.6493955094991365,
+      "metrics": {
+        "accuracy": 0.4523809523809524,
+        "adjacent_accuracy": 0.9523809523809523,
+        "qwk": 0.6493955094991365
+      },
+      "tps": 44.867052040407884,
+      "p95_latency_ms": 110470.51871199983,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n42_no_ann_no_m_serial/results/glm5-awq@vllm__2026-04-22T21-02-28Z.json"
+    },
+    {
+      "task_id": "writing_eval_n42_no_ann_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.6493955094991364,
+      "metrics": {
+        "accuracy": 0.4523809523809524,
+        "adjacent_accuracy": 0.9523809523809523,
+        "qwk": 0.6493955094991364
+      },
+      "tps": 58.2530104663512,
+      "p95_latency_ms": 135116.66182499993,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n42_no_ann_no_m_serial/results/qwen3.5-27b@vllm__2026-04-22T19-14-10Z.json"
+    },
+    {
+      "task_id": "writing_eval_n42_no_ann_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.5994550408719346,
+      "metrics": {
+        "accuracy": 0.47619047619047616,
+        "adjacent_accuracy": 0.9523809523809523,
+        "qwk": 0.5994550408719346
+      },
+      "tps": 33.419742549009776,
+      "p95_latency_ms": 63935.57881099991,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n42_no_ann_with_m_serial/results/qwen3-30b@vllm__2026-04-22T12-51-46Z.json"
+    },
+    {
+      "task_id": "writing_eval_n42_no_ann_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.5472636815920398,
+      "metrics": {
+        "accuracy": 0.21428571428571427,
+        "adjacent_accuracy": 0.9523809523809523,
+        "qwk": 0.5472636815920398
+      },
+      "tps": 31.622701479514237,
+      "p95_latency_ms": 377985.7675459998,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n42_no_ann_with_m_serial/results/qwen3.5-27b@vllm__2026-04-22T20-07-22Z.json"
+    },
+    {
+      "task_id": "writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.3495575221238938,
+      "metrics": {
+        "accuracy": 0.2857142857142857,
+        "adjacent_accuracy": 0.9047619047619048,
+        "qwk": 0.3495575221238938
+      },
+      "tps": 54.96947554440854,
+      "p95_latency_ms": 108790.90329999986,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial/results/qwen3.5-27b@vllm__2026-04-22T21-11-23Z.json"
+    },
+    {
+      "task_id": "writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.30933333333333346,
+      "metrics": {
+        "accuracy": 0.47619047619047616,
+        "adjacent_accuracy": 0.8809523809523809,
+        "qwk": 0.30933333333333346
+      },
+      "tps": 31.79499948702461,
+      "p95_latency_ms": 59519.23341700013,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial/results/qwen3-30b@vllm__2026-04-22T13-24-55Z.json"
+    },
+    {
+      "task_id": "writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.12382234185733498,
+      "metrics": {
+        "accuracy": 0.14285714285714285,
+        "adjacent_accuracy": 0.8333333333333334,
+        "qwk": 0.12382234185733498
+      },
+      "tps": 36.115907150778874,
+      "p95_latency_ms": 58358.83928299995,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial/results/qwen3-30b@vllm__2026-04-22T13-55-55Z.json"
+    },
+    {
+      "task_id": "writing_eval_n42_with_ann_loocv_fewshot_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.46350364963503654,
+      "metrics": {
+        "accuracy": 0.6190476190476191,
+        "adjacent_accuracy": 0.9047619047619048,
+        "qwk": 0.46350364963503654
+      },
+      "tps": 42.374904077991765,
+      "p95_latency_ms": 69485.66764599991,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n42_with_ann_loocv_fewshot_no_m_serial/results/qwen3-30b@vllm__2026-04-22T14-27-20Z.json"
+    },
+    {
+      "task_id": "writing_eval_n42_with_ann_loocv_fewshot_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.0983379501385041,
+      "metrics": {
+        "accuracy": 0.14285714285714285,
+        "adjacent_accuracy": 0.8333333333333334,
+        "qwk": 0.0983379501385041
+      },
+      "tps": 39.34660237898056,
+      "p95_latency_ms": 70729.45932300013,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n42_with_ann_loocv_fewshot_with_m_serial/results/qwen3-30b@vllm__2026-04-22T15-01-20Z.json"
+    },
+    {
+      "task_id": "writing_eval_n42_with_ann_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.5726744186046511,
+      "metrics": {
+        "accuracy": 0.6190476190476191,
+        "adjacent_accuracy": 0.9047619047619048,
+        "qwk": 0.5726744186046511
+      },
+      "tps": 39.64077860113889,
+      "p95_latency_ms": 72296.58087400004,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n42_with_ann_no_m_serial/results/qwen3-30b@vllm__2026-04-22T15-37-19Z.json"
+    },
+    {
+      "task_id": "writing_eval_n42_with_ann_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.5462962962962963,
+      "metrics": {
+        "accuracy": 0.5476190476190477,
+        "adjacent_accuracy": 0.9285714285714286,
+        "qwk": 0.5462962962962963
+      },
+      "tps": 41.09392704707151,
+      "p95_latency_ms": 67361.74936999999,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n42_with_ann_with_m_serial/results/qwen3-30b@vllm__2026-04-22T16-13-52Z.json"
     }
   ]
 }

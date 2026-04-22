@@ -1,0 +1,47 @@
+{
+  "task_id": "writing_eval_n10_with_ann_loocv_fewshot_no_m_serial",
+  "task_version": "1.0",
+  "primary_metric": "qwk",
+  "ranking": [
+    {
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.5714285714285715,
+      "metrics": {
+        "accuracy": 0.7,
+        "adjacent_accuracy": 1.0,
+        "qwk": 0.5714285714285715
+      },
+      "tps": 32.563564785612414,
+      "p95_latency_ms": 36879.293739999994,
+      "cost_usd": null,
+      "result_file": "results/qwen3-30b@vllm__2026-04-22T11-20-28Z.json"
+    },
+    {
+      "model_id": "glm5-awq@vllm",
+      "score": 0.0,
+      "metrics": {
+        "accuracy": 0.5,
+        "adjacent_accuracy": 0.9,
+        "qwk": 0.0
+      },
+      "tps": 45.061131267043585,
+      "p95_latency_ms": 90111.09575000001,
+      "cost_usd": null,
+      "result_file": "results/glm5-awq@vllm__2026-04-22T19-22-41Z.json"
+    },
+    {
+      "model_id": "qwen3.5-27b@vllm",
+      "score": -0.5161290322580645,
+      "metrics": {
+        "accuracy": 0.2,
+        "adjacent_accuracy": 0.6,
+        "qwk": -0.5161290322580645
+      },
+      "tps": 59.20483889424486,
+      "p95_latency_ms": 69622.39576599996,
+      "cost_usd": null,
+      "result_file": "results/qwen3.5-27b@vllm__2026-04-22T17-28-05Z.json"
+    }
+  ],
+  "updated_at": "2026-04-22T21:26:36+00:00"
+}
