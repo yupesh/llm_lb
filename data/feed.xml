@@ -356,11 +356,4 @@
     <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_holistic_scoring_condensed" rel="alternate" type="text/html"/>
     <summary>accuracy=0.167, macro_f1=0.154, qwk=0.560</summary>
   </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_holistic_scoring/1.0/minimax-m2.7@vllm/2026-04-21T09:28:11+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.222 accuracy on essay_holistic_scoring v1.0</title>
-    <updated>2026-04-21T09:28:11+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_holistic_scoring" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.222, macro_f1=0.204, qwk=0.679</summary>
-  </entry>
 </feed>
