@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T03:43:27+00:00",
+  "generated_at": "2026-04-22T03:43:54+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -652,6 +652,21 @@
       "p95_latency_ms": 2896.156238000003,
       "cost_usd": null,
       "result_file": "tasks/cefr_level_classification/results/gpt-oss-120b@vllm__2026-04-20T00-56-54Z.json"
+    },
+    {
+      "task_id": "cefr_level_classification",
+      "task_version": "1.0",
+      "model_id": "qwen3-235B-A22B@vllm",
+      "score": 0.5,
+      "metrics": {
+        "accuracy": 0.35,
+        "macro_f1": 0.26666666666666666,
+        "qwk": 0.5
+      },
+      "tps": 73.12763461827599,
+      "p95_latency_ms": 8553.359933999986,
+      "cost_usd": null,
+      "result_file": "tasks/cefr_level_classification/results/qwen3-235B-A22B@vllm__2026-04-21T23-53-21Z.json"
     },
     {
       "task_id": "cefr_level_classification",
