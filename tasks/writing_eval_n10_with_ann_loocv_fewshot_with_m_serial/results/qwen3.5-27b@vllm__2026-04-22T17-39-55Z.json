@@ -1,0 +1,154 @@
+{
+  "model_id": "qwen3.5-27b@vllm",
+  "model_revision": "2026-04-11",
+  "task_id": "writing_eval_n10_with_ann_loocv_fewshot_with_m_serial",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "b603bc66a0195308",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 0.95,
+    "max_tokens": 4096,
+    "seed": null
+  },
+  "metrics": {
+    "accuracy": 0.0,
+    "adjacent_accuracy": 0.1,
+    "qwk": -0.459016393442623
+  },
+  "tps": 59.04254609467036,
+  "p95_latency_ms": 70447.14181300002,
+  "n_samples": 10,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "sample_07001",
+      "prediction": "",
+      "expected": "A2",
+      "correct": false,
+      "latency_ms": 69736.759767,
+      "input_tokens": 7861,
+      "output_tokens": 4096,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07002",
+      "prediction": "",
+      "expected": "B1",
+      "correct": false,
+      "latency_ms": 69192.48082200003,
+      "input_tokens": 6661,
+      "output_tokens": 4096,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07003",
+      "prediction": "",
+      "expected": "B1",
+      "correct": false,
+      "latency_ms": 69185.17150100002,
+      "input_tokens": 6849,
+      "output_tokens": 4096,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07005",
+      "prediction": "",
+      "expected": "B1",
+      "correct": false,
+      "latency_ms": 69418.89455400001,
+      "input_tokens": 6575,
+      "output_tokens": 4096,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07006",
+      "prediction": "",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 68811.53238000002,
+      "input_tokens": 5992,
+      "output_tokens": 4096,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07018",
+      "prediction": "",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 69088.12732200004,
+      "input_tokens": 6666,
+      "output_tokens": 4096,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07019",
+      "prediction": "{\n  \"cefr_level\":",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 70447.14181300002,
+      "input_tokens": 6850,
+      "output_tokens": 4096,
+      "raw_output": "\n\n{\n  \"cefr_level\":",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07070",
+      "prediction": "B1",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 69364.39984499998,
+      "input_tokens": 7236,
+      "output_tokens": 4096,
+      "raw_output": "\n\n{\n  \"cefr_level\": \"B1\",\n  \"level_basis\": {\n    \"textinspector_level_raw\": null,\n    \"flesch_kincaid\": null,\n    \"rule_notes\": \"Holistic estimation based on vocabulary range, grammar control, and text organization. Frequent article errors and spelling mistakes prevent B2 classification despite good structure.\"\n  },\n  \"communicative_task_achievement\": \"Yes\",\n  \"communicative_task_notes\": [\n    \"Clearly states opinion (disagrees with the prompt's premise).\",\n    \"Provides two distinct arguments (work experience vs. uncertainty/complex subjects).\",\n    \"Includes a conclusion summarizing the stance.\"\n  ],\n  \"grammar_score\": 0.75,\n  \"corrections\": [\n    \"cannnot -> cannot (Lexis; A1; High)\",\n    \"different situation -> a different situation (Grammar; A2; Medium)\",\n    \"other difficult area -> other difficult areas (Grammar; B1; Medium)\",\n    \"In the university -> At university (Grammar; B1; Medium)\",\n    \"knowledge that university gives -> the knowledge that university gives (Grammar; B1; Medium)\",\n    \"question.The -> question. The (Punctuation; A1; Low)\",\n    \"To sum it up -> To sum up (Discourse markers; B2; Low)\"\n  ],\n  \"errors_by_category\": {\n    \"Lexis\": [\n      {\n        \"excerpt\": \"cannnot\",\n        \"correction\": \"cannot\",\n        \"comment\": \"Spelling error affecting readability.\",\n        \"impact\": \"High\",\n        \"cefr_threshold\": \"A1\"\n      }\n    ],\n    \"Grammar\": [\n      {\n        \"excerpt\": \"different situation\",\n        \"correction\": \"a different situation\",\n        \"comment\": \"Missing indefinite article before singular countable noun.\",\n        \"impact\": \"Medium\",\n        \"cefr_threshold\": \"A2\"\n      },\n      {\n        \"excerpt\": \"other difficult area\",\n        \"correction\": \"other difficult areas\",\n        \"comment\": \"Pluralization required after 'other' in this context.\",\n        \"impact\": \"Medium\",\n        \"cefr_threshold\": \"B1\"\n      },\n      {\n        \"excerpt\": \"In the university\",\n        \"correction\": \"At university\",\n        \"comment\": \"Preposition and article usage for general institutions.\",\n        \"impact\": \"Medium\",\n        \"cefr_threshold\": \"B1\"\n      },\n      {\n        \"excerpt\": \"knowledge that university gives\",\n        \"correction\": \"the knowledge that university gives\",\n        \"comment\": \"Definite article required for specific noun phrase.\",\n        \"impact\": \"Medium\",\n        \"cefr_threshold\": \"B1\"\n      }\n    ],\n    \"Punctuation\": [\n      {\n        \"excerpt\": \"question.The\",\n        \"correction\": \"question. The\",\n        \"comment\": \"Missing space after full stop.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A1\"\n      }\n    ],\n    \"Word order\": [],\n    \"Sentence structure\": [],\n    \"Text organization\": [],\n    \"Discourse markers\": [\n      {\n        \"excerpt\": \"To sum it up\",\n        \"correction\": \"To sum up\",\n        \"comment\": \"Standard idiomatic phrase for conclusion.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"B2\"\n      }\n    ],\n    \"Rhetorical features\": [],\n    \"Register\": [],\n    \"Incomprehensibility\": []\n  },\n  \"strengths\": [\n    {\n      \"item\": \"Clear paragraphing (Intro, Body, Conclusion)\",\n      \"cefr_level\": \"B2\",\n      \"category\": \"Text organization\",\n      \"note\": \"Logical structure aids coherence despite grammatical errors.\"\n    },\n    {\n      \"item\": \"Relative clauses (e.g., 'in which they want to work')\",\n      \"cefr_level\": \"B2\",\n      \"category\": \"Grammar\",\n      \"note\": \"Attempts complex subordination successfully.\"\n    },\n    {\n      \"item\": \"Cohesive devices ('",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07087",
+      "prediction": "",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 69166.27336599992,
+      "input_tokens": 7480,
+      "output_tokens": 4096,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07099",
+      "prediction": "",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 69326.23895300002,
+      "input_tokens": 6319,
+      "output_tokens": 4096,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-22T17:39:55+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": null,
+  "judge_model_revision": null,
+  "judge_prompt_hash": null
+}
