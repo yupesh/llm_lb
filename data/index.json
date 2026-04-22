@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T05:36:13+00:00",
+  "generated_at": "2026-04-22T07:57:23+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -1720,6 +1720,21 @@
       "p95_latency_ms": 2622.7210419999947,
       "cost_usd": null,
       "result_file": "tasks/essay_holistic_scoring_condensed/results/gpt-oss-120b@vllm__2026-04-20T01-22-26Z.json"
+    },
+    {
+      "task_id": "essay_vocabulary_scoring_condensed",
+      "task_version": "1.1",
+      "model_id": "qwen3-235B-A22B@vllm",
+      "score": 0.4761904761904763,
+      "metrics": {
+        "accuracy": 0.5,
+        "macro_f1": 0.4163483575248281,
+        "qwk": 0.4761904761904763
+      },
+      "tps": 72.4179047347081,
+      "p95_latency_ms": 6793.017847000002,
+      "cost_usd": null,
+      "result_file": "tasks/essay_vocabulary_scoring_condensed/results/qwen3-235B-A22B@vllm__2026-04-22T06-02-55Z.json"
     },
     {
       "task_id": "extractive_qa",
