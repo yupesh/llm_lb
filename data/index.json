@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T21:26:36+00:00",
+  "generated_at": "2026-04-22T21:26:58+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -4847,6 +4847,19 @@
       "result_file": "tasks/text2sql_ambiguity/results/glm5.1@llama__2026-04-21T00-30-11Z.json"
     },
     {
+      "task_id": "text2sql_ambiguity",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.44166666666666665,
+      "metrics": {
+        "judge_score": 0.44166666666666665
+      },
+      "tps": 46.19503773053169,
+      "p95_latency_ms": 41707.260477,
+      "cost_usd": null,
+      "result_file": "tasks/text2sql_ambiguity/results/glm5-awq@vllm__2026-04-22T15-09-52Z.json"
+    },
+    {
       "task_id": "text2sql_bird",
       "task_version": "1.0",
       "model_id": "gpt-oss-120b@vllm",
@@ -4966,6 +4979,19 @@
     {
       "task_id": "text2sql_bird",
       "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.5636363636363636,
+      "metrics": {
+        "judge_score": 0.5636363636363636
+      },
+      "tps": 45.60280076259212,
+      "p95_latency_ms": 100521.57233999998,
+      "cost_usd": null,
+      "result_file": "tasks/text2sql_bird/results/glm5-awq@vllm__2026-04-22T15-25-50Z.json"
+    },
+    {
+      "task_id": "text2sql_bird",
+      "task_version": "1.0",
       "model_id": "gemma-4-31b-it@vllm",
       "score": 0.5454545454545454,
       "metrics": {
@@ -5045,6 +5071,20 @@
       "p95_latency_ms": 2514.8416179999986,
       "cost_usd": null,
       "result_file": "tasks/text_classification/results/qwen3-235B-A22B@vllm__2026-04-22T03-34-05Z.json"
+    },
+    {
+      "task_id": "text_classification",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 1.0,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "tps": 38.59940122521913,
+      "p95_latency_ms": 6051.496017000005,
+      "cost_usd": null,
+      "result_file": "tasks/text_classification/results/glm5-awq@vllm__2026-04-22T15-26-58Z.json"
     },
     {
       "task_id": "text_classification",
@@ -5199,6 +5239,20 @@
       "p95_latency_ms": 960.7364139999959,
       "cost_usd": null,
       "result_file": "tasks/topic_classification/results/gpt-oss-120b@vllm__2026-04-20T01-56-01Z.json"
+    },
+    {
+      "task_id": "topic_classification",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 1.0,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "tps": 42.23556390248073,
+      "p95_latency_ms": 8590.776086000005,
+      "cost_usd": null,
+      "result_file": "tasks/topic_classification/results/glm5-awq@vllm__2026-04-22T15-28-33Z.json"
     },
     {
       "task_id": "topic_classification",
