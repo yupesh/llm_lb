@@ -1,0 +1,154 @@
+{
+  "model_id": "qwen3.5-27b@vllm",
+  "model_revision": "2026-04-11",
+  "task_id": "writing_eval_n10_no_target_ann_loocv_error_retrieval_with_m_serial",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "b603bc66a0195308",
+  "llm_params": {
+    "temperature": 0.15,
+    "top_p": 0.95,
+    "max_tokens": 4096,
+    "seed": null
+  },
+  "metrics": {
+    "accuracy": 0.2,
+    "adjacent_accuracy": 0.5,
+    "qwk": -0.5151515151515151
+  },
+  "tps": 58.68199580832233,
+  "p95_latency_ms": 70019.451674,
+  "n_samples": 10,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "sample_07001",
+      "prediction": "",
+      "expected": "A2",
+      "correct": false,
+      "latency_ms": 70019.451674,
+      "input_tokens": 2706,
+      "output_tokens": 4096,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07002",
+      "prediction": "B1",
+      "expected": "B1",
+      "correct": true,
+      "latency_ms": 69762.42847,
+      "input_tokens": 2842,
+      "output_tokens": 4096,
+      "raw_output": "\n\n{\n  \"cefr_level\": \"B1\",\n  \"level_basis\": {\n    \"textinspector_level_raw\": null,\n    \"flesch_kincaid\": null,\n    \"rule_notes\": \"Holistic estimation based on vocabulary range (B1-B2), grammar control (B1 with systematic errors in articles/word order), and discourse marker usage. Errors prevent B2 classification.\"\n  },\n  \"communicative_task_achievement\": \"Yes\",\n  \"communicative_task_notes\": [\n    \"Addresses the prompt by responding to the student's concern.\",\n    \"Provides specific tips on organizing time (weekends, breaks, asking for help).\",\n    \"Exceeds the 10-sentence requirement (approx. 14 sentences), which is acceptable.\"\n  ],\n  \"grammar_score\": 0.75,\n  \"corrections\": [\n    \"decition -> decision (Lexis; A2; Low)\",\n    \"each my day -> each of my days (Word order; B1; Medium)\",\n    \"other's works -> others' work (Grammar; B1; Medium)\",\n    \"But very important thing -> But a very important thing (Grammar; A2; Low)\",\n    \"I chose the same way of studying, I try -> I chose the same way of studying; I try (Sentence structure; B1; Medium)\",\n    \"tips how to get it -> tips on how to get it (Grammar; B1; Low)\"\n  ],\n  \"errors_by_category\": {\n    \"Lexis\": [\n      {\n        \"excerpt\": \"decition\",\n        \"correction\": \"decision\",\n        \"comment\": \"Spelling error of a common noun.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A2\"\n      }\n    ],\n    \"Grammar\": [\n      {\n        \"excerpt\": \"other's works\",\n        \"correction\": \"others' work\",\n        \"comment\": \"Incorrect plural possessive and countability of 'work'.\",\n        \"impact\": \"Medium\",\n        \"cefr_threshold\": \"B1\"\n      },\n      {\n        \"excerpt\": \"But very important thing\",\n        \"correction\": \"But a very important thing\",\n        \"comment\": \"Missing indefinite article before singular countable noun phrase.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A2\"\n      },\n      {\n        \"excerpt\": \"tips how to get it\",\n        \"correction\": \"tips on how to get it\",\n        \"comment\": \"Missing preposition 'on' after 'tips'.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"B1\"\n      }\n    ],\n    \"Punctuation\": [],\n    \"Word order\": [\n      {\n        \"excerpt\": \"each my day\",\n        \"correction\": \"each of my days\",\n        \"comment\": \"Incorrect determiner order; 'each' requires 'of' or plural noun structure.\",\n        \"impact\": \"Medium\",\n        \"cefr_threshold\": \"B1\"\n      }\n    ],\n    \"Sentence structure\": [\n      {\n        \"excerpt\": \"I chose the same way of studying, I try\",\n        \"correction\": \"I chose the same way of studying; I try\",\n        \"comment\": \"Comma splice joining two independent clauses.\",\n        \"impact\": \"Medium\",\n        \"cefr_threshold\": \"B1\"\n      }\n    ],\n    \"Text organization\": [],\n    \"Discourse markers\": [],\n    \"Rhetorical features\": [],\n    \"Register\": [],\n    \"Incomprehensibility\": []\n",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07003",
+      "prediction": "",
+      "expected": "B1",
+      "correct": false,
+      "latency_ms": 69887.29838500003,
+      "input_tokens": 2772,
+      "output_tokens": 4096,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07005",
+      "prediction": "B1",
+      "expected": "B1",
+      "correct": true,
+      "latency_ms": 69691.05250399996,
+      "input_tokens": 2736,
+      "output_tokens": 4096,
+      "raw_output": "\n\n{\n  \"cefr_level\": \"B1\",\n  \"level_basis\": {\n    \"textinspector_level_raw\": null,\n    \"flesch_kincaid\": null,\n    \"rule_notes\": \"Holistic estimation: Vocabulary shows B1/B2 range (prioritize, productivity, task-management), but frequent basic errors in articles, spelling, and word order (indirect questions) anchor the level at B1.\"\n  },\n  \"communicative_task_achievement\": \"Yes\",\n  \"communicative_task_notes\": [\n    \"Addresses the prompt directly (empathy + tips).\",\n    \"Meets sentence count requirement (approx. 12 sentences vs 10 required).\",\n    \"Provides specific advice on organizing days.\"\n  ],\n  \"grammar_score\": 0.65,\n  \"corrections\": [\n    \"Hellow -> Hello (Lexis; A1; Low)\",\n    \"and me to -> me too (Grammar; A2; Medium)\",\n    \"In first semester -> In the first semester (Grammar; A2; Low)\",\n    \"wery -> very (Lexis; A1; Low)\",\n    \"big problem -> a big problem (Grammar; A2; Low)\",\n    \"how can I fix it -> how I can fix it (Word order; B1; Medium)\",\n    \"give you them -> give them to you (Word order; B1; Medium)\",\n    \"enouth -> enough (Lexis; A1; Low)\",\n    \"cause -> because (Register; B1; Low)\",\n    \"bust -> boost (Lexis; B1; High)\",\n    \"do sport well -> do sports / exercise (Lexis; B1; Medium)\"\n  ],\n  \"errors_by_category\": {\n    \"Lexis\": [\n      {\n        \"excerpt\": \"Hellow\",\n        \"correction\": \"Hello\",\n        \"comment\": \"Spelling error.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A1\"\n      },\n      {\n        \"excerpt\": \"wery\",\n        \"correction\": \"very\",\n        \"comment\": \"Spelling error.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A1\"\n      },\n      {\n        \"excerpt\": \"enouth\",\n        \"correction\": \"enough\",\n        \"comment\": \"Spelling error.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A1\"\n      },\n      {\n        \"excerpt\": \"bust your productivity\",\n        \"correction\": \"boost your productivity\",\n        \"comment\": \"Incorrect word choice; 'bust' means break, 'boost' means increase.\",\n        \"impact\": \"High\",\n        \"cefr_threshold\": \"B1\"\n      },\n      {\n        \"excerpt\": \"do sport well\",\n        \"correction\": \"do sports / exercise\",\n        \"comment\": \"Awkward collocation.\",\n        \"impact\": \"Medium\",\n        \"cefr_threshold\": \"B1\"\n      }\n    ],\n    \"Grammar\": [\n      {\n        \"excerpt\": \"and me to\",\n        \"correction\": \"me too\",\n        \"comment\": \"Incorrect particle usage.\",\n        \"impact\": \"Medium\",\n        \"cefr_threshold\": \"A2\"\n      },\n      {\n        \"excerpt\": \"In first semester\",\n        \"correction\": \"In the first semester\",\n        \"comment\": \"Missing definite article.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A2\"\n      },\n      {\n        \"excerpt\": \"wery big problem\",\n        \"correction\": \"a very big problem\",\n        \"comment\": \"Missing indefinite article.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A2\"\n      }\n    ],\n    \"Punctuation\": [],\n    \"Word order\": [\n      {\n        \"excerpt\": \"how can I fix it\",\n        \"correction\": \"how I can fix it\",\n        \"comment\": \"Indirect question requires statement word order.\",\n        \"impact\": \"Medium\",\n        \"cefr_threshold\": \"B1\"\n      },\n      {\n        \"excerpt\": \"give you them\",\n        \"correction\": \"give them to you\",\n        \"comment\": \"Pronoun placement in ph",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07006",
+      "prediction": "",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 69893.24699300005,
+      "input_tokens": 2878,
+      "output_tokens": 4096,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07018",
+      "prediction": "B1",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 69559.36647599998,
+      "input_tokens": 2741,
+      "output_tokens": 4096,
+      "raw_output": "\n\n{\n  \"cefr_level\": \"B1\",\n  \"level_basis\": {\n    \"textinspector_level_raw\": null,\n    \"flesch_kincaid\": null,\n    \"rule_notes\": \"Holistic assessment based on vocabulary range (productive, satisfied), grammar control (conditionals, relative clauses), and error patterns (articles, agreement, punctuation). Errors are typical of B1; complexity attempts suggest B1+ but control limits to B1.\"\n  },\n  \"communicative_task_achievement\": \"Yes\",\n  \"communicative_task_notes\": [\n    \"Addresses the prompt by responding to the student's concern.\",\n    \"Provides specific tips (TODO list, breaks) as requested.\",\n    \"Meets the sentence count requirement (approximately 12-13 sentences).\"\n  ],\n  \"grammar_score\": 0.75,\n  \"corrections\": [\n    \"I think, that -> I think that (Punctuation; A2; Low)\",\n    \"for TODO list -> for a TODO list (Grammar; A2; Low)\",\n    \"this tips -> these tips (Grammar; A2; Medium)\",\n    \"would't -> wouldn't (Grammar; A2; Low)\",\n    \"task..., your mind -> task...; your mind (Punctuation; B1; Medium)\"\n  ],\n  \"errors_by_category\": {\n    \"Lexis\": [],\n    \"Grammar\": [\n      {\n        \"excerpt\": \"for TODO list\",\n        \"correction\": \"for a TODO list\",\n        \"comment\": \"Missing indefinite article before singular countable noun.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A2\"\n      },\n      {\n        \"excerpt\": \"this tips\",\n        \"correction\": \"these tips\",\n        \"comment\": \"Demonstrative adjective must agree in number with the noun (plural).\",\n        \"impact\": \"Medium\",\n        \"cefr_threshold\": \"A2\"\n      },\n      {\n        \"excerpt\": \"would't\",\n        \"correction\": \"wouldn't\",\n        \"comment\": \"Incorrect spelling of contraction.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A2\"\n      }\n    ],\n    \"Punctuation\": [\n      {\n        \"excerpt\": \"I think, that\",\n        \"correction\": \"I think that\",\n        \"comment\": \"Comma is not used before 'that' in noun clauses.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A2\"\n      },\n      {\n        \"excerpt\": \"task for a long time, your mind needs\",\n        \"correction\": \"task for a long time; your mind needs\",\n        \"comment\": \"Comma splice: two independent clauses joined by a comma. Use semicolon or conjunction.\",\n        \"impact\": \"Medium\",\n        \"cefr_threshold\": \"B1\"\n      }\n    ],\n    \"Word order\": [],\n    \"Sentence structure\": [],\n    \"Text organization\": [],\n    \"Discourse markers\": [],\n    \"Rhetorical features\": [],\n    \"Register\": [],\n    \"Incomprehensibility\": []\n  },\n  \"strengths\": [\n    {\n      \"item\": \"productive\",\n      \"cefr_level\": \"B2\",\n      \"category\": \"Vocabulary\",\n      \"note\": \"Appropriate use of abstract adjective to describe work output.\"\n    },\n    {\n     ",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07019",
+      "prediction": "",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 69791.36126600008,
+      "input_tokens": 2762,
+      "output_tokens": 4096,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07070",
+      "prediction": "B1",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 69834.49861899999,
+      "input_tokens": 2804,
+      "output_tokens": 4096,
+      "raw_output": "\n\n{\n  \"cefr_level\": \"B1\",\n  \"level_basis\": {\n    \"textinspector_level_raw\": null,\n    \"flesch_kincaid\": null,\n    \"rule_notes\": \"Holistic estimation based on vocabulary range, grammar control, and error patterns. Conservative choice due to article errors despite complex sentence structures.\"\n  },\n  \"communicative_task_achievement\": \"Yes\",\n  \"communicative_task_notes\": [\n    \"Clearly states opinion (disagreement with the prompt's premise).\",\n    \"Provides two distinct arguments (benefits of work vs. benefits of university).\"\n  ],\n  \"grammar_score\": 0.75,\n  \"corrections\": [\n    \"cannnot -> cannot (Punctuation; A1; Low)\",\n    \"there is different situation -> there is a different situation (Grammar; A2; Low)\",\n    \"in other difficult area -> in other difficult areas (Grammar; A2; Low)\",\n    \"In the university -> At university (Grammar; B1; Low)\",\n    \"question.The -> question. The (Punctuation; A1; Low)\",\n    \"And knowledge that university gives -> The knowledge that university gives (Grammar; A2; Low)\"\n  ],\n  \"errors_by_category\": {\n    \"Lexis\": [],\n    \"Grammar\": [\n      {\n        \"excerpt\": \"there is different situation\",\n        \"correction\": \"there is a different situation\",\n        \"comment\": \"Missing indefinite article before singular countable noun.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A2\"\n      },\n      {\n        \"excerpt\": \"in other difficult area\",\n        \"correction\": \"in other difficult areas\",\n        \"comment\": \"Pluralization or article usage required for general reference.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A2\"\n      },\n      {\n        \"excerpt\": \"In the university\",\n        \"correction\": \"At university\",\n        \"comment\": \"Preposition and article usage for general institution reference.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"B1\"\n      },\n      {\n        \"excerpt\": \"And knowledge that university gives\",\n        \"correction\": \"The knowledge that university gives\",\n        \"comment\": \"Definite article required for specific noun phrase.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A2\"\n      }\n    ],\n    \"Punctuation\": [\n      {\n        \"excerpt\": \"cannnot\",\n        \"correction\": \"cannot\",\n        \"comment\": \"Spelling error/typo.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A1\"\n      },\n      {\n        \"excerpt\": \"question.The\",\n        \"correction\": \"question. The\",\n        \"comment\": \"Missing space after full stop.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A1\"\n      }\n    ],\n    \"Word order\": [],\n    \"Sentence structure\": [],\n    \"Text organization\": [],\n    \"Discourse markers\": [],\n    \"Rhetorical features\": [],\n    \"Register\": [],\n    \"Incomprehensibility\": []\n  },\n ",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07087",
+      "prediction": "A2",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 69987.91458699998,
+      "input_tokens": 2818,
+      "output_tokens": 4096,
+      "raw_output": "\n\n{\n  \"cefr_level\": \"A2\",\n  \"level_basis\": {\n    \"textinspector_level_raw\": null,\n    \"flesch_kincaid\": null,\n    \"rule_notes\": \"Holistic estimation based on frequent basic grammatical errors (S-V agreement, verb forms) despite B1 vocabulary range. Lower level selected for reliability per methodology.\"\n  },\n  \"communicative_task_achievement\": \"Yes\",\n  \"communicative_task_notes\": [\n    \"Addresses the prompt topic regarding environmental attention\",\n    \"Follows the 4-paragraph structure requirement\"\n  ],\n  \"grammar_score\": 0.55,\n  \"corrections\": [\n    \"has became -> has become (Grammar; A2; High)\",\n    \"pollutions -> pollution (Grammar; A2; Medium)\",\n    \"cause politicians do not look -> causes politicians not to look (Grammar; B1; High)\",\n    \"People who cares -> People who care (Grammar; A2; Medium)\",\n    \"dumb -> trivial (Register; B1; Medium)\",\n    \"more clear -> cleaner (Lexis; B1; Low)\",\n    \"Collecting all thoughts, only people responsible -> In conclusion, only people are responsible (Sentence structure; B1;",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07099",
+      "prediction": "B1",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 67221.15915100006,
+      "input_tokens": 2813,
+      "output_tokens": 3958,
+      "raw_output": "\n\n{\n  \"cefr_level\": \"B1\",\n  \"level_basis\": {\n    \"textinspector_level_raw\": null,\n    \"flesch_kincaid\": null,\n    \"rule_notes\": \"Holistic assessment based on vocabulary range, grammar control, and error density. Vocabulary shows B2 attempts (fundamental, self-assured) but mechanical errors (spacing, spelling) and fixed phrase errors (On my point of view) anchor the level at B1.\"\n  },\n  \"communicative_task_achievement\": \"Yes\",\n  \"communicative_task_notes\": [\n    \"Addresses the prompt directly regarding hard work vs. luck.\",\n    \"Presents a clear opinion and supports it with examples and reasoning.\",\n    \"Includes a clear conclusion summarizing the stance.\"\n  ],\n  \"grammar_score\": 0.75,\n  \"corrections\": [\n    \"werelucky -> were lucky (Punctuation; A2; Low)\",\n    \"talant -> talent (Lexis; A2; Low)\",\n    \"self-assured . -> self-assured. (Punctuation; A2; Low)\",\n    \"fundamental . -> fundamental. (Punctuation; A2; Low)\",\n    \"alwaysbeats -> always beats (Punctuation; A2; Low)\",\n    \"On my point of view -> From my point of view (Lexis; B1; Medium)\",\n    \"bring you up -> lift you up (Lexis; B1; Medium)\",\n    \"No luck is helpful -> Luck is not helpful (Grammar; B1; Medium)\"\n  ],\n  \"errors_by_category\": {\n    \"Lexis\": [\n      {\n        \"excerpt\": \"talant\",\n        \"correction\": \"talent\",\n        \"comment\": \"Spelling error of a common noun.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A2\"\n      },\n      {\n        \"excerpt\": \"On my point of view\",\n        \"correction\": \"From my point of view\",\n        \"comment\": \"Incorrect preposition in fixed idiom.\",\n        \"impact\": \"Medium\",\n        \"cefr_threshold\": \"B1\"\n      },\n      {\n        \"excerpt\": \"bring you up\",\n        \"correction\": \"lift you up\",\n        \"comment\": \"Collocation error; 'bring up' usually refers to raising children.\",\n        \"impact\": \"Medium\",\n        \"cefr_threshold\": \"B1\"\n      }\n    ],\n    \"Grammar\": [\n      {\n        \"excerpt\": \"No luck is helpful\",\n        \"correction\": \"Luck is not helpful\",\n        \"comment\": \"Awkward negation structure; 'No luck' implies zero luck exists rather than luck being ineffective.\",\n        \"impact\": \"Medium\",\n        \"cefr_threshold\": \"B1\"\n      }\n    ],\n    \"Punctuation\": [\n      {\n        \"excerpt\": \"werelucky\",\n        \"correction\": \"were lucky\",\n        \"comment\": \"Missing space between words.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A2\"\n      },\n      {\n        \"excerpt\": \"self-assured .\",\n        \"correction\": \"self-assured.\",\n        \"comment\": \"Incorrect spacing before punctuation.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A2\"\n      },\n      {\n        \"excerpt\": \"fundamental .\",\n        \"correction\": \"fundamental.\",\n        \"comment\": \"Incorrect spacing before punctuation.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A2\"\n      },\n      {\n        \"excerpt\": \"alwaysbeats\",\n        \"correction\": \"always beats\",\n        \"comment\": \"Missing space between words.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"A2\"\n      }\n    ],\n    \"Word order\": [],\n    \"Sentence structure\": [],\n    \"Text organization\": [],\n    \"Discourse markers\": [],\n    \"Rhetorical features\": [],\n    \"Register\": [],\n    \"Incomprehensibility\": []\n  },\n  \"strengths\": [\n    {\n      \"item\": \"fundamental\",\n      \"cefr_level\": \"B2\",\n      \"category\": \"Vocabulary\",\n      \"note\": \"Good use of abstract adjective, though spacing error present.\"\n    },\n    {\n      \"item\": \"countless examples\",\n      \"cefr_level\": \"B2\",\n      \"category\": \"Vocabulary\",\n      \"note\": \"Effective quantifier phrase for argumentation.\"\n    },\n    {\n      \"item\": \"self-assured\",\n      \"cefr_level\": \"B2\",\n      \"category\": \"Vocabulary\",\n      \"note\": \"Advanced adjective used correctly in context.\"\n    },\n    {\n      \"item\": \"On the other hand\",\n      \"cefr_level\": \"B2\",\n      \"category\": \"Discourse marker\",\n      \"note\": \"Correct use of contrastive connector.\"\n    },\n    {\n      \"item\": \"combination of hard work and luck is the true key\",\n      \"cefr_level\": \"B2\",\n      \"category\": \"Sentence structure\",\n      \"note\": \"Complex noun phrase used effectively in conclusion.\"\n    }\n  ],\n  \"feedback\": \"Level B1. The essay successfully addresses the task with a clear opinion and logical structure. Vocabulary range shows B2 potential (fundamental, self-assured), but mechanical errors (spacing, spelling) and fixed phrase inaccuracies (On my point of view) prevent a higher rating. Grammar is generally controlled but needs refinement in negation and collocations.\",\n  \"next_steps\": [\n    \"Proofread carefully to fix spacing and spelling errors (e.g., 'talant', 'werelucky').\",\n    \"Review common idioms and prepositions (e.g., 'From my point of view').\",\n    \"Practice collocations related to success and effort to avoid L1 interference.\"\n  ]\n}",
+      "judge_raw_score": null,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-22T16:53:57+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": null,
+  "judge_model_revision": null,
+  "judge_prompt_hash": null
+}
