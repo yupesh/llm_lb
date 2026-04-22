@@ -1,0 +1,154 @@
+{
+  "model_id": "qwen3.5-27b@vllm",
+  "model_revision": "2026-04-11",
+  "task_id": "writing_eval_n10_no_target_ann_loocv_fewshot_with_m_serial",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "b603bc66a0195308",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 0.95,
+    "max_tokens": 4096,
+    "seed": null
+  },
+  "metrics": {
+    "accuracy": 0.0,
+    "adjacent_accuracy": 0.2,
+    "qwk": -0.47272727272727266
+  },
+  "tps": 59.29157829986296,
+  "p95_latency_ms": 69673.18720700001,
+  "n_samples": 10,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "sample_07001",
+      "prediction": "",
+      "expected": "A2",
+      "correct": false,
+      "latency_ms": 69673.18720700001,
+      "input_tokens": 7458,
+      "output_tokens": 4096,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07002",
+      "prediction": "",
+      "expected": "B1",
+      "correct": false,
+      "latency_ms": 68950.70534199996,
+      "input_tokens": 5968,
+      "output_tokens": 4096,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07003",
+      "prediction": "",
+      "expected": "B1",
+      "correct": false,
+      "latency_ms": 68860.41543299996,
+      "input_tokens": 5399,
+      "output_tokens": 4096,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07005",
+      "prediction": "",
+      "expected": "B1",
+      "correct": false,
+      "latency_ms": 69369.41318100003,
+      "input_tokens": 6035,
+      "output_tokens": 4096,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07006",
+      "prediction": "",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 68550.125379,
+      "input_tokens": 4857,
+      "output_tokens": 4096,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07018",
+      "prediction": "",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 69339.94003100002,
+      "input_tokens": 6119,
+      "output_tokens": 4096,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07019",
+      "prediction": "B1",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 68940.9943710001,
+      "input_tokens": 6046,
+      "output_tokens": 4096,
+      "raw_output": "\n\n{\n  \"cefr_level\": \"B1\",\n  \"level_basis\": {\n    \"textinspector_level_raw\": null,\n    \"flesch_kincaid\": null,\n    \"rule_notes\": \"Holistic estimation. Vocabulary shows B2 range (allocate, priorities, exhausted), but grammatical control remains B1 (articles, adverbs, countability, capitalization). Grammar errors prevent B2 classification.\"\n  },\n  \"communicative_task_achievement\": \"Yes\",\n  \"communicative_task_notes\": [\n    \"Addresses the prompt topic directly (university study stress).\",\n    \"Meets the sentence count requirement (approximately 10 sentences).\",\n    \"Provides relevant tips on time management and prioritization.\"\n  ],\n  \"grammar_score\": 0.65,\n  \"corrections\": [\n    \"Everyone got same time -> Everyone gets the same time (Grammar; B1; Medium)\",\n",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07070",
+      "prediction": "",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 69071.80098200002,
+      "input_tokens": 6701,
+      "output_tokens": 4096,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07087",
+      "prediction": "B1",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 68330.41203999994,
+      "input_tokens": 6100,
+      "output_tokens": 4067,
+      "raw_output": "\n\n{\n  \"cefr_level\": \"B1\",\n  \"level_basis\": {\n    \"textinspector_level_raw\": null,\n    \"flesch_kincaid\": null,\n    \"rule_notes\": \"Holistic estimation based on vocabulary range (B1-B2) offset by frequent grammatical errors (verb forms, agreement, sentence fragments) typical of B1. Conservative choice applied due to error density.\"\n  },\n  \"communicative_task_achievement\": \"Yes\",\n  \"communicative_task_notes\": [\n    \"Addresses the prompt regarding attention to environmental problems.\",\n    \"Follows the 4-paragraph structure requirement.\"\n  ],\n  \"grammar_score\": 0.65,\n  \"corrections\": [\n    \"has became -> has become (Grammar; B1; High)\",\n    \"pollutions -> pollution (Lexis; A2; Medium)\",\n    \"climate changes is -> climate change is (Grammar; B1; Medium)\",\n    \"Collecting all thoughts, only people responsible... -> In conclusion, only people are responsible... (Sentence structure; B1; High)\",\n    \"more clear -> cleaner (Lexis; B1; Low)\"\n  ],\n  \"errors_by_category\": {\n    \"Lexis\": [\n      {\n        \"excerpt\": \"pollutions\",\n        \"correction\": \"pollution\",\n        \"comment\": \"Pollution is generally uncountable in this context.\",\n        \"impact\": \"Medium\",\n        \"cefr_threshold\": \"A2\"\n      },\n      {\n        \"excerpt\": \"more clear\",\n        \"correction\": \"cleaner\",\n        \"comment\": \"Collocation error; 'cleaner' is the standard comparative for environmental context.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"B1\"\n      }\n    ],\n    \"Grammar\": [\n      {\n        \"excerpt\": \"has became\",\n        \"correction\": \"has become\",\n        \"comment\": \"Past participle of 'become' is 'become', not 'became'.\",\n        \"impact\": \"High\",\n        \"cefr_threshold\": \"B1\"\n      },\n      {\n        \"excerpt\": \"climate changes is\",\n        \"correction\": \"climate change is\",\n        \"comment\": \"Subject-verb agreement and noun usage; 'climate change' is usually singular uncountable.\",\n        \"impact\": \"Medium\",\n        \"cefr_threshold\": \"B1\"\n      },\n      {\n        \"excerpt\": \"People who cares\",\n        \"correction\": \"People who care\",\n        \"comment\": \"Subject-verb agreement; 'People' is plural.\",\n        \"impact\": \"Medium\",\n        \"cefr_threshold\": \"A2\"\n      },\n      {\n        \"excerpt\": \"It cause politicians do not look\",\n        \"correction\": \"It causes politicians not to look\",\n        \"comment\": \"Causative structure and agreement error.\",\n        \"impact\": \"High\",\n        \"cefr_threshold\": \"B1\"\n      }\n    ],\n    \"Punctuation\": [],\n    \"Word order\": [],\n    \"Sentence structure\": [\n      {\n        \"excerpt\": \"Collecting all thoughts, only people responsible for pollutions and environmental health problems.\",\n        \"correction\": \"In conclusion, only people are responsible for pollution and environmental health problems.\",\n        \"comment\": \"Sentence fragment; lacks a main verb.\",\n        \"impact\": \"High\",\n        \"cefr_threshold\": \"B1\"\n      }\n    ],\n    \"Text organization\": [],\n    \"Discourse markers\": [\n      {\n        \"excerpt\": \"Collecting all thoughts\",\n        \"correction\": \"In conclusion\",\n        \"comment\": \"Non-standard conclusion marker for formal essay.\",\n        \"impact\": \"Low\",\n        \"cefr_threshold\": \"B1\"\n      }\n    ],\n    \"Rhetorical features\": [],\n    \"Register\": [],\n    \"Incomprehensibility\": []\n  },\n  \"strengths\": [\n    {\n      \"item\": \"eco-activists\",\n      \"cefr_level\": \"B2\",\n      \"category\": \"Vocabulary\",\n      \"note\": \"Specific topic vocabulary used correctly.\"\n    },\n    {\n      \"item\": \"tornados\",\n      \"cefr_level\": \"B2\",\n      \"category\": \"Vocabulary\",\n      \"note\": \"Advanced vocabulary item used to support argument.\"\n    },\n    {\n      \"item\": \"4-paragraph structure\",\n      \"cefr_level\": \"B2\",\n      \"category\": \"Text organization\",\n      \"note\": \"Successfully followed the required essay structure.\"\n    }\n  ],\n  \"feedback\": \"Level B1. The essay addresses the task well with a clear 4-paragraph structure. Vocabulary shows ambition (B2 items like 'eco-activists'), but grammatical control limits the level. Key patterns to fix: verb forms ('has become'), subject-verb agreement ('people care'), and uncountable nouns ('pollution'). Avoid sentence fragments in conclusions.\",\n  \"next_steps\": [\n    \"Review past participles and perfect tense forms.\",\n    \"Practice subject-verb agreement with plural subjects.\",\n    \"Study countable vs. uncountable nouns in environmental contexts.\"\n  ]\n}",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07099",
+      "prediction": "",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 69247.13397699998,
+      "input_tokens": 5687,
+      "output_tokens": 4096,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-22T17:17:15+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": null,
+  "judge_model_revision": null,
+  "judge_prompt_hash": null
+}
