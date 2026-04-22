@@ -1,0 +1,21 @@
+{
+  "task_id": "writing_eval_n10_no_target_ann_loocv_fewshot_with_m_serial",
+  "task_version": "1.0",
+  "primary_metric": "qwk",
+  "ranking": [
+    {
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.0,
+      "metrics": {
+        "accuracy": 0.3,
+        "adjacent_accuracy": 1.0,
+        "qwk": 0.0
+      },
+      "tps": 21.93817997875729,
+      "p95_latency_ms": 352553.44173,
+      "cost_usd": null,
+      "result_file": "results/qwen3-30b@vllm__2026-04-22T11-15-41Z.json"
+    }
+  ],
+  "updated_at": "2026-04-22T12:58:38+00:00"
+}
