@@ -1,0 +1,154 @@
+{
+  "model_id": "qwen3-30b@vllm",
+  "model_revision": "2025-12-01",
+  "task_id": "writing_eval_n10_with_ann_loocv_fewshot_no_m_serial",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "b603bc66a0195308",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 0.8,
+    "max_tokens": 4096,
+    "seed": null
+  },
+  "metrics": {
+    "accuracy": 0.7,
+    "adjacent_accuracy": 1.0,
+    "qwk": 0.5714285714285715
+  },
+  "tps": 32.563564785612414,
+  "p95_latency_ms": 36879.293739999994,
+  "n_samples": 10,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "sample_07001",
+      "prediction": "B1",
+      "expected": "A2",
+      "correct": false,
+      "latency_ms": 34052.62461700001,
+      "input_tokens": 6157,
+      "output_tokens": 1098,
+      "raw_output": "\n\n{\n    \"cefr_level\": \"B1\",\n    \"grammar_score\": 0.65,\n    \"corrections\": [\n        \"i → I\",\n        \"simular → similar\",\n        \"Here is → Here are\",\n        \"this → these\",\n        \"spend a lot of time to → spend a lot of time on\",\n        \"leave from useless groups → unfollow useless groups\",\n        \"at VK → on VK\",\n        \"enought → enough\",\n        \"I hope, my → I hope. My\",\n        \"write me at personal messages → message me\"\n    ],\n    \"feedback\": \"The text demonstrates basic time-management advice with clear structure. While there are grammatical errors (e.g., subject-verb agreement, prepositions) and spelling mistakes, the vocabulary is appropriate for the topic. The student uses simple sentences and some complex structures (e.g., 'You can find this apps at Play Market'). With more attention to grammar and vocabulary accuracy, this could reach B2. Focus on improving preposition usage and sentence variety to progress.\"\n}",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07002",
+      "prediction": "B2",
+      "expected": "B1",
+      "correct": false,
+      "latency_ms": 21270.473942000008,
+      "input_tokens": 4959,
+      "output_tokens": 643,
+      "raw_output": "\n\n{\n    \"cefr_level\": \"B2\",\n    \"grammar_score\": 0.75,\n    \"corrections\": [\n        \"decition → decision\",\n        \"tips how → tips on how\",\n        \"Firstly → Firstly,\",\n        \"options how → options for\",\n        \"each my day → each day\",\n        \"rest within them → rest during those breaks\",\n        \"other's works → others' work\",\n        \"very important thing → a very important thing\"\n    ],\n    \"feedback\": \"Your text demonstrates B2-level proficiency with complex sentence structures and reasonable vocabulary. You effectively use discourse markers (e.g., 'However,' 'For example') and offer practical time-management strategies. While there are grammatical errors (e.g., word order, prepositions) and some awkward phrasing, they don't impede overall comprehension. To improve, focus on preposition usage ('how to organize' vs. 'options how') and article placement ('a very important thing'). The text shows clear rhetorical organization and attempt at idiomatic expressions, which justifies a B2 rating.\"\n}",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07003",
+      "prediction": "B1",
+      "expected": "B1",
+      "correct": true,
+      "latency_ms": 31742.551852999994,
+      "input_tokens": 5145,
+      "output_tokens": 1019,
+      "raw_output": "\n\n{\n    \"cefr_level\": \"B1\",\n    \"grammar_score\": 0.5,\n    \"corrections\": [\n        \"subscribers → readers\",\n        \"say → tell\",\n        \"abot → about\",\n        \"what → that\",\n        \"with very hard lifestyle → with a demanding lifestyle\",\n        \"Firstly → Firstly,\",\n        \"I reccommend more communicate → I recommend communicating more\",\n        \"look to life simplie → look at life simply\",\n        \"somr motivation → some motivation\",\n        \"In futcher → In the future\",\n        \"networking give → networking gives\",\n        \"a lot opportunity → a lot of opportunities\",\n        \"need count → need to count\",\n        \"hasn't free time → don't have free time\",\n        \"expirience → experience\",\n        \"habbits → habits\",\n        \"realy → really\",\n        \"Delite them → Delete them\",\n        \"beleave → believe\",\n        \"unlacky → unlucky\"\n    ],\n    \"feedback\": \"Your text shows basic organization with clear tips, but frequent grammar and spelling errors hinder clarity. While you attempt complex structures (e.g., 'time management'), simpler vocabulary and sentence patterns limit the score. Focus on verb tenses, prepositions, and spelling to improve accuracy. The use of discourse markers like 'Firstly' and 'Secondly' is a strength, but more precise word choices (e.g., 'networking gives' instead of 'networking give') would enhance readability.\"\n}",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07005",
+      "prediction": "B1",
+      "expected": "B1",
+      "correct": true,
+      "latency_ms": 36879.293739999994,
+      "input_tokens": 4870,
+      "output_tokens": 1225,
+      "raw_output": "\n\n{\n    \"cefr_level\": \"B1\",\n    \"grammar_score\": 0.6,\n    \"corrections\": [\n        \"Hellow → Hello\",\n        \"to → and\",\n        \"wery → very\",\n        \"how can I fix → how to fix\",\n        \"I will give you them → I will give you these tips\",\n        \"enouth → enough\",\n        \"bust → boost\"\n    ],\n    \"feedback\": \"Your text shows basic organization and some complex ideas (e.g., 'task-management system', 'prioritize'). While there are multiple grammar/spelling errors, the core message is clear. Focus on improving verb tenses, prepositions, and vocabulary accuracy (e.g., 'bust' → 'boost'). The structure is logical, and your attempt to use specific examples like 'Google Calendar' demonstrates B1-level competence.\"\n}",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07006",
+      "prediction": "B2",
+      "expected": "B2",
+      "correct": true,
+      "latency_ms": 32287.251963000017,
+      "input_tokens": 4287,
+      "output_tokens": 1077,
+      "raw_output": "\n\n{\n    \"cefr_level\": \"B2\",\n    \"grammar_score\": 0.55,\n    \"corrections\": [\n        \"easily → easy\",\n        \"a graduate → a graduate (no change needed, but contextually better phrased as 'become a graduate')\",\n        \"exam → exams\",\n        \"finish the university → finish university\",\n        \"some → some (contextually unclear, consider 'some tips')\",\n        \"for became diffiecult study easilier → to make difficult study easier\",\n        \"rewrite → copy (more natural phrasing)\",\n        \"solution → solutions\",\n        \"write → write (no change needed, but contextually better as 'copy the solution')\",\n        \"exmaple → example\",\n        \"football → football (no change needed, but punctuation issue with 'football your brain' → 'football. Your brain')\",\n        \"relax and do → relaxes and does\",\n        \"solve spend → spend less time solving\",\n        \"time for doing → time to do\",\n        \"traning → training\",\n        \"time of sleeping → more sleep\",\n        \"aproximately → approximately\",\n        \"of course → of course (punctuation issue: 'of course, you do not...')\",\n        \"for working → for work\",\n        \"everything → everything (contextually better as 'anything')\",\n        \"getting → getting (grammar issue: 'Do homework after getting' → 'Do homework after getting done')\",\n        \"dont → don't\",\n        \"better mark → better marks\",\n        \"esalier → easier\",\n        \"Well, → Well, (discourse marker issue: 'Well, It was four tips' → 'Well, these four tips')\"\n    ],\n    \"feedback\": \"The text shows B2-level organization with clear tips, but frequent grammar and lexical errors hinder clarity. Complex sentences like 'If you sleep more than six hours, you wake up and understand that you can do everything' demonstrate attempt at sophistication. However, issues with verb tenses, prepositions, and word choice (e.g., 'for became diffiecult study easilier') reduce effectiveness. Strengthening grammar accuracy and natural phrasing will elevate the text.\"\n}",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07018",
+      "prediction": "B1",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 26235.470468000018,
+      "input_tokens": 4964,
+      "output_tokens": 866,
+      "raw_output": "\n\n{\n    \"cefr_level\": \"B1\",\n    \"grammar_score\": 0.65,\n    \"corrections\": [\n        \"I think, that\" → \"I think that\",\n        \"TODO\" → \"to-do\",\n        \"the list\" → \"a list\",\n        \"Also\" → \"Also,\",\n        \"TODO list\" → \"to-do list\",\n        \"the smaller ones\" → \"smaller ones\",\n        \"this tips\" → \"these tips\",\n        \"would't\" → \"wouldn't\"\n    ],\n    \"feedback\": \"Your text shows clear attempts at organizing ideas with discourse markers like 'Firstly' and 'Also,' and uses appropriate vocabulary for the topic. While there are grammatical errors (e.g., subject-verb agreement, article usage) and some spelling mistakes, the overall structure and intent are clear. With more attention to grammar and punctuation, this could reach B2. Keep practicing complex sentence structures and proofreading for minor errors!\"\n}",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07019",
+      "prediction": "B2",
+      "expected": "B2",
+      "correct": true,
+      "latency_ms": 22363.039402,
+      "input_tokens": 5148,
+      "output_tokens": 730,
+      "raw_output": "\n\n{\n    \"cefr_level\": \"B2\",\n    \"grammar_score\": 0.7,\n    \"corrections\": [\n        \"Everyone got same time a day → Everyone has the same amount of time each day\",\n        \"good → well (in 'study good')\",\n        \"Its important → It's important\",\n        \"intresting → interesting\",\n        \"max grade → a good grade or maximum grade\",\n        \"days, set → days and set\"\n    ],\n    \"feedback\": \"Your text demonstrates clear organization and use of appropriate vocabulary for B2 level. You effectively present time-management strategies with complex sentences and rhetorical elements like 'to sum up.' While there are grammatical errors (e.g., missing articles, verb forms) and some spelling mistakes, they don't hinder overall comprehension. Focus on refining verb tenses, articles, and spelling to reach C1 proficiency.\"\n}",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07070",
+      "prediction": "B2",
+      "expected": "B2",
+      "correct": true,
+      "latency_ms": 22600.115793999976,
+      "input_tokens": 5534,
+      "output_tokens": 740,
+      "raw_output": "\n\n{\n    \"cefr_level\": \"B2\",\n    \"grammar_score\": 0.75,\n    \"corrections\": [\n        \"cannnot → cannot\",\n        \"different situation → a different situation\",\n        \"other difficult area → other difficult areas\",\n        \"In the university → At university\",\n        \"knowledge that university gives is complex → the knowledge gained from university is complex\",\n        \"To sum it up, → In conclusion,\",\n        \"there is no one right answer → there is no universally correct answer\",\n        \"needs → needs of individuals\"\n    ],\n    \"feedback\": \"Your essay demonstrates clear argumentation with two distinct perspectives. The structure is logical, and you use appropriate connectors like 'Of course' and 'But'. While there are grammatical errors (e.g., subject-verb agreement, prepositions), they don't hinder comprehension. The vocabulary is suitable for B2, though some phrases could be more precise (e.g., 'complex subjects' instead of 'different complex subjects'). To improve, focus on preposition usage and sentence variety. Well done on presenting a balanced argument!\"\n}",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07087",
+      "prediction": "B2",
+      "expected": "B2",
+      "correct": true,
+      "latency_ms": 22698.07920300002,
+      "input_tokens": 5775,
+      "output_tokens": 728,
+      "raw_output": "\n\n{\n    \"cefr_level\": \"B2\",\n    \"grammar_score\": 0.65,\n    \"corrections\": [\n        \"has became → has become\",\n        \"more polluted place → a more polluted place\",\n        \"pollutions → pollution\",\n        \"people start → people have started\",\n        \"looks not vital but dumb → seems unimportant rather than trivial\",\n        \"cause politicians do not look → cause politicians to ignore\",\n        \"cares about → care about\",\n        \"significantly overreacting → are overreacting\",\n        \"climate changes → climate change\",\n        \"Trash island → plastic waste islands\",\n        \"in the way of making → in a way that makes\",\n        \"more clear → cleaner\"\n    ],\n    \"feedback\": \"The essay demonstrates B2-level proficiency with complex sentence structures and attempts at idiomatic expressions. While there are frequent grammatical errors (e.g., verb tense, article usage, subject-verb agreement) and some lexical choices that could be more precise (e.g., 'dumb' instead of 'trivial'), the student effectively addresses the topic with logical organization. The text shows ability to express nuanced ideas about environmental issues, though clarity would improve with more accurate grammar and vocabulary. Strengths include rhetorical questions, cohesive devices, and a clear argument structure.\"\n}",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07099",
+      "prediction": "B2",
+      "expected": "B2",
+      "correct": true,
+      "latency_ms": 23674.045922000005,
+      "input_tokens": 4617,
+      "output_tokens": 790,
+      "raw_output": "\n\n{\n    \"cefr_level\": \"B2\",\n    \"grammar_score\": 0.75,\n    \"corrections\": [\n        \"werelucky → were lucky\",\n        \"talant → talent\",\n        \"alwaysbeats talant → always beats talent\",\n        \"On my point of view → In my opinion / From my perspective\",\n        \"That's why you should never rely on it. Hard work is fundamental → That's why you should never rely on it; hard work is fundamental\",\n        \"talant → talent\"\n    ],\n    \"feedback\": \"Your essay demonstrates clear understanding of the topic with complex sentence structures and appropriate use of discourse markers (e.g., 'However', 'On the other hand', 'All in all'). The vocabulary is varied and includes idiomatic expressions like 'hard work always beats talent.' While there are some spelling errors (e.g., 'talant', 'werelucky') and minor grammatical issues (e.g., comma splice), these do not hinder comprehension. The argument is well-structured with logical flow. To improve, focus on spelling accuracy and sentence punctuation.\"\n}",
+      "judge_raw_score": null,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-22T11:20:28+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": null,
+  "judge_model_revision": null,
+  "judge_prompt_hash": null
+}
