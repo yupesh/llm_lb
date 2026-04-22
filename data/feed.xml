@@ -4,8 +4,15 @@
   <id>tag:yupesh.github.io,2026:llm_lb/feed</id>
   <link href="https://yupesh.github.io/llm_lb/" rel="alternate" type="text/html"/>
   <link href="https://yupesh.github.io/llm_lb/data/feed.xml" rel="self" type="application/atom+xml"/>
-  <updated>2026-04-22T13:34:00+00:00</updated>
+  <updated>2026-04-22T15:01:20+00:00</updated>
   <author><name>LLM Leaderboard</name></author>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_loocv_fewshot_with_m_serial/1.0/qwen3-30b@vllm/2026-04-22T15:01:20+00:00</id>
+    <title>qwen3-30b@vllm scored 0.143 accuracy on writing_eval_n42_with_ann_loocv_fewshot_with_m_serial v1.0</title>
+    <updated>2026-04-22T15:01:20+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_loocv_fewshot_with_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.143, adjacent_accuracy=0.833, qwk=0.098</summary>
+  </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/oos_detection/1.0/glm5-awq@vllm/2026-04-22T13:34:00+00:00</id>
     <title>glm5-awq@vllm scored 0.500 accuracy on oos_detection v1.0</title>
@@ -348,12 +355,5 @@
     <updated>2026-04-22T10:04:26+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification_condensed" rel="alternate" type="text/html"/>
     <summary>accuracy=0.450, macro_f1=0.335, qwk=0.500</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_b1b2_no_ann_with_m_serial/1.0/qwen3-30b@vllm/2026-04-22T09:58:50+00:00</id>
-    <title>qwen3-30b@vllm scored 0.192 accuracy on writing_eval_b1b2_no_ann_with_m_serial v1.0</title>
-    <updated>2026-04-22T09:58:50+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_b1b2_no_ann_with_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.192, qwk=0.179, boundary_accuracy=0.346, boundary_kappa=0.009, signed_diff=-0.692</summary>
   </entry>
 </feed>
