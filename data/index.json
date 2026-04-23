@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T10:27:16+00:00",
+  "generated_at": "2026-04-23T10:43:02+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -589,6 +589,17 @@
       "hardware": {
         "gpu_count": 0,
         "gpu_type": "cpu",
+        "quantization": null
+      }
+    },
+    {
+      "id": "gemma-3-12b-it@vllm",
+      "display_name": "Gemma-3-12B-IT (vLLM)",
+      "provider": "openai_compat",
+      "hf_uri": "google/gemma-3-12b-it",
+      "hardware": {
+        "gpu_count": 1,
+        "gpu_type": "A100",
         "quantization": null
       }
     },
