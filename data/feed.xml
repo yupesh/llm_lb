@@ -4,8 +4,15 @@
   <id>tag:yupesh.github.io,2026:llm_lb/feed</id>
   <link href="https://yupesh.github.io/llm_lb/" rel="alternate" type="text/html"/>
   <link href="https://yupesh.github.io/llm_lb/data/feed.xml" rel="self" type="application/atom+xml"/>
-  <updated>2026-04-23T06:59:03+00:00</updated>
+  <updated>2026-04-23T07:10:30+00:00</updated>
   <author><name>LLM Leaderboard</name></author>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n10_no_target_ann_loocv_fewshot_no_m_serial/1.0/glm5-awq@vllm/2026-04-23T07:10:30+00:00</id>
+    <title>glm5-awq@vllm scored 0.600 accuracy on writing_eval_n10_no_target_ann_loocv_fewshot_no_m_serial v1.0</title>
+    <updated>2026-04-23T07:10:30+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n10_no_target_ann_loocv_fewshot_no_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.600, adjacent_accuracy=1.000, qwk=0.429</summary>
+  </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n10_no_target_ann_loocv_error_retrieval_with_m_serial/1.0/glm5-awq@vllm/2026-04-23T06:59:03+00:00</id>
     <title>glm5-awq@vllm scored 0.300 accuracy on writing_eval_n10_no_target_ann_loocv_error_retrieval_with_m_serial v1.0</title>
@@ -348,12 +355,5 @@
     <updated>2026-04-22T13:39:37+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_b1b2_no_ann_no_m_serial" rel="alternate" type="text/html"/>
     <summary>accuracy=0.077, qwk=-0.027, boundary_accuracy=0.192, boundary_kappa=0.031, signed_diff=-0.955</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/oos_detection/1.0/glm5-awq@vllm/2026-04-22T13:34:00+00:00</id>
-    <title>glm5-awq@vllm scored 0.500 accuracy on oos_detection v1.0</title>
-    <updated>2026-04-22T13:34:00+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/oos_detection" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.500, macro_f1=0.333</summary>
   </entry>
 </feed>
