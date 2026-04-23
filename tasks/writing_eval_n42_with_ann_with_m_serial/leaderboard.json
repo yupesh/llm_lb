@@ -30,6 +30,19 @@
       "result_file": "results/qwen3.5-27b@vllm__2026-04-23T13-24-41Z.json"
     },
     {
+      "model_id": "minimax-m2.7@vllm",
+      "score": 0.5737704918032787,
+      "metrics": {
+        "accuracy": 0.19047619047619047,
+        "adjacent_accuracy": 0.8571428571428571,
+        "qwk": 0.5737704918032787
+      },
+      "tps": 85.08058827359775,
+      "p95_latency_ms": 31943.500940000005,
+      "cost_usd": null,
+      "result_file": "results/minimax-m2.7@vllm__2026-04-23T20-13-46Z.json"
+    },
+    {
       "model_id": "qwen3-30b@vllm",
       "score": 0.5462962962962963,
       "metrics": {
@@ -56,5 +69,5 @@
       "result_file": "results/glm5-awq@vllm__2026-04-23T04-37-45Z.json"
     }
   ],
-  "updated_at": "2026-04-23T15:49:05+00:00"
+  "updated_at": "2026-04-23T20:23:05+00:00"
 }
