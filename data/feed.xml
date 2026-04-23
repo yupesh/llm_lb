@@ -28,6 +28,27 @@
     <summary>accuracy=0.650, macro_f1=0.627</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection/1.0/gemma-3-12b-it@vllm/2026-04-23T11:39:18+00:00</id>
+    <title>gemma-3-12b-it@vllm scored 1.000 accuracy on jailbreak_detection v1.0</title>
+    <updated>2026-04-23T11:39:18+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection" rel="alternate" type="text/html"/>
+    <summary>accuracy=1.000, macro_f1=1.000</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/intent_classification/1.0/gemma-3-12b-it@vllm/2026-04-23T11:38:50+00:00</id>
+    <title>gemma-3-12b-it@vllm scored 0.700 accuracy on intent_classification v1.0</title>
+    <updated>2026-04-23T11:38:50+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/intent_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.700, macro_f1=0.631</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/hazard_category/1.0/gemma-3-12b-it@vllm/2026-04-23T11:38:17+00:00</id>
+    <title>gemma-3-12b-it@vllm scored 0.500 accuracy on hazard_category v1.0</title>
+    <updated>2026-04-23T11:38:17+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/hazard_category" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.500, macro_f1=0.376</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/extractive_qa/1.0/gemma-3-12b-it@vllm/2026-04-23T11:37:39+00:00</id>
     <title>gemma-3-12b-it@vllm scored 0.800 exact_match on extractive_qa v1.0</title>
     <updated>2026-04-23T11:37:39+00:00</updated>
@@ -334,26 +355,5 @@
     <updated>2026-04-23T01:16:50+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_loocv_fewshot_with_m_serial" rel="alternate" type="text/html"/>
     <summary>accuracy=0.167, adjacent_accuracy=0.857, qwk=0.397</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_loocv_fewshot_no_m_serial/1.0/glm5-awq@vllm/2026-04-23T01:03:50+00:00</id>
-    <title>glm5-awq@vllm scored 0.286 accuracy on writing_eval_n42_with_ann_loocv_fewshot_no_m_serial v1.0</title>
-    <updated>2026-04-23T01:03:50+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_loocv_fewshot_no_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.286, adjacent_accuracy=0.952, qwk=0.484</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/retail_agent_dialog/1.0/qwen3-30b@vllm/2026-04-23T00:02:39+00:00</id>
-    <title>qwen3-30b@vllm scored 0.442 judge_score on retail_agent_dialog v1.0</title>
-    <updated>2026-04-23T00:02:39+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/retail_agent_dialog" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.442</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial/1.0/glm5-awq@vllm/2026-04-22T22:41:30+00:00</id>
-    <title>glm5-awq@vllm scored 0.286 accuracy on writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial v1.0</title>
-    <updated>2026-04-22T22:41:30+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.286, adjacent_accuracy=0.952, qwk=0.459</summary>
   </entry>
 </feed>
