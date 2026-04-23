@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T12:05:58+00:00",
+  "generated_at": "2026-04-23T12:06:21+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -968,6 +968,21 @@
       "p95_latency_ms": 19140.152188,
       "cost_usd": null,
       "result_file": "tasks/cefr_level_classification/results/qwen3-30b@vllm__2026-04-22T08-42-09Z.json"
+    },
+    {
+      "task_id": "cefr_level_classification",
+      "task_version": "1.1",
+      "model_id": "minimax-m2.7@vllm",
+      "score": 0.3620689655172413,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.19407894736842105,
+        "qwk": 0.3620689655172413
+      },
+      "tps": 108.89114283132687,
+      "p95_latency_ms": 6842.64946199994,
+      "cost_usd": null,
+      "result_file": "tasks/cefr_level_classification/results/minimax-m2.7@vllm__2026-04-23T12-02-31Z.json"
     },
     {
       "task_id": "cefr_level_classification",
@@ -4329,6 +4344,19 @@
       "result_file": "tasks/kg_triplet_extraction/results/qwen3-30b@vllm__2026-04-19T01-42-14Z.json"
     },
     {
+      "task_id": "kg_triplet_extraction",
+      "task_version": "1.0",
+      "model_id": "gemma-3-12b-it@vllm",
+      "score": 0.51,
+      "metrics": {
+        "judge_score": 0.51
+      },
+      "tps": 47.76785755209305,
+      "p95_latency_ms": 6571.713786999993,
+      "cost_usd": null,
+      "result_file": "tasks/kg_triplet_extraction/results/gemma-3-12b-it@vllm__2026-04-23T11-44-56Z.json"
+    },
+    {
       "task_id": "oos_detection",
       "task_version": "1.0",
       "model_id": "gemma-4-31b-it@vllm",
@@ -4397,6 +4425,20 @@
       "p95_latency_ms": 7419.284093000002,
       "cost_usd": null,
       "result_file": "tasks/oos_detection/results/qwen3-30b@vllm__2026-04-19T01-08-14Z.json"
+    },
+    {
+      "task_id": "oos_detection",
+      "task_version": "1.0",
+      "model_id": "gemma-3-12b-it@vllm",
+      "score": 0.5,
+      "metrics": {
+        "accuracy": 0.5,
+        "macro_f1": 0.48571428571428577
+      },
+      "tps": 6.285274844797398,
+      "p95_latency_ms": 1185.1881559999952,
+      "cost_usd": null,
+      "result_file": "tasks/oos_detection/results/gemma-3-12b-it@vllm__2026-04-23T11-45-36Z.json"
     },
     {
       "task_id": "oos_detection",

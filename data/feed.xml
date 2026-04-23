@@ -28,6 +28,27 @@
     <summary>judge_score=0.370</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification/1.1/minimax-m2.7@vllm/2026-04-23T12:02:31+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.300 accuracy on cefr_level_classification v1.1</title>
+    <updated>2026-04-23T12:02:31+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.300, macro_f1=0.194, qwk=0.362</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/oos_detection/1.0/gemma-3-12b-it@vllm/2026-04-23T11:45:36+00:00</id>
+    <title>gemma-3-12b-it@vllm scored 0.500 accuracy on oos_detection v1.0</title>
+    <updated>2026-04-23T11:45:36+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/oos_detection" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.500, macro_f1=0.486</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_triplet_extraction/1.0/gemma-3-12b-it@vllm/2026-04-23T11:44:56+00:00</id>
+    <title>gemma-3-12b-it@vllm scored 0.510 judge_score on kg_triplet_extraction v1.0</title>
+    <updated>2026-04-23T11:44:56+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_triplet_extraction" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.510</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/kg_entity_type_refinement/1.0/gemma-3-12b-it@vllm/2026-04-23T11:41:35+00:00</id>
     <title>gemma-3-12b-it@vllm scored 0.580 judge_score on kg_entity_type_refinement v1.0</title>
     <updated>2026-04-23T11:41:35+00:00</updated>
@@ -334,26 +355,5 @@
     <updated>2026-04-23T05:18:02+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n10_no_ann_no_m_serial" rel="alternate" type="text/html"/>
     <summary>accuracy=0.500, adjacent_accuracy=0.900, qwk=0.000</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_b1b2_no_ann_with_m_serial/1.0/qwen3.5-27b@vllm/2026-04-23T04:44:41+00:00</id>
-    <title>qwen3.5-27b@vllm scored 0.231 accuracy on writing_eval_b1b2_no_ann_with_m_serial v1.0</title>
-    <updated>2026-04-23T04:44:41+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_b1b2_no_ann_with_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.231, qwk=0.116, boundary_accuracy=0.269, boundary_kappa=0.046, signed_diff=-0.769</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_with_m_serial/1.0/glm5-awq@vllm/2026-04-23T04:37:45+00:00</id>
-    <title>glm5-awq@vllm scored 0.214 accuracy on writing_eval_n42_with_ann_with_m_serial v1.0</title>
-    <updated>2026-04-23T04:37:45+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_with_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.214, adjacent_accuracy=0.857, qwk=0.468</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_no_m_serial/1.0/glm5-awq@vllm/2026-04-23T03:40:31+00:00</id>
-    <title>glm5-awq@vllm scored 0.429 accuracy on writing_eval_n42_with_ann_no_m_serial v1.0</title>
-    <updated>2026-04-23T03:40:31+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_no_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.429, adjacent_accuracy=0.929, qwk=0.646</summary>
   </entry>
 </feed>
