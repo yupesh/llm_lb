@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T09:11:58+00:00",
+  "generated_at": "2026-04-23T09:12:18+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -5834,6 +5834,21 @@
       "result_file": "tasks/writing_eval_n10_no_target_ann_loocv_fewshot_with_m_serial/results/qwen3-30b@vllm__2026-04-22T11-15-41Z.json"
     },
     {
+      "task_id": "writing_eval_n10_no_target_ann_loocv_fewshot_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": -0.08695652173913015,
+      "metrics": {
+        "accuracy": 0.1,
+        "adjacent_accuracy": 0.8,
+        "qwk": -0.08695652173913015
+      },
+      "tps": 20.97471374512573,
+      "p95_latency_ms": 897617.285392,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_no_target_ann_loocv_fewshot_with_m_serial/results/qwen3.5-27b@vllm__2026-04-23T08-12-29Z.json"
+    },
+    {
       "task_id": "writing_eval_n10_with_ann_loocv_fewshot_no_m_serial",
       "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
@@ -5851,6 +5866,21 @@
     {
       "task_id": "writing_eval_n10_with_ann_loocv_fewshot_no_m_serial",
       "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.4285714285714286,
+      "metrics": {
+        "accuracy": 0.6,
+        "adjacent_accuracy": 1.0,
+        "qwk": 0.4285714285714286
+      },
+      "tps": 44.6183082402298,
+      "p95_latency_ms": 72410.97108200006,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_with_ann_loocv_fewshot_no_m_serial/results/glm5-awq@vllm__2026-04-23T07-34-36Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_with_ann_loocv_fewshot_no_m_serial",
+      "task_version": "1.0",
       "model_id": "qwen3.5-27b@vllm",
       "score": -0.5161290322580645,
       "metrics": {
@@ -5862,6 +5892,21 @@
       "p95_latency_ms": 69622.39576599996,
       "cost_usd": null,
       "result_file": "tasks/writing_eval_n10_with_ann_loocv_fewshot_no_m_serial/results/qwen3.5-27b@vllm__2026-04-22T17-28-05Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_with_ann_loocv_fewshot_with_m_serial",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.36363636363636376,
+      "metrics": {
+        "accuracy": 0.3,
+        "adjacent_accuracy": 1.0,
+        "qwk": 0.36363636363636376
+      },
+      "tps": 45.09102404031445,
+      "p95_latency_ms": 125306.52582500005,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_with_ann_loocv_fewshot_with_m_serial/results/glm5-awq@vllm__2026-04-23T07-50-05Z.json"
     },
     {
       "task_id": "writing_eval_n10_with_ann_loocv_fewshot_with_m_serial",
