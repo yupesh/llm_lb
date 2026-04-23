@@ -71,20 +71,34 @@ jobs:
           set -eu
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # Stage only the files aggregate is allowed to produce. Anything
-          # else must not sneak in.
-          git add data/ || true
-          git add 'tasks/*/leaderboard.json' || true
-          if git diff --cached --quiet; then
+          refresh_and_stage() {
+            (
+              cd runner
+              uv run llm-lb aggregate --root ..
+            )
+            # Stage only the files aggregate is allowed to produce. Anything
+            # else must not sneak in.
+            git add data/ || true
+            git add 'tasks/*/leaderboard.json' || true
+          }
+
+          commit_if_needed() {
+            if git diff --cached --quiet; then
+              return 1
+            fi
+            git commit -m "aggregate: refresh leaderboards + index"
+            return 0
+          }
+
+          refresh_and_stage
+          if ! commit_if_needed; then
             echo "nothing to aggregate — skipping commit"
             exit 0
           fi
-          git commit -m "aggregate: refresh leaderboards + index"
-          # Race guard: between our checkout and this push, a score PR may
-          # have been merged into main (or another aggregate run may have
-          # landed before us, even though `concurrency` serialises our own
-          # workflow). Rebase-and-retry recovers from "non-fast-forward"
-          # instead of failing the whole run.
+
+          # Race guard: between our checkout and this push, main may advance
+          # with new result files. These generated artifacts should be rebuilt
+          # from the latest tree, not rebased like hand-written source files.
           i=0
           until git push origin HEAD:main; do
             i=$((i + 1))
@@ -92,8 +106,13 @@ jobs:
               echo "::error::push failed after $i attempts"
               exit 1
             fi
-            echo "push rejected, rebasing on origin/main (attempt $i/5)"
+            echo "push rejected, rebuilding aggregate on top of origin/main (attempt $i/5)"
             git fetch origin main
-            git rebase origin/main
+            git reset --hard origin/main
+            refresh_and_stage
+            if ! commit_if_needed; then
+              echo "upstream already contains the latest aggregate output"
+              exit 0
+            fi
             sleep $((RANDOM % 3 + 1))
           done
