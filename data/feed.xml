@@ -77,6 +77,13 @@
     <summary>accuracy=0.500, adjacent_accuracy=0.900, qwk=0.467</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_no_m_serial/1.0/gemma-3-12b-it@vllm/2026-04-23T15:10:13+00:00</id>
+    <title>gemma-3-12b-it@vllm scored 0.405 accuracy on writing_eval_n42_with_ann_no_m_serial v1.0</title>
+    <updated>2026-04-23T15:10:13+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_no_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.405, adjacent_accuracy=0.881, qwk=0.615</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n10_no_ann_with_m_serial/1.0/minimax-m2.7@vllm/2026-04-23T15:02:47+00:00</id>
     <title>minimax-m2.7@vllm scored 0.400 accuracy on writing_eval_n10_no_ann_with_m_serial v1.0</title>
     <updated>2026-04-23T15:02:47+00:00</updated>
@@ -348,12 +355,5 @@
     <updated>2026-04-23T12:07:57+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_grammar_scoring" rel="alternate" type="text/html"/>
     <summary>accuracy=0.250, macro_f1=0.183, qwk=0.133</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/temporal_information_extraction/1.0/gemma-3-12b-it@vllm/2026-04-23T12:06:56+00:00</id>
-    <title>gemma-3-12b-it@vllm scored 0.387 judge_score on temporal_information_extraction v1.0</title>
-    <updated>2026-04-23T12:06:56+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/temporal_information_extraction" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.387</summary>
   </entry>
 </feed>
