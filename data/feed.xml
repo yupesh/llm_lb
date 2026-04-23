@@ -63,6 +63,20 @@
     <summary>accuracy=0.350, macro_f1=0.268, qwk=0.441</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/agent_tool_calling/1.0/gemma-3-12b-it@vllm/2026-04-23T11:10:47+00:00</id>
+    <title>gemma-3-12b-it@vllm scored 0.627 judge_score on agent_tool_calling v1.0</title>
+    <updated>2026-04-23T11:10:47+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/agent_tool_calling" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.627</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial/1.0/qwen3.5-27b@vllm/2026-04-23T10:53:41+00:00</id>
+    <title>qwen3.5-27b@vllm scored 0.119 accuracy on writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial v1.0</title>
+    <updated>2026-04-23T10:53:41+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.119, adjacent_accuracy=0.833, qwk=0.359</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n10_with_ann_with_m_serial/1.0/glm5-awq@vllm/2026-04-23T10:17:23+00:00</id>
     <title>glm5-awq@vllm scored 0.300 accuracy on writing_eval_n10_with_ann_with_m_serial v1.0</title>
     <updated>2026-04-23T10:17:23+00:00</updated>
@@ -341,19 +355,5 @@
     <updated>2026-04-22T16:13:52+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_with_m_serial" rel="alternate" type="text/html"/>
     <summary>accuracy=0.548, adjacent_accuracy=0.929, qwk=0.546</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_b1b2_with_ann_with_m_serial/1.0/qwen3.5-27b@vllm/2026-04-22T16:08:21+00:00</id>
-    <title>qwen3.5-27b@vllm scored 0.115 accuracy on writing_eval_b1b2_with_ann_with_m_serial v1.0</title>
-    <updated>2026-04-22T16:08:21+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_b1b2_with_ann_with_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.115, qwk=0.022, boundary_accuracy=0.192, boundary_kappa=0.021, signed_diff=-0.864</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_b1b2_no_ann_no_m_serial/1.0/glm5-awq@vllm/2026-04-22T15:48:16+00:00</id>
-    <title>glm5-awq@vllm scored 0.077 accuracy on writing_eval_b1b2_no_ann_no_m_serial v1.0</title>
-    <updated>2026-04-22T15:48:16+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_b1b2_no_ann_no_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.077, qwk=0.085, boundary_accuracy=0.154, boundary_kappa=0.000, signed_diff=-1.000</summary>
   </entry>
 </feed>
