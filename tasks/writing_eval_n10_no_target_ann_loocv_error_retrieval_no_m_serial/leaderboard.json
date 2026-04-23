@@ -28,7 +28,20 @@
       "p95_latency_ms": 125175.20372399998,
       "cost_usd": null,
       "result_file": "results/glm5-awq@vllm__2026-04-23T06-46-14Z.json"
+    },
+    {
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.0,
+      "metrics": {
+        "accuracy": 0.3,
+        "adjacent_accuracy": 1.0,
+        "qwk": 0.0
+      },
+      "tps": 37.06304860899035,
+      "p95_latency_ms": 389684.278876,
+      "cost_usd": null,
+      "result_file": "results/qwen3.5-27b@vllm__2026-04-23T06-25-28Z.json"
     }
   ],
-  "updated_at": "2026-04-23T07:10:08+00:00"
+  "updated_at": "2026-04-23T07:10:56+00:00"
 }
