@@ -1,0 +1,92 @@
+{
+  "model_id": "gemma-3-12b-it@vllm",
+  "model_revision": "2026-04-02",
+  "task_id": "summarization",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "2c5723a9c9440b71",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "judge_score": 0.76
+  },
+  "tps": 25.87468835165694,
+  "p95_latency_ms": 1736.2906170000017,
+  "n_samples": 5,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "sample_001",
+      "prediction": "The James Webb Space Telescope, a joint NASA, ESA, and Canadian Space Agency project, is the largest optical telescope in space and uses infrared technology to study early galaxies.",
+      "expected": "JWST, launched in December 2021, is the largest space telescope and observes early-universe galaxies in infrared as a NASA-ESA-CSA project.",
+      "correct": false,
+      "latency_ms": 1736.2906170000017,
+      "input_tokens": 95,
+      "output_tokens": 35,
+      "raw_output": "The James Webb Space Telescope, a joint NASA, ESA, and Canadian Space Agency project, is the largest optical telescope in space and uses infrared technology to study early galaxies.",
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "sample_002",
+      "prediction": "Python's `asyncio` library enables high-throughput network services by using an event loop to manage concurrent coroutines within a single thread.",
+      "expected": "Python's asyncio enables high-throughput single-threaded networking by suspending coroutines on I/O via an event loop.",
+      "correct": false,
+      "latency_ms": 1056.6333900000018,
+      "input_tokens": 98,
+      "output_tokens": 30,
+      "raw_output": "Python's `asyncio` library enables high-throughput network services by using an event loop to manage concurrent coroutines within a single thread.",
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "sample_003",
+      "prediction": "The 2008 financial crisis began with the collapse of the U.S. subprime mortgage market, resulting in the bankruptcy of Lehman Brothers and a global recession.",
+      "expected": "The 2008 crisis began with the U.S. subprime mortgage collapse, causing Lehman Brothers' failure and a global recession.",
+      "correct": false,
+      "latency_ms": 1172.1078789999951,
+      "input_tokens": 97,
+      "output_tokens": 36,
+      "raw_output": "The 2008 financial crisis began with the collapse of the U.S. subprime mortgage market, resulting in the bankruptcy of Lehman Brothers and a global recession.",
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_004",
+      "prediction": "Photosynthesis is the process used by plants to convert light energy into glucose and oxygen, forming the base of most food chains.",
+      "expected": "Photosynthesis lets green plants turn CO2 and water into glucose and oxygen using sunlight captured by chlorophyll, underpinning most food chains.",
+      "correct": false,
+      "latency_ms": 1041.637919000003,
+      "input_tokens": 85,
+      "output_tokens": 26,
+      "raw_output": "Photosynthesis is the process used by plants to convert light energy into glucose and oxygen, forming the base of most food chains.",
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "sample_005",
+      "prediction": "The Treaty of Westphalia in 1648 concluded the Thirty Years' War and established the modern state system centered on territorial sovereignty.",
+      "expected": "The 1648 Treaty of Westphalia ended the Thirty Years' War and laid the foundation of the modern sovereignty-based state system.",
+      "correct": false,
+      "latency_ms": 1061.0361269999942,
+      "input_tokens": 84,
+      "output_tokens": 30,
+      "raw_output": "The Treaty of Westphalia in 1648 concluded the Thirty Years' War and established the modern state system centered on territorial sovereignty.",
+      "judge_raw_score": 4.0,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-23T12:05:15+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": "gpt-4o-mini@openai",
+  "judge_model_revision": "2024-07-18",
+  "judge_prompt_hash": "d679caeb261c214b"
+}
