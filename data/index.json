@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T19:42:13+00:00",
+  "generated_at": "2026-04-23T19:42:49+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -2348,6 +2348,21 @@
       "p95_latency_ms": 6311.276749000001,
       "cost_usd": null,
       "result_file": "tasks/essay_grammar_scoring/results/minimax-m2.7@vllm__2026-04-23T12-07-57Z.json"
+    },
+    {
+      "task_id": "essay_grammar_scoring_condensed",
+      "task_version": "1.1",
+      "model_id": "gemma-4-31b-it@vllm",
+      "score": 0.32352941176470595,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.23392857142857143,
+        "qwk": 0.32352941176470595
+      },
+      "tps": 2.4906870535136774,
+      "p95_latency_ms": 1396.313641000006,
+      "cost_usd": null,
+      "result_file": "tasks/essay_grammar_scoring_condensed/results/gemma-4-31b-it@vllm__2026-04-23T19-41-52Z.json"
     },
     {
       "task_id": "essay_grammar_scoring_condensed",
