@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T11:37:27+00:00",
+  "generated_at": "2026-04-23T11:37:48+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -938,6 +938,21 @@
       "p95_latency_ms": 9326.21684100002,
       "cost_usd": null,
       "result_file": "tasks/cefr_level_classification/results/qwen3.6-35b@vllm__2026-04-22T08-23-23Z.json"
+    },
+    {
+      "task_id": "cefr_level_classification",
+      "task_version": "1.1",
+      "model_id": "gemma-3-12b-it@vllm",
+      "score": 0.3750000000000001,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.20238095238095238,
+        "qwk": 0.3750000000000001
+      },
+      "tps": 18.343833703828064,
+      "p95_latency_ms": 961.6262950000021,
+      "cost_usd": null,
+      "result_file": "tasks/cefr_level_classification/results/gemma-3-12b-it@vllm__2026-04-23T11-11-17Z.json"
     },
     {
       "task_id": "cefr_level_classification",
@@ -2198,6 +2213,21 @@
       "p95_latency_ms": 100128.44462800013,
       "cost_usd": null,
       "result_file": "tasks/essay_grammar_scoring/results/qwen3.5-27b@vllm__2026-04-22T10-05-44Z.json"
+    },
+    {
+      "task_id": "essay_grammar_scoring",
+      "task_version": "1.1",
+      "model_id": "gemma-3-12b-it@vllm",
+      "score": 0.17499999999999993,
+      "metrics": {
+        "accuracy": 0.25,
+        "macro_f1": 0.17500000000000002,
+        "qwk": 0.17499999999999993
+      },
+      "tps": 2.2559430388247446,
+      "p95_latency_ms": 1560.0128600000005,
+      "cost_usd": null,
+      "result_file": "tasks/essay_grammar_scoring/results/gemma-3-12b-it@vllm__2026-04-23T11-34-20Z.json"
     },
     {
       "task_id": "essay_grammar_scoring_condensed",
