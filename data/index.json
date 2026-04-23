@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T11:37:04+00:00",
+  "generated_at": "2026-04-23T11:37:27+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -2275,6 +2275,21 @@
       "result_file": "tasks/essay_grammar_scoring_condensed/results/qwen3-235B-A22B@vllm__2026-04-22T05-58-12Z.json"
     },
     {
+      "task_id": "essay_grammar_scoring_condensed",
+      "task_version": "1.1",
+      "model_id": "gemma-3-12b-it@vllm",
+      "score": 0.033333333333333326,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.1875,
+        "qwk": 0.033333333333333326
+      },
+      "tps": 4.689898259675597,
+      "p95_latency_ms": 938.1998869999961,
+      "cost_usd": null,
+      "result_file": "tasks/essay_grammar_scoring_condensed/results/gemma-3-12b-it@vllm__2026-04-23T11-34-50Z.json"
+    },
+    {
       "task_id": "essay_holistic_scoring",
       "task_version": "1.0",
       "model_id": "glm5.1@llama",
@@ -2427,6 +2442,21 @@
     {
       "task_id": "essay_holistic_scoring",
       "task_version": "1.0",
+      "model_id": "gemma-3-12b-it@vllm",
+      "score": 0.4920634920634921,
+      "metrics": {
+        "accuracy": 0.16666666666666666,
+        "macro_f1": 0.0925925925925926,
+        "qwk": 0.4920634920634921
+      },
+      "tps": 2.726055827309979,
+      "p95_latency_ms": 1026.576661,
+      "cost_usd": null,
+      "result_file": "tasks/essay_holistic_scoring/results/gemma-3-12b-it@vllm__2026-04-23T11-35-21Z.json"
+    },
+    {
+      "task_id": "essay_holistic_scoring",
+      "task_version": "1.0",
       "model_id": "gpt-oss-120b@vllm",
       "score": 0.29850746268656714,
       "metrics": {
@@ -2573,6 +2603,21 @@
       "p95_latency_ms": 57289.92568500002,
       "cost_usd": null,
       "result_file": "tasks/essay_holistic_scoring_condensed/results/qwen3.5-397b@vllm__2026-04-18T19-02-17Z.json"
+    },
+    {
+      "task_id": "essay_holistic_scoring_condensed",
+      "task_version": "1.0",
+      "model_id": "gemma-3-12b-it@vllm",
+      "score": 0.3538461538461539,
+      "metrics": {
+        "accuracy": 0.05555555555555555,
+        "macro_f1": 0.02380952380952381,
+        "qwk": 0.3538461538461539
+      },
+      "tps": 2.7435521451304243,
+      "p95_latency_ms": 1250.5566700000018,
+      "cost_usd": null,
+      "result_file": "tasks/essay_holistic_scoring_condensed/results/gemma-3-12b-it@vllm__2026-04-23T11-35-53Z.json"
     },
     {
       "task_id": "essay_holistic_scoring_condensed",
