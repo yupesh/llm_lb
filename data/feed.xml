@@ -14,6 +14,20 @@
     <summary>accuracy=1.000, macro_f1=1.000</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring/1.1/minimax-m2.7@vllm/2026-04-23T12:11:40+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.250 accuracy on essay_vocabulary_scoring v1.1</title>
+    <updated>2026-04-23T12:11:40+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.250, macro_f1=0.125, qwk=0.350</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text_classification/1.0/gemma-3-12b-it@vllm/2026-04-23T12:11:23+00:00</id>
+    <title>gemma-3-12b-it@vllm scored 1.000 accuracy on text_classification v1.0</title>
+    <updated>2026-04-23T12:11:23+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=1.000, macro_f1=1.000</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/gemma-3-12b-it@vllm/2026-04-23T12:04:44+00:00</id>
     <title>gemma-3-12b-it@vllm scored 0.900 accuracy on safety_classification v1.0</title>
     <updated>2026-04-23T12:04:44+00:00</updated>
@@ -341,19 +355,5 @@
     <updated>2026-04-23T06:00:57+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n10_no_ann_with_m_serial" rel="alternate" type="text/html"/>
     <summary>accuracy=0.500, adjacent_accuracy=1.000, qwk=0.444</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_b1b2_no_ann_with_m_serial/1.0/glm5-awq@vllm/2026-04-23T05:52:30+00:00</id>
-    <title>glm5-awq@vllm scored 0.192 accuracy on writing_eval_b1b2_no_ann_with_m_serial v1.0</title>
-    <updated>2026-04-23T05:52:30+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_b1b2_no_ann_with_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.192, qwk=0.200, boundary_accuracy=0.308, boundary_kappa=0.064, signed_diff=-0.846</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_b1b2_no_ann_with_m_score_only_serial/1.0/glm5-awq@vllm/2026-04-23T05:21:33+00:00</id>
-    <title>glm5-awq@vllm scored 0.500 accuracy on writing_eval_b1b2_no_ann_with_m_score_only_serial v1.0</title>
-    <updated>2026-04-23T05:21:33+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_b1b2_no_ann_with_m_score_only_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.500, qwk=0.176, boundary_accuracy=0.500, boundary_kappa=0.176, signed_diff=-0.500</summary>
   </entry>
 </feed>
