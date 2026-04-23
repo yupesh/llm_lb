@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T19:42:49+00:00",
+  "generated_at": "2026-04-23T19:47:07+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -3023,6 +3023,21 @@
       "p95_latency_ms": 5513.136658,
       "cost_usd": null,
       "result_file": "tasks/essay_vocabulary_scoring_condensed/results/minimax-m2.7@vllm__2026-04-23T12-13-27Z.json"
+    },
+    {
+      "task_id": "essay_vocabulary_scoring_condensed",
+      "task_version": "1.1",
+      "model_id": "gemma-4-31b-it@vllm",
+      "score": 0.41666666666666663,
+      "metrics": {
+        "accuracy": 0.35,
+        "macro_f1": 0.24523809523809526,
+        "qwk": 0.41666666666666663
+      },
+      "tps": 3.394437279384203,
+      "p95_latency_ms": 1111.0964239999957,
+      "cost_usd": null,
+      "result_file": "tasks/essay_vocabulary_scoring_condensed/results/gemma-4-31b-it@vllm__2026-04-23T19-42-52Z.json"
     },
     {
       "task_id": "essay_vocabulary_scoring_condensed",
