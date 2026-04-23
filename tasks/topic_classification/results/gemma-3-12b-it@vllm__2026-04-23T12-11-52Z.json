@@ -1,0 +1,153 @@
+{
+  "model_id": "gemma-3-12b-it@vllm",
+  "model_revision": "2026-04-02",
+  "task_id": "topic_classification",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "380fec3e6944c1e4",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0
+  },
+  "tps": 3.2814231699119976,
+  "p95_latency_ms": 1217.6407130000016,
+  "n_samples": 10,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "sample_001",
+      "prediction": "tech",
+      "expected": "tech",
+      "correct": true,
+      "latency_ms": 1110.1218720000006,
+      "input_tokens": 76,
+      "output_tokens": 3,
+      "raw_output": "tech\n",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_002",
+      "prediction": "sports",
+      "expected": "sports",
+      "correct": true,
+      "latency_ms": 389.6275399999993,
+      "input_tokens": 75,
+      "output_tokens": 2,
+      "raw_output": "sports",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_003",
+      "prediction": "politics",
+      "expected": "politics",
+      "correct": true,
+      "latency_ms": 438.31289900000314,
+      "input_tokens": 72,
+      "output_tokens": 3,
+      "raw_output": "politics\n",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_004",
+      "prediction": "health",
+      "expected": "health",
+      "correct": true,
+      "latency_ms": 1217.6407130000016,
+      "input_tokens": 75,
+      "output_tokens": 3,
+      "raw_output": "health\n",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_005",
+      "prediction": "entertainment",
+      "expected": "entertainment",
+      "correct": true,
+      "latency_ms": 1048.005031999999,
+      "input_tokens": 76,
+      "output_tokens": 3,
+      "raw_output": "entertainment\n",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_006",
+      "prediction": "tech",
+      "expected": "tech",
+      "correct": true,
+      "latency_ms": 997.6862549999978,
+      "input_tokens": 76,
+      "output_tokens": 3,
+      "raw_output": "tech\n",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_007",
+      "prediction": "sports",
+      "expected": "sports",
+      "correct": true,
+      "latency_ms": 984.5068119999994,
+      "input_tokens": 80,
+      "output_tokens": 3,
+      "raw_output": "sports\n",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_008",
+      "prediction": "politics",
+      "expected": "politics",
+      "correct": true,
+      "latency_ms": 1055.9687810000041,
+      "input_tokens": 73,
+      "output_tokens": 3,
+      "raw_output": "politics\n",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_009",
+      "prediction": "health",
+      "expected": "health",
+      "correct": true,
+      "latency_ms": 981.3629129999981,
+      "input_tokens": 74,
+      "output_tokens": 3,
+      "raw_output": "health\n",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_010",
+      "prediction": "entertainment",
+      "expected": "entertainment",
+      "correct": true,
+      "latency_ms": 614.3960100000002,
+      "input_tokens": 75,
+      "output_tokens": 3,
+      "raw_output": "entertainment\n",
+      "judge_raw_score": null,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-23T12:11:52+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": null,
+  "judge_model_revision": null,
+  "judge_prompt_hash": null
+}
