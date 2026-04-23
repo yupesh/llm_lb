@@ -1,0 +1,154 @@
+{
+  "model_id": "gemma-4-31b-it@vllm",
+  "model_revision": "2026-04-02",
+  "task_id": "writing_eval_n10_no_target_ann_loocv_error_retrieval_no_m_serial",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "b603bc66a0195308",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 0.95,
+    "max_tokens": null,
+    "seed": null
+  },
+  "metrics": {
+    "accuracy": 0.4,
+    "adjacent_accuracy": 1.0,
+    "qwk": 0.1428571428571429
+  },
+  "tps": 42.872134056168115,
+  "p95_latency_ms": 11201.806462999997,
+  "n_samples": 10,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "sample_07001",
+      "prediction": "B1",
+      "expected": "A2",
+      "correct": false,
+      "latency_ms": 7488.826042999996,
+      "input_tokens": 3991,
+      "output_tokens": 300,
+      "raw_output": "```json\n{\n    \"cefr_level\": \"B1\",\n    \"grammar_score\": 0.62,\n    \"corrections\": [\n        \"i -> I (Register; A1; Low)\",\n        \"simular -> similar (Lexis; A1; Low)\",\n        \"Here is the tips -> Here are the tips (Grammar; A2; Medium)\",\n        \"this apps -> these apps (Grammar; A2; Medium)\",\n        \"spend a lot of time to TV -> spend a lot of time on TV (Grammar; A2; Medium)\",\n        \"leave from useless groups -> leave useless groups (Lexis; B1; Medium)\",\n        \"enought -> enough (Lexis; A1; Low)\",\n        \"write me at personal messages -> send me a private message (Lexis; B1; Medium)\"\n    ],\n    \"feedback\": \"Level B1: The student can express complex ideas and provide a structured set of advice. While there are several basic grammar errors (subject-verb agreement, demonstratives, and spelling), the vocabulary is sufficient to convey the message clearly without blocking meaning. The use of a list and a friendly tone is appropriate for the task. The text is more advanced than A2 due to the ability to organize a multi-point response and use modal verbs ('should', 'can') effectively.\"\n}\n```",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07002",
+      "prediction": "B1",
+      "expected": "B1",
+      "correct": true,
+      "latency_ms": 6488.311908999996,
+      "input_tokens": 4131,
+      "output_tokens": 284,
+      "raw_output": "```json\n{\n    \"cefr_level\": \"B1\",\n    \"grammar_score\": 0.72,\n    \"corrections\": [\n        \"decition -> decision (Spelling; A1; Low)\",\n        \"tips how to get it -> tips on how to get it (Grammar; B1; Low)\",\n        \"each my day -> each of my days / my days (Word order; A2; Medium)\",\n        \"during a day -> during the day (Grammar; A2; Low)\",\n        \"other's works -> others' work (Grammar; B1; Medium)\",\n        \"But very important thing -> But a very important thing (Grammar; A2; Low)\"\n    ],\n    \"feedback\": \"The student demonstrates a solid B1 level. They can express complex ideas, provide advice, and maintain a coherent flow of thought over a longer text. The vocabulary is appropriate for the task, and the use of connectors ('Actually', 'However', 'Firstly', 'Also') shows an independent level of organization. While there are several minor grammatical slips (articles, possessives, and a spelling error), they do not impede communication. The text is slightly below B2 because the sentence structures remain relatively simple and there are frequent basic errors in noun phrases.\"\n}\n```",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07003",
+      "prediction": "B1",
+      "expected": "B1",
+      "correct": true,
+      "latency_ms": 10609.744552999999,
+      "input_tokens": 4046,
+      "output_tokens": 496,
+      "raw_output": "```json\n{\n    \"cefr_level\": \"B1\",\n    \"grammar_score\": 0.45,\n    \"corrections\": [\n        \"say you abot -> tell you about (Lexis; A2; Medium)\",\n        \"two my own tips -> two of my own tips (Grammar; A2; Low)\",\n        \"what help me -> that help me / which help me (Grammar; B1; Medium)\",\n        \"reccommend more communicate -> recommend communicating more (Grammar; B1; Medium)\",\n        \"look to life simplie -> look at life more simply (Lexis/Grammar; B1; Medium)\",\n        \"In futcher -> In the future (Spelling/Grammar; A2; Low)\",\n        \"give you a lot opportunity -> give you a lot of opportunities (Grammar; A2; Medium)\",\n        \"you need count -> you need to count (Grammar; A2; Medium)\",\n        \"think what you study -> think that you study (Grammar; B1; Medium)\",\n        \"hasn't free time -> don't have free time (Grammar; A2; Medium)\",\n        \"try note your day -> try noting your day / try to track your day (Lexis/Grammar; B1; Medium)\",\n        \"expirience -> experience (Spelling; A1; Low)\",\n        \"bad habbits what take realy a lot time -> bad habits that take really a lot of time (Grammar/Spelling; A2; Medium)\",\n        \"Delite them -> Delete them (Spelling; A1; Low)\",\n        \"I beleave -> I believe (Spelling; A1; Low)\",\n        \"unlacky -> unlucky (Spelling; A1; Low)\"\n    ],\n    \"feedback\": \"The student is at a B1 level. While there are frequent spelling and basic grammar errors (A1-A2), the student successfully uses complex structures such as 'Firstly/Secondly', conditional 'If' clauses, and abstract concepts like 'networking' and 'time management'. The text is fully communicative and expresses complex ideas despite the linguistic slips. The vocabulary is sufficient to provide practical advice and maintain a friendly, supportive tone.\"\n}\n```",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07005",
+      "prediction": "B1",
+      "expected": "B1",
+      "correct": true,
+      "latency_ms": 7775.797573000005,
+      "input_tokens": 4017,
+      "output_tokens": 327,
+      "raw_output": "```json\n{\n    \"cefr_level\": \"B1\",\n    \"grammar_score\": 0.62,\n    \"corrections\": [\n        \"Hellow -> Hello (Spelling; A1; Low)\",\n        \"and me to -> and me too / and so do I (Grammar; A2; Medium)\",\n        \"In first semester -> In the first semester (Grammar; A2; Low)\",\n        \"wery big problem -> a very big problem (Spelling/Grammar; A1; Medium)\",\n        \"how can I fix it -> how I can fix it (Word order; B1; Medium)\",\n        \"I will give you them -> I will give them to you / I will share them with you (Word order/Lexis; B1; Medium)\",\n        \"enouth -> enough (Spelling; A1; Low)\",\n        \"do sport well -> exercise regularly (Lexis; B1; Medium)\",\n        \"bust your productivity -> boost your productivity (Lexis; B2; Medium)\"\n    ],\n    \"feedback\": \"Level B1: The student can express complex ideas and provide structured advice. While there are several basic spelling and grammar errors (A1/A2), the use of a numbered list, the ability to suggest specific tools (Google Calendar), and the attempt at more complex vocabulary ('prioritize', 'productivity') demonstrate an independent user level. The meaning is clear throughout, and the student successfully addresses the task requirements.\"\n}\n```",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07006",
+      "prediction": "B1",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 11201.806462999997,
+      "input_tokens": 4158,
+      "output_tokens": 495,
+      "raw_output": "```json\n{\n    \"cefr_level\": \"B1\",\n    \"grammar_score\": 0.45,\n    \"corrections\": [\n        \"somebody - not -> some cannot (Grammar; A2; Medium)\",\n        \"It is easily -> It is easy (Grammar; A1; High)\",\n        \"pass all exam -> pass all exams (Grammar; A2; Low)\",\n        \"I want to some tips for became diffiecult study easilier -> I want to give some tips on how to make difficult studies easier (Grammar/Lexis; B1; High)\",\n        \"rewrite solution from other students -> copy solutions from other students (Lexis; B1; Medium)\",\n        \"what your friend write -> what your friend wrote (Grammar; A2; Medium)\",\n        \"It is not obviously tip -> It is not an obvious tip (Grammar; A2; Medium)\",\n        \"it really work -> it really works (Grammar; A1; Medium)\",\n        \"your brain relax and do not do anything -> your brain relaxes and stops working (Grammar; A2; Medium)\",\n        \"solve spend less time -> spend less time (Grammar; A2; Medium)\",\n        \"More time of sleeping -> More sleep (Lexis; A2; Low)\",\n        \"It is obviously -> It is obvious (Grammar; A1; High)\",\n        \"you dont spend time -> you won't spend time (Grammar; B1; Medium)\",\n        \"better mark than if you sleep in first iteration -> better marks than if you slept the first time (Lexis/Grammar; B1; Medium)\",\n        \"eductation esalier -> education easier (Spelling; A1; Low)\"\n    ],\n    \"feedback\": \"The student is at a B1 level. While there are frequent grammatical errors (subject-verb agreement, adjective vs. adverb confusion, and awkward phrasing), the student is able to express complex ideas, organize a long response into a structured list, and maintain a consistent flow of communication. The vocabulary is sufficient to convey practical advice, and the meaning is clear throughout despite the errors. The length and attempt at a structured 'tips' format demonstrate independent language use characteristic of B1.\"\n}\n```",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07018",
+      "prediction": "B2",
+      "expected": "B2",
+      "correct": true,
+      "latency_ms": 5818.43667199999,
+      "input_tokens": 4025,
+      "output_tokens": 214,
+      "raw_output": "```json\n{\n    \"cefr_level\": \"B2\",\n    \"grammar_score\": 0.82,\n    \"corrections\": [\n        \"I think, that -> I think that (Punctuation; B1; Low)\",\n        \"this tips -> these tips (Grammar; A2; Medium)\",\n        \"would't -> wouldn't (Spelling; A1; Low)\"\n    ],\n    \"feedback\": \"The student demonstrates a B2 level of proficiency. They can express complex ideas clearly and use a variety of structures (e.g., 'If you stick to... you wouldn't think...'). The vocabulary is appropriate and flexible ('organize the studying process properly', 'split them into smaller ones', 'procrastination' implied by context). While there are a few minor slips in grammar (demonstrative adjectives) and punctuation, they do not impede communication. The text is well-organized and achieves the communicative task effectively.\"\n}\n```",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07019",
+      "prediction": "B1",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 6377.190548000001,
+      "input_tokens": 4039,
+      "output_tokens": 257,
+      "raw_output": "```json\n{\n    \"cefr_level\": \"B1\",\n    \"grammar_score\": 0.65,\n    \"corrections\": [\n        \"Everyone got same time a day -> Everyone has the same amount of time in a day (Grammar; A2; Medium)\",\n        \"study good -> study well (Grammar; A2; Medium)\",\n        \"homeworks -> homework (Lexis; A2; Low)\",\n        \"Its important -> It's important (Punctuation; A1; Low)\",\n        \"If subject seems not intresting -> If a subject seems uninteresting (Grammar/Lexis; B1; Medium)\"\n    ],\n    \"feedback\": \"The student demonstrates a B1 level of proficiency. They can express complex ideas (prioritization, questioning the necessity of certain tasks) and organize their text logically with discourse markers ('To sum up', 'Also'). While there are several A2-level grammar mistakes (adverb usage 'good' vs 'well', uncountable noun 'homeworks', and missing articles), these do not block meaning. The vocabulary is sufficient for the task, and the tone is appropriate for a student chat.\"\n}\n```",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07070",
+      "prediction": "B1",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 6680.135500999995,
+      "input_tokens": 4086,
+      "output_tokens": 271,
+      "raw_output": "```json\n{\n    \"cefr_level\": \"B1\",\n    \"grammar_score\": 0.72,\n    \"corrections\": [\n        \"cannnot -> cannot (Spelling; A1; Low)\",\n        \"there is different situation -> there is a different situation (Grammar; A2; Medium)\",\n        \"other difficult area -> other difficult areas (Grammar; A2; Medium)\",\n        \"In the university -> At university (Lexis/Grammar; B1; Low)\",\n        \"knowledge that university gives is complex -> the knowledge that university provides is extensive/advanced (Lexis; B2; Medium)\"\n    ],\n    \"feedback\": \"The student demonstrates a B1 level of proficiency. They can express complex ideas and organize a coherent argument with a clear introduction, body, and conclusion. The vocabulary is appropriate for the task, and the meaning is always clear despite some grammatical slips. The use of connectors like 'Of course', 'But', and 'To sum it up' shows an independent ability to structure a text. To reach B2, the student should focus on article usage ('a different situation') and more precise lexical choices (using 'extensive' or 'advanced' instead of repeating 'complex').\"\n}\n```",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07087",
+      "prediction": "B1",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 8584.587526000007,
+      "input_tokens": 4094,
+      "output_tokens": 394,
+      "raw_output": "```json\n{\n    \"cefr_level\": \"B1\",\n    \"grammar_score\": 0.55,\n    \"corrections\": [\n        \"Earth is our home -> the Earth is our home (Grammar; A2; Low)\",\n        \"has became more polluted place -> has become a more polluted place (Grammar; A2; Medium)\",\n        \"Does this pollutions affect environmental problems? -> Does this pollution contribute to environmental problems? (Lexis/Grammar; B1; Medium)\",\n        \"making pollution problem looks not vital but dumb -> making the pollution problem look trivial rather than vital (Lexis/Grammar; B2; Medium)\",\n        \"It cause politicians do not look -> It causes politicians to ignore (Grammar; B1; Medium)\",\n        \"People who cares about environmental health significantly overreacting -> People who care about environmental health are significantly overreacting (Grammar; A2; Medium)\",\n        \"climate changes is -> climate change is (Grammar; A2; Low)\",\n        \"only people responsible for pollutions -> only people are responsible for pollution (Grammar; B1; Medium)\",\n        \"making Earth more clear -> making the Earth cleaner (Lexis; A2; Medium)\"\n    ],\n    \"feedback\": \"The student is at a B1 level. They can express complex opinions and organize a multi-paragraph essay with a clear introduction, body, and conclusion. There is a good attempt at using varied vocabulary ('systemic', 'overreact', 'undermines' - though some are used slightly awkwardly). However, there are frequent foundational errors in subject-verb agreement ('People who cares'), verb forms ('has became'), and article usage. Despite these errors, the meaning is always clear, and the student successfully engages with the prompt's complexity.\"\n}\n```",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07099",
+      "prediction": "B1",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 5458.409782000004,
+      "input_tokens": 4089,
+      "output_tokens": 241,
+      "raw_output": "```json\n{\n    \"cefr_level\": \"B1\",\n    \"grammar_score\": 0.72,\n    \"corrections\": [\n        \"werelucky -> were lucky (Punctuation/Typo; A1; Low)\",\n        \"talant -> talent (Lexis/Spelling; A1; Low)\",\n        \"alwaysbeats -> always beats (Punctuation/Typo; A1; Low)\",\n        \"On my point of view -> From my point of view (Lexis/Collocation; B1; Medium)\"\n    ],\n    \"feedback\": \"The student demonstrates a solid B1 level. They can express complex opinions and maintain a coherent argument throughout the essay. The vocabulary is appropriate for the task, and the use of connectors (However, All in all, On the other hand) shows an independent level of organization. While there are several spelling/typo errors and one collocation mistake ('On my point of view'), these do not block meaning. The sentence structures are mostly simple or compound, lacking the consistent complexity or sophisticated lexical range required for B2.\"\n}\n```",
+      "judge_raw_score": null,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-23T20:34:06+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": null,
+  "judge_model_revision": null,
+  "judge_prompt_hash": null
+}
