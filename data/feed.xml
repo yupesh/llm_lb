@@ -42,6 +42,13 @@
     <summary>accuracy=0.615, qwk=0.270, boundary_accuracy=0.615, boundary_kappa=0.270, signed_diff=-0.385</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_b1b2_no_ann_no_m_serial/1.0/gemma-4-31b-it@vllm/2026-04-23T19:52:46+00:00</id>
+    <title>gemma-4-31b-it@vllm scored 0.115 accuracy on writing_eval_b1b2_no_ann_no_m_serial v1.0</title>
+    <updated>2026-04-23T19:52:46+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_b1b2_no_ann_no_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.115, qwk=0.172, boundary_accuracy=0.231, boundary_kappa=0.030, signed_diff=-0.923</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring_condensed/1.1/gemma-4-31b-it@vllm/2026-04-23T19:42:52+00:00</id>
     <title>gemma-4-31b-it@vllm scored 0.350 accuracy on essay_vocabulary_scoring_condensed v1.1</title>
     <updated>2026-04-23T19:42:52+00:00</updated>
@@ -348,12 +355,5 @@
     <updated>2026-04-23T12:58:28+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n10_no_target_ann_loocv_fewshot_no_m_serial" rel="alternate" type="text/html"/>
     <summary>accuracy=0.400, adjacent_accuracy=1.000, qwk=0.143</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n10_no_target_ann_loocv_error_retrieval_with_m_serial/1.0/gemma-3-12b-it@vllm/2026-04-23T12:56:59+00:00</id>
-    <title>gemma-3-12b-it@vllm scored 0.400 accuracy on writing_eval_n10_no_target_ann_loocv_error_retrieval_with_m_serial v1.0</title>
-    <updated>2026-04-23T12:56:59+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n10_no_target_ann_loocv_error_retrieval_with_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.400, adjacent_accuracy=0.800, qwk=0.200</summary>
   </entry>
 </feed>
