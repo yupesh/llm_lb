@@ -4,8 +4,15 @@
   <id>tag:yupesh.github.io,2026:llm_lb/feed</id>
   <link href="https://yupesh.github.io/llm_lb/" rel="alternate" type="text/html"/>
   <link href="https://yupesh.github.io/llm_lb/data/feed.xml" rel="self" type="application/atom+xml"/>
-  <updated>2026-04-23T09:07:13+00:00</updated>
+  <updated>2026-04-23T09:42:56+00:00</updated>
   <author><name>LLM Leaderboard</name></author>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n10_with_ann_no_m_serial/1.0/qwen3.5-27b@vllm/2026-04-23T09:42:56+00:00</id>
+    <title>qwen3.5-27b@vllm scored 0.500 accuracy on writing_eval_n10_with_ann_no_m_serial v1.0</title>
+    <updated>2026-04-23T09:42:56+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n10_with_ann_no_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.500, adjacent_accuracy=0.800, qwk=0.158</summary>
+  </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n10_with_ann_loocv_fewshot_with_m_serial/1.0/qwen3.5-27b@vllm/2026-04-23T09:07:13+00:00</id>
     <title>qwen3.5-27b@vllm scored 0.300 accuracy on writing_eval_n10_with_ann_loocv_fewshot_with_m_serial v1.0</title>
@@ -348,12 +355,5 @@
     <updated>2026-04-22T14:28:20+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/summarization" rel="alternate" type="text/html"/>
     <summary>judge_score=0.800</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_loocv_fewshot_no_m_serial/1.0/qwen3-30b@vllm/2026-04-22T14:27:20+00:00</id>
-    <title>qwen3-30b@vllm scored 0.619 accuracy on writing_eval_n42_with_ann_loocv_fewshot_no_m_serial v1.0</title>
-    <updated>2026-04-22T14:27:20+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_loocv_fewshot_no_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.619, adjacent_accuracy=0.905, qwk=0.464</summary>
   </entry>
 </feed>
