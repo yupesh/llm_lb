@@ -35,6 +35,13 @@
     <summary>accuracy=0.600, adjacent_accuracy=1.000, qwk=0.429</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n10_no_target_ann_loocv_fewshot_with_m_serial/1.0/glm5-awq@vllm/2026-04-23T07:23:53+00:00</id>
+    <title>glm5-awq@vllm scored 0.300 accuracy on writing_eval_n10_no_target_ann_loocv_fewshot_with_m_serial v1.0</title>
+    <updated>2026-04-23T07:23:53+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n10_no_target_ann_loocv_fewshot_with_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.300, adjacent_accuracy=1.000, qwk=0.364</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n10_no_target_ann_loocv_fewshot_no_m_serial/1.0/glm5-awq@vllm/2026-04-23T07:10:30+00:00</id>
     <title>glm5-awq@vllm scored 0.600 accuracy on writing_eval_n10_no_target_ann_loocv_fewshot_no_m_serial v1.0</title>
     <updated>2026-04-23T07:10:30+00:00</updated>
@@ -348,12 +355,5 @@
     <updated>2026-04-22T14:27:20+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_loocv_fewshot_no_m_serial" rel="alternate" type="text/html"/>
     <summary>accuracy=0.619, adjacent_accuracy=0.905, qwk=0.464</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/glm5-awq@vllm/2026-04-22T14:26:41+00:00</id>
-    <title>glm5-awq@vllm scored 0.800 accuracy on safety_classification v1.0</title>
-    <updated>2026-04-22T14:26:41+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/safety_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.800, macro_f1=0.800</summary>
   </entry>
 </feed>
