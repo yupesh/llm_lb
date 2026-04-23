@@ -4,8 +4,15 @@
   <id>tag:yupesh.github.io,2026:llm_lb/feed</id>
   <link href="https://yupesh.github.io/llm_lb/" rel="alternate" type="text/html"/>
   <link href="https://yupesh.github.io/llm_lb/data/feed.xml" rel="self" type="application/atom+xml"/>
-  <updated>2026-04-23T10:17:23+00:00</updated>
+  <updated>2026-04-23T11:33:38+00:00</updated>
   <author><name>LLM Leaderboard</name></author>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_coherence_scoring_condensed/1.1/gemma-3-12b-it@vllm/2026-04-23T11:33:38+00:00</id>
+    <title>gemma-3-12b-it@vllm scored 0.300 accuracy on essay_coherence_scoring_condensed v1.1</title>
+    <updated>2026-04-23T11:33:38+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_coherence_scoring_condensed" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.300, macro_f1=0.180, qwk=0.133</summary>
+  </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n10_with_ann_with_m_serial/1.0/glm5-awq@vllm/2026-04-23T10:17:23+00:00</id>
     <title>glm5-awq@vllm scored 0.300 accuracy on writing_eval_n10_with_ann_with_m_serial v1.0</title>
@@ -348,12 +355,5 @@
     <updated>2026-04-22T15:01:20+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_loocv_fewshot_with_m_serial" rel="alternate" type="text/html"/>
     <summary>accuracy=0.143, adjacent_accuracy=0.833, qwk=0.098</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/temporal_information_extraction/1.0/glm5-awq@vllm/2026-04-22T14:54:51+00:00</id>
-    <title>glm5-awq@vllm scored 0.653 judge_score on temporal_information_extraction v1.0</title>
-    <updated>2026-04-22T14:54:51+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/temporal_information_extraction" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.653</summary>
   </entry>
 </feed>

@@ -67,7 +67,20 @@
       "p95_latency_ms": 17483.975205000006,
       "cost_usd": null,
       "result_file": "results/qwen3-30b@vllm__2026-04-22T08-50-50Z.json"
+    },
+    {
+      "model_id": "gemma-3-12b-it@vllm",
+      "score": 0.1333333333333333,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.18012422360248448,
+        "qwk": 0.1333333333333333
+      },
+      "tps": 3.3247824411748144,
+      "p95_latency_ms": 1147.688988000013,
+      "cost_usd": null,
+      "result_file": "results/gemma-3-12b-it@vllm__2026-04-23T11-33-38Z.json"
     }
   ],
-  "updated_at": "2026-04-22T13:04:37+00:00"
+  "updated_at": "2026-04-23T11:34:19+00:00"
 }
