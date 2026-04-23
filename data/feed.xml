@@ -4,8 +4,15 @@
   <id>tag:yupesh.github.io,2026:llm_lb/feed</id>
   <link href="https://yupesh.github.io/llm_lb/" rel="alternate" type="text/html"/>
   <link href="https://yupesh.github.io/llm_lb/data/feed.xml" rel="self" type="application/atom+xml"/>
-  <updated>2026-04-23T03:40:31+00:00</updated>
+  <updated>2026-04-23T04:37:45+00:00</updated>
   <author><name>LLM Leaderboard</name></author>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_with_m_serial/1.0/glm5-awq@vllm/2026-04-23T04:37:45+00:00</id>
+    <title>glm5-awq@vllm scored 0.214 accuracy on writing_eval_n42_with_ann_with_m_serial v1.0</title>
+    <updated>2026-04-23T04:37:45+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_with_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.214, adjacent_accuracy=0.857, qwk=0.468</summary>
+  </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_no_m_serial/1.0/glm5-awq@vllm/2026-04-23T03:40:31+00:00</id>
     <title>glm5-awq@vllm scored 0.429 accuracy on writing_eval_n42_with_ann_no_m_serial v1.0</title>
@@ -348,12 +355,5 @@
     <updated>2026-04-22T12:48:31+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection_beavertails" rel="alternate" type="text/html"/>
     <summary>accuracy=0.500, macro_f1=0.333</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection/1.0/glm5-awq@vllm/2026-04-22T12:45:53+00:00</id>
-    <title>glm5-awq@vllm scored 1.000 accuracy on jailbreak_detection v1.0</title>
-    <updated>2026-04-22T12:45:53+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection" rel="alternate" type="text/html"/>
-    <summary>accuracy=1.000, macro_f1=1.000</summary>
   </entry>
 </feed>
