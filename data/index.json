@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T04:41:26+00:00",
+  "generated_at": "2026-04-23T04:47:45+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -5409,23 +5409,6 @@
     {
       "task_id": "writing_eval_b1b2_no_ann_with_m_score_only_serial",
       "task_version": "1.0",
-      "model_id": "glm5-awq@vllm",
-      "score": 0.4230769230769231,
-      "metrics": {
-        "accuracy": 0.38461538461538464,
-        "qwk": 0.11864406779661019,
-        "boundary_accuracy": 0.4230769230769231,
-        "boundary_kappa": 0.13793103448275865,
-        "signed_diff": -0.6
-      },
-      "tps": 45.28799008506119,
-      "p95_latency_ms": 158157.64018,
-      "cost_usd": null,
-      "result_file": "tasks/writing_eval_b1b2_no_ann_with_m_score_only_serial/results/glm5-awq@vllm__2026-04-22T16-18-03Z.json"
-    },
-    {
-      "task_id": "writing_eval_b1b2_no_ann_with_m_score_only_serial",
-      "task_version": "1.0",
       "model_id": "qwen3.5-27b@vllm",
       "score": 0.3076923076923077,
       "metrics": {
@@ -5633,21 +5616,6 @@
       "result_file": "tasks/writing_eval_n10_no_target_ann_loocv_fewshot_no_m_serial/results/qwen3-30b@vllm__2026-04-22T11-00-51Z.json"
     },
     {
-      "task_id": "writing_eval_n10_no_target_ann_loocv_fewshot_no_m_serial",
-      "task_version": "1.0",
-      "model_id": "glm5-awq@vllm",
-      "score": -0.42105263157894735,
-      "metrics": {
-        "accuracy": 0.6,
-        "adjacent_accuracy": 0.8,
-        "qwk": -0.42105263157894735
-      },
-      "tps": 44.853159349485324,
-      "p95_latency_ms": 91858.82046900001,
-      "cost_usd": null,
-      "result_file": "tasks/writing_eval_n10_no_target_ann_loocv_fewshot_no_m_serial/results/glm5-awq@vllm__2026-04-22T18-56-43Z.json"
-    },
-    {
       "task_id": "writing_eval_n10_no_target_ann_loocv_fewshot_with_m_serial",
       "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
@@ -5676,21 +5644,6 @@
       "p95_latency_ms": 36879.293739999994,
       "cost_usd": null,
       "result_file": "tasks/writing_eval_n10_with_ann_loocv_fewshot_no_m_serial/results/qwen3-30b@vllm__2026-04-22T11-20-28Z.json"
-    },
-    {
-      "task_id": "writing_eval_n10_with_ann_loocv_fewshot_no_m_serial",
-      "task_version": "1.0",
-      "model_id": "glm5-awq@vllm",
-      "score": 0.0,
-      "metrics": {
-        "accuracy": 0.5,
-        "adjacent_accuracy": 0.9,
-        "qwk": 0.0
-      },
-      "tps": 45.061131267043585,
-      "p95_latency_ms": 90111.09575000001,
-      "cost_usd": null,
-      "result_file": "tasks/writing_eval_n10_with_ann_loocv_fewshot_no_m_serial/results/glm5-awq@vllm__2026-04-22T19-22-41Z.json"
     },
     {
       "task_id": "writing_eval_n10_with_ann_loocv_fewshot_no_m_serial",
@@ -5931,21 +5884,6 @@
       "p95_latency_ms": 59519.23341700013,
       "cost_usd": null,
       "result_file": "tasks/writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial/results/qwen3-30b@vllm__2026-04-22T13-24-55Z.json"
-    },
-    {
-      "task_id": "writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial",
-      "task_version": "1.0",
-      "model_id": "glm5-awq@vllm",
-      "score": 0.17926003126628443,
-      "metrics": {
-        "accuracy": 0.14285714285714285,
-        "adjacent_accuracy": 0.8571428571428571,
-        "qwk": 0.17926003126628443
-      },
-      "tps": 44.94900253410749,
-      "p95_latency_ms": 181666.8385480001,
-      "cost_usd": null,
-      "result_file": "tasks/writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial/results/glm5-awq@vllm__2026-04-23T00-04-50Z.json"
     },
     {
       "task_id": "writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial",
