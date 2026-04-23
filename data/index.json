@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T01:23:47+00:00",
+  "generated_at": "2026-04-23T01:24:01+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -5976,6 +5976,21 @@
       "p95_latency_ms": 58358.83928299995,
       "cost_usd": null,
       "result_file": "tasks/writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial/results/qwen3-30b@vllm__2026-04-22T13-55-55Z.json"
+    },
+    {
+      "task_id": "writing_eval_n42_with_ann_loocv_fewshot_no_m_serial",
+      "task_version": "1.0",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.4843110504774899,
+      "metrics": {
+        "accuracy": 0.2857142857142857,
+        "adjacent_accuracy": 0.9523809523809523,
+        "qwk": 0.4843110504774899
+      },
+      "tps": 41.517639705110305,
+      "p95_latency_ms": 161665.93594999996,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n42_with_ann_loocv_fewshot_no_m_serial/results/glm5-awq@vllm__2026-04-23T01-03-50Z.json"
     },
     {
       "task_id": "writing_eval_n42_with_ann_loocv_fewshot_no_m_serial",
