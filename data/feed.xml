@@ -84,6 +84,27 @@
     <summary>accuracy=0.154, qwk=0.166, boundary_accuracy=0.308, boundary_kappa=0.064, signed_diff=-1.000</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_b1b2_no_ann_with_m_score_only_serial/1.0/gemma-3-12b-it@vllm/2026-04-23T12:19:33+00:00</id>
+    <title>gemma-3-12b-it@vllm scored 0.500 accuracy on writing_eval_b1b2_no_ann_with_m_score_only_serial v1.0</title>
+    <updated>2026-04-23T12:19:33+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_b1b2_no_ann_with_m_score_only_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.500, qwk=0.241, boundary_accuracy=0.538, boundary_kappa=0.124, signed_diff=-0.462</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_b1b2_no_ann_no_m_serial/1.0/gemma-3-12b-it@vllm/2026-04-23T12:18:23+00:00</id>
+    <title>gemma-3-12b-it@vllm scored 0.308 accuracy on writing_eval_b1b2_no_ann_no_m_serial v1.0</title>
+    <updated>2026-04-23T12:18:23+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_b1b2_no_ann_no_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.308, qwk=0.176, boundary_accuracy=0.385, boundary_kappa=0.028, signed_diff=-0.615</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring_condensed/1.1/minimax-m2.7@vllm/2026-04-23T12:13:27+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.250 accuracy on essay_vocabulary_scoring_condensed v1.1</title>
+    <updated>2026-04-23T12:13:27+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring_condensed" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.250, macro_f1=0.195, qwk=0.429</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/topic_classification/1.0/gemma-3-12b-it@vllm/2026-04-23T12:11:52+00:00</id>
     <title>gemma-3-12b-it@vllm scored 1.000 accuracy on topic_classification v1.0</title>
     <updated>2026-04-23T12:11:52+00:00</updated>
@@ -103,6 +124,13 @@
     <updated>2026-04-23T12:11:23+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/text_classification" rel="alternate" type="text/html"/>
     <summary>accuracy=1.000, macro_f1=1.000</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_bird/1.0/gemma-3-12b-it@vllm/2026-04-23T12:10:54+00:00</id>
+    <title>gemma-3-12b-it@vllm scored 0.409 judge_score on text2sql_bird v1.0</title>
+    <updated>2026-04-23T12:10:54+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_bird" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.409</summary>
   </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/essay_grammar_scoring_condensed/1.1/minimax-m2.7@vllm/2026-04-23T12:09:55+00:00</id>
@@ -327,33 +355,5 @@
     <updated>2026-04-23T11:17:33+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_csv_excel" rel="alternate" type="text/html"/>
     <summary>judge_score=0.360</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/conversational_memory_qa/1.0/gemma-3-12b-it@vllm/2026-04-23T11:14:47+00:00</id>
-    <title>gemma-3-12b-it@vllm scored 0.627 judge_score on conversational_memory_qa v1.0</title>
-    <updated>2026-04-23T11:14:47+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/conversational_memory_qa" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.627</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification_condensed/1.0/gemma-3-12b-it@vllm/2026-04-23T11:11:50+00:00</id>
-    <title>gemma-3-12b-it@vllm scored 0.350 accuracy on cefr_level_classification_condensed v1.0</title>
-    <updated>2026-04-23T11:11:50+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.350, macro_f1=0.268, qwk=0.441</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification/1.1/gemma-3-12b-it@vllm/2026-04-23T11:11:17+00:00</id>
-    <title>gemma-3-12b-it@vllm scored 0.300 accuracy on cefr_level_classification v1.1</title>
-    <updated>2026-04-23T11:11:17+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.300, macro_f1=0.202, qwk=0.375</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/agent_tool_calling/1.0/gemma-3-12b-it@vllm/2026-04-23T11:10:47+00:00</id>
-    <title>gemma-3-12b-it@vllm scored 0.627 judge_score on agent_tool_calling v1.0</title>
-    <updated>2026-04-23T11:10:47+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/agent_tool_calling" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.627</summary>
   </entry>
 </feed>
