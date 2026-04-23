@@ -49,6 +49,27 @@
     <summary>accuracy=0.250, macro_f1=0.183, qwk=0.133</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/temporal_information_extraction/1.0/gemma-3-12b-it@vllm/2026-04-23T12:06:56+00:00</id>
+    <title>gemma-3-12b-it@vllm scored 0.387 judge_score on temporal_information_extraction v1.0</title>
+    <updated>2026-04-23T12:06:56+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/temporal_information_extraction" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.387</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_coherence_scoring_condensed/1.1/minimax-m2.7@vllm/2026-04-23T12:06:01+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.150 accuracy on essay_coherence_scoring_condensed v1.1</title>
+    <updated>2026-04-23T12:06:01+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_coherence_scoring_condensed" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.150, macro_f1=0.142, qwk=0.350</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/summarization/1.0/gemma-3-12b-it@vllm/2026-04-23T12:05:15+00:00</id>
+    <title>gemma-3-12b-it@vllm scored 0.760 judge_score on summarization v1.0</title>
+    <updated>2026-04-23T12:05:15+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/summarization" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.760</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/gemma-3-12b-it@vllm/2026-04-23T12:04:44+00:00</id>
     <title>gemma-3-12b-it@vllm scored 0.900 accuracy on safety_classification v1.0</title>
     <updated>2026-04-23T12:04:44+00:00</updated>
@@ -89,6 +110,13 @@
     <updated>2026-04-23T11:44:56+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_triplet_extraction" rel="alternate" type="text/html"/>
     <summary>judge_score=0.510</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_relation_refinement/1.0/gemma-3-12b-it@vllm/2026-04-23T11:42:36+00:00</id>
+    <title>gemma-3-12b-it@vllm scored 0.840 judge_score on kg_relation_refinement v1.0</title>
+    <updated>2026-04-23T11:42:36+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_relation_refinement" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.840</summary>
   </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/kg_entity_type_refinement/1.0/gemma-3-12b-it@vllm/2026-04-23T11:41:35+00:00</id>
@@ -327,33 +355,5 @@
     <updated>2026-04-23T06:59:03+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n10_no_target_ann_loocv_error_retrieval_with_m_serial" rel="alternate" type="text/html"/>
     <summary>accuracy=0.300, adjacent_accuracy=1.000, qwk=0.364</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n10_no_target_ann_loocv_fewshot_no_m_serial/1.0/qwen3.5-27b@vllm/2026-04-23T06:55:40+00:00</id>
-    <title>qwen3.5-27b@vllm scored 0.500 accuracy on writing_eval_n10_no_target_ann_loocv_fewshot_no_m_serial v1.0</title>
-    <updated>2026-04-23T06:55:40+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n10_no_target_ann_loocv_fewshot_no_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.500, adjacent_accuracy=1.000, qwk=0.286</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n10_no_target_ann_loocv_error_retrieval_no_m_serial/1.0/glm5-awq@vllm/2026-04-23T06:46:14+00:00</id>
-    <title>glm5-awq@vllm scored 0.500 accuracy on writing_eval_n10_no_target_ann_loocv_error_retrieval_no_m_serial v1.0</title>
-    <updated>2026-04-23T06:46:14+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n10_no_target_ann_loocv_error_retrieval_no_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.500, adjacent_accuracy=1.000, qwk=0.444</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n10_no_target_ann_loocv_error_retrieval_with_m_serial/1.0/qwen3.5-27b@vllm/2026-04-23T06:41:06+00:00</id>
-    <title>qwen3.5-27b@vllm scored 0.300 accuracy on writing_eval_n10_no_target_ann_loocv_error_retrieval_with_m_serial v1.0</title>
-    <updated>2026-04-23T06:41:06+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n10_no_target_ann_loocv_error_retrieval_with_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.300, adjacent_accuracy=0.800, qwk=0.133</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n10_no_ann_with_m_serial/1.0/glm5-awq@vllm/2026-04-23T06:32:56+00:00</id>
-    <title>glm5-awq@vllm scored 0.200 accuracy on writing_eval_n10_no_ann_with_m_serial v1.0</title>
-    <updated>2026-04-23T06:32:56+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n10_no_ann_with_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.200, adjacent_accuracy=1.000, qwk=0.111</summary>
   </entry>
 </feed>
