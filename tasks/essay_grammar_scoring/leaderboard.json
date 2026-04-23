@@ -80,7 +80,20 @@
       "p95_latency_ms": 1560.0128600000005,
       "cost_usd": null,
       "result_file": "results/gemma-3-12b-it@vllm__2026-04-23T11-34-20Z.json"
+    },
+    {
+      "model_id": "minimax-m2.7@vllm",
+      "score": 0.13333333333333341,
+      "metrics": {
+        "accuracy": 0.25,
+        "macro_f1": 0.18333333333333335,
+        "qwk": 0.13333333333333341
+      },
+      "tps": 101.74735845639077,
+      "p95_latency_ms": 6311.276749000001,
+      "cost_usd": null,
+      "result_file": "results/minimax-m2.7@vllm__2026-04-23T12-07-57Z.json"
     }
   ],
-  "updated_at": "2026-04-23T11:37:47+00:00"
+  "updated_at": "2026-04-23T12:14:16+00:00"
 }
