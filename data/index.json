@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T11:34:43+00:00",
+  "generated_at": "2026-04-23T11:35:09+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -1109,6 +1109,21 @@
     {
       "task_id": "cefr_level_classification_condensed",
       "task_version": "1.0",
+      "model_id": "gemma-3-12b-it@vllm",
+      "score": 0.4411764705882353,
+      "metrics": {
+        "accuracy": 0.35,
+        "macro_f1": 0.2678571428571429,
+        "qwk": 0.4411764705882353
+      },
+      "tps": 4.127070380942673,
+      "p95_latency_ms": 1221.9538979999952,
+      "cost_usd": null,
+      "result_file": "tasks/cefr_level_classification_condensed/results/gemma-3-12b-it@vllm__2026-04-23T11-11-50Z.json"
+    },
+    {
+      "task_id": "cefr_level_classification_condensed",
+      "task_version": "1.0",
       "model_id": "gemma-4-31b-it@vllm",
       "score": 0.41666666666666663,
       "metrics": {
@@ -1280,6 +1295,19 @@
       "result_file": "tasks/conversational_memory_qa/results/deepseek32exp@vllm__2026-04-21T06-28-46Z.json"
     },
     {
+      "task_id": "conversational_memory_qa",
+      "task_version": "1.0",
+      "model_id": "gemma-3-12b-it@vllm",
+      "score": 0.6266666666666667,
+      "metrics": {
+        "judge_score": 0.6266666666666667
+      },
+      "tps": 0.9564645704621273,
+      "p95_latency_ms": 7951.538956000008,
+      "cost_usd": null,
+      "result_file": "tasks/conversational_memory_qa/results/gemma-3-12b-it@vllm__2026-04-23T11-14-47Z.json"
+    },
+    {
       "task_id": "datascibench_csv_excel",
       "task_version": "1.0",
       "model_id": "gpt-oss-120b@vllm",
@@ -1423,6 +1451,19 @@
       "result_file": "tasks/datascibench_csv_excel/results/qwen3.5-27b@vllm__2026-04-19T23-35-38Z.json"
     },
     {
+      "task_id": "datascibench_csv_excel",
+      "task_version": "1.0",
+      "model_id": "gemma-3-12b-it@vllm",
+      "score": 0.36,
+      "metrics": {
+        "judge_score": 0.36
+      },
+      "tps": 54.169207843743365,
+      "p95_latency_ms": 27735.410691999987,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_csv_excel/results/gemma-3-12b-it@vllm__2026-04-23T11-17-33Z.json"
+    },
+    {
       "task_id": "datascibench_dl",
       "task_version": "1.0",
       "model_id": "glm5-awq@vllm",
@@ -1512,6 +1553,19 @@
       "p95_latency_ms": 323594.05753000005,
       "cost_usd": null,
       "result_file": "tasks/datascibench_dl/results/minimax-m2.7@vllm__2026-04-21T08-54-27Z.json"
+    },
+    {
+      "task_id": "datascibench_dl",
+      "task_version": "1.0",
+      "model_id": "gemma-3-12b-it@vllm",
+      "score": 0.42000000000000004,
+      "metrics": {
+        "judge_score": 0.42000000000000004
+      },
+      "tps": 55.40065421793708,
+      "p95_latency_ms": 34785.231082,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_dl/results/gemma-3-12b-it@vllm__2026-04-23T11-22-10Z.json"
     },
     {
       "task_id": "datascibench_dl",
