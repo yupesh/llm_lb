@@ -4,8 +4,15 @@
   <id>tag:yupesh.github.io,2026:llm_lb/feed</id>
   <link href="https://yupesh.github.io/llm_lb/" rel="alternate" type="text/html"/>
   <link href="https://yupesh.github.io/llm_lb/data/feed.xml" rel="self" type="application/atom+xml"/>
-  <updated>2026-04-24T01:10:32+00:00</updated>
+  <updated>2026-04-24T01:13:15+00:00</updated>
   <author><name>LLM Leaderboard</name></author>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n10_no_ann_with_m_serial/1.1/qwen3-30b@vllm/2026-04-24T01:13:15+00:00</id>
+    <title>qwen3-30b@vllm scored 0.600 accuracy on writing_eval_n10_no_ann_with_m_serial v1.1</title>
+    <updated>2026-04-24T01:13:15+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n10_no_ann_with_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.600, adjacent_accuracy=0.900, qwk=0.533</summary>
+  </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n10_no_ann_no_m_serial/1.1/qwen3-30b@vllm/2026-04-24T01:10:32+00:00</id>
     <title>qwen3-30b@vllm scored 0.600 accuracy on writing_eval_n10_no_ann_no_m_serial v1.1</title>
@@ -348,12 +355,5 @@
     <updated>2026-04-23T12:10:54+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_bird" rel="alternate" type="text/html"/>
     <summary>judge_score=0.409</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_grammar_scoring_condensed/1.1/minimax-m2.7@vllm/2026-04-23T12:09:55+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.350 accuracy on essay_grammar_scoring_condensed v1.1</title>
-    <updated>2026-04-23T12:09:55+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_grammar_scoring_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.350, macro_f1=0.289, qwk=0.100</summary>
   </entry>
 </feed>
