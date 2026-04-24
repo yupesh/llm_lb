@@ -1,5 +1,5 @@
 name: datascibench_human
-version: "1.0"
+version: "1.1"
 description: |
   Human-evaluation coding tasks from DeepPavlov DataSciBench (human subset).
   End-to-end data science problems: EDA, ML pipelines, clustering, reporting.
@@ -11,7 +11,7 @@ metric:
 llm_params:
   temperature: 0.0
   seed: 42
-  max_tokens: 10240
+  max_tokens: null
 system_prompt: |
   You are an expert Python data-science programmer. Write complete, runnable
   Python code that solves the given task. Output ONLY the code, no explanations.
