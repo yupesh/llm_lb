@@ -26,6 +26,18 @@
           "default": true,
           "title": "Forbid Self Judge",
           "type": "boolean"
+        },
+        "served_model_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Served Model Name"
         }
       },
       "required": [

@@ -260,6 +260,18 @@
       ],
       "default": null,
       "title": "Judge Prompt Hash"
+    },
+    "judge_served_model_name": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Judge Served Model Name"
     }
   },
   "required": [
