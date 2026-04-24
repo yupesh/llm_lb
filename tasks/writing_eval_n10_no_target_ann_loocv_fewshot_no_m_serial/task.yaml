@@ -1,8 +1,9 @@
 name: writing_eval_n10_no_target_ann_loocv_fewshot_no_m_serial
-version: '1.0'
+version: '1.1'
 description: Base writing evaluation, N10 holdout. No target annotation, LOOCV few-shot
   calibration, no methodology. Canonical prompt/messages taken from best run `20260225_040418`
-  in `base_writing_eval_logs_report_20260225.md`.
+  in `base_writing_eval_logs_report_20260225.md` Simplified in v1.1 to require label-only
+  CEFR outputs and compact few-shot assistant examples.
 metric:
   primary: qwk
   secondary:

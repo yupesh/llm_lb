@@ -1,8 +1,9 @@
 name: writing_eval_b1b2_with_ann_with_m_serial
-version: '1.0'
+version: '1.1'
 description: Base writing evaluation, B1/B2 boundary holdout. Expert annotation with
   full methodology prompt family. Canonical prompt/messages taken from best run `20260417_055035`
-  in `base_writing_eval_b1b2_logs_report_20260417.md`.
+  in `base_writing_eval_b1b2_logs_report_20260417.md` Simplified in v1.1 to require
+  label-only CEFR outputs and compact few-shot assistant examples.
 metric:
   primary: boundary_accuracy
   secondary:

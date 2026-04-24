@@ -18,6 +18,48 @@ TASKS_DIR = REPO_ROOT / "tasks"
 
 CEFR_REGEX = r"\b(A1|A2|B1|B2|C1|C2)\b"
 BLOCK_SEP = "=" * 120
+WRITING_EVAL_VERSION = "1.1"
+
+
+def _compact_system_prompt(labels: tuple[str, ...]) -> str:
+    allowed = "|".join(labels)
+    return (
+        "You are an expert CEFR writing assessor.\n"
+        "Assess the student text using the provided task/context blocks as supporting evidence.\n"
+        "Use EXPERT_ANNOTATION, CALIBRATION_EXAMPLES, RETRIEVED_ERROR_SPANS, and RANKING_ANCHORS only as supporting context; "
+        "never override direct evidence from the student text.\n"
+        f"Return ONLY one CEFR label from: {allowed}.\n"
+        "Do not output JSON.\n"
+        "Do not output explanation."
+    )
+
+
+def _extract_cefr_label(text: str) -> str:
+    match = re.search(CEFR_REGEX, text)
+    if match is None:
+        raise ValueError(f"Could not extract CEFR label from assistant example: {text[:160]!r}")
+    return match.group(1)
+
+
+def _simplify_messages(messages: list[dict[str, Any]], labels: tuple[str, ...]) -> list[dict[str, Any]]:
+    simplified: list[dict[str, Any]] = []
+    first_system = True
+    for msg in messages:
+        role = msg.get("role")
+        content = msg.get("content")
+        if not isinstance(content, str):
+            simplified.append(msg)
+            continue
+        if role == "system":
+            if first_system:
+                simplified.append({"role": "system", "content": _compact_system_prompt(labels)})
+                first_system = False
+            continue
+        if role == "assistant":
+            simplified.append({"role": "assistant", "content": _extract_cefr_label(content)})
+            continue
+        simplified.append(msg)
+    return simplified
 
 
 @dataclass(frozen=True)
@@ -350,7 +392,7 @@ def _write_task(task: TaskConfig, row: dict[str, str], requests: dict[str, dict[
     llm_params = _extract_run_params(row["destination_dir"])
     task_payload = {
         "name": task.task_name,
-        "version": "1.0",
+        "version": WRITING_EVAL_VERSION,
         "description": (
             f"{task.description} Canonical prompt/messages taken from best run `{task.run_id}` "
             f"in `{task.source_report}`."
@@ -370,7 +412,7 @@ def _write_task(task: TaskConfig, row: dict[str, str], requests: dict[str, dict[
         sample_id = sample["id"]
         response_payload = responses[sample_id]
         request_payload = requests[sample_id]
-        messages = response_payload["debugModelIo"]["messages"]
+        messages = _simplify_messages(response_payload["debugModelIo"]["messages"], task.labels)
         sample_payload = {
             "id": sample_id,
             "prompt": _sample_prompt(request_payload, messages),
