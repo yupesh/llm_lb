@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T00:44:00+00:00",
+  "generated_at": "2026-04-24T01:05:00+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -1301,19 +1301,6 @@
       "p95_latency_ms": 42526.825127,
       "cost_usd": null,
       "result_file": "tasks/conversational_memory_qa/results/qwen3-235B-A22B@vllm__2026-04-22T00-00-03Z.json"
-    },
-    {
-      "task_id": "conversational_memory_qa",
-      "task_version": "1.0",
-      "model_id": "qwen3.5-27b@vllm",
-      "score": 0.76,
-      "metrics": {
-        "judge_score": 0.76
-      },
-      "tps": 23.706318192383925,
-      "p95_latency_ms": 175120.445936,
-      "cost_usd": null,
-      "result_file": "tasks/conversational_memory_qa/results/qwen3.5-27b@vllm__2026-04-17T08-04-01Z.json"
     },
     {
       "task_id": "conversational_memory_qa",
@@ -5280,19 +5267,6 @@
     {
       "task_id": "temporal_information_extraction",
       "task_version": "1.0",
-      "model_id": "minimax-m2.7@vllm",
-      "score": 0.6571428571428571,
-      "metrics": {
-        "judge_score": 0.6571428571428571
-      },
-      "tps": 30.859226443526627,
-      "p95_latency_ms": 274794.8990140001,
-      "cost_usd": null,
-      "result_file": "tasks/temporal_information_extraction/results/minimax-m2.7@vllm__2026-04-20T10-36-40Z.json"
-    },
-    {
-      "task_id": "temporal_information_extraction",
-      "task_version": "1.0",
       "model_id": "glm5.1@llama",
       "score": 0.6533333333333334,
       "metrics": {
@@ -5354,6 +5328,19 @@
       "p95_latency_ms": 176796.29925699998,
       "cost_usd": null,
       "result_file": "tasks/temporal_information_extraction/results/qwen3-235B-A22B@vllm__2026-04-22T02-59-59Z.json"
+    },
+    {
+      "task_id": "temporal_information_extraction",
+      "task_version": "1.0",
+      "model_id": "minimax-m2.7@vllm",
+      "score": 0.5066666666666666,
+      "metrics": {
+        "judge_score": 0.5066666666666666
+      },
+      "tps": 19.424295323531226,
+      "p95_latency_ms": 313615.05860899994,
+      "cost_usd": null,
+      "result_file": "tasks/temporal_information_extraction/results/minimax-m2.7@vllm__2026-04-21T10-34-33Z.json"
     },
     {
       "task_id": "temporal_information_extraction",
