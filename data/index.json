@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T05:24:20+00:00",
+  "generated_at": "2026-04-24T05:25:38+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -1654,19 +1654,6 @@
       "p95_latency_ms": 50088.141143999994,
       "cost_usd": null,
       "result_file": "tasks/datascibench_dl/results/gemma-4-31b-it@vllm__2026-04-20T03-50-29Z.json"
-    },
-    {
-      "task_id": "datascibench_human",
-      "task_version": "1.1",
-      "model_id": "gemma-4-31b-it@vllm",
-      "score": 0.0,
-      "metrics": {
-        "judge_score": 0.0
-      },
-      "tps": 0.0,
-      "p95_latency_ms": 5676.455136000001,
-      "cost_usd": null,
-      "result_file": "tasks/datascibench_human/results/gemma-4-31b-it@vllm__2026-04-24T05-20-09Z.json"
     },
     {
       "task_id": "entity_relationship_extraction",
