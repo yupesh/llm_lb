@@ -1,0 +1,21 @@
+{
+  "task_id": "writing_eval_n42_with_ann_with_m_serial",
+  "task_version": "1.1",
+  "primary_metric": "qwk",
+  "ranking": [
+    {
+      "model_id": "gemma-4-31b-it@vllm",
+      "score": 0.5592864637985311,
+      "metrics": {
+        "accuracy": 0.2619047619047619,
+        "adjacent_accuracy": 0.9285714285714286,
+        "qwk": 0.5592864637985311
+      },
+      "tps": 4.335055842507458,
+      "p95_latency_ms": 1588.3888500000012,
+      "cost_usd": null,
+      "result_file": "results/gemma-4-31b-it@vllm__2026-04-24T00-54-46Z.json"
+    }
+  ],
+  "updated_at": "2026-04-24T01:06:42+00:00"
+}

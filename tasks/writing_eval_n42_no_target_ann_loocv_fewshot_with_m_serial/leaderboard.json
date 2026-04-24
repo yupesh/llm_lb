@@ -1,0 +1,21 @@
+{
+  "task_id": "writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial",
+  "task_version": "1.1",
+  "primary_metric": "qwk",
+  "ranking": [
+    {
+      "model_id": "gemma-4-31b-it@vllm",
+      "score": 0.5779467680608364,
+      "metrics": {
+        "accuracy": 0.19047619047619047,
+        "adjacent_accuracy": 0.9761904761904762,
+        "qwk": 0.5779467680608364
+      },
+      "tps": 2.3130056062378768,
+      "p95_latency_ms": 1915.9932150000004,
+      "cost_usd": null,
+      "result_file": "results/gemma-4-31b-it@vllm__2026-04-24T00-50-44Z.json"
+    }
+  ],
+  "updated_at": "2026-04-24T01:06:42+00:00"
+}
