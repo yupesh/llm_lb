@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T16:50:57+00:00",
+  "generated_at": "2026-04-24T17:34:42+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -2521,6 +2521,21 @@
     {
       "task_id": "essay_holistic_scoring",
       "task_version": "1.0",
+      "model_id": "mistral-small-3.1@vllm",
+      "score": 0.4666666666666667,
+      "metrics": {
+        "accuracy": 0.2222222222222222,
+        "macro_f1": 0.11666666666666665,
+        "qwk": 0.4666666666666667
+      },
+      "tps": 3.101613173005708,
+      "p95_latency_ms": 1224.076021000002,
+      "cost_usd": null,
+      "result_file": "tasks/essay_holistic_scoring/results/mistral-small-3.1@vllm__2026-04-24T17-31-13Z.json"
+    },
+    {
+      "task_id": "essay_holistic_scoring",
+      "task_version": "1.0",
       "model_id": "gpt-oss-120b@vllm",
       "score": 0.29850746268656714,
       "metrics": {
@@ -2547,6 +2562,21 @@
       "p95_latency_ms": 972.1380899999872,
       "cost_usd": null,
       "result_file": "tasks/essay_holistic_scoring_condensed/results/gemma-4-31b-it@vllm__2026-04-20T04-02-02Z.json"
+    },
+    {
+      "task_id": "essay_holistic_scoring_condensed",
+      "task_version": "1.0",
+      "model_id": "mistral-small-3.1@vllm",
+      "score": 0.6153846153846153,
+      "metrics": {
+        "accuracy": 0.1111111111111111,
+        "macro_f1": 0.06734006734006734,
+        "qwk": 0.6153846153846153
+      },
+      "tps": 3.236817754377966,
+      "p95_latency_ms": 1132.626064,
+      "cost_usd": null,
+      "result_file": "tasks/essay_holistic_scoring_condensed/results/mistral-small-3.1@vllm__2026-04-24T17-31-42Z.json"
     },
     {
       "task_id": "essay_holistic_scoring_condensed",
@@ -2864,6 +2894,21 @@
       "result_file": "tasks/essay_vocabulary_scoring/results/gemma-3-12b-it@vllm__2026-04-23T11-36-29Z.json"
     },
     {
+      "task_id": "essay_vocabulary_scoring",
+      "task_version": "1.1",
+      "model_id": "mistral-small-3.1@vllm",
+      "score": 0.21052631578947367,
+      "metrics": {
+        "accuracy": 0.4,
+        "macro_f1": 0.2857142857142857,
+        "qwk": 0.21052631578947367
+      },
+      "tps": 3.202129258412095,
+      "p95_latency_ms": 1188.4918359999972,
+      "cost_usd": null,
+      "result_file": "tasks/essay_vocabulary_scoring/results/mistral-small-3.1@vllm__2026-04-24T17-32-55Z.json"
+    },
+    {
       "task_id": "essay_vocabulary_scoring_condensed",
       "task_version": "1.1",
       "model_id": "qwen3.6-35b@vllm",
@@ -3001,6 +3046,21 @@
     {
       "task_id": "essay_vocabulary_scoring_condensed",
       "task_version": "1.1",
+      "model_id": "mistral-small-3.1@vllm",
+      "score": 0.29999999999999993,
+      "metrics": {
+        "accuracy": 0.25,
+        "macro_f1": 0.11363636363636363,
+        "qwk": 0.29999999999999993
+      },
+      "tps": 2.1759417584156324,
+      "p95_latency_ms": 1186.219790999999,
+      "cost_usd": null,
+      "result_file": "tasks/essay_vocabulary_scoring_condensed/results/mistral-small-3.1@vllm__2026-04-24T17-33-35Z.json"
+    },
+    {
+      "task_id": "essay_vocabulary_scoring_condensed",
+      "task_version": "1.1",
       "model_id": "gemma-3-12b-it@vllm",
       "score": 0.2333333333333334,
       "metrics": {
@@ -3129,6 +3189,19 @@
       "p95_latency_ms": 1030.267461000001,
       "cost_usd": null,
       "result_file": "tasks/extractive_qa/results/gemma-4-31b-it@vllm__2026-04-20T04-03-17Z.json"
+    },
+    {
+      "task_id": "extractive_qa",
+      "task_version": "1.0",
+      "model_id": "mistral-small-3.1@vllm",
+      "score": 0.8,
+      "metrics": {
+        "exact_match": 0.8
+      },
+      "tps": 4.389559149074292,
+      "p95_latency_ms": 1123.3699729999955,
+      "cost_usd": null,
+      "result_file": "tasks/extractive_qa/results/mistral-small-3.1@vllm__2026-04-24T17-34-01Z.json"
     },
     {
       "task_id": "extractive_qa",
