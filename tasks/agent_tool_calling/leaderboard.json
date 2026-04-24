@@ -134,18 +134,7 @@
       "p95_latency_ms": 4616.409652999977,
       "cost_usd": null,
       "result_file": "results/glm5-awq@vllm__2026-04-22T09-49-32Z.json"
-    },
-    {
-      "model_id": "llama-guard4@vllm",
-      "score": 0.0,
-      "metrics": {
-        "judge_score": 0.0
-      },
-      "tps": 0.0,
-      "p95_latency_ms": 987.0308839999993,
-      "cost_usd": null,
-      "result_file": "results/llama-guard4@vllm__2026-04-21T08-37-51Z.json"
     }
   ],
-  "updated_at": "2026-04-23T11:35:27+00:00"
+  "updated_at": "2026-04-24T00:28:47+00:00"
 }

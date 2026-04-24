@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T00:14:11+00:00",
+  "generated_at": "2026-04-24T00:28:48+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -897,19 +897,6 @@
       "result_file": "tasks/agent_tool_calling/results/glm5-awq@vllm__2026-04-22T09-49-32Z.json"
     },
     {
-      "task_id": "agent_tool_calling",
-      "task_version": "1.0",
-      "model_id": "llama-guard4@vllm",
-      "score": 0.0,
-      "metrics": {
-        "judge_score": 0.0
-      },
-      "tps": 0.0,
-      "p95_latency_ms": 987.0308839999993,
-      "cost_usd": null,
-      "result_file": "tasks/agent_tool_calling/results/llama-guard4@vllm__2026-04-21T08-37-51Z.json"
-    },
-    {
       "task_id": "cefr_level_classification",
       "task_version": "1.1",
       "model_id": "glm5-awq@vllm",
@@ -1292,19 +1279,6 @@
     {
       "task_id": "conversational_memory_qa",
       "task_version": "1.0",
-      "model_id": "qwen3.5-27b@vllm",
-      "score": 0.8,
-      "metrics": {
-        "judge_score": 0.8
-      },
-      "tps": 13.753874251489137,
-      "p95_latency_ms": 248411.64982500003,
-      "cost_usd": null,
-      "result_file": "tasks/conversational_memory_qa/results/qwen3.5-27b@vllm__2026-04-17T13-50-39Z.json"
-    },
-    {
-      "task_id": "conversational_memory_qa",
-      "task_version": "1.0",
       "model_id": "glm5.1@llama",
       "score": 0.7866666666666667,
       "metrics": {
@@ -1318,19 +1292,6 @@
     {
       "task_id": "conversational_memory_qa",
       "task_version": "1.0",
-      "model_id": "gpt-oss-120b@vllm",
-      "score": 0.7733333333333333,
-      "metrics": {
-        "judge_score": 0.7733333333333333
-      },
-      "tps": 114.50092577701558,
-      "p95_latency_ms": 6152.80676399999,
-      "cost_usd": null,
-      "result_file": "tasks/conversational_memory_qa/results/gpt-oss-120b@vllm__2026-04-20T01-01-22Z.json"
-    },
-    {
-      "task_id": "conversational_memory_qa",
-      "task_version": "1.0",
       "model_id": "qwen3-235B-A22B@vllm",
       "score": 0.76,
       "metrics": {
@@ -1340,6 +1301,19 @@
       "p95_latency_ms": 42526.825127,
       "cost_usd": null,
       "result_file": "tasks/conversational_memory_qa/results/qwen3-235B-A22B@vllm__2026-04-22T00-00-03Z.json"
+    },
+    {
+      "task_id": "conversational_memory_qa",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 0.76,
+      "metrics": {
+        "judge_score": 0.76
+      },
+      "tps": 23.706318192383925,
+      "p95_latency_ms": 175120.445936,
+      "cost_usd": null,
+      "result_file": "tasks/conversational_memory_qa/results/qwen3.5-27b@vllm__2026-04-17T08-04-01Z.json"
     },
     {
       "task_id": "conversational_memory_qa",
@@ -1513,19 +1487,6 @@
     {
       "task_id": "datascibench_csv_excel",
       "task_version": "1.0",
-      "model_id": "qwen3.5-27b@vllm",
-      "score": 0.45999999999999996,
-      "metrics": {
-        "judge_score": 0.45999999999999996
-      },
-      "tps": 60.45718828398208,
-      "p95_latency_ms": 169435.79726400002,
-      "cost_usd": null,
-      "result_file": "tasks/datascibench_csv_excel/results/qwen3.5-27b@vllm__2026-04-19T23-35-38Z.json"
-    },
-    {
-      "task_id": "datascibench_csv_excel",
-      "task_version": "1.0",
       "model_id": "gemma-3-12b-it@vllm",
       "score": 0.36,
       "metrics": {
@@ -1680,19 +1641,6 @@
       "result_file": "tasks/datascibench_dl/results/gemma-4-31b-it@vllm__2026-04-20T03-50-29Z.json"
     },
     {
-      "task_id": "datascibench_dl",
-      "task_version": "1.0",
-      "model_id": "qwen3.5-27b@vllm",
-      "score": 0.26,
-      "metrics": {
-        "judge_score": 0.26
-      },
-      "tps": 60.450092084189166,
-      "p95_latency_ms": 169544.16121700002,
-      "cost_usd": null,
-      "result_file": "tasks/datascibench_dl/results/qwen3.5-27b@vllm__2026-04-20T00-00-44Z.json"
-    },
-    {
       "task_id": "datascibench_human",
       "task_version": "1.0",
       "model_id": "qwen3.6-35b@vllm",
@@ -1834,19 +1782,6 @@
       "p95_latency_ms": 87404.01154500003,
       "cost_usd": null,
       "result_file": "tasks/datascibench_human/results/minimax-m2.7@vllm__2026-04-21T09-04-32Z.json"
-    },
-    {
-      "task_id": "datascibench_human",
-      "task_version": "1.0",
-      "model_id": "qwen3.5-27b@vllm",
-      "score": 0.38,
-      "metrics": {
-        "judge_score": 0.38
-      },
-      "tps": 60.41141856496495,
-      "p95_latency_ms": 169567.15188099997,
-      "cost_usd": null,
-      "result_file": "tasks/datascibench_human/results/qwen3.5-27b@vllm__2026-04-20T00-23-04Z.json"
     },
     {
       "task_id": "entity_relationship_extraction",
