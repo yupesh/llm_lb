@@ -1,0 +1,93 @@
+{
+  "model_id": "qwen3-30b@vllm",
+  "model_revision": "2025-12-01",
+  "task_id": "summarization",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "2c5723a9c9440b71",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "judge_score": 0.72
+  },
+  "tps": 35.54575667774243,
+  "p95_latency_ms": 9359.671426999967,
+  "n_samples": 5,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "sample_001",
+      "prediction": "The James Webb Space Telescope, launched in December 2021, is the largest optical telescope ever placed in space, using infrared instruments to observe galaxies formed shortly after the Big Bang and operated jointly by NASA, ESA, and the Canadian Space Agency.",
+      "expected": "JWST, launched in December 2021, is the largest space telescope and observes early-universe galaxies in infrared as a NASA-ESA-CSA project.",
+      "correct": false,
+      "latency_ms": 9245.544757999995,
+      "input_tokens": 96,
+      "output_tokens": 375,
+      "raw_output": "\n\nThe James Webb Space Telescope, launched in December 2021, is the largest optical telescope ever placed in space, using infrared instruments to observe galaxies formed shortly after the Big Bang and operated jointly by NASA, ESA, and the Canadian Space Agency.",
+      "judge_raw_score": 3.0,
+      "error": null
+    },
+    {
+      "id": "sample_002",
+      "prediction": "Python's `asyncio` library uses an event-loop-based concurrency model to enable a single thread to manage thousands of network connections by suspending coroutines during I/O, making it the standard for high-throughput network services in pure Python.",
+      "expected": "Python's asyncio enables high-throughput single-threaded networking by suspending coroutines on I/O via an event loop.",
+      "correct": false,
+      "latency_ms": 8095.34069899999,
+      "input_tokens": 96,
+      "output_tokens": 355,
+      "raw_output": "\n\nPython's `asyncio` library uses an event-loop-based concurrency model to enable a single thread to manage thousands of network connections by suspending coroutines during I/O, making it the standard for high-throughput network services in pure Python.",
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "sample_003",
+      "prediction": "The 2008 financial crisis was caused by the collapse of the U.S. subprime mortgage market, driven by lax lending standards and risky loan securitisation, leading to Lehman Brothers' bankruptcy and a global recession.",
+      "expected": "The 2008 crisis began with the U.S. subprime mortgage collapse, causing Lehman Brothers' failure and a global recession.",
+      "correct": false,
+      "latency_ms": 8078.154900000016,
+      "input_tokens": 100,
+      "output_tokens": 234,
+      "raw_output": "\n\nThe 2008 financial crisis was caused by the collapse of the U.S. subprime mortgage market, driven by lax lending standards and risky loan securitisation, leading to Lehman Brothers' bankruptcy and a global recession.",
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "sample_004",
+      "prediction": "Photosynthesis is the process by which green plants convert carbon dioxide and water into glucose and oxygen using sunlight, with chlorophyll in chloroplasts capturing light energy, serving as the foundation of nearly all food chains on Earth.",
+      "expected": "Photosynthesis lets green plants turn CO2 and water into glucose and oxygen using sunlight captured by chlorophyll, underpinning most food chains.",
+      "correct": false,
+      "latency_ms": 9359.671426999967,
+      "input_tokens": 89,
+      "output_tokens": 314,
+      "raw_output": "\n\nPhotosynthesis is the process by which green plants convert carbon dioxide and water into glucose and oxygen using sunlight, with chlorophyll in chloroplasts capturing light energy, serving as the foundation of nearly all food chains on Earth.",
+      "judge_raw_score": 3.0,
+      "error": null
+    },
+    {
+      "id": "sample_005",
+      "prediction": "The Treaty of Westphalia, signed in 1648, ended the Thirty Years' War in the Holy Roman Empire and is regarded as the foundation of the modern state system based on territorial sovereignty.",
+      "expected": "The 1648 Treaty of Westphalia ended the Thirty Years' War and laid the foundation of the modern sovereignty-based state system.",
+      "correct": false,
+      "latency_ms": 8911.453939000012,
+      "input_tokens": 85,
+      "output_tokens": 275,
+      "raw_output": "\n\nThe Treaty of Westphalia, signed in 1648, ended the Thirty Years' War in the Holy Roman Empire and is regarded as the foundation of the modern state system based on territorial sovereignty.",
+      "judge_raw_score": 4.0,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-24T05:16:31+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": "gpt-4o-mini@openai",
+  "judge_model_revision": "2024-07-18",
+  "judge_prompt_hash": "d679caeb261c214b",
+  "judge_served_model_name": "gpt-4o-mini"
+}
