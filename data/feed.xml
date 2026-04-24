@@ -154,6 +154,20 @@
     <summary>judge_score=0.840</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_entity_type_refinement/1.0/mistral-small-3.1@vllm/2026-04-24T17:37:47+00:00</id>
+    <title>mistral-small-3.1@vllm scored 0.610 judge_score on kg_entity_type_refinement v1.0</title>
+    <updated>2026-04-24T17:37:47+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_entity_type_refinement" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.610</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_entity_name_refinement/1.0/mistral-small-3.1@vllm/2026-04-24T17:36:51+00:00</id>
+    <title>mistral-small-3.1@vllm scored 0.840 judge_score on kg_entity_name_refinement v1.0</title>
+    <updated>2026-04-24T17:36:51+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_entity_name_refinement" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.840</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection_beavertails/1.0/mistral-small-3.1@vllm/2026-04-24T17:36:00+00:00</id>
     <title>mistral-small-3.1@vllm scored 0.650 accuracy on jailbreak_detection_beavertails v1.0</title>
     <updated>2026-04-24T17:36:00+00:00</updated>
@@ -341,19 +355,5 @@
     <updated>2026-04-24T12:39:58+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_no_m_serial" rel="alternate" type="text/html"/>
     <summary>accuracy=0.405, adjacent_accuracy=0.905, qwk=0.585</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_loocv_fewshot_with_m_serial/1.1/minimax-m2.7@vllm/2026-04-24T12:36:11+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.167 accuracy on writing_eval_n42_with_ann_loocv_fewshot_with_m_serial v1.1</title>
-    <updated>2026-04-24T12:36:11+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_loocv_fewshot_with_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.167, adjacent_accuracy=0.786, qwk=0.344</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_loocv_fewshot_no_m_serial/1.1/minimax-m2.7@vllm/2026-04-24T12:31:40+00:00</id>
-    <title>minimax-m2.7@vllm scored 0.286 accuracy on writing_eval_n42_with_ann_loocv_fewshot_no_m_serial v1.1</title>
-    <updated>2026-04-24T12:31:40+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_loocv_fewshot_no_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.286, adjacent_accuracy=0.857, qwk=0.402</summary>
   </entry>
 </feed>
