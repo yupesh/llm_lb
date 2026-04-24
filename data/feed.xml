@@ -49,6 +49,69 @@
     <summary>accuracy=0.385, qwk=0.103, boundary_accuracy=0.385, boundary_kappa=0.103, signed_diff=-0.615</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/retail_agent_dialog/1.1/qwen3.6-35b@vllm/2026-04-24T10:16:50+00:00</id>
+    <title>qwen3.6-35b@vllm scored 0.882 judge_score on retail_agent_dialog v1.1</title>
+    <updated>2026-04-24T10:16:50+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/retail_agent_dialog" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.882</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_with_m_serial/1.1/qwen3.5-397b@vllm/2026-04-24T10:14:06+00:00</id>
+    <title>qwen3.5-397b@vllm scored 0.381 accuracy on writing_eval_n42_with_ann_with_m_serial v1.1</title>
+    <updated>2026-04-24T10:14:06+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_with_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.381, adjacent_accuracy=0.905, qwk=0.608</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_no_m_serial/1.1/qwen3.5-397b@vllm/2026-04-24T09:43:44+00:00</id>
+    <title>qwen3.5-397b@vllm scored 0.357 accuracy on writing_eval_n42_with_ann_no_m_serial v1.1</title>
+    <updated>2026-04-24T09:43:44+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_no_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.357, adjacent_accuracy=0.905, qwk=0.584</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/retail_agent_dialog/1.1/qwen3.5-397b@vllm/2026-04-24T09:14:03+00:00</id>
+    <title>qwen3.5-397b@vllm scored 0.830 judge_score on retail_agent_dialog v1.1</title>
+    <updated>2026-04-24T09:14:03+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/retail_agent_dialog" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.830</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/retail_agent_dialog/1.1/qwen3-30b@vllm/2026-04-24T08:23:03+00:00</id>
+    <title>qwen3-30b@vllm scored 0.527 judge_score on retail_agent_dialog v1.1</title>
+    <updated>2026-04-24T08:23:03+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/retail_agent_dialog" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.527</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_human/1.1/qwen3.5-397b@vllm/2026-04-24T07:14:00+00:00</id>
+    <title>qwen3.5-397b@vllm scored 0.920 judge_score on datascibench_human v1.1</title>
+    <updated>2026-04-24T07:14:00+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_human" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.920</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_with_m_serial/1.1/qwen3.5-397b@vllm/2026-04-24T06:55:21+00:00</id>
+    <title>qwen3.5-397b@vllm scored 0.381 accuracy on writing_eval_n42_with_ann_with_m_serial v1.1</title>
+    <updated>2026-04-24T06:55:21+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_with_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.381, adjacent_accuracy=0.905, qwk=0.608</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_human/1.1/qwen3.6-35b@vllm/2026-04-24T06:28:43+00:00</id>
+    <title>qwen3.6-35b@vllm scored 0.920 judge_score on datascibench_human v1.1</title>
+    <updated>2026-04-24T06:28:43+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_human" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.920</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_no_m_serial/1.1/qwen3.5-397b@vllm/2026-04-24T06:24:59+00:00</id>
+    <title>qwen3.5-397b@vllm scored 0.357 accuracy on writing_eval_n42_with_ann_no_m_serial v1.1</title>
+    <updated>2026-04-24T06:24:59+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_no_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.357, adjacent_accuracy=0.929, qwk=0.608</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/retail_agent_dialog/1.1/gemma-4-31b-it@vllm/2026-04-24T06:16:08+00:00</id>
     <title>gemma-4-31b-it@vllm scored 0.770 judge_score on retail_agent_dialog v1.1</title>
     <updated>2026-04-24T06:16:08+00:00</updated>
@@ -292,68 +355,5 @@
     <updated>2026-04-24T01:52:02+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_ann_with_m_serial" rel="alternate" type="text/html"/>
     <summary>accuracy=0.548, adjacent_accuracy=0.976, qwk=0.743</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial/1.1/gpt-oss-120b@vllm/2026-04-24T01:51:56+00:00</id>
-    <title>gpt-oss-120b@vllm scored 0.119 accuracy on writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial v1.1</title>
-    <updated>2026-04-24T01:51:56+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.119, adjacent_accuracy=0.786, qwk=0.269</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial/1.1/gpt-oss-120b@vllm/2026-04-24T01:49:53+00:00</id>
-    <title>gpt-oss-120b@vllm scored 0.143 accuracy on writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial v1.1</title>
-    <updated>2026-04-24T01:49:53+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.143, adjacent_accuracy=0.714, qwk=0.300</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_ann_with_m_serial/1.1/gpt-oss-120b@vllm/2026-04-24T01:47:29+00:00</id>
-    <title>gpt-oss-120b@vllm scored 0.310 accuracy on writing_eval_n42_no_ann_with_m_serial v1.1</title>
-    <updated>2026-04-24T01:47:29+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_ann_with_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.310, adjacent_accuracy=0.929, qwk=0.452</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_ann_no_m_serial/1.1/gpt-oss-120b@vllm/2026-04-24T01:45:24+00:00</id>
-    <title>gpt-oss-120b@vllm scored 0.286 accuracy on writing_eval_n42_no_ann_no_m_serial v1.1</title>
-    <updated>2026-04-24T01:45:24+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_ann_no_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.286, adjacent_accuracy=0.929, qwk=0.404</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_b1b2_no_ann_with_m_score_only_serial/1.1/qwen3.5-397b@vllm/2026-04-24T01:45:06+00:00</id>
-    <title>qwen3.5-397b@vllm scored 0.308 accuracy on writing_eval_b1b2_no_ann_with_m_score_only_serial v1.1</title>
-    <updated>2026-04-24T01:45:06+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_b1b2_no_ann_with_m_score_only_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.308, qwk=0.064, boundary_accuracy=0.308, boundary_kappa=0.064, signed_diff=-0.692</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_ann_no_m_serial/1.1/qwen3-30b@vllm/2026-04-24T01:44:19+00:00</id>
-    <title>qwen3-30b@vllm scored 0.571 accuracy on writing_eval_n42_no_ann_no_m_serial v1.1</title>
-    <updated>2026-04-24T01:44:19+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_ann_no_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.571, adjacent_accuracy=0.905, qwk=0.573</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n10_with_ann_with_m_serial/1.1/gpt-oss-120b@vllm/2026-04-24T01:43:56+00:00</id>
-    <title>gpt-oss-120b@vllm scored 0.500 accuracy on writing_eval_n10_with_ann_with_m_serial v1.1</title>
-    <updated>2026-04-24T01:43:56+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n10_with_ann_with_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.500, adjacent_accuracy=1.000, qwk=0.286</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n10_with_ann_no_m_serial/1.1/gpt-oss-120b@vllm/2026-04-24T01:43:25+00:00</id>
-    <title>gpt-oss-120b@vllm scored 0.400 accuracy on writing_eval_n10_with_ann_no_m_serial v1.1</title>
-    <updated>2026-04-24T01:43:25+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n10_with_ann_no_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.400, adjacent_accuracy=1.000, qwk=0.143</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n10_with_ann_loocv_fewshot_with_m_serial/1.1/gpt-oss-120b@vllm/2026-04-24T01:42:53+00:00</id>
-    <title>gpt-oss-120b@vllm scored 0.300 accuracy on writing_eval_n10_with_ann_loocv_fewshot_with_m_serial v1.1</title>
-    <updated>2026-04-24T01:42:53+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n10_with_ann_loocv_fewshot_with_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.300, adjacent_accuracy=1.000, qwk=0.000</summary>
   </entry>
 </feed>

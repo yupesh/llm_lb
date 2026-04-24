@@ -4,6 +4,28 @@
   "primary_metric": "judge_score",
   "ranking": [
     {
+      "model_id": "qwen3.6-35b@vllm",
+      "score": 0.881818181818182,
+      "metrics": {
+        "judge_score": 0.881818181818182
+      },
+      "tps": 51.377265598540376,
+      "p95_latency_ms": 863846.0175849996,
+      "cost_usd": null,
+      "result_file": "results/qwen3.6-35b@vllm__2026-04-24T10-16-50Z.json"
+    },
+    {
+      "model_id": "qwen3.5-397b@vllm",
+      "score": 0.8303030303030303,
+      "metrics": {
+        "judge_score": 0.8303030303030303
+      },
+      "tps": 72.77002925675777,
+      "p95_latency_ms": 443333.03189900017,
+      "cost_usd": null,
+      "result_file": "results/qwen3.5-397b@vllm__2026-04-24T09-14-03Z.json"
+    },
+    {
       "model_id": "gemma-4-31b-it@vllm",
       "score": 0.7696969696969698,
       "metrics": {
@@ -24,7 +46,18 @@
       "p95_latency_ms": 45641.47432100003,
       "cost_usd": null,
       "result_file": "results/gpt-oss-120b@vllm__2026-04-24T05-45-46Z.json"
+    },
+    {
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.5272727272727273,
+      "metrics": {
+        "judge_score": 0.5272727272727273
+      },
+      "tps": 26.995379161357633,
+      "p95_latency_ms": 736823.6451550002,
+      "cost_usd": null,
+      "result_file": "results/qwen3-30b@vllm__2026-04-24T08-23-03Z.json"
     }
   ],
-  "updated_at": "2026-04-24T06:20:11+00:00"
+  "updated_at": "2026-04-24T10:41:06+00:00"
 }
