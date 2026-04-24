@@ -6,12 +6,28 @@ server, LM Studio, OpenRouter, Together, Groq, ...).
 """
 from __future__ import annotations
 
+import os
 import time
 
 import httpx
 
-from ..models import LLMParams
+from ..models import LLMParams, ModelCard
 from .base import Completion
+
+
+def resolve_served_name(model: ModelCard) -> str:
+    """Resolve what the adapter will put in the `model` field of an OpenAI
+    chat request. Precedence: env override > `served_model_name` > `hf_uri` >
+    the `model_id` slug with our internal `@provider` suffix stripped."""
+    if model.served_model_name_env:
+        from_env = os.environ.get(model.served_model_name_env, "")
+        if from_env:
+            return from_env
+    if model.served_model_name:
+        return model.served_model_name
+    if model.hf_uri:
+        return model.hf_uri
+    return model.model_id.split("@", 1)[0]
 
 # Transient network-layer errors that we consider worth retrying. Anything else
 # (bad JSON, 4xx other than 429, programming errors) bubbles up immediately.

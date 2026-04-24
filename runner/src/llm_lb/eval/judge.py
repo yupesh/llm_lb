@@ -23,6 +23,7 @@ import yaml
 
 from ..adapters import get_adapter
 from ..adapters.base import LLMClient
+from ..adapters.openai_like import resolve_served_name
 from ..models import JudgeSpec, LLMParams, ModelCard, Sample, SamplePrediction
 
 
@@ -46,9 +47,34 @@ def _find_model_card(repo_root: Path, model_id: str) -> ModelCard:
     )
 
 
-def build_judge(repo_root: Path, spec: JudgeSpec) -> tuple[LLMClient, ModelCard]:
+def build_judge(
+    repo_root: Path, spec: JudgeSpec
+) -> tuple[LLMClient, ModelCard, str]:
+    """Instantiate the judge adapter and return it along with the resolved
+    served model name for audit. Raises on served-model-name mismatch so
+    silent judge swaps (e.g. JUDGE_MODEL_NAME drifting to a different model
+    between CI configurations) fail loudly at run start rather than producing
+    bogus scores or 404s mid-run."""
     card = _find_model_card(repo_root, spec.model)
-    return get_adapter(card), card
+    served = resolve_served_name(card)
+    # Fully env-driven judge cards have no hardcoded identity: task.yaml
+    # MUST declare what model it expects, otherwise there is no audit trail
+    # linking a result file to the model that produced its scores.
+    if card.served_model_name_env and not spec.served_model_name:
+        raise RuntimeError(
+            f"judge: model card {card.model_id!r} resolves its served name "
+            f"from env var {card.served_model_name_env!r}, so the task must "
+            f"declare an expected `judge.served_model_name` to validate "
+            f"against. Add it to task.yaml."
+        )
+    if spec.served_model_name and spec.served_model_name != served:
+        raise RuntimeError(
+            f"judge: served model name mismatch. task.yaml expects "
+            f"{spec.served_model_name!r} but the judge adapter resolved "
+            f"{served!r} (card={card.model_id!r}). Either update task.yaml "
+            f"or fix the env override."
+        )
+    return get_adapter(card), card, served
 
 
 _INT_RE = re.compile(r"-?\d+")
