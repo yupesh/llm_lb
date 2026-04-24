@@ -86,6 +86,13 @@ class JudgeSpec(BaseModel):
     # If true, the runner will refuse to run when the candidate model and the
     # judge model share the same `model_id` (self-judge bias guard).
     forbid_self_judge: bool = True
+    # Expected served model name, i.e. what the judge adapter will put in the
+    # `model` field of the OpenAI chat request. Opt-in audit trail: when the
+    # judge card uses `served_model_name_env` (fully env-driven), this field
+    # is REQUIRED and the runner refuses to start on mismatch. Prevents the
+    # class of silent rescore where JUDGE_MODEL_NAME drifts to a different
+    # model without any task.yaml change.
+    served_model_name: Optional[str] = None
 
 
 class TaskSpec(BaseModel):
@@ -190,6 +197,9 @@ class RunResult(BaseModel):
     judge_model_id: Optional[str] = None
     judge_model_revision: Optional[str] = None
     judge_prompt_hash: Optional[str] = None
+    # What the judge adapter actually sent as the `model` field. Recorded so
+    # old result files can be audited postfactum without re-reading env secrets.
+    judge_served_model_name: Optional[str] = None
 
 
 class LeaderboardEntry(BaseModel):

@@ -107,6 +107,7 @@ class _RunContext:
     adapter: object
     judge_client: object | None
     judge_card: ModelCard | None
+    judge_served_model_name: str | None
     context_data: dict[str, str]
     sim_policy: str | None
     sim_user_prompt: str | None
@@ -120,13 +121,16 @@ def _build_context(
     repo_root = task_dir.resolve().parent.parent
     judge_client = None
     judge_card: ModelCard | None = None
+    judge_served: str | None = None
     if task.judge:
         if task.judge.forbid_self_judge and task.judge.model == model.model_id:
             raise RuntimeError(
                 f"Self-judge bias guard: candidate {model.model_id!r} is also the "
                 f"judge. Set `judge.forbid_self_judge: false` in task.yaml to override."
             )
-        judge_client, judge_card = judge_mod.build_judge(repo_root, task.judge)
+        judge_client, judge_card, judge_served = judge_mod.build_judge(
+            repo_root, task.judge
+        )
 
     sim_policy: str | None = None
     sim_user_prompt: str | None = None
@@ -148,6 +152,7 @@ def _build_context(
         adapter=adapter,
         judge_client=judge_client,
         judge_card=judge_card,
+        judge_served_model_name=judge_served,
         context_data=context_data,
         sim_policy=sim_policy,
         sim_user_prompt=sim_user_prompt,
@@ -365,6 +370,7 @@ def run(
         judge_model_id=ctx.judge_card.model_id if ctx.judge_card else None,
         judge_model_revision=ctx.judge_card.revision if ctx.judge_card else None,
         judge_prompt_hash=judge_mod.hash_judge_prompt(task.judge.prompt) if task.judge else None,
+        judge_served_model_name=ctx.judge_served_model_name,
     )
 
     out_dir = out_dir or (task_dir / "results")

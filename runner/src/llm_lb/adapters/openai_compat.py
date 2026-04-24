@@ -6,19 +6,7 @@ import os
 
 from ..models import LLMParams, ModelCard
 from .base import Completion, register
-from .openai_like import openai_chat, openai_chat_messages
-
-
-def _served_name(model: ModelCard) -> str:
-    if model.served_model_name_env:
-        from_env = os.environ.get(model.served_model_name_env, "")
-        if from_env:
-            return from_env
-    if model.served_model_name:
-        return model.served_model_name
-    if model.hf_uri:
-        return model.hf_uri
-    return model.model_id.split("@", 1)[0]
+from .openai_like import openai_chat, openai_chat_messages, resolve_served_name
 
 
 @register("openai_compat")
@@ -41,7 +29,7 @@ class OpenAICompatAdapter:
         )
         self.base_url = base_url
         self.timeout = float(os.environ.get("LLM_LB_HTTP_TIMEOUT", "300"))
-        self.served_name = _served_name(model)
+        self.served_name = resolve_served_name(model)
 
     def chat(self, system: str | None, user: str, params: LLMParams) -> Completion:
         return openai_chat(

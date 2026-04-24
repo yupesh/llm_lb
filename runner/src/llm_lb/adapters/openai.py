@@ -4,20 +4,9 @@ import os
 
 from ..models import LLMParams, ModelCard
 from .base import Completion, register
-from .openai_like import openai_chat, openai_chat_messages
+from .openai_like import openai_chat, openai_chat_messages, resolve_served_name
 
 DEFAULT_BASE_URL = "https://api.openai.com/v1"
-
-
-def _served_name(model: ModelCard) -> str:
-    if model.served_model_name_env:
-        from_env = os.environ.get(model.served_model_name_env, "")
-        if from_env:
-            return from_env
-    if model.served_model_name:
-        return model.served_model_name
-    # Strip our internal `@provider` suffix from the slug.
-    return model.model_id.split("@", 1)[0]
 
 
 @register("openai")
@@ -36,7 +25,7 @@ class OpenAIAdapter:
         if not getattr(self, "base_url", ""):
             self.base_url = model.endpoint_url or os.environ.get("OPENAI_BASE_URL", DEFAULT_BASE_URL)
         self.timeout = float(os.environ.get("LLM_LB_HTTP_TIMEOUT", "300"))
-        self.served_name = _served_name(model)
+        self.served_name = resolve_served_name(model)
 
     def chat(self, system: str | None, user: str, params: LLMParams) -> Completion:
         return openai_chat(
