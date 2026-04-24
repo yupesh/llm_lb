@@ -65,6 +65,7 @@ judge:
   scale_min: 0
   scale_max: 5
   forbid_self_judge: true
+  served_model_name: gpt-4o-mini
   prompt: |
     You are evaluating a text-to-SQL model's handling of a (possibly
     ambiguous) question against a gold answer.

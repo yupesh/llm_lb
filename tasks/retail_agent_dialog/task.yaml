@@ -33,6 +33,7 @@ judge:
   scale_min: 0
   scale_max: 5
   forbid_self_judge: true
+  served_model_name: gpt-4o-mini
   prompt: |
     You are evaluating a customer-service agent's performance in a
     multi-turn conversation against a reference tau2-bench evaluation.

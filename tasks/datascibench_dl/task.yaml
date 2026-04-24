@@ -24,6 +24,7 @@ judge:
   scale_min: 0
   scale_max: 5
   forbid_self_judge: true
+  served_model_name: gpt-4o-mini
   prompt: |
     You are a strict code reviewer evaluating deep-learning Python code.
 
