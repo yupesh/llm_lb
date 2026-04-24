@@ -1,0 +1,155 @@
+{
+  "model_id": "gpt-oss-120b@vllm",
+  "model_revision": "2026-04-20",
+  "task_id": "writing_eval_n10_with_ann_with_m_serial",
+  "task_version": "1.1",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "b603bc66a0195308",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 0.8,
+    "max_tokens": null,
+    "seed": null
+  },
+  "metrics": {
+    "accuracy": 0.5,
+    "adjacent_accuracy": 1.0,
+    "qwk": 0.2857142857142857
+  },
+  "tps": 121.1504375891967,
+  "p95_latency_ms": 3077.1847700000026,
+  "n_samples": 10,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "sample_07001",
+      "prediction": "B1",
+      "expected": "A2",
+      "correct": false,
+      "latency_ms": 1619.87144699998,
+      "input_tokens": 1092,
+      "output_tokens": 178,
+      "raw_output": "B1",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07002",
+      "prediction": "B1",
+      "expected": "B1",
+      "correct": true,
+      "latency_ms": 2486.923305999994,
+      "input_tokens": 1434,
+      "output_tokens": 349,
+      "raw_output": "B1",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07003",
+      "prediction": "B1",
+      "expected": "B1",
+      "correct": true,
+      "latency_ms": 1781.5825270000119,
+      "input_tokens": 2050,
+      "output_tokens": 169,
+      "raw_output": "B1",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07005",
+      "prediction": "B1",
+      "expected": "B1",
+      "correct": true,
+      "latency_ms": 1186.5856109999982,
+      "input_tokens": 1247,
+      "output_tokens": 128,
+      "raw_output": "B1",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07006",
+      "prediction": "B1",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 1721.268452000004,
+      "input_tokens": 1887,
+      "output_tokens": 218,
+      "raw_output": "B1",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07018",
+      "prediction": "B2",
+      "expected": "B2",
+      "correct": true,
+      "latency_ms": 2118.7592290000057,
+      "input_tokens": 1260,
+      "output_tokens": 229,
+      "raw_output": "B2",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07019",
+      "prediction": "B1",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 3077.1847700000026,
+      "input_tokens": 1490,
+      "output_tokens": 435,
+      "raw_output": "B1",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07070",
+      "prediction": "B1",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 1366.585778000001,
+      "input_tokens": 1281,
+      "output_tokens": 156,
+      "raw_output": "B1",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07087",
+      "prediction": "B1",
+      "expected": "B2",
+      "correct": false,
+      "latency_ms": 1205.3259790000084,
+      "input_tokens": 2077,
+      "output_tokens": 133,
+      "raw_output": "B1",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_07099",
+      "prediction": "B2",
+      "expected": "B2",
+      "correct": true,
+      "latency_ms": 1264.9859360000164,
+      "input_tokens": 1385,
+      "output_tokens": 165,
+      "raw_output": "B2",
+      "judge_raw_score": null,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-24T01:43:56+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": null,
+  "judge_model_revision": null,
+  "judge_prompt_hash": null,
+  "judge_served_model_name": null
+}
