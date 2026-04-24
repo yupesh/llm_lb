@@ -315,13 +315,6 @@
     <summary>accuracy=0.350, macro_f1=0.241, qwk=0.354</summary>
   </entry>
   <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n10_with_ann_loocv_fewshot_with_m_serial/1.0/qwen3.5-27b@vllm/2026-04-23T18:07:01+00:00</id>
-    <title>qwen3.5-27b@vllm scored 0.200 accuracy on writing_eval_n10_with_ann_loocv_fewshot_with_m_serial v1.0</title>
-    <updated>2026-04-23T18:07:01+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n10_with_ann_loocv_fewshot_with_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.200, adjacent_accuracy=0.800, qwk=-0.267</summary>
-  </entry>
-  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial/1.0/minimax-m2.7@vllm/2026-04-23T18:05:14+00:00</id>
     <title>minimax-m2.7@vllm scored 0.119 accuracy on writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial v1.0</title>
     <updated>2026-04-23T18:05:14+00:00</updated>
@@ -350,10 +343,17 @@
     <summary>accuracy=0.400, adjacent_accuracy=1.000, qwk=0.455</summary>
   </entry>
   <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n10_no_target_ann_loocv_fewshot_with_m_serial/1.0/qwen3.5-27b@vllm/2026-04-23T15:49:58+00:00</id>
-    <title>qwen3.5-27b@vllm scored 0.200 accuracy on writing_eval_n10_no_target_ann_loocv_fewshot_with_m_serial v1.0</title>
-    <updated>2026-04-23T15:49:58+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n10_no_target_ann_loocv_fewshot_with_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.200, adjacent_accuracy=0.800, qwk=-0.143</summary>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n10_with_ann_no_m_serial/1.0/minimax-m2.7@vllm/2026-04-23T15:47:36+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.500 accuracy on writing_eval_n10_with_ann_no_m_serial v1.0</title>
+    <updated>2026-04-23T15:47:36+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n10_with_ann_no_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.500, adjacent_accuracy=0.900, qwk=0.385</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n10_with_ann_loocv_fewshot_with_m_serial/1.0/minimax-m2.7@vllm/2026-04-23T15:39:53+00:00</id>
+    <title>minimax-m2.7@vllm scored 0.200 accuracy on writing_eval_n10_with_ann_loocv_fewshot_with_m_serial v1.0</title>
+    <updated>2026-04-23T15:39:53+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n10_with_ann_loocv_fewshot_with_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.200, adjacent_accuracy=0.800, qwk=0.176</summary>
   </entry>
 </feed>
