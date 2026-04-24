@@ -5,15 +5,15 @@
   "ranking": [
     {
       "model_id": "gemma-4-31b-it@vllm",
-      "score": 0.0,
+      "score": 0.9,
       "metrics": {
-        "judge_score": 0.0
+        "judge_score": 0.9
       },
-      "tps": 0.0,
-      "p95_latency_ms": 5676.455136000001,
+      "tps": 49.69711811525932,
+      "p95_latency_ms": 42572.847983,
       "cost_usd": null,
-      "result_file": "results/gemma-4-31b-it@vllm__2026-04-24T05-20-09Z.json"
+      "result_file": "results/gemma-4-31b-it@vllm__2026-04-24T05-57-46Z.json"
     }
   ],
-  "updated_at": "2026-04-24T05:24:20+00:00"
+  "updated_at": "2026-04-24T06:20:11+00:00"
 }
