@@ -224,7 +224,24 @@ jobs:
       # (.github/workflows/aggregate.yml) on pushes to main that touch
       # tasks/*/results/**.
 
+      - name: Skip PR if task was deprecated upstream
+        # Race guard: a deprecation PR may have deleted the task directory
+        # on main between `plan` and now. If so, merging this score-PR
+        # would resurrect the task as a zombie (results/ without task.yaml),
+        # which then breaks validate.yml. Check the current main branch
+        # directly — not just the local checkout, which is stale.
+        id: task_exists
+        run: |
+          git fetch origin main --depth=1
+          if git cat-file -e "origin/main:${{ matrix.task_path }}/task.yaml" 2>/dev/null; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::warning::${{ matrix.task_path }}/task.yaml no longer exists on main — skipping PR creation to avoid zombie directory"
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Open PR with results
+        if: steps.task_exists.outputs.exists == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
           commit-message: "score: ${{ matrix.model_path }} on ${{ matrix.task_path }}"
