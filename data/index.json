@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T16:13:56+00:00",
+  "generated_at": "2026-04-24T16:50:57+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -527,7 +527,7 @@
       "id": "mistral-small-3.1@vllm",
       "display_name": "Mistral Small 3.1 (vLLM)",
       "provider": "openai_compat",
-      "hf_uri": "mistralai/Mistral-Small-3.1-24B-Instruct-250",
+      "hf_uri": "mistralai/Mistral-Small-3.1-24B-Instruct-2503",
       "hardware": {
         "gpu_count": 1,
         "gpu_type": "H200",

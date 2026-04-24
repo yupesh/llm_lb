@@ -2,7 +2,7 @@
    display_name: Mistral Small 3.1 (vLLM)
    provider: openai_compat
    endpoint_kind: openai_chat
-   hf_uri: mistralai/Mistral-Small-3.1-24B-Instruct-250
+   hf_uri: mistralai/Mistral-Small-3.1-24B-Instruct-2503
    revision: "2023-10-01"
    endpoint_url: http://lnsigo.mipt.ru:4000/v1
    api_key_env: VLLM_PROXY_KEY     # <-- name of env var, not the key
