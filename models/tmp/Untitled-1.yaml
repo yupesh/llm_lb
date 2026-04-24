@@ -1,0 +1,31 @@
+uv run llm-lb validate ../models/gemma-3-12b-it@vllm.yaml
+uv run llm-lb aggregate --root ..
+
+sk-J5F9:kLCdTFq
+
+
+Следующий правильный ход: добавить такой же coverage batch для комок в горле и для touch-sensitive throat, чтобы расширять keynote layer уже пакетами по uncovered concepts, а не по вдохновению.
+
+
+спросить про баллы
+
+Лучший шортлист небольших моделей я бы собрал так.
+
+mistralai/Mistral-Small-3.1-24B-Instruct-2503
+Это мой главный кандидат на прирост именно в слабых задачах. У него 24B, 128k контекст, сильное следование system prompt, акцент на reasoning/coding; в своей карточке Mistral прямо позиционирует его для programming and math reasoning, а по части text evals он у них выглядит очень сильно среди компактных моделей. Я бы в первую очередь запускал его на datascibench_dl, essay_holistic_scoring, essay_coherence_scoring.
+Источник: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503
+
+google/gemma-3-12b-it
+Если хочется “маленькую как Gemma” и дешёвую в прогоне ставку, это лучший кандидат. Семейство Gemma у тебя уже неплохо выглядит на essay/CEFR задачах, а 12B-версия остаётся компактной, при этом у неё 128k контекст, 140+ языков и хорошая база по reasoning/code. Я бы ставил её на cefr_level_classification_condensed, essay_grammar_scoring_condensed, essay_coherence_scoring.
+Источник: https://huggingface.co/google/gemma-3-12b-it
+
+microsoft/Phi-4-mini-instruct
+Это хороший “дешёвый эксперимент” на 3.8B. В карточке у Microsoft упор на precise instruction adherence, reasoning density и memory/latency constrained scenarios. На задачах, где нужно выдать строго один label/score по короткой рубрике, такое иногда даёт непропорционально хороший результат за размер. Я бы прогнал на cefr_level_classification_condensed, oos_detection, hazard_category, essay_grammar_scoring_condensed.
+Источник: https://huggingface.co/microsoft/Phi-4-mini-instruct
+
+Qwen/Qwen3-8B
+Потенциально сильный кандидат, но с оговоркой. У Qwen3 по умолчанию включён thinking mode, а в карточке они отдельно предупреждают, что для него не стоит использовать greedy decoding; у тебя же почти все эти задачи идут с temperature: 0.0. Да, раннер уже вырезает <think>...</think> блоки, extract.py (line 5), но режим инференса всё равно может быть неидеальным. Брал бы только если сможешь запустить его в non-thinking mode.
+Источник: https://huggingface.co/Qwen/Qwen3-8B
+
+CohereLabs/aya-expanse-8b
+Интересен как дешёвый multilingual-кандидат для CEFR/learner-writing задач. Но я бы ставил его ниже, потому что контекст всего 8k и лицензия CC-BY-NC, то есть не всем подойдёт.
