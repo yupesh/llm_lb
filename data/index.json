@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T14:33:23+00:00",
+  "generated_at": "2026-04-24T16:02:35+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -1507,6 +1507,19 @@
       "p95_latency_ms": 292743.661083,
       "cost_usd": null,
       "result_file": "tasks/datascibench_human/results/minimax-m2.7@vllm__2026-04-24T11-14-33Z.json"
+    },
+    {
+      "task_id": "datascibench_human",
+      "task_version": "1.1",
+      "model_id": "glm5-awq@vllm",
+      "score": 1.0,
+      "metrics": {
+        "judge_score": 1.0
+      },
+      "tps": 46.073576729011066,
+      "p95_latency_ms": 280228.92433399986,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_human/results/glm5-awq@vllm__2026-04-24T15-00-46Z.json"
     },
     {
       "task_id": "datascibench_human",
@@ -4649,6 +4662,19 @@
       "p95_latency_ms": 863846.0175849996,
       "cost_usd": null,
       "result_file": "tasks/retail_agent_dialog/results/qwen3.6-35b@vllm__2026-04-24T10-16-50Z.json"
+    },
+    {
+      "task_id": "retail_agent_dialog",
+      "task_version": "1.1",
+      "model_id": "glm5-awq@vllm",
+      "score": 0.8424242424242424,
+      "metrics": {
+        "judge_score": 0.8424242424242424
+      },
+      "tps": 40.636842771666295,
+      "p95_latency_ms": 141538.74065900026,
+      "cost_usd": null,
+      "result_file": "tasks/retail_agent_dialog/results/glm5-awq@vllm__2026-04-24T15-52-56Z.json"
     },
     {
       "task_id": "retail_agent_dialog",
