@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T06:20:11+00:00",
+  "generated_at": "2026-04-24T06:20:26+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -1654,6 +1654,19 @@
       "p95_latency_ms": 50088.141143999994,
       "cost_usd": null,
       "result_file": "tasks/datascibench_dl/results/gemma-4-31b-it@vllm__2026-04-20T03-50-29Z.json"
+    },
+    {
+      "task_id": "datascibench_human",
+      "task_version": "1.1",
+      "model_id": "gpt-oss-120b@vllm",
+      "score": 0.9199999999999999,
+      "metrics": {
+        "judge_score": 0.9199999999999999
+      },
+      "tps": 163.9324279675996,
+      "p95_latency_ms": 18301.889952999998,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_human/results/gpt-oss-120b@vllm__2026-04-24T05-30-35Z.json"
     },
     {
       "task_id": "datascibench_human",

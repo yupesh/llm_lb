@@ -4,6 +4,17 @@
   "primary_metric": "judge_score",
   "ranking": [
     {
+      "model_id": "gpt-oss-120b@vllm",
+      "score": 0.9199999999999999,
+      "metrics": {
+        "judge_score": 0.9199999999999999
+      },
+      "tps": 163.9324279675996,
+      "p95_latency_ms": 18301.889952999998,
+      "cost_usd": null,
+      "result_file": "results/gpt-oss-120b@vllm__2026-04-24T05-30-35Z.json"
+    },
+    {
       "model_id": "gemma-4-31b-it@vllm",
       "score": 0.9,
       "metrics": {
@@ -15,5 +26,5 @@
       "result_file": "results/gemma-4-31b-it@vllm__2026-04-24T05-57-46Z.json"
     }
   ],
-  "updated_at": "2026-04-24T06:20:11+00:00"
+  "updated_at": "2026-04-24T06:20:26+00:00"
 }

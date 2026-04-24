@@ -42,6 +42,13 @@
     <summary>accuracy=0.238, adjacent_accuracy=0.929, qwk=0.443</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_human/1.1/gpt-oss-120b@vllm/2026-04-24T05:30:35+00:00</id>
+    <title>gpt-oss-120b@vllm scored 0.920 judge_score on datascibench_human v1.1</title>
+    <updated>2026-04-24T05:30:35+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_human" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.920</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/summarization/1.0/qwen3-30b@vllm/2026-04-24T05:16:31+00:00</id>
     <title>qwen3-30b@vllm scored 0.720 judge_score on summarization v1.0</title>
     <updated>2026-04-24T05:16:31+00:00</updated>
@@ -347,13 +354,6 @@
     <title>gpt-oss-120b@vllm scored 0.400 accuracy on writing_eval_n10_no_ann_with_m_serial v1.1</title>
     <updated>2026-04-24T01:38:42+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n10_no_ann_with_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.400, adjacent_accuracy=1.000, qwk=0.143</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n10_no_ann_no_m_serial/1.1/gpt-oss-120b@vllm/2026-04-24T01:38:09+00:00</id>
-    <title>gpt-oss-120b@vllm scored 0.400 accuracy on writing_eval_n10_no_ann_no_m_serial v1.1</title>
-    <updated>2026-04-24T01:38:09+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n10_no_ann_no_m_serial" rel="alternate" type="text/html"/>
     <summary>accuracy=0.400, adjacent_accuracy=1.000, qwk=0.143</summary>
   </entry>
 </feed>
