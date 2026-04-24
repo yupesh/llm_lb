@@ -1,0 +1,213 @@
+{
+  "model_id": "qwen3.5-27b@vllm",
+  "model_revision": "2026-04-11",
+  "task_id": "conversational_memory_qa",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "7cf0fe997cd695f7",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "judge_score": 0.9090909090909091
+  },
+  "tps": 52.32115392659777,
+  "p95_latency_ms": 138853.694221,
+  "n_samples": 15,
+  "n_failed_samples": 4,
+  "samples": [
+    {
+      "id": "sample_001",
+      "prediction": "2 July, 2023",
+      "expected": "2 July 2023",
+      "correct": false,
+      "latency_ms": 20946.412910000006,
+      "input_tokens": 22909,
+      "output_tokens": 973,
+      "raw_output": "\n\n2 July, 2023",
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_002",
+      "prediction": "Contemporary",
+      "expected": "Contemporary",
+      "correct": true,
+      "latency_ms": 12235.017029999995,
+      "input_tokens": 18829,
+      "output_tokens": 582,
+      "raw_output": "\n\nContemporary",
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_003",
+      "prediction": "",
+      "expected": "career fair at a local school",
+      "correct": false,
+      "latency_ms": 100631.68971700002,
+      "input_tokens": 35333,
+      "output_tokens": 5627,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": "empty completion text despite 5627 output tokens"
+    },
+    {
+      "id": "sample_004",
+      "prediction": "",
+      "expected": "Whispering Falls waterfall",
+      "correct": false,
+      "latency_ms": 169957.65412499997,
+      "input_tokens": 31169,
+      "output_tokens": 9791,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": "empty completion text despite 9791 output tokens"
+    },
+    {
+      "id": "sample_005",
+      "prediction": "Sneakers and jerseys",
+      "expected": "sneakers, fantasy movie DVDs, jerseys",
+      "correct": false,
+      "latency_ms": 24336.41280400002,
+      "input_tokens": 35148,
+      "output_tokens": 1169,
+      "raw_output": "\n\nSneakers and jerseys",
+      "judge_raw_score": 3.0,
+      "error": null
+    },
+    {
+      "id": "sample_006",
+      "prediction": "She believes punishment is never the proper way for pets and she doesn't want to hurt them.",
+      "expected": "To have pets learn how to behave in a positive way",
+      "correct": false,
+      "latency_ms": 26114.130665000004,
+      "input_tokens": 34387,
+      "output_tokens": 1275,
+      "raw_output": "\n\nShe believes punishment is never the proper way for pets and she doesn't want to hurt them.",
+      "judge_raw_score": 3.0,
+      "error": null
+    },
+    {
+      "id": "sample_007",
+      "prediction": "Liverpool",
+      "expected": "Liverpool",
+      "correct": true,
+      "latency_ms": 13645.62723199998,
+      "input_tokens": 34374,
+      "output_tokens": 501,
+      "raw_output": "\n\nLiverpool",
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_008",
+      "prediction": "",
+      "expected": "in 2021",
+      "correct": false,
+      "latency_ms": 138853.694221,
+      "input_tokens": 33058,
+      "output_tokens": 7902,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": "empty completion text despite 7902 output tokens"
+    },
+    {
+      "id": "sample_009",
+      "prediction": "Gastritis",
+      "expected": "Gastritis",
+      "correct": true,
+      "latency_ms": 16272.0060260001,
+      "input_tokens": 26430,
+      "output_tokens": 767,
+      "raw_output": "\n\nGastritis",
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_010",
+      "prediction": "It gives them a fresh vibe and is an exciting process of self-discovery and growth.",
+      "expected": "gives them a fresh vibe",
+      "correct": false,
+      "latency_ms": 32767.130156999996,
+      "input_tokens": 31815,
+      "output_tokens": 1698,
+      "raw_output": "\n\nIt gives them a fresh vibe and is an exciting process of self-discovery and growth.",
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "sample_011",
+      "prediction": "2022",
+      "expected": "2022",
+      "correct": true,
+      "latency_ms": 17416.109552999955,
+      "input_tokens": 22908,
+      "output_tokens": 994,
+      "raw_output": "\n\n2022",
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_012",
+      "prediction": "Help with making content and managing his social media accounts",
+      "expected": "Helping with making content and managing his social media accounts.",
+      "correct": false,
+      "latency_ms": 15643.13150800001,
+      "input_tokens": 18831,
+      "output_tokens": 874,
+      "raw_output": "\n\nHelp with making content and managing his social media accounts",
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_013",
+      "prediction": "",
+      "expected": "Witnessed a family struggling on the streets and reached out to the shelter",
+      "correct": false,
+      "latency_ms": 96583.68995599994,
+      "input_tokens": 35334,
+      "output_tokens": 5626,
+      "raw_output": "",
+      "judge_raw_score": null,
+      "error": "empty completion text despite 5626 output tokens"
+    },
+    {
+      "id": "sample_014",
+      "prediction": "Little Women and The Lord of the Rings Trilogy",
+      "expected": "\"Little Women\", \"Lord of the Rings\"",
+      "correct": false,
+      "latency_ms": 21944.474234999914,
+      "input_tokens": 31156,
+      "output_tokens": 1237,
+      "raw_output": "\n\nLittle Women and The Lord of the Rings Trilogy",
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_015",
+      "prediction": "Signed basketball",
+      "expected": "signed basketball",
+      "correct": true,
+      "latency_ms": 79942.45772800002,
+      "input_tokens": 35153,
+      "output_tokens": 4646,
+      "raw_output": "\n\nSigned basketball",
+      "judge_raw_score": 5.0,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-24T19:24:53+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": "gpt-4o-mini@openai",
+  "judge_model_revision": "2024-07-18",
+  "judge_prompt_hash": "18f44b8c39bda787",
+  "judge_served_model_name": "gpt-4o-mini"
+}
