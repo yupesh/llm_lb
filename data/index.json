@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T10:41:06+00:00",
+  "generated_at": "2026-04-24T10:41:50+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -1706,6 +1706,19 @@
       "p95_latency_ms": 42572.847983,
       "cost_usd": null,
       "result_file": "tasks/datascibench_human/results/gemma-4-31b-it@vllm__2026-04-24T05-57-46Z.json"
+    },
+    {
+      "task_id": "datascibench_human",
+      "task_version": "1.1",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.8200000000000001,
+      "metrics": {
+        "judge_score": 0.8200000000000001
+      },
+      "tps": 47.65567945557574,
+      "p95_latency_ms": 201705.72221099996,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_human/results/qwen3-30b@vllm__2026-04-24T05-43-15Z.json"
     },
     {
       "task_id": "entity_relationship_extraction",
@@ -6009,6 +6022,23 @@
     {
       "task_id": "writing_eval_b1b2_no_ann_no_m_serial",
       "task_version": "1.1",
+      "model_id": "qwen3.6-35b@vllm",
+      "score": 0.38461538461538464,
+      "metrics": {
+        "accuracy": 0.38461538461538464,
+        "qwk": 0.10344827586206906,
+        "boundary_accuracy": 0.38461538461538464,
+        "boundary_kappa": 0.10344827586206902,
+        "signed_diff": -0.6153846153846154
+      },
+      "tps": 181.5983780009806,
+      "p95_latency_ms": 11142.452010999988,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_b1b2_no_ann_no_m_serial/results/qwen3.6-35b@vllm__2026-04-24T10-20-42Z.json"
+    },
+    {
+      "task_id": "writing_eval_b1b2_no_ann_no_m_serial",
+      "task_version": "1.1",
       "model_id": "qwen3.5-397b@vllm",
       "score": 0.3076923076923077,
       "metrics": {
@@ -6578,6 +6608,21 @@
       "p95_latency_ms": 59716.22987900001,
       "cost_usd": null,
       "result_file": "tasks/writing_eval_n10_no_target_ann_loocv_error_retrieval_no_m_serial/results/qwen3.5-397b@vllm__2026-04-24T02-47-06Z.json"
+    },
+    {
+      "task_id": "writing_eval_n10_no_target_ann_loocv_error_retrieval_no_m_serial",
+      "task_version": "1.1",
+      "model_id": "qwen3.6-35b@vllm",
+      "score": 0.0,
+      "metrics": {
+        "accuracy": 0.3,
+        "adjacent_accuracy": 1.0,
+        "qwk": 0.0
+      },
+      "tps": 162.9233525047716,
+      "p95_latency_ms": 12930.114301000003,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n10_no_target_ann_loocv_error_retrieval_no_m_serial/results/qwen3.6-35b@vllm__2026-04-24T10-41-06Z.json"
     },
     {
       "task_id": "writing_eval_n10_no_target_ann_loocv_error_retrieval_no_m_serial",
