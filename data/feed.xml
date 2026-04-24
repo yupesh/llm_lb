@@ -308,6 +308,13 @@
     <summary>accuracy=0.231, qwk=0.030, boundary_accuracy=0.231, boundary_kappa=0.030, signed_diff=-0.769</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_b1b2_with_ann_no_m_serial/1.1/gpt-oss-120b@vllm/2026-04-24T01:36:42+00:00</id>
+    <title>gpt-oss-120b@vllm scored 0.192 accuracy on writing_eval_b1b2_with_ann_no_m_serial v1.1</title>
+    <updated>2026-04-24T01:36:42+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_b1b2_with_ann_no_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.192, qwk=0.014, boundary_accuracy=0.192, boundary_kappa=0.014, signed_diff=-0.808</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n10_with_ann_with_m_serial/1.1/qwen3-30b@vllm/2026-04-24T01:35:37+00:00</id>
     <title>qwen3-30b@vllm scored 0.400 accuracy on writing_eval_n10_with_ann_with_m_serial v1.1</title>
     <updated>2026-04-24T01:35:37+00:00</updated>
@@ -348,12 +355,5 @@
     <updated>2026-04-24T01:32:05+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring_condensed" rel="alternate" type="text/html"/>
     <summary>accuracy=0.300, macro_f1=0.234, qwk=0.324</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring/1.1/gpt-oss-120b@vllm/2026-04-24T01:31:21+00:00</id>
-    <title>gpt-oss-120b@vllm scored 0.350 accuracy on essay_vocabulary_scoring v1.1</title>
-    <updated>2026-04-24T01:31:21+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.350, macro_f1=0.240, qwk=0.404</summary>
   </entry>
 </feed>
