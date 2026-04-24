@@ -4,6 +4,17 @@
   "primary_metric": "judge_score",
   "ranking": [
     {
+      "model_id": "mistral-small-3.1@vllm",
+      "score": 0.7,
+      "metrics": {
+        "judge_score": 0.7
+      },
+      "tps": 69.15130725223479,
+      "p95_latency_ms": 16987.850549999992,
+      "cost_usd": null,
+      "result_file": "results/mistral-small-3.1@vllm__2026-04-24T17-08-56Z.json"
+    },
+    {
       "model_id": "glm5-awq@vllm",
       "score": 0.52,
       "metrics": {
@@ -125,5 +136,5 @@
       "result_file": "results/gemma-4-31b-it@vllm__2026-04-20T03-50-29Z.json"
     }
   ],
-  "updated_at": "2026-04-24T00:28:47+00:00"
+  "updated_at": "2026-04-24T17:36:00+00:00"
 }

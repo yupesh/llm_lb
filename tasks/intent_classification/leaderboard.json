@@ -136,6 +136,18 @@
       "result_file": "results/gpt-oss-120b@vllm__2026-04-20T01-24-49Z.json"
     },
     {
+      "model_id": "mistral-small-3.1@vllm",
+      "score": 0.9,
+      "metrics": {
+        "accuracy": 0.9,
+        "macro_f1": 0.9
+      },
+      "tps": 3.934495235890785,
+      "p95_latency_ms": 1177.069551999999,
+      "cost_usd": null,
+      "result_file": "results/mistral-small-3.1@vllm__2026-04-24T17-34-48Z.json"
+    },
+    {
       "model_id": "gemma-3-12b-it@vllm",
       "score": 0.7,
       "metrics": {
@@ -148,5 +160,5 @@
       "result_file": "results/gemma-3-12b-it@vllm__2026-04-23T11-38-50Z.json"
     }
   ],
-  "updated_at": "2026-04-23T11:43:56+00:00"
+  "updated_at": "2026-04-24T17:36:00+00:00"
 }
