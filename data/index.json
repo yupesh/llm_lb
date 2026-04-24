@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T17:36:00+00:00",
+  "generated_at": "2026-04-24T17:36:33+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -2449,6 +2449,21 @@
     {
       "task_id": "essay_grammar_scoring_condensed",
       "task_version": "1.1",
+      "model_id": "mistral-small-3.1@vllm",
+      "score": 0.1333333333333333,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.18012422360248448,
+        "qwk": 0.1333333333333333
+      },
+      "tps": 2.3167109644429615,
+      "p95_latency_ms": 1428.4803919999972,
+      "cost_usd": null,
+      "result_file": "tasks/essay_grammar_scoring_condensed/results/mistral-small-3.1@vllm__2026-04-24T17-30-43Z.json"
+    },
+    {
+      "task_id": "essay_grammar_scoring_condensed",
+      "task_version": "1.1",
       "model_id": "minimax-m2.7@vllm",
       "score": 0.10000000000000009,
       "metrics": {
@@ -3412,6 +3427,20 @@
     {
       "task_id": "hazard_category",
       "task_version": "1.0",
+      "model_id": "mistral-small-3.1@vllm",
+      "score": 0.55,
+      "metrics": {
+        "accuracy": 0.55,
+        "macro_f1": 0.43571428571428567
+      },
+      "tps": 18.19537351941418,
+      "p95_latency_ms": 689.459552999999,
+      "cost_usd": null,
+      "result_file": "tasks/hazard_category/results/mistral-small-3.1@vllm__2026-04-24T17-34-27Z.json"
+    },
+    {
+      "task_id": "hazard_category",
+      "task_version": "1.0",
       "model_id": "deepseek32exp@vllm",
       "score": 0.55,
       "metrics": {
@@ -4066,6 +4095,20 @@
       "p95_latency_ms": 943.9898939999978,
       "cost_usd": null,
       "result_file": "tasks/jailbreak_detection_beavertails/results/gemma-3-12b-it@vllm__2026-04-23T11-39-46Z.json"
+    },
+    {
+      "task_id": "jailbreak_detection_beavertails",
+      "task_version": "1.0",
+      "model_id": "mistral-small-3.1@vllm",
+      "score": 0.65,
+      "metrics": {
+        "accuracy": 0.65,
+        "macro_f1": 0.6491228070175439
+      },
+      "tps": 4.85661124100425,
+      "p95_latency_ms": 1441.4068879999888,
+      "cost_usd": null,
+      "result_file": "tasks/jailbreak_detection_beavertails/results/mistral-small-3.1@vllm__2026-04-24T17-36-00Z.json"
     },
     {
       "task_id": "jailbreak_detection_beavertails",
