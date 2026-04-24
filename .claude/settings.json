@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(awk -F_ '{for\\(i=3;i<=NF;i++\\) printf \"%s_\",$i; print \"\"}')",
+      "Bash(python3 -c ' *)",
+      "Bash(uv --directory runner run llm-lb --help)",
+      "Bash(git restore *)",
+      "Bash(git rebase *)",
+      "Bash(GIT_EDITOR=true git rebase --continue)"
+    ],
+    "additionalDirectories": [
+      "/Users/yuriypeshkichev/Projects/ipavlov/llm_leaderboard/tasks"
+    ]
+  }
+}
