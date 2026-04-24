@@ -4,6 +4,17 @@
   "primary_metric": "judge_score",
   "ranking": [
     {
+      "model_id": "mistral-small-3.1@vllm",
+      "score": 0.7181818181818183,
+      "metrics": {
+        "judge_score": 0.7181818181818183
+      },
+      "tps": 38.6045269272072,
+      "p95_latency_ms": 2586.9271150000086,
+      "cost_usd": null,
+      "result_file": "results/mistral-small-3.1@vllm__2026-04-24T17-57-00Z.json"
+    },
+    {
       "model_id": "gpt-oss-120b@vllm",
       "score": 0.7090909090909091,
       "metrics": {
@@ -136,5 +147,5 @@
       "result_file": "results/gemma-3-12b-it@vllm__2026-04-23T12-10-54Z.json"
     }
   ],
-  "updated_at": "2026-04-23T13:03:44+00:00"
+  "updated_at": "2026-04-24T19:09:29+00:00"
 }
