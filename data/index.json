@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T05:25:38+00:00",
+  "generated_at": "2026-04-24T05:26:37+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -5043,6 +5043,19 @@
       "p95_latency_ms": 1736.2906170000017,
       "cost_usd": null,
       "result_file": "tasks/summarization/results/gemma-3-12b-it@vllm__2026-04-23T12-05-15Z.json"
+    },
+    {
+      "task_id": "summarization",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 0.72,
+      "metrics": {
+        "judge_score": 0.72
+      },
+      "tps": 35.54575667774243,
+      "p95_latency_ms": 9359.671426999967,
+      "cost_usd": null,
+      "result_file": "tasks/summarization/results/qwen3-30b@vllm__2026-04-24T05-16-31Z.json"
     },
     {
       "task_id": "temporal_information_extraction",
