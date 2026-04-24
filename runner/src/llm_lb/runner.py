@@ -345,6 +345,20 @@ def run(
         total_output_tokens += out_tok
         total_gen_time_s += gen_time
 
+    n_failed = sum(1 for p in preds if p.error)
+    if n_failed == len(preds) and preds:
+        # Every sample errored — almost always a config/connectivity problem
+        # (wrong model name, dead endpoint, expired key) rather than a real
+        # score of 0. Writing the result would pollute the leaderboard and
+        # open a spurious PR. Fail loud so the CI step errors out and a human
+        # investigates; partial failures still produce a file and can be
+        # recovered via the `resume` workflow.
+        first_err = next(p.error for p in preds if p.error)
+        raise RuntimeError(
+            f"All {len(preds)} samples failed — refusing to write result. "
+            f"First error: {first_err}"
+        )
+
     metrics = _compute_metrics(task, preds)
     tps = (total_output_tokens / total_gen_time_s) if total_gen_time_s > 0 else 0.0
     p95 = _p95([p.latency_ms for p in preds])
@@ -362,7 +376,7 @@ def run(
         tps=tps,
         p95_latency_ms=p95,
         n_samples=len(samples),
-        n_failed_samples=sum(1 for p in preds if p.error),
+        n_failed_samples=n_failed,
         samples=preds,
         created_at=datetime.now(timezone.utc).isoformat(timespec="seconds"),
         env={"provider": model.provider, "endpoint_kind": model.endpoint_kind},
