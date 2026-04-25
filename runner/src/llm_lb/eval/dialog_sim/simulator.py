@@ -145,9 +145,16 @@ def simulate_retail_dialog(
             in_tok += (sa_resp["usage"] or {}).get("prompt_tokens", 0) or 0
             out_tok += (sa_resp["usage"] or {}).get("completion_tokens", 0) or 0
             msg = sa_resp["message"]
-            # Keep the full assistant message (including any tool_calls field)
-            # in the support-history — providers require it for consistency.
-            support_messages.append(msg)
+            # Keep the assistant message (including any tool_calls field) in
+            # the support-history — providers require it for consistency. Drop
+            # `reasoning_content`: vLLM reasoning parsers can produce massive
+            # chain-of-thought blobs that, if echoed back each turn, blow past
+            # the 40K context cap on multi-turn dialogs.
+            slim_msg: dict = {"role": msg.get("role", "assistant"),
+                              "content": msg.get("content") or ""}
+            if msg.get("tool_calls"):
+                slim_msg["tool_calls"] = msg["tool_calls"]
+            support_messages.append(slim_msg)
 
             tool_calls = msg.get("tool_calls") or []
             if not tool_calls:

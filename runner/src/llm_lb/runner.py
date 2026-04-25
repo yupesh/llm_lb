@@ -89,6 +89,11 @@ def _empty_completion_error(task: TaskSpec, completion: Completion) -> str | Non
     """
     if (completion.text or "").strip():
         return None
+    # vLLM reasoning parsers route the answer into `reasoning_content`. For
+    # single-shot scoring we treat that as the model's response — only flag as
+    # empty if BOTH content and reasoning are blank.
+    if (completion.reasoning_text or "").strip():
+        return None
     if not (completion.output_tokens or 0):
         return None
     if task.llm_params.max_tokens is not None and completion.output_tokens >= task.llm_params.max_tokens:
@@ -220,6 +225,7 @@ def _execute_sample(
             text = msg.get("content") or ""
             completion = Completion(
                 text=text,
+                reasoning_text=msg.get("reasoning_content") or "",
                 input_tokens=usage.get("prompt_tokens"),
                 output_tokens=usage.get("completion_tokens"),
             )
@@ -247,7 +253,10 @@ def _execute_sample(
                 0.0,
             )
 
-        pred = _extract_prediction(task, completion.text)
+        # Fall back to reasoning_content if the final answer slot is empty —
+        # see Completion.reasoning_text docstring for context.
+        pred_source = completion.text or completion.reasoning_text
+        pred = _extract_prediction(task, pred_source)
         correct = _is_correct(task, pred, s.expected)
 
         sample_pred = SamplePrediction(
@@ -258,7 +267,7 @@ def _execute_sample(
             latency_ms=dt_ms,
             input_tokens=completion.input_tokens,
             output_tokens=completion.output_tokens,
-            raw_output=completion.text,
+            raw_output=pred_source,
         )
         if task.judge and ctx.judge_client is not None:
             sample_pred.judge_raw_score = judge_mod.score_sample(
