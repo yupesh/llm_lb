@@ -121,6 +121,19 @@
       "result_file": "results/nemotron-3-super@vllm__2026-04-25T12-00-27Z.json"
     },
     {
+      "model_id": "deepseek32exp@vllm",
+      "score": 0.21052631578947367,
+      "metrics": {
+        "accuracy": 0.4,
+        "macro_f1": 0.2857142857142857,
+        "qwk": 0.21052631578947367
+      },
+      "tps": 3.5113023905494973,
+      "p95_latency_ms": 905.7206589999964,
+      "cost_usd": null,
+      "result_file": "results/deepseek32exp@vllm__2026-04-25T15-05-51Z.json"
+    },
+    {
       "model_id": "qwen3-235B-A22B@vllm",
       "score": 0.19999999999999996,
       "metrics": {
@@ -173,5 +186,5 @@
       "result_file": "results/mistral-small-3.1@vllm__2026-04-24T17-29-05Z.json"
     }
   ],
-  "updated_at": "2026-04-25T14:49:21+00:00"
+  "updated_at": "2026-04-25T15:19:32+00:00"
 }
