@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T08:47:53+00:00",
+  "generated_at": "2026-04-25T09:44:03+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -1229,6 +1229,21 @@
       "result_file": "tasks/cefr_level_classification_condensed/results/qwen3-30b@vllm__2026-04-19T01-55-27Z.json"
     },
     {
+      "task_id": "cefr_level_classification_condensed",
+      "task_version": "1.0",
+      "model_id": "nemotron-3-super@vllm",
+      "score": -0.0535714285714286,
+      "metrics": {
+        "accuracy": 0.25,
+        "macro_f1": 0.2361111111111111,
+        "qwk": -0.0535714285714286
+      },
+      "tps": 101.69974985092554,
+      "p95_latency_ms": 13584.652965000018,
+      "cost_usd": null,
+      "result_file": "tasks/cefr_level_classification_condensed/results/nemotron-3-super@vllm__2026-04-25T08-48-53Z.json"
+    },
+    {
       "task_id": "conversational_memory_qa",
       "task_version": "1.0",
       "model_id": "qwen3.5-27b@vllm",
@@ -1556,6 +1571,19 @@
     {
       "task_id": "datascibench_csv_excel",
       "task_version": "1.0",
+      "model_id": "nemotron-3-super@vllm",
+      "score": 0.44000000000000006,
+      "metrics": {
+        "judge_score": 0.44000000000000006
+      },
+      "tps": 25.61243800006032,
+      "p95_latency_ms": 278104.859011,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_csv_excel/results/nemotron-3-super@vllm__2026-04-25T09-02-03Z.json"
+    },
+    {
+      "task_id": "datascibench_csv_excel",
+      "task_version": "1.0",
       "model_id": "gemma-3-12b-it@vllm",
       "score": 0.36,
       "metrics": {
@@ -1725,6 +1753,19 @@
     {
       "task_id": "datascibench_dl",
       "task_version": "1.0",
+      "model_id": "nemotron-3-super@vllm",
+      "score": 0.4,
+      "metrics": {
+        "judge_score": 0.4
+      },
+      "tps": 113.23409253804455,
+      "p95_latency_ms": 37627.37312300001,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_dl/results/nemotron-3-super@vllm__2026-04-25T09-05-17Z.json"
+    },
+    {
+      "task_id": "datascibench_dl",
+      "task_version": "1.0",
       "model_id": "gemma-4-31b-it@vllm",
       "score": 0.4,
       "metrics": {
@@ -1864,6 +1905,19 @@
       "p95_latency_ms": 23790.244513000005,
       "cost_usd": null,
       "result_file": "tasks/datascibench_human/results/mistral-small-3.1@vllm__2026-04-24T17-11-03Z.json"
+    },
+    {
+      "task_id": "datascibench_human",
+      "task_version": "1.1",
+      "model_id": "nemotron-3-super@vllm",
+      "score": 0.52,
+      "metrics": {
+        "judge_score": 0.52
+      },
+      "tps": 115.93420959423895,
+      "p95_latency_ms": 24510.16892000001,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_human/results/nemotron-3-super@vllm__2026-04-25T09-07-39Z.json"
     },
     {
       "task_id": "entity_relationship_extraction",
