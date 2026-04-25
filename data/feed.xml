@@ -98,6 +98,34 @@
     <summary>accuracy=0.800, macro_f1=0.787</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text_classification/1.0/nemotron-3-super@vllm/2026-04-25T16:29:24+00:00</id>
+    <title>nemotron-3-super@vllm scored 1.000 accuracy on text_classification v1.0</title>
+    <updated>2026-04-25T16:29:24+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=1.000, macro_f1=1.000</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_bird/1.0/nemotron-3-super@vllm/2026-04-25T16:29:02+00:00</id>
+    <title>nemotron-3-super@vllm scored 0.609 judge_score on text2sql_bird v1.0</title>
+    <updated>2026-04-25T16:29:02+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_bird" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.609</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_ambiguity/1.0/nemotron-3-super@vllm/2026-04-25T16:26:21+00:00</id>
+    <title>nemotron-3-super@vllm scored 0.550 judge_score on text2sql_ambiguity v1.0</title>
+    <updated>2026-04-25T16:26:21+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_ambiguity" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.550</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/temporal_information_extraction/1.0/nemotron-3-super@vllm/2026-04-25T16:22:38+00:00</id>
+    <title>nemotron-3-super@vllm scored 0.357 judge_score on temporal_information_extraction v1.0</title>
+    <updated>2026-04-25T16:22:38+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/temporal_information_extraction" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.357</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/summarization/1.0/nemotron-3-super@vllm/2026-04-25T15:47:26+00:00</id>
     <title>nemotron-3-super@vllm scored 0.760 judge_score on summarization v1.0</title>
     <updated>2026-04-25T15:47:26+00:00</updated>
@@ -327,33 +355,5 @@
     <updated>2026-04-25T12:08:11+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_grammar_scoring" rel="alternate" type="text/html"/>
     <summary>accuracy=0.200, macro_f1=0.179, qwk=-0.031</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_coherence_scoring_condensed/1.1/nemotron-3-super@vllm/2026-04-25T12:01:51+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.350 accuracy on essay_coherence_scoring_condensed v1.1</title>
-    <updated>2026-04-25T12:01:51+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_coherence_scoring_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.350, macro_f1=0.332, qwk=0.241</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_coherence_scoring/1.1/nemotron-3-super@vllm/2026-04-25T12:00:27+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.300 accuracy on essay_coherence_scoring v1.1</title>
-    <updated>2026-04-25T12:00:27+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_coherence_scoring" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.300, macro_f1=0.260, qwk=0.212</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/conversational_memory_qa/1.0/nemotron-3-super@vllm/2026-04-25T09:54:15+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.480 judge_score on conversational_memory_qa v1.0</title>
-    <updated>2026-04-25T09:54:15+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/conversational_memory_qa" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.480</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification_condensed/1.0/nemotron-3-super@vllm/2026-04-25T09:51:56+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.350 accuracy on cefr_level_classification_condensed v1.0</title>
-    <updated>2026-04-25T09:51:56+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.350, macro_f1=0.323, qwk=0.569</summary>
   </entry>
 </feed>
