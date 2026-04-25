@@ -1,0 +1,213 @@
+{
+  "model_id": "mistral-small-4@vllm",
+  "model_revision": "2026-04-25",
+  "task_id": "conversational_memory_qa",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "7cf0fe997cd695f7",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42
+  },
+  "metrics": {
+    "judge_score": 0.7066666666666667
+  },
+  "tps": 6.173645247502634,
+  "p95_latency_ms": 2352.047713999994,
+  "n_samples": 15,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "sample_001",
+      "prediction": "1 July 2023",
+      "expected": "2 July 2023",
+      "correct": false,
+      "latency_ms": 2345.319809000003,
+      "input_tokens": 22649,
+      "output_tokens": 8,
+      "raw_output": "1 July 2023",
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "sample_002",
+      "prediction": "Contemporary",
+      "expected": "Contemporary",
+      "correct": true,
+      "latency_ms": 1108.123452000001,
+      "input_tokens": 18583,
+      "output_tokens": 3,
+      "raw_output": "Contemporary",
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_003",
+      "prediction": "A community event to raise money for a good cause.",
+      "expected": "career fair at a local school",
+      "correct": false,
+      "latency_ms": 2084.4808140000027,
+      "input_tokens": 34887,
+      "output_tokens": 12,
+      "raw_output": "A community event to raise money for a good cause.",
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "sample_004",
+      "prediction": "Whispering Falls.",
+      "expected": "Whispering Falls waterfall",
+      "correct": false,
+      "latency_ms": 1694.4266940000007,
+      "input_tokens": 30809,
+      "output_tokens": 6,
+      "raw_output": "Whispering Falls.",
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_005",
+      "prediction": "Sneakers, jerseys, and books.",
+      "expected": "sneakers, fantasy movie DVDs, jerseys",
+      "correct": false,
+      "latency_ms": 1869.2940110000009,
+      "input_tokens": 34710,
+      "output_tokens": 12,
+      "raw_output": "Sneakers, jerseys, and books.",
+      "judge_raw_score": 3.0,
+      "error": null
+    },
+    {
+      "id": "sample_006",
+      "prediction": "Positive reinforcement can really help you bond with your dogs.",
+      "expected": "To have pets learn how to behave in a positive way",
+      "correct": false,
+      "latency_ms": 1874.7901589999997,
+      "input_tokens": 34100,
+      "output_tokens": 12,
+      "raw_output": "Positive reinforcement can really help you bond with your dogs.",
+      "judge_raw_score": 2.0,
+      "error": null
+    },
+    {
+      "id": "sample_007",
+      "prediction": "Liverpool.",
+      "expected": "Liverpool",
+      "correct": true,
+      "latency_ms": 1999.697542000007,
+      "input_tokens": 33892,
+      "output_tokens": 4,
+      "raw_output": "Liverpool.",
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_008",
+      "prediction": "2 years ago",
+      "expected": "in 2021",
+      "correct": false,
+      "latency_ms": 2352.047713999994,
+      "input_tokens": 32206,
+      "output_tokens": 4,
+      "raw_output": "2 years ago",
+      "judge_raw_score": 4.0,
+      "error": null
+    },
+    {
+      "id": "sample_009",
+      "prediction": "Gastritis",
+      "expected": "Gastritis",
+      "correct": true,
+      "latency_ms": 1373.2894970000018,
+      "input_tokens": 26167,
+      "output_tokens": 4,
+      "raw_output": "Gastritis",
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_010",
+      "prediction": "Adding electronic elements to his songs gives them a fresh vibe. It's been an exciting process of self-discovery and growth.",
+      "expected": "gives them a fresh vibe",
+      "correct": false,
+      "latency_ms": 2613.1488770000005,
+      "input_tokens": 31477,
+      "output_tokens": 27,
+      "raw_output": "Adding electronic elements to his songs gives them a fresh vibe. It's been an exciting process of self-discovery and growth.",
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_011",
+      "prediction": "Not mentioned",
+      "expected": "2022",
+      "correct": false,
+      "latency_ms": 652.931143999993,
+      "input_tokens": 22648,
+      "output_tokens": 3,
+      "raw_output": "Not mentioned",
+      "judge_raw_score": 1.0,
+      "error": null
+    },
+    {
+      "id": "sample_012",
+      "prediction": "Gina offers to help Jon with making content and managing his social media accounts.",
+      "expected": "Helping with making content and managing his social media accounts.",
+      "correct": false,
+      "latency_ms": 719.1522450000036,
+      "input_tokens": 18585,
+      "output_tokens": 17,
+      "raw_output": "Gina offers to help Jon with making content and managing his social media accounts.",
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_013",
+      "prediction": "Maria started volunteering at the homeless shelter about a year ago after witnessing a family struggling on the streets.",
+      "expected": "Witnessed a family struggling on the streets and reached out to the shelter",
+      "correct": false,
+      "latency_ms": 926.8422770000058,
+      "input_tokens": 34889,
+      "output_tokens": 23,
+      "raw_output": "Maria started volunteering at the homeless shelter about a year ago after witnessing a family struggling on the streets.",
+      "judge_raw_score": 5.0,
+      "error": null
+    },
+    {
+      "id": "sample_014",
+      "prediction": "Not mentioned",
+      "expected": "\"Little Women\", \"Lord of the Rings\"",
+      "correct": false,
+      "latency_ms": 1352.0287759999974,
+      "input_tokens": 30795,
+      "output_tokens": 3,
+      "raw_output": "Not mentioned",
+      "judge_raw_score": 1.0,
+      "error": null
+    },
+    {
+      "id": "sample_015",
+      "prediction": "A basketball signed by LeBron James.",
+      "expected": "signed basketball",
+      "correct": false,
+      "latency_ms": 845.3189509999959,
+      "input_tokens": 34715,
+      "output_tokens": 9,
+      "raw_output": "A basketball signed by LeBron James.",
+      "judge_raw_score": 1.0,
+      "error": null
+    }
+  ],
+  "created_at": "2026-04-25T23:49:56+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": "gpt-4o-mini@openai",
+  "judge_model_revision": "2024-07-18",
+  "judge_prompt_hash": "18f44b8c39bda787",
+  "judge_served_model_name": "gpt-4o-mini"
+}
