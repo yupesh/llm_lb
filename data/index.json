@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T16:01:07+00:00",
+  "generated_at": "2026-04-25T16:01:46+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -1002,6 +1002,21 @@
       "p95_latency_ms": 82714.28860400004,
       "cost_usd": null,
       "result_file": "tasks/cefr_level_classification/results/qwen3.5-27b@vllm__2026-04-22T09-03-13Z.json"
+    },
+    {
+      "task_id": "cefr_level_classification",
+      "task_version": "1.1",
+      "model_id": "deepseek32exp@vllm",
+      "score": 0.2499999999999999,
+      "metrics": {
+        "accuracy": 0.4,
+        "macro_f1": 0.3011363636363636,
+        "qwk": 0.2499999999999999
+      },
+      "tps": 3.274150631968328,
+      "p95_latency_ms": 1489.5586450000023,
+      "cost_usd": null,
+      "result_file": "tasks/cefr_level_classification/results/deepseek32exp@vllm__2026-04-25T14-59-53Z.json"
     },
     {
       "task_id": "cefr_level_classification",
@@ -5789,6 +5804,19 @@
     {
       "task_id": "retail_agent_dialog",
       "task_version": "1.1",
+      "model_id": "deepseek32exp@vllm",
+      "score": 0.6424242424242425,
+      "metrics": {
+        "judge_score": 0.6424242424242425
+      },
+      "tps": 43.94083059576719,
+      "p95_latency_ms": 66746.05205199998,
+      "cost_usd": null,
+      "result_file": "tasks/retail_agent_dialog/results/deepseek32exp@vllm__2026-04-25T15-35-49Z.json"
+    },
+    {
+      "task_id": "retail_agent_dialog",
+      "task_version": "1.1",
       "model_id": "qwen3-30b@vllm",
       "score": 0.5272727272727273,
       "metrics": {
@@ -7239,6 +7267,21 @@
     {
       "task_id": "writing_eval_n42_no_ann_no_m_serial",
       "task_version": "1.1",
+      "model_id": "deepseek32exp@vllm",
+      "score": 0.5489785227867994,
+      "metrics": {
+        "accuracy": 0.30952380952380953,
+        "adjacent_accuracy": 0.9047619047619048,
+        "qwk": 0.5489785227867994
+      },
+      "tps": 5.05663528883793,
+      "p95_latency_ms": 1017.4793289999968,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n42_no_ann_no_m_serial/results/deepseek32exp@vllm__2026-04-25T15-36-27Z.json"
+    },
+    {
+      "task_id": "writing_eval_n42_no_ann_no_m_serial",
+      "task_version": "1.1",
       "model_id": "glm5-awq@vllm",
       "score": 0.5192307692307693,
       "metrics": {
@@ -7385,6 +7428,21 @@
       "p95_latency_ms": 43278.375667999964,
       "cost_usd": null,
       "result_file": "tasks/writing_eval_n42_no_ann_with_m_serial/results/glm5.1@llama__2026-04-25T06-57-45Z.json"
+    },
+    {
+      "task_id": "writing_eval_n42_no_ann_with_m_serial",
+      "task_version": "1.1",
+      "model_id": "deepseek32exp@vllm",
+      "score": 0.5411030176899063,
+      "metrics": {
+        "accuracy": 0.21428571428571427,
+        "adjacent_accuracy": 0.9285714285714286,
+        "qwk": 0.5411030176899063
+      },
+      "tps": 4.570992598488034,
+      "p95_latency_ms": 1245.356686000001,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n42_no_ann_with_m_serial/results/deepseek32exp@vllm__2026-04-25T15-37-11Z.json"
     },
     {
       "task_id": "writing_eval_n42_no_ann_with_m_serial",
@@ -7550,6 +7608,21 @@
       "p95_latency_ms": 4276.150029999997,
       "cost_usd": null,
       "result_file": "tasks/writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial/results/gpt-oss-120b@vllm__2026-04-24T01-49-53Z.json"
+    },
+    {
+      "task_id": "writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial",
+      "task_version": "1.1",
+      "model_id": "deepseek32exp@vllm",
+      "score": 0.23076923076923073,
+      "metrics": {
+        "accuracy": 0.14285714285714285,
+        "adjacent_accuracy": 0.8095238095238095,
+        "qwk": 0.23076923076923073
+      },
+      "tps": 2.418555100045167,
+      "p95_latency_ms": 1929.2462330000008,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial/results/deepseek32exp@vllm__2026-04-25T15-38-22Z.json"
     },
     {
       "task_id": "writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial",
