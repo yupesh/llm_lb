@@ -35,6 +35,20 @@
     <summary>accuracy=0.167, adjacent_accuracy=0.786, qwk=0.340</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial/1.1/qwen3-235B-A22B@vllm/2026-04-25T18:14:32+00:00</id>
+    <title>qwen3-235B-A22B@vllm scored 0.262 accuracy on writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial v1.1</title>
+    <updated>2026-04-25T18:14:32+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.262, adjacent_accuracy=0.762, qwk=0.327</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial/1.1/nemotron-3-super@vllm/2026-04-25T18:09:21+00:00</id>
+    <title>nemotron-3-super@vllm scored 0.357 accuracy on writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial v1.1</title>
+    <updated>2026-04-25T18:09:21+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.357, adjacent_accuracy=0.714, qwk=0.035</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/summarization/1.0/nemotron-3-super@vllm/2026-04-25T15:47:26+00:00</id>
     <title>nemotron-3-super@vllm scored 0.760 judge_score on summarization v1.0</title>
     <updated>2026-04-25T15:47:26+00:00</updated>
@@ -341,19 +355,5 @@
     <updated>2026-04-25T08:28:23+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_no_m_serial" rel="alternate" type="text/html"/>
     <summary>accuracy=0.214, adjacent_accuracy=0.762, qwk=0.449</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_loocv_fewshot_with_m_serial/1.1/glm5.1@llama/2026-04-25T08:12:30+00:00</id>
-    <title>glm5.1@llama scored 0.333 accuracy on writing_eval_n42_with_ann_loocv_fewshot_with_m_serial v1.1</title>
-    <updated>2026-04-25T08:12:30+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_loocv_fewshot_with_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.333, adjacent_accuracy=0.952, qwk=0.559</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_loocv_fewshot_no_m_serial/1.1/glm5.1@llama/2026-04-25T07:54:01+00:00</id>
-    <title>glm5.1@llama scored 0.333 accuracy on writing_eval_n42_with_ann_loocv_fewshot_no_m_serial v1.1</title>
-    <updated>2026-04-25T07:54:01+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_loocv_fewshot_no_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.333, adjacent_accuracy=0.929, qwk=0.521</summary>
   </entry>
 </feed>
