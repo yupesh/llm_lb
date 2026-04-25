@@ -2,7 +2,7 @@
    display_name: Mistral Small 4 (FP8, vLLM)
    provider: openai_compat
    endpoint_kind: openai_chat
-   hf_uri: mistralai/Mistral-Small-4-119B-A6B-Instruct-2603
+   hf_uri: mistralai/Mistral-Small-4-119B-2603
    params: "119B (6B active, MoE 128/4, FP8)"
    revision: "2026-04-25"
    endpoint_url: http://lnsigo.mipt.ru:4000/v1
