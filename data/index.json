@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T05:46:56+00:00",
+  "generated_at": "2026-04-25T05:54:56+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -475,7 +475,7 @@
       "display_name": "GLM-5-AWQ (vLLM)",
       "provider": "openai_compat",
       "hf_uri": "QuantTrio/GLM-5-AWQ",
-      "params": "744B (40B active, MoE, AWQ; ~586B on disk)",
+      "params": "586B (AWQ)",
       "hardware": {
         "gpu_count": 4,
         "gpu_type": "H200",
@@ -487,7 +487,7 @@
       "display_name": "GLM-5.1-NVFP4",
       "provider": "openai_compat",
       "hf_uri": "lukealonso/GLM-5.1-NVFP4",
-      "params": "744B (40B active, MoE, NVFP4; ~437B on disk)",
+      "params": "437B (NVFP4)",
       "hardware": {
         "gpu_count": 4,
         "gpu_type": "H200",
