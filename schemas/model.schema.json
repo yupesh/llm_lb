@@ -78,6 +78,18 @@
       "default": null,
       "title": "Hf Uri"
     },
+    "params": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Params"
+    },
     "revision": {
       "anyOf": [
         {
