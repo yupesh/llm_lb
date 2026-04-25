@@ -136,6 +136,17 @@
       "result_file": "results/gemma-3-12b-it@vllm__2026-04-23T11-42-36Z.json"
     },
     {
+      "model_id": "nemotron-3-super@vllm",
+      "score": 0.8300000000000001,
+      "metrics": {
+        "judge_score": 0.8300000000000001
+      },
+      "tps": 84.54807643295531,
+      "p95_latency_ms": 3490.5705399999933,
+      "cost_usd": null,
+      "result_file": "results/nemotron-3-super@vllm__2026-04-25T13-27-51Z.json"
+    },
+    {
       "model_id": "qwen3-30b@vllm",
       "score": 0.78,
       "metrics": {
@@ -147,5 +158,5 @@
       "result_file": "results/qwen3-30b@vllm__2026-04-19T01-25-33Z.json"
     }
   ],
-  "updated_at": "2026-04-24T19:09:29+00:00"
+  "updated_at": "2026-04-25T14:47:31+00:00"
 }

@@ -4,8 +4,29 @@
   <id>tag:yupesh.github.io,2026:llm_lb/feed</id>
   <link href="https://yupesh.github.io/llm_lb/" rel="alternate" type="text/html"/>
   <link href="https://yupesh.github.io/llm_lb/data/feed.xml" rel="self" type="application/atom+xml"/>
-  <updated>2026-04-25T09:54:15+00:00</updated>
+  <updated>2026-04-25T13:37:37+00:00</updated>
   <author><name>LLM Leaderboard</name></author>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/oos_detection/1.0/nemotron-3-super@vllm/2026-04-25T13:37:37+00:00</id>
+    <title>nemotron-3-super@vllm scored 0.500 accuracy on oos_detection v1.0</title>
+    <updated>2026-04-25T13:37:37+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/oos_detection" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.500, macro_f1=0.333</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_triplet_extraction/1.0/nemotron-3-super@vllm/2026-04-25T13:36:44+00:00</id>
+    <title>nemotron-3-super@vllm scored 0.460 judge_score on kg_triplet_extraction v1.0</title>
+    <updated>2026-04-25T13:36:44+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_triplet_extraction" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.460</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_relation_refinement/1.0/nemotron-3-super@vllm/2026-04-25T13:27:51+00:00</id>
+    <title>nemotron-3-super@vllm scored 0.830 judge_score on kg_relation_refinement v1.0</title>
+    <updated>2026-04-25T13:27:51+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_relation_refinement" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.830</summary>
+  </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/conversational_memory_qa/1.0/nemotron-3-super@vllm/2026-04-25T09:54:15+00:00</id>
     <title>nemotron-3-super@vllm scored 0.480 judge_score on conversational_memory_qa v1.0</title>
@@ -334,26 +355,5 @@
     <updated>2026-04-24T18:01:34+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_loocv_fewshot_no_m_serial" rel="alternate" type="text/html"/>
     <summary>accuracy=0.119, adjacent_accuracy=0.833, qwk=0.286</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial/1.1/mistral-small-3.1@vllm/2026-04-24T18:00:40+00:00</id>
-    <title>mistral-small-3.1@vllm scored 0.143 accuracy on writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial v1.1</title>
-    <updated>2026-04-24T18:00:40+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.143, adjacent_accuracy=0.786, qwk=0.226</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial/1.1/mistral-small-3.1@vllm/2026-04-24T17:59:59+00:00</id>
-    <title>mistral-small-3.1@vllm scored 0.167 accuracy on writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial v1.1</title>
-    <updated>2026-04-24T17:59:59+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.167, adjacent_accuracy=0.857, qwk=0.326</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_ann_with_m_serial/1.1/mistral-small-3.1@vllm/2026-04-24T17:59:08+00:00</id>
-    <title>mistral-small-3.1@vllm scored 0.381 accuracy on writing_eval_n42_no_ann_with_m_serial v1.1</title>
-    <updated>2026-04-24T17:59:08+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_ann_with_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.381, adjacent_accuracy=0.952, qwk=0.628</summary>
   </entry>
 </feed>

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T09:56:27+00:00",
+  "generated_at": "2026-04-25T14:47:31+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -4993,6 +4993,19 @@
     {
       "task_id": "kg_relation_refinement",
       "task_version": "1.0",
+      "model_id": "nemotron-3-super@vllm",
+      "score": 0.8300000000000001,
+      "metrics": {
+        "judge_score": 0.8300000000000001
+      },
+      "tps": 84.54807643295531,
+      "p95_latency_ms": 3490.5705399999933,
+      "cost_usd": null,
+      "result_file": "tasks/kg_relation_refinement/results/nemotron-3-super@vllm__2026-04-25T13-27-51Z.json"
+    },
+    {
+      "task_id": "kg_relation_refinement",
+      "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
       "score": 0.78,
       "metrics": {
@@ -5173,6 +5186,19 @@
       "result_file": "tasks/kg_triplet_extraction/results/gemma-3-12b-it@vllm__2026-04-23T11-44-56Z.json"
     },
     {
+      "task_id": "kg_triplet_extraction",
+      "task_version": "1.0",
+      "model_id": "nemotron-3-super@vllm",
+      "score": 0.45999999999999996,
+      "metrics": {
+        "judge_score": 0.45999999999999996
+      },
+      "tps": 45.19573824497888,
+      "p95_latency_ms": 16519.189004999986,
+      "cost_usd": null,
+      "result_file": "tasks/kg_triplet_extraction/results/nemotron-3-super@vllm__2026-04-25T13-36-44Z.json"
+    },
+    {
       "task_id": "oos_detection",
       "task_version": "1.0",
       "model_id": "mistral-small-3.1@vllm",
@@ -5213,6 +5239,20 @@
       "p95_latency_ms": 1143.6123059999943,
       "cost_usd": null,
       "result_file": "tasks/oos_detection/results/deepseek32exp@vllm__2026-04-21T07-00-18Z.json"
+    },
+    {
+      "task_id": "oos_detection",
+      "task_version": "1.0",
+      "model_id": "nemotron-3-super@vllm",
+      "score": 0.5,
+      "metrics": {
+        "accuracy": 0.5,
+        "macro_f1": 0.3333333333333333
+      },
+      "tps": 71.40587444617799,
+      "p95_latency_ms": 1820.1601649999973,
+      "cost_usd": null,
+      "result_file": "tasks/oos_detection/results/nemotron-3-super@vllm__2026-04-25T13-37-37Z.json"
     },
     {
       "task_id": "oos_detection",
