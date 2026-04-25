@@ -2,8 +2,8 @@
    display_name: Nemotron-3 Super 120B-A12B (NVFP4)
    provider: openai_compat
    endpoint_kind: openai_chat
-   hf_uri: nvidia/Nemotron-3-Super-120B-A12B-NVFP4
-   params: "120B (12B active, MoE, NVFP4)"
+   hf_uri: nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4
+   params: "67B (12B active, NVFP4)"
    revision: "2026-04-25"
    endpoint_url: http://lnsigo.mipt.ru:4000/v1
    api_key_env: VLLM_PROXY_KEY
