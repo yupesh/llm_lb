@@ -4,8 +4,29 @@
   <id>tag:yupesh.github.io,2026:llm_lb/feed</id>
   <link href="https://yupesh.github.io/llm_lb/" rel="alternate" type="text/html"/>
   <link href="https://yupesh.github.io/llm_lb/data/feed.xml" rel="self" type="application/atom+xml"/>
-  <updated>2026-04-25T09:07:39+00:00</updated>
+  <updated>2026-04-25T09:54:15+00:00</updated>
   <author><name>LLM Leaderboard</name></author>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/conversational_memory_qa/1.0/nemotron-3-super@vllm/2026-04-25T09:54:15+00:00</id>
+    <title>nemotron-3-super@vllm scored 0.480 judge_score on conversational_memory_qa v1.0</title>
+    <updated>2026-04-25T09:54:15+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/conversational_memory_qa" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.480</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification_condensed/1.0/nemotron-3-super@vllm/2026-04-25T09:51:56+00:00</id>
+    <title>nemotron-3-super@vllm scored 0.350 accuracy on cefr_level_classification_condensed v1.0</title>
+    <updated>2026-04-25T09:51:56+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification_condensed" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.350, macro_f1=0.323, qwk=0.569</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification/1.1/nemotron-3-super@vllm/2026-04-25T09:50:13+00:00</id>
+    <title>nemotron-3-super@vllm scored 0.200 accuracy on cefr_level_classification v1.1</title>
+    <updated>2026-04-25T09:50:13+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.200, macro_f1=0.095, qwk=-0.162</summary>
+  </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_human/1.1/nemotron-3-super@vllm/2026-04-25T09:07:39+00:00</id>
     <title>nemotron-3-super@vllm scored 0.520 judge_score on datascibench_human v1.1</title>
@@ -334,26 +355,5 @@
     <updated>2026-04-24T17:59:08+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_ann_with_m_serial" rel="alternate" type="text/html"/>
     <summary>accuracy=0.381, adjacent_accuracy=0.952, qwk=0.628</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_ann_no_m_serial/1.1/mistral-small-3.1@vllm/2026-04-24T17:58:22+00:00</id>
-    <title>mistral-small-3.1@vllm scored 0.452 accuracy on writing_eval_n42_no_ann_no_m_serial v1.1</title>
-    <updated>2026-04-24T17:58:22+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_ann_no_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.452, adjacent_accuracy=0.905, qwk=0.554</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/topic_classification/1.0/mistral-small-3.1@vllm/2026-04-24T17:57:45+00:00</id>
-    <title>mistral-small-3.1@vllm scored 1.000 accuracy on topic_classification v1.0</title>
-    <updated>2026-04-24T17:57:45+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/topic_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=1.000, macro_f1=1.000</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/text_classification/1.0/mistral-small-3.1@vllm/2026-04-24T17:57:23+00:00</id>
-    <title>mistral-small-3.1@vllm scored 1.000 accuracy on text_classification v1.0</title>
-    <updated>2026-04-24T17:57:23+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/text_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=1.000, macro_f1=1.000</summary>
   </entry>
 </feed>

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T09:46:11+00:00",
+  "generated_at": "2026-04-25T09:56:27+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -1019,6 +1019,21 @@
       "result_file": "tasks/cefr_level_classification/results/mistral-small-3.1@vllm__2026-04-24T17-02-04Z.json"
     },
     {
+      "task_id": "cefr_level_classification",
+      "task_version": "1.1",
+      "model_id": "nemotron-3-super@vllm",
+      "score": -0.1617647058823528,
+      "metrics": {
+        "accuracy": 0.2,
+        "macro_f1": 0.09523809523809523,
+        "qwk": -0.1617647058823528
+      },
+      "tps": 102.20953715532336,
+      "p95_latency_ms": 17494.62215,
+      "cost_usd": null,
+      "result_file": "tasks/cefr_level_classification/results/nemotron-3-super@vllm__2026-04-25T09-50-13Z.json"
+    },
+    {
       "task_id": "cefr_level_classification_condensed",
       "task_version": "1.0",
       "model_id": "qwen3.5-27b@vllm",
@@ -1032,6 +1047,21 @@
       "p95_latency_ms": 158398.2379439999,
       "cost_usd": null,
       "result_file": "tasks/cefr_level_classification_condensed/results/qwen3.5-27b@vllm__2026-04-19T07-57-57Z.json"
+    },
+    {
+      "task_id": "cefr_level_classification_condensed",
+      "task_version": "1.0",
+      "model_id": "nemotron-3-super@vllm",
+      "score": 0.5689655172413792,
+      "metrics": {
+        "accuracy": 0.35,
+        "macro_f1": 0.3230042016806723,
+        "qwk": 0.5689655172413792
+      },
+      "tps": 105.39153435625839,
+      "p95_latency_ms": 11034.021575000004,
+      "cost_usd": null,
+      "result_file": "tasks/cefr_level_classification_condensed/results/nemotron-3-super@vllm__2026-04-25T09-51-56Z.json"
     },
     {
       "task_id": "cefr_level_classification_condensed",
@@ -1381,6 +1411,19 @@
       "p95_latency_ms": 7951.538956000008,
       "cost_usd": null,
       "result_file": "tasks/conversational_memory_qa/results/gemma-3-12b-it@vllm__2026-04-23T11-14-47Z.json"
+    },
+    {
+      "task_id": "conversational_memory_qa",
+      "task_version": "1.0",
+      "model_id": "nemotron-3-super@vllm",
+      "score": 0.48000000000000004,
+      "metrics": {
+        "judge_score": 0.48000000000000004
+      },
+      "tps": 4.327901647705912,
+      "p95_latency_ms": 4460.2870299999895,
+      "cost_usd": null,
+      "result_file": "tasks/conversational_memory_qa/results/nemotron-3-super@vllm__2026-04-25T09-54-15Z.json"
     },
     {
       "task_id": "datascibench_csv_excel",
