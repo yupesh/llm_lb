@@ -57,12 +57,19 @@ export function CompareView({ index }: { index: Index }) {
         normMap[p.id] = norm[i]
         ;(collected[p.id] ??= []).push(norm[i])
       })
+      // Tie-aware ranking: equal scores share a rank (1, 1, 3, 4, ...).
+      // Lets us bold every leader and underline every runner-up — the
+      // convention in benchmark papers where "best" can be a tie.
       const rankMap: Record<string, number> = {}
-      ;[...present]
-        .sort((a, b) => b.score - a.score)
-        .forEach((p, i) => {
-          rankMap[p.id] = i + 1
-        })
+      const sorted = [...present].sort((a, b) => b.score - a.score)
+      let prev: number | null = null
+      let prevRank = 0
+      sorted.forEach((p, i) => {
+        const rank = prev !== null && p.score === prev ? prevRank : i + 1
+        rankMap[p.id] = rank
+        prev = p.score
+        prevRank = rank
+      })
       perTask[t.id] = { norm: normMap, rank: rankMap }
     }
     const avg: Record<string, number> = {}
@@ -137,6 +144,7 @@ export function CompareView({ index }: { index: Index }) {
           <thead>
             <tr>
               <th>Model</th>
+              <th>Params</th>
               {tasks.map((t) => (
                 <th key={t.id}>
                   {t.id}
@@ -149,9 +157,11 @@ export function CompareView({ index }: { index: Index }) {
           <tbody>
             {sortedModels.map((m) => (
               <tr key={m.id}>
-                <th scope="row" className="model-cell">
+                <th scope="row" className="model-cell" title={m.hf_uri ?? undefined}>
                   <code>{m.id}</code>
+                  {m.hf_uri && <div className="hf-uri">{m.hf_uri}</div>}
                 </th>
+                <td className="params-cell">{m.params ?? '—'}</td>
                 {tasks.map((t) => {
                   const e = lookup[m.id]?.[t.id]
                   const info = perTask[t.id]
@@ -164,6 +174,7 @@ export function CompareView({ index }: { index: Index }) {
                   const className = [
                     e ? '' : 'muted',
                     rank === 1 ? 'leader' : '',
+                    rank === 2 ? 'runner-up' : '',
                   ]
                     .filter(Boolean)
                     .join(' ')

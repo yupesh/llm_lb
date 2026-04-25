@@ -143,6 +143,7 @@ def aggregate_all(repo_root: Path) -> dict[str, Any]:
                     "display_name": m.display_name,
                     "provider": m.provider,
                     "hf_uri": m.hf_uri,
+                    "params": m.params,
                     "hardware": m.hardware.model_dump() if m.hardware else None,
                 }
             )
