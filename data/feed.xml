@@ -112,6 +112,27 @@
     <summary>accuracy=0.200, macro_f1=0.187, qwk=-0.105</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_coherence_scoring_condensed/1.1/nemotron-3-super@vllm/2026-04-25T12:01:51+00:00</id>
+    <title>nemotron-3-super@vllm scored 0.350 accuracy on essay_coherence_scoring_condensed v1.1</title>
+    <updated>2026-04-25T12:01:51+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_coherence_scoring_condensed" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.350, macro_f1=0.332, qwk=0.241</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_coherence_scoring/1.1/nemotron-3-super@vllm/2026-04-25T12:00:27+00:00</id>
+    <title>nemotron-3-super@vllm scored 0.300 accuracy on essay_coherence_scoring v1.1</title>
+    <updated>2026-04-25T12:00:27+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_coherence_scoring" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.300, macro_f1=0.260, qwk=0.212</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/entity_relationship_extraction/1.0/nemotron-3-super@vllm/2026-04-25T11:48:37+00:00</id>
+    <title>nemotron-3-super@vllm scored 0.727 judge_score on entity_relationship_extraction v1.0</title>
+    <updated>2026-04-25T11:48:37+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/entity_relationship_extraction" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.727</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/conversational_memory_qa/1.0/nemotron-3-super@vllm/2026-04-25T09:54:15+00:00</id>
     <title>nemotron-3-super@vllm scored 0.480 judge_score on conversational_memory_qa v1.0</title>
     <updated>2026-04-25T09:54:15+00:00</updated>
@@ -334,26 +355,5 @@
     <updated>2026-04-25T02:21:12+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_ann_no_m_serial" rel="alternate" type="text/html"/>
     <summary>accuracy=0.262, adjacent_accuracy=0.929, qwk=0.578</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/retail_agent_dialog/1.1/qwen3.5-27b@vllm/2026-04-25T01:31:49+00:00</id>
-    <title>qwen3.5-27b@vllm scored 0.826 judge_score on retail_agent_dialog v1.1</title>
-    <updated>2026-04-25T01:31:49+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/retail_agent_dialog" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.826</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_human/1.1/qwen3.5-27b@vllm/2026-04-24T22:03:07+00:00</id>
-    <title>qwen3.5-27b@vllm scored 0.956 judge_score on datascibench_human v1.1</title>
-    <updated>2026-04-24T22:03:07+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_human" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.956</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_with_m_serial/1.1/glm5-awq@vllm/2026-04-24T21:21:23+00:00</id>
-    <title>glm5-awq@vllm scored 0.238 accuracy on writing_eval_n42_with_ann_with_m_serial v1.1</title>
-    <updated>2026-04-24T21:21:23+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_with_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.238, adjacent_accuracy=0.810, qwk=0.474</summary>
   </entry>
 </feed>

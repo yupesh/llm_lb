@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T14:48:48+00:00",
+  "generated_at": "2026-04-25T14:49:21+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -2102,6 +2102,19 @@
       "result_file": "tasks/entity_relationship_extraction/results/gemma-3-12b-it@vllm__2026-04-23T11-32-28Z.json"
     },
     {
+      "task_id": "entity_relationship_extraction",
+      "task_version": "1.0",
+      "model_id": "nemotron-3-super@vllm",
+      "score": 0.7272727272727273,
+      "metrics": {
+        "judge_score": 0.7272727272727273
+      },
+      "tps": 65.73883505827295,
+      "p95_latency_ms": 904736.555313,
+      "cost_usd": null,
+      "result_file": "tasks/entity_relationship_extraction/results/nemotron-3-super@vllm__2026-04-25T11-48-37Z.json"
+    },
+    {
       "task_id": "essay_coherence_scoring",
       "task_version": "1.1",
       "model_id": "glm5.1@llama",
@@ -2220,6 +2233,21 @@
       "p95_latency_ms": 2999.266911999996,
       "cost_usd": null,
       "result_file": "tasks/essay_coherence_scoring/results/gpt-oss-120b@vllm__2026-04-24T01-28-00Z.json"
+    },
+    {
+      "task_id": "essay_coherence_scoring",
+      "task_version": "1.1",
+      "model_id": "nemotron-3-super@vllm",
+      "score": 0.21212121212121215,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.26041666666666663,
+        "qwk": 0.21212121212121215
+      },
+      "tps": 21.015646748415115,
+      "p95_latency_ms": 292105.62450400006,
+      "cost_usd": null,
+      "result_file": "tasks/essay_coherence_scoring/results/nemotron-3-super@vllm__2026-04-25T12-00-27Z.json"
     },
     {
       "task_id": "essay_coherence_scoring",
@@ -2415,6 +2443,21 @@
       "p95_latency_ms": 1882.5256420000046,
       "cost_usd": null,
       "result_file": "tasks/essay_coherence_scoring_condensed/results/gpt-oss-120b@vllm__2026-04-24T01-28-41Z.json"
+    },
+    {
+      "task_id": "essay_coherence_scoring_condensed",
+      "task_version": "1.1",
+      "model_id": "nemotron-3-super@vllm",
+      "score": 0.24137931034482774,
+      "metrics": {
+        "accuracy": 0.35,
+        "macro_f1": 0.3317460317460318,
+        "qwk": 0.24137931034482774
+      },
+      "tps": 94.9771894435854,
+      "p95_latency_ms": 8598.534763000003,
+      "cost_usd": null,
+      "result_file": "tasks/essay_coherence_scoring_condensed/results/nemotron-3-super@vllm__2026-04-25T12-01-51Z.json"
     },
     {
       "task_id": "essay_coherence_scoring_condensed",
