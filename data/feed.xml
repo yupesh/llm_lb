@@ -4,8 +4,36 @@
   <id>tag:yupesh.github.io,2026:llm_lb/feed</id>
   <link href="https://yupesh.github.io/llm_lb/" rel="alternate" type="text/html"/>
   <link href="https://yupesh.github.io/llm_lb/data/feed.xml" rel="self" type="application/atom+xml"/>
-  <updated>2026-04-25T18:48:19+00:00</updated>
+  <updated>2026-04-25T20:32:48+00:00</updated>
   <author><name>LLM Leaderboard</name></author>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_with_m_serial/1.1/nemotron-3-super@vllm/2026-04-25T20:32:48+00:00</id>
+    <title>nemotron-3-super@vllm scored 0.024 accuracy on writing_eval_n42_with_ann_with_m_serial v1.1</title>
+    <updated>2026-04-25T20:32:48+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_with_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.024, adjacent_accuracy=0.024, qwk=-0.460</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_no_m_serial/1.1/nemotron-3-super@vllm/2026-04-25T20:19:24+00:00</id>
+    <title>nemotron-3-super@vllm scored 0.000 accuracy on writing_eval_n42_with_ann_no_m_serial v1.1</title>
+    <updated>2026-04-25T20:19:24+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_no_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.000, adjacent_accuracy=0.000, qwk=-0.414</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_loocv_fewshot_with_m_serial/1.1/nemotron-3-super@vllm/2026-04-25T20:10:29+00:00</id>
+    <title>nemotron-3-super@vllm scored 0.381 accuracy on writing_eval_n42_with_ann_loocv_fewshot_with_m_serial v1.1</title>
+    <updated>2026-04-25T20:10:29+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_loocv_fewshot_with_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.381, adjacent_accuracy=0.690, qwk=-0.065</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_loocv_fewshot_no_m_serial/1.1/nemotron-3-super@vllm/2026-04-25T19:47:04+00:00</id>
+    <title>nemotron-3-super@vllm scored 0.238 accuracy on writing_eval_n42_with_ann_loocv_fewshot_no_m_serial v1.1</title>
+    <updated>2026-04-25T19:47:04+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_loocv_fewshot_no_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.238, adjacent_accuracy=0.643, qwk=-0.236</summary>
+  </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_with_m_serial/1.1/qwen3-235B-A22B@vllm/2026-04-25T18:48:19+00:00</id>
     <title>qwen3-235B-A22B@vllm scored 0.286 accuracy on writing_eval_n42_with_ann_with_m_serial v1.1</title>
@@ -327,33 +355,5 @@
     <updated>2026-04-25T13:23:03+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/intent_classification" rel="alternate" type="text/html"/>
     <summary>accuracy=0.700, macro_f1=0.718</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/hazard_category/1.0/nemotron-3-super@vllm/2026-04-25T13:22:28+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.100 accuracy on hazard_category v1.0</title>
-    <updated>2026-04-25T13:22:28+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/hazard_category" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.100, macro_f1=0.083</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/extractive_qa/1.0/nemotron-3-super@vllm/2026-04-25T13:21:11+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.900 exact_match on extractive_qa v1.0</title>
-    <updated>2026-04-25T13:21:11+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/extractive_qa" rel="alternate" type="text/html"/>
-    <summary>exact_match=0.900</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring_condensed/1.1/nemotron-3-super@vllm/2026-04-25T13:16:19+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.250 accuracy on essay_vocabulary_scoring_condensed v1.1</title>
-    <updated>2026-04-25T13:16:19+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.250, macro_f1=0.173, qwk=0.296</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_holistic_scoring_condensed/1.0/nemotron-3-super@vllm/2026-04-25T12:26:37+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.222 accuracy on essay_holistic_scoring_condensed v1.0</title>
-    <updated>2026-04-25T12:26:37+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_holistic_scoring_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.222, macro_f1=0.222, qwk=0.562</summary>
   </entry>
 </feed>
