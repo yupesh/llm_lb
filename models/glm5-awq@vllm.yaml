@@ -3,7 +3,7 @@
    provider: openai_compat
    endpoint_kind: openai_chat
    hf_uri: QuantTrio/GLM-5-AWQ
-   params: "32B (AWQ)"
+   params: "744B (40B active, MoE, AWQ; ~586B on disk)"
    revision: "2026-04-22"
    endpoint_url: http://lnsigo.mipt.ru:4000/v1
    api_key_env: VLLM_PROXY_KEY     # <-- name of env var, not the key
