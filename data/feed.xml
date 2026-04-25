@@ -49,6 +49,55 @@
     <summary>accuracy=0.357, adjacent_accuracy=0.714, qwk=0.035</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial/1.1/qwen3-235B-A22B@vllm/2026-04-25T18:05:09+00:00</id>
+    <title>qwen3-235B-A22B@vllm scored 0.190 accuracy on writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial v1.1</title>
+    <updated>2026-04-25T18:05:09+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.190, adjacent_accuracy=0.738, qwk=0.363</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_ann_with_m_serial/1.1/qwen3-235B-A22B@vllm/2026-04-25T17:59:06+00:00</id>
+    <title>qwen3-235B-A22B@vllm scored 0.333 accuracy on writing_eval_n42_no_ann_with_m_serial v1.1</title>
+    <updated>2026-04-25T17:59:06+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_ann_with_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.333, adjacent_accuracy=0.929, qwk=0.613</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_ann_no_m_serial/1.1/qwen3-235B-A22B@vllm/2026-04-25T17:52:15+00:00</id>
+    <title>qwen3-235B-A22B@vllm scored 0.214 accuracy on writing_eval_n42_no_ann_no_m_serial v1.1</title>
+    <updated>2026-04-25T17:52:15+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_ann_no_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.214, adjacent_accuracy=0.881, qwk=0.486</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/retail_agent_dialog/1.1/qwen3-235B-A22B@vllm/2026-04-25T17:41:40+00:00</id>
+    <title>qwen3-235B-A22B@vllm scored 0.430 judge_score on retail_agent_dialog v1.1</title>
+    <updated>2026-04-25T17:41:40+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/retail_agent_dialog" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.430</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_ann_with_m_serial/1.1/nemotron-3-super@vllm/2026-04-25T17:12:16+00:00</id>
+    <title>nemotron-3-super@vllm scored 0.024 accuracy on writing_eval_n42_no_ann_with_m_serial v1.1</title>
+    <updated>2026-04-25T17:12:16+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_ann_with_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.024, adjacent_accuracy=0.095, qwk=-0.099</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_ann_no_m_serial/1.1/nemotron-3-super@vllm/2026-04-25T16:37:40+00:00</id>
+    <title>nemotron-3-super@vllm scored 0.000 accuracy on writing_eval_n42_no_ann_no_m_serial v1.1</title>
+    <updated>2026-04-25T16:37:40+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_ann_no_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.000, adjacent_accuracy=0.095, qwk=-0.194</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/topic_classification/1.0/nemotron-3-super@vllm/2026-04-25T16:29:49+00:00</id>
+    <title>nemotron-3-super@vllm scored 0.800 accuracy on topic_classification v1.0</title>
+    <updated>2026-04-25T16:29:49+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/topic_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.800, macro_f1=0.787</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/summarization/1.0/nemotron-3-super@vllm/2026-04-25T15:47:26+00:00</id>
     <title>nemotron-3-super@vllm scored 0.760 judge_score on summarization v1.0</title>
     <updated>2026-04-25T15:47:26+00:00</updated>
@@ -306,54 +355,5 @@
     <updated>2026-04-25T09:51:56+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification_condensed" rel="alternate" type="text/html"/>
     <summary>accuracy=0.350, macro_f1=0.323, qwk=0.569</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification/1.1/nemotron-3-super@vllm/2026-04-25T09:50:13+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.200 accuracy on cefr_level_classification v1.1</title>
-    <updated>2026-04-25T09:50:13+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.200, macro_f1=0.095, qwk=-0.162</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_human/1.1/nemotron-3-super@vllm/2026-04-25T09:07:39+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.520 judge_score on datascibench_human v1.1</title>
-    <updated>2026-04-25T09:07:39+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_human" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.520</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_dl/1.0/nemotron-3-super@vllm/2026-04-25T09:05:17+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.400 judge_score on datascibench_dl v1.0</title>
-    <updated>2026-04-25T09:05:17+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_dl" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.400</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_csv_excel/1.0/nemotron-3-super@vllm/2026-04-25T09:02:03+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.440 judge_score on datascibench_csv_excel v1.0</title>
-    <updated>2026-04-25T09:02:03+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_csv_excel" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.440</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_with_m_serial/1.1/glm5.1@llama/2026-04-25T08:41:23+00:00</id>
-    <title>glm5.1@llama scored 0.238 accuracy on writing_eval_n42_with_ann_with_m_serial v1.1</title>
-    <updated>2026-04-25T08:41:23+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_with_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.238, adjacent_accuracy=0.881, qwk=0.542</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/agent_tool_calling/1.0/nemotron-3-super@vllm/2026-04-25T08:40:11+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.609 judge_score on agent_tool_calling v1.0</title>
-    <updated>2026-04-25T08:40:11+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/agent_tool_calling" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.609</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_no_m_serial/1.1/glm5.1@llama/2026-04-25T08:28:23+00:00</id>
-    <title>glm5.1@llama scored 0.214 accuracy on writing_eval_n42_with_ann_no_m_serial v1.1</title>
-    <updated>2026-04-25T08:28:23+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_no_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.214, adjacent_accuracy=0.762, qwk=0.449</summary>
   </entry>
 </feed>
