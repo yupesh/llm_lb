@@ -1,0 +1,12 @@
+   model_id: llama-4-scout@vllm
+   display_name: Llama-4-Scout 109B-A17B (FP8, vLLM)
+   provider: openai_compat
+   endpoint_kind: openai_chat
+   hf_uri: meta-llama/Llama-4-Scout-17B-16E-Instruct-FP8
+   params: "109B (17B active, MoE, FP8)"
+   revision: "2026-04-25"
+   endpoint_url: http://lnsigo.mipt.ru:4000/v1
+   api_key_env: VLLM_PROXY_KEY
+   hardware:
+     gpu_count: 1
+     gpu_type: H200

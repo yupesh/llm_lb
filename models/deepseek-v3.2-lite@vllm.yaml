@@ -1,0 +1,12 @@
+   model_id: deepseek-v3.2-lite@vllm
+   display_name: DeepSeek-V3.2-Lite (FP8, vLLM)
+   provider: openai_compat
+   endpoint_kind: openai_chat
+   hf_uri: deepseek-ai/DeepSeek-V3.2-Lite
+   params: "70B (FP8)"
+   revision: "2026-04-25"
+   endpoint_url: http://lnsigo.mipt.ru:4000/v1
+   api_key_env: VLLM_PROXY_KEY
+   hardware:
+     gpu_count: 1
+     gpu_type: H200
