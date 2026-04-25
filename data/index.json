@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T14:47:31+00:00",
+  "generated_at": "2026-04-25T14:48:48+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -2822,6 +2822,21 @@
       "result_file": "tasks/essay_grammar_scoring_condensed/results/gpt-oss-120b@vllm__2026-04-24T01-30-33Z.json"
     },
     {
+      "task_id": "essay_grammar_scoring_condensed",
+      "task_version": "1.1",
+      "model_id": "nemotron-3-super@vllm",
+      "score": -0.10526315789473695,
+      "metrics": {
+        "accuracy": 0.2,
+        "macro_f1": 0.18681318681318682,
+        "qwk": -0.10526315789473695
+      },
+      "tps": 97.96857897597505,
+      "p95_latency_ms": 9776.21398600013,
+      "cost_usd": null,
+      "result_file": "tasks/essay_grammar_scoring_condensed/results/nemotron-3-super@vllm__2026-04-25T12-24-00Z.json"
+    },
+    {
       "task_id": "essay_holistic_scoring",
       "task_version": "1.0",
       "model_id": "glm5.1@llama",
@@ -3017,6 +3032,21 @@
       "result_file": "tasks/essay_holistic_scoring/results/gpt-oss-120b@vllm__2026-04-20T01-21-35Z.json"
     },
     {
+      "task_id": "essay_holistic_scoring",
+      "task_version": "1.0",
+      "model_id": "nemotron-3-super@vllm",
+      "score": 0.08080808080808088,
+      "metrics": {
+        "accuracy": 0.2777777777777778,
+        "macro_f1": 0.2088235294117647,
+        "qwk": 0.08080808080808088
+      },
+      "tps": 100.1557927068865,
+      "p95_latency_ms": 4290.6616039999935,
+      "cost_usd": null,
+      "result_file": "tasks/essay_holistic_scoring/results/nemotron-3-super@vllm__2026-04-25T12-25-21Z.json"
+    },
+    {
       "task_id": "essay_holistic_scoring_condensed",
       "task_version": "1.0",
       "model_id": "gemma-4-31b-it@vllm",
@@ -3045,6 +3075,21 @@
       "p95_latency_ms": 1132.626064,
       "cost_usd": null,
       "result_file": "tasks/essay_holistic_scoring_condensed/results/mistral-small-3.1@vllm__2026-04-24T17-31-42Z.json"
+    },
+    {
+      "task_id": "essay_holistic_scoring_condensed",
+      "task_version": "1.0",
+      "model_id": "nemotron-3-super@vllm",
+      "score": 0.5619047619047617,
+      "metrics": {
+        "accuracy": 0.2222222222222222,
+        "macro_f1": 0.2222222222222222,
+        "qwk": 0.5619047619047617
+      },
+      "tps": 90.30747717072283,
+      "p95_latency_ms": 9412.431029000003,
+      "cost_usd": null,
+      "result_file": "tasks/essay_holistic_scoring_condensed/results/nemotron-3-super@vllm__2026-04-25T12-26-37Z.json"
     },
     {
       "task_id": "essay_holistic_scoring_condensed",
@@ -3225,6 +3270,21 @@
       "p95_latency_ms": 39099.211140999985,
       "cost_usd": null,
       "result_file": "tasks/essay_vocabulary_scoring/results/glm5.1@llama__2026-04-25T05-27-57Z.json"
+    },
+    {
+      "task_id": "essay_vocabulary_scoring",
+      "task_version": "1.1",
+      "model_id": "nemotron-3-super@vllm",
+      "score": 0.5535714285714286,
+      "metrics": {
+        "accuracy": 0.35,
+        "macro_f1": 0.3005952380952381,
+        "qwk": 0.5535714285714286
+      },
+      "tps": 12.374474155134944,
+      "p95_latency_ms": 549613.5680480001,
+      "cost_usd": null,
+      "result_file": "tasks/essay_vocabulary_scoring/results/nemotron-3-super@vllm__2026-04-25T13-10-01Z.json"
     },
     {
       "task_id": "essay_vocabulary_scoring",
@@ -3559,6 +3619,21 @@
     {
       "task_id": "essay_vocabulary_scoring_condensed",
       "task_version": "1.1",
+      "model_id": "nemotron-3-super@vllm",
+      "score": 0.2962962962962963,
+      "metrics": {
+        "accuracy": 0.25,
+        "macro_f1": 0.17320261437908496,
+        "qwk": 0.2962962962962963
+      },
+      "tps": 14.895572884808013,
+      "p95_latency_ms": 7820.349209999989,
+      "cost_usd": null,
+      "result_file": "tasks/essay_vocabulary_scoring_condensed/results/nemotron-3-super@vllm__2026-04-25T13-16-19Z.json"
+    },
+    {
+      "task_id": "essay_vocabulary_scoring_condensed",
+      "task_version": "1.1",
       "model_id": "gemma-3-12b-it@vllm",
       "score": 0.2333333333333334,
       "metrics": {
@@ -3635,6 +3710,19 @@
       "p95_latency_ms": 5674.742942000002,
       "cost_usd": null,
       "result_file": "tasks/extractive_qa/results/minimax-m2.7@vllm__2026-04-20T09-36-26Z.json"
+    },
+    {
+      "task_id": "extractive_qa",
+      "task_version": "1.0",
+      "model_id": "nemotron-3-super@vllm",
+      "score": 0.9,
+      "metrics": {
+        "exact_match": 0.9
+      },
+      "tps": 2.1309244683481756,
+      "p95_latency_ms": 267386.560452,
+      "cost_usd": null,
+      "result_file": "tasks/extractive_qa/results/nemotron-3-super@vllm__2026-04-25T13-21-11Z.json"
     },
     {
       "task_id": "extractive_qa",
@@ -3923,6 +4011,20 @@
       "result_file": "tasks/hazard_category/results/gpt-oss-120b@vllm__2026-04-20T16-27-11Z.json"
     },
     {
+      "task_id": "hazard_category",
+      "task_version": "1.0",
+      "model_id": "nemotron-3-super@vllm",
+      "score": 0.1,
+      "metrics": {
+        "accuracy": 0.1,
+        "macro_f1": 0.08333333333333333
+      },
+      "tps": 71.61015313508378,
+      "p95_latency_ms": 5974.491764000021,
+      "cost_usd": null,
+      "result_file": "tasks/hazard_category/results/nemotron-3-super@vllm__2026-04-25T13-22-28Z.json"
+    },
+    {
       "task_id": "intent_classification",
       "task_version": "1.0",
       "model_id": "qwen3.6-35b@vllm",
@@ -4089,6 +4191,20 @@
       "p95_latency_ms": 1177.069551999999,
       "cost_usd": null,
       "result_file": "tasks/intent_classification/results/mistral-small-3.1@vllm__2026-04-24T17-34-48Z.json"
+    },
+    {
+      "task_id": "intent_classification",
+      "task_version": "1.0",
+      "model_id": "nemotron-3-super@vllm",
+      "score": 0.7,
+      "metrics": {
+        "accuracy": 0.7,
+        "macro_f1": 0.7178571428571429
+      },
+      "tps": 60.85955488841221,
+      "p95_latency_ms": 2661.545392000001,
+      "cost_usd": null,
+      "result_file": "tasks/intent_classification/results/nemotron-3-super@vllm__2026-04-25T13-23-03Z.json"
     },
     {
       "task_id": "intent_classification",
@@ -4289,6 +4405,20 @@
     {
       "task_id": "jailbreak_detection",
       "task_version": "1.0",
+      "model_id": "nemotron-3-super@vllm",
+      "score": 0.95,
+      "metrics": {
+        "accuracy": 0.95,
+        "macro_f1": 0.949874686716792
+      },
+      "tps": 53.40162538985419,
+      "p95_latency_ms": 1480.3510979999999,
+      "cost_usd": null,
+      "result_file": "tasks/jailbreak_detection/results/nemotron-3-super@vllm__2026-04-25T13-23-35Z.json"
+    },
+    {
+      "task_id": "jailbreak_detection",
+      "task_version": "1.0",
       "model_id": "llama-guard4@vllm",
       "score": 0.55,
       "metrics": {
@@ -4411,6 +4541,20 @@
       "p95_latency_ms": 8884.60489600004,
       "cost_usd": null,
       "result_file": "tasks/jailbreak_detection_beavertails/results/qwen3-30b@vllm__2026-04-20T13-57-02Z.json"
+    },
+    {
+      "task_id": "jailbreak_detection_beavertails",
+      "task_version": "1.0",
+      "model_id": "nemotron-3-super@vllm",
+      "score": 0.65,
+      "metrics": {
+        "accuracy": 0.65,
+        "macro_f1": 0.6266666666666667
+      },
+      "tps": 72.34257933207448,
+      "p95_latency_ms": 2330.527078999992,
+      "cost_usd": null,
+      "result_file": "tasks/jailbreak_detection_beavertails/results/nemotron-3-super@vllm__2026-04-25T13-24-23Z.json"
     },
     {
       "task_id": "jailbreak_detection_beavertails",
@@ -4666,6 +4810,19 @@
       "result_file": "tasks/kg_entity_name_refinement/results/mistral-small-3.1@vllm__2026-04-24T17-36-51Z.json"
     },
     {
+      "task_id": "kg_entity_name_refinement",
+      "task_version": "1.0",
+      "model_id": "nemotron-3-super@vllm",
+      "score": 0.78,
+      "metrics": {
+        "judge_score": 0.78
+      },
+      "tps": 70.12597424895344,
+      "p95_latency_ms": 5600.456163999979,
+      "cost_usd": null,
+      "result_file": "tasks/kg_entity_name_refinement/results/nemotron-3-super@vllm__2026-04-25T13-25-38Z.json"
+    },
+    {
       "task_id": "kg_entity_type_refinement",
       "task_version": "1.0",
       "model_id": "glm5.1@llama",
@@ -4833,6 +4990,19 @@
       "p95_latency_ms": 2311.877240000001,
       "cost_usd": null,
       "result_file": "tasks/kg_entity_type_refinement/results/gpt-oss-120b@vllm__2026-04-20T01-27-23Z.json"
+    },
+    {
+      "task_id": "kg_entity_type_refinement",
+      "task_version": "1.0",
+      "model_id": "nemotron-3-super@vllm",
+      "score": 0.44000000000000006,
+      "metrics": {
+        "judge_score": 0.44000000000000006
+      },
+      "tps": 52.150114416296944,
+      "p95_latency_ms": 2464.9995610000133,
+      "cost_usd": null,
+      "result_file": "tasks/kg_entity_type_refinement/results/nemotron-3-super@vllm__2026-04-25T13-26-26Z.json"
     },
     {
       "task_id": "kg_relation_refinement",
