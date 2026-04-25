@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T14:49:21+00:00",
+  "generated_at": "2026-04-25T14:53:24+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -2683,6 +2683,21 @@
       "p95_latency_ms": 1179.9429700000132,
       "cost_usd": null,
       "result_file": "tasks/essay_grammar_scoring/results/mistral-small-3.1@vllm__2026-04-24T17-30-08Z.json"
+    },
+    {
+      "task_id": "essay_grammar_scoring",
+      "task_version": "1.1",
+      "model_id": "nemotron-3-super@vllm",
+      "score": -0.03125000000000022,
+      "metrics": {
+        "accuracy": 0.2,
+        "macro_f1": 0.17941176470588235,
+        "qwk": -0.03125000000000022
+      },
+      "tps": 116.60332537705779,
+      "p95_latency_ms": 42434.219095,
+      "cost_usd": null,
+      "result_file": "tasks/essay_grammar_scoring/results/nemotron-3-super@vllm__2026-04-25T12-08-11Z.json"
     },
     {
       "task_id": "essay_grammar_scoring_condensed",

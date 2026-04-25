@@ -112,6 +112,13 @@
     <summary>accuracy=0.200, macro_f1=0.187, qwk=-0.105</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_grammar_scoring/1.1/nemotron-3-super@vllm/2026-04-25T12:08:11+00:00</id>
+    <title>nemotron-3-super@vllm scored 0.200 accuracy on essay_grammar_scoring v1.1</title>
+    <updated>2026-04-25T12:08:11+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_grammar_scoring" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.200, macro_f1=0.179, qwk=-0.031</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/essay_coherence_scoring_condensed/1.1/nemotron-3-super@vllm/2026-04-25T12:01:51+00:00</id>
     <title>nemotron-3-super@vllm scored 0.350 accuracy on essay_coherence_scoring_condensed v1.1</title>
     <updated>2026-04-25T12:01:51+00:00</updated>
@@ -348,12 +355,5 @@
     <updated>2026-04-25T03:14:03+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_ann_with_m_serial" rel="alternate" type="text/html"/>
     <summary>accuracy=0.262, adjacent_accuracy=0.833, qwk=0.480</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_ann_no_m_serial/1.1/qwen3.5-27b@vllm/2026-04-25T02:21:12+00:00</id>
-    <title>qwen3.5-27b@vllm scored 0.262 accuracy on writing_eval_n42_no_ann_no_m_serial v1.1</title>
-    <updated>2026-04-25T02:21:12+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_ann_no_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.262, adjacent_accuracy=0.929, qwk=0.578</summary>
   </entry>
 </feed>
