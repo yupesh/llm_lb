@@ -35,13 +35,6 @@
     <summary>accuracy=0.381, adjacent_accuracy=0.952, qwk=0.618</summary>
   </entry>
   <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/retail_agent_dialog/1.1/nemotron-3-super@vllm/2026-04-25T15:40:59+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.013 judge_score on retail_agent_dialog v1.1</title>
-    <updated>2026-04-25T15:40:59+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/retail_agent_dialog" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.013</summary>
-  </entry>
-  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_loocv_fewshot_with_m_serial/1.1/deepseek32exp@vllm/2026-04-25T15:40:42+00:00</id>
     <title>deepseek32exp@vllm scored 0.119 accuracy on writing_eval_n42_with_ann_loocv_fewshot_with_m_serial v1.1</title>
     <updated>2026-04-25T15:40:42+00:00</updated>
@@ -355,5 +348,12 @@
     <updated>2026-04-25T07:16:14+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial" rel="alternate" type="text/html"/>
     <summary>accuracy=0.429, adjacent_accuracy=0.929, qwk=0.583</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_ann_with_m_serial/1.1/glm5.1@llama/2026-04-25T06:57:45+00:00</id>
+    <title>glm5.1@llama scored 0.310 accuracy on writing_eval_n42_no_ann_with_m_serial v1.1</title>
+    <updated>2026-04-25T06:57:45+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_ann_with_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.310, adjacent_accuracy=0.881, qwk=0.545</summary>
   </entry>
 </feed>
