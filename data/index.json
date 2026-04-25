@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T18:53:02+00:00",
+  "generated_at": "2026-04-25T18:53:36+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -1920,6 +1920,19 @@
       "p95_latency_ms": 276931.95671699994,
       "cost_usd": null,
       "result_file": "tasks/datascibench_human/results/glm5.1@llama__2026-04-25T04-48-02Z.json"
+    },
+    {
+      "task_id": "datascibench_human",
+      "task_version": "1.1",
+      "model_id": "qwen3-235B-A22B@vllm",
+      "score": 0.8800000000000001,
+      "metrics": {
+        "judge_score": 0.8800000000000001
+      },
+      "tps": 78.35605741238074,
+      "p95_latency_ms": 123941.70292900004,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_human/results/qwen3-235B-A22B@vllm__2026-04-25T16-29-36Z.json"
     },
     {
       "task_id": "datascibench_human",
@@ -8110,6 +8123,21 @@
       "p95_latency_ms": 3991.996049000022,
       "cost_usd": null,
       "result_file": "tasks/writing_eval_n42_with_ann_loocv_fewshot_no_m_serial/results/gpt-oss-120b@vllm__2026-04-24T01-53-53Z.json"
+    },
+    {
+      "task_id": "writing_eval_n42_with_ann_loocv_fewshot_no_m_serial",
+      "task_version": "1.1",
+      "model_id": "qwen3-235B-A22B@vllm",
+      "score": 0.29781542576905917,
+      "metrics": {
+        "accuracy": 0.21428571428571427,
+        "adjacent_accuracy": 0.6666666666666666,
+        "qwk": 0.29781542576905917
+      },
+      "tps": 68.95547746231864,
+      "p95_latency_ms": 10022.277631000066,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n42_with_ann_loocv_fewshot_no_m_serial/results/qwen3-235B-A22B@vllm__2026-04-25T18-20-26Z.json"
     },
     {
       "task_id": "writing_eval_n42_with_ann_loocv_fewshot_no_m_serial",
