@@ -11,6 +11,13 @@ class Completion:
     text: str
     output_tokens: int | None = None
     input_tokens: int | None = None
+    # Captured separately from `text` so callers can decide whether to use it.
+    # Reasoning models (Nemotron-3, DeepSeek-R1, ...) returned via vLLM with a
+    # `--reasoning-parser` flag split output into final-answer `content` and
+    # chain-of-thought `reasoning_content`. Single-shot scoring treats the
+    # reasoning as a fallback prediction; multi-turn dialog must NOT echo it
+    # back into conversation history (would explode context).
+    reasoning_text: str = ""
 
 
 class LLMClient(Protocol):

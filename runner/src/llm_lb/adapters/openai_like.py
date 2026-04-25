@@ -104,15 +104,13 @@ def openai_chat(
             msg = data["choices"][0]["message"]
             # vLLM reasoning parsers (nemotron_v3, deepseek_r1, ...) split
             # output into `content` (final answer) and `reasoning_content`
-            # (chain-of-thought). When the parser misclassifies the whole
-            # output as reasoning — observed on Nemotron-3 Super where short
-            # answers never make it past the thinking stage — `content` is
-            # empty. Fall back to `reasoning_content` so we score the model's
-            # actual output instead of treating it as an empty completion.
-            text = msg.get("content") or msg.get("reasoning_content") or ""
+            # (chain-of-thought). Carry both: callers decide whether the
+            # reasoning is a usable fallback (single-shot scoring) or must
+            # be discarded (multi-turn dialog history).
             usage = data.get("usage") or {}
             return Completion(
-                text=text,
+                text=msg.get("content") or "",
+                reasoning_text=msg.get("reasoning_content") or "",
                 output_tokens=usage.get("completion_tokens"),
                 input_tokens=usage.get("prompt_tokens"),
             )
