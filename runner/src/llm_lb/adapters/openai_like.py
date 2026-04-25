@@ -101,7 +101,15 @@ def openai_chat(
                         f"{r.status_code} from {base_url} model={served_name}: {detail}"
                     )
                 data = r.json()
-            text = data["choices"][0]["message"]["content"] or ""
+            msg = data["choices"][0]["message"]
+            # vLLM reasoning parsers (nemotron_v3, deepseek_r1, ...) split
+            # output into `content` (final answer) and `reasoning_content`
+            # (chain-of-thought). When the parser misclassifies the whole
+            # output as reasoning — observed on Nemotron-3 Super where short
+            # answers never make it past the thinking stage — `content` is
+            # empty. Fall back to `reasoning_content` so we score the model's
+            # actual output instead of treating it as an empty completion.
+            text = msg.get("content") or msg.get("reasoning_content") or ""
             usage = data.get("usage") or {}
             return Completion(
                 text=text,
