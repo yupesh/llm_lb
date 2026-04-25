@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T09:44:03+00:00",
+  "generated_at": "2026-04-25T09:46:11+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -1019,21 +1019,6 @@
       "result_file": "tasks/cefr_level_classification/results/mistral-small-3.1@vllm__2026-04-24T17-02-04Z.json"
     },
     {
-      "task_id": "cefr_level_classification",
-      "task_version": "1.1",
-      "model_id": "nemotron-3-super@vllm",
-      "score": -0.6507936507936511,
-      "metrics": {
-        "accuracy": 0.05,
-        "macro_f1": 0.08333333333333334,
-        "qwk": -0.6507936507936511
-      },
-      "tps": 114.85329359562665,
-      "p95_latency_ms": 31351.20808299999,
-      "cost_usd": null,
-      "result_file": "tasks/cefr_level_classification/results/nemotron-3-super@vllm__2026-04-25T08-42-30Z.json"
-    },
-    {
       "task_id": "cefr_level_classification_condensed",
       "task_version": "1.0",
       "model_id": "qwen3.5-27b@vllm",
@@ -1227,21 +1212,6 @@
       "p95_latency_ms": 22478.423020999984,
       "cost_usd": null,
       "result_file": "tasks/cefr_level_classification_condensed/results/qwen3-30b@vllm__2026-04-19T01-55-27Z.json"
-    },
-    {
-      "task_id": "cefr_level_classification_condensed",
-      "task_version": "1.0",
-      "model_id": "nemotron-3-super@vllm",
-      "score": -0.0535714285714286,
-      "metrics": {
-        "accuracy": 0.25,
-        "macro_f1": 0.2361111111111111,
-        "qwk": -0.0535714285714286
-      },
-      "tps": 101.69974985092554,
-      "p95_latency_ms": 13584.652965000018,
-      "cost_usd": null,
-      "result_file": "tasks/cefr_level_classification_condensed/results/nemotron-3-super@vllm__2026-04-25T08-48-53Z.json"
     },
     {
       "task_id": "conversational_memory_qa",

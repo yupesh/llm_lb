@@ -28,20 +28,6 @@
     <summary>judge_score=0.440</summary>
   </entry>
   <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification_condensed/1.0/nemotron-3-super@vllm/2026-04-25T08:48:53+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.250 accuracy on cefr_level_classification_condensed v1.0</title>
-    <updated>2026-04-25T08:48:53+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.250, macro_f1=0.236, qwk=-0.054</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification/1.1/nemotron-3-super@vllm/2026-04-25T08:42:30+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.050 accuracy on cefr_level_classification v1.1</title>
-    <updated>2026-04-25T08:42:30+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.050, macro_f1=0.083, qwk=-0.651</summary>
-  </entry>
-  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_with_m_serial/1.1/glm5.1@llama/2026-04-25T08:41:23+00:00</id>
     <title>glm5.1@llama scored 0.238 accuracy on writing_eval_n42_with_ann_with_m_serial v1.1</title>
     <updated>2026-04-25T08:41:23+00:00</updated>
@@ -355,5 +341,19 @@
     <updated>2026-04-24T17:58:22+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_ann_no_m_serial" rel="alternate" type="text/html"/>
     <summary>accuracy=0.452, adjacent_accuracy=0.905, qwk=0.554</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/topic_classification/1.0/mistral-small-3.1@vllm/2026-04-24T17:57:45+00:00</id>
+    <title>mistral-small-3.1@vllm scored 1.000 accuracy on topic_classification v1.0</title>
+    <updated>2026-04-24T17:57:45+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/topic_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=1.000, macro_f1=1.000</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text_classification/1.0/mistral-small-3.1@vllm/2026-04-24T17:57:23+00:00</id>
+    <title>mistral-small-3.1@vllm scored 1.000 accuracy on text_classification v1.0</title>
+    <updated>2026-04-24T17:57:23+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=1.000, macro_f1=1.000</summary>
   </entry>
 </feed>
