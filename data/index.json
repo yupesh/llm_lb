@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T23:56:55+00:00",
+  "generated_at": "2026-04-25T23:59:30+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -839,6 +839,19 @@
       "result_file": "tasks/agent_tool_calling/results/glm5-awq@vllm__2026-04-22T09-49-32Z.json"
     },
     {
+      "task_id": "agent_tool_calling",
+      "task_version": "1.0",
+      "model_id": "mistral-small-4@vllm",
+      "score": 0.4818181818181818,
+      "metrics": {
+        "judge_score": 0.4818181818181818
+      },
+      "tps": 28.28190856785838,
+      "p95_latency_ms": 1372.2718690000022,
+      "cost_usd": null,
+      "result_file": "tasks/agent_tool_calling/results/mistral-small-4@vllm__2026-04-25T23-47-48Z.json"
+    },
+    {
       "task_id": "cefr_level_classification",
       "task_version": "1.1",
       "model_id": "glm5-awq@vllm",
@@ -1032,6 +1045,21 @@
       "p95_latency_ms": 909.7470479999856,
       "cost_usd": null,
       "result_file": "tasks/cefr_level_classification/results/mistral-small-3.1@vllm__2026-04-24T17-02-04Z.json"
+    },
+    {
+      "task_id": "cefr_level_classification",
+      "task_version": "1.1",
+      "model_id": "mistral-small-4@vllm",
+      "score": 0.11764705882352922,
+      "metrics": {
+        "accuracy": 0.25,
+        "macro_f1": 0.15838509316770188,
+        "qwk": 0.11764705882352922
+      },
+      "tps": 4.0043857121512305,
+      "p95_latency_ms": 1274.0592650000053,
+      "cost_usd": null,
+      "result_file": "tasks/cefr_level_classification/results/mistral-small-4@vllm__2026-04-25T23-48-20Z.json"
     },
     {
       "task_id": "cefr_level_classification",
@@ -1259,6 +1287,21 @@
       "result_file": "tasks/cefr_level_classification_condensed/results/qwen3-30b@vllm__2026-04-19T01-55-27Z.json"
     },
     {
+      "task_id": "cefr_level_classification_condensed",
+      "task_version": "1.0",
+      "model_id": "mistral-small-4@vllm",
+      "score": 0.19354838709677435,
+      "metrics": {
+        "accuracy": 0.25,
+        "macro_f1": 0.11904761904761904,
+        "qwk": 0.19354838709677435
+      },
+      "tps": 4.545138223116616,
+      "p95_latency_ms": 950.6387480000029,
+      "cost_usd": null,
+      "result_file": "tasks/cefr_level_classification_condensed/results/mistral-small-4@vllm__2026-04-25T23-48-48Z.json"
+    },
+    {
       "task_id": "conversational_memory_qa",
       "task_version": "1.0",
       "model_id": "qwen3.5-27b@vllm",
@@ -1417,6 +1460,19 @@
     {
       "task_id": "conversational_memory_qa",
       "task_version": "1.0",
+      "model_id": "mistral-small-4@vllm",
+      "score": 0.7066666666666667,
+      "metrics": {
+        "judge_score": 0.7066666666666667
+      },
+      "tps": 6.173645247502634,
+      "p95_latency_ms": 2352.047713999994,
+      "cost_usd": null,
+      "result_file": "tasks/conversational_memory_qa/results/mistral-small-4@vllm__2026-04-25T23-49-56Z.json"
+    },
+    {
+      "task_id": "conversational_memory_qa",
+      "task_version": "1.0",
       "model_id": "gemma-3-12b-it@vllm",
       "score": 0.6266666666666667,
       "metrics": {
@@ -1452,6 +1508,19 @@
       "p95_latency_ms": 800450.048642,
       "cost_usd": null,
       "result_file": "tasks/datascibench_csv_excel/results/qwen3.5-27b@vllm__2026-04-24T20-04-44Z.json"
+    },
+    {
+      "task_id": "datascibench_csv_excel",
+      "task_version": "1.0",
+      "model_id": "mistral-small-4@vllm",
+      "score": 0.8400000000000001,
+      "metrics": {
+        "judge_score": 0.8400000000000001
+      },
+      "tps": 155.82740447270822,
+      "p95_latency_ms": 10248.915675999995,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_csv_excel/results/mistral-small-4@vllm__2026-04-25T23-51-11Z.json"
     },
     {
       "task_id": "datascibench_csv_excel",
@@ -1634,6 +1703,19 @@
       "p95_latency_ms": 823090.249801,
       "cost_usd": null,
       "result_file": "tasks/datascibench_dl/results/qwen3.5-27b@vllm__2026-04-24T21-15-35Z.json"
+    },
+    {
+      "task_id": "datascibench_dl",
+      "task_version": "1.0",
+      "model_id": "mistral-small-4@vllm",
+      "score": 0.78,
+      "metrics": {
+        "judge_score": 0.78
+      },
+      "tps": 166.03015856758992,
+      "p95_latency_ms": 15555.252709999997,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_dl/results/mistral-small-4@vllm__2026-04-25T23-52-54Z.json"
     },
     {
       "task_id": "datascibench_dl",
@@ -1924,6 +2006,19 @@
     {
       "task_id": "datascibench_human",
       "task_version": "1.1",
+      "model_id": "mistral-small-4@vllm",
+      "score": 0.8800000000000001,
+      "metrics": {
+        "judge_score": 0.8800000000000001
+      },
+      "tps": 165.3437583905757,
+      "p95_latency_ms": 15240.664026999866,
+      "cost_usd": null,
+      "result_file": "tasks/datascibench_human/results/mistral-small-4@vllm__2026-04-25T23-54-27Z.json"
+    },
+    {
+      "task_id": "datascibench_human",
+      "task_version": "1.1",
       "model_id": "qwen3-235B-A22B@vllm",
       "score": 0.8800000000000001,
       "metrics": {
@@ -2063,6 +2158,19 @@
       "p95_latency_ms": 46711.54037599999,
       "cost_usd": null,
       "result_file": "tasks/entity_relationship_extraction/results/qwen3.6-35b@vllm__2026-04-20T05-53-57Z.json"
+    },
+    {
+      "task_id": "entity_relationship_extraction",
+      "task_version": "1.0",
+      "model_id": "mistral-small-4@vllm",
+      "score": 0.8933333333333333,
+      "metrics": {
+        "judge_score": 0.8933333333333333
+      },
+      "tps": 169.51851889004865,
+      "p95_latency_ms": 13497.804777,
+      "cost_usd": null,
+      "result_file": "tasks/entity_relationship_extraction/results/mistral-small-4@vllm__2026-04-25T23-57-33Z.json"
     },
     {
       "task_id": "entity_relationship_extraction",
@@ -2353,6 +2461,21 @@
       "result_file": "tasks/essay_coherence_scoring/results/mistral-small-3.1@vllm__2026-04-24T17-29-05Z.json"
     },
     {
+      "task_id": "essay_coherence_scoring",
+      "task_version": "1.1",
+      "model_id": "mistral-small-4@vllm",
+      "score": -0.09375,
+      "metrics": {
+        "accuracy": 0.25,
+        "macro_f1": 0.10416666666666667,
+        "qwk": -0.09375
+      },
+      "tps": 3.5557079642610887,
+      "p95_latency_ms": 1068.093657999981,
+      "cost_usd": null,
+      "result_file": "tasks/essay_coherence_scoring/results/mistral-small-4@vllm__2026-04-25T23-57-59Z.json"
+    },
+    {
       "task_id": "essay_coherence_scoring_condensed",
       "task_version": "1.1",
       "model_id": "qwen3.5-27b@vllm",
@@ -2411,6 +2534,21 @@
       "p95_latency_ms": 16171.939633000022,
       "cost_usd": null,
       "result_file": "tasks/essay_coherence_scoring_condensed/results/glm5-awq@vllm__2026-04-22T12-01-36Z.json"
+    },
+    {
+      "task_id": "essay_coherence_scoring_condensed",
+      "task_version": "1.1",
+      "model_id": "mistral-small-4@vllm",
+      "score": 0.5,
+      "metrics": {
+        "accuracy": 0.4,
+        "macro_f1": 0.2638888888888889,
+        "qwk": 0.5
+      },
+      "tps": 3.037305643850225,
+      "p95_latency_ms": 881.6996830000007,
+      "cost_usd": null,
+      "result_file": "tasks/essay_coherence_scoring_condensed/results/mistral-small-4@vllm__2026-04-25T23-58-26Z.json"
     },
     {
       "task_id": "essay_coherence_scoring_condensed",
