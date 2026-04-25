@@ -3,6 +3,7 @@ display_name: Llama-Guard-4-12B (vLLM)
 provider: llama_guard
 endpoint_kind: openai_chat
 hf_uri: meta-llama/Llama-Guard-4-12B
+params: "12B"
 revision: "2026-04-21"
 # Self-hosted Guard endpoint. Uses its own port because the built-in chat
 # template rejects a system role and requires single-user messages — see

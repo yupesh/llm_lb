@@ -224,6 +224,22 @@ fieldset label {
 .matrix td.leader {
   font-weight: 700;
 }
+.matrix td.runner-up {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+.matrix .hf-uri {
+  font-size: 11px;
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  margin-top: 2px;
+}
+.matrix td.params-cell {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
 .matrix td.avg-cell {
   font-variant-numeric: tabular-nums;
   border-left: 1px solid var(--border);

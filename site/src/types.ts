@@ -20,6 +20,7 @@ export interface ModelMeta {
   display_name: string
   provider: string
   hf_uri: string | null
+  params: string | null
   hardware: GPUSpec | null
 }
 

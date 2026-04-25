@@ -3,6 +3,7 @@
    provider: openai_compat
    endpoint_kind: openai_chat
    hf_uri: QuantTrio/DeepSeek-V3.2-Exp-AWQ
+   params: "671B (37B active, MoE, AWQ)"
    revision: "2026-04-02"
    endpoint_url: http://lnsigo.mipt.ru:4000/v1
    api_key_env: VLLM_PROXY_KEY     # <-- name of env var, not the key

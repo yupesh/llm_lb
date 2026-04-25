@@ -32,6 +32,10 @@ class ModelCard(BaseModel):
     provider: Provider
     endpoint_kind: EndpointKind
     hf_uri: Optional[str] = None
+    # Free-form parameter-count summary surfaced on the leaderboard so readers
+    # can compare model sizes at a glance. Examples: "30B (3B active)", "24B",
+    # "671B (37B active, AWQ)". Optional — omit for hosted/closed models.
+    params: Optional[str] = None
     revision: Optional[str] = None
     context_window: Optional[int] = None
     hardware: Optional[GPUSpec] = None
