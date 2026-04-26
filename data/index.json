@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T00:31:27+00:00",
+  "generated_at": "2026-04-26T00:34:03+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -698,19 +698,6 @@
     {
       "task_id": "agent_tool_calling",
       "task_version": "1.0",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 0.6090909090909091,
-      "metrics": {
-        "judge_score": 0.6090909090909091
-      },
-      "tps": 86.34577365999638,
-      "p95_latency_ms": 12393.854286000007,
-      "cost_usd": null,
-      "result_file": "tasks/agent_tool_calling/results/nemotron-3-super@vllm__2026-04-25T08-40-11Z.json"
-    },
-    {
-      "task_id": "agent_tool_calling",
-      "task_version": "1.0",
       "model_id": "gpt-oss-120b@vllm",
       "score": 0.6,
       "metrics": {
@@ -914,21 +901,6 @@
     {
       "task_id": "cefr_level_classification",
       "task_version": "1.1",
-      "model_id": "qwen3.6-35b@vllm",
-      "score": 0.38888888888888895,
-      "metrics": {
-        "accuracy": 0.25,
-        "macro_f1": 0.14705882352941177,
-        "qwk": 0.38888888888888895
-      },
-      "tps": 180.36780643556816,
-      "p95_latency_ms": 9326.21684100002,
-      "cost_usd": null,
-      "result_file": "tasks/cefr_level_classification/results/qwen3.6-35b@vllm__2026-04-22T08-23-23Z.json"
-    },
-    {
-      "task_id": "cefr_level_classification",
-      "task_version": "1.1",
       "model_id": "gemma-3-12b-it@vllm",
       "score": 0.3750000000000001,
       "metrics": {
@@ -1004,21 +976,6 @@
     {
       "task_id": "cefr_level_classification",
       "task_version": "1.1",
-      "model_id": "qwen3.5-27b@vllm",
-      "score": 0.32692307692307687,
-      "metrics": {
-        "accuracy": 0.3,
-        "macro_f1": 0.1919642857142857,
-        "qwk": 0.32692307692307687
-      },
-      "tps": 60.00950820458668,
-      "p95_latency_ms": 82714.28860400004,
-      "cost_usd": null,
-      "result_file": "tasks/cefr_level_classification/results/qwen3.5-27b@vllm__2026-04-22T09-03-13Z.json"
-    },
-    {
-      "task_id": "cefr_level_classification",
-      "task_version": "1.1",
       "model_id": "deepseek32exp@vllm",
       "score": 0.2499999999999999,
       "metrics": {
@@ -1060,66 +1017,6 @@
       "p95_latency_ms": 1274.0592650000053,
       "cost_usd": null,
       "result_file": "tasks/cefr_level_classification/results/mistral-small-4@vllm__2026-04-25T23-48-20Z.json"
-    },
-    {
-      "task_id": "cefr_level_classification",
-      "task_version": "1.1",
-      "model_id": "nemotron-3-super@vllm",
-      "score": -0.1617647058823528,
-      "metrics": {
-        "accuracy": 0.2,
-        "macro_f1": 0.09523809523809523,
-        "qwk": -0.1617647058823528
-      },
-      "tps": 102.20953715532336,
-      "p95_latency_ms": 17494.62215,
-      "cost_usd": null,
-      "result_file": "tasks/cefr_level_classification/results/nemotron-3-super@vllm__2026-04-25T09-50-13Z.json"
-    },
-    {
-      "task_id": "cefr_level_classification_condensed",
-      "task_version": "1.0",
-      "model_id": "qwen3.5-27b@vllm",
-      "score": 0.5833333333333333,
-      "metrics": {
-        "accuracy": 0.3,
-        "macro_f1": 0.21703296703296704,
-        "qwk": 0.5833333333333333
-      },
-      "tps": 26.884105426576156,
-      "p95_latency_ms": 158398.2379439999,
-      "cost_usd": null,
-      "result_file": "tasks/cefr_level_classification_condensed/results/qwen3.5-27b@vllm__2026-04-19T07-57-57Z.json"
-    },
-    {
-      "task_id": "cefr_level_classification_condensed",
-      "task_version": "1.0",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 0.5689655172413792,
-      "metrics": {
-        "accuracy": 0.35,
-        "macro_f1": 0.3230042016806723,
-        "qwk": 0.5689655172413792
-      },
-      "tps": 105.39153435625839,
-      "p95_latency_ms": 11034.021575000004,
-      "cost_usd": null,
-      "result_file": "tasks/cefr_level_classification_condensed/results/nemotron-3-super@vllm__2026-04-25T09-51-56Z.json"
-    },
-    {
-      "task_id": "cefr_level_classification_condensed",
-      "task_version": "1.0",
-      "model_id": "qwen3.6-35b@vllm",
-      "score": 0.5476190476190477,
-      "metrics": {
-        "accuracy": 0.35,
-        "macro_f1": 0.27556818181818177,
-        "qwk": 0.5476190476190477
-      },
-      "tps": 183.07152278392567,
-      "p95_latency_ms": 9735.561753000013,
-      "cost_usd": null,
-      "result_file": "tasks/cefr_level_classification_condensed/results/qwen3.6-35b@vllm__2026-04-20T05-21-53Z.json"
     },
     {
       "task_id": "cefr_level_classification_condensed",
@@ -1471,19 +1368,6 @@
       "result_file": "tasks/conversational_memory_qa/results/gemma-3-12b-it@vllm__2026-04-23T11-14-47Z.json"
     },
     {
-      "task_id": "conversational_memory_qa",
-      "task_version": "1.0",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 0.48000000000000004,
-      "metrics": {
-        "judge_score": 0.48000000000000004
-      },
-      "tps": 4.327901647705912,
-      "p95_latency_ms": 4460.2870299999895,
-      "cost_usd": null,
-      "result_file": "tasks/conversational_memory_qa/results/nemotron-3-super@vllm__2026-04-25T09-54-15Z.json"
-    },
-    {
       "task_id": "datascibench_csv_excel",
       "task_version": "1.0",
       "model_id": "mistral-small-4@vllm",
@@ -1638,19 +1522,6 @@
       "p95_latency_ms": 227946.882675,
       "cost_usd": null,
       "result_file": "tasks/datascibench_csv_excel/results/qwen3-30b@vllm__2026-04-16T06-17-44Z.json"
-    },
-    {
-      "task_id": "datascibench_csv_excel",
-      "task_version": "1.0",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 0.44000000000000006,
-      "metrics": {
-        "judge_score": 0.44000000000000006
-      },
-      "tps": 25.61243800006032,
-      "p95_latency_ms": 278104.859011,
-      "cost_usd": null,
-      "result_file": "tasks/datascibench_csv_excel/results/nemotron-3-super@vllm__2026-04-25T09-02-03Z.json"
     },
     {
       "task_id": "datascibench_csv_excel",
@@ -1824,19 +1695,6 @@
     {
       "task_id": "datascibench_dl",
       "task_version": "1.0",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 0.4,
-      "metrics": {
-        "judge_score": 0.4
-      },
-      "tps": 113.23409253804455,
-      "p95_latency_ms": 37627.37312300001,
-      "cost_usd": null,
-      "result_file": "tasks/datascibench_dl/results/nemotron-3-super@vllm__2026-04-25T09-05-17Z.json"
-    },
-    {
-      "task_id": "datascibench_dl",
-      "task_version": "1.0",
       "model_id": "gemma-4-31b-it@vllm",
       "score": 0.4,
       "metrics": {
@@ -2002,19 +1860,6 @@
       "p95_latency_ms": 23790.244513000005,
       "cost_usd": null,
       "result_file": "tasks/datascibench_human/results/mistral-small-3.1@vllm__2026-04-24T17-11-03Z.json"
-    },
-    {
-      "task_id": "datascibench_human",
-      "task_version": "1.1",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 0.52,
-      "metrics": {
-        "judge_score": 0.52
-      },
-      "tps": 115.93420959423895,
-      "p95_latency_ms": 24510.16892000001,
-      "cost_usd": null,
-      "result_file": "tasks/datascibench_human/results/nemotron-3-super@vllm__2026-04-25T09-07-39Z.json"
     },
     {
       "task_id": "entity_relationship_extraction",
@@ -2321,21 +2166,6 @@
     {
       "task_id": "essay_coherence_scoring",
       "task_version": "1.1",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 0.21212121212121215,
-      "metrics": {
-        "accuracy": 0.3,
-        "macro_f1": 0.26041666666666663,
-        "qwk": 0.21212121212121215
-      },
-      "tps": 21.015646748415115,
-      "p95_latency_ms": 292105.62450400006,
-      "cost_usd": null,
-      "result_file": "tasks/essay_coherence_scoring/results/nemotron-3-super@vllm__2026-04-25T12-00-27Z.json"
-    },
-    {
-      "task_id": "essay_coherence_scoring",
-      "task_version": "1.1",
       "model_id": "deepseek32exp@vllm",
       "score": 0.21052631578947367,
       "metrics": {
@@ -2591,21 +2421,6 @@
     {
       "task_id": "essay_coherence_scoring_condensed",
       "task_version": "1.1",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 0.24137931034482774,
-      "metrics": {
-        "accuracy": 0.35,
-        "macro_f1": 0.3317460317460318,
-        "qwk": 0.24137931034482774
-      },
-      "tps": 94.9771894435854,
-      "p95_latency_ms": 8598.534763000003,
-      "cost_usd": null,
-      "result_file": "tasks/essay_coherence_scoring_condensed/results/nemotron-3-super@vllm__2026-04-25T12-01-51Z.json"
-    },
-    {
-      "task_id": "essay_coherence_scoring_condensed",
-      "task_version": "1.1",
       "model_id": "qwen3-30b@vllm",
       "score": 0.2333333333333334,
       "metrics": {
@@ -2857,21 +2672,6 @@
       "p95_latency_ms": 1179.9429700000132,
       "cost_usd": null,
       "result_file": "tasks/essay_grammar_scoring/results/mistral-small-3.1@vllm__2026-04-24T17-30-08Z.json"
-    },
-    {
-      "task_id": "essay_grammar_scoring",
-      "task_version": "1.1",
-      "model_id": "nemotron-3-super@vllm",
-      "score": -0.03125000000000022,
-      "metrics": {
-        "accuracy": 0.2,
-        "macro_f1": 0.17941176470588235,
-        "qwk": -0.03125000000000022
-      },
-      "tps": 116.60332537705779,
-      "p95_latency_ms": 42434.219095,
-      "cost_usd": null,
-      "result_file": "tasks/essay_grammar_scoring/results/nemotron-3-super@vllm__2026-04-25T12-08-11Z.json"
     },
     {
       "task_id": "essay_grammar_scoring_condensed",
@@ -3294,21 +3094,6 @@
       "result_file": "tasks/essay_holistic_scoring/results/gpt-oss-120b@vllm__2026-04-20T01-21-35Z.json"
     },
     {
-      "task_id": "essay_holistic_scoring",
-      "task_version": "1.0",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 0.08080808080808088,
-      "metrics": {
-        "accuracy": 0.2777777777777778,
-        "macro_f1": 0.2088235294117647,
-        "qwk": 0.08080808080808088
-      },
-      "tps": 100.1557927068865,
-      "p95_latency_ms": 4290.6616039999935,
-      "cost_usd": null,
-      "result_file": "tasks/essay_holistic_scoring/results/nemotron-3-super@vllm__2026-04-25T12-25-21Z.json"
-    },
-    {
       "task_id": "essay_holistic_scoring_condensed",
       "task_version": "1.0",
       "model_id": "gemma-4-31b-it@vllm",
@@ -3337,21 +3122,6 @@
       "p95_latency_ms": 1132.626064,
       "cost_usd": null,
       "result_file": "tasks/essay_holistic_scoring_condensed/results/mistral-small-3.1@vllm__2026-04-24T17-31-42Z.json"
-    },
-    {
-      "task_id": "essay_holistic_scoring_condensed",
-      "task_version": "1.0",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 0.5619047619047617,
-      "metrics": {
-        "accuracy": 0.2222222222222222,
-        "macro_f1": 0.2222222222222222,
-        "qwk": 0.5619047619047617
-      },
-      "tps": 90.30747717072283,
-      "p95_latency_ms": 9412.431029000003,
-      "cost_usd": null,
-      "result_file": "tasks/essay_holistic_scoring_condensed/results/nemotron-3-super@vllm__2026-04-25T12-26-37Z.json"
     },
     {
       "task_id": "essay_holistic_scoring_condensed",
@@ -3926,21 +3696,6 @@
     {
       "task_id": "essay_vocabulary_scoring_condensed",
       "task_version": "1.1",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 0.2962962962962963,
-      "metrics": {
-        "accuracy": 0.25,
-        "macro_f1": 0.17320261437908496,
-        "qwk": 0.2962962962962963
-      },
-      "tps": 14.895572884808013,
-      "p95_latency_ms": 7820.349209999989,
-      "cost_usd": null,
-      "result_file": "tasks/essay_vocabulary_scoring_condensed/results/nemotron-3-super@vllm__2026-04-25T13-16-19Z.json"
-    },
-    {
-      "task_id": "essay_vocabulary_scoring_condensed",
-      "task_version": "1.1",
       "model_id": "gemma-3-12b-it@vllm",
       "score": 0.2333333333333334,
       "metrics": {
@@ -4045,19 +3800,6 @@
       "p95_latency_ms": 693.3635420000002,
       "cost_usd": null,
       "result_file": "tasks/extractive_qa/results/mistral-small-4@vllm__2026-04-26T00-01-48Z.json"
-    },
-    {
-      "task_id": "extractive_qa",
-      "task_version": "1.0",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 0.9,
-      "metrics": {
-        "exact_match": 0.9
-      },
-      "tps": 2.1309244683481756,
-      "p95_latency_ms": 267386.560452,
-      "cost_usd": null,
-      "result_file": "tasks/extractive_qa/results/nemotron-3-super@vllm__2026-04-25T13-21-11Z.json"
     },
     {
       "task_id": "extractive_qa",
@@ -4222,20 +3964,6 @@
     {
       "task_id": "hazard_category",
       "task_version": "1.0",
-      "model_id": "qwen3.6-35b@vllm",
-      "score": 0.5,
-      "metrics": {
-        "accuracy": 0.5,
-        "macro_f1": 0.3880952380952381
-      },
-      "tps": 169.2502257882497,
-      "p95_latency_ms": 6231.855373999992,
-      "cost_usd": null,
-      "result_file": "tasks/hazard_category/results/qwen3.6-35b@vllm__2026-04-20T13-39-15Z.json"
-    },
-    {
-      "task_id": "hazard_category",
-      "task_version": "1.0",
       "model_id": "qwen3.5-397b@vllm",
       "score": 0.5,
       "metrics": {
@@ -4306,20 +4034,6 @@
     {
       "task_id": "hazard_category",
       "task_version": "1.0",
-      "model_id": "qwen3.5-27b@vllm",
-      "score": 0.45,
-      "metrics": {
-        "accuracy": 0.45,
-        "macro_f1": 0.3404761904761905
-      },
-      "tps": 57.85973814830042,
-      "p95_latency_ms": 76047.22787799995,
-      "cost_usd": null,
-      "result_file": "tasks/hazard_category/results/qwen3.5-27b@vllm__2026-04-20T14-02-06Z.json"
-    },
-    {
-      "task_id": "hazard_category",
-      "task_version": "1.0",
       "model_id": "mistral-small-4@vllm",
       "score": 0.45,
       "metrics": {
@@ -4358,34 +4072,6 @@
       "p95_latency_ms": 1921.9416059999971,
       "cost_usd": null,
       "result_file": "tasks/hazard_category/results/gpt-oss-120b@vllm__2026-04-20T16-27-11Z.json"
-    },
-    {
-      "task_id": "hazard_category",
-      "task_version": "1.0",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 0.1,
-      "metrics": {
-        "accuracy": 0.1,
-        "macro_f1": 0.08333333333333333
-      },
-      "tps": 71.61015313508378,
-      "p95_latency_ms": 5974.491764000021,
-      "cost_usd": null,
-      "result_file": "tasks/hazard_category/results/nemotron-3-super@vllm__2026-04-25T13-22-28Z.json"
-    },
-    {
-      "task_id": "intent_classification",
-      "task_version": "1.0",
-      "model_id": "qwen3.6-35b@vllm",
-      "score": 1.0,
-      "metrics": {
-        "accuracy": 1.0,
-        "macro_f1": 1.0
-      },
-      "tps": 162.47221837823932,
-      "p95_latency_ms": 3915.5766339999973,
-      "cost_usd": null,
-      "result_file": "tasks/intent_classification/results/qwen3.6-35b@vllm__2026-04-20T06-20-23Z.json"
     },
     {
       "task_id": "intent_classification",
@@ -4456,20 +4142,6 @@
       "p95_latency_ms": 5689.405180000002,
       "cost_usd": null,
       "result_file": "tasks/intent_classification/results/qwen3-30b@vllm__2026-04-09T17-29-51Z.json"
-    },
-    {
-      "task_id": "intent_classification",
-      "task_version": "1.0",
-      "model_id": "qwen3.5-27b@vllm",
-      "score": 1.0,
-      "metrics": {
-        "accuracy": 1.0,
-        "macro_f1": 1.0
-      },
-      "tps": 20.34451050134257,
-      "p95_latency_ms": 153214.081934,
-      "cost_usd": null,
-      "result_file": "tasks/intent_classification/results/qwen3.5-27b@vllm__2026-04-19T05-00-22Z.json"
     },
     {
       "task_id": "intent_classification",
@@ -4558,20 +4230,6 @@
     {
       "task_id": "intent_classification",
       "task_version": "1.0",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 0.7,
-      "metrics": {
-        "accuracy": 0.7,
-        "macro_f1": 0.7178571428571429
-      },
-      "tps": 60.85955488841221,
-      "p95_latency_ms": 2661.545392000001,
-      "cost_usd": null,
-      "result_file": "tasks/intent_classification/results/nemotron-3-super@vllm__2026-04-25T13-23-03Z.json"
-    },
-    {
-      "task_id": "intent_classification",
-      "task_version": "1.0",
       "model_id": "gemma-3-12b-it@vllm",
       "score": 0.7,
       "metrics": {
@@ -4582,20 +4240,6 @@
       "p95_latency_ms": 5682.203943999994,
       "cost_usd": null,
       "result_file": "tasks/intent_classification/results/gemma-3-12b-it@vllm__2026-04-23T11-38-50Z.json"
-    },
-    {
-      "task_id": "jailbreak_detection",
-      "task_version": "1.0",
-      "model_id": "qwen3.6-35b@vllm",
-      "score": 1.0,
-      "metrics": {
-        "accuracy": 1.0,
-        "macro_f1": 1.0
-      },
-      "tps": 160.4503798694532,
-      "p95_latency_ms": 4954.785780999999,
-      "cost_usd": null,
-      "result_file": "tasks/jailbreak_detection/results/qwen3.6-35b@vllm__2026-04-20T06-21-21Z.json"
     },
     {
       "task_id": "jailbreak_detection",
@@ -4698,20 +4342,6 @@
     {
       "task_id": "jailbreak_detection",
       "task_version": "1.0",
-      "model_id": "qwen3.5-27b@vllm",
-      "score": 1.0,
-      "metrics": {
-        "accuracy": 1.0,
-        "macro_f1": 1.0
-      },
-      "tps": 20.587822481927002,
-      "p95_latency_ms": 34687.04101,
-      "cost_usd": null,
-      "result_file": "tasks/jailbreak_detection/results/qwen3.5-27b@vllm__2026-04-19T04-40-08Z.json"
-    },
-    {
-      "task_id": "jailbreak_detection",
-      "task_version": "1.0",
       "model_id": "gemma-3-12b-it@vllm",
       "score": 1.0,
       "metrics": {
@@ -4778,20 +4408,6 @@
       "p95_latency_ms": 1284.521178999995,
       "cost_usd": null,
       "result_file": "tasks/jailbreak_detection/results/gemma-4-31b-it@vllm__2026-04-20T04-04-09Z.json"
-    },
-    {
-      "task_id": "jailbreak_detection",
-      "task_version": "1.0",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 0.95,
-      "metrics": {
-        "accuracy": 0.95,
-        "macro_f1": 0.949874686716792
-      },
-      "tps": 53.40162538985419,
-      "p95_latency_ms": 1480.3510979999999,
-      "cost_usd": null,
-      "result_file": "tasks/jailbreak_detection/results/nemotron-3-super@vllm__2026-04-25T13-23-35Z.json"
     },
     {
       "task_id": "jailbreak_detection",
@@ -4894,20 +4510,6 @@
     {
       "task_id": "jailbreak_detection_beavertails",
       "task_version": "1.0",
-      "model_id": "qwen3.5-27b@vllm",
-      "score": 0.7,
-      "metrics": {
-        "accuracy": 0.7,
-        "macro_f1": 0.6969696969696968
-      },
-      "tps": 59.38894452245296,
-      "p95_latency_ms": 91894.331073,
-      "cost_usd": null,
-      "result_file": "tasks/jailbreak_detection_beavertails/results/qwen3.5-27b@vllm__2026-04-20T14-15-32Z.json"
-    },
-    {
-      "task_id": "jailbreak_detection_beavertails",
-      "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
       "score": 0.7,
       "metrics": {
@@ -4918,20 +4520,6 @@
       "p95_latency_ms": 8884.60489600004,
       "cost_usd": null,
       "result_file": "tasks/jailbreak_detection_beavertails/results/qwen3-30b@vllm__2026-04-20T13-57-02Z.json"
-    },
-    {
-      "task_id": "jailbreak_detection_beavertails",
-      "task_version": "1.0",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 0.65,
-      "metrics": {
-        "accuracy": 0.65,
-        "macro_f1": 0.6266666666666667
-      },
-      "tps": 72.34257933207448,
-      "p95_latency_ms": 2330.527078999992,
-      "cost_usd": null,
-      "result_file": "tasks/jailbreak_detection_beavertails/results/nemotron-3-super@vllm__2026-04-25T13-24-23Z.json"
     },
     {
       "task_id": "jailbreak_detection_beavertails",
@@ -4988,20 +4576,6 @@
       "p95_latency_ms": 869.8105679999983,
       "cost_usd": null,
       "result_file": "tasks/jailbreak_detection_beavertails/results/mistral-small-4@vllm__2026-04-26T00-03-38Z.json"
-    },
-    {
-      "task_id": "jailbreak_detection_beavertails",
-      "task_version": "1.0",
-      "model_id": "qwen3.6-35b@vllm",
-      "score": 0.6,
-      "metrics": {
-        "accuracy": 0.6,
-        "macro_f1": 0.5238095238095238
-      },
-      "tps": 173.7051223049155,
-      "p95_latency_ms": 12862.845854,
-      "cost_usd": null,
-      "result_file": "tasks/jailbreak_detection_beavertails/results/qwen3.6-35b@vllm__2026-04-20T13-41-29Z.json"
     },
     {
       "task_id": "jailbreak_detection_beavertails",
@@ -5214,19 +4788,6 @@
       "result_file": "tasks/kg_entity_name_refinement/results/mistral-small-3.1@vllm__2026-04-24T17-36-51Z.json"
     },
     {
-      "task_id": "kg_entity_name_refinement",
-      "task_version": "1.0",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 0.78,
-      "metrics": {
-        "judge_score": 0.78
-      },
-      "tps": 70.12597424895344,
-      "p95_latency_ms": 5600.456163999979,
-      "cost_usd": null,
-      "result_file": "tasks/kg_entity_name_refinement/results/nemotron-3-super@vllm__2026-04-25T13-25-38Z.json"
-    },
-    {
       "task_id": "kg_entity_type_refinement",
       "task_version": "1.0",
       "model_id": "glm5.1@llama",
@@ -5409,19 +4970,6 @@
       "result_file": "tasks/kg_entity_type_refinement/results/gpt-oss-120b@vllm__2026-04-20T01-27-23Z.json"
     },
     {
-      "task_id": "kg_entity_type_refinement",
-      "task_version": "1.0",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 0.44000000000000006,
-      "metrics": {
-        "judge_score": 0.44000000000000006
-      },
-      "tps": 52.150114416296944,
-      "p95_latency_ms": 2464.9995610000133,
-      "cost_usd": null,
-      "result_file": "tasks/kg_entity_type_refinement/results/nemotron-3-super@vllm__2026-04-25T13-26-26Z.json"
-    },
-    {
       "task_id": "kg_relation_refinement",
       "task_version": "1.0",
       "model_id": "qwen3.5-397b@vllm",
@@ -5589,19 +5137,6 @@
       "p95_latency_ms": 1527.7771069999985,
       "cost_usd": null,
       "result_file": "tasks/kg_relation_refinement/results/gemma-3-12b-it@vllm__2026-04-23T11-42-36Z.json"
-    },
-    {
-      "task_id": "kg_relation_refinement",
-      "task_version": "1.0",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 0.8300000000000001,
-      "metrics": {
-        "judge_score": 0.8300000000000001
-      },
-      "tps": 84.54807643295531,
-      "p95_latency_ms": 3490.5705399999933,
-      "cost_usd": null,
-      "result_file": "tasks/kg_relation_refinement/results/nemotron-3-super@vllm__2026-04-25T13-27-51Z.json"
     },
     {
       "task_id": "kg_relation_refinement",
@@ -5799,19 +5334,6 @@
       "result_file": "tasks/kg_triplet_extraction/results/gemma-3-12b-it@vllm__2026-04-23T11-44-56Z.json"
     },
     {
-      "task_id": "kg_triplet_extraction",
-      "task_version": "1.0",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 0.45999999999999996,
-      "metrics": {
-        "judge_score": 0.45999999999999996
-      },
-      "tps": 45.19573824497888,
-      "p95_latency_ms": 16519.189004999986,
-      "cost_usd": null,
-      "result_file": "tasks/kg_triplet_extraction/results/nemotron-3-super@vllm__2026-04-25T13-36-44Z.json"
-    },
-    {
       "task_id": "oos_detection",
       "task_version": "1.0",
       "model_id": "mistral-small-4@vllm",
@@ -5866,20 +5388,6 @@
       "p95_latency_ms": 1143.6123059999943,
       "cost_usd": null,
       "result_file": "tasks/oos_detection/results/deepseek32exp@vllm__2026-04-21T07-00-18Z.json"
-    },
-    {
-      "task_id": "oos_detection",
-      "task_version": "1.0",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 0.5,
-      "metrics": {
-        "accuracy": 0.5,
-        "macro_f1": 0.3333333333333333
-      },
-      "tps": 71.40587444617799,
-      "p95_latency_ms": 1820.1601649999973,
-      "cost_usd": null,
-      "result_file": "tasks/oos_detection/results/nemotron-3-super@vllm__2026-04-25T13-37-37Z.json"
     },
     {
       "task_id": "oos_detection",
@@ -5982,20 +5490,6 @@
     {
       "task_id": "oos_detection",
       "task_version": "1.0",
-      "model_id": "qwen3.6-35b@vllm",
-      "score": 0.43333333333333335,
-      "metrics": {
-        "accuracy": 0.43333333333333335,
-        "macro_f1": 0.3023255813953488
-      },
-      "tps": 133.02419846872016,
-      "p95_latency_ms": 3913.8009780000048,
-      "cost_usd": null,
-      "result_file": "tasks/oos_detection/results/qwen3.6-35b@vllm__2026-04-20T06-33-58Z.json"
-    },
-    {
-      "task_id": "oos_detection",
-      "task_version": "1.0",
       "model_id": "minimax-m2.7@vllm",
       "score": 0.43333333333333335,
       "metrics": {
@@ -6006,20 +5500,6 @@
       "p95_latency_ms": 3095.2969629999957,
       "cost_usd": null,
       "result_file": "tasks/oos_detection/results/minimax-m2.7@vllm__2026-04-20T12-30-00Z.json"
-    },
-    {
-      "task_id": "oos_detection",
-      "task_version": "1.0",
-      "model_id": "qwen3.5-27b@vllm",
-      "score": 0.43333333333333335,
-      "metrics": {
-        "accuracy": 0.43333333333333335,
-        "macro_f1": 0.3023255813953488
-      },
-      "tps": 22.545247203129414,
-      "p95_latency_ms": 29437.621288999937,
-      "cost_usd": null,
-      "result_file": "tasks/oos_detection/results/qwen3.5-27b@vllm__2026-04-19T04-50-51Z.json"
     },
     {
       "task_id": "retail_agent_dialog",
@@ -6168,20 +5648,6 @@
     {
       "task_id": "safety_classification",
       "task_version": "1.0",
-      "model_id": "qwen3.5-27b@vllm",
-      "score": 0.9,
-      "metrics": {
-        "accuracy": 0.9,
-        "macro_f1": 0.9
-      },
-      "tps": 55.94479304365598,
-      "p95_latency_ms": 17442.505950000013,
-      "cost_usd": null,
-      "result_file": "tasks/safety_classification/results/qwen3.5-27b@vllm__2026-04-21T07-50-51Z.json"
-    },
-    {
-      "task_id": "safety_classification",
-      "task_version": "1.0",
       "model_id": "gemma-3-12b-it@vllm",
       "score": 0.9,
       "metrics": {
@@ -6192,20 +5658,6 @@
       "p95_latency_ms": 1210.4145509999994,
       "cost_usd": null,
       "result_file": "tasks/safety_classification/results/gemma-3-12b-it@vllm__2026-04-23T12-04-44Z.json"
-    },
-    {
-      "task_id": "safety_classification",
-      "task_version": "1.0",
-      "model_id": "qwen3.6-35b@vllm",
-      "score": 0.85,
-      "metrics": {
-        "accuracy": 0.85,
-        "macro_f1": 0.849624060150376
-      },
-      "tps": 157.53264344764682,
-      "p95_latency_ms": 4368.391987999999,
-      "cost_usd": null,
-      "result_file": "tasks/safety_classification/results/qwen3.6-35b@vllm__2026-04-21T08-04-16Z.json"
     },
     {
       "task_id": "safety_classification",
@@ -6318,20 +5770,6 @@
       "p95_latency_ms": 1972.709457999997,
       "cost_usd": null,
       "result_file": "tasks/safety_classification/results/gpt-oss-120b@vllm__2026-04-21T07-43-00Z.json"
-    },
-    {
-      "task_id": "safety_classification",
-      "task_version": "1.0",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 0.75,
-      "metrics": {
-        "accuracy": 0.75,
-        "macro_f1": 0.7442455242966751
-      },
-      "tps": 8.08775123721342,
-      "p95_latency_ms": 3652.0127950000187,
-      "cost_usd": null,
-      "result_file": "tasks/safety_classification/results/nemotron-3-super@vllm__2026-04-25T15-46-51Z.json"
     },
     {
       "task_id": "safety_classification",
@@ -6530,19 +5968,6 @@
       "p95_latency_ms": 2330.0782140000038,
       "cost_usd": null,
       "result_file": "tasks/summarization/results/deepseek32exp@vllm__2026-04-21T07-30-04Z.json"
-    },
-    {
-      "task_id": "summarization",
-      "task_version": "1.0",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 0.76,
-      "metrics": {
-        "judge_score": 0.76
-      },
-      "tps": 82.43776081342436,
-      "p95_latency_ms": 2971.455508999995,
-      "cost_usd": null,
-      "result_file": "tasks/summarization/results/nemotron-3-super@vllm__2026-04-25T15-47-26Z.json"
     },
     {
       "task_id": "summarization",
@@ -6833,19 +6258,6 @@
     {
       "task_id": "text2sql_ambiguity",
       "task_version": "1.0",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 0.5499999999999999,
-      "metrics": {
-        "judge_score": 0.5499999999999999
-      },
-      "tps": 107.94920388024761,
-      "p95_latency_ms": 12348.027401000025,
-      "cost_usd": null,
-      "result_file": "tasks/text2sql_ambiguity/results/nemotron-3-super@vllm__2026-04-25T16-26-21Z.json"
-    },
-    {
-      "task_id": "text2sql_ambiguity",
-      "task_version": "1.0",
       "model_id": "gemma-3-12b-it@vllm",
       "score": 0.5333333333333333,
       "metrics": {
@@ -7067,19 +6479,6 @@
     {
       "task_id": "text2sql_bird",
       "task_version": "1.0",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 0.6090909090909091,
-      "metrics": {
-        "judge_score": 0.6090909090909091
-      },
-      "tps": 108.01868400708302,
-      "p95_latency_ms": 13944.432889999973,
-      "cost_usd": null,
-      "result_file": "tasks/text2sql_bird/results/nemotron-3-super@vllm__2026-04-25T16-29-02Z.json"
-    },
-    {
-      "task_id": "text2sql_bird",
-      "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
       "score": 0.6090909090909091,
       "metrics": {
@@ -7159,20 +6558,6 @@
     {
       "task_id": "text_classification",
       "task_version": "1.0",
-      "model_id": "qwen3.6-35b@vllm",
-      "score": 1.0,
-      "metrics": {
-        "accuracy": 1.0,
-        "macro_f1": 1.0
-      },
-      "tps": 142.45068837521853,
-      "p95_latency_ms": 4378.830379999997,
-      "cost_usd": null,
-      "result_file": "tasks/text_classification/results/qwen3.6-35b@vllm__2026-04-20T07-40-24Z.json"
-    },
-    {
-      "task_id": "text_classification",
-      "task_version": "1.0",
       "model_id": "qwen3.5-397b@vllm",
       "score": 1.0,
       "metrics": {
@@ -7211,20 +6596,6 @@
       "p95_latency_ms": 2514.8416179999986,
       "cost_usd": null,
       "result_file": "tasks/text_classification/results/qwen3-235B-A22B@vllm__2026-04-22T03-34-05Z.json"
-    },
-    {
-      "task_id": "text_classification",
-      "task_version": "1.0",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 1.0,
-      "metrics": {
-        "accuracy": 1.0,
-        "macro_f1": 1.0
-      },
-      "tps": 40.520111249335024,
-      "p95_latency_ms": 1146.6763670000048,
-      "cost_usd": null,
-      "result_file": "tasks/text_classification/results/nemotron-3-super@vllm__2026-04-25T16-29-24Z.json"
     },
     {
       "task_id": "text_classification",
@@ -7281,20 +6652,6 @@
       "p95_latency_ms": 5929.261485000012,
       "cost_usd": null,
       "result_file": "tasks/text_classification/results/glm5.1@llama__2026-04-21T00-44-28Z.json"
-    },
-    {
-      "task_id": "text_classification",
-      "task_version": "1.0",
-      "model_id": "qwen3.5-27b@vllm",
-      "score": 1.0,
-      "metrics": {
-        "accuracy": 1.0,
-        "macro_f1": 1.0
-      },
-      "tps": 21.470741041154135,
-      "p95_latency_ms": 21959.58865,
-      "cost_usd": null,
-      "result_file": "tasks/text_classification/results/qwen3.5-27b@vllm__2026-04-19T04-30-06Z.json"
     },
     {
       "task_id": "text_classification",
@@ -7365,20 +6722,6 @@
       "p95_latency_ms": 1162.6431349999962,
       "cost_usd": null,
       "result_file": "tasks/text_classification/results/gemma-3-12b-it@vllm__2026-04-23T12-11-23Z.json"
-    },
-    {
-      "task_id": "topic_classification",
-      "task_version": "1.0",
-      "model_id": "qwen3.6-35b@vllm",
-      "score": 1.0,
-      "metrics": {
-        "accuracy": 1.0,
-        "macro_f1": 1.0
-      },
-      "tps": 147.78066830499472,
-      "p95_latency_ms": 3920.267017999997,
-      "cost_usd": null,
-      "result_file": "tasks/topic_classification/results/qwen3.6-35b@vllm__2026-04-20T07-41-10Z.json"
     },
     {
       "task_id": "topic_classification",
@@ -7481,20 +6824,6 @@
     {
       "task_id": "topic_classification",
       "task_version": "1.0",
-      "model_id": "qwen3.5-27b@vllm",
-      "score": 1.0,
-      "metrics": {
-        "accuracy": 1.0,
-        "macro_f1": 1.0
-      },
-      "tps": 16.584429933687133,
-      "p95_latency_ms": 53719.51544999999,
-      "cost_usd": null,
-      "result_file": "tasks/topic_classification/results/qwen3.5-27b@vllm__2026-04-19T04-33-52Z.json"
-    },
-    {
-      "task_id": "topic_classification",
-      "task_version": "1.0",
       "model_id": "mistral-small-3.1@vllm",
       "score": 1.0,
       "metrics": {
@@ -7561,20 +6890,6 @@
       "p95_latency_ms": 1217.6407130000016,
       "cost_usd": null,
       "result_file": "tasks/topic_classification/results/gemma-3-12b-it@vllm__2026-04-23T12-11-52Z.json"
-    },
-    {
-      "task_id": "topic_classification",
-      "task_version": "1.0",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 0.8,
-      "metrics": {
-        "accuracy": 0.8,
-        "macro_f1": 0.7866666666666667
-      },
-      "tps": 66.68835450582118,
-      "p95_latency_ms": 1537.5267019999797,
-      "cost_usd": null,
-      "result_file": "tasks/topic_classification/results/nemotron-3-super@vllm__2026-04-25T16-29-49Z.json"
     },
     {
       "task_id": "topic_classification",
