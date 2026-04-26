@@ -33,7 +33,14 @@ class OpenAICompatAdapter:
 
     def chat(self, system: str | None, user: str, params: LLMParams) -> Completion:
         return openai_chat(
-            self.base_url, self.headers, self.served_name, system, user, params, self.timeout
+            self.base_url,
+            self.headers,
+            self.served_name,
+            system,
+            user,
+            params,
+            self.timeout,
+            reasoning_mode=self.model.reasoning_mode,
         )
 
     def chat_messages(
@@ -50,4 +57,5 @@ class OpenAICompatAdapter:
             params,
             tools=tools,
             timeout=self.timeout,
+            reasoning_mode=self.model.reasoning_mode,
         )

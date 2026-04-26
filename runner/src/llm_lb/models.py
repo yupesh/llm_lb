@@ -60,6 +60,15 @@ class ModelCard(BaseModel):
     # When both are set, the runner records `cost_usd` in each RunResult.
     prompt_cost_per_1k_usd: Optional[float] = Field(default=None, ge=0)
     completion_cost_per_1k_usd: Optional[float] = Field(default=None, ge=0)
+    # Reasoning-mode hint for thinking-capable models. Sent to vLLM/OpenAI as
+    # both `reasoning_effort` (Nemotron, OpenAI o-series) and
+    # `chat_template_kwargs.enable_thinking` (Qwen3+). Models that ignore the
+    # field are unaffected.
+    #   "off"    — disable thinking entirely (Qwen `enable_thinking: false`,
+    #              `reasoning_effort: low` for backends that don't recognise it)
+    #   "low" / "medium" / "high" — passed through as-is
+    #   None     — leave decision to the model's default chat template
+    reasoning_mode: Optional[Literal["off", "low", "medium", "high"]] = None
 
 
 class LLMParams(BaseModel):
