@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T23:59:30+00:00",
+  "generated_at": "2026-04-26T00:00:35+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -2808,6 +2808,21 @@
     {
       "task_id": "essay_grammar_scoring",
       "task_version": "1.1",
+      "model_id": "mistral-small-4@vllm",
+      "score": 0.30000000000000016,
+      "metrics": {
+        "accuracy": 0.25,
+        "macro_f1": 0.11363636363636363,
+        "qwk": 0.30000000000000016
+      },
+      "tps": 2.4107008289562595,
+      "p95_latency_ms": 1391.7697229999958,
+      "cost_usd": null,
+      "result_file": "tasks/essay_grammar_scoring/results/mistral-small-4@vllm__2026-04-25T23-58-58Z.json"
+    },
+    {
+      "task_id": "essay_grammar_scoring",
+      "task_version": "1.1",
       "model_id": "qwen3-30b@vllm",
       "score": 0.28,
       "metrics": {
@@ -2909,6 +2924,21 @@
       "p95_latency_ms": 42434.219095,
       "cost_usd": null,
       "result_file": "tasks/essay_grammar_scoring/results/nemotron-3-super@vllm__2026-04-25T12-08-11Z.json"
+    },
+    {
+      "task_id": "essay_grammar_scoring_condensed",
+      "task_version": "1.1",
+      "model_id": "mistral-small-4@vllm",
+      "score": 0.3437500000000002,
+      "metrics": {
+        "accuracy": 0.25,
+        "macro_f1": 0.17067307692307693,
+        "qwk": 0.3437500000000002
+      },
+      "tps": 2.7594549573852034,
+      "p95_latency_ms": 896.3893720000016,
+      "cost_usd": null,
+      "result_file": "tasks/essay_grammar_scoring_condensed/results/mistral-small-4@vllm__2026-04-25T23-59-29Z.json"
     },
     {
       "task_id": "essay_grammar_scoring_condensed",
@@ -3224,6 +3254,21 @@
       "p95_latency_ms": 16892.370200999947,
       "cost_usd": null,
       "result_file": "tasks/essay_holistic_scoring/results/qwen3-30b@vllm__2026-04-19T02-29-03Z.json"
+    },
+    {
+      "task_id": "essay_holistic_scoring",
+      "task_version": "1.0",
+      "model_id": "mistral-small-4@vllm",
+      "score": 0.5396825396825395,
+      "metrics": {
+        "accuracy": 0.2222222222222222,
+        "macro_f1": 0.15873015873015872,
+        "qwk": 0.5396825396825395
+      },
+      "tps": 3.091948172323617,
+      "p95_latency_ms": 916.4227930000025,
+      "cost_usd": null,
+      "result_file": "tasks/essay_holistic_scoring/results/mistral-small-4@vllm__2026-04-25T23-59-53Z.json"
     },
     {
       "task_id": "essay_holistic_scoring",
