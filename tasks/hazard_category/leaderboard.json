@@ -136,6 +136,18 @@
       "result_file": "results/qwen3.5-27b@vllm__2026-04-20T14-02-06Z.json"
     },
     {
+      "model_id": "mistral-small-4@vllm",
+      "score": 0.45,
+      "metrics": {
+        "accuracy": 0.45,
+        "macro_f1": 0.34285714285714286
+      },
+      "tps": 11.132138959251632,
+      "p95_latency_ms": 1139.9893060000181,
+      "cost_usd": null,
+      "result_file": "results/mistral-small-4@vllm__2026-04-26T00-02-17Z.json"
+    },
+    {
       "model_id": "qwen3-30b@vllm",
       "score": 0.4,
       "metrics": {
@@ -172,5 +184,5 @@
       "result_file": "results/nemotron-3-super@vllm__2026-04-25T13-22-28Z.json"
     }
   ],
-  "updated_at": "2026-04-25T14:48:48+00:00"
+  "updated_at": "2026-04-26T00:02:50+00:00"
 }

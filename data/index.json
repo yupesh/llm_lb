@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T00:02:13+00:00",
+  "generated_at": "2026-04-26T00:02:50+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -4088,6 +4088,19 @@
     {
       "task_id": "extractive_qa",
       "task_version": "1.0",
+      "model_id": "mistral-small-4@vllm",
+      "score": 0.9,
+      "metrics": {
+        "exact_match": 0.9
+      },
+      "tps": 8.045173042627532,
+      "p95_latency_ms": 693.3635420000002,
+      "cost_usd": null,
+      "result_file": "tasks/extractive_qa/results/mistral-small-4@vllm__2026-04-26T00-01-48Z.json"
+    },
+    {
+      "task_id": "extractive_qa",
+      "task_version": "1.0",
       "model_id": "nemotron-3-super@vllm",
       "score": 0.9,
       "metrics": {
@@ -4355,6 +4368,20 @@
       "p95_latency_ms": 76047.22787799995,
       "cost_usd": null,
       "result_file": "tasks/hazard_category/results/qwen3.5-27b@vllm__2026-04-20T14-02-06Z.json"
+    },
+    {
+      "task_id": "hazard_category",
+      "task_version": "1.0",
+      "model_id": "mistral-small-4@vllm",
+      "score": 0.45,
+      "metrics": {
+        "accuracy": 0.45,
+        "macro_f1": 0.34285714285714286
+      },
+      "tps": 11.132138959251632,
+      "p95_latency_ms": 1139.9893060000181,
+      "cost_usd": null,
+      "result_file": "tasks/hazard_category/results/mistral-small-4@vllm__2026-04-26T00-02-17Z.json"
     },
     {
       "task_id": "hazard_category",
