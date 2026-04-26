@@ -63,13 +63,6 @@
     <summary>accuracy=0.750, macro_f1=0.744</summary>
   </entry>
   <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/retail_agent_dialog/1.1/nemotron-3-super@vllm/2026-04-26T19:21:30+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.013 judge_score on retail_agent_dialog v1.1</title>
-    <updated>2026-04-26T19:21:30+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/retail_agent_dialog" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.013</summary>
-  </entry>
-  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/oos_detection/1.0/nemotron-3-super@vllm/2026-04-26T16:50:57+00:00</id>
     <title>nemotron-3-super@vllm scored 0.500 accuracy on oos_detection v1.0</title>
     <updated>2026-04-26T16:50:57+00:00</updated>
@@ -133,13 +126,6 @@
     <summary>accuracy=0.300, macro_f1=0.250</summary>
   </entry>
   <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/extractive_qa/1.0/nemotron-3-super@vllm/2026-04-26T16:38:53+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.800 exact_match on extractive_qa v1.0</title>
-    <updated>2026-04-26T16:38:53+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/extractive_qa" rel="alternate" type="text/html"/>
-    <summary>exact_match=0.800</summary>
-  </entry>
-  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring_condensed/1.1/nemotron-3-super@vllm/2026-04-26T16:23:25+00:00</id>
     <title>nemotron-3-super@vllm scored 0.300 accuracy on essay_vocabulary_scoring_condensed v1.1</title>
     <updated>2026-04-26T16:23:25+00:00</updated>
@@ -180,13 +166,6 @@
     <updated>2026-04-26T15:47:17+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_coherence_scoring" rel="alternate" type="text/html"/>
     <summary>accuracy=0.250, macro_f1=0.208, qwk=-0.113</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/entity_relationship_extraction/1.0/nemotron-3-super@vllm/2026-04-26T15:28:01+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.729 judge_score on entity_relationship_extraction v1.0</title>
-    <updated>2026-04-26T15:28:01+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/entity_relationship_extraction" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.729</summary>
   </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_human/1.1/nemotron-3-super@vllm/2026-04-26T14:00:28+00:00</id>
@@ -355,5 +334,26 @@
     <updated>2026-04-26T05:39:26+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/topic_classification" rel="alternate" type="text/html"/>
     <summary>accuracy=1.000, macro_f1=1.000</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text_classification/1.0/qwen3.6-35b@vllm/2026-04-26T05:39:05+00:00</id>
+    <title>qwen3.6-35b@vllm scored 1.000 accuracy on text_classification v1.0</title>
+    <updated>2026-04-26T05:39:05+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=1.000, macro_f1=1.000</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/qwen3.6-35b@vllm/2026-04-26T05:38:43+00:00</id>
+    <title>qwen3.6-35b@vllm scored 0.800 accuracy on safety_classification v1.0</title>
+    <updated>2026-04-26T05:38:43+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/safety_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.800, macro_f1=0.800</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/retail_agent_dialog/1.1/qwen3.6-35b@vllm/2026-04-26T05:38:19+00:00</id>
+    <title>qwen3.6-35b@vllm scored 0.745 judge_score on retail_agent_dialog v1.1</title>
+    <updated>2026-04-26T05:38:19+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/retail_agent_dialog" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.745</summary>
   </entry>
 </feed>

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T23:06:14+00:00",
+  "generated_at": "2026-04-26T23:15:59+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -2264,19 +2264,6 @@
       "result_file": "tasks/entity_relationship_extraction/results/gemma-3-12b-it@vllm__2026-04-23T11-32-28Z.json"
     },
     {
-      "task_id": "entity_relationship_extraction",
-      "task_version": "1.0",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 0.7285714285714285,
-      "metrics": {
-        "judge_score": 0.7285714285714285
-      },
-      "tps": 40.57207994728772,
-      "p95_latency_ms": 811541.74131,
-      "cost_usd": null,
-      "result_file": "tasks/entity_relationship_extraction/results/nemotron-3-super@vllm__2026-04-26T15-28-01Z.json"
-    },
-    {
       "task_id": "essay_coherence_scoring",
       "task_version": "1.1",
       "model_id": "glm5.1@llama",
@@ -4166,19 +4153,6 @@
       "p95_latency_ms": 1573.1196449999984,
       "cost_usd": null,
       "result_file": "tasks/extractive_qa/results/gpt-oss-120b@vllm__2026-04-20T01-24-23Z.json"
-    },
-    {
-      "task_id": "extractive_qa",
-      "task_version": "1.0",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 0.8,
-      "metrics": {
-        "exact_match": 0.8
-      },
-      "tps": 39.08984649390273,
-      "p95_latency_ms": 904639.8700469999,
-      "cost_usd": null,
-      "result_file": "tasks/extractive_qa/results/nemotron-3-super@vllm__2026-04-26T16-38-53Z.json"
     },
     {
       "task_id": "extractive_qa",
@@ -6310,19 +6284,6 @@
       "p95_latency_ms": 240371.57444100012,
       "cost_usd": null,
       "result_file": "tasks/retail_agent_dialog/results/qwen3-235B-A22B@vllm__2026-04-25T17-41-40Z.json"
-    },
-    {
-      "task_id": "retail_agent_dialog",
-      "task_version": "1.1",
-      "model_id": "nemotron-3-super@vllm",
-      "score": 0.013333333333333334,
-      "metrics": {
-        "judge_score": 0.013333333333333334
-      },
-      "tps": 24.898092282595922,
-      "p95_latency_ms": 858925.0446770001,
-      "cost_usd": null,
-      "result_file": "tasks/retail_agent_dialog/results/nemotron-3-super@vllm__2026-04-26T19-21-30Z.json"
     },
     {
       "task_id": "safety_classification",
