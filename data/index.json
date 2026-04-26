@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T00:06:26+00:00",
+  "generated_at": "2026-04-26T00:08:54+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -5814,6 +5814,19 @@
     {
       "task_id": "kg_triplet_extraction",
       "task_version": "1.0",
+      "model_id": "mistral-small-4@vllm",
+      "score": 0.54,
+      "metrics": {
+        "judge_score": 0.54
+      },
+      "tps": 124.66847721043524,
+      "p95_latency_ms": 2199.8555859999983,
+      "cost_usd": null,
+      "result_file": "tasks/kg_triplet_extraction/results/mistral-small-4@vllm__2026-04-26T00-06-54Z.json"
+    },
+    {
+      "task_id": "kg_triplet_extraction",
+      "task_version": "1.0",
       "model_id": "qwen3-30b@vllm",
       "score": 0.54,
       "metrics": {
@@ -5849,6 +5862,20 @@
       "p95_latency_ms": 16519.189004999986,
       "cost_usd": null,
       "result_file": "tasks/kg_triplet_extraction/results/nemotron-3-super@vllm__2026-04-25T13-36-44Z.json"
+    },
+    {
+      "task_id": "oos_detection",
+      "task_version": "1.0",
+      "model_id": "mistral-small-4@vllm",
+      "score": 0.6333333333333333,
+      "metrics": {
+        "accuracy": 0.6333333333333333,
+        "macro_f1": 0.6329254727474972
+      },
+      "tps": 7.364569851519916,
+      "p95_latency_ms": 503.5753490000019,
+      "cost_usd": null,
+      "result_file": "tasks/oos_detection/results/mistral-small-4@vllm__2026-04-26T00-07-21Z.json"
     },
     {
       "task_id": "oos_detection",
