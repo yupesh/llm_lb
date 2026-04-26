@@ -171,7 +171,20 @@
       "p95_latency_ms": 3996.422816000006,
       "cost_usd": null,
       "result_file": "results/gpt-oss-120b@vllm__2026-04-24T01-47-29Z.json"
+    },
+    {
+      "model_id": "nemotron-3-super@vllm",
+      "score": -0.048215113583681024,
+      "metrics": {
+        "accuracy": 0.0,
+        "adjacent_accuracy": 0.11904761904761904,
+        "qwk": -0.048215113583681024
+      },
+      "tps": 15.884437848875727,
+      "p95_latency_ms": 539515.004375,
+      "cost_usd": null,
+      "result_file": "results/nemotron-3-super@vllm__2026-04-26T05-01-39Z.json"
     }
   ],
-  "updated_at": "2026-04-26T00:25:29+00:00"
+  "updated_at": "2026-04-26T05:26:16+00:00"
 }
