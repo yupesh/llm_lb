@@ -77,6 +77,11 @@ class LLMParams(BaseModel):
     top_p: float = 1.0
     max_tokens: Optional[int] = None
     seed: Optional[int] = None
+    # Per-task override of `ModelCard.reasoning_mode`. When set on a task it
+    # wins over the model card's default — lets a task force CoT on (`"high"`)
+    # for hard reasoning workloads, or off for short-answer tasks where the
+    # card's default is something noisy.
+    reasoning_mode: Optional[Literal["off", "low", "medium", "high"]] = None
 
 
 class MetricSpec(BaseModel):
