@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T13:06:18+00:00",
+  "generated_at": "2026-04-26T13:08:13+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -8190,6 +8190,21 @@
       "p95_latency_ms": 106761.66637300003,
       "cost_usd": null,
       "result_file": "tasks/writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial/results/nemotron-3-super@vllm__2026-04-26T05-53-31Z.json"
+    },
+    {
+      "task_id": "writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial",
+      "task_version": "1.1",
+      "model_id": "gemma-3-12b-it@vllm",
+      "score": 0.23946784922394682,
+      "metrics": {
+        "accuracy": 0.23809523809523808,
+        "adjacent_accuracy": 0.9047619047619048,
+        "qwk": 0.23946784922394682
+      },
+      "tps": 5.452946104508703,
+      "p95_latency_ms": 759.9793819999832,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial/results/gemma-3-12b-it@vllm__2026-04-26T12-49-22Z.json"
     },
     {
       "task_id": "writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial",

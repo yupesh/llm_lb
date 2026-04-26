@@ -35,6 +35,13 @@
     <summary>accuracy=0.214, adjacent_accuracy=0.881, qwk=0.125</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial/1.1/gemma-3-12b-it@vllm/2026-04-26T12:49:22+00:00</id>
+    <title>gemma-3-12b-it@vllm scored 0.238 accuracy on writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial v1.1</title>
+    <updated>2026-04-26T12:49:22+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.238, adjacent_accuracy=0.905, qwk=0.239</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial/1.1/gemma-3-12b-it@vllm/2026-04-26T12:48:42+00:00</id>
     <title>gemma-3-12b-it@vllm scored 0.262 accuracy on writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial v1.1</title>
     <updated>2026-04-26T12:48:42+00:00</updated>
@@ -348,12 +355,5 @@
     <updated>2026-04-26T00:27:24+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_loocv_fewshot_with_m_serial" rel="alternate" type="text/html"/>
     <summary>accuracy=0.357, adjacent_accuracy=0.786, qwk=0.317</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_loocv_fewshot_no_m_serial/1.1/mistral-small-4@vllm/2026-04-26T00:26:43+00:00</id>
-    <title>mistral-small-4@vllm scored 0.214 accuracy on writing_eval_n42_with_ann_loocv_fewshot_no_m_serial v1.1</title>
-    <updated>2026-04-26T00:26:43+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_loocv_fewshot_no_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.214, adjacent_accuracy=0.905, qwk=0.354</summary>
   </entry>
 </feed>
