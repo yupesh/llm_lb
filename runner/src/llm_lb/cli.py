@@ -36,9 +36,14 @@ def run(
         help="Only run the first N samples (smoke-test). 0 = all.",
         min=0,
     ),
+    sample_id: list[str] = typer.Option(
+        None,
+        "--sample-id",
+        help="Only run samples with these ids (repeatable). Smoke-test / single-sample re-run.",
+    ),
 ) -> None:
     """Run a model against a task and write results JSON."""
-    out = run_task(task, model, limit=limit or None)
+    out = run_task(task, model, limit=limit or None, sample_ids=sample_id or None)
     typer.echo(f"wrote: {out}")
 
 
