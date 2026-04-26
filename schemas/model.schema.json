@@ -234,6 +234,24 @@
       ],
       "default": null,
       "title": "Completion Cost Per 1K Usd"
+    },
+    "reasoning_mode": {
+      "anyOf": [
+        {
+          "enum": [
+            "off",
+            "low",
+            "medium",
+            "high"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Reasoning Mode"
     }
   },
   "required": [

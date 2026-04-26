@@ -43,6 +43,27 @@ _RETRY_EXCEPTIONS = (
 )
 
 
+def _apply_reasoning_mode(body: dict, mode: str | None) -> None:
+    """Inject reasoning-control fields into the request body.
+
+    - "off": disable thinking entirely. Qwen3+ honours
+      `chat_template_kwargs.enable_thinking=false`; Nemotron-3/o-series read
+      `reasoning_effort`. We send both so the same flag works on all backends
+      (each model ignores the field it doesn't recognise).
+    - "low"/"medium"/"high": pass through as `reasoning_effort`. Qwen3 doesn't
+      have graded levels — leaving `enable_thinking` unset keeps its default
+      (on), which matches the user's intent of "some reasoning".
+    - None: untouched.
+    """
+    if mode is None:
+        return
+    if mode == "off":
+        body["chat_template_kwargs"] = {"enable_thinking": False}
+        body["reasoning_effort"] = "low"
+    else:
+        body["reasoning_effort"] = mode
+
+
 def openai_chat(
     base_url: str,
     headers: dict[str, str],
@@ -53,6 +74,7 @@ def openai_chat(
     timeout: float = 300.0,
     max_retries: int = 2,
     backoff_base: float = 2.0,
+    reasoning_mode: str | None = None,
 ) -> Completion:
     messages: list[dict[str, str]] = []
     if system:
@@ -71,6 +93,7 @@ def openai_chat(
         body["max_tokens"] = params.max_tokens
     if params.seed is not None:
         body["seed"] = params.seed
+    _apply_reasoning_mode(body, reasoning_mode)
     url = f"{base_url.rstrip('/')}/chat/completions"
 
     # Retry loop: transient network errors and 5xx/429 are retried with
@@ -138,6 +161,7 @@ def openai_chat_messages(
     timeout: float = 300.0,
     max_retries: int = 2,
     backoff_base: float = 2.0,
+    reasoning_mode: str | None = None,
 ) -> dict:
     """Multi-turn variant of `openai_chat` that returns the raw assistant
     message (dict with keys `role`, `content`, optional `tool_calls`).
@@ -158,6 +182,7 @@ def openai_chat_messages(
     if tools:
         body["tools"] = tools
         body["tool_choice"] = "auto"
+    _apply_reasoning_mode(body, reasoning_mode)
     url = f"{base_url.rstrip('/')}/chat/completions"
 
     last_exc: Exception | None = None
