@@ -47,6 +47,10 @@ on:
         description: "Matrix concurrency. Leave 1 for shared vLLM endpoint; raise for OpenAI/hosted APIs."
         required: true
         default: "1"
+      sample_ids:
+        description: 'Optional comma-separated sample ids to run only those samples (smoke / single-sample re-run). Empty = all samples.'
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -213,10 +217,20 @@ jobs:
           JUDGE_BASE_URL: ${{ secrets.JUDGE_BASE_URL }}
           JUDGE_API_KEY: ${{ secrets.JUDGE_API_KEY }}
           JUDGE_MODEL_NAME: ${{ secrets.JUDGE_MODEL_NAME }}
+          SAMPLE_IDS: ${{ github.event.inputs.sample_ids }}
         run: |
+          extra=()
+          if [ -n "${SAMPLE_IDS:-}" ]; then
+            IFS=',' read -ra ids <<< "$SAMPLE_IDS"
+            for id in "${ids[@]}"; do
+              id_trimmed="$(echo "$id" | xargs)"
+              [ -n "$id_trimmed" ] && extra+=(--sample-id "$id_trimmed")
+            done
+          fi
           uv run llm-lb run \
             --task "../${{ matrix.task_path }}" \
-            --model "../${{ matrix.model_path }}"
+            --model "../${{ matrix.model_path }}" \
+            "${extra[@]}"
 
       # Aggregation (leaderboards + global index + feed) is NOT done here to
       # keep score-PRs conflict-free: generated files would clash with every

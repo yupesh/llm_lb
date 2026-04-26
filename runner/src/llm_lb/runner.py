@@ -334,8 +334,15 @@ def run(
     model_path: Path,
     out_dir: Path | None = None,
     limit: int | None = None,
+    sample_ids: list[str] | None = None,
 ) -> Path:
     task, samples = load_task(task_dir)
+    if sample_ids:
+        wanted = set(sample_ids)
+        samples = [s for s in samples if s.id in wanted]
+        missing = wanted - {s.id for s in samples}
+        if missing:
+            raise RuntimeError(f"sample_ids not found in task: {sorted(missing)}")
     if limit is not None and limit > 0:
         samples = samples[:limit]
     model = load_model(model_path)
