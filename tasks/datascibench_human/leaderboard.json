@@ -145,7 +145,18 @@
       "p95_latency_ms": 23790.244513000005,
       "cost_usd": null,
       "result_file": "results/mistral-small-3.1@vllm__2026-04-24T17-11-03Z.json"
+    },
+    {
+      "model_id": "gemma-3-12b-it@vllm",
+      "score": 0.76,
+      "metrics": {
+        "judge_score": 0.76
+      },
+      "tps": 103.29225577833678,
+      "p95_latency_ms": 22271.62091499997,
+      "cost_usd": null,
+      "result_file": "results/gemma-3-12b-it@vllm__2026-04-26T12-36-55Z.json"
     }
   ],
-  "updated_at": "2026-04-26T05:26:15+00:00"
+  "updated_at": "2026-04-26T13:06:18+00:00"
 }

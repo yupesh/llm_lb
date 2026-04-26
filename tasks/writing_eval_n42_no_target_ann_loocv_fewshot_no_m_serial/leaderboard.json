@@ -147,6 +147,19 @@
       "result_file": "results/gpt-oss-120b@vllm__2026-04-24T01-49-53Z.json"
     },
     {
+      "model_id": "gemma-3-12b-it@vllm",
+      "score": 0.24776119402985097,
+      "metrics": {
+        "accuracy": 0.2619047619047619,
+        "adjacent_accuracy": 0.9047619047619048,
+        "qwk": 0.24776119402985097
+      },
+      "tps": 3.5718935550238715,
+      "p95_latency_ms": 1150.3614780000078,
+      "cost_usd": null,
+      "result_file": "results/gemma-3-12b-it@vllm__2026-04-26T12-48-42Z.json"
+    },
+    {
       "model_id": "deepseek32exp@vllm",
       "score": 0.23076923076923073,
       "metrics": {
@@ -186,5 +199,5 @@
       "result_file": "results/nemotron-3-super@vllm__2026-04-26T05-35-34Z.json"
     }
   ],
-  "updated_at": "2026-04-26T05:55:45+00:00"
+  "updated_at": "2026-04-26T13:06:18+00:00"
 }
