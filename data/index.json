@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T00:02:50+00:00",
+  "generated_at": "2026-04-26T00:05:08+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -4596,6 +4596,20 @@
     {
       "task_id": "intent_classification",
       "task_version": "1.0",
+      "model_id": "mistral-small-4@vllm",
+      "score": 0.8,
+      "metrics": {
+        "accuracy": 0.8,
+        "macro_f1": 0.7916666666666666
+      },
+      "tps": 3.299092361627283,
+      "p95_latency_ms": 1210.180739000002,
+      "cost_usd": null,
+      "result_file": "tasks/intent_classification/results/mistral-small-4@vllm__2026-04-26T00-02-41Z.json"
+    },
+    {
+      "task_id": "intent_classification",
+      "task_version": "1.0",
       "model_id": "nemotron-3-super@vllm",
       "score": 0.7,
       "metrics": {
@@ -4760,6 +4774,20 @@
       "p95_latency_ms": 612.3701239999946,
       "cost_usd": null,
       "result_file": "tasks/jailbreak_detection/results/gemma-3-12b-it@vllm__2026-04-23T11-39-18Z.json"
+    },
+    {
+      "task_id": "jailbreak_detection",
+      "task_version": "1.0",
+      "model_id": "mistral-small-4@vllm",
+      "score": 1.0,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "tps": 5.231703272376354,
+      "p95_latency_ms": 900.9725660000072,
+      "cost_usd": null,
+      "result_file": "tasks/jailbreak_detection/results/mistral-small-4@vllm__2026-04-26T00-03-08Z.json"
     },
     {
       "task_id": "jailbreak_detection",
@@ -5002,6 +5030,20 @@
     {
       "task_id": "jailbreak_detection_beavertails",
       "task_version": "1.0",
+      "model_id": "mistral-small-4@vllm",
+      "score": 0.65,
+      "metrics": {
+        "accuracy": 0.65,
+        "macro_f1": 0.6491228070175439
+      },
+      "tps": 4.225538392418036,
+      "p95_latency_ms": 869.8105679999983,
+      "cost_usd": null,
+      "result_file": "tasks/jailbreak_detection_beavertails/results/mistral-small-4@vllm__2026-04-26T00-03-38Z.json"
+    },
+    {
+      "task_id": "jailbreak_detection_beavertails",
+      "task_version": "1.0",
       "model_id": "qwen3.6-35b@vllm",
       "score": 0.6,
       "metrics": {
@@ -5183,6 +5225,19 @@
       "p95_latency_ms": 951.6474010000024,
       "cost_usd": null,
       "result_file": "tasks/kg_entity_name_refinement/results/gemma-3-12b-it@vllm__2026-04-23T11-40-28Z.json"
+    },
+    {
+      "task_id": "kg_entity_name_refinement",
+      "task_version": "1.0",
+      "model_id": "mistral-small-4@vllm",
+      "score": 0.8400000000000001,
+      "metrics": {
+        "judge_score": 0.8400000000000001
+      },
+      "tps": 7.33093744803725,
+      "p95_latency_ms": 927.7761999999825,
+      "cost_usd": null,
+      "result_file": "tasks/kg_entity_name_refinement/results/mistral-small-4@vllm__2026-04-26T00-04-18Z.json"
     },
     {
       "task_id": "kg_entity_name_refinement",
