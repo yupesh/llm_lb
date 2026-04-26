@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T02:10:19+00:00",
+  "generated_at": "2026-04-26T02:14:45+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -5608,19 +5608,6 @@
       "p95_latency_ms": 45641.47432100003,
       "cost_usd": null,
       "result_file": "tasks/retail_agent_dialog/results/gpt-oss-120b@vllm__2026-04-24T05-45-46Z.json"
-    },
-    {
-      "task_id": "retail_agent_dialog",
-      "task_version": "1.1",
-      "model_id": "mistral-small-4@vllm",
-      "score": 0.74375,
-      "metrics": {
-        "judge_score": 0.74375
-      },
-      "tps": 83.73224208595352,
-      "p95_latency_ms": 29780.038267999997,
-      "cost_usd": null,
-      "result_file": "tasks/retail_agent_dialog/results/mistral-small-4@vllm__2026-04-26T00-18-19Z.json"
     },
     {
       "task_id": "retail_agent_dialog",

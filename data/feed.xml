@@ -133,13 +133,6 @@
     <summary>accuracy=0.800, macro_f1=0.798</summary>
   </entry>
   <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/retail_agent_dialog/1.1/mistral-small-4@vllm/2026-04-26T00:18:19+00:00</id>
-    <title>mistral-small-4@vllm scored 0.744 judge_score on retail_agent_dialog v1.1</title>
-    <updated>2026-04-26T00:18:19+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/retail_agent_dialog" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.744</summary>
-  </entry>
-  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/oos_detection/1.0/mistral-small-4@vllm/2026-04-26T00:07:21+00:00</id>
     <title>mistral-small-4@vllm scored 0.633 accuracy on oos_detection v1.0</title>
     <updated>2026-04-26T00:07:21+00:00</updated>
@@ -355,5 +348,12 @@
     <updated>2026-04-25T18:14:32+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial" rel="alternate" type="text/html"/>
     <summary>accuracy=0.262, adjacent_accuracy=0.762, qwk=0.327</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial/1.1/qwen3-235B-A22B@vllm/2026-04-25T18:05:09+00:00</id>
+    <title>qwen3-235B-A22B@vllm scored 0.190 accuracy on writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial v1.1</title>
+    <updated>2026-04-25T18:05:09+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.190, adjacent_accuracy=0.738, qwk=0.363</summary>
   </entry>
 </feed>
