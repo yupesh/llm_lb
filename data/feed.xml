@@ -4,28 +4,14 @@
   <id>tag:yupesh.github.io,2026:llm_lb/feed</id>
   <link href="https://yupesh.github.io/llm_lb/" rel="alternate" type="text/html"/>
   <link href="https://yupesh.github.io/llm_lb/data/feed.xml" rel="self" type="application/atom+xml"/>
-  <updated>2026-04-26T10:38:26+00:00</updated>
+  <updated>2026-04-26T07:42:28+00:00</updated>
   <author><name>LLM Leaderboard</name></author>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/retail_agent_dialog/1.1/mistral-small-3.1@vllm/2026-04-26T10:38:26+00:00</id>
-    <title>mistral-small-3.1@vllm scored 0.400 judge_score on retail_agent_dialog v1.1</title>
-    <updated>2026-04-26T10:38:26+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/retail_agent_dialog" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.400</summary>
-  </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_with_m_serial/1.1/nemotron-3-super@vllm/2026-04-26T07:42:28+00:00</id>
     <title>nemotron-3-super@vllm scored 0.071 accuracy on writing_eval_n42_with_ann_with_m_serial v1.1</title>
     <updated>2026-04-26T07:42:28+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_with_m_serial" rel="alternate" type="text/html"/>
     <summary>accuracy=0.071, adjacent_accuracy=0.214, qwk=-0.026</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/retail_agent_dialog/1.1/mistral-small-3.1@vllm/2026-04-26T07:31:21+00:00</id>
-    <title>mistral-small-3.1@vllm scored 0.200 judge_score on retail_agent_dialog v1.1</title>
-    <updated>2026-04-26T07:31:21+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/retail_agent_dialog" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.200</summary>
   </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_no_m_serial/1.1/nemotron-3-super@vllm/2026-04-26T07:29:25+00:00</id>
@@ -355,5 +341,19 @@
     <updated>2026-04-26T00:22:29+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_bird" rel="alternate" type="text/html"/>
     <summary>judge_score=0.718</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_ambiguity/1.0/mistral-small-4@vllm/2026-04-26T00:21:33+00:00</id>
+    <title>mistral-small-4@vllm scored 0.692 judge_score on text2sql_ambiguity v1.0</title>
+    <updated>2026-04-26T00:21:33+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_ambiguity" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.692</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/temporal_information_extraction/1.0/mistral-small-4@vllm/2026-04-26T00:20:22+00:00</id>
+    <title>mistral-small-4@vllm scored 0.427 judge_score on temporal_information_extraction v1.0</title>
+    <updated>2026-04-26T00:20:22+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/temporal_information_extraction" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.427</summary>
   </entry>
 </feed>
