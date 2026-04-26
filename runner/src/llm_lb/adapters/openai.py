@@ -36,7 +36,7 @@ class OpenAIAdapter:
             user,
             params,
             self.timeout,
-            reasoning_mode=self.model.reasoning_mode,
+            reasoning_mode=params.reasoning_mode or self.model.reasoning_mode,
         )
 
     def chat_messages(
@@ -53,5 +53,5 @@ class OpenAIAdapter:
             params,
             tools=tools,
             timeout=self.timeout,
-            reasoning_mode=self.model.reasoning_mode,
+            reasoning_mode=params.reasoning_mode or self.model.reasoning_mode,
         )

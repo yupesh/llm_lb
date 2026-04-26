@@ -36,6 +36,24 @@
           ],
           "default": null,
           "title": "Seed"
+        },
+        "reasoning_mode": {
+          "anyOf": [
+            {
+              "enum": [
+                "off",
+                "low",
+                "medium",
+                "high"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reasoning Mode"
         }
       },
       "title": "LLMParams",
