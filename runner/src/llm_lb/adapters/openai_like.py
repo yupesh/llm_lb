@@ -43,25 +43,42 @@ _RETRY_EXCEPTIONS = (
 )
 
 
-def _apply_reasoning_mode(body: dict, mode: str | None) -> None:
+def _detect_reasoning_api(served_name: str) -> str:
+    """Pick the request-body shape that the served model expects.
+
+    - "qwen": Qwen3+ chat templates honour `chat_template_kwargs.enable_thinking`.
+      litellm rejects `reasoning_effort` for Qwen with HTTP 400, so we must NOT
+      send it.
+    - "openai": Nemotron-3, gpt-oss, OpenAI o-series read `reasoning_effort`.
+    """
+    n = (served_name or "").lower()
+    if n.startswith("qwen/") or "/qwen" in n or n.startswith("qwen"):
+        return "qwen"
+    return "openai"
+
+
+def _apply_reasoning_mode(body: dict, mode: str | None, api_style: str) -> None:
     """Inject reasoning-control fields into the request body.
 
-    - "off": disable thinking entirely. Qwen3+ honours
-      `chat_template_kwargs.enable_thinking=false`; Nemotron-3/o-series read
-      `reasoning_effort`. We send both so the same flag works on all backends
-      (each model ignores the field it doesn't recognise).
-    - "low"/"medium"/"high": pass through as `reasoning_effort`. Qwen3 doesn't
-      have graded levels — leaving `enable_thinking` unset keeps its default
-      (on), which matches the user's intent of "some reasoning".
-    - None: untouched.
+    Two mutually-exclusive API styles (litellm validates strictly, so we can't
+    send both):
+      - api_style="qwen": `chat_template_kwargs.enable_thinking` (Qwen3+).
+      - api_style="openai": `reasoning_effort` (Nemotron-3, gpt-oss, OpenAI).
+
+    Modes:
+      - "off": disable thinking. For Qwen → enable_thinking=False; for the
+        OpenAI path → reasoning_effort="low" (closest to off across vendors).
+      - "low"/"medium"/"high": passed through as reasoning_effort on the
+        OpenAI path; for Qwen, treated as enable_thinking=True (graded levels
+        aren't supported by Qwen3 templates).
+      - None: untouched.
     """
     if mode is None:
         return
-    if mode == "off":
-        body["chat_template_kwargs"] = {"enable_thinking": False}
-        body["reasoning_effort"] = "low"
-    else:
-        body["reasoning_effort"] = mode
+    if api_style == "qwen":
+        body["chat_template_kwargs"] = {"enable_thinking": mode != "off"}
+        return
+    body["reasoning_effort"] = "low" if mode == "off" else mode
 
 
 def openai_chat(
@@ -93,7 +110,7 @@ def openai_chat(
         body["max_tokens"] = params.max_tokens
     if params.seed is not None:
         body["seed"] = params.seed
-    _apply_reasoning_mode(body, reasoning_mode)
+    _apply_reasoning_mode(body, reasoning_mode, _detect_reasoning_api(served_name))
     url = f"{base_url.rstrip('/')}/chat/completions"
 
     # Retry loop: transient network errors and 5xx/429 are retried with
@@ -182,7 +199,7 @@ def openai_chat_messages(
     if tools:
         body["tools"] = tools
         body["tool_choice"] = "auto"
-    _apply_reasoning_mode(body, reasoning_mode)
+    _apply_reasoning_mode(body, reasoning_mode, _detect_reasoning_api(served_name))
     url = f"{base_url.rstrip('/')}/chat/completions"
 
     last_exc: Exception | None = None
