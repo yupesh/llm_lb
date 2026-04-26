@@ -4,8 +4,71 @@
   <id>tag:yupesh.github.io,2026:llm_lb/feed</id>
   <link href="https://yupesh.github.io/llm_lb/" rel="alternate" type="text/html"/>
   <link href="https://yupesh.github.io/llm_lb/data/feed.xml" rel="self" type="application/atom+xml"/>
-  <updated>2026-04-26T16:50:57+00:00</updated>
+  <updated>2026-04-26T20:11:35+00:00</updated>
   <author><name>LLM Leaderboard</name></author>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_ann_with_m_serial/1.1/nemotron-3-super@vllm/2026-04-26T20:11:35+00:00</id>
+    <title>nemotron-3-super@vllm scored 0.071 accuracy on writing_eval_n42_no_ann_with_m_serial v1.1</title>
+    <updated>2026-04-26T20:11:35+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_ann_with_m_serial" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.071, adjacent_accuracy=0.262, qwk=0.092</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/topic_classification/1.0/nemotron-3-super@vllm/2026-04-26T19:50:35+00:00</id>
+    <title>nemotron-3-super@vllm scored 0.800 accuracy on topic_classification v1.0</title>
+    <updated>2026-04-26T19:50:35+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/topic_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.800, macro_f1=0.787</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text_classification/1.0/nemotron-3-super@vllm/2026-04-26T19:50:01+00:00</id>
+    <title>nemotron-3-super@vllm scored 1.000 accuracy on text_classification v1.0</title>
+    <updated>2026-04-26T19:50:01+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=1.000, macro_f1=1.000</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_bird/1.0/nemotron-3-super@vllm/2026-04-26T19:49:34+00:00</id>
+    <title>nemotron-3-super@vllm scored 0.564 judge_score on text2sql_bird v1.0</title>
+    <updated>2026-04-26T19:49:34+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_bird" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.564</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_ambiguity/1.0/nemotron-3-super@vllm/2026-04-26T19:47:08+00:00</id>
+    <title>nemotron-3-super@vllm scored 0.625 judge_score on text2sql_ambiguity v1.0</title>
+    <updated>2026-04-26T19:47:08+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_ambiguity" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.625</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/temporal_information_extraction/1.0/nemotron-3-super@vllm/2026-04-26T19:43:14+00:00</id>
+    <title>nemotron-3-super@vllm scored 0.347 judge_score on temporal_information_extraction v1.0</title>
+    <updated>2026-04-26T19:43:14+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/temporal_information_extraction" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.347</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/summarization/1.0/nemotron-3-super@vllm/2026-04-26T19:27:19+00:00</id>
+    <title>nemotron-3-super@vllm scored 0.760 judge_score on summarization v1.0</title>
+    <updated>2026-04-26T19:27:19+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/summarization" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.760</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/nemotron-3-super@vllm/2026-04-26T19:26:50+00:00</id>
+    <title>nemotron-3-super@vllm scored 0.750 accuracy on safety_classification v1.0</title>
+    <updated>2026-04-26T19:26:50+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/safety_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.750, macro_f1=0.744</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/retail_agent_dialog/1.1/nemotron-3-super@vllm/2026-04-26T19:21:30+00:00</id>
+    <title>nemotron-3-super@vllm scored 0.013 judge_score on retail_agent_dialog v1.1</title>
+    <updated>2026-04-26T19:21:30+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/retail_agent_dialog" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.013</summary>
+  </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/oos_detection/1.0/nemotron-3-super@vllm/2026-04-26T16:50:57+00:00</id>
     <title>nemotron-3-super@vllm scored 0.500 accuracy on oos_detection v1.0</title>
@@ -292,68 +355,5 @@
     <updated>2026-04-26T05:39:26+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/topic_classification" rel="alternate" type="text/html"/>
     <summary>accuracy=1.000, macro_f1=1.000</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/text_classification/1.0/qwen3.6-35b@vllm/2026-04-26T05:39:05+00:00</id>
-    <title>qwen3.6-35b@vllm scored 1.000 accuracy on text_classification v1.0</title>
-    <updated>2026-04-26T05:39:05+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/text_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=1.000, macro_f1=1.000</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/qwen3.6-35b@vllm/2026-04-26T05:38:43+00:00</id>
-    <title>qwen3.6-35b@vllm scored 0.800 accuracy on safety_classification v1.0</title>
-    <updated>2026-04-26T05:38:43+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/safety_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.800, macro_f1=0.800</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/retail_agent_dialog/1.1/qwen3.6-35b@vllm/2026-04-26T05:38:19+00:00</id>
-    <title>qwen3.6-35b@vllm scored 0.745 judge_score on retail_agent_dialog v1.1</title>
-    <updated>2026-04-26T05:38:19+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/retail_agent_dialog" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.745</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial/1.1/nemotron-3-super@vllm/2026-04-26T05:35:34+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.405 accuracy on writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial v1.1</title>
-    <updated>2026-04-26T05:35:34+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.405, adjacent_accuracy=0.738, qwk=0.175</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/oos_detection/1.0/qwen3.6-35b@vllm/2026-04-26T05:29:35+00:00</id>
-    <title>qwen3.6-35b@vllm scored 0.433 accuracy on oos_detection v1.0</title>
-    <updated>2026-04-26T05:29:35+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/oos_detection" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.433, macro_f1=0.302</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection_beavertails/1.0/qwen3.6-35b@vllm/2026-04-26T05:28:56+00:00</id>
-    <title>qwen3.6-35b@vllm scored 0.600 accuracy on jailbreak_detection_beavertails v1.0</title>
-    <updated>2026-04-26T05:28:56+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection_beavertails" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.600, macro_f1=0.524</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection/1.0/qwen3.6-35b@vllm/2026-04-26T05:28:24+00:00</id>
-    <title>qwen3.6-35b@vllm scored 1.000 accuracy on jailbreak_detection v1.0</title>
-    <updated>2026-04-26T05:28:24+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection" rel="alternate" type="text/html"/>
-    <summary>accuracy=1.000, macro_f1=1.000</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/intent_classification/1.0/qwen3.6-35b@vllm/2026-04-26T05:27:58+00:00</id>
-    <title>qwen3.6-35b@vllm scored 1.000 accuracy on intent_classification v1.0</title>
-    <updated>2026-04-26T05:27:58+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/intent_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=1.000, macro_f1=1.000</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/hazard_category/1.0/qwen3.6-35b@vllm/2026-04-26T05:27:34+00:00</id>
-    <title>qwen3.6-35b@vllm scored 0.450 accuracy on hazard_category v1.0</title>
-    <updated>2026-04-26T05:27:34+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/hazard_category" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.450, macro_f1=0.355</summary>
   </entry>
 </feed>
