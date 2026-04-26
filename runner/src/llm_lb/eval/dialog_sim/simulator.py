@@ -178,6 +178,17 @@ def simulate_retail_dialog(
                 )
         else:
             log.warning("tool-call loop exceeded inner cap on turn %d", turn)
+            # Loop exhausted with the last assistant response still containing
+            # tool_calls — `support_messages` ends on a `role: "tool"` entry.
+            # Appending a user message after that violates OpenAI's role
+            # ordering (Mistral/litellm reject with HTTP 400). Inject a
+            # synthetic assistant turn so the next user message is valid.
+            fallback = (
+                "I'm having trouble completing the necessary tool calls. "
+                "Could you rephrase your request?"
+            )
+            support_messages.append({"role": "assistant", "content": fallback})
+            msg = support_messages[-1]
 
         agent_text = _extract_text(msg)
         conversation.append({"role": "assistant", "content": agent_text})
