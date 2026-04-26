@@ -126,11 +126,11 @@
     },
     {
       "model_id": "mistral-small-3.1@vllm",
-      "score": 0.4375,
+      "score": 0.4363636363636364,
       "metrics": {
-        "judge_score": 0.4375
+        "judge_score": 0.4363636363636364
       },
-      "tps": 39.37447320350741,
+      "tps": 39.46105124700925,
       "p95_latency_ms": 25147.038384999974,
       "cost_usd": null,
       "result_file": "results/mistral-small-3.1@vllm__2026-04-26T06-43-52Z.json"
@@ -147,5 +147,5 @@
       "result_file": "results/qwen3-235B-A22B@vllm__2026-04-25T17-41-40Z.json"
     }
   ],
-  "updated_at": "2026-04-26T07:44:59+00:00"
+  "updated_at": "2026-04-26T11:42:31+00:00"
 }
