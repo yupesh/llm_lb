@@ -15,17 +15,6 @@
       "result_file": "results/glm5.1@llama__2026-04-25T06-23-13Z.json"
     },
     {
-      "model_id": "qwen3.6-35b@vllm",
-      "score": 0.881818181818182,
-      "metrics": {
-        "judge_score": 0.881818181818182
-      },
-      "tps": 51.377265598540376,
-      "p95_latency_ms": 863846.0175849996,
-      "cost_usd": null,
-      "result_file": "results/qwen3.6-35b@vllm__2026-04-24T10-16-50Z.json"
-    },
-    {
       "model_id": "glm5-awq@vllm",
       "score": 0.8424242424242424,
       "metrics": {
@@ -48,17 +37,6 @@
       "result_file": "results/qwen3.5-397b@vllm__2026-04-24T09-14-03Z.json"
     },
     {
-      "model_id": "qwen3.5-27b@vllm",
-      "score": 0.8258064516129032,
-      "metrics": {
-        "judge_score": 0.8258064516129032
-      },
-      "tps": 36.65587223563754,
-      "p95_latency_ms": 1158472.1484279998,
-      "cost_usd": null,
-      "result_file": "results/qwen3.5-27b@vllm__2026-04-25T01-31-49Z.json"
-    },
-    {
       "model_id": "gemma-4-31b-it@vllm",
       "score": 0.7696969696969698,
       "metrics": {
@@ -79,6 +57,17 @@
       "p95_latency_ms": 45641.47432100003,
       "cost_usd": null,
       "result_file": "results/gpt-oss-120b@vllm__2026-04-24T05-45-46Z.json"
+    },
+    {
+      "model_id": "mistral-small-4@vllm",
+      "score": 0.74375,
+      "metrics": {
+        "judge_score": 0.74375
+      },
+      "tps": 83.73224208595352,
+      "p95_latency_ms": 29780.038267999997,
+      "cost_usd": null,
+      "result_file": "results/mistral-small-4@vllm__2026-04-26T00-18-19Z.json"
     },
     {
       "model_id": "minimax-m2.7@vllm",
@@ -114,17 +103,6 @@
       "result_file": "results/qwen3-30b@vllm__2026-04-24T08-23-03Z.json"
     },
     {
-      "model_id": "mistral-small-3.1@vllm",
-      "score": 0.48125,
-      "metrics": {
-        "judge_score": 0.48125
-      },
-      "tps": 41.449371610902524,
-      "p95_latency_ms": 29467.264166000063,
-      "cost_usd": null,
-      "result_file": "results/mistral-small-3.1@vllm__2026-04-24T17-51-36Z.json"
-    },
-    {
       "model_id": "qwen3-235B-A22B@vllm",
       "score": 0.43030303030303035,
       "metrics": {
@@ -136,5 +114,5 @@
       "result_file": "results/qwen3-235B-A22B@vllm__2026-04-25T17-41-40Z.json"
     }
   ],
-  "updated_at": "2026-04-25T18:52:30+00:00"
+  "updated_at": "2026-04-26T00:25:29+00:00"
 }
