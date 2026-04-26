@@ -4,8 +4,22 @@
   <id>tag:yupesh.github.io,2026:llm_lb/feed</id>
   <link href="https://yupesh.github.io/llm_lb/" rel="alternate" type="text/html"/>
   <link href="https://yupesh.github.io/llm_lb/data/feed.xml" rel="self" type="application/atom+xml"/>
-  <updated>2026-04-26T00:04:18+00:00</updated>
+  <updated>2026-04-26T00:05:50+00:00</updated>
   <author><name>LLM Leaderboard</name></author>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_relation_refinement/1.0/mistral-small-4@vllm/2026-04-26T00:05:50+00:00</id>
+    <title>mistral-small-4@vllm scored 0.900 judge_score on kg_relation_refinement v1.0</title>
+    <updated>2026-04-26T00:05:50+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_relation_refinement" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.900</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_entity_type_refinement/1.0/mistral-small-4@vllm/2026-04-26T00:05:07+00:00</id>
+    <title>mistral-small-4@vllm scored 0.590 judge_score on kg_entity_type_refinement v1.0</title>
+    <updated>2026-04-26T00:05:07+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_entity_type_refinement" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.590</summary>
+  </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/kg_entity_name_refinement/1.0/mistral-small-4@vllm/2026-04-26T00:04:18+00:00</id>
     <title>mistral-small-4@vllm scored 0.840 judge_score on kg_entity_name_refinement v1.0</title>
@@ -341,19 +355,5 @@
     <updated>2026-04-25T15:35:49+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/retail_agent_dialog" rel="alternate" type="text/html"/>
     <summary>judge_score=0.642</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring_condensed/1.1/deepseek32exp@vllm/2026-04-25T15:08:23+00:00</id>
-    <title>deepseek32exp@vllm scored 0.300 accuracy on essay_vocabulary_scoring_condensed v1.1</title>
-    <updated>2026-04-25T15:08:23+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.300, macro_f1=0.180, qwk=0.133</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring/1.1/deepseek32exp@vllm/2026-04-25T15:07:58+00:00</id>
-    <title>deepseek32exp@vllm scored 0.350 accuracy on essay_vocabulary_scoring v1.1</title>
-    <updated>2026-04-25T15:07:58+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.350, macro_f1=0.261, qwk=0.333</summary>
   </entry>
 </feed>
