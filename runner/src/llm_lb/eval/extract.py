@@ -45,17 +45,39 @@ def extract_label(
         for syn, canonical in aliases.items():
             candidates.append((syn, canonical))
 
-    best: tuple[int, int, str] | None = None
+    matches: list[tuple[int, int, str]] = []
     for needle, resolved in candidates:
         idx = raw_lower.find(needle.lower())
         if idx < 0:
             continue
-        # (position, -length, resolved-label) — min() picks earliest, then
-        # longest matching text as tiebreak.
-        key = (idx, -len(needle), resolved)
-        if best is None or key < best:
-            best = key
-    return best[2] if best is not None else raw.strip()
+        matches.append((idx, len(needle), resolved))
+
+    if not matches:
+        return raw.strip()
+
+    matches.sort(key=lambda m: (m[0], -m[1]))
+    pos1, len1, resolved1 = matches[0]
+
+    # Reject "list of labels" outputs. When the model dumps multiple distinct
+    # labels separated by only whitespace/punctuation (e.g. "A1\nA2\nB1\nB2"),
+    # the earliest-position rule would silently pick the first one — a wrong
+    # signal, since the model didn't actually choose. If a *different*
+    # resolved label starts within `len1 + 5` chars of the first match, treat
+    # the output as no-pick and fall back to raw text (eval marks it wrong).
+    end1 = pos1 + len1
+    for pos2, _len2, resolved2 in matches[1:]:
+        if resolved2 == resolved1:
+            continue
+        # Skip substring-overlap matches (e.g. `safe` found inside `unsafe`
+        # at position pos1+2). Longest-label tiebreak from the sort already
+        # picked `unsafe`; the inner `safe` isn't a real second pick.
+        if pos2 < end1:
+            continue
+        if pos2 - pos1 <= len1 + 5:
+            return raw.strip()
+        break
+
+    return resolved1
 
 
 def extract_regex(raw: str, pattern: str) -> str:

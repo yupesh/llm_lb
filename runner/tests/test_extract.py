@@ -86,6 +86,19 @@ def test_extract_label_aliases_none_is_default():
     assert extract_label("unsafe", ["jailbreak", "safe"], None) == "safe"
 
 
+def test_extract_label_rejects_list_of_labels():
+    """When the model dumps every label option (e.g. echoes the prompt's
+    enum) instead of picking one, the earliest-position rule would silently
+    return the first label. Treat such "list" outputs as no-pick."""
+    cefr = ["A1", "A2", "B1", "B2", "C1", "C2"]
+    assert extract_label("A1\nA2\nB1\nB2\nC1\nC2", cefr) == "A1\nA2\nB1\nB2\nC1\nC2"
+    assert extract_label("A1, A2, B1, B2, C1, C2", cefr) == "A1, A2, B1, B2, C1, C2"
+    # Plain pick still works.
+    assert extract_label("My answer is B2.", cefr) == "B2"
+    # A second label that appears far later (real prose) is not a list.
+    assert extract_label("B2 — though A1 might also fit.", cefr) == "B2"
+
+
 def test_extract_label_labels_with_commas():
     labels = [
         "animal_abuse",

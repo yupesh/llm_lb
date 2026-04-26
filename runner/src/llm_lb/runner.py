@@ -481,3 +481,63 @@ def resume(result_path: Path, task_dir: Path, model_path: Path) -> tuple[Path, i
     ))
     result_path.write_text(new_result.model_dump_json(indent=2))
     return result_path, len(err_ids)
+
+
+def reextract(result_path: Path, task_dir: Path) -> tuple[Path, int]:
+    """Re-apply the task's extractor over each sample's stored `raw_output`,
+    recompute `correct` flags and aggregate metrics, and overwrite the result
+    file in place.
+
+    Use case: a bug is found in `eval.extract` (e.g. earliest-position rule
+    mishandling list-of-labels outputs). Instead of re-running every model
+    against every task — expensive, and the model output hasn't changed —
+    we replay just the extractor over the recorded `raw_output`.
+
+    Skips:
+      - samples without `raw_output` (older result files predate the field;
+        returns 0 if no sample has any raw_output)
+      - samples with `error` set (their prediction was already empty)
+      - dialog-simulation tasks (no per-sample extractor)
+      - judge_raw_score is preserved per-sample (the model output didn't
+        change, the judge already scored it)
+
+    Returns (result_path, n_updated). `n_updated` counts samples whose
+    `correct` or `prediction` flipped after re-extraction.
+    """
+    existing = RunResult.model_validate_json(result_path.read_text())
+    task, _ = load_task(task_dir)
+
+    if existing.task_id != task.name:
+        raise RuntimeError(
+            f"Task mismatch: result file has task_id={existing.task_id!r} "
+            f"but the provided task is {task.name!r}."
+        )
+    if task.runner_kind == "dialog_simulation":
+        return result_path, 0
+
+    has_any_raw = any(p.raw_output is not None for p in existing.samples)
+    if not has_any_raw:
+        return result_path, 0
+
+    n_updated = 0
+    new_samples: list[SamplePrediction] = []
+    for p in existing.samples:
+        if p.error or p.raw_output is None:
+            new_samples.append(p)
+            continue
+        new_pred = _extract_prediction(task, p.raw_output)
+        new_correct = _is_correct(task, new_pred, p.expected)
+        if new_pred != p.prediction or new_correct != p.correct:
+            n_updated += 1
+        new_samples.append(p.model_copy(update={
+            "prediction": new_pred,
+            "correct": new_correct,
+        }))
+
+    new_metrics = _compute_metrics(task, new_samples)
+    new_result = existing.model_copy(update={
+        "samples": new_samples,
+        "metrics": new_metrics,
+    })
+    result_path.write_text(new_result.model_dump_json(indent=2))
+    return result_path, n_updated

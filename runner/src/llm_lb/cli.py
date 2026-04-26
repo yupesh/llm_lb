@@ -7,6 +7,7 @@ import typer
 
 from .aggregate import aggregate_all
 from .models import Leaderboard, ModelCard, RunResult, Sample, TaskSpec
+from .runner import reextract as reextract_run
 from .runner import resume as resume_run
 from .runner import run as run_task
 from .validate import validate_model_file, validate_task_dir
@@ -59,6 +60,21 @@ def resume(
         typer.echo(f"no error-marked samples in {path}; nothing to do")
     else:
         typer.echo(f"resumed {n} sample(s) in {path}")
+
+
+@app.command()
+def reextract(
+    result: Path = typer.Option(..., exists=True, file_okay=True, dir_okay=False),
+    task: Path = typer.Option(..., exists=True, file_okay=False, dir_okay=True),
+) -> None:
+    """Re-apply the task's extractor over each sample's stored raw_output,
+    recompute correct flags + aggregate metrics, and overwrite the file
+    in place. No network calls — for fixing extractor bugs offline."""
+    path, n = reextract_run(result, task)
+    if n == 0:
+        typer.echo(f"no changes in {path}")
+    else:
+        typer.echo(f"reextracted {n} sample(s) in {path}")
 
 
 @app.command()
