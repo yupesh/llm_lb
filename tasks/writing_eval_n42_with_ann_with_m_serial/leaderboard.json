@@ -171,7 +171,20 @@
       "p95_latency_ms": 114660.83937600002,
       "cost_usd": null,
       "result_file": "results/glm5-awq@vllm__2026-04-24T21-21-23Z.json"
+    },
+    {
+      "model_id": "nemotron-3-super@vllm",
+      "score": -0.026035502958579704,
+      "metrics": {
+        "accuracy": 0.07142857142857142,
+        "adjacent_accuracy": 0.21428571428571427,
+        "qwk": -0.026035502958579704
+      },
+      "tps": 18.11826267651063,
+      "p95_latency_ms": 22834.39627100006,
+      "cost_usd": null,
+      "result_file": "results/nemotron-3-super@vllm__2026-04-26T07-42-28Z.json"
     }
   ],
-  "updated_at": "2026-04-26T00:31:27+00:00"
+  "updated_at": "2026-04-26T07:44:59+00:00"
 }
