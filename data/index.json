@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T00:25:29+00:00",
+  "generated_at": "2026-04-26T00:26:42+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -8309,6 +8309,21 @@
       "p95_latency_ms": 43877.118466,
       "cost_usd": null,
       "result_file": "tasks/writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial/results/qwen3-235B-A22B@vllm__2026-04-25T18-14-32Z.json"
+    },
+    {
+      "task_id": "writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial",
+      "task_version": "1.1",
+      "model_id": "mistral-small-4@vllm",
+      "score": 0.30794165316045363,
+      "metrics": {
+        "accuracy": 0.23809523809523808,
+        "adjacent_accuracy": 0.8095238095238095,
+        "qwk": 0.30794165316045363
+      },
+      "tps": 4.305451566703339,
+      "p95_latency_ms": 1362.218415000001,
+      "cost_usd": null,
+      "result_file": "tasks/writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial/results/mistral-small-4@vllm__2026-04-26T00-26-03Z.json"
     },
     {
       "task_id": "writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial",
