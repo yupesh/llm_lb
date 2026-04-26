@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T00:01:39+00:00",
+  "generated_at": "2026-04-26T00:02:13+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -3884,6 +3884,21 @@
       "p95_latency_ms": 29516.535258000004,
       "cost_usd": null,
       "result_file": "tasks/essay_vocabulary_scoring_condensed/results/qwen3-30b@vllm__2026-04-22T09-14-11Z.json"
+    },
+    {
+      "task_id": "essay_vocabulary_scoring_condensed",
+      "task_version": "1.1",
+      "model_id": "mistral-small-4@vllm",
+      "score": 0.5,
+      "metrics": {
+        "accuracy": 0.25,
+        "macro_f1": 0.21085164835164835,
+        "qwk": 0.5
+      },
+      "tps": 2.763548357866093,
+      "p95_latency_ms": 1339.5706459999985,
+      "cost_usd": null,
+      "result_file": "tasks/essay_vocabulary_scoring_condensed/results/mistral-small-4@vllm__2026-04-26T00-01-22Z.json"
     },
     {
       "task_id": "essay_vocabulary_scoring_condensed",
