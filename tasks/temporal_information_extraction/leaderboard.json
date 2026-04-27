@@ -103,6 +103,17 @@
       "result_file": "results/gemma-4-31b-it@vllm__2026-04-20T04-28-21Z.json"
     },
     {
+      "model_id": "gemma-4-26B-A4B-it@vllm",
+      "score": 0.48000000000000004,
+      "metrics": {
+        "judge_score": 0.48000000000000004
+      },
+      "tps": 105.08297187387565,
+      "p95_latency_ms": 4323.434221999996,
+      "cost_usd": null,
+      "result_file": "results/gemma-4-26B-A4B-it@vllm__2026-04-27T05-48-23Z.json"
+    },
+    {
       "model_id": "deepseek32exp@vllm",
       "score": 0.44000000000000006,
       "metrics": {
@@ -169,5 +180,5 @@
       "result_file": "results/nemotron-3-super@vllm__2026-04-26T19-43-14Z.json"
     }
   ],
-  "updated_at": "2026-04-26T23:06:14+00:00"
+  "updated_at": "2026-04-27T06:01:14+00:00"
 }

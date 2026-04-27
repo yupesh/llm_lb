@@ -4,6 +4,19 @@
   "primary_metric": "qwk",
   "ranking": [
     {
+      "model_id": "gemma-4-26B-A4B-it@vllm",
+      "score": 0.6369827134625459,
+      "metrics": {
+        "accuracy": 0.2857142857142857,
+        "adjacent_accuracy": 0.9761904761904762,
+        "qwk": 0.6369827134625459
+      },
+      "tps": 5.014406458604082,
+      "p95_latency_ms": 845.891660999996,
+      "cost_usd": null,
+      "result_file": "results/gemma-4-26B-A4B-it@vllm__2026-04-27T05-58-01Z.json"
+    },
+    {
       "model_id": "mistral-small-4@vllm",
       "score": 0.6237942122186495,
       "metrics": {
@@ -199,5 +212,5 @@
       "result_file": "results/nemotron-3-super@vllm__2026-04-26T07-42-28Z.json"
     }
   ],
-  "updated_at": "2026-04-26T13:05:48+00:00"
+  "updated_at": "2026-04-27T06:01:14+00:00"
 }
