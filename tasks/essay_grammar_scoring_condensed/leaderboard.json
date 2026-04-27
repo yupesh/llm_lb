@@ -17,6 +17,19 @@
       "result_file": "results/mistral-small-4@vllm__2026-04-25T23-59-29Z.json"
     },
     {
+      "model_id": "gemma-4-26B-A4B-it@vllm",
+      "score": 0.32352941176470595,
+      "metrics": {
+        "accuracy": 0.3,
+        "macro_f1": 0.23392857142857143,
+        "qwk": 0.32352941176470595
+      },
+      "tps": 3.0940105623122114,
+      "p95_latency_ms": 1163.1818899999757,
+      "cost_usd": null,
+      "result_file": "results/gemma-4-26B-A4B-it@vllm__2026-04-27T05-24-15Z.json"
+    },
+    {
       "model_id": "gemma-4-31b-it@vllm",
       "score": 0.32352941176470595,
       "metrics": {
@@ -199,5 +212,5 @@
       "result_file": "results/gpt-oss-120b@vllm__2026-04-24T01-30-33Z.json"
     }
   ],
-  "updated_at": "2026-04-26T02:10:18+00:00"
+  "updated_at": "2026-04-27T06:05:03+00:00"
 }
