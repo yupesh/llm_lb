@@ -4,6 +4,7 @@
    endpoint_kind: openai_chat
    hf_uri: nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4
    params: "67B (12B active, NVFP4)"
+   weights_size_gb: 74.8
    revision: "2026-04-25"
    endpoint_url: http://lnsigo.mipt.ru:4000/v1
    api_key_env: VLLM_PROXY_KEY

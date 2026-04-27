@@ -4,6 +4,7 @@
    endpoint_kind: openai_chat
    hf_uri: mistralai/Mistral-Small-3.1-24B-Instruct-2503
    params: "24B"
+   weights_size_gb: 44.7
    revision: "2023-10-01"
    endpoint_url: http://lnsigo.mipt.ru:4000/v1
    api_key_env: VLLM_PROXY_KEY     # <-- name of env var, not the key

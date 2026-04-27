@@ -4,6 +4,7 @@
    endpoint_kind: openai_chat
    hf_uri: lukealonso/GLM-5.1-NVFP4
    params: "437B (NVFP4)"
+   weights_size_gb: 433.9
    revision: "2026-04-02"
    endpoint_url: http://lnsigo.mipt.ru:4000/v1
    api_key_env: VLLM_PROXY_KEY     # <-- name of env var, not the key

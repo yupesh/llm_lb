@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T07:50:53+00:00",
+  "generated_at": "2026-04-27T08:00:23+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -429,7 +429,7 @@
       "provider": "openai_compat",
       "hf_uri": "QuantTrio/DeepSeek-V3.2-Exp-AWQ",
       "params": "671B (37B active, MoE, AWQ)",
-      "weights_size_gb": null,
+      "weights_size_gb": 372.4,
       "hardware": {
         "gpu_count": 4,
         "gpu_type": "H200",
@@ -455,7 +455,7 @@
       "provider": "openai_compat",
       "hf_uri": "google/gemma-3-12b-it",
       "params": "12B",
-      "weights_size_gb": null,
+      "weights_size_gb": 22.7,
       "hardware": {
         "gpu_count": 1,
         "gpu_type": "A100",
@@ -468,7 +468,7 @@
       "provider": "openai_compat",
       "hf_uri": "google/gemma-4-26B-A4B-it",
       "params": "26B-A4B",
-      "weights_size_gb": null,
+      "weights_size_gb": 48.1,
       "hardware": {
         "gpu_count": 1,
         "gpu_type": "H200",
@@ -481,7 +481,7 @@
       "provider": "openai_compat",
       "hf_uri": "google/gemma-4-31B-it",
       "params": "31B",
-      "weights_size_gb": null,
+      "weights_size_gb": 58.3,
       "hardware": {
         "gpu_count": 1,
         "gpu_type": "H200",
@@ -494,7 +494,7 @@
       "provider": "openai_compat",
       "hf_uri": "QuantTrio/GLM-5-AWQ",
       "params": "586B (AWQ)",
-      "weights_size_gb": null,
+      "weights_size_gb": 391.8,
       "hardware": {
         "gpu_count": 4,
         "gpu_type": "H200",
@@ -507,7 +507,7 @@
       "provider": "openai_compat",
       "hf_uri": "lukealonso/GLM-5.1-NVFP4",
       "params": "437B (NVFP4)",
-      "weights_size_gb": null,
+      "weights_size_gb": 433.9,
       "hardware": {
         "gpu_count": 4,
         "gpu_type": "H200",
@@ -529,7 +529,7 @@
       "provider": "openai_compat",
       "hf_uri": "openai/gpt-oss-120b",
       "params": "120B (~5B active, MoE)",
-      "weights_size_gb": null,
+      "weights_size_gb": 60.8,
       "hardware": {
         "gpu_count": 1,
         "gpu_type": "H200",
@@ -564,7 +564,7 @@
       "provider": "llama_guard",
       "hf_uri": "meta-llama/Llama-Guard-4-12B",
       "params": "12B",
-      "weights_size_gb": null,
+      "weights_size_gb": 22.4,
       "hardware": {
         "gpu_count": 1,
         "gpu_type": "H200",
@@ -577,7 +577,7 @@
       "provider": "openai_compat",
       "hf_uri": "MiniMaxAI/MiniMax-M2.7",
       "params": "229B (MoE)",
-      "weights_size_gb": null,
+      "weights_size_gb": 214.3,
       "hardware": {
         "gpu_count": 4,
         "gpu_type": "H200",
@@ -590,7 +590,7 @@
       "provider": "openai_compat",
       "hf_uri": "mistralai/Mistral-Small-3.1-24B-Instruct-2503",
       "params": "24B",
-      "weights_size_gb": null,
+      "weights_size_gb": 44.7,
       "hardware": {
         "gpu_count": 1,
         "gpu_type": "H200",
@@ -603,7 +603,7 @@
       "provider": "openai_compat",
       "hf_uri": "mistralai/Mistral-Small-4-119B-2603",
       "params": "119B (6B active, MoE 128/4, FP8)",
-      "weights_size_gb": null,
+      "weights_size_gb": 112.6,
       "hardware": {
         "gpu_count": 1,
         "gpu_type": "H200",
@@ -616,7 +616,7 @@
       "provider": "openai_compat",
       "hf_uri": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4",
       "params": "67B (12B active, NVFP4)",
-      "weights_size_gb": null,
+      "weights_size_gb": 74.8,
       "hardware": {
         "gpu_count": 1,
         "gpu_type": "H200",
@@ -629,7 +629,7 @@
       "provider": "openai_compat",
       "hf_uri": "Qwen/Qwen3-235B-A22B-Thinking-2507",
       "params": "235B (22B active, MoE)",
-      "weights_size_gb": null,
+      "weights_size_gb": 437.9,
       "hardware": {
         "gpu_count": 4,
         "gpu_type": "H200",
@@ -642,7 +642,7 @@
       "provider": "openai_compat",
       "hf_uri": "Qwen/Qwen3-30B-A3B",
       "params": "30B (3B active, MoE)",
-      "weights_size_gb": null,
+      "weights_size_gb": 56.9,
       "hardware": {
         "gpu_count": 1,
         "gpu_type": "A100",
@@ -668,7 +668,7 @@
       "provider": "openai_compat",
       "hf_uri": "Qwen/Qwen3.5-397B-A17B-FP8",
       "params": "397B (17B active, MoE, FP8)",
-      "weights_size_gb": null,
+      "weights_size_gb": 378.3,
       "hardware": {
         "gpu_count": 4,
         "gpu_type": "H200",
@@ -681,7 +681,7 @@
       "provider": "openai_compat",
       "hf_uri": "Qwen/Qwen3.6-35B-A3B",
       "params": "35B (3B active, MoE)",
-      "weights_size_gb": null,
+      "weights_size_gb": 67.0,
       "hardware": {
         "gpu_count": 1,
         "gpu_type": "H200",
