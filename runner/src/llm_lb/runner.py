@@ -55,6 +55,13 @@ def _p95(values: list[float]) -> float:
 
 def _extract_prediction(task: TaskSpec, raw: str) -> str:
     raw = strip_reasoning(raw)
+    # Run extract_label first when labels exist so its list-of-labels rejection also applies to answer_regex tasks.
+    if task.labels:
+        label_pred = extract_label(raw, task.labels, task.label_aliases)
+        if label_pred.lower() not in {lab.lower() for lab in task.labels} and (
+            not task.label_aliases or label_pred.lower() not in {a.lower() for a in task.label_aliases.values()}
+        ):
+            return label_pred
     if task.answer_regex:
         return extract_regex(raw, task.answer_regex)
     if task.labels:
