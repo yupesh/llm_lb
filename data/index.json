@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T08:57:18+00:00",
+  "generated_at": "2026-04-27T09:11:48+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -653,9 +653,9 @@
       "id": "qwen3.5-27b@vllm",
       "display_name": "Qwen3.5-27B (vLLM)",
       "provider": "openai_compat",
-      "hf_uri": "Qwen/Qwen3.5-27B-dfl",
+      "hf_uri": "Qwen/Qwen3.5-27B",
       "params": "27B",
-      "weights_size_gb": null,
+      "weights_size_gb": 55.6,
       "hardware": {
         "gpu_count": 1,
         "gpu_type": "A100",
