@@ -9,12 +9,13 @@
     "temperature": 1.0,
     "top_p": 0.95,
     "max_tokens": null,
-    "seed": null
+    "seed": null,
+    "reasoning_mode": null
   },
   "metrics": {
     "accuracy": 0.35714285714285715,
-    "adjacent_accuracy": 0.7619047619047619,
-    "qwk": 0.24679760888129798
+    "adjacent_accuracy": 0.7380952380952381,
+    "qwk": 0.08695652173913015
   },
   "tps": 79.75641176573254,
   "p95_latency_ms": 106761.66637300003,
@@ -47,7 +48,7 @@
     },
     {
       "id": "sample_07004",
-      "prediction": "A1",
+      "prediction": "We are an expert CEFR writing assessor.\nWe assess the student text using the provided task/context blocks as supporting evidence.\nWe use EXPERT_ANNOTATION, CALIBRATION_EXAMPLES, RETRIEVED_ERROR_SPANS, and RANKING_ANCHORS only as supporting context; never override direct evidence from the student text.\nWe return ONLY one CEFR label from: A1|A2|B1|B2|C1|C2.\nWe do not output JSON.\nWe do not output explanation.",
       "expected": "A2",
       "correct": false,
       "latency_ms": 2184.907733999992,
@@ -191,7 +192,7 @@
     },
     {
       "id": "sample_07017",
-      "prediction": "A1",
+      "prediction": "Okay, let me tackle this step by step. First, I need to read the task/context blocks carefully as supporting evidence. Next, I will assess the student text using the provided task/context blocks as supporting evidence. Then, I have to use EXPERT_ANNOTATION, CALIBRATION_EXAMPLES, RETRIEVED_ERROR_SPANS, and RANKING_ANCHORS only as supporting context; never override direct evidence from the student text. Finally, I should return ONLY one CEFR label from: A1|A2|B1|B2|C1|C2. Also, do not output JSON and do not output explanation.\n\nNow I will execute the plan.",
       "expected": "B2",
       "correct": false,
       "latency_ms": 3717.5457029999848,

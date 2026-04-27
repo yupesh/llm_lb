@@ -9,12 +9,13 @@
     "temperature": 1.0,
     "top_p": 0.95,
     "max_tokens": null,
-    "seed": null
+    "seed": null,
+    "reasoning_mode": null
   },
   "metrics": {
     "accuracy": 0.047619047619047616,
-    "adjacent_accuracy": 0.23809523809523808,
-    "qwk": -0.003462603878116255
+    "adjacent_accuracy": 0.21428571428571427,
+    "qwk": -0.1009564293304992
   },
   "tps": 65.72512522213103,
   "p95_latency_ms": 54948.71975000001,
@@ -23,7 +24,7 @@
   "samples": [
     {
       "id": "sample_07001",
-      "prediction": "A1",
+      "prediction": "A1\nA2\nB1\nB2\nC1\nC2",
       "expected": "A2",
       "correct": false,
       "latency_ms": 303744.97749200003,
@@ -59,7 +60,7 @@
     },
     {
       "id": "sample_07005",
-      "prediction": "A1",
+      "prediction": "- Answer: A1, A2, B1, B2, C1, C2. (Just the labels, no JSON, no explanation.)",
       "expected": "B1",
       "correct": false,
       "latency_ms": 1314.000754999995,
@@ -83,7 +84,7 @@
     },
     {
       "id": "sample_07007",
-      "prediction": "A1",
+      "prediction": "A1\nA2\nB1\nB2\nC1\nC2\nB2",
       "expected": "B2",
       "correct": false,
       "latency_ms": 21683.480122000106,
@@ -95,7 +96,7 @@
     },
     {
       "id": "sample_07008",
-      "prediction": "A1",
+      "prediction": "We need to output a single label from: A1|A2|B1|B2|C1|C2.\nThe answer is A1.",
       "expected": "B2",
       "correct": false,
       "latency_ms": 1311.9430130000183,
@@ -155,7 +156,7 @@
     },
     {
       "id": "sample_07014",
-      "prediction": "A1",
+      "prediction": "A1\nA2\nB1\nB2\nC1\nC2",
       "expected": "B2",
       "correct": false,
       "latency_ms": 1946.793525999965,
@@ -167,7 +168,7 @@
     },
     {
       "id": "sample_07015",
-      "prediction": "A1",
+      "prediction": "A1\nA2\nB1\nB2\nC1\nC2",
       "expected": "C1",
       "correct": false,
       "latency_ms": 1446.1922090000598,
@@ -311,7 +312,7 @@
     },
     {
       "id": "sample_07075",
-      "prediction": "A1",
+      "prediction": "A1\nA2\nB1\nB2\nC1\nC2",
       "expected": "C1",
       "correct": false,
       "latency_ms": 1725.7539099999804,
@@ -371,7 +372,7 @@
     },
     {
       "id": "sample_07081",
-      "prediction": "A1",
+      "prediction": "A1\nA2\nB1\nB2\nC1\nC2\nC2",
       "expected": "B2",
       "correct": false,
       "latency_ms": 11024.160353999945,

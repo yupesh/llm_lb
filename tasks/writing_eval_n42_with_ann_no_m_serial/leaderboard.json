@@ -187,11 +187,11 @@
     },
     {
       "model_id": "nemotron-3-super@vllm",
-      "score": -0.1175836030204962,
+      "score": -0.18810260141895596,
       "metrics": {
         "accuracy": 0.11904761904761904,
-        "adjacent_accuracy": 0.21428571428571427,
-        "qwk": -0.1175836030204962
+        "adjacent_accuracy": 0.19047619047619047,
+        "qwk": -0.18810260141895596
       },
       "tps": 47.30863597565831,
       "p95_latency_ms": 51239.256889999975,
@@ -199,5 +199,5 @@
       "result_file": "results/nemotron-3-super@vllm__2026-04-26T07-29-25Z.json"
     }
   ],
-  "updated_at": "2026-04-26T13:05:48+00:00"
+  "updated_at": "2026-04-26T23:37:01+00:00"
 }

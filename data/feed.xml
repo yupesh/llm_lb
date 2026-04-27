@@ -8,10 +8,10 @@
   <author><name>LLM Leaderboard</name></author>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_ann_with_m_serial/1.1/nemotron-3-super@vllm/2026-04-26T20:11:35+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.071 accuracy on writing_eval_n42_no_ann_with_m_serial v1.1</title>
+    <title>nemotron-3-super@vllm scored 0.048 accuracy on writing_eval_n42_no_ann_with_m_serial v1.1</title>
     <updated>2026-04-26T20:11:35+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_ann_with_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.071, adjacent_accuracy=0.262, qwk=0.092</summary>
+    <summary>accuracy=0.048, adjacent_accuracy=0.167, qwk=-0.249</summary>
   </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/topic_classification/1.0/nemotron-3-super@vllm/2026-04-26T19:50:35+00:00</id>
@@ -305,7 +305,7 @@
     <title>nemotron-3-super@vllm scored 0.119 accuracy on writing_eval_n42_with_ann_no_m_serial v1.1</title>
     <updated>2026-04-26T07:29:25+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_no_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.119, adjacent_accuracy=0.214, qwk=-0.118</summary>
+    <summary>accuracy=0.119, adjacent_accuracy=0.190, qwk=-0.188</summary>
   </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_loocv_fewshot_with_m_serial/1.1/nemotron-3-super@vllm/2026-04-26T07:19:44+00:00</id>
@@ -326,7 +326,7 @@
     <title>nemotron-3-super@vllm scored 0.357 accuracy on writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial v1.1</title>
     <updated>2026-04-26T05:53:31+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.357, adjacent_accuracy=0.762, qwk=0.247</summary>
+    <summary>accuracy=0.357, adjacent_accuracy=0.738, qwk=0.087</summary>
   </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/topic_classification/1.0/qwen3.6-35b@vllm/2026-04-26T05:39:26+00:00</id>

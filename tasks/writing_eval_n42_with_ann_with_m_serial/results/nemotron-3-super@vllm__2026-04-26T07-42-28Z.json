@@ -9,7 +9,8 @@
     "temperature": 0.0,
     "top_p": 0.95,
     "max_tokens": null,
-    "seed": null
+    "seed": null,
+    "reasoning_mode": null
   },
   "metrics": {
     "accuracy": 0.07142857142857142,
@@ -455,7 +456,7 @@
     },
     {
       "id": "sample_07094",
-      "prediction": "A1",
+      "prediction": "We need to output exactly one label from the set {A1|A2|B1|B2|C1|C2}. The correct label is C2.",
       "expected": "B2",
       "correct": false,
       "latency_ms": 975.499475000106,
