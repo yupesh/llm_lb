@@ -57,15 +57,15 @@ export function CompareView({ index }: { index: Index }) {
         normMap[p.id] = norm[i]
         ;(collected[p.id] ??= []).push(norm[i])
       })
-      // Tie-aware ranking: equal scores share a rank (1, 1, 3, 4, ...).
-      // Lets us bold every leader and underline every runner-up — the
-      // convention in benchmark papers where "best" can be a tie.
+      // Dense ranking: rank by distinct score (1, 1, 2, 3, ...) so the
+      // runner-up tier is the next distinct score regardless of how many
+      // models tie for first.
       const rankMap: Record<string, number> = {}
       const sorted = [...present].sort((a, b) => b.score - a.score)
       let prev: number | null = null
       let prevRank = 0
-      sorted.forEach((p, i) => {
-        const rank = prev !== null && p.score === prev ? prevRank : i + 1
+      sorted.forEach((p) => {
+        const rank = prev !== null && p.score === prev ? prevRank : prevRank + 1
         rankMap[p.id] = rank
         prev = p.score
         prevRank = rank
