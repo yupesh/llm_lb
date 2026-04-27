@@ -4,7 +4,7 @@
    endpoint_kind: openai_chat
    hf_uri: MiniMaxAI/MiniMax-M2.7
    params: "229B (MoE)"
-   weights_size_gb: 214.3
+   weights_size_gb: 230.1
    revision: "2026-04-20"
    endpoint_url: http://lnsigo.mipt.ru:4000/v1
    api_key_env: VLLM_PROXY_KEY     # <-- name of env var, not the key
