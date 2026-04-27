@@ -36,6 +36,10 @@ class ModelCard(BaseModel):
     # can compare model sizes at a glance. Examples: "30B (3B active)", "24B",
     # "671B (37B active, AWQ)". Optional — omit for hosted/closed models.
     params: Optional[str] = None
+    # On-disk size of the served weights, in GiB. Quantization-dependent, so
+    # report the value for the variant actually deployed (AWQ/FP8/NVFP4/...).
+    # Used by the compare-table UI to indicate minimum VRAM at a glance.
+    weights_size_gb: Optional[float] = Field(default=None, ge=0)
     revision: Optional[str] = None
     context_window: Optional[int] = None
     hardware: Optional[GPUSpec] = None

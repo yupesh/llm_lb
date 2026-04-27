@@ -145,6 +145,7 @@ export function CompareView({ index }: { index: Index }) {
             <tr>
               <th>Model</th>
               <th>Params</th>
+              <th>Size</th>
               {tasks.map((t) => (
                 <th key={t.id}>
                   {t.id}
@@ -162,6 +163,9 @@ export function CompareView({ index }: { index: Index }) {
                   {m.hf_uri && <div className="hf-uri">{m.hf_uri}</div>}
                 </th>
                 <td className="params-cell">{m.params ?? '—'}</td>
+                <td className="params-cell">
+                  {m.weights_size_gb != null ? `${m.weights_size_gb.toFixed(1)} GB` : '—'}
+                </td>
                 {tasks.map((t) => {
                   const e = lookup[m.id]?.[t.id]
                   const info = perTask[t.id]

@@ -21,6 +21,7 @@ export interface ModelMeta {
   provider: string
   hf_uri: string | null
   params: string | null
+  weights_size_gb: number | null
   hardware: GPUSpec | null
 }
 
