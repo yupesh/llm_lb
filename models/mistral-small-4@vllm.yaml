@@ -4,6 +4,7 @@
    endpoint_kind: openai_chat
    hf_uri: mistralai/Mistral-Small-4-119B-2603
    params: "119B (6B active, MoE 128/4, FP8)"
+   weights_size_gb: 112.6
    revision: "2026-04-25"
    endpoint_url: http://lnsigo.mipt.ru:4000/v1
    api_key_env: VLLM_PROXY_KEY
