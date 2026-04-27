@@ -4,7 +4,7 @@
    endpoint_kind: openai_chat
    hf_uri: google/gemma-3-12b-it
    params: "12B"
-   weights_size_gb: 22.7
+   weights_size_gb: 24.4
    revision: "2026-04-02"
    endpoint_url: http://lnsigo.mipt.ru:4000/v1
    api_key_env: VLLM_PROXY_KEY     # <-- name of env var, not the key

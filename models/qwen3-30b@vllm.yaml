@@ -4,7 +4,7 @@
    endpoint_kind: openai_chat
    hf_uri: Qwen/Qwen3-30B-A3B
    params: "30B (3B active, MoE)"
-   weights_size_gb: 56.9
+   weights_size_gb: 61.1
    revision: "2025-12-01"
    endpoint_url: http://lnsigo.mipt.ru:4000/v1
    api_key_env: VLLM_PROXY_KEY     # <-- name of env var, not the key
