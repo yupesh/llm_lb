@@ -90,6 +90,19 @@
       "default": null,
       "title": "Params"
     },
+    "weights_size_gb": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Weights Size Gb"
+    },
     "revision": {
       "anyOf": [
         {

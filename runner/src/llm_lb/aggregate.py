@@ -144,6 +144,7 @@ def aggregate_all(repo_root: Path) -> dict[str, Any]:
                     "provider": m.provider,
                     "hf_uri": m.hf_uri,
                     "params": m.params,
+                    "weights_size_gb": m.weights_size_gb,
                     "hardware": m.hardware.model_dump() if m.hardware else None,
                 }
             )
