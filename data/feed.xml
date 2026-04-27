@@ -105,6 +105,111 @@
     <summary>judge_score=0.840</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/retail_agent_dialog/1.1/gemma-4-26B-A4B-it@vllm/2026-04-27T05:46:03+00:00</id>
+    <title>gemma-4-26B-A4B-it@vllm scored 0.830 judge_score on retail_agent_dialog v1.1</title>
+    <updated>2026-04-27T05:46:03+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/retail_agent_dialog" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.830</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/oos_detection/1.0/gemma-4-26B-A4B-it@vllm/2026-04-27T05:32:16+00:00</id>
+    <title>gemma-4-26B-A4B-it@vllm scored 0.500 accuracy on oos_detection v1.0</title>
+    <updated>2026-04-27T05:32:16+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/oos_detection" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.500, macro_f1=0.422</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_triplet_extraction/1.0/gemma-4-26B-A4B-it@vllm/2026-04-27T05:31:41+00:00</id>
+    <title>gemma-4-26B-A4B-it@vllm scored 0.550 judge_score on kg_triplet_extraction v1.0</title>
+    <updated>2026-04-27T05:31:41+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_triplet_extraction" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.550</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_relation_refinement/1.0/gemma-4-26B-A4B-it@vllm/2026-04-27T05:30:09+00:00</id>
+    <title>gemma-4-26B-A4B-it@vllm scored 0.900 judge_score on kg_relation_refinement v1.0</title>
+    <updated>2026-04-27T05:30:09+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_relation_refinement" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.900</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_entity_type_refinement/1.0/gemma-4-26B-A4B-it@vllm/2026-04-27T05:29:28+00:00</id>
+    <title>gemma-4-26B-A4B-it@vllm scored 0.600 judge_score on kg_entity_type_refinement v1.0</title>
+    <updated>2026-04-27T05:29:28+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_entity_type_refinement" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.600</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_entity_name_refinement/1.0/gemma-4-26B-A4B-it@vllm/2026-04-27T05:28:43+00:00</id>
+    <title>gemma-4-26B-A4B-it@vllm scored 0.940 judge_score on kg_entity_name_refinement v1.0</title>
+    <updated>2026-04-27T05:28:43+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_entity_name_refinement" rel="alternate" type="text/html"/>
+    <summary>judge_score=0.940</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection_beavertails/1.0/gemma-4-26B-A4B-it@vllm/2026-04-27T05:28:00+00:00</id>
+    <title>gemma-4-26B-A4B-it@vllm scored 0.800 accuracy on jailbreak_detection_beavertails v1.0</title>
+    <updated>2026-04-27T05:28:00+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection_beavertails" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.800, macro_f1=0.792</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/jailbreak_detection/1.0/gemma-4-26B-A4B-it@vllm/2026-04-27T05:27:36+00:00</id>
+    <title>gemma-4-26B-A4B-it@vllm scored 1.000 accuracy on jailbreak_detection v1.0</title>
+    <updated>2026-04-27T05:27:36+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/jailbreak_detection" rel="alternate" type="text/html"/>
+    <summary>accuracy=1.000, macro_f1=1.000</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/intent_classification/1.0/gemma-4-26B-A4B-it@vllm/2026-04-27T05:27:10+00:00</id>
+    <title>gemma-4-26B-A4B-it@vllm scored 1.000 accuracy on intent_classification v1.0</title>
+    <updated>2026-04-27T05:27:10+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/intent_classification" rel="alternate" type="text/html"/>
+    <summary>accuracy=1.000, macro_f1=1.000</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/hazard_category/1.0/gemma-4-26B-A4B-it@vllm/2026-04-27T05:26:47+00:00</id>
+    <title>gemma-4-26B-A4B-it@vllm scored 0.500 accuracy on hazard_category v1.0</title>
+    <updated>2026-04-27T05:26:47+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/hazard_category" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.500, macro_f1=0.388</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/extractive_qa/1.0/gemma-4-26B-A4B-it@vllm/2026-04-27T05:26:22+00:00</id>
+    <title>gemma-4-26B-A4B-it@vllm scored 0.900 exact_match on extractive_qa v1.0</title>
+    <updated>2026-04-27T05:26:22+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/extractive_qa" rel="alternate" type="text/html"/>
+    <summary>exact_match=0.900</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring_condensed/1.1/gemma-4-26B-A4B-it@vllm/2026-04-27T05:26:01+00:00</id>
+    <title>gemma-4-26B-A4B-it@vllm scored 0.500 accuracy on essay_vocabulary_scoring_condensed v1.1</title>
+    <updated>2026-04-27T05:26:01+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring_condensed" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.500, macro_f1=0.425, qwk=0.579</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring/1.1/gemma-4-26B-A4B-it@vllm/2026-04-27T05:25:37+00:00</id>
+    <title>gemma-4-26B-A4B-it@vllm scored 0.300 accuracy on essay_vocabulary_scoring v1.1</title>
+    <updated>2026-04-27T05:25:37+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.300, macro_f1=0.192, qwk=0.327</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_holistic_scoring_condensed/1.0/gemma-4-26B-A4B-it@vllm/2026-04-27T05:25:13+00:00</id>
+    <title>gemma-4-26B-A4B-it@vllm scored 0.111 accuracy on essay_holistic_scoring_condensed v1.0</title>
+    <updated>2026-04-27T05:25:13+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_holistic_scoring_condensed" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.111, macro_f1=0.051, qwk=0.519</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_holistic_scoring/1.0/gemma-4-26B-A4B-it@vllm/2026-04-27T05:24:46+00:00</id>
+    <title>gemma-4-26B-A4B-it@vllm scored 0.167 accuracy on essay_holistic_scoring v1.0</title>
+    <updated>2026-04-27T05:24:46+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_holistic_scoring" rel="alternate" type="text/html"/>
+    <summary>accuracy=0.167, macro_f1=0.097, qwk=0.560</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_ann_with_m_serial/1.1/nemotron-3-super@vllm/2026-04-26T20:11:35+00:00</id>
     <title>nemotron-3-super@vllm scored 0.048 accuracy on writing_eval_n42_no_ann_with_m_serial v1.1</title>
     <updated>2026-04-26T20:11:35+00:00</updated>
@@ -250,110 +355,5 @@
     <updated>2026-04-26T16:09:49+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_grammar_scoring" rel="alternate" type="text/html"/>
     <summary>accuracy=0.250, macro_f1=0.217, qwk=-0.000</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_coherence_scoring_condensed/1.1/nemotron-3-super@vllm/2026-04-26T15:49:59+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.500 accuracy on essay_coherence_scoring_condensed v1.1</title>
-    <updated>2026-04-26T15:49:59+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_coherence_scoring_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.500, macro_f1=0.505, qwk=0.478</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_coherence_scoring/1.1/nemotron-3-super@vllm/2026-04-26T15:47:17+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.250 accuracy on essay_coherence_scoring v1.1</title>
-    <updated>2026-04-26T15:47:17+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_coherence_scoring" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.250, macro_f1=0.208, qwk=-0.113</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_human/1.1/nemotron-3-super@vllm/2026-04-26T14:00:28+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.540 judge_score on datascibench_human v1.1</title>
-    <updated>2026-04-26T14:00:28+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_human" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.540</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_dl/1.0/nemotron-3-super@vllm/2026-04-26T13:57:19+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.400 judge_score on datascibench_dl v1.0</title>
-    <updated>2026-04-26T13:57:19+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_dl" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.400</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_csv_excel/1.0/nemotron-3-super@vllm/2026-04-26T13:49:02+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.440 judge_score on datascibench_csv_excel v1.0</title>
-    <updated>2026-04-26T13:49:02+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_csv_excel" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.440</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/conversational_memory_qa/1.0/nemotron-3-super@vllm/2026-04-26T13:37:16+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.333 judge_score on conversational_memory_qa v1.0</title>
-    <updated>2026-04-26T13:37:16+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/conversational_memory_qa" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.333</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification_condensed/1.0/nemotron-3-super@vllm/2026-04-26T13:34:17+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.250 accuracy on cefr_level_classification_condensed v1.0</title>
-    <updated>2026-04-26T13:34:17+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.250, macro_f1=0.256, qwk=0.481</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/cefr_level_classification/1.1/nemotron-3-super@vllm/2026-04-26T13:31:48+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.200 accuracy on cefr_level_classification v1.1</title>
-    <updated>2026-04-26T13:31:48+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/cefr_level_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.200, macro_f1=0.095, qwk=-0.121</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/agent_tool_calling/1.0/nemotron-3-super@vllm/2026-04-26T13:25:13+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.582 judge_score on agent_tool_calling v1.0</title>
-    <updated>2026-04-26T13:25:13+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/agent_tool_calling" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.582</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_with_m_serial/1.1/gemma-3-12b-it@vllm/2026-04-26T12:52:11+00:00</id>
-    <title>gemma-3-12b-it@vllm scored 0.333 accuracy on writing_eval_n42_with_ann_with_m_serial v1.1</title>
-    <updated>2026-04-26T12:52:11+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_with_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.333, adjacent_accuracy=0.881, qwk=0.463</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_no_m_serial/1.1/gemma-3-12b-it@vllm/2026-04-26T12:51:33+00:00</id>
-    <title>gemma-3-12b-it@vllm scored 0.357 accuracy on writing_eval_n42_with_ann_no_m_serial v1.1</title>
-    <updated>2026-04-26T12:51:33+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_no_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.357, adjacent_accuracy=0.881, qwk=0.466</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_loocv_fewshot_with_m_serial/1.1/gemma-3-12b-it@vllm/2026-04-26T12:50:51+00:00</id>
-    <title>gemma-3-12b-it@vllm scored 0.214 accuracy on writing_eval_n42_with_ann_loocv_fewshot_with_m_serial v1.1</title>
-    <updated>2026-04-26T12:50:51+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_loocv_fewshot_with_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.214, adjacent_accuracy=0.905, qwk=0.162</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_loocv_fewshot_no_m_serial/1.1/gemma-3-12b-it@vllm/2026-04-26T12:50:12+00:00</id>
-    <title>gemma-3-12b-it@vllm scored 0.214 accuracy on writing_eval_n42_with_ann_loocv_fewshot_no_m_serial v1.1</title>
-    <updated>2026-04-26T12:50:12+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_with_ann_loocv_fewshot_no_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.214, adjacent_accuracy=0.881, qwk=0.125</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial/1.1/gemma-3-12b-it@vllm/2026-04-26T12:49:22+00:00</id>
-    <title>gemma-3-12b-it@vllm scored 0.238 accuracy on writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial v1.1</title>
-    <updated>2026-04-26T12:49:22+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_target_ann_loocv_fewshot_with_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.238, adjacent_accuracy=0.905, qwk=0.239</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial/1.1/gemma-3-12b-it@vllm/2026-04-26T12:48:42+00:00</id>
-    <title>gemma-3-12b-it@vllm scored 0.262 accuracy on writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial v1.1</title>
-    <updated>2026-04-26T12:48:42+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/writing_eval_n42_no_target_ann_loocv_fewshot_no_m_serial" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.262, adjacent_accuracy=0.905, qwk=0.248</summary>
   </entry>
 </feed>
