@@ -65,14 +65,32 @@ def main() -> int:
         sha = hashlib.sha256(zip_path.read_bytes()).hexdigest()[:12]
         print(f"got dev.zip {size_mb:.1f} MB sha256={sha}", file=sys.stderr)
 
+        extracted = tmp_path / "extracted"
         with zipfile.ZipFile(zip_path) as zf:
-            zf.extractall(tmp_path / "extracted")
+            zf.extractall(extracted)
 
-        # BIRD dev archive layout: dev_20240627/dev_databases/<db_id>/<db_id>.sqlite
-        # (or older: dev/dev_databases/...). Find the dev_databases directory.
-        candidates = list((tmp_path / "extracted").rglob("dev_databases"))
+        # BIRD dev.zip layouts seen in the wild:
+        #   dev_<date>/dev_databases.zip  (nested archive — recent releases)
+        #   dev_<date>/dev_databases/<db_id>/<db_id>.sqlite
+        #   dev/dev_databases/<db_id>/<db_id>.sqlite
+        # First handle the nested-zip case by extracting it in place.
+        for nested in list(extracted.rglob("dev_databases.zip")):
+            print(f"extracting nested {nested}", file=sys.stderr)
+            with zipfile.ZipFile(nested) as zf:
+                zf.extractall(nested.parent)
+
+        candidates = [p for p in extracted.rglob("dev_databases") if p.is_dir()]
+        if not candidates:
+            # Fallback: locate by looking for any *.sqlite under the tree and
+            # walking up to its parent's parent.
+            sqlites = list(extracted.rglob("*.sqlite"))
+            if sqlites:
+                candidates = [sqlites[0].parent.parent]
         if not candidates:
             print("ERROR: dev_databases/ not found in archive", file=sys.stderr)
+            print(f"archive contents under {extracted}:", file=sys.stderr)
+            for p in sorted(extracted.rglob("*"))[:40]:
+                print(f"  {p.relative_to(extracted)}", file=sys.stderr)
             return 1
         src_root = candidates[0]
         print(f"extracted DBs at {src_root}", file=sys.stderr)
