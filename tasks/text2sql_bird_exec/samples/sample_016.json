@@ -1,0 +1,10 @@
+{
+  "id": "bird_016",
+  "prompt": "Which user ID has the highest reputation?\n\nEvidence: highest reputation refers to Max(Reputation)",
+  "expected": "SELECT Id FROM users WHERE Reputation = ( SELECT MAX(Reputation) FROM users )",
+  "meta": {
+    "db_id": "codebase_community",
+    "difficulty": "simple",
+    "source_question_id": 589
+  }
+}

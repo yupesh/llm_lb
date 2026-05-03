@@ -1,0 +1,10 @@
+{
+  "id": "bird_021",
+  "prompt": "How many times was the budget in Advertisement for \"Yearly Kickoff\" meeting more than \"October Meeting\"?\n\nEvidence: budget in Advertisement refer to category = 'Advertisement' in the budget table; DIVIDE(SUM(amount when event_name = 'Yearly Kickoff'), SUM(amount when event_name = 'October Meeting'))",
+  "expected": "SELECT CAST(SUM(CASE WHEN T2.event_name = 'Yearly Kickoff' THEN T1.amount ELSE 0 END) AS REAL) / SUM(CASE WHEN T2.event_name = 'October Meeting' THEN T1.amount ELSE 0 END) FROM budget AS T1 INNER JOIN event AS T2 ON T1.link_to_event = T2.event_id WHERE T1.category = 'Advertisement' AND T2.type = 'Meeting'",
+  "meta": {
+    "db_id": "student_club",
+    "difficulty": "challenging",
+    "source_question_id": 1359
+  }
+}

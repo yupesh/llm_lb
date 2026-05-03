@@ -1,0 +1,54 @@
+name: text2sql_bird_exec
+version: "1.0"
+description: |
+  Execution-based text-to-SQL evaluation against BIRD dev SQLite databases.
+
+  Same 22 questions as `text2sql_bird` (BIRD dev "small" split: 9 simple,
+  10 moderate, 3 challenging) but scored by *executing* both the gold SQL
+  and the candidate SQL against the actual database and comparing result
+  sets — the official BIRD evaluation protocol — instead of asking an LLM
+  judge for semantic equivalence.
+
+  Why two tasks: the judge variant runs in CI without any external data
+  (just the DDL committed to db_schemas.json) but inflates scores because
+  the judge tolerates near-miss SQL. The exec variant is the honest number
+  but requires the full BIRD dev sqlite files (~600 MB) to be present at
+  `tasks/text2sql_bird_exec/data/<db_id>/<db_id>.sqlite`. Populate via:
+
+    python scripts/fetch_bird_dev.py
+
+  CI environments without the data dir cannot score this task and should
+  fall back to text2sql_bird.
+
+  Schemas in db_schemas.json are kept verbatim so the prompt is identical
+  to text2sql_bird — the only difference between the two tasks is how
+  `correct` is computed (LLM-judge vs result-set match).
+metric:
+  primary: exec_match
+  secondary: [tps, p95_latency_ms]
+runner_kind: sql_exec
+llm_params:
+  temperature: 0.0
+  seed: 42
+context_file: db_schemas.json
+context_meta_key: db_id
+system_prompt: |
+  You are a text-to-SQL assistant. Given a database schema (SQLite
+  dialect) and a natural-language question, produce a single SQL query
+  that answers the question.
+
+  Rules:
+  - Use the SQLite dialect.
+  - Output ONLY the SQL query, no explanation, no markdown fences.
+  - Do not fabricate table or column names — use only what appears in
+    the schema.
+  - If an "Evidence" hint is provided, use it to disambiguate column
+    meanings or domain abbreviations.
+prompt_template: |
+  Database schema:
+  {context}
+
+  Question:
+  {prompt}
+
+  Write the SQL query that answers the question. Output only the SQL.

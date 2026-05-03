@@ -13,6 +13,7 @@ from . import __version__
 from .adapters import get_adapter
 from .adapters.base import Completion
 from .eval import judge as judge_mod
+from .eval import sql_exec
 from .eval.dialog_sim import simulate_retail_dialog
 from .eval.extract import extract_label, extract_regex, normalize, strip_reasoning
 from .eval.metrics import (
@@ -124,6 +125,7 @@ class _RunContext:
     sim_policy: str | None
     sim_user_prompt: str | None
     sim_db_path: Path | None
+    sql_exec_data_dir: Path | None
 
 
 def _build_context(
@@ -152,6 +154,10 @@ def _build_context(
         sim_user_prompt = (task_dir / "user_agent_prompt.md").read_text()
         sim_db_path = task_dir / "db.json"
 
+    sql_exec_data_dir: Path | None = None
+    if task.runner_kind == "sql_exec":
+        sql_exec_data_dir = task_dir / "data"
+
     context_data: dict[str, str] = {}
     if task.context_file:
         ctx_path = task_dir / task.context_file
@@ -169,6 +175,7 @@ def _build_context(
         sim_policy=sim_policy,
         sim_user_prompt=sim_user_prompt,
         sim_db_path=sim_db_path,
+        sql_exec_data_dir=sql_exec_data_dir,
     )
 
 
@@ -263,8 +270,24 @@ def _execute_sample(
         # Fall back to reasoning_content if the final answer slot is empty —
         # see Completion.reasoning_text docstring for context.
         pred_source = completion.text or completion.reasoning_text
-        pred = _extract_prediction(task, pred_source)
-        correct = _is_correct(task, pred, s.expected)
+        if task.runner_kind == "sql_exec":
+            pred = sql_exec.extract_sql(strip_reasoning(pred_source or ""))
+            db_id = s.meta.get("db_id")
+            if not db_id:
+                raise RuntimeError(f"sample {s.id} missing meta.db_id for sql_exec task")
+            # SQL execution errors (syntax, missing tables, timeout) count as
+            # wrong answers, not infra failures — don't set SamplePrediction.error,
+            # so the "all samples failed → refuse to write" guard still treats a
+            # genuinely-bad model as score 0 instead of an aborted run.
+            correct, _sql_err = sql_exec.score_sample(
+                ctx.sql_exec_data_dir,  # type: ignore[arg-type]
+                db_id,
+                s.expected,
+                pred,
+            )
+        else:
+            pred = _extract_prediction(task, pred_source)
+            correct = _is_correct(task, pred, s.expected)
 
         sample_pred = SamplePrediction(
             id=s.id,
@@ -321,6 +344,8 @@ def _compute_metrics(task: TaskSpec, preds: list[SamplePrediction]) -> dict[str,
         metrics["accuracy"] = accuracy(preds)
     if "exact_match" in wanted:
         metrics["exact_match"] = accuracy(preds)  # `correct` already uses normalize()
+    if "exec_match" in wanted:
+        metrics["exec_match"] = accuracy(preds)  # `correct` set by sql_exec.score_sample
     if "macro_f1" in wanted and task.labels:
         metrics["macro_f1"] = macro_f1(preds, task.labels)
     if "adjacent_accuracy" in wanted and task.labels:
@@ -521,10 +546,20 @@ def reextract(result_path: Path, task_dir: Path) -> tuple[Path, int]:
         )
     if task.runner_kind == "dialog_simulation":
         return result_path, 0
+    if task.runner_kind == "sql_exec" and not (task_dir / "data").is_dir():
+        # Re-execution needs the sqlite files; skip silently when they're not
+        # present (CI without dev.zip).
+        return result_path, 0
 
     has_any_raw = any(p.raw_output is not None for p in existing.samples)
     if not has_any_raw:
         return result_path, 0
+
+    sql_data_dir: Path | None = None
+    sample_db_ids: dict[str, str] = {}
+    if task.runner_kind == "sql_exec":
+        sql_data_dir = task_dir / "data"
+        sample_db_ids = {s.id: s.meta.get("db_id", "") for s in load_task(task_dir)[1]}
 
     n_updated = 0
     new_samples: list[SamplePrediction] = []
@@ -532,8 +567,16 @@ def reextract(result_path: Path, task_dir: Path) -> tuple[Path, int]:
         if p.error or p.raw_output is None:
             new_samples.append(p)
             continue
-        new_pred = _extract_prediction(task, p.raw_output)
-        new_correct = _is_correct(task, new_pred, p.expected)
+        if task.runner_kind == "sql_exec":
+            new_pred = sql_exec.extract_sql(strip_reasoning(p.raw_output))
+            db_id = sample_db_ids.get(p.id, "")
+            if not db_id or sql_data_dir is None:
+                new_samples.append(p)
+                continue
+            new_correct, _ = sql_exec.score_sample(sql_data_dir, db_id, p.expected, new_pred)
+        else:
+            new_pred = _extract_prediction(task, p.raw_output)
+            new_correct = _is_correct(task, new_pred, p.expected)
         if new_pred != p.prediction or new_correct != p.correct:
             n_updated += 1
         new_samples.append(p.model_copy(update={
