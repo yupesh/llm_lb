@@ -4,8 +4,22 @@
   <id>tag:yupesh.github.io,2026:llm_lb/feed</id>
   <link href="https://yupesh.github.io/llm_lb/" rel="alternate" type="text/html"/>
   <link href="https://yupesh.github.io/llm_lb/data/feed.xml" rel="self" type="application/atom+xml"/>
-  <updated>2026-04-27T05:58:01+00:00</updated>
+  <updated>2026-05-03T06:50:10+00:00</updated>
   <author><name>LLM Leaderboard</name></author>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_bird_exec/1.0/qwen3-30b@vllm/2026-05-03T06:50:10+00:00</id>
+    <title>qwen3-30b@vllm scored 0.409 exec_match on text2sql_bird_exec v1.0</title>
+    <updated>2026-05-03T06:50:10+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_bird_exec" rel="alternate" type="text/html"/>
+    <summary>exec_match=0.409</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/text2sql_bird_exec/1.0/gemma-4-26B-A4B-it@vllm/2026-05-03T06:47:54+00:00</id>
+    <title>gemma-4-26B-A4B-it@vllm scored 0.409 exec_match on text2sql_bird_exec v1.0</title>
+    <updated>2026-05-03T06:47:54+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/text2sql_bird_exec" rel="alternate" type="text/html"/>
+    <summary>exec_match=0.409</summary>
+  </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/writing_eval_n42_with_ann_with_m_serial/1.1/gemma-4-26B-A4B-it@vllm/2026-04-27T05:58:01+00:00</id>
     <title>gemma-4-26B-A4B-it@vllm scored 0.286 accuracy on writing_eval_n42_with_ann_with_m_serial v1.1</title>
@@ -341,19 +355,5 @@
     <updated>2026-04-26T19:43:14+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/temporal_information_extraction" rel="alternate" type="text/html"/>
     <summary>judge_score=0.347</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/summarization/1.0/nemotron-3-super@vllm/2026-04-26T19:27:19+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.760 judge_score on summarization v1.0</title>
-    <updated>2026-04-26T19:27:19+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/summarization" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.760</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/safety_classification/1.0/nemotron-3-super@vllm/2026-04-26T19:26:50+00:00</id>
-    <title>nemotron-3-super@vllm scored 0.750 accuracy on safety_classification v1.0</title>
-    <updated>2026-04-26T19:26:50+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/safety_classification" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.750, macro_f1=0.744</summary>
   </entry>
 </feed>
