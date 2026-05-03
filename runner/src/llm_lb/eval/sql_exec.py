@@ -97,7 +97,11 @@ def score_sample(
     """
     db_path = data_dir / db_id / f"{db_id}.sqlite"
     if not db_path.exists():
-        return False, f"DB file not found: {db_path}"
+        # Infra failure, not a candidate failure — raise so the caller's
+        # error-handling can mark the sample errored (and the all-samples-failed
+        # guard fires if every sample hits this). Returning (False, ...) here
+        # would silently produce a clean 0/N result, which masks misconfiguration.
+        raise RuntimeError(f"DB file not found: {db_path}")
 
     candidate_sql = (candidate_sql or "").strip()
     if not candidate_sql:
