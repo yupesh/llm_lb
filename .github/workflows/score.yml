@@ -189,6 +189,20 @@ jobs:
         working-directory: runner
         run: uv sync --frozen
 
+      - name: Cache BIRD dev databases
+        # text2sql_bird_exec executes candidate SQL against the real BIRD dev
+        # SQLite DBs (~600 MB extracted). Cache by the fetch script's hash so
+        # we re-download only when the fetch logic / DB list changes.
+        if: contains(matrix.task_path, 'text2sql_bird_exec')
+        uses: actions/cache@v4
+        with:
+          path: tasks/text2sql_bird_exec/data
+          key: bird-dev-${{ hashFiles('scripts/fetch_bird_dev.py') }}
+
+      - name: Fetch BIRD dev databases
+        if: contains(matrix.task_path, 'text2sql_bird_exec')
+        run: python3 scripts/fetch_bird_dev.py
+
       - name: Materialise task context files from secrets
         # Some tasks reference a `context_file` in task.yaml that's NOT
         # checked in (e.g. third-party DB schemas we can't re-upload to

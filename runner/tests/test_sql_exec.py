@@ -80,9 +80,10 @@ def test_score_sample_syntax_error(tmp_path: Path) -> None:
 
 
 def test_score_sample_missing_db(tmp_path: Path) -> None:
-    correct, err = score_sample(tmp_path, "nope", "SELECT 1", "SELECT 1")
-    assert correct is False
-    assert err is not None and "not found" in err
+    # Infra error must raise — silent (False, err) would mask a missing
+    # data/ directory as a clean zero.
+    with pytest.raises(RuntimeError, match="DB file not found"):
+        score_sample(tmp_path, "nope", "SELECT 1", "SELECT 1")
 
 
 def test_score_sample_empty_candidate(tmp_path: Path) -> None:
