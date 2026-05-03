@@ -1,0 +1,10 @@
+{
+  "id": "bird_004",
+  "prompt": "How many carcinogenic molecules that consisted of Nitrogen?\n\nEvidence: nitrogen refers to element = 'n'; label = '+' mean molecules are carcinogenic;",
+  "expected": "SELECT COUNT(DISTINCT T1.molecule_id) FROM molecule AS T1 INNER JOIN atom AS T2 ON T1.molecule_id = T2.molecule_id WHERE T2.element = 'n' AND T1.label = '+'",
+  "meta": {
+    "db_id": "toxicology",
+    "difficulty": "simple",
+    "source_question_id": 325
+  }
+}

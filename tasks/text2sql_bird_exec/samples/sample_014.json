@@ -1,0 +1,10 @@
+{
+  "id": "bird_014",
+  "prompt": "Please provide a list of clients who were born between 1983 and 1987 and whose account branch is in East Bohemia, along with their IDs.",
+  "expected": "SELECT T1.client_id, T3.account_id FROM client AS T1 INNER JOIN district AS T2 ON T1.district_id = T2.district_id INNER JOIN disp AS T4 ON T1.client_id = T4.client_id INNER JOIN account AS T3 ON T2.district_id = T3.district_id and T4.account_id = T3.account_id WHERE T2.A3 = 'east Bohemia' AND STRFTIME('%Y', T1.birth_date) BETWEEN '1983' AND '1987'",
+  "meta": {
+    "db_id": "financial",
+    "difficulty": "moderate",
+    "source_question_id": 180
+  }
+}
