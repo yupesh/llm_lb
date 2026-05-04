@@ -79,7 +79,18 @@
       "p95_latency_ms": 2363.183300000003,
       "cost_usd": null,
       "result_file": "results/gemma-4-31b-it@vllm__2026-05-04T05-22-40Z.json"
+    },
+    {
+      "model_id": "gpt-oss-120b@vllm",
+      "score": 0.36363636363636365,
+      "metrics": {
+        "exec_match": 0.36363636363636365
+      },
+      "tps": 116.42594936285067,
+      "p95_latency_ms": 4538.325712000016,
+      "cost_usd": null,
+      "result_file": "results/gpt-oss-120b@vllm__2026-05-04T08-15-10Z.json"
     }
   ],
-  "updated_at": "2026-05-04T07:24:40+00:00"
+  "updated_at": "2026-05-04T08:16:11+00:00"
 }
