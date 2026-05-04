@@ -125,6 +125,17 @@ def openai_chat(
                     del body["max_tokens"]
                     body["max_completion_tokens"] = params.max_tokens
                     r = client.post(url, headers=headers, json=body)
+                if (
+                    r.status_code == 400
+                    and "reasoning_effort" in body
+                    and "reasoning_effort" in (r.text or "")
+                ):
+                    # litellm/proxy version doesn't recognise reasoning_effort
+                    # for this served model (seen on gpt-oss-120b via litellm
+                    # proxy). Drop the hint and retry — the model still runs,
+                    # we just lose the on/off control.
+                    del body["reasoning_effort"]
+                    r = client.post(url, headers=headers, json=body)
                 if r.status_code in (429, 500, 502, 503, 504):
                     # Retryable server-side condition.
                     last_exc = RuntimeError(
@@ -210,6 +221,13 @@ def openai_chat_messages(
                 if r.status_code == 400 and "max_tokens" in body and "max_tokens" in (r.text or ""):
                     del body["max_tokens"]
                     body["max_completion_tokens"] = params.max_tokens
+                    r = client.post(url, headers=headers, json=body)
+                if (
+                    r.status_code == 400
+                    and "reasoning_effort" in body
+                    and "reasoning_effort" in (r.text or "")
+                ):
+                    del body["reasoning_effort"]
                     r = client.post(url, headers=headers, json=body)
                 if r.status_code in (429, 500, 502, 503, 504):
                     last_exc = RuntimeError(
