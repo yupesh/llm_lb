@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T16:06:37+00:00",
+  "generated_at": "2026-06-08T16:07:18+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -6319,6 +6319,19 @@
     {
       "task_id": "loop_14th_item",
       "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 1.0,
+      "metrics": {
+        "loop_score": 1.0
+      },
+      "tps": 4.2628374500437465,
+      "p95_latency_ms": 1040.7604130000152,
+      "cost_usd": null,
+      "result_file": "tasks/loop_14th_item/results/qwen3.5-27b@vllm__2026-06-08T15-52-59Z.json"
+    },
+    {
+      "task_id": "loop_14th_item",
+      "task_version": "1.0",
       "model_id": "gemma-4-26B-A4B-it@vllm",
       "score": 1.0,
       "metrics": {
@@ -6328,6 +6341,19 @@
       "p95_latency_ms": 1452.9775849999992,
       "cost_usd": null,
       "result_file": "tasks/loop_14th_item/results/gemma-4-26B-A4B-it@vllm__2026-06-08T15-49-53Z.json"
+    },
+    {
+      "task_id": "loop_long_freeform",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 1.0,
+      "metrics": {
+        "loop_score": 1.0
+      },
+      "tps": 38.44535928242118,
+      "p95_latency_ms": 62640.029049000004,
+      "cost_usd": null,
+      "result_file": "tasks/loop_long_freeform/results/qwen3-30b@vllm__2026-06-08T15-58-47Z.json"
     },
     {
       "task_id": "loop_long_freeform",
