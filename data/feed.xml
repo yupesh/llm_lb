@@ -42,6 +42,13 @@
     <summary>loop_score=1.000</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/loop_14th_item/1.0/qwen3-30b@vllm/2026-06-08T15:52:05+00:00</id>
+    <title>qwen3-30b@vllm scored 1.000 loop_score on loop_14th_item v1.0</title>
+    <updated>2026-06-08T15:52:05+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/loop_14th_item" rel="alternate" type="text/html"/>
+    <summary>loop_score=1.000</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/loop_14th_item/1.0/gemma-4-26B-A4B-it@vllm/2026-06-08T15:49:53+00:00</id>
     <title>gemma-4-26B-A4B-it@vllm scored 1.000 loop_score on loop_14th_item v1.0</title>
     <updated>2026-06-08T15:49:53+00:00</updated>
@@ -348,12 +355,5 @@
     <updated>2026-04-27T05:22:15+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/entity_relationship_extraction" rel="alternate" type="text/html"/>
     <summary>judge_score=0.773</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/datascibench_human/1.1/gemma-4-26B-A4B-it@vllm/2026-04-27T05:19:57+00:00</id>
-    <title>gemma-4-26B-A4B-it@vllm scored 0.900 judge_score on datascibench_human v1.1</title>
-    <updated>2026-04-27T05:19:57+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/datascibench_human" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.900</summary>
   </entry>
 </feed>
