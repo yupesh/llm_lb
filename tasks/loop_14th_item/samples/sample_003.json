@@ -1,0 +1,8 @@
+{
+  "id": "sample_003",
+  "prompt": "1. aluminum\n2. brass\n3. copper\n4. dysprosium\n5. erbium\n6. francium\n7. gold\n8. hafnium\n9. iron\n10. jadeite\n11. krypton\n12. lithium\n13. manganese\n14. nickel\n15. osmium\n16. platinum\n17. quicksilver\n18. rhodium\n19. silver\n20. titanium\n21. uranium\n22. vanadium\n23. tungsten\n24. xenon\n25. yttrium\n26. zinc\n27. antimony\n28. bismuth\n29. cadmium\n30. cobalt",
+  "expected": "nickel",
+  "meta": {
+    "category": "metals"
+  }
+}

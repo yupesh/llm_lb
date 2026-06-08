@@ -1,0 +1,8 @@
+{
+  "id": "sample_009",
+  "prompt": "Text:\n\nThe expedition started in Anchorage, flew to Fairbanks, then drove to Coldfoot. From there it crossed Atigun Pass and reached Deadhorse on the Arctic Ocean. On the return leg the team stopped at Wiseman, then at Bettles, before flying back via Galena and Nome. The final leg crossed the Bering Strait to Provideniya and ended in Anadyr.\n\nExtract every place name from the text above as a JSON array. Each entry must be an object with keys \"name\", \"region\" (one of: Alaska, Russia, Arctic, other), and \"note\" (empty string).\n\nReturn the JSON array now.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "places"
+  }
+}

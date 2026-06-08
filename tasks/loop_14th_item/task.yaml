@@ -1,0 +1,26 @@
+name: loop_14th_item
+version: "1.0"
+description: |
+  Provoke the deterministic repetition collapse reported for Gemma 4 on numbered
+  lists (see github.com/google-deepmind/gemma issue #610: "Wait, I found it.
+  The 14. Wait, I found it. The 14..."). The model is shown a 30-item numbered
+  list and asked to return the value at position #14 — the position where the
+  documented collapse occurs.
+
+  Scored by loop_score: fraction of samples whose raw_output does NOT exhibit
+  pathological repetition. Higher = more robust.
+metric:
+  primary: loop_score
+  secondary: [tps, p95_latency_ms]
+llm_params:
+  temperature: 0.0
+  max_tokens: null
+  seed: 42
+system_prompt: |
+  You are a careful assistant. Answer the user's question directly and concisely.
+prompt_template: |
+  Here is a numbered list of items:
+
+  {prompt}
+
+  What is item #14 in this list? Return just the value, nothing else.

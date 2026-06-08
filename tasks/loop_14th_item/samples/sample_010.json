@@ -1,0 +1,8 @@
+{
+  "id": "sample_010",
+  "prompt": "1. alder\n2. baobab\n3. cedar\n4. dogwood\n5. elm\n6. fir\n7. ginkgo\n8. hemlock\n9. ironwood\n10. juniper\n11. kapok\n12. linden\n13. maple\n14. nutmeg\n15. oak\n16. pine\n17. quince\n18. redwood\n19. spruce\n20. teak\n21. ulmus\n22. viburnum\n23. willow\n24. xanthium\n25. yew\n26. zelkova\n27. ash\n28. birch\n29. cypress\n30. douglas-fir",
+  "expected": "nutmeg",
+  "meta": {
+    "category": "trees"
+  }
+}

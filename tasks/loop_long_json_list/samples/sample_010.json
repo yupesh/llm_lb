@@ -1,0 +1,8 @@
+{
+  "id": "sample_010",
+  "prompt": "Text:\n\nThe contract was signed on 3 January 2021. Delivery began on 17 February 2021. The first review milestone occurred on 5 May 2021. A second review followed on 12 August 2021. The mid-term audit was conducted on 30 November 2021. Phase two launched on 9 February 2022. A revision was issued on 21 June 2022. The final delivery was completed on 14 October 2022. Acceptance was signed on 7 December 2022.\n\nExtract every date from the text above as a JSON array. Each entry must be an object with keys \"date\" (the date as it appears), \"event\" (what happened on it), and \"note\" (empty string).\n\nReturn the JSON array now.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "dates"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-04T08:16:11+00:00",
+  "generated_at": "2026-06-08T15:41:59+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -236,6 +236,36 @@
       "primary_metric": "judge_score",
       "secondary_metrics": [],
       "n_samples": 20
+    },
+    {
+      "id": "loop_14th_item",
+      "version": "1.0",
+      "primary_metric": "loop_score",
+      "secondary_metrics": [
+        "tps",
+        "p95_latency_ms"
+      ],
+      "n_samples": 10
+    },
+    {
+      "id": "loop_long_freeform",
+      "version": "1.0",
+      "primary_metric": "loop_score",
+      "secondary_metrics": [
+        "tps",
+        "p95_latency_ms"
+      ],
+      "n_samples": 10
+    },
+    {
+      "id": "loop_long_json_list",
+      "version": "1.0",
+      "primary_metric": "loop_score",
+      "secondary_metrics": [
+        "tps",
+        "p95_latency_ms"
+      ],
+      "n_samples": 10
     },
     {
       "id": "oos_detection",
