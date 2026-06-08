@@ -1,0 +1,8 @@
+{
+  "id": "sample_003",
+  "prompt": "Text:\n\nI has went to the store yesterday for buy some breads. The cashier was very kindly and helped me with my bag's. I forgot bringing my wallet so I asks if I can pay tomorrow. He said me it was fine. When I returned the next day, the breads was already stale because of the heats. I complained, but the manager replied that they not responsible for it. I leaved without arguing and never came back.\n\nExtract every grammatical error in the text above as a JSON array. Each entry must be an object with keys \"excerpt\" (the erroneous phrase), \"correction\" (suggested fix), and \"category\" (one of: tense, agreement, lexis, plural, preposition).\n\nReturn the JSON array now.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "errors"
+  }
+}

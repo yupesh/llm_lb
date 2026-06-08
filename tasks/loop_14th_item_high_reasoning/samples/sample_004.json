@@ -1,0 +1,8 @@
+{
+  "id": "sample_004",
+  "prompt": "1. Mercury\n2. Venus\n3. Earth\n4. Mars\n5. Jupiter\n6. Saturn\n7. Uranus\n8. Neptune\n9. Pluto\n10. Ceres\n11. Eris\n12. Makemake\n13. Haumea\n14. Sedna\n15. Quaoar\n16. Orcus\n17. Salacia\n18. Varuna\n19. Ixion\n20. Gonggong\n21. Chaos\n22. Huya\n23. Phobos\n24. Deimos\n25. Io\n26. Europa\n27. Ganymede\n28. Callisto\n29. Titan\n30. Enceladus",
+  "expected": "Sedna",
+  "meta": {
+    "category": "planets"
+  }
+}

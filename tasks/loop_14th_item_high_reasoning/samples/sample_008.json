@@ -1,0 +1,8 @@
+{
+  "id": "sample_008",
+  "prompt": "1. aardvark\n2. beaver\n3. cheetah\n4. dolphin\n5. elephant\n6. ferret\n7. giraffe\n8. hedgehog\n9. ibex\n10. jackal\n11. koala\n12. lemur\n13. mongoose\n14. narwhal\n15. ocelot\n16. panther\n17. quokka\n18. raccoon\n19. squirrel\n20. tapir\n21. uakari\n22. vicuna\n23. walrus\n24. xerus\n25. yak\n26. zebra\n27. alpaca\n28. bobcat\n29. capybara\n30. dingo",
+  "expected": "narwhal",
+  "meta": {
+    "category": "animals"
+  }
+}

@@ -1,0 +1,28 @@
+name: loop_long_json_list_high_reasoning
+version: "1.0"
+description: |
+  High-reasoning variant of loop_long_json_list. Forces reasoning_mode="high"
+  on top of the same prompt — combines the structured-output repetition
+  collapse from vllm-project/vllm#40080 with the "thinking burns tokens and
+  enters infinite loops" regime reported in the Hugging Face discussion for
+  google/gemma-4-26B-A4B-it.
+
+  We do NOT use grammar-constrained decoding — the model is just instructed
+  to emit JSON. This isolates the model's own repetition bias rather than the
+  xgrammar interaction that #40080 also documents.
+
+  Scored by loop_score: fraction of samples whose raw_output does NOT exhibit
+  pathological repetition. Higher = more robust.
+metric:
+  primary: loop_score
+  secondary: [tps, p95_latency_ms]
+llm_params:
+  temperature: 0.0
+  max_tokens: null
+  seed: 42
+  reasoning_mode: high
+system_prompt: |
+  You are an information-extraction assistant. Return valid JSON only — no
+  prose, no markdown fences.
+prompt_template: |
+  {prompt}

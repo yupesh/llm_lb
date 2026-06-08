@@ -1,0 +1,8 @@
+{
+  "id": "sample_008",
+  "prompt": "Text:\n\nIn the novel, Anna lives in a small village with her father Mikhail and her younger sister Lena. Their neighbor, Pyotr, runs the local bakery. Anna's best friend Vera works at the school. The mayor, Boris, often visits the bakery. Anna's uncle Yuri returns from the city after twenty years. He is accompanied by his wife Natasha and their son Ivan. The village priest, Father Sergei, presides over the welcome ceremony.\n\nExtract every named character from the text above as a JSON array. Each entry must be an object with keys \"name\", \"role\" (one of: family, friend, neighbor, official, other), and \"note\" (empty string).\n\nReturn the JSON array now.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "characters"
+  }
+}

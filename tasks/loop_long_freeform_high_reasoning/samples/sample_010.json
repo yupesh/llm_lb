@@ -1,0 +1,8 @@
+{
+  "id": "sample_010",
+  "prompt": "List every Shakespeare play with its approximate composition date and genre (comedy, tragedy, history, romance). Cover all 39 canonical plays — do not abbreviate.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "enumeration"
+  }
+}

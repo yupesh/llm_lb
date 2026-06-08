@@ -1,0 +1,8 @@
+{
+  "id": "sample_006",
+  "prompt": "1. Nile\n2. Amazon\n3. Yangtze\n4. Mississippi\n5. Yenisei\n6. Yellow\n7. Ob\n8. Parana\n9. Congo\n10. Amur\n11. Lena\n12. Mekong\n13. Mackenzie\n14. Niger\n15. Brahmaputra\n16. Murray\n17. Volga\n18. Indus\n19. Madeira\n20. Yukon\n21. Danube\n22. Ganges\n23. Rio\n24. Tigris\n25. Euphrates\n26. Rhine\n27. Loire\n28. Elbe\n29. Vistula\n30. Don",
+  "expected": "Niger",
+  "meta": {
+    "category": "rivers"
+  }
+}
