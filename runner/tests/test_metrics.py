@@ -1,4 +1,4 @@
-from llm_lb.eval.metrics import accuracy, macro_f1, qwk
+from llm_lb.eval.metrics import _is_looped, accuracy, loop_score, macro_f1, qwk
 from llm_lb.models import SamplePrediction
 
 
@@ -79,7 +79,6 @@ def test_accuracy_and_macro_f1_still_work():
 
 
 # loop_score tests — repetition collapse detection.
-from llm_lb.eval.metrics import _is_looped, loop_score
 
 
 def _mk_raw(raw: str) -> SamplePrediction:
