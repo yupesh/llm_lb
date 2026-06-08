@@ -1,0 +1,8 @@
+{
+  "id": "sample_003",
+  "prompt": "List every US state, in order of admission to the Union, with the year of admission and the capital city. Cover all 50.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "enumeration"
+  }
+}

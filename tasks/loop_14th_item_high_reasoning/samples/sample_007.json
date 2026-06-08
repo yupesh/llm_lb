@@ -1,0 +1,8 @@
+{
+  "id": "sample_007",
+  "prompt": "1. Mandarin\n2. Spanish\n3. English\n4. Hindi\n5. Bengali\n6. Portuguese\n7. Russian\n8. Japanese\n9. Punjabi\n10. Marathi\n11. Telugu\n12. Turkish\n13. Korean\n14. French\n15. German\n16. Vietnamese\n17. Tamil\n18. Urdu\n19. Javanese\n20. Italian\n21. Persian\n22. Gujarati\n23. Hausa\n24. Bhojpuri\n25. Min\n26. Hakka\n27. Burmese\n28. Awadhi\n29. Thai\n30. Polish",
+  "expected": "French",
+  "meta": {
+    "category": "languages"
+  }
+}

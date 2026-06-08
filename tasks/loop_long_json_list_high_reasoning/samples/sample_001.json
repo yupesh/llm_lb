@@ -1,0 +1,8 @@
+{
+  "id": "sample_001",
+  "prompt": "Text:\n\nFirstly, the proposal was met with skepticism. However, after careful review, the committee agreed. Moreover, the supporting data was extensive. On the other hand, several members raised concerns. For instance, the timeline appeared aggressive. In addition, the budget exceeded prior estimates. Nevertheless, the vote passed unanimously. Furthermore, follow-up sessions were scheduled. To sum up, the initiative moved forward. In conclusion, all parties expressed cautious optimism. Now, regarding implementation, three teams were formed. Subsequently, milestones were defined. Meanwhile, external auditors were briefed. As a result, the plan gained credibility.\n\nExtract every discourse marker in the text above as a JSON array. Each entry must be an object with keys \"excerpt\" (the marker as it appears), \"function\" (one of: addition, contrast, cause, conclusion, time, example), and \"note\" (empty string if no comment).\n\nReturn the JSON array now.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "discourse_markers"
+  }
+}

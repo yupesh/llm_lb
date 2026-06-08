@@ -1,0 +1,8 @@
+{
+  "id": "sample_005",
+  "prompt": "Text:\n\nTo prepare this dish, gather the following: two ripe tomatoes, one yellow onion finely chopped, three cloves of garlic, a tablespoon of olive oil, half a teaspoon of salt, a quarter teaspoon of black pepper, a pinch of dried oregano, two fresh basil leaves, 200 grams of pasta, 50 grams of grated parmesan, and a splash of white wine. For garnish, prepare a small bunch of parsley and a lemon wedge.\n\nExtract every ingredient from the recipe above as a JSON array. Each entry must be an object with keys \"item\", \"quantity\" (as written), and \"note\" (empty string).\n\nReturn the JSON array now.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "ingredients"
+  }
+}

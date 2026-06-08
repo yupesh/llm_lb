@@ -1,0 +1,8 @@
+{
+  "id": "sample_002",
+  "prompt": "1. apple\n2. banana\n3. cherry\n4. date\n5. elderberry\n6. fig\n7. grape\n8. honeydew\n9. imbe\n10. jackfruit\n11. kiwi\n12. lemon\n13. mango\n14. nectarine\n15. orange\n16. papaya\n17. quince\n18. raspberry\n19. strawberry\n20. tangerine\n21. ugli\n22. vanilla\n23. watermelon\n24. ximenia\n25. yuzu\n26. zucchini\n27. apricot\n28. blackberry\n29. coconut\n30. durian",
+  "expected": "nectarine",
+  "meta": {
+    "category": "fruits"
+  }
+}

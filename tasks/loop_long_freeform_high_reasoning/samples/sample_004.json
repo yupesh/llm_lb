@@ -1,0 +1,8 @@
+{
+  "id": "sample_004",
+  "prompt": "Write a detailed expository essay (about 1500 words) explaining how the modern transformer architecture works, covering: input embedding, positional encoding, multi-head self-attention, feed-forward blocks, residual connections, layer normalisation, the role of the softmax in attention, training objectives, and inference behaviour. Do not skip steps.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "exposition"
+  }
+}

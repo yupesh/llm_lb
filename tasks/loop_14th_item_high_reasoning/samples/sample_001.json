@@ -1,0 +1,8 @@
+{
+  "id": "sample_001",
+  "prompt": "1. Argentina\n2. Brazil\n3. Canada\n4. Denmark\n5. Egypt\n6. France\n7. Germany\n8. Hungary\n9. Iceland\n10. Japan\n11. Kenya\n12. Latvia\n13. Mexico\n14. Norway\n15. Oman\n16. Peru\n17. Qatar\n18. Romania\n19. Spain\n20. Turkey\n21. Ukraine\n22. Vietnam\n23. Wales\n24. Yemen\n25. Zambia\n26. Algeria\n27. Bolivia\n28. Croatia\n29. Ecuador\n30. Finland",
+  "expected": "Norway",
+  "meta": {
+    "category": "countries"
+  }
+}

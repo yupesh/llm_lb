@@ -1,0 +1,8 @@
+{
+  "id": "sample_002",
+  "prompt": "Text:\n\nIn 2023, Anna Petrova travelled from Saint Petersburg to Helsinki to attend a conference at Aalto University. She met Lars Eriksson, a researcher from Stockholm, who introduced her to the Karolinska Institute team led by Dr. Maria Lindqvist. Later that week, Anna visited the Nokia headquarters in Espoo and the headquarters of Wartsila in Vaasa. On the return trip, she stopped in Tallinn to meet Jaan Tamm at the Skype offices, before crossing into Latvia and visiting Riga's Old Town.\n\nExtract every named entity from the text above as a JSON array. Each entry must be an object with keys \"text\" (the entity), \"type\" (one of: PER, ORG, LOC), and \"note\" (empty string).\n\nReturn the JSON array now.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "named_entities"
+  }
+}
