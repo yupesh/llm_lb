@@ -1,0 +1,8 @@
+{
+  "id": "sample_009",
+  "prompt": "1. accordion\n2. banjo\n3. cello\n4. drum\n5. erhu\n6. flute\n7. guitar\n8. harp\n9. irish-bouzouki\n10. jews-harp\n11. koto\n12. lute\n13. mandolin\n14. ney\n15. oboe\n16. piano\n17. quena\n18. recorder\n19. saxophone\n20. trumpet\n21. ukulele\n22. viola\n23. whistle\n24. xylophone\n25. yangqin\n26. zither\n27. bagpipe\n28. clarinet\n29. didgeridoo\n30. euphonium",
+  "expected": "ney",
+  "meta": {
+    "category": "instruments"
+  }
+}

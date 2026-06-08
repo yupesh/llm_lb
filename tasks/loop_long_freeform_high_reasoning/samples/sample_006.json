@@ -1,0 +1,8 @@
+{
+  "id": "sample_006",
+  "prompt": "List every Summer Olympic host city from 1896 to 2024 in chronological order, with the year and country. For each, give one sentence describing a notable moment from those Games. Cover all of them — do not stop early.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "enumeration"
+  }
+}

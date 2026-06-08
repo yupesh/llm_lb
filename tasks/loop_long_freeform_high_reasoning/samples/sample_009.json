@@ -1,0 +1,8 @@
+{
+  "id": "sample_009",
+  "prompt": "Write an exhaustive explanation of how DNA replication works in eukaryotic cells, covering: the origin of replication, helicase, single-strand binding proteins, primase, DNA polymerase α/δ/ε, the leading vs lagging strand, Okazaki fragments, ligase, topoisomerase, sliding clamp, telomerase, proofreading mechanisms, and how mismatch repair handles errors. About 1500 words.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "exposition"
+  }
+}

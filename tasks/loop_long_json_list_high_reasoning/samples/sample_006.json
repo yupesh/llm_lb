@@ -1,0 +1,8 @@
+{
+  "id": "sample_006",
+  "prompt": "Text:\n\nThe study claims that vitamin D supplementation reduces respiratory infections by 12 percent. It further argues that omega-3 intake lowers triglycerides. The authors assert that regular exercise improves sleep quality. They state that meditation reduces stress markers. The paper contends that hydration affects cognitive performance. It maintains that whole grains correlate with lower mortality. Finally, the study suggests that screen time is linked to disrupted circadian rhythms.\n\nExtract every claim from the text above as a JSON array. Each entry must be an object with keys \"claim\", \"subject\" (the entity the claim is about), and \"note\" (empty string).\n\nReturn the JSON array now.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "claims"
+  }
+}

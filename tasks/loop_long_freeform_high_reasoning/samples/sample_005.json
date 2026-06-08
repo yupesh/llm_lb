@@ -1,0 +1,8 @@
+{
+  "id": "sample_005",
+  "prompt": "Write a comprehensive technical description of the operation of a four-stroke internal combustion engine, including a step-by-step breakdown of each stroke (intake, compression, power, exhaust), the role of valves, the ignition system, the cooling system, the lubrication system, the exhaust system, and the failure modes of each subsystem. Aim for roughly 1500 words.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "exposition"
+  }
+}

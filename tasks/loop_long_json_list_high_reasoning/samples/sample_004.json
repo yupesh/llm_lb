@@ -1,0 +1,8 @@
+{
+  "id": "sample_004",
+  "prompt": "Text:\n\nThe Treaty of Westphalia was signed in 1648, ending the Thirty Years' War. The French Revolution began in 1789 with the storming of the Bastille. Napoleon was crowned emperor in 1804 and was defeated at Waterloo in 1815. The Congress of Vienna met from 1814 to 1815 to redraw European borders. The unification of Germany was completed in 1871 under Bismarck. World War I broke out in 1914 and ended with the Treaty of Versailles in 1919.\n\nExtract every historical event mentioned in the text above as a JSON array. Each entry must be an object with keys \"event\", \"year\" (string), and \"note\" (empty string).\n\nReturn the JSON array now.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "events"
+  }
+}
