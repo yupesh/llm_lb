@@ -1,0 +1,28 @@
+name: loop_long_json_list
+version: "1.0"
+description: |
+  Provoke the structured-output repetition collapse reported for Gemma 4 and
+  observed on MiniMax in earlier writing_eval runs (see vllm-project/vllm
+  issue #40080). The model is given a paragraph and asked to extract every
+  occurrence of some category as a JSON array of objects with several string
+  fields. Models that loop tend to "stamp" the same object over and over until
+  they hit the context cap.
+
+  We do NOT use grammar-constrained decoding — the model is just instructed to
+  emit JSON. This isolates the model's own repetition bias rather than the
+  xgrammar interaction that #40080 also documents.
+
+  Scored by loop_score: fraction of samples whose raw_output does NOT exhibit
+  pathological repetition. Higher = more robust.
+metric:
+  primary: loop_score
+  secondary: [tps, p95_latency_ms]
+llm_params:
+  temperature: 0.0
+  max_tokens: null
+  seed: 42
+system_prompt: |
+  You are an information-extraction assistant. Return valid JSON only — no
+  prose, no markdown fences.
+prompt_template: |
+  {prompt}

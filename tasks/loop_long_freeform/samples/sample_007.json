@@ -1,0 +1,8 @@
+{
+  "id": "sample_007",
+  "prompt": "Recite the multiplication table for 7, from 7×1 to 7×100, with each line in the format \"7 x N = M\". Do not summarise or skip — produce all 100 lines.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "exhaustive_count"
+  }
+}

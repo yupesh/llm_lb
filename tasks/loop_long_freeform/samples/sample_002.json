@@ -1,0 +1,8 @@
+{
+  "id": "sample_002",
+  "prompt": "Enumerate every chemical element in the periodic table from atomic number 1 to 92, including each element's symbol and one notable property or use. Cover all 92 — do not summarise mid-list.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "enumeration"
+  }
+}

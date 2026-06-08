@@ -1,0 +1,8 @@
+{
+  "id": "sample_008",
+  "prompt": "Produce a list of every prime number less than 500, in ascending order, with one prime per line in the format \"P: <prime>\". Do not skip or summarise — list all of them.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "exhaustive_count"
+  }
+}

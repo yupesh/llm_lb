@@ -1,0 +1,8 @@
+{
+  "id": "sample_007",
+  "prompt": "Text:\n\nWhy is the sky blue? What causes thunder? How do birds navigate during migration? When did humans first use fire? Where does the Mississippi River begin? Why do leaves change color in autumn? What is dark matter? How does an internal combustion engine work? When was the printing press invented? Where is the Mariana Trench located? Why do we dream?\n\nExtract every question from the text above as a JSON array. Each entry must be an object with keys \"question\", \"topic\" (one of: physics, biology, history, geography, technology, other), and \"note\" (empty string).\n\nReturn the JSON array now.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "questions"
+  }
+}

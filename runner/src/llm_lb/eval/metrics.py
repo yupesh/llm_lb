@@ -1,10 +1,59 @@
 from __future__ import annotations
 
+import re
 from collections import defaultdict
 
 from ..models import SamplePrediction
 
 _CEFR_ORDER = ["A1", "A2", "B1", "B2", "C1", "C2"]
+
+
+_LOOP_CHUNK_RE = re.compile(r"(.{3,200}?)\1{4,}", re.DOTALL)
+
+
+def _is_looped(text: str) -> bool:
+    """Detect pathological repetition collapse in a model output.
+
+    Two signals:
+    - A non-whitespace substring of 3–200 chars repeats ≥5 times in a row.
+    - A non-empty line repeats ≥5 times in a row.
+
+    Whitespace-only matches (JSON/code indentation) are explicitly excluded.
+    """
+    if not text:
+        return False
+    for m in _LOOP_CHUNK_RE.finditer(text):
+        if m.group(1).strip():
+            return True
+    run = 1
+    prev: str | None = None
+    for line in text.splitlines():
+        if line.strip() and line == prev:
+            run += 1
+            if run >= 5:
+                return True
+        else:
+            run = 1
+        prev = line
+    return False
+
+
+def loop_score(preds: list[SamplePrediction]) -> float:
+    """Fraction of samples whose raw_output did NOT exhibit a repetition loop.
+
+    Higher = better (more robust against repetition collapse). Samples that
+    errored out before producing any raw_output count as non-looped (they have
+    their own error signal); samples with empty raw_output also count as
+    non-looped.
+    """
+    if not preds:
+        return 0.0
+    ok = 0
+    for p in preds:
+        raw = p.raw_output or ""
+        if not _is_looped(raw):
+            ok += 1
+    return ok / len(preds)
 
 
 def accuracy(preds: list[SamplePrediction]) -> float:

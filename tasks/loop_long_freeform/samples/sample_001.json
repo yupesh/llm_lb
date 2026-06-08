@@ -1,0 +1,8 @@
+{
+  "id": "sample_001",
+  "prompt": "List every European country (members of the United Nations) with its capital and approximate population in 2024. Cover all 44 countries — do not abbreviate the list. For each country write one short sentence.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "enumeration"
+  }
+}

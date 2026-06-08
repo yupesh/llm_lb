@@ -21,6 +21,7 @@ from .eval.metrics import (
     adjacent_accuracy,
     boundary_accuracy,
     boundary_kappa,
+    loop_score,
     macro_f1,
     qwk,
     signed_diff,
@@ -358,6 +359,8 @@ def _compute_metrics(task: TaskSpec, preds: list[SamplePrediction]) -> dict[str,
         metrics["boundary_kappa"] = boundary_kappa(preds, task.labels)
     if "signed_diff" in wanted and task.labels:
         metrics["signed_diff"] = signed_diff(preds, task.labels)
+    if "loop_score" in wanted:
+        metrics["loop_score"] = loop_score(preds)
     return metrics
 
 

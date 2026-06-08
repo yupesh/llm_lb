@@ -76,3 +76,65 @@ def test_accuracy_and_macro_f1_still_work():
     preds = [_mk("1", "1"), _mk("2", "2"), _mk("3", "4")]
     assert accuracy(preds) == 2 / 3
     assert 0.0 <= macro_f1(preds, LABELS_ORD4) <= 1.0
+
+
+# loop_score tests — repetition collapse detection.
+from llm_lb.eval.metrics import _is_looped, loop_score
+
+
+def _mk_raw(raw: str) -> SamplePrediction:
+    return SamplePrediction(
+        id=raw[:20] or "empty",
+        prediction="",
+        expected="",
+        correct=False,
+        latency_ms=0.0,
+        raw_output=raw,
+    )
+
+
+def test_is_looped_substring_repeat():
+    # The classic minimax JSON collapse pattern.
+    pat = '{"excerpt":"Now","note":""},'
+    assert _is_looped("prefix " + pat * 6 + " suffix")
+
+
+def test_is_looped_line_repeat():
+    body = "\n".join(["- inherent - correct"] * 6)
+    assert _is_looped("intro\n" + body + "\noutro")
+
+
+def test_is_looped_whitespace_only_does_not_count():
+    # Indented JSON has long runs of spaces but is not a pathological loop.
+    assert not _is_looped("{\n" + "    " * 50 + "\"k\": 1\n}")
+
+
+def test_is_looped_normal_prose_is_clean():
+    assert not _is_looped(
+        "The model correctly identifies the boundary between B1 and B2. "
+        "Vocabulary is varied; grammar control is adequate. No issues."
+    )
+
+
+def test_is_looped_empty_or_none():
+    assert not _is_looped("")
+    assert not _is_looped(None or "")
+
+
+def test_loop_score_all_clean():
+    preds = [_mk_raw("clean answer " + str(i)) for i in range(5)]
+    assert loop_score(preds) == 1.0
+
+
+def test_loop_score_half_looped():
+    preds = [
+        _mk_raw("clean a"),
+        _mk_raw("ab" * 100),  # looped
+        _mk_raw("clean b"),
+        _mk_raw("\n".join(["same line"] * 6)),  # looped
+    ]
+    assert loop_score(preds) == 0.5
+
+
+def test_loop_score_empty_pred_list():
+    assert loop_score([]) == 0.0
