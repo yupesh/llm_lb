@@ -1,0 +1,19 @@
+{
+  "task_id": "loop_long_json_list",
+  "task_version": "1.0",
+  "primary_metric": "loop_score",
+  "ranking": [
+    {
+      "model_id": "gemma-4-26B-A4B-it@vllm",
+      "score": 1.0,
+      "metrics": {
+        "loop_score": 1.0
+      },
+      "tps": 27.13745555463278,
+      "p95_latency_ms": 19818.162865999995,
+      "cost_usd": null,
+      "result_file": "results/gemma-4-26B-A4B-it@vllm__2026-06-08T15-59-24Z.json"
+    }
+  ],
+  "updated_at": "2026-06-08T16:01:20+00:00"
+}

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T15:41:59+00:00",
+  "generated_at": "2026-06-08T16:01:20+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -6315,6 +6315,19 @@
       "p95_latency_ms": 17468.11468699997,
       "cost_usd": null,
       "result_file": "tasks/kg_triplet_extraction/results/nemotron-3-super@vllm__2026-04-26T16-50-00Z.json"
+    },
+    {
+      "task_id": "loop_long_json_list",
+      "task_version": "1.0",
+      "model_id": "gemma-4-26B-A4B-it@vllm",
+      "score": 1.0,
+      "metrics": {
+        "loop_score": 1.0
+      },
+      "tps": 27.13745555463278,
+      "p95_latency_ms": 19818.162865999995,
+      "cost_usd": null,
+      "result_file": "tasks/loop_long_json_list/results/gemma-4-26B-A4B-it@vllm__2026-06-08T15-59-24Z.json"
     },
     {
       "task_id": "oos_detection",
