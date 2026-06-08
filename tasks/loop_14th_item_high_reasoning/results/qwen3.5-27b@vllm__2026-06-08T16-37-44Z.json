@@ -1,0 +1,154 @@
+{
+  "model_id": "qwen3.5-27b@vllm",
+  "model_revision": "2026-04-11",
+  "task_id": "loop_14th_item_high_reasoning",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "8fe07337a277d9a6",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42,
+    "reasoning_mode": "high"
+  },
+  "metrics": {
+    "loop_score": 1.0
+  },
+  "tps": 55.40487608772918,
+  "p95_latency_ms": 5870.175441,
+  "n_samples": 10,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "sample_001",
+      "prediction": "Norway",
+      "expected": "Norway",
+      "correct": true,
+      "latency_ms": 5385.405796000001,
+      "input_tokens": 200,
+      "output_tokens": 293,
+      "raw_output": "\n\nNorway",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_002",
+      "prediction": "nectarine",
+      "expected": "nectarine",
+      "correct": true,
+      "latency_ms": 5623.258970999998,
+      "input_tokens": 221,
+      "output_tokens": 330,
+      "raw_output": "\n\nnectarine",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_003",
+      "prediction": "nickel",
+      "expected": "nickel",
+      "correct": true,
+      "latency_ms": 5287.0106339999975,
+      "input_tokens": 221,
+      "output_tokens": 299,
+      "raw_output": "\n\nnickel",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_004",
+      "prediction": "Sedna",
+      "expected": "Sedna",
+      "correct": true,
+      "latency_ms": 5870.175441,
+      "input_tokens": 227,
+      "output_tokens": 304,
+      "raw_output": "\n\nSedna",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_005",
+      "prediction": "Mahler",
+      "expected": "Mahler",
+      "correct": true,
+      "latency_ms": 5497.077422000004,
+      "input_tokens": 239,
+      "output_tokens": 309,
+      "raw_output": "\n\nMahler",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_006",
+      "prediction": "Niger",
+      "expected": "Niger",
+      "correct": true,
+      "latency_ms": 5651.128052999994,
+      "input_tokens": 224,
+      "output_tokens": 316,
+      "raw_output": "\n\nNiger",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_007",
+      "prediction": "French",
+      "expected": "French",
+      "correct": true,
+      "latency_ms": 5750.61054999999,
+      "input_tokens": 216,
+      "output_tokens": 298,
+      "raw_output": "\n\nFrench",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_008",
+      "prediction": "narwhal",
+      "expected": "narwhal",
+      "correct": true,
+      "latency_ms": 5492.773874999997,
+      "input_tokens": 231,
+      "output_tokens": 322,
+      "raw_output": "\n\nnarwhal",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_009",
+      "prediction": "ney",
+      "expected": "ney",
+      "correct": true,
+      "latency_ms": 5437.173075999994,
+      "input_tokens": 234,
+      "output_tokens": 318,
+      "raw_output": "\n\nney",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_010",
+      "prediction": "nutmeg",
+      "expected": "nutmeg",
+      "correct": true,
+      "latency_ms": 5830.797560999998,
+      "input_tokens": 230,
+      "output_tokens": 304,
+      "raw_output": "\n\nnutmeg",
+      "judge_raw_score": null,
+      "error": null
+    }
+  ],
+  "created_at": "2026-06-08T16:37:44+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": null,
+  "judge_model_revision": null,
+  "judge_prompt_hash": null,
+  "judge_served_model_name": null
+}
