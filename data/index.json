@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T16:07:43+00:00",
+  "generated_at": "2026-06-08T16:26:21+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -6380,6 +6380,19 @@
       "p95_latency_ms": 69535.76858799999,
       "cost_usd": null,
       "result_file": "tasks/loop_long_freeform/results/gemma-4-26B-A4B-it@vllm__2026-06-08T15-56-50Z.json"
+    },
+    {
+      "task_id": "loop_long_json_list",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 1.0,
+      "metrics": {
+        "loop_score": 1.0
+      },
+      "tps": 49.37493387525144,
+      "p95_latency_ms": 8189.179561000003,
+      "cost_usd": null,
+      "result_file": "tasks/loop_long_json_list/results/qwen3.5-27b@vllm__2026-06-08T16-10-42Z.json"
     },
     {
       "task_id": "loop_long_json_list",
