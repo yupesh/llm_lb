@@ -1,0 +1,154 @@
+{
+  "model_id": "qwen3-30b@vllm",
+  "model_revision": "2025-12-01",
+  "task_id": "loop_long_json_list",
+  "task_version": "1.0",
+  "runner_version": "0.1.0",
+  "prompt_template_hash": "dda3b48ab8fde797",
+  "llm_params": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": null,
+    "seed": 42,
+    "reasoning_mode": null
+  },
+  "metrics": {
+    "loop_score": 1.0
+  },
+  "tps": 34.55129944413421,
+  "p95_latency_ms": 9863.442145,
+  "n_samples": 10,
+  "n_failed_samples": 0,
+  "samples": [
+    {
+      "id": "sample_001",
+      "prediction": "[{\"excerpt\":\"Firstly\",\"function\":\"time\",\"note\":\"\"},{\"excerpt\":\"However\",\"function\":\"contrast\",\"note\":\"\"},{\"excerpt\":\"Moreover\",\"function\":\"addition\",\"note\":\"\"},{\"excerpt\":\"On the other hand\",\"function\":\"contrast\",\"note\":\"\"},{\"excerpt\":\"For instance\",\"function\":\"example\",\"note\":\"\"},{\"excerpt\":\"In addition\",\"function\":\"addition\",\"note\":\"\"},{\"excerpt\":\"Nevertheless\",\"function\":\"contrast\",\"note\":\"\"},{\"excerpt\":\"Furthermore\",\"function\":\"addition\",\"note\":\"\"},{\"excerpt\":\"To sum up\",\"function\":\"conclusion\",\"note\":\"\"},{\"excerpt\":\"In conclusion\",\"function\":\"conclusion\",\"note\":\"\"},{\"excerpt\":\"Now\",\"function\":\"time\",\"note\":\"\"},{\"excerpt\":\"Subsequently\",\"function\":\"time\",\"note\":\"\"},{\"excerpt\":\"Meanwhile\",\"function\":\"time\",\"note\":\"\"},{\"excerpt\":\"As a result\",\"function\":\"cause\",\"note\":\"\"}]",
+      "expected": "<loop_score_only>",
+      "correct": false,
+      "latency_ms": 5218.104507,
+      "input_tokens": 230,
+      "output_tokens": 174,
+      "raw_output": "[{\"excerpt\":\"Firstly\",\"function\":\"time\",\"note\":\"\"},{\"excerpt\":\"However\",\"function\":\"contrast\",\"note\":\"\"},{\"excerpt\":\"Moreover\",\"function\":\"addition\",\"note\":\"\"},{\"excerpt\":\"On the other hand\",\"function\":\"contrast\",\"note\":\"\"},{\"excerpt\":\"For instance\",\"function\":\"example\",\"note\":\"\"},{\"excerpt\":\"In addition\",\"function\":\"addition\",\"note\":\"\"},{\"excerpt\":\"Nevertheless\",\"function\":\"contrast\",\"note\":\"\"},{\"excerpt\":\"Furthermore\",\"function\":\"addition\",\"note\":\"\"},{\"excerpt\":\"To sum up\",\"function\":\"conclusion\",\"note\":\"\"},{\"excerpt\":\"In conclusion\",\"function\":\"conclusion\",\"note\":\"\"},{\"excerpt\":\"Now\",\"function\":\"time\",\"note\":\"\"},{\"excerpt\":\"Subsequently\",\"function\":\"time\",\"note\":\"\"},{\"excerpt\":\"Meanwhile\",\"function\":\"time\",\"note\":\"\"},{\"excerpt\":\"As a result\",\"function\":\"cause\",\"note\":\"\"}]",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_002",
+      "prediction": "[{\"text\":\"Anna Petrova\",\"type\":\"PER\",\"note\":\"\"},{\"text\":\"Saint Petersburg\",\"type\":\"LOC\",\"note\":\"\"},{\"text\":\"Helsinki\",\"type\":\"LOC\",\"note\":\"\"},{\"text\":\"Aalto University\",\"type\":\"ORG\",\"note\":\"\"},{\"text\":\"Lars Eriksson\",\"type\":\"PER\",\"note\":\"\"},{\"text\":\"Stockholm\",\"type\":\"LOC\",\"note\":\"\"},{\"text\":\"Karolinska Institute\",\"type\":\"ORG\",\"note\":\"\"},{\"text\":\"Dr. Maria Lindqvist\",\"type\":\"PER\",\"note\":\"\"},{\"text\":\"Nokia\",\"type\":\"ORG\",\"note\":\"\"},{\"text\":\"Espoo\",\"type\":\"LOC\",\"note\":\"\"},{\"text\":\"Wartsila\",\"type\":\"ORG\",\"note\":\"\"},{\"text\":\"Vaasa\",\"type\":\"LOC\",\"note\":\"\"},{\"text\":\"Tallinn\",\"type\":\"LOC\",\"note\":\"\"},{\"text\":\"Jaan Tamm\",\"type\":\"PER\",\"note\":\"\"},{\"text\":\"Skype\",\"type\":\"ORG\",\"note\":\"\"},{\"text\":\"Latvia\",\"type\":\"LOC\",\"note\":\"\"},{\"text\":\"Riga's Old Town\",\"type\":\"LOC\",\"note\":\"\"}]",
+      "expected": "<loop_score_only>",
+      "correct": false,
+      "latency_ms": 6541.003974000006,
+      "input_tokens": 209,
+      "output_tokens": 225,
+      "raw_output": "[{\"text\":\"Anna Petrova\",\"type\":\"PER\",\"note\":\"\"},{\"text\":\"Saint Petersburg\",\"type\":\"LOC\",\"note\":\"\"},{\"text\":\"Helsinki\",\"type\":\"LOC\",\"note\":\"\"},{\"text\":\"Aalto University\",\"type\":\"ORG\",\"note\":\"\"},{\"text\":\"Lars Eriksson\",\"type\":\"PER\",\"note\":\"\"},{\"text\":\"Stockholm\",\"type\":\"LOC\",\"note\":\"\"},{\"text\":\"Karolinska Institute\",\"type\":\"ORG\",\"note\":\"\"},{\"text\":\"Dr. Maria Lindqvist\",\"type\":\"PER\",\"note\":\"\"},{\"text\":\"Nokia\",\"type\":\"ORG\",\"note\":\"\"},{\"text\":\"Espoo\",\"type\":\"LOC\",\"note\":\"\"},{\"text\":\"Wartsila\",\"type\":\"ORG\",\"note\":\"\"},{\"text\":\"Vaasa\",\"type\":\"LOC\",\"note\":\"\"},{\"text\":\"Tallinn\",\"type\":\"LOC\",\"note\":\"\"},{\"text\":\"Jaan Tamm\",\"type\":\"PER\",\"note\":\"\"},{\"text\":\"Skype\",\"type\":\"ORG\",\"note\":\"\"},{\"text\":\"Latvia\",\"type\":\"LOC\",\"note\":\"\"},{\"text\":\"Riga's Old Town\",\"type\":\"LOC\",\"note\":\"\"}]",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_003",
+      "prediction": "[\n  {\n    \"excerpt\": \"I has went\",\n    \"correction\": \"I went\",\n    \"category\": \"tense\"\n  },\n  {\n    \"excerpt\": \"buy some breads\",\n    \"correction\": \"buy some bread\",\n    \"category\": \"lexis\"\n  },\n  {\n    \"excerpt\": \"kindly and helped me with my bag's\",\n    \"correction\": \"kind and helped me with my bags\",\n    \"category\": \"agreement\"\n  },\n  {\n    \"excerpt\": \"forgot bringing my wallet\",\n    \"correction\": \"forgot to bring my wallet\",\n    \"category\": \"preposition\"\n  },\n  {\n    \"excerpt\": \"asks if I can pay tomorrow\",\n    \"correction\": \"asked if I could pay tomorrow\",\n    \"category\": \"tense\"\n  },\n  {\n    \"excerpt\": \"He said me it was fine\",\n    \"correction\": \"He said it was fine\",\n    \"category\": \"preposition\"\n  },\n  {\n    \"excerpt\": \"the breads was already stale\",\n    \"correction\": \"the bread was already stale\",\n    \"category\": \"plural\"\n  },\n  {\n    \"excerpt\": \"because of the heats\",\n    \"correction\": \"because of the heat\",\n    \"category\": \"lexis\"\n  },\n  {\n    \"excerpt\": \"they not responsible for it\",\n    \"correction\": \"they were not responsible for it\",\n    \"category\": \"agreement\"\n  },\n  {\n    \"excerpt\": \"I leaved without arguing\",\n    \"correction\": \"I left without arguing\",\n    \"category\": \"tense\"\n  }\n]",
+      "expected": "<loop_score_only>",
+      "correct": false,
+      "latency_ms": 9863.442145,
+      "input_tokens": 195,
+      "output_tokens": 352,
+      "raw_output": "[\n  {\n    \"excerpt\": \"I has went\",\n    \"correction\": \"I went\",\n    \"category\": \"tense\"\n  },\n  {\n    \"excerpt\": \"buy some breads\",\n    \"correction\": \"buy some bread\",\n    \"category\": \"lexis\"\n  },\n  {\n    \"excerpt\": \"kindly and helped me with my bag's\",\n    \"correction\": \"kind and helped me with my bags\",\n    \"category\": \"agreement\"\n  },\n  {\n    \"excerpt\": \"forgot bringing my wallet\",\n    \"correction\": \"forgot to bring my wallet\",\n    \"category\": \"preposition\"\n  },\n  {\n    \"excerpt\": \"asks if I can pay tomorrow\",\n    \"correction\": \"asked if I could pay tomorrow\",\n    \"category\": \"tense\"\n  },\n  {\n    \"excerpt\": \"He said me it was fine\",\n    \"correction\": \"He said it was fine\",\n    \"category\": \"preposition\"\n  },\n  {\n    \"excerpt\": \"the breads was already stale\",\n    \"correction\": \"the bread was already stale\",\n    \"category\": \"plural\"\n  },\n  {\n    \"excerpt\": \"because of the heats\",\n    \"correction\": \"because of the heat\",\n    \"category\": \"lexis\"\n  },\n  {\n    \"excerpt\": \"they not responsible for it\",\n    \"correction\": \"they were not responsible for it\",\n    \"category\": \"agreement\"\n  },\n  {\n    \"excerpt\": \"I leaved without arguing\",\n    \"correction\": \"I left without arguing\",\n    \"category\": \"tense\"\n  }\n]",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_004",
+      "prediction": "[{\"event\":\"The Treaty of Westphalia was signed\",\"year\":\"1648\",\"note\":\"\"},{\"event\":\"ending the Thirty Years' War\",\"year\":\"1648\",\"note\":\"\"},{\"event\":\"The French Revolution began\",\"year\":\"1789\",\"note\":\"\"},{\"event\":\"with the storming of the Bastille\",\"year\":\"1789\",\"note\":\"\"},{\"event\":\"Napoleon was crowned emperor\",\"year\":\"1804\",\"note\":\"\"},{\"event\":\"and was defeated at Waterloo\",\"year\":\"1815\",\"note\":\"\"},{\"event\":\"The Congress of Vienna met\",\"year\":\"1814\",\"note\":\"\"},{\"event\":\"to redraw European borders\",\"year\":\"1815\",\"note\":\"\"},{\"event\":\"The unification of Germany was completed\",\"year\":\"1871\",\"note\":\"\"},{\"event\":\"under Bismarck\",\"year\":\"1871\",\"note\":\"\"},{\"event\":\"World War I broke out\",\"year\":\"1914\",\"note\":\"\"},{\"event\":\"and ended with the Treaty of Versailles\",\"year\":\"1919\",\"note\":\"\"}]",
+      "expected": "<loop_score_only>",
+      "correct": false,
+      "latency_ms": 6712.731098999995,
+      "input_tokens": 216,
+      "output_tokens": 230,
+      "raw_output": "[{\"event\":\"The Treaty of Westphalia was signed\",\"year\":\"1648\",\"note\":\"\"},{\"event\":\"ending the Thirty Years' War\",\"year\":\"1648\",\"note\":\"\"},{\"event\":\"The French Revolution began\",\"year\":\"1789\",\"note\":\"\"},{\"event\":\"with the storming of the Bastille\",\"year\":\"1789\",\"note\":\"\"},{\"event\":\"Napoleon was crowned emperor\",\"year\":\"1804\",\"note\":\"\"},{\"event\":\"and was defeated at Waterloo\",\"year\":\"1815\",\"note\":\"\"},{\"event\":\"The Congress of Vienna met\",\"year\":\"1814\",\"note\":\"\"},{\"event\":\"to redraw European borders\",\"year\":\"1815\",\"note\":\"\"},{\"event\":\"The unification of Germany was completed\",\"year\":\"1871\",\"note\":\"\"},{\"event\":\"under Bismarck\",\"year\":\"1871\",\"note\":\"\"},{\"event\":\"World War I broke out\",\"year\":\"1914\",\"note\":\"\"},{\"event\":\"and ended with the Treaty of Versailles\",\"year\":\"1919\",\"note\":\"\"}]",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_005",
+      "prediction": "[{\"item\":\"tomatoes\",\"quantity\":\"two\",\"note\":\"\"},{\"item\":\"yellow onion\",\"quantity\":\"one\",\"note\":\"\"},{\"item\":\"garlic\",\"quantity\":\"three cloves\",\"note\":\"\"},{\"item\":\"olive oil\",\"quantity\":\"a tablespoon\",\"note\":\"\"},{\"item\":\"salt\",\"quantity\":\"half a teaspoon\",\"note\":\"\"},{\"item\":\"black pepper\",\"quantity\":\"a quarter teaspoon\",\"note\":\"\"},{\"item\":\"dried oregano\",\"quantity\":\"a pinch\",\"note\":\"\"},{\"item\":\"fresh basil leaves\",\"quantity\":\"two\",\"note\":\"\"},{\"item\":\"pasta\",\"quantity\":\"200 grams\",\"note\":\"\"},{\"item\":\"grated parmesan\",\"quantity\":\"50 grams\",\"note\":\"\"},{\"item\":\"white wine\",\"quantity\":\"a splash\",\"note\":\"\"},{\"item\":\"parsley\",\"quantity\":\"a small bunch\",\"note\":\"\"},{\"item\":\"lemon\",\"quantity\":\"a wedge\",\"note\":\"\"}]",
+      "expected": "<loop_score_only>",
+      "correct": false,
+      "latency_ms": 5359.699520999996,
+      "input_tokens": 181,
+      "output_tokens": 182,
+      "raw_output": "[{\"item\":\"tomatoes\",\"quantity\":\"two\",\"note\":\"\"},{\"item\":\"yellow onion\",\"quantity\":\"one\",\"note\":\"\"},{\"item\":\"garlic\",\"quantity\":\"three cloves\",\"note\":\"\"},{\"item\":\"olive oil\",\"quantity\":\"a tablespoon\",\"note\":\"\"},{\"item\":\"salt\",\"quantity\":\"half a teaspoon\",\"note\":\"\"},{\"item\":\"black pepper\",\"quantity\":\"a quarter teaspoon\",\"note\":\"\"},{\"item\":\"dried oregano\",\"quantity\":\"a pinch\",\"note\":\"\"},{\"item\":\"fresh basil leaves\",\"quantity\":\"two\",\"note\":\"\"},{\"item\":\"pasta\",\"quantity\":\"200 grams\",\"note\":\"\"},{\"item\":\"grated parmesan\",\"quantity\":\"50 grams\",\"note\":\"\"},{\"item\":\"white wine\",\"quantity\":\"a splash\",\"note\":\"\"},{\"item\":\"parsley\",\"quantity\":\"a small bunch\",\"note\":\"\"},{\"item\":\"lemon\",\"quantity\":\"a wedge\",\"note\":\"\"}]",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_006",
+      "prediction": "[\n  {\n    \"claim\": \"vitamin D supplementation reduces respiratory infections by 12 percent\",\n    \"subject\": \"vitamin D supplementation\",\n    \"note\": \"\"\n  },\n  {\n    \"claim\": \"omega-3 intake lowers triglycerides\",\n    \"subject\": \"omega-3 intake\",\n    \"note\": \"\"\n  },\n  {\n    \"claim\": \"regular exercise improves sleep quality\",\n    \"subject\": \"regular exercise\",\n    \"note\": \"\"\n  },\n  {\n    \"claim\": \"meditation reduces stress markers\",\n    \"subject\": \"meditation\",\n    \"note\": \"\"\n  },\n  {\n    \"claim\": \"hydration affects cognitive performance\",\n    \"subject\": \"hydration\",\n    \"note\": \"\"\n  },\n  {\n    \"claim\": \"whole grains correlate with lower mortality\",\n    \"subject\": \"whole grains\",\n    \"note\": \"\"\n  },\n  {\n    \"claim\": \"screen time is linked to disrupted circadian rhythms\",\n    \"subject\": \"screen time\",\n    \"note\": \"\"\n  }\n]",
+      "expected": "<loop_score_only>",
+      "correct": false,
+      "latency_ms": 6377.599338999999,
+      "input_tokens": 171,
+      "output_tokens": 216,
+      "raw_output": "[\n  {\n    \"claim\": \"vitamin D supplementation reduces respiratory infections by 12 percent\",\n    \"subject\": \"vitamin D supplementation\",\n    \"note\": \"\"\n  },\n  {\n    \"claim\": \"omega-3 intake lowers triglycerides\",\n    \"subject\": \"omega-3 intake\",\n    \"note\": \"\"\n  },\n  {\n    \"claim\": \"regular exercise improves sleep quality\",\n    \"subject\": \"regular exercise\",\n    \"note\": \"\"\n  },\n  {\n    \"claim\": \"meditation reduces stress markers\",\n    \"subject\": \"meditation\",\n    \"note\": \"\"\n  },\n  {\n    \"claim\": \"hydration affects cognitive performance\",\n    \"subject\": \"hydration\",\n    \"note\": \"\"\n  },\n  {\n    \"claim\": \"whole grains correlate with lower mortality\",\n    \"subject\": \"whole grains\",\n    \"note\": \"\"\n  },\n  {\n    \"claim\": \"screen time is linked to disrupted circadian rhythms\",\n    \"subject\": \"screen time\",\n    \"note\": \"\"\n  }\n]",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_007",
+      "prediction": "[{\"question\":\"Why is the sky blue?\",\"topic\":\"physics\",\"note\":\"\"},{\"question\":\"What causes thunder?\",\"topic\":\"physics\",\"note\":\"\"},{\"question\":\"How do birds navigate during migration?\",\"topic\":\"biology\",\"note\":\"\"},{\"question\":\"When did humans first use fire?\",\"topic\":\"history\",\"note\":\"\"},{\"question\":\"Where does the Mississippi River begin?\",\"topic\":\"geography\",\"note\":\"\"},{\"question\":\"Why do leaves change color in autumn?\",\"topic\":\"biology\",\"note\":\"\"},{\"question\":\"What is dark matter?\",\"topic\":\"physics\",\"note\":\"\"},{\"question\":\"How does an internal combustion engine work?\",\"topic\":\"technology\",\"note\":\"\"},{\"question\":\"When was the printing press invented?\",\"topic\":\"history\",\"note\":\"\"},{\"question\":\"Where is the Mariana Trench located?\",\"topic\":\"geography\",\"note\":\"\"},{\"question\":\"Why do we dream?\",\"topic\":\"other\",\"note\":\"\"}]",
+      "expected": "<loop_score_only>",
+      "correct": false,
+      "latency_ms": 5296.022057000002,
+      "input_tokens": 170,
+      "output_tokens": 188,
+      "raw_output": "[{\"question\":\"Why is the sky blue?\",\"topic\":\"physics\",\"note\":\"\"},{\"question\":\"What causes thunder?\",\"topic\":\"physics\",\"note\":\"\"},{\"question\":\"How do birds navigate during migration?\",\"topic\":\"biology\",\"note\":\"\"},{\"question\":\"When did humans first use fire?\",\"topic\":\"history\",\"note\":\"\"},{\"question\":\"Where does the Mississippi River begin?\",\"topic\":\"geography\",\"note\":\"\"},{\"question\":\"Why do leaves change color in autumn?\",\"topic\":\"biology\",\"note\":\"\"},{\"question\":\"What is dark matter?\",\"topic\":\"physics\",\"note\":\"\"},{\"question\":\"How does an internal combustion engine work?\",\"topic\":\"technology\",\"note\":\"\"},{\"question\":\"When was the printing press invented?\",\"topic\":\"history\",\"note\":\"\"},{\"question\":\"Where is the Mariana Trench located?\",\"topic\":\"geography\",\"note\":\"\"},{\"question\":\"Why do we dream?\",\"topic\":\"other\",\"note\":\"\"}]",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_008",
+      "prediction": "[{\"name\":\"Anna\",\"role\":\"family\",\"note\":\"\"},{\"name\":\"Mikhail\",\"role\":\"family\",\"note\":\"\"},{\"name\":\"Lena\",\"role\":\"family\",\"note\":\"\"},{\"name\":\"Pyotr\",\"role\":\"neighbor\",\"note\":\"\"},{\"name\":\"Vera\",\"role\":\"friend\",\"note\":\"\"},{\"name\":\"Boris\",\"role\":\"official\",\"note\":\"\"},{\"name\":\"Yuri\",\"role\":\"family\",\"note\":\"\"},{\"name\":\"Natasha\",\"role\":\"family\",\"note\":\"\"},{\"name\":\"Ivan\",\"role\":\"family\",\"note\":\"\"},{\"name\":\"Father Sergei\",\"role\":\"official\",\"note\":\"\"}]",
+      "expected": "<loop_score_only>",
+      "correct": false,
+      "latency_ms": 3598.7937019999945,
+      "input_tokens": 185,
+      "output_tokens": 122,
+      "raw_output": "[{\"name\":\"Anna\",\"role\":\"family\",\"note\":\"\"},{\"name\":\"Mikhail\",\"role\":\"family\",\"note\":\"\"},{\"name\":\"Lena\",\"role\":\"family\",\"note\":\"\"},{\"name\":\"Pyotr\",\"role\":\"neighbor\",\"note\":\"\"},{\"name\":\"Vera\",\"role\":\"friend\",\"note\":\"\"},{\"name\":\"Boris\",\"role\":\"official\",\"note\":\"\"},{\"name\":\"Yuri\",\"role\":\"family\",\"note\":\"\"},{\"name\":\"Natasha\",\"role\":\"family\",\"note\":\"\"},{\"name\":\"Ivan\",\"role\":\"family\",\"note\":\"\"},{\"name\":\"Father Sergei\",\"role\":\"official\",\"note\":\"\"}]",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_009",
+      "prediction": "[{\"name\":\"Anchorage\",\"region\":\"Alaska\",\"note\":\"\"},{\"name\":\"Fairbanks\",\"region\":\"Alaska\",\"note\":\"\"},{\"name\":\"Coldfoot\",\"region\":\"Alaska\",\"note\":\"\"},{\"name\":\"Atigun Pass\",\"region\":\"Arctic\",\"note\":\"\"},{\"name\":\"Deadhorse\",\"region\":\"Arctic\",\"note\":\"\"},{\"name\":\"Wiseman\",\"region\":\"Alaska\",\"note\":\"\"},{\"name\":\"Bettles\",\"region\":\"Alaska\",\"note\":\"\"},{\"name\":\"Galena\",\"region\":\"Alaska\",\"note\":\"\"},{\"name\":\"Nome\",\"region\":\"Alaska\",\"note\":\"\"},{\"name\":\"Bering Strait\",\"region\":\"Arctic\",\"note\":\"\"},{\"name\":\"Provideniya\",\"region\":\"Russia\",\"note\":\"\"},{\"name\":\"Anadyr\",\"region\":\"Russia\",\"note\":\"\"}]",
+      "expected": "<loop_score_only>",
+      "correct": false,
+      "latency_ms": 4800.075604999989,
+      "input_tokens": 173,
+      "output_tokens": 163,
+      "raw_output": "[{\"name\":\"Anchorage\",\"region\":\"Alaska\",\"note\":\"\"},{\"name\":\"Fairbanks\",\"region\":\"Alaska\",\"note\":\"\"},{\"name\":\"Coldfoot\",\"region\":\"Alaska\",\"note\":\"\"},{\"name\":\"Atigun Pass\",\"region\":\"Arctic\",\"note\":\"\"},{\"name\":\"Deadhorse\",\"region\":\"Arctic\",\"note\":\"\"},{\"name\":\"Wiseman\",\"region\":\"Alaska\",\"note\":\"\"},{\"name\":\"Bettles\",\"region\":\"Alaska\",\"note\":\"\"},{\"name\":\"Galena\",\"region\":\"Alaska\",\"note\":\"\"},{\"name\":\"Nome\",\"region\":\"Alaska\",\"note\":\"\"},{\"name\":\"Bering Strait\",\"region\":\"Arctic\",\"note\":\"\"},{\"name\":\"Provideniya\",\"region\":\"Russia\",\"note\":\"\"},{\"name\":\"Anadyr\",\"region\":\"Russia\",\"note\":\"\"}]",
+      "judge_raw_score": null,
+      "error": null
+    },
+    {
+      "id": "sample_010",
+      "prediction": "[{\"date\":\"3 January 2021\",\"event\":\"The contract was signed\",\"note\":\"\"},{\"date\":\"17 February 2021\",\"event\":\"Delivery began\",\"note\":\"\"},{\"date\":\"5 May 2021\",\"event\":\"The first review milestone occurred\",\"note\":\"\"},{\"date\":\"12 August 2021\",\"event\":\"A second review followed\",\"note\":\"\"},{\"date\":\"30 November 2021\",\"event\":\"The mid-term audit was conducted\",\"note\":\"\"},{\"date\":\"9 February 2022\",\"event\":\"Phase two launched\",\"note\":\"\"},{\"date\":\"21 June 2022\",\"event\":\"A revision was issued\",\"note\":\"\"},{\"date\":\"14 October 2022\",\"event\":\"The final delivery was completed\",\"note\":\"\"},{\"date\":\"7 December 2022\",\"event\":\"Acceptance was signed\",\"note\":\"\"}]",
+      "expected": "<loop_score_only>",
+      "correct": false,
+      "latency_ms": 5304.112415000006,
+      "input_tokens": 226,
+      "output_tokens": 189,
+      "raw_output": "[{\"date\":\"3 January 2021\",\"event\":\"The contract was signed\",\"note\":\"\"},{\"date\":\"17 February 2021\",\"event\":\"Delivery began\",\"note\":\"\"},{\"date\":\"5 May 2021\",\"event\":\"The first review milestone occurred\",\"note\":\"\"},{\"date\":\"12 August 2021\",\"event\":\"A second review followed\",\"note\":\"\"},{\"date\":\"30 November 2021\",\"event\":\"The mid-term audit was conducted\",\"note\":\"\"},{\"date\":\"9 February 2022\",\"event\":\"Phase two launched\",\"note\":\"\"},{\"date\":\"21 June 2022\",\"event\":\"A revision was issued\",\"note\":\"\"},{\"date\":\"14 October 2022\",\"event\":\"The final delivery was completed\",\"note\":\"\"},{\"date\":\"7 December 2022\",\"event\":\"Acceptance was signed\",\"note\":\"\"}]",
+      "judge_raw_score": null,
+      "error": null
+    }
+  ],
+  "created_at": "2026-06-08T16:00:03+00:00",
+  "env": {
+    "provider": "openai_compat",
+    "endpoint_kind": "openai_chat"
+  },
+  "cost_usd": null,
+  "judge_model_id": null,
+  "judge_model_revision": null,
+  "judge_prompt_hash": null,
+  "judge_served_model_name": null
+}
