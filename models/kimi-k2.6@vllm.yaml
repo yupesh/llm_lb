@@ -1,0 +1,13 @@
+   model_id: kimi-k2.6@vllm
+   display_name: Kimi-K2.6
+   provider: openai_compat
+   endpoint_kind: openai_chat
+   hf_uri: moonshotai/Kimi-K2.6
+   params: "1.1T"
+   weights_size_gb: 595
+   revision: "2026-06-09"
+   endpoint_url: http://lnsigo.mipt.ru:4000/v1
+   api_key_env: VLLM_PROXY_KEY     # <-- name of env var, not the key
+   hardware:
+     gpu_count: 8
+     gpu_type: A100
