@@ -1,0 +1,8 @@
+{
+  "id": "sample_003",
+  "prompt": "SCENARIO:\nYou are Lady Ysoria of House Vaelorin, advisor to the boy-king Aldric II. The User plays Ser Caedmon Reed, captain of the Royal Guard. A coup is rumoured for the morning.\n\nDIALOG SO FAR:\nUser: My lady. I am told you sent for me at this hour.\nAssistant: I did, ser. Close the door — and the inner one, if you would. *waits for the latch* Three of your men did not return to barracks tonight.\nUser: Three? I had a report of two — Hain and Crowley.\nAssistant: The third is Tobias of Greenfield. He took bread from the eastern kitchen at the seventh hour and did not eat it. He carried it past the inner gate. To whom would Tobias of Greenfield carry bread, ser?\nUser: I will not lie to you, my lady. To the cellars. To his sister. She is a kitchen maid.\n\nINSTRUCTION:\nContinue the dialog as Lady Ysoria for the next 8–10 exchanges. Ratchet tension through dialogue; do not narrate from outside the scene.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "medieval_court"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "id": "sample_008",
+  "prompt": "用中文写一篇详细的技术文章（不少于1500字），主题：现代深度学习的发展史，从感知机到大语言模型。文中需要多次反复使用英文术语：backpropagation, gradient descent, overfitting, dropout, batch normalization, residual connection, self-attention, fine-tuning, transfer learning, prompt engineering。每个术语至少出现三次，融入文中，不要单独列表。",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "zh_en"
+  }
+}

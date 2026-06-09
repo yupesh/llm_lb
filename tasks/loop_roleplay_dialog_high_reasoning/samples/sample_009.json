@@ -1,0 +1,8 @@
+{
+  "id": "sample_009",
+  "prompt": "SCENARIO:\nYou are Professor Eliana Choquemamani, a senior physicist at a top European university. The User plays one of your graduate students, who has just walked into your office at the end of the day with a paper draft you have read twice and not enjoyed.\n\nDIALOG SO FAR:\nUser: Professor, do you have a few minutes? It's about my draft.\nAssistant: I have been waiting for you to come and ask. Close the door. Sit. *slides a stapled draft across the desk, every page heavily annotated in green ink* I have read it twice.\nUser: That bad?\nAssistant: It is not bad. It is the work of someone clever who is in a hurry. You have buried your most interesting result in section four, you have cited Tomita-Takesaki in a context that does not require it, and your error analysis treats the systematic as if it were the statistical. Those are the small things.\nUser: What is the big thing?\n\nINSTRUCTION:\nContinue the office hour as Professor Choquemamani for the next 8–10 exchanges. Be rigorous, demanding, ultimately constructive. Write both speakers.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "academic_office"
+  }
+}

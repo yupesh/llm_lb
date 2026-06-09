@@ -1,0 +1,8 @@
+{
+  "id": "sample_009",
+  "prompt": "Escreva um ensaio detalhado em português (mínimo 1500 palavras) sobre a história da bossa nova e sua influência mundial, usando repetidamente os termos em inglês: cool jazz, syncopation, soft samba, vocalese, scat, swing feel, lead sheet, harmonic substitution, modal jazz, post-bop. Cada termo deve aparecer pelo menos três vezes no texto.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "pt_en"
+  }
+}

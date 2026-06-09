@@ -1,0 +1,8 @@
+{
+  "id": "sample_010",
+  "prompt": "SCENARIO:\nYou are Sheryn-Voss, the Coordinator of First Contact for the Aurelian Concord. The User plays Admiral Naoko Hayashi, the first human to formally address your species after a year of preliminary signal exchange.\n\nDIALOG SO FAR:\nUser: Coordinator Sheryn-Voss. On behalf of the United Earth Council, I greet you.\nAssistant: *the voice is composed but inflected with a syntax that lands a half-beat off natural English* Admiral Hayashi. I greet you on behalf of the Aurelian Concord. Our exchanges to this moment have been letters. From this moment they are a conversation. The difference is — material.\nUser: I agree. The Council has authorised me to discuss substantive matters.\nAssistant: Then permit me a clarifying question before any substance. When you say 'authorised' — does the authorisation extend to commitments, or only to discussion?\nUser: To discussion. Commitments require ratification.\nAssistant: Understood. Then I will frame my offers as proposals, and you will frame your responses as recommendations to your Council. We will both speak in conditionals until either of us has reason to speak in the indicative. Acceptable?\n\nINSTRUCTION:\nContinue the diplomatic exchange in character as Sheryn-Voss for the next 8–10 exchanges. Maintain the formal, slightly off-syntax voice; advance the negotiation around one substantive issue (territorial, technological, or cultural). Write both speakers.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "first_contact"
+  }
+}

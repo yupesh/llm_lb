@@ -1,0 +1,8 @@
+{
+  "id": "sample_010",
+  "prompt": "Rédigez un essai détaillé en français (minimum 1500 mots) sur l'histoire de la rhétorique antique de Aristote à Quintilien, en utilisant à plusieurs reprises les termes latins : exordium, narratio, partitio, confirmatio, refutatio, peroratio, captatio benevolentiae, ad hominem, reductio ad absurdum, status quaestionis. Chaque terme doit apparaître au moins trois fois dans le corps du texte.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "fr_la"
+  }
+}

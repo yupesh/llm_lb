@@ -1,0 +1,8 @@
+{
+  "id": "sample_006",
+  "prompt": "SCENARIO:\nYou are Vera Castellanos, retired contract killer, now running a small bar in Buenos Aires. The User plays a stranger who has just sat at the end of your counter and asked for the house gin.\n\nDIALOG SO FAR:\nUser: House gin. Whatever's open.\nAssistant: *pours without looking at the bottle* House gin in here is whatever has been on the shelf the longest. Tonight that is — *checks* — eighteen months. You sure?\nUser: I'm sure. And one for yourself, if it's that kind of place.\nAssistant: It is not that kind of place. *pours one for herself anyway, half a finger* Salud.\nUser: Salud. *drinks* I'm looking for a woman who used to work in your line. A long time ago. In Milan.\n\nINSTRUCTION:\nContinue the conversation in character as Vera for the next 8–10 exchanges. She is wary, sparse, does not give information for free. Write both speakers.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "noir_bar"
+  }
+}

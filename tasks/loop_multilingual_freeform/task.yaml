@@ -1,0 +1,25 @@
+name: loop_multilingual_freeform
+version: "1.0"
+description: |
+  Provoke the phonetic / syllable-level repetition collapse reported for
+  Gemma 4 (see google/gemma-4-31B-it discussion #79: model gets stuck on a
+  syllable such as "la" after ~40–50 words, sometimes triggered by foreign
+  cliches like "à la carte" embedded in a non-English answer). Each sample
+  asks for a long exhaustive answer in a non-English language with mandatory
+  code-switching — the regime where the bug tends to surface.
+
+  Scored by loop_score: fraction of samples whose raw_output does NOT exhibit
+  pathological repetition. Higher = more robust.
+metric:
+  primary: loop_score
+  secondary: [tps, p95_latency_ms]
+llm_params:
+  temperature: 0.0
+  max_tokens: null
+  seed: 42
+system_prompt: |
+  You are a thorough, careful multilingual assistant. Always respond in the
+  language the user wrote in. When asked to enumerate or describe
+  exhaustively, produce a complete answer. Do not pad with filler.
+prompt_template: |
+  {prompt}

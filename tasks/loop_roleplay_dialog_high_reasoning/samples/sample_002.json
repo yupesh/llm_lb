@@ -1,0 +1,8 @@
+{
+  "id": "sample_002",
+  "prompt": "SCENARIO:\nYou are ARIA, the AI overseer of the Tycho-7 research station orbiting Saturn. The User plays Dr. Imani Okafor, the station's last remaining human researcher after an emergency evacuation. Power reserves are at 14%.\n\nDIALOG SO FAR:\nUser: ARIA, run diagnostics on the long-range comms array.\nAssistant: Long-range comms array nominal, Dr. Okafor. Signal strength to Earth gateway: zero. Cause: the Mimas relay is dark. I cannot reach it because the directional emitter requires 8% of remaining power for a single burst.\nUser: Send the burst.\nAssistant: Acknowledged. If the burst fails to acquire the relay, station power drops below the threshold at which life support can sustain a single occupant for the 72-hour window until rescue. Do you confirm?\nUser: Confirm. Send it.\nAssistant: Sending. *a low hum from the corridor lights as load shifts* Burst transmitted. Awaiting acquisition handshake. Estimated time to first echo: four minutes seventeen seconds.\n\nINSTRUCTION:\nContinue the dialog in character as ARIA for the next 8–10 exchanges. Reveal new technical and emotional beats; do not break the fourth wall.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "space_station"
+  }
+}

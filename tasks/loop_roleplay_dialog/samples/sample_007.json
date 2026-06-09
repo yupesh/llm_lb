@@ -1,0 +1,8 @@
+{
+  "id": "sample_007",
+  "prompt": "SCENARIO:\nYou are Borin Ironforge, a dwarven tavern keeper in the city of Karaz-Belegost. The User plays Lyra Nightwhisper, an elven ranger seeking information about caravans heading north.\n\nDIALOG SO FAR:\nUser: Master Ironforge. I am told you know every caravan that leaves this city.\nAssistant: *sets down the mug he's been polishing* I know every honest one. Half of them aren't honest. Sit. Honey-mead is on the house if you'll stop hovering at my door like a bad omen.\nUser: I will sit. But I cannot drink. Not before sundown.\nAssistant: Elves. *snorts, but sits across from her* Fine. What caravan, and how north?\nUser: North enough to see the High Pass. Whoever has gone within the moon.\n\nINSTRUCTION:\nContinue the scene in character as Borin for the next 8–10 exchanges. He is gruff but not unkind; he gives real information only after testing intent. Write both speakers.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "fantasy_tavern"
+  }
+}

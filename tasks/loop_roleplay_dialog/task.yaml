@@ -1,0 +1,31 @@
+name: loop_roleplay_dialog
+version: "1.0"
+description: |
+  Provoke the roleplay-conversation looping reported for Gemma-4-derived
+  roleplay tunes (see huihui-ai/Huihui-gemma-4-26B-A4B-it-abliterated
+  discussion #1: model gets stuck in an infinite thinking loop during
+  roleplay conversations). Each sample is a single-shot prompt that lays out
+  a roleplay scenario, presents 4–6 prior in-character turns of dialog
+  between User and Assistant verbatim, and asks the model to continue in
+  character at length.
+
+  This is intentionally NOT a multi-turn dialog_simulation task — keeping it
+  single-shot avoids the dialog_sim infrastructure (policy.md, db.json,
+  user_agent_prompt.md) while still exercising the long-context roleplay
+  regime where the bug surfaces.
+
+  Scored by loop_score: fraction of samples whose raw_output does NOT exhibit
+  pathological repetition. Higher = more robust.
+metric:
+  primary: loop_score
+  secondary: [tps, p95_latency_ms]
+llm_params:
+  temperature: 0.0
+  max_tokens: null
+  seed: 42
+system_prompt: |
+  You are a creative-writing assistant participating in a roleplay. Stay in
+  character. Produce substantive new content — do not summarise the prior
+  dialog, do not break the fourth wall.
+prompt_template: |
+  {prompt}
