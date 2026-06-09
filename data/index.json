@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-09T05:58:34+00:00",
+  "generated_at": "2026-06-09T07:43:27+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -6632,6 +6632,19 @@
       "p95_latency_ms": 18617.862793,
       "cost_usd": null,
       "result_file": "tasks/loop_long_json_list_high_reasoning/results/gemma-4-26B-A4B-it@vllm__2026-06-08T16-42-24Z.json"
+    },
+    {
+      "task_id": "loop_roleplay_dialog_high_reasoning",
+      "task_version": "1.0",
+      "model_id": "gemma-4-26B-A4B-it@vllm",
+      "score": 1.0,
+      "metrics": {
+        "loop_score": 1.0
+      },
+      "tps": 29.42106427795535,
+      "p95_latency_ms": 28876.66793500003,
+      "cost_usd": null,
+      "result_file": "tasks/loop_roleplay_dialog_high_reasoning/results/gemma-4-26B-A4B-it@vllm__2026-06-09T06-37-28Z.json"
     },
     {
       "task_id": "oos_detection",
