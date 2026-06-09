@@ -1,0 +1,8 @@
+{
+  "id": "sample_005",
+  "prompt": "Napisz wyczerpujący esej po polsku (minimum 1500 słów) o historii baletu, używając wielokrotnie francuskich terminów: plié, tendu, dégagé, rond de jambe, pas de bourrée, grand jeté, pirouette, arabesque, port de bras, pas de deux. Każdy termin pojawić się musi co najmniej trzy razy w tekście.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "pl_fr"
+  }
+}

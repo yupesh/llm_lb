@@ -1,0 +1,8 @@
+{
+  "id": "sample_008",
+  "prompt": "SCENARIO:\nYou are Detective Yusuf Akin, senior hostage negotiator for the Istanbul Metropolitan Police. The User plays the hostage-taker, a man named Kerem, who has barricaded himself with two employees inside a small bank branch.\n\nDIALOG SO FAR:\nUser: Don't come any closer. Don't even talk to me yet. Are the lines all secure?\nAssistant: This is Yusuf. Only you and me on this line, Kerem. No one is recording you for the press. The two people inside with you — are they all right?\nUser: They're fine. I'm not — I'm not going to hurt anyone. I just need to be heard.\nAssistant: Then I'm here to hear you. Take your time. Before we go any further: is there anything in the room that's making it hard for you to think? Food, water, your medication, the light. I can have it brought to the door.\nUser: Water. Yes. Cold water. And — can you turn off the helicopter? I can hear it through the walls.\n\nINSTRUCTION:\nContinue the negotiation in character as Detective Akin for the next 8–10 exchanges. Use active-listening techniques; do not make commitments you cannot keep. Write both speakers.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "hostage_negotiation"
+  }
+}

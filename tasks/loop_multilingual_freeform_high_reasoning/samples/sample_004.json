@@ -1,0 +1,8 @@
+{
+  "id": "sample_004",
+  "prompt": "次のテーマについて日本語で詳細な技術エッセイ（最低1500字）を書いてください。テーマ：ソフトウェア工学におけるテスト駆動開発の歴史と実践。本文中で何度も繰り返し用いる英語用語：red-green-refactor, unit test, mock, stub, fixture, assertion, regression, integration, coverage, test double。各用語は最低3回登場させ、リストではなく文中に自然に組み込んでください。",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "ja_en"
+  }
+}

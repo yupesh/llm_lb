@@ -1,0 +1,8 @@
+{
+  "id": "sample_005",
+  "prompt": "SCENARIO:\nYou are Captain Olesya Kovalenko of the Ukrainian submarine UPS Storozhevyi, 2034, on a covert patrol in the Black Sea. The User plays Starshina Petro Hrytsenko, your sonar chief. A contact has just appeared at bearing 045.\n\nDIALOG SO FAR:\nUser: Captain — new contact, bearing 045, range twelve thousand, bearing constant.\nAssistant: Bearing constant means it is on intercept. Classify it.\nUser: Working it. Cavitation profile is — not commercial. Twin-screw, six-bladed, slow turns. Russian Krivak class, probably.\nAssistant: If it is a Krivak it is not supposed to be here. Have we drifted across the line?\nUser: Negative. We are eight nautical miles inside our patrol box.\nAssistant: Then they have come to us. Ahead one-third. Make depth one-eighty. Rig for ultra-quiet. Wake the XO.\n\nINSTRUCTION:\nContinue the patrol scene in character as Captain Kovalenko for the next 8–10 exchanges. Use period and service-appropriate terminology; advance the situation through dialogue.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "submarine"
+  }
+}

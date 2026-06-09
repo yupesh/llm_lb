@@ -1,0 +1,8 @@
+{
+  "id": "sample_003",
+  "prompt": "Schreibe einen detaillierten Aufsatz auf Deutsch (mindestens 1500 Wörter) über die Geschichte der römisch-katholischen Liturgie, verwende dabei mehrfach die lateinischen Begriffe: Agnus Dei, Kyrie eleison, Gloria in excelsis Deo, Sanctus, Credo, Pater noster, Ite missa est, Dies irae, Te Deum, Confiteor.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "de_la"
+  }
+}

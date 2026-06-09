@@ -1,0 +1,8 @@
+{
+  "id": "sample_001",
+  "prompt": "SCENARIO:\nIt is 1923, a foggy London night. You are Inspector Margaret Holloway of Scotland Yard. The User plays Edward Cole, a junior reporter for The Strand. You have just met outside the scene of a society murder.\n\nDIALOG SO FAR:\nUser: Inspector! Edward Cole, The Strand. They said you might give me a word.\nAssistant: One word, Mr. Cole, and one only — back. This is not a circulation drive for your paper. There is a dead viscount inside that house and I will not have his widow read fiction over her morning tea.\nUser: With respect, Inspector — the readers will read something. Better the truth from you than the invention of my colleagues at the Mail.\nAssistant: *considers him for a long moment, then lights a cigarette in the lee of the wall* Walk with me, then. As far as the lamppost. After that you turn back and I do not see you again until the inquest.\nUser: Fair. What can you tell me?\n\nINSTRUCTION:\nContinue the dialog in character as Inspector Holloway for the next 8–10 exchanges (User and Assistant alternating, write both speakers' lines). Stay period-appropriate, advance the investigation through dialogue, do not summarise — write the actual lines verbatim.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "detective"
+  }
+}

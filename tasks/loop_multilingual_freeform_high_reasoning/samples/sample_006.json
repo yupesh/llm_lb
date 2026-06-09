@@ -1,0 +1,8 @@
+{
+  "id": "sample_006",
+  "prompt": "Scrivi un saggio dettagliato in italiano (almeno 1500 parole) sulla storia del Bauhaus e del design industriale del Novecento, usando ripetutamente i termini inglesi: form follows function, less is more, total design, gesamtkunstwerk, master craftsman, ready-made, streamlined, machine aesthetic, functionalism, prefab.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "it_en"
+  }
+}

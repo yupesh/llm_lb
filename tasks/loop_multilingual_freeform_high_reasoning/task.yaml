@@ -1,0 +1,25 @@
+name: loop_multilingual_freeform_high_reasoning
+version: "1.0"
+description: |
+  High-reasoning variant of loop_multilingual_freeform. Forces
+  reasoning_mode="high" on top of the same multilingual code-switching
+  prompts — stacks the phonetic-collapse trigger from
+  google/gemma-4-31B-it#79 with the "thinking burns tokens / enters
+  infinite loops" regime from google/gemma-4-26B-A4B-it discussion #10.
+
+  Scored by loop_score: fraction of samples whose raw_output does NOT exhibit
+  pathological repetition. Higher = more robust.
+metric:
+  primary: loop_score
+  secondary: [tps, p95_latency_ms]
+llm_params:
+  temperature: 0.0
+  max_tokens: null
+  seed: 42
+  reasoning_mode: high
+system_prompt: |
+  You are a thorough, careful multilingual assistant. Always respond in the
+  language the user wrote in. When asked to enumerate or describe
+  exhaustively, produce a complete answer. Do not pad with filler.
+prompt_template: |
+  {prompt}

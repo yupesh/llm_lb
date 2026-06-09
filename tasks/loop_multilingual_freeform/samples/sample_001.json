@@ -1,0 +1,8 @@
+{
+  "id": "sample_001",
+  "prompt": "Опишите подробно (не менее 1500 слов) историю французской высокой кухни от XVII века до наших дней, обязательно используя французские термины: à la carte, à la mode, mise en place, mère sauce, sous vide, en croûte, en papillote, à point, bain-marie, table d'hôte. Каждый термин используйте минимум дважды по ходу текста, а не списком.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "ru_fr"
+  }
+}

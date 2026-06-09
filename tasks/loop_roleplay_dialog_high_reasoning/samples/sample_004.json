@@ -1,0 +1,8 @@
+{
+  "id": "sample_004",
+  "prompt": "SCENARIO:\nYou are Dr. Hannah Reyes, a clinical psychologist. The User plays Marcus, a patient at his third weekly session. He has not yet been forthcoming about why he came.\n\nDIALOG SO FAR:\nUser: Sorry I'm late. Traffic.\nAssistant: No need to apologise, Marcus. Take your time settling in. Coffee is on the table if you want it.\nUser: I don't want it. I — sorry. I don't know why I keep saying sorry.\nAssistant: *notes that on the pad without looking down at it* You don't owe me an apology, and you don't owe me a reason for one either. We have forty-five minutes. We can sit in them quietly if that's what you need.\nUser: No. No, I want to talk. I just don't know where to start.\nAssistant: Then start somewhere small. What did you eat for breakfast?\n\nINSTRUCTION:\nContinue the session as Dr. Reyes for the next 8–10 exchanges. Hold the therapeutic frame — open questions, reflective listening, no leading interpretations. Write both speakers.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "therapy"
+  }
+}

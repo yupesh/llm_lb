@@ -1,0 +1,8 @@
+{
+  "id": "sample_002",
+  "prompt": "Escribe un ensayo exhaustivo en español (mínimo 1500 palabras) sobre la historia del jazz desde Nueva Orleans hasta el bebop, incluyendo obligatoriamente y usando varias veces a lo largo del texto los términos en inglés: swing, scat, blue note, call and response, syncopation, riff, head arrangement, walking bass, comping, vamp.",
+  "expected": "<loop_score_only>",
+  "meta": {
+    "category": "es_en"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-09T05:08:37+00:00",
+  "generated_at": "2026-06-09T05:58:34+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -289,6 +289,46 @@
     },
     {
       "id": "loop_long_json_list_high_reasoning",
+      "version": "1.0",
+      "primary_metric": "loop_score",
+      "secondary_metrics": [
+        "tps",
+        "p95_latency_ms"
+      ],
+      "n_samples": 10
+    },
+    {
+      "id": "loop_multilingual_freeform",
+      "version": "1.0",
+      "primary_metric": "loop_score",
+      "secondary_metrics": [
+        "tps",
+        "p95_latency_ms"
+      ],
+      "n_samples": 10
+    },
+    {
+      "id": "loop_multilingual_freeform_high_reasoning",
+      "version": "1.0",
+      "primary_metric": "loop_score",
+      "secondary_metrics": [
+        "tps",
+        "p95_latency_ms"
+      ],
+      "n_samples": 10
+    },
+    {
+      "id": "loop_roleplay_dialog",
+      "version": "1.0",
+      "primary_metric": "loop_score",
+      "secondary_metrics": [
+        "tps",
+        "p95_latency_ms"
+      ],
+      "n_samples": 10
+    },
+    {
+      "id": "loop_roleplay_dialog_high_reasoning",
       "version": "1.0",
       "primary_metric": "loop_score",
       "secondary_metrics": [
