@@ -28,6 +28,13 @@
     <summary>loop_score=1.000</summary>
   </entry>
   <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/loop_multilingual_freeform/1.0/gemma-4-26B-A4B-it@vllm/2026-06-09T06:16:35+00:00</id>
+    <title>gemma-4-26B-A4B-it@vllm scored 1.000 loop_score on loop_multilingual_freeform v1.0</title>
+    <updated>2026-06-09T06:16:35+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/loop_multilingual_freeform" rel="alternate" type="text/html"/>
+    <summary>loop_score=1.000</summary>
+  </entry>
+  <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/loop_long_json_list_high_reasoning/1.0/qwen3.5-27b@vllm/2026-06-08T17:28:21+00:00</id>
     <title>qwen3.5-27b@vllm scored 1.000 loop_score on loop_long_json_list_high_reasoning v1.0</title>
     <updated>2026-06-08T17:28:21+00:00</updated>
@@ -348,12 +355,5 @@
     <updated>2026-04-27T05:29:28+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_entity_type_refinement" rel="alternate" type="text/html"/>
     <summary>judge_score=0.600</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/kg_entity_name_refinement/1.0/gemma-4-26B-A4B-it@vllm/2026-04-27T05:28:43+00:00</id>
-    <title>gemma-4-26B-A4B-it@vllm scored 0.940 judge_score on kg_entity_name_refinement v1.0</title>
-    <updated>2026-04-27T05:28:43+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/kg_entity_name_refinement" rel="alternate" type="text/html"/>
-    <summary>judge_score=0.940</summary>
   </entry>
 </feed>
