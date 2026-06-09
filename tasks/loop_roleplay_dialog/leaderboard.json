@@ -1,0 +1,19 @@
+{
+  "task_id": "loop_roleplay_dialog",
+  "task_version": "1.0",
+  "primary_metric": "loop_score",
+  "ranking": [
+    {
+      "model_id": "gemma-4-26B-A4B-it@vllm",
+      "score": 1.0,
+      "metrics": {
+        "loop_score": 1.0
+      },
+      "tps": 29.515578059305877,
+      "p95_latency_ms": 27866.495176,
+      "cost_usd": null,
+      "result_file": "results/gemma-4-26B-A4B-it@vllm__2026-06-09T06-33-38Z.json"
+    }
+  ],
+  "updated_at": "2026-06-09T07:44:00+00:00"
+}
