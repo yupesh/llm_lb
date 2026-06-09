@@ -1,0 +1,41 @@
+{
+  "task_id": "loop_long_freeform_high_reasoning",
+  "task_version": "1.0",
+  "primary_metric": "loop_score",
+  "ranking": [
+    {
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 1.0,
+      "metrics": {
+        "loop_score": 1.0
+      },
+      "tps": 62.07952607886105,
+      "p95_latency_ms": 811487.965505,
+      "cost_usd": null,
+      "result_file": "results/qwen3.5-27b@vllm__2026-06-08T17-06-29Z.json"
+    },
+    {
+      "model_id": "qwen3-30b@vllm",
+      "score": 1.0,
+      "metrics": {
+        "loop_score": 1.0
+      },
+      "tps": 38.82923492928693,
+      "p95_latency_ms": 208284.137479,
+      "cost_usd": null,
+      "result_file": "results/qwen3-30b@vllm__2026-06-08T16-55-37Z.json"
+    },
+    {
+      "model_id": "gemma-4-26B-A4B-it@vllm",
+      "score": 1.0,
+      "metrics": {
+        "loop_score": 1.0
+      },
+      "tps": 29.882045532936477,
+      "p95_latency_ms": 64131.01052300001,
+      "cost_usd": null,
+      "result_file": "results/gemma-4-26B-A4B-it@vllm__2026-06-08T16-40-00Z.json"
+    }
+  ],
+  "updated_at": "2026-06-09T04:32:11+00:00"
+}

@@ -4,8 +4,71 @@
   <id>tag:yupesh.github.io,2026:llm_lb/feed</id>
   <link href="https://yupesh.github.io/llm_lb/" rel="alternate" type="text/html"/>
   <link href="https://yupesh.github.io/llm_lb/data/feed.xml" rel="self" type="application/atom+xml"/>
-  <updated>2026-06-08T16:10:42+00:00</updated>
+  <updated>2026-06-08T17:28:21+00:00</updated>
   <author><name>LLM Leaderboard</name></author>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/loop_long_json_list_high_reasoning/1.0/qwen3.5-27b@vllm/2026-06-08T17:28:21+00:00</id>
+    <title>qwen3.5-27b@vllm scored 1.000 loop_score on loop_long_json_list_high_reasoning v1.0</title>
+    <updated>2026-06-08T17:28:21+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/loop_long_json_list_high_reasoning" rel="alternate" type="text/html"/>
+    <summary>loop_score=1.000</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/loop_long_freeform_high_reasoning/1.0/qwen3.5-27b@vllm/2026-06-08T17:06:29+00:00</id>
+    <title>qwen3.5-27b@vllm scored 1.000 loop_score on loop_long_freeform_high_reasoning v1.0</title>
+    <updated>2026-06-08T17:06:29+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/loop_long_freeform_high_reasoning" rel="alternate" type="text/html"/>
+    <summary>loop_score=1.000</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/loop_long_json_list_high_reasoning/1.0/qwen3-30b@vllm/2026-06-08T17:01:02+00:00</id>
+    <title>qwen3-30b@vllm scored 1.000 loop_score on loop_long_json_list_high_reasoning v1.0</title>
+    <updated>2026-06-08T17:01:02+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/loop_long_json_list_high_reasoning" rel="alternate" type="text/html"/>
+    <summary>loop_score=1.000</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/loop_long_freeform_high_reasoning/1.0/qwen3-30b@vllm/2026-06-08T16:55:37+00:00</id>
+    <title>qwen3-30b@vllm scored 1.000 loop_score on loop_long_freeform_high_reasoning v1.0</title>
+    <updated>2026-06-08T16:55:37+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/loop_long_freeform_high_reasoning" rel="alternate" type="text/html"/>
+    <summary>loop_score=1.000</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/loop_long_json_list_high_reasoning/1.0/gemma-4-26B-A4B-it@vllm/2026-06-08T16:42:24+00:00</id>
+    <title>gemma-4-26B-A4B-it@vllm scored 1.000 loop_score on loop_long_json_list_high_reasoning v1.0</title>
+    <updated>2026-06-08T16:42:24+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/loop_long_json_list_high_reasoning" rel="alternate" type="text/html"/>
+    <summary>loop_score=1.000</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/loop_long_freeform_high_reasoning/1.0/gemma-4-26B-A4B-it@vllm/2026-06-08T16:40:00+00:00</id>
+    <title>gemma-4-26B-A4B-it@vllm scored 1.000 loop_score on loop_long_freeform_high_reasoning v1.0</title>
+    <updated>2026-06-08T16:40:00+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/loop_long_freeform_high_reasoning" rel="alternate" type="text/html"/>
+    <summary>loop_score=1.000</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/loop_14th_item_high_reasoning/1.0/qwen3.5-27b@vllm/2026-06-08T16:37:44+00:00</id>
+    <title>qwen3.5-27b@vllm scored 1.000 loop_score on loop_14th_item_high_reasoning v1.0</title>
+    <updated>2026-06-08T16:37:44+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/loop_14th_item_high_reasoning" rel="alternate" type="text/html"/>
+    <summary>loop_score=1.000</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/loop_14th_item_high_reasoning/1.0/qwen3-30b@vllm/2026-06-08T16:37:03+00:00</id>
+    <title>qwen3-30b@vllm scored 1.000 loop_score on loop_14th_item_high_reasoning v1.0</title>
+    <updated>2026-06-08T16:37:03+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/loop_14th_item_high_reasoning" rel="alternate" type="text/html"/>
+    <summary>loop_score=1.000</summary>
+  </entry>
+  <entry>
+    <id>tag:yupesh.github.io,2026:llm_lb/run/loop_14th_item_high_reasoning/1.0/gemma-4-26B-A4B-it@vllm/2026-06-08T16:33:01+00:00</id>
+    <title>gemma-4-26B-A4B-it@vllm scored 1.000 loop_score on loop_14th_item_high_reasoning v1.0</title>
+    <updated>2026-06-08T16:33:01+00:00</updated>
+    <link href="https://yupesh.github.io/llm_lb/#/tasks/loop_14th_item_high_reasoning" rel="alternate" type="text/html"/>
+    <summary>loop_score=1.000</summary>
+  </entry>
   <entry>
     <id>tag:yupesh.github.io,2026:llm_lb/run/loop_long_json_list/1.0/qwen3.5-27b@vllm/2026-06-08T16:10:42+00:00</id>
     <title>qwen3.5-27b@vllm scored 1.000 loop_score on loop_long_json_list v1.0</title>
@@ -292,68 +355,5 @@
     <updated>2026-04-27T05:27:10+00:00</updated>
     <link href="https://yupesh.github.io/llm_lb/#/tasks/intent_classification" rel="alternate" type="text/html"/>
     <summary>accuracy=1.000, macro_f1=1.000</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/hazard_category/1.0/gemma-4-26B-A4B-it@vllm/2026-04-27T05:26:47+00:00</id>
-    <title>gemma-4-26B-A4B-it@vllm scored 0.500 accuracy on hazard_category v1.0</title>
-    <updated>2026-04-27T05:26:47+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/hazard_category" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.500, macro_f1=0.388</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/extractive_qa/1.0/gemma-4-26B-A4B-it@vllm/2026-04-27T05:26:22+00:00</id>
-    <title>gemma-4-26B-A4B-it@vllm scored 0.900 exact_match on extractive_qa v1.0</title>
-    <updated>2026-04-27T05:26:22+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/extractive_qa" rel="alternate" type="text/html"/>
-    <summary>exact_match=0.900</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring_condensed/1.1/gemma-4-26B-A4B-it@vllm/2026-04-27T05:26:01+00:00</id>
-    <title>gemma-4-26B-A4B-it@vllm scored 0.500 accuracy on essay_vocabulary_scoring_condensed v1.1</title>
-    <updated>2026-04-27T05:26:01+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.500, macro_f1=0.425, qwk=0.579</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_vocabulary_scoring/1.1/gemma-4-26B-A4B-it@vllm/2026-04-27T05:25:37+00:00</id>
-    <title>gemma-4-26B-A4B-it@vllm scored 0.300 accuracy on essay_vocabulary_scoring v1.1</title>
-    <updated>2026-04-27T05:25:37+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_vocabulary_scoring" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.300, macro_f1=0.192, qwk=0.327</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_holistic_scoring_condensed/1.0/gemma-4-26B-A4B-it@vllm/2026-04-27T05:25:13+00:00</id>
-    <title>gemma-4-26B-A4B-it@vllm scored 0.111 accuracy on essay_holistic_scoring_condensed v1.0</title>
-    <updated>2026-04-27T05:25:13+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_holistic_scoring_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.111, macro_f1=0.051, qwk=0.519</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_holistic_scoring/1.0/gemma-4-26B-A4B-it@vllm/2026-04-27T05:24:46+00:00</id>
-    <title>gemma-4-26B-A4B-it@vllm scored 0.167 accuracy on essay_holistic_scoring v1.0</title>
-    <updated>2026-04-27T05:24:46+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_holistic_scoring" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.167, macro_f1=0.097, qwk=0.560</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_grammar_scoring_condensed/1.1/gemma-4-26B-A4B-it@vllm/2026-04-27T05:24:15+00:00</id>
-    <title>gemma-4-26B-A4B-it@vllm scored 0.300 accuracy on essay_grammar_scoring_condensed v1.1</title>
-    <updated>2026-04-27T05:24:15+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_grammar_scoring_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.300, macro_f1=0.234, qwk=0.324</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_grammar_scoring/1.1/gemma-4-26B-A4B-it@vllm/2026-04-27T05:23:48+00:00</id>
-    <title>gemma-4-26B-A4B-it@vllm scored 0.350 accuracy on essay_grammar_scoring v1.1</title>
-    <updated>2026-04-27T05:23:48+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_grammar_scoring" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.350, macro_f1=0.259, qwk=0.276</summary>
-  </entry>
-  <entry>
-    <id>tag:yupesh.github.io,2026:llm_lb/run/essay_coherence_scoring_condensed/1.1/gemma-4-26B-A4B-it@vllm/2026-04-27T05:23:21+00:00</id>
-    <title>gemma-4-26B-A4B-it@vllm scored 0.300 accuracy on essay_coherence_scoring_condensed v1.1</title>
-    <updated>2026-04-27T05:23:21+00:00</updated>
-    <link href="https://yupesh.github.io/llm_lb/#/tasks/essay_coherence_scoring_condensed" rel="alternate" type="text/html"/>
-    <summary>accuracy=0.300, macro_f1=0.175, qwk=0.433</summary>
   </entry>
 </feed>

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T16:28:53+00:00",
+  "generated_at": "2026-06-09T04:32:11+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -6386,6 +6386,45 @@
       "result_file": "tasks/loop_14th_item/results/gemma-4-26B-A4B-it@vllm__2026-06-08T15-49-53Z.json"
     },
     {
+      "task_id": "loop_14th_item_high_reasoning",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 1.0,
+      "metrics": {
+        "loop_score": 1.0
+      },
+      "tps": 55.40487608772918,
+      "p95_latency_ms": 5870.175441,
+      "cost_usd": null,
+      "result_file": "tasks/loop_14th_item_high_reasoning/results/qwen3.5-27b@vllm__2026-06-08T16-37-44Z.json"
+    },
+    {
+      "task_id": "loop_14th_item_high_reasoning",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 1.0,
+      "metrics": {
+        "loop_score": 1.0
+      },
+      "tps": 34.11200192319931,
+      "p95_latency_ms": 10367.315067999996,
+      "cost_usd": null,
+      "result_file": "tasks/loop_14th_item_high_reasoning/results/qwen3-30b@vllm__2026-06-08T16-37-03Z.json"
+    },
+    {
+      "task_id": "loop_14th_item_high_reasoning",
+      "task_version": "1.0",
+      "model_id": "gemma-4-26B-A4B-it@vllm",
+      "score": 1.0,
+      "metrics": {
+        "loop_score": 1.0
+      },
+      "tps": 2.1200692583037974,
+      "p95_latency_ms": 1575.3812380000056,
+      "cost_usd": null,
+      "result_file": "tasks/loop_14th_item_high_reasoning/results/gemma-4-26B-A4B-it@vllm__2026-06-08T16-33-01Z.json"
+    },
+    {
       "task_id": "loop_long_freeform",
       "task_version": "1.0",
       "model_id": "qwen3.5-27b@vllm",
@@ -6425,6 +6464,45 @@
       "result_file": "tasks/loop_long_freeform/results/gemma-4-26B-A4B-it@vllm__2026-06-08T15-56-50Z.json"
     },
     {
+      "task_id": "loop_long_freeform_high_reasoning",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 1.0,
+      "metrics": {
+        "loop_score": 1.0
+      },
+      "tps": 62.07952607886105,
+      "p95_latency_ms": 811487.965505,
+      "cost_usd": null,
+      "result_file": "tasks/loop_long_freeform_high_reasoning/results/qwen3.5-27b@vllm__2026-06-08T17-06-29Z.json"
+    },
+    {
+      "task_id": "loop_long_freeform_high_reasoning",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 1.0,
+      "metrics": {
+        "loop_score": 1.0
+      },
+      "tps": 38.82923492928693,
+      "p95_latency_ms": 208284.137479,
+      "cost_usd": null,
+      "result_file": "tasks/loop_long_freeform_high_reasoning/results/qwen3-30b@vllm__2026-06-08T16-55-37Z.json"
+    },
+    {
+      "task_id": "loop_long_freeform_high_reasoning",
+      "task_version": "1.0",
+      "model_id": "gemma-4-26B-A4B-it@vllm",
+      "score": 1.0,
+      "metrics": {
+        "loop_score": 1.0
+      },
+      "tps": 29.882045532936477,
+      "p95_latency_ms": 64131.01052300001,
+      "cost_usd": null,
+      "result_file": "tasks/loop_long_freeform_high_reasoning/results/gemma-4-26B-A4B-it@vllm__2026-06-08T16-40-00Z.json"
+    },
+    {
       "task_id": "loop_long_json_list",
       "task_version": "1.0",
       "model_id": "qwen3.5-27b@vllm",
@@ -6462,6 +6540,45 @@
       "p95_latency_ms": 19818.162865999995,
       "cost_usd": null,
       "result_file": "tasks/loop_long_json_list/results/gemma-4-26B-A4B-it@vllm__2026-06-08T15-59-24Z.json"
+    },
+    {
+      "task_id": "loop_long_json_list_high_reasoning",
+      "task_version": "1.0",
+      "model_id": "qwen3-30b@vllm",
+      "score": 1.0,
+      "metrics": {
+        "loop_score": 1.0
+      },
+      "tps": 38.30707425914203,
+      "p95_latency_ms": 68868.24901900002,
+      "cost_usd": null,
+      "result_file": "tasks/loop_long_json_list_high_reasoning/results/qwen3-30b@vllm__2026-06-08T17-01-02Z.json"
+    },
+    {
+      "task_id": "loop_long_json_list_high_reasoning",
+      "task_version": "1.0",
+      "model_id": "qwen3.5-27b@vllm",
+      "score": 1.0,
+      "metrics": {
+        "loop_score": 1.0
+      },
+      "tps": 31.384803046958528,
+      "p95_latency_ms": 400368.51231200004,
+      "cost_usd": null,
+      "result_file": "tasks/loop_long_json_list_high_reasoning/results/qwen3.5-27b@vllm__2026-06-08T17-28-21Z.json"
+    },
+    {
+      "task_id": "loop_long_json_list_high_reasoning",
+      "task_version": "1.0",
+      "model_id": "gemma-4-26B-A4B-it@vllm",
+      "score": 1.0,
+      "metrics": {
+        "loop_score": 1.0
+      },
+      "tps": 28.816687584516604,
+      "p95_latency_ms": 18617.862793,
+      "cost_usd": null,
+      "result_file": "tasks/loop_long_json_list_high_reasoning/results/gemma-4-26B-A4B-it@vllm__2026-06-08T16-42-24Z.json"
     },
     {
       "task_id": "oos_detection",
