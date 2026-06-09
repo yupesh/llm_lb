@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-09T04:32:11+00:00",
+  "generated_at": "2026-06-09T05:08:37+00:00",
   "tasks": [
     {
       "id": "agent_tool_calling",
@@ -614,6 +614,19 @@
       "params": null,
       "weights_size_gb": null,
       "hardware": null
+    },
+    {
+      "id": "kimi-k2.6@vllm",
+      "display_name": "Kimi-K2.6",
+      "provider": "openai_compat",
+      "hf_uri": "moonshotai/Kimi-K2.6",
+      "params": "1.1T",
+      "weights_size_gb": 595.0,
+      "hardware": {
+        "gpu_count": 8,
+        "gpu_type": "A100",
+        "quantization": null
+      }
     },
     {
       "id": "llama-4-scout@vllm",
